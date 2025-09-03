@@ -1,0 +1,39 @@
+export default function Home(){
+  const programs=[
+    {title:'SNAP (Food Stamps)', category:'Food', desc:'Monthly funds to buy groceries for eligible households.', link:'https://www.fns.usda.gov/snap'},
+    {title:'Medicaid', category:'Health', desc:'Free or low‑cost health coverage for eligible individuals and families.', link:'https://www.medicaid.gov'},
+    {title:'WIC (Women, Infants, and Children)', category:'Food', desc:'Nutrition assistance and health referrals for women and young children.', link:'https://www.fns.usda.gov/wic'},
+    {title:'LIHEAP', category:'Utilities', desc:'Help paying heating/cooling bills and some energy‑related repairs.', link:'https://www.acf.hhs.gov/ocs/programs/liheap'},
+    {title:'Federal Pell Grant', category:'Education', desc:'Grants for undergraduates with financial need; does not require repayment.', link:'https://studentaid.gov/understand-aid/types/grants/pell'}
+  ];
+  return (<>
+    <header className="nav">
+      <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+        <div className="brand">
+          <img src="/logo.png" alt="AidFinder logo"/>
+          <strong style={{fontSize:20}}>AidFinder</strong>
+        </div>
+      </div>
+    </header>
+
+    <main className="container">
+      <section className="hero">
+        <h1>Find Aid Programs Easily</h1>
+        <p>Explore programs across Food, Health, Housing, Utilities and Education — all in one place.</p>
+      </section>
+
+      <section className="grid">
+        {programs.map((p,i)=>(
+          <article className="card" key={i}>
+            <div className="badge">{p.category}</div>
+            <h3 style={{margin:0,fontWeight:800,fontSize:18}}>{p.title}</h3>
+            <p style={{color:'#475569'}}>{p.desc}</p>
+            <div><a className="apply" href={p.link} target="_blank" rel="noreferrer">Apply Now</a></div>
+          </article>
+        ))}
+      </section>
+
+      <footer className="footer">Demo preview • © AidFinder</footer>
+    </main>
+  </>)
+}

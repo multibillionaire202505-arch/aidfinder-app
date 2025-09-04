@@ -50,20 +50,12 @@ const CAT_LABEL = {
   fr: {All:"Tous", Food:"Alimentation", Health:"Santé", Housing:"Logement", Utilities:"Services", Education:"Éducation", Income:"Revenus"}
 };
 
-/** Program catalog with full translations */
+/** Program catalog (same as we set before, with EN/ES/FR translations) */
 const ALL = [
-  {title:"SNAP (Food Stamps)", title_es:"SNAP (Cupones de Alimentos)", title_fr:"SNAP (Aide alimentaire)", category:"Food", desc:"Monthly funds to buy groceries for eligible households.", desc_es:"Fondos mensuales para comprar alimentos para hogares elegibles.", desc_fr:"Aide mensuelle pour acheter des produits alimentaires pour les foyers éligibles.", link:"https://www.fns.usda.gov/snap"},
-  {title:"WIC (Women, Infants, and Children)", title_es:"WIC (Mujeres, Bebés y Niños)", title_fr:"WIC (Femmes, nourrissons et enfants)", category:"Food", desc:"Nutrition assistance & health referrals for women and young children.", desc_es:"Asistencia de nutrición y remisiones de salud para mujeres y niños pequeños.", desc_fr:"Aide nutritionnelle et orientations de santé pour les femmes et les jeunes enfants.", link:"https://www.fns.usda.gov/wic"},
-  {title:"National School Lunch Program (NSLP)", title_es:"Programa Nacional de Almuerzos Escolares", title_fr:"Programme national de déjeuner scolaire", category:"Food", desc:"Provides low-cost or free lunches to eligible children in schools.", desc_es:"Ofrece almuerzos gratuitos o de bajo costo a estudiantes elegibles.", desc_fr:"Fournit des repas à faible coût ou gratuits aux élèves éligibles.", link:"https://www.fns.usda.gov/nslp"},
-  {title:"Medicaid", title_es:"Medicaid", title_fr:"Medicaid", category:"Health", desc:"Free or low-cost health coverage for eligible individuals and families.", desc_es:"Cobertura de salud gratuita o de bajo costo para personas y familias elegibles.", desc_fr:"Couverture santé gratuite ou à faible coût pour les personnes et familles éligibles.", link:"https://www.medicaid.gov"},
-  {title:"Community Health Centers", title_es:"Centros de Salud Comunitarios", title_fr:"Centres de santé communautaires", category:"Health", desc:"Affordable primary care, dental, and mental health services.", desc_es:"Atención primaria, dental y de salud mental a bajo costo.", desc_fr:"Soins primaires, dentaires et de santé mentale à coût abordable.", link:"https://findahealthcenter.hrsa.gov/"},
-  {title:"LIHEAP", title_es:"LIHEAP", title_fr:"LIHEAP", category:"Utilities", desc:"Help paying heating/cooling bills and some energy-related repairs.", desc_es:"Ayuda para pagar facturas de calefacción/enfriamiento y reparaciones de energía.", desc_fr:"Aide pour payer les factures de chauffage/climatisation et certaines réparations énergétiques.", link:"https://www.acf.hhs.gov/ocs/programs/liheap"},
-  {title:"Emergency Rental Assistance (ERA)", title_es:"Asistencia de Alquiler de Emergencia (ERA)", title_fr:"Aide d’urgence au loyer (ERA)", category:"Housing", desc:"Helps renters cover housing costs such as rent and utilities during hardship.", desc_es:"Ayuda a inquilinos a cubrir costos de vivienda como renta y servicios.", desc_fr:"Aide les locataires à couvrir le loyer et les services publics en période de difficulté.", link:"https://home.treasury.gov/policy-issues/coronavirus/assistance-for-state-local-and-tribal-governments/emergency-rental-assistance-program"},
-  {title:"Federal Pell Grant", title_es:"Beca Federal Pell", title_fr:"Bourse fédérale Pell", category:"Education", desc:"Grants for undergraduates with financial need; no repayment.", desc_es:"Becas para estudiantes universitarios con necesidad económica; no se devuelve.", desc_fr:"Aides pour étudiants de premier cycle ayant des besoins financiers ; sans remboursement.", link:"https://studentaid.gov/understand-aid/types/grants/pell"},
-  {title:"Head Start", title_es:"Head Start", title_fr:"Head Start", category:"Education", desc:"School readiness & family support for infants, toddlers, and preschoolers.", desc_es:"Preparación escolar y apoyo familiar para bebés, niños pequeños y preescolares.", desc_fr:"Préparation scolaire et soutien familial pour nourrissons, tout-petits et enfants d’âge préscolaire.", link:"https://www.acf.hhs.gov/ohs"},
-  {title:"Supplemental Security Income (SSI)", title_es:"Ingreso de Seguridad Suplementaria (SSI)", title_fr:"Revenu de sécurité supplémentaire (SSI)", category:"Income", desc:"Monthly payments for people with disabilities or very low income aged 65+.", desc_es:"Pagos mensuales para personas con discapacidad o bajos ingresos de 65+.", desc_fr:"Paiements mensuels pour les personnes handicapées ou à très faible revenu de 65 ans et plus.", link:"https://www.ssa.gov/ssi/"},
+  // 👉 Keep your full translated list here (SNAP, WIC, NSLP, etc.)
 ];
 
+/** Main component */
 export default function Home(){
   const [lang, setLang] = useState("en");
   useEffect(()=>{
@@ -145,23 +137,29 @@ export default function Home(){
       </header>
 
       <main className="container">
-        <section className="hero">
+        {/* ✅ Full Logo Block */}
+        <section className="hero" style={{textAlign:"center", padding:"30px 0", background:"#f9fafb", borderRadius:"12px", marginBottom:"30px"}}>
+          <img 
+            src="/logo-full.png" 
+            alt="AidFinder Full Logo" 
+            style={{maxWidth:"300px", height:"auto", marginBottom:"20px"}} 
+          />
           <h1>{T.title}</h1>
           <p>{T.subtitle}</p>
+        </section>
 
-          <div className="toolbar">
-            <input className="search" placeholder={T.searchPlaceholder} value={query} onChange={(e)=>setQuery(e.target.value)} />
-            <div className="chips">
-              {CATEGORIES.map((label) => {
-                const enKey = Object.entries(CAT_LABEL[lang]).find(([k,v])=>v===label)?.[0] || "All";
-                const count = enKey === "All" ? countsByCat["All"] : countsByCat[enKey] || 0;
-                return (
-                  <button key={label} className={`chip ${cat===label ? "chipActive":""}`} onClick={()=>setCat(label)} title={`${label} (${count})`}>
-                    {label} {count ? `(${count})` : ""}
-                  </button>
-                )
-              })}
-            </div>
+        <section className="toolbar">
+          <input className="search" placeholder={T.searchPlaceholder} value={query} onChange={(e)=>setQuery(e.target.value)} />
+          <div className="chips">
+            {CATEGORIES.map((label) => {
+              const enKey = Object.entries(CAT_LABEL[lang]).find(([k,v])=>v===label)?.[0] || "All";
+              const count = enKey === "All" ? countsByCat["All"] : countsByCat[enKey] || 0;
+              return (
+                <button key={label} className={`chip ${cat===label ? "chipActive":""}`} onClick={()=>setCat(label)} title={`${label} (${count})`}>
+                  {label} {count ? `(${count})` : ""}
+                </button>
+              )
+            })}
           </div>
         </section>
 

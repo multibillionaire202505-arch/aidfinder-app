@@ -1,6 +1,8 @@
+import { useMemo, useState } from "react";
+
 export default function Home(){
-  // 10 programs total
-  const programs = [
+  // Your 10 programs (same as you have now)
+  const ALL = [
     // Food
     { title:'SNAP (Food Stamps)', category:'Food', desc:'Monthly funds to buy groceries for eligible households.', link:'https://www.fns.usda.gov/snap' },
     { title:'WIC (Women, Infants, and Children)', category:'Food', desc:'Nutrition assistance and health referrals for women and young children.', link:'https://www.fns.usda.gov/wic' },
@@ -22,6 +24,20 @@ export default function Home(){
     { title: "Supplemental Security Income (SSI)", category: "Income", desc: "Monthly payments to people with disabilities or very low income aged 65+.", link: "https://www.ssa.gov/ssi/" }
   ];
 
+  const CATEGORIES = ["All","Food","Health","Housing","Utilities","Education","Income"];
+
+  const [query, setQuery] = useState("");
+  const [cat, setCat] = useState("All");
+
+  const programs = useMemo(()=>{
+    const q = query.trim().toLowerCase();
+    return ALL.filter(p=>{
+      const okCat = cat==="All" || p.category===cat;
+      const okQ = !q || p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
+      return okCat && okQ;
+    });
+  },[ALL, query, cat]);
+
   return (<>
     <header className="nav">
       <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
@@ -36,6 +52,32 @@ export default function Home(){
       <section className="hero">
         <h1>Find Aid Programs Easily</h1>
         <p>Explore programs across Food, Health, Housing, Utilities and Education — all in one place.</p>
+
+        {/* Search + filters */}
+        <div className="toolbar">
+          <input
+            className="search"
+            placeholder="Search e.g. housing, food, health…"
+            value={query}
+            onChange={(e)=>setQuery(e.target.value)}
+          />
+          <div className="chips">
+            {CATEGORIES.map(c=>{
+              // show counts for each category
+              const count = ALL.filter(p => c==="All" || p.category===c).length;
+              return (
+                <button
+                  key={c}
+                  className={`chip ${cat===c ? "chipActive":""}`}
+                  onClick={()=>setCat(c)}
+                  title={`${c} programs`}
+                >
+                  {c} {count ? `(${count})` : ""}
+                </button>
+              )
+            })}
+          </div>
+        </div>
       </section>
 
       <section className="grid">
@@ -47,9 +89,17 @@ export default function Home(){
             <div><a className="apply" href={p.link} target="_blank" rel="noreferrer">Apply Now</a></div>
           </article>
         ))}
+
+        {programs.length===0 && (
+          <div className="empty">
+            <strong>No results</strong>
+            <p>Try a different keyword or category.</p>
+          </div>
+        )}
       </section>
 
       <footer className="footer">Demo preview • © AidFinder</footer>
     </main>
   </>);
 }
+

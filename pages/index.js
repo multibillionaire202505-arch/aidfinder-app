@@ -45,9 +45,9 @@ const UI = {
 
 /** Category labels */
 const CAT_LABEL = {
-  en: {All:"All", Food:"Food", Health:"Health", Housing:"Housing", Utilities:"Utilities", Education:"Education", Income:"Income"},
-  es: {All:"Todos", Food:"Alimentos", Health:"Salud", Housing:"Vivienda", Utilities:"Servicios", Education:"Educación", Income:"Ingresos"},
-  fr: {All:"Tous", Food:"Alimentation", Health:"Santé", Housing:"Logement", Utilities:"Services", Education:"Éducation", Income:"Revenus"}
+  en: { All: "All", Food: "Food", Health: "Health", Housing: "Housing", Utilities: "Utilities", Education: "Education", Income: "Income" },
+  es: { All: "Todos", Food: "Alimentos", Health: "Salud", Housing: "Vivienda", Utilities: "Servicios", Education: "Educación", Income: "Ingresos" },
+  fr: { All: "Tous", Food: "Alimentation", Health: "Santé", Housing: "Logement", Utilities: "Services", Education: "Éducation", Income: "Revenus" },
 };
 
 /** Full 20 Programs */
@@ -75,18 +75,20 @@ const ALL = [
 
 export default function Home() {
   const [lang, setLang] = useState("en");
-  useEffect(()=>{
+
+  useEffect(() => {
     const saved = typeof window !== "undefined" && localStorage.getItem("aidfinder_lang");
     if (saved) setLang(saved);
     else {
-      const browser = (typeof navigator !== "undefined" && navigator.language || "en").slice(0,2);
+      const browser = ((typeof navigator !== "undefined" && navigator.language) || "en").slice(0, 2);
       if (browser === "es") setLang("es");
       if (browser === "fr") setLang("fr");
     }
-  },[]);
-  useEffect(()=>{
+  }, []);
+
+  useEffect(() => {
     if (typeof window !== "undefined") localStorage.setItem("aidfinder_lang", lang);
-  },[lang]);
+  }, [lang]);
 
   const T = UI[lang];
   const CATEGORIES = UI[lang].categories;
@@ -94,41 +96,36 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState(CATEGORIES[0]); // All/Todos/Tous
 
-  const activeCatKey = useMemo(()=>{
+  const activeCatKey = useMemo(() => {
     const map = CAT_LABEL[lang];
     const entry = Object.entries(map).find(([enKey, label]) => label === cat);
     return entry ? entry[0] : "All";
   }, [cat, lang]);
 
-  const programs = useMemo(()=>{
+  const programs = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return ALL.filter(p=>{
+    return ALL.filter((p) => {
       const catOk = activeCatKey === "All" || p.category === activeCatKey;
-      const titleShow = (lang === "es" && p.title_es) ? p.title_es
-                      : (lang === "fr" && p.title_fr) ? p.title_fr
-                      : p.title;
-      const descShow  = (lang === "es" && p.desc_es) ? p.desc_es
-                      : (lang === "fr" && p.desc_fr) ? p.desc_fr
-                      : p.desc;
-      const qOk = !q || titleShow.toLowerCase().includes(q) || descShow.toLowerCase().includes(q)
-                 || p.category.toLowerCase().includes(q);
+      const titleShow = lang === "es" && p.title_es ? p.title_es : lang === "fr" && p.title_fr ? p.title_fr : p.title;
+      const descShow = lang === "es" && p.desc_es ? p.desc_es : lang === "fr" && p.desc_fr ? p.desc_fr : p.desc;
+      const qOk =
+        !q ||
+        titleShow.toLowerCase().includes(q) ||
+        descShow.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q);
       return catOk && qOk;
-    }).map(p=>({
+    }).map((p) => ({
       ...p,
-      titleShow: (lang === "es" && p.title_es) ? p.title_es
-                : (lang === "fr" && p.title_fr) ? p.title_fr
-                : p.title,
-      descShow:  (lang === "es" && p.desc_es) ? p.desc_es
-                : (lang === "fr" && p.desc_fr) ? p.desc_fr
-                : p.desc,
-      catShow:   CAT_LABEL[lang][p.category] || p.category
+      titleShow: lang === "es" && p.title_es ? p.title_es : lang === "fr" && p.title_fr ? p.title_fr : p.title,
+      descShow: lang === "es" && p.desc_es ? p.desc_es : lang === "fr" && p.desc_fr ? p.desc_fr : p.desc,
+      catShow: CAT_LABEL[lang][p.category] || p.category,
     }));
   }, [query, activeCatKey, lang]);
 
-  const countsByCat = useMemo(()=>{
+  const countsByCat = useMemo(() => {
     const counts = { All: ALL.length };
-    ["Food","Health","Housing","Utilities","Education","Income"].forEach(k=>{
-      counts[k] = ALL.filter(p=>p.category===k).length;
+    ["Food", "Health", "Housing", "Utilities", "Education", "Income"].forEach((k) => {
+      counts[k] = ALL.filter((p) => p.category === k).length;
     });
     return counts;
   }, []);
@@ -136,14 +133,14 @@ export default function Home() {
   return (
     <>
       <header className="nav">
-        <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between', gap: 12}}>
-          <div className="brand" style={{display:'flex',alignItems:'center',gap:10}}>
-            <img src="/logo.png" alt="AidFinder logo" style={{height:40, width:'auto', borderRadius:8}}/>
-            <strong style={{fontSize:20}}>{T.brand}</strong>
+        <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+          <div className="brand" style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <img src="/logo.png" alt="AidFinder logo" style={{ height: 40, width: "auto", borderRadius: 8 }} />
+            <strong style={{ fontSize: 20 }}>{T.brand}</strong>
           </div>
           <div className="langSwitch">
-            <label style={{fontSize:12, color:'#64748b', marginRight:6}}>{T.language}:</label>
-            <select value={lang} onChange={(e)=>setLang(e.target.value)} className="langSelect" aria-label="Language">
+            <label style={{ fontSize: 12, color: "#64748b", marginRight: 6 }}>{T.language}:</label>
+            <select value={lang} onChange={(e) => setLang(e.target.value)} className="langSelect" aria-label="Language">
               <option value="en">English</option>
               <option value="es">Español</option>
               <option value="fr">Français</option>
@@ -153,44 +150,64 @@ export default function Home() {
       </header>
 
       <main className="container">
+        {/* Hero */}
         <section className="hero">
-          <img src="/logo-full.png" alt="AidFinder Full Logo" style={{maxWidth:"300px", height:"auto", marginBottom:"20px"}} />
+          <img src="/logo-full.png" alt="AidFinder Full Logo" style={{ maxWidth: "300px", height: "auto", marginBottom: "20px" }} />
           <h1>{T.title}</h1>
           <p>{T.subtitle}</p>
         </section>
 
+        {/* Search + Category chips */}
         <section className="toolbar">
-          <input className="search" placeholder={T.searchPlaceholder} value={query} onChange={(e)=>setQuery(e.target.value)} />
+          <input
+            className="search"
+            placeholder={T.searchPlaceholder}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
           <div className="chips">
             {CATEGORIES.map((label) => {
-              const enKey = Object.entries(CAT_LABEL[lang]).find(([k,v])=>v===label)?.[0] || "All";
+              const enKey = Object.entries(CAT_LABEL[lang]).find(([k, v]) => v === label)?.[0] || "All";
               const count = enKey === "All" ? countsByCat["All"] : countsByCat[enKey] || 0;
               return (
-                <button key={label} className={`chip ${cat===label ? "chipActive":""}`} onClick={()=>setCat(label)} title={`${label} (${count})`}>
+                <button
+                  key={label}
+                  className={`chip ${cat === label ? "chipActive" : ""}`}
+                  onClick={() => setCat(label)}
+                  title={`${label} (${count})`}
+                >
                   {label} {count ? `(${count})` : ""}
                 </button>
-              )
+              );
             })}
           </div>
         </section>
 
         {/* Program Cards */}
         <section className="grid">
-          {programs.map((p,i)=>(
+          {programs.map((p, i) => (
             <article className="card" key={i}>
               <div className="badge">{p.catShow}</div>
-              <h3 style={{margin:0,fontWeight:800,fontSize:18}}>{p.titleShow}</h3>
-              <p style={{color:'#475569'}}>{p.descShow}</p>
+              <h3 style={{ margin: 0, fontWeight: 800, fontSize: 18 }}>{p.titleShow}</h3>
+              <p style={{ color: "#475569" }}>{p.descShow}</p>
               <div>
-                <a className="apply" href={p.link} target="_blank" rel="noreferrer">{T.apply}</a>
+                <a className="apply" href={p.link} target="_blank" rel="noreferrer">
+                  {T.apply}
+                </a>
               </div>
             </article>
           ))}
 
-          {programs.length===0 && (
+          {programs.length === 0 && (
             <div className="empty">
               <strong>{T.noResultsTitle}</strong>
               <p>{T.noResultsBody}</p>
             </div>
           )}
-       
+        </section>
+
+        <footer className="footer">{T.footer}</footer>
+      </main>
+    </>
+  );
+}

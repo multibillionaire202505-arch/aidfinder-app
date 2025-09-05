@@ -50,7 +50,7 @@ const CAT_LABEL = {
   fr: {All:"Tous", Food:"Alimentation", Health:"Santé", Housing:"Logement", Utilities:"Services", Education:"Éducation", Income:"Revenus"}
 };
 
-/** Program catalog (EN/ES/FR) — make sure this stays populated */
+/** Program catalog with full EN/ES/FR translations */
 const ALL = [
   {title:"SNAP (Food Stamps)", title_es:"SNAP (Cupones de Alimentos)", title_fr:"SNAP (Aide alimentaire)", category:"Food", desc:"Monthly funds to buy groceries for eligible households.", desc_es:"Fondos mensuales para comprar alimentos para hogares elegibles.", desc_fr:"Aide mensuelle pour acheter des produits alimentaires pour les foyers éligibles.", link:"https://www.fns.usda.gov/snap"},
   {title:"WIC (Women, Infants, and Children)", title_es:"WIC (Mujeres, Bebés y Niños)", title_fr:"WIC (Femmes, nourrissons et enfants)", category:"Food", desc:"Nutrition assistance & health referrals for women and young children.", desc_es:"Asistencia de nutrición y remisiones de salud para mujeres y niños pequeños.", desc_fr:"Aide nutritionnelle et orientations de santé pour les femmes et les jeunes enfants.", link:"https://www.fns.usda.gov/wic"},
@@ -83,7 +83,7 @@ export default function Home(){
   const CATEGORIES = UI[lang].categories;
 
   const [query, setQuery] = useState("");
-  const [cat, setCat] = useState(CATEGORIES[0]); // All/Todos/Tous
+  const [cat, setCat] = useState(CATEGORIES[0]);
 
   const activeCatKey = useMemo(()=>{
     const map = CAT_LABEL[lang];
@@ -133,7 +133,6 @@ export default function Home(){
             <strong style={{fontSize:20}}>{T.brand}</strong>
           </div>
 
-        {/* Language selector */}
           <div className="langSwitch">
             <label style={{fontSize:12, color:'#64748b', marginRight:6}}>{T.language}:</label>
             <select value={lang} onChange={(e)=>setLang(e.target.value)} className="langSelect" aria-label="Language">
@@ -145,15 +144,18 @@ export default function Home(){
         </div>
       </header>
 
-      {/* Hero with full logo */}
+      {/* ✅ Full Logo Hero Block */}
       <main className="container">
         <section className="hero">
-          <img src="/logo-full.png" alt="AidFinder Full Logo" style={{maxWidth:"300px", height:"auto", marginBottom:"20px"}} />
+          <img 
+            src="/logo-full.png" 
+            alt="AidFinder Full Logo" 
+            style={{maxWidth:"300px", height:"auto", marginBottom:"20px"}} 
+          />
           <h1>{T.title}</h1>
           <p>{T.subtitle}</p>
         </section>
 
-        {/* Search + Chips */}
         <section className="toolbar">
           <input className="search" placeholder={T.searchPlaceholder} value={query} onChange={(e)=>setQuery(e.target.value)} />
           <div className="chips">
@@ -169,7 +171,6 @@ export default function Home(){
           </div>
         </section>
 
-        {/* Program Cards */}
         <section className="grid">
           {programs.map((p,i)=>(
             <article className="card" key={i}>

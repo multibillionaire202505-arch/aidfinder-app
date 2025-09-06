@@ -53,8 +53,19 @@ html, body { margin:0; padding:0; height:100%; font-family: system-ui,-apple-sys
 .secondary:hover { background:#f1f5f9; }
 .apply { display:inline-block; padding:10px 16px; background:#16a34a; color:#fff; border-radius:10px; text-decoration:none; font-weight:700; text-align:center; }
 .apply:hover { background:#15803d; }
-
 .btnGroup { display:inline-flex; gap:6px; flex-wrap:wrap; }
+
+/* Share menu */
+.menuWrap { position: relative; display:inline-block; }
+.menu {
+  position: absolute; right: 0; top: calc(100% + 6px);
+  background: #fff; border: 1px solid #e5e7eb; border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12); padding: 6px; min-width: 180px; z-index: 20;
+}
+.menu button {
+  width: 100%; text-align: left; padding: 8px 10px; border: 0; background: transparent; cursor: pointer; border-radius: 8px; font-size: 14px;
+}
+.menu button:hover { background: #f8fafc; }
 
 /* Empty */
 .empty { grid-column:1 / -1; text-align:center; background:#fff; border:1px dashed #e5e7eb; border-radius:14px; padding:28px; }

@@ -1,6 +1,9 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
+/** ==== CONFIG: set the email that receives suggestions ==== */
+const ADMIN_EMAIL = "you@example.com"; // <-- CHANGE THIS to your email
+
 /** UI translations */
 const UI = {
   en: {
@@ -21,6 +24,20 @@ const UI = {
     programCount: "programs",
     clear: "Clear",
     close: "Close",
+    stateLabel: "Your State",
+    allStates: "All States",
+    share: "Share",
+    suggest: "Suggest a program",
+    formTitle: "Suggest a program",
+    formName: "Program name",
+    formCategory: "Category",
+    formLink: "Official link (if any)",
+    formState: "State (optional)",
+    formDesc: "Why it helps / short description",
+    formSubmit: "Send suggestion",
+    formNote: "This opens your email app with the info pre-filled.",
+    copied: "Link copied!",
+    shared: "Shared!",
   },
   es: {
     brand: "AidFinder",
@@ -40,6 +57,20 @@ const UI = {
     programCount: "programas",
     clear: "Limpiar",
     close: "Cerrar",
+    stateLabel: "Tu estado",
+    allStates: "Todos los estados",
+    share: "Compartir",
+    suggest: "Sugerir un programa",
+    formTitle: "Sugerir un programa",
+    formName: "Nombre del programa",
+    formCategory: "Categoría",
+    formLink: "Enlace oficial (si existe)",
+    formState: "Estado (opcional)",
+    formDesc: "Por qué ayuda / breve descripción",
+    formSubmit: "Enviar sugerencia",
+    formNote: "Se abre tu correo con la información pre-completada.",
+    copied: "¡Enlace copiado!",
+    shared: "¡Compartido!",
   },
   fr: {
     brand: "AidFinder",
@@ -59,6 +90,20 @@ const UI = {
     programCount: "programmes",
     clear: "Effacer",
     close: "Fermer",
+    stateLabel: "Votre État",
+    allStates: "Tous les États",
+    share: "Partager",
+    suggest: "Suggérer un programme",
+    formTitle: "Suggérer un programme",
+    formName: "Nom du programme",
+    formCategory: "Catégorie",
+    formLink: "Lien officiel (si disponible)",
+    formState: "État (optionnel)",
+    formDesc: "Pourquoi c’est utile / courte description",
+    formSubmit: "Envoyer la suggestion",
+    formNote: "Votre application email s’ouvrira avec les infos pré-remplies.",
+    copied: "Lien copié !",
+    shared: "Partagé !",
   },
 };
 
@@ -79,7 +124,14 @@ const ICONS = {
   Income: "💲",
 };
 
-/** Programs: 20 originals + 6 universal (total 26) + 1 CDBG */
+/** US States (short list for demo—you can extend) */
+const US_STATES = [
+  "All States","AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN",
+  "KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY",
+  "OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
+];
+
+/** Programs: 26 national + optional state targeting (none set = national) */
 const ALL = [
   // Food
   {title:"SNAP (Food Stamps)", category:"Food", desc:"Monthly funds to buy groceries for eligible households.", link:"https://www.fns.usda.gov/snap"},
@@ -112,7 +164,7 @@ const ALL = [
   {title:"Temporary Assistance for Needy Families (TANF)", category:"Income", desc:"Cash assistance and support services for low-income families with children.", link:"https://www.acf.hhs.gov/ofa/programs/tanf"},
   {title:"Earned Income Tax Credit (EITC)", category:"Income", desc:"Refundable tax credit for low- to moderate-income working people.", link:"https://www.irs.gov/credits-deductions/individuals/earned-income-tax-credit"},
 
-  // Universal (open to everyone)
+  // Universal
   { title:"988 Suicide & Crisis Lifeline", category:"Health", desc:"24/7 free and confidential support for anyone in distress — call or text 988.", link:"https://988lifeline.org" },
   { title:"211 Helpline (United Way)", category:"Utilities", desc:"Free, confidential 24/7 referrals for local help: food, housing, health, bills, and more.", link:"https://www.211.org" },
   { title:"FEMA Disaster Assistance", category:"Housing", desc:"Help after federally declared disasters — housing, repairs, and other needs.", link:"https://www.disasterassistance.gov" },
@@ -120,11 +172,14 @@ const ALL = [
   { title:"SBA Small Business Programs", category:"Income", desc:"Loans, counseling, and resources for entrepreneurs and small businesses.", link:"https://www.sba.gov/funding-programs" },
   { title:"Apprenticeship Finder", category:"Education", desc:"Paid ‘earn-while-you-learn’ training programs across many careers.", link:"https://www.apprenticeship.gov/apprenticeship-job-finder" },
 
-  // Community / Housing development (extra)
-  { title:"Community Development Block Grant (CDBG)", category:"Housing", desc:"Funds local housing & community development needs via HUD partners.", link:"https://www.hud.gov/program_offices/comm_planning/communitydevelopment/programs" }
+  // Community / Housing development
+  { title:"Community Development Block Grant (CDBG)", category:"Housing", desc:"Funds local housing & community development needs via HUD partners.", link:"https://www.hud.gov/program_offices/comm_planning/communitydevelopment/programs" },
+
+  // Example of a state-specific program (you can add more of these later)
+  // { title:"CalFresh (CA SNAP)", category:"Food", desc:"California’s SNAP program for food assistance.", link:"https://www.cdss.ca.gov/calfresh", states:["CA"] },
 ];
 
-/** Badge background tint per category */
+/** Badge tint by category */
 const ICONS_BADGE_BG = {
   Food: "#E1F5EB",
   Health: "#E6F3FF",
@@ -144,15 +199,15 @@ export default function Home() {
   useEffect(()=>{
     if (typeof window!=="undefined") localStorage.setItem("aidfinder_lang", lang);
   },[lang]);
-
   const T = UI[lang];
 
-  // search + category chip (translated)
+  // search + category + state
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState(T.categories[0]); // translated "All"
-  useEffect(()=>{ setCat(UI[lang].categories[0]); }, [lang]); // keep chip in sync when language changes
+  const [stateSel, setStateSel] = useState("All States");
+  useEffect(()=>{ setCat(UI[lang].categories[0]); }, [lang]); // sync chip on language change
 
-  // favorites (store program links as IDs)
+  // favorites
   const [favs, setFavs] = useState<string[]>([]);
   useEffect(()=>{
     if (typeof window !== "undefined") {
@@ -165,45 +220,89 @@ export default function Home() {
       localStorage.setItem("aidfinder_favs", JSON.stringify(favs));
     }
   },[favs]);
-
-  const toggleFav = (id: string) => {
-    setFavs(prev => prev.includes(id) ? prev.filter(x=>x!==id) : [...prev, id]);
-  };
-
+  const toggleFav = (id: string) => setFavs(prev => prev.includes(id) ? prev.filter(x=>x!==id) : [...prev, id]);
   const isFav = (id: string) => favs.includes(id);
 
-  // map translated chip to canonical key
+  // chip mapping back to canonical category key
   const activeCatKey = useMemo(()=>{
     const map = CAT_LABEL[lang];
     const entry = Object.entries(map).find(([key,label]) => label === cat);
     return entry ? entry[0] : "All";
   }, [cat, lang]);
 
-  // filtered list
+  // filter programs (category + search + state)
   const programs = useMemo(()=>{
     const q = query.trim().toLowerCase();
 
-    let base = ALL;
-    // if Saved chip selected, narrow to favorites first
-    const savedLabel = UI[lang].categories[UI[lang].categories.length-1]; // last = Saved
+    // 1) start from Saved list if Saved chip chosen
+    const savedLabel = UI[lang].categories[UI[lang].categories.length-1];
     const savedKey = Object.keys(CAT_LABEL[lang]).find(k => CAT_LABEL[lang][k] === savedLabel) || "Saved";
+
+    let base = ALL;
     if (activeCatKey === "Saved" || activeCatKey === savedKey) {
       base = ALL.filter(p => favs.includes(p.link));
     } else if (activeCatKey !== "All") {
       base = ALL.filter(p => p.category === activeCatKey);
     }
 
+    // 2) state filter: show national programs (no states field) + matching state
+    if (stateSel && stateSel !== "All States") {
+      base = base.filter(p => !p.states || p.states.includes(stateSel));
+    }
+
+    // 3) search filter
     return base.filter(p=>{
       const qOk = !q || p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
       return qOk;
     });
-  },[query, activeCatKey, favs, lang]);
+  },[query, activeCatKey, favs, lang, stateSel]);
 
-  // modal
+  // details modal
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState<typeof ALL[0] | null>(null);
   const openModal = (p:any) => { setCurrent(p); setOpen(true); };
   const closeModal = () => { setOpen(false); setCurrent(null); };
+
+  // share (Web Share API + clipboard)
+  const [toast, setToast] = useState<string>("");
+  const flash = (msg:string) => { setToast(msg); setTimeout(()=>setToast(""), 1800); };
+  const shareProgram = async (p:any) => {
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: p.title, text: p.desc, url: p.link });
+        flash(T.shared);
+      } else if (navigator.clipboard) {
+        await navigator.clipboard.writeText(p.link);
+        flash(T.copied);
+      } else {
+        // fallback
+        prompt("Copy this link:", p.link);
+      }
+    } catch { /* user canceled */ }
+  };
+
+  // suggest a program form modal
+  const [openForm, setOpenForm] = useState(false);
+  const [fName, setFName] = useState("");
+  const [fCat, setFCat] = useState("Food");
+  const [fLink, setFLink] = useState("");
+  const [fState, setFState] = useState("All States");
+  const [fDesc, setFDesc] = useState("");
+
+  const submitSuggestion = () => {
+    const subject = encodeURIComponent("AidFinder: Program suggestion");
+    const body = encodeURIComponent(
+`Program: ${fName}
+Category: ${fCat}
+Link: ${fLink || "(none)"}
+State: ${fState}
+Description:
+${fDesc}
+
+(Submitted from AidFinder)`
+    );
+    window.location.href = `mailto:${ADMIN_EMAIL}?subject=${subject}&body=${body}`;
+  };
 
   return (
     <>
@@ -222,13 +321,17 @@ export default function Home() {
             <img src="/logo.png" alt="AidFinder logo" style={{height:40, borderRadius:8}}/>
             <strong>{T.brand}</strong>
           </div>
-          <div className="langSwitch">
-            <label htmlFor="lang" style={{fontSize:13,color:"#64748b"}}>{T.language}:</label>
-            <select id="lang" value={lang} onChange={(e)=>setLang(e.target.value)} className="langSelect">
-              <option value="en">English</option>
-              <option value="es">Español</option>
-              <option value="fr">Français</option>
-            </select>
+
+          <div className="headerActions">
+            <button className="secondary" onClick={()=>setOpenForm(true)}>{T.suggest}</button>
+            <div className="langSwitch">
+              <label htmlFor="lang" style={{fontSize:13,color:"#64748b"}}>{T.language}:</label>
+              <select id="lang" value={lang} onChange={(e)=>setLang(e.target.value)} className="langSelect">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+              </select>
+            </div>
           </div>
         </div>
       </header>
@@ -253,18 +356,29 @@ export default function Home() {
               <button className="clearBtn" onClick={()=>setQuery("")}>{T.clear}</button>
             )}
           </div>
-          <div className="chips scrollX">
-            {UI[lang].categories.map((label)=>(
-              <button
-                key={label}
-                className={`chip ${cat===label ? "chipActive":""}`}
-                onClick={()=>setCat(label)}
-                type="button"
-              >
-                {label}
-              </button>
-            ))}
+
+          <div className="filtersRow">
+            <div className="chips scrollX">
+              {UI[lang].categories.map((label)=>(
+                <button
+                  key={label}
+                  className={`chip ${cat===label ? "chipActive":""}`}
+                  onClick={()=>setCat(label)}
+                  type="button"
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            <div className="stateSelectWrap">
+              <label htmlFor="stateSel">{T.stateLabel}:</label>
+              <select id="stateSel" className="langSelect" value={stateSel} onChange={(e)=>setStateSel(e.target.value)}>
+                {US_STATES.map(s=> <option key={s} value={s}>{s === "All States" ? T.allStates : s}</option>)}
+              </select>
+            </div>
           </div>
+
           <div className="countRow">
             <span className="muted">{programs.length} {T.programCount}</span>
           </div>
@@ -293,12 +407,12 @@ export default function Home() {
                   {isFav(p.link) ? "❤️" : "🤍"}
                 </button>
 
-                <button
-                  type="button"
-                  className="secondary"
-                  onClick={()=>openModal(p)}
-                >
+                <button type="button" className="secondary" onClick={()=>openModal(p)}>
                   {T.details}
+                </button>
+
+                <button type="button" className="secondary" onClick={()=>shareProgram(p)}>
+                  {T.share}
                 </button>
 
                 <a className="apply" href={p.link} target="_blank" rel="noreferrer">
@@ -317,7 +431,7 @@ export default function Home() {
           )}
         </section>
 
-        {/* Modal */}
+        {/* Details Modal */}
         {open && current && (
           <>
             <div className="backdrop" onClick={closeModal} />
@@ -337,6 +451,7 @@ export default function Home() {
                 >
                   {isFav(current.link) ? "❤️" : "🤍"} {isFav(current.link) ? T.saved : T.unsaved}
                 </button>
+                <button className="secondary" onClick={()=>shareProgram(current)}>{T.share}</button>
                 <a className="apply" href={current.link} target="_blank" rel="noreferrer">
                   {T.apply}
                 </a>
@@ -344,6 +459,50 @@ export default function Home() {
             </div>
           </>
         )}
+
+        {/* Suggest Form Modal */}
+        {openForm && (
+          <>
+            <div className="backdrop" onClick={()=>setOpenForm(false)} />
+            <div className="modal" role="dialog" aria-modal="true" aria-label={T.formTitle}>
+              <div className="modalHeader">
+                <strong>{T.formTitle}</strong>
+                <button className="closeX" onClick={()=>setOpenForm(false)} aria-label={T.close}>✕</button>
+              </div>
+
+              <div className="formCol">
+                <label>{T.formName}</label>
+                <input className="input" value={fName} onChange={e=>setFName(e.target.value)} />
+
+                <label>{T.formCategory}</label>
+                <select className="input" value={fCat} onChange={e=>setFCat(e.target.value)}>
+                  {Object.keys(CAT_LABEL.en).filter(k=>k!=="All" && k!=="Saved").map(k=>(
+                    <option key={k} value={k}>{CAT_LABEL[lang][k]}</option>
+                  ))}
+                </select>
+
+                <label>{T.formLink}</label>
+                <input className="input" value={fLink} onChange={e=>setFLink(e.target.value)} placeholder="https://..." />
+
+                <label>{T.formState}</label>
+                <select className="input" value={fState} onChange={e=>setFState(e.target.value)}>
+                  {US_STATES.map(s=> <option key={s} value={s}>{s === "All States" ? T.allStates : s}</option>)}
+                </select>
+
+                <label>{T.formDesc}</label>
+                <textarea className="textarea" rows={4} value={fDesc} onChange={e=>setFDesc(e.target.value)} />
+
+                <div className="modalActions">
+                  <button className="secondary" onClick={submitSuggestion}>{T.formSubmit}</button>
+                  <span className="muted">{T.formNote}</span>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* Toast */}
+        {toast && <div className="toast">{toast}</div>}
 
         <footer className="footer">{T.footer}</footer>
       </main>

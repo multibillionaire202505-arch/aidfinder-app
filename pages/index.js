@@ -1,22 +1,21 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
-/** ====== CONFIG: where suggestions go (email subject only) ====== */
-const ADMIN_EMAIL = "you@example.com"; // ← change this to your email
+/** ===== Design System: tokens loaded via CSS, Inter font in <Head> ===== */
 
-/** Reusable Heart SVG (always visible) */
+/** Heart SVG (white when saved on red background; red outline when not) */
 const HeartIcon = ({ on = false, size = 18 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" style={{ display: "block" }}>
     <path
       d="M12.001 20.727s-7.2-4.315-10.285-8.32C-0.03 9.74 1.1 6.2 4.14 5.146c1.92-.68 4.02-.12 5.36 1.327l.5.537.5-.537c1.34-1.447 3.44-2.007 5.36-1.327 3.04 1.054 4.17 4.594 2.424 7.261-3.085 4.005-10.283 8.32-10.283 8.32z"
-      fill={on ? "#e11d48" : "none"}
-      stroke="#e11d48"
+      fill={on ? "#ffffff" : "none"}
+      stroke={on ? "#ffffff" : "#e11d48"}
       strokeWidth="1.8"
     />
   </svg>
 );
 
-/** UI (English) */
+/** UI copy */
 const UI = {
   brand: "AidFinder",
   title: "Find Aid Programs Easily",
@@ -39,37 +38,23 @@ const UI = {
   share: "Share",
   shareWhatsApp: "Share via WhatsApp",
   shareEmail: "Share via Email",
-  suggest: "Suggest a program",
-  formTitle: "Suggest a program",
-  formName: "Program name",
-  formCategory: "Category",
-  formLink: "Official link (if any)",
-  formState: "State (optional)",
-  formDesc: "Why it helps / short description",
-  formSendEmail: "Send Email",
-  formSendWhatsApp: "Send WhatsApp",
-  formCopy: "Copy",
-  formNote: "Choose Email or WhatsApp.",
-  copied: "Link copied!",
-  shared: "Shared!",
 };
 
-/** Category icons */
+/** Category icons + badge tints */
 const ICONS = { Food:"🍏", Health:"➕", Housing:"🏠", Utilities:"💡", Education:"🎓", Income:"💲" };
-
-/** Badge tint */
 const ICONS_BADGE_BG = {
-  Food:"#E1F5EB", Health:"#E6F3FF", Housing:"#F4EBFF", Utilities:"#FFF4E5", Education:"#EAF0FF", Income:"#E8FFF4",
+  Food:"var(--tint-food)", Health:"var(--tint-health)", Housing:"var(--tint-housing)",
+  Utilities:"var(--tint-utilities)", Education:"var(--tint-education)", Income:"var(--tint-income)"
 };
 
-/** Full US states list (incl. DC) */
+/** Full US states (incl. DC) */
 const US_STATES = [
   "All States","AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA",
   "MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC",
   "SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
 ];
 
-/** Programs (national + examples of state-specific) */
+/** Programs (national + a few state-specific to demo filter) */
 const ALL = [
   // Food
   {title:"SNAP (Food Stamps)", category:"Food", desc:"Monthly funds to buy groceries for eligible households.", link:"https://www.fns.usda.gov/snap"},
@@ -113,7 +98,7 @@ const ALL = [
   // Community development
   {title:"Community Development Block Grant (CDBG)", category:"Housing", desc:"Funds local housing & community development via HUD partners.", link:"https://www.hud.gov/program_offices/comm_planning/communitydevelopment/programs"},
 
-  // ---- Example state-specific programs ----
+  // State-specific demo
   {title:"CalFresh (CA SNAP)", category:"Food", desc:"California’s SNAP program for food assistance.", link:"https://www.cdss.ca.gov/calfresh", states:["CA"]},
   {title:"Medi-Cal (CA Medicaid)", category:"Health", desc:"California’s Medicaid program.", link:"https://www.dhcs.ca.gov/services/medi-cal", states:["CA"]},
   {title:"HEAP (NY Home Energy Assistance)", category:"Utilities", desc:"Help with heating & cooling costs for eligible NY residents.", link:"https://otda.ny.gov/programs/heap/", states:["NY"]},
@@ -132,65 +117,16 @@ export default function Home() {
   const toggleFav = (id)=> setFavs(prev => prev.includes(id) ? prev.filter(x=>x!==id) : [...prev, id]);
   const isFav = (id)=> favs.includes(id);
 
-  // details modal
-  const [open, setOpen] = useState(false);
-  const [current, setCurrent] = useState(null);
-
-  // suggestion modal
-  const [openForm, setOpenForm] = useState(false);
-  const [fName, setFName] = useState("");
-  const [fCat, setFCat] = useState("Food");
-  const [fLink, setFLink] = useState("");
-  const [fState, setFState] = useState("All States");
-  const [fDesc, setFDesc] = useState("");
-  const buildSuggestionText = () =>
-`Program: ${fName}
-Category: ${fCat}
-Link: ${fLink || "(none)"}
-State: ${fState}
-Description:
-${fDesc}
-
-(Submitted from AidFinder)`;
-
-  const sendSuggestionEmail = () => {
-    const subject = encodeURIComponent("AidFinder: Program suggestion");
-    const body = encodeURIComponent(buildSuggestionText());
-    window.location.href = `mailto:${ADMIN_EMAIL}?subject=${subject}&body=${body}`;
-  };
-  const sendSuggestionWhatsApp = () => {
-    const text = encodeURIComponent(buildSuggestionText());
-    window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
-  };
-
-  // filtering
-  const programs = useMemo(()=>{
-    let base = ALL;
-
-    if (cat === "Saved") {
-      base = base.filter(p => favs.includes(p.link));
-    } else if (cat !== "All") {
-      base = base.filter(p => p.category === cat);
-    }
-
-    if (stateSel && stateSel !== "All States") {
-      base = base.filter(p => !p.states || p.states.includes(stateSel));
-    }
-
-    if (query.trim()) {
-      const q = query.toLowerCase();
-      base = base.filter(p =>
-        p.title.toLowerCase().includes(q) ||
-        p.desc.toLowerCase().includes(q) ||
-        p.category.toLowerCase().includes(q)
-      );
-    }
-    return base;
-  }, [cat, favs, stateSel, query]);
-
-  // share menu state (per card and for modal)
+  // share menu state (per card + modal)
   const [shareOpenIndex, setShareOpenIndex] = useState(null);
   const [shareOpenModal, setShareOpenModal] = useState(false);
+
+  // close menus when clicking outside
+  useEffect(() => {
+    const onDocClick = () => { setShareOpenIndex(null); setShareOpenModal(false); };
+    document.addEventListener("click", onDocClick);
+    return () => document.removeEventListener("click", onDocClick);
+  }, []);
 
   // share actions
   const shareEmail = (p) => {
@@ -203,18 +139,39 @@ ${fDesc}
     window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
   };
 
-  // close menus when clicking outside
-  useEffect(() => {
-    const onDocClick = () => { setShareOpenIndex(null); setShareOpenModal(false); };
-    document.addEventListener("click", onDocClick);
-    return () => document.removeEventListener("click", onDocClick);
-  }, []);
+  // filtering
+  const programs = useMemo(()=>{
+    let base = ALL;
+
+    if (cat === "Saved") base = base.filter(p => favs.includes(p.link));
+    else if (cat !== "All") base = base.filter(p => p.category === cat);
+
+    // include national + matching state programs
+    if (stateSel !== "All States") base = base.filter(p => !p.states || p.states.includes(stateSel));
+
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      base = base.filter(p =>
+        p.title.toLowerCase().includes(q) ||
+        p.desc.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q)
+      );
+    }
+    return base;
+  }, [cat, favs, stateSel, query]);
+
+  // details modal
+  const [open, setOpen] = useState(false);
+  const [current, setCurrent] = useState(null);
 
   return (
     <>
       <Head>
         <title>AidFinder — Find Aid Programs Easily</title>
         <meta name="description" content="Explore aid programs across Food, Health, Housing, Utilities, Education, and Income — all in one place." />
+        <meta name="theme-color" content="#16a34a" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </Head>
 
       {/* Header */}
@@ -223,9 +180,6 @@ ${fDesc}
           <div className="brandRow">
             <img src="/logo.png" alt="AidFinder logo" style={{height:40, borderRadius:8}}/>
             <strong>{UI.brand}</strong>
-          </div>
-          <div className="headerActions">
-            <button className="secondary" onClick={()=>setOpenForm(true)}>{UI.suggest}</button>
           </div>
         </div>
       </header>
@@ -251,19 +205,23 @@ ${fDesc}
           </div>
 
           <div className="filtersRow">
-            <div className="chips scrollX">
+            {/* Category chips */}
+            <div className="chips scrollX" role="tablist" aria-label="Categories">
               {UI.categories.map(label=>(
                 <button
                   key={label}
                   className={`chip ${cat===label ? "chipActive":""}`}
                   onClick={()=>setCat(label)}
                   type="button"
+                  role="tab"
+                  aria-selected={cat===label}
                 >
                   {label}
                 </button>
               ))}
             </div>
 
+            {/* State selector */}
             <div className="stateSelectWrap">
               <label htmlFor="stateSel">{UI.stateLabel}:</label>
               <select
@@ -290,7 +248,7 @@ ${fDesc}
         <section className="grid">
           {programs.map((p,i)=>(
             <article className="card" key={i}>
-              <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "#e2e8f0"}}>
+              <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "var(--border)"}}>
                 {p.category}
               </div>
 
@@ -298,7 +256,7 @@ ${fDesc}
               <p>{p.desc}</p>
 
               <div className="cardActions">
-                {/* Favorite */}
+                {/* Like */}
                 <button
                   type="button"
                   className={`iconBtn ${isFav(p.link) ? "heartOn":""}`}
@@ -320,13 +278,15 @@ ${fDesc}
                     type="button"
                     className="secondary"
                     onClick={()=>setShareOpenIndex(shareOpenIndex===i? null : i)}
+                    aria-haspopup="menu"
+                    aria-expanded={shareOpenIndex===i}
                   >
                     {UI.share} ▾
                   </button>
                   {shareOpenIndex===i && (
-                    <div className="menu">
-                      <button onClick={()=>shareWhatsApp(p)}>{UI.shareWhatsApp}</button>
-                      <button onClick={()=>shareEmail(p)}>{UI.shareEmail}</button>
+                    <div className="menu" role="menu">
+                      <button role="menuitem" onClick={()=>shareWhatsApp(p)}>{UI.shareWhatsApp}</button>
+                      <button role="menuitem" onClick={()=>shareEmail(p)}>{UI.shareEmail}</button>
                     </div>
                   )}
                 </div>
@@ -354,7 +314,7 @@ ${fDesc}
             <div className="backdrop" onClick={()=>{ setOpen(false); setShareOpenModal(false); }} />
             <div className="modal" role="dialog" aria-modal="true" aria-label="Program details">
               <div className="modalHeader">
-                <span className="badge" style={{background: ICONS_BADGE_BG[current.category] || "#e2e8f0"}}>
+                <span className="badge" style={{background: ICONS_BADGE_BG[current.category] || "var(--border)"}}>
                   {current.category}
                 </span>
                 <button className="closeX" onClick={()=>{ setOpen(false); setShareOpenModal(false); }} aria-label={UI.close}>✕</button>
@@ -367,62 +327,17 @@ ${fDesc}
                   <span style={{marginLeft:8}}>{isFav(current.link) ? UI.saved : UI.unsaved}</span>
                 </button>
 
-                {/* Share menu inside modal */}
                 <div className="menuWrap">
-                  <button className="secondary" onClick={()=>setShareOpenModal(v=>!v)}>{UI.share} ▾</button>
+                  <button className="secondary" onClick={()=>setShareOpenModal(v=>!v)} aria-haspopup="menu" aria-expanded={shareOpenModal}>{UI.share} ▾</button>
                   {shareOpenModal && (
-                    <div className="menu">
-                      <button onClick={()=>shareWhatsApp(current)}>{UI.shareWhatsApp}</button>
-                      <button onClick={()=>shareEmail(current)}>{UI.shareEmail}</button>
+                    <div className="menu" role="menu">
+                      <button role="menuitem" onClick={()=>shareWhatsApp(current)}>{UI.shareWhatsApp}</button>
+                      <button role="menuitem" onClick={()=>shareEmail(current)}>{UI.shareEmail}</button>
                     </div>
                   )}
                 </div>
 
                 <a className="apply" href={current.link} target="_blank" rel="noreferrer">{UI.apply}</a>
-              </div>
-            </div>
-          </>
-        )}
-
-        {/* Suggest Form Modal */}
-        {openForm && (
-          <>
-            <div className="backdrop" onClick={()=>setOpenForm(false)} />
-            <div className="modal" role="dialog" aria-modal="true" aria-label={UI.formTitle} onClick={(e)=>e.stopPropagation()}>
-              <div className="modalHeader">
-                <strong>{UI.formTitle}</strong>
-                <button className="closeX" onClick={()=>setOpenForm(false)} aria-label={UI.close}>✕</button>
-              </div>
-
-              <div className="formCol">
-                <label>{UI.formName}</label>
-                <input className="input" value={fName} onChange={e=>setFName(e.target.value)} />
-
-                <label>{UI.formCategory}</label>
-                <select className="input" value={fCat} onChange={e=>setFCat(e.target.value)}>
-                  {["Food","Health","Housing","Utilities","Education","Income"].map(k=>(
-                    <option key={k} value={k}>{k}</option>
-                  ))}
-                </select>
-
-                <label>{UI.formLink}</label>
-                <input className="input" value={fLink} onChange={e=>setFLink(e.target.value)} placeholder="https://..." />
-
-                <label>{UI.formState}</label>
-                <select className="input" value={fState} onChange={e=>setFState(e.target.value)}>
-                  {US_STATES.map(s=> <option key={s} value={s}>{s}</option>)}
-                </select>
-
-                <label>{UI.formDesc}</label>
-                <textarea className="textarea" rows={4} value={fDesc} onChange={e=>setFDesc(e.target.value)} />
-
-                <div className="modalActions" style={{justifyContent:"space-between", flexWrap:"wrap"}}>
-                  <div className="btnGroup">
-                    <button className="secondary" onClick={sendSuggestionEmail}>{UI.formSendEmail}</button>
-                    <button className="secondary" onClick={sendSuggestionWhatsApp}>{UI.formSendWhatsApp}</button>
-                  </div>
-                  <span className="muted">{UI.formNote}</span>
-                </div>
               </div>
             </div>
           </>

@@ -13,8 +13,8 @@ const HeartIcon = ({ on = false, size = 20, animate = false }) => (
   >
     <path
       d="M12.001 20.727s-7.2-4.315-10.285-8.32C-0.03 9.74 1.1 6.2 4.14 5.146c1.92-.68 4.02-.12 5.36 1.327l.5.537.5-.537c1.34-1.447 3.44-2.007 5.36-1.327 3.04 1.054 4.17 4.594 2.424 7.261-3.085 4.005-10.283 8.32-10.283 8.32z"
-      fill={on ? "#e11d48" : "none"}   /* inside fill turns red when liked */
-      stroke="#e11d48"                 /* outline always red */
+      fill={on ? "#e11d48" : "none"}
+      stroke="#e11d48"
       strokeWidth="1.8"
     />
   </svg>
@@ -113,7 +113,7 @@ const US_STATES = [
   "SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
 ];
 
-/** ===== Programs with i18n (EN/FR/ES) ===== */
+/** ===== Programs with i18n (EN/FR/ES). National + CA/TX/NY samples. ===== */
 const ALL = [
   // Food
   { category:"Food", link:"https://www.fns.usda.gov/snap",
@@ -132,6 +132,10 @@ const ALL = [
     i18n:{ en:{ title:"Commodity Supplemental Food Program (CSFP)", desc:"Monthly food boxes for low-income seniors." },
            fr:{ title:"CSFP (Aide alimentaire pour aînés)", desc:"Colis alimentaires mensuels pour les personnes âgées à faible revenu." },
            es:{ title:"Programa CSFP (Alimentos para Mayores)", desc:"Cajas mensuales de alimentos para adultos mayores de bajos ingresos." } } },
+  { category:"Food", link:"https://www.fns.usda.gov/sbp",
+    i18n:{ en:{ title:"School Breakfast Program (SBP)", desc:"Free or low-cost school breakfasts for eligible students." },
+           fr:{ title:"Programme de petit-déjeuner scolaire (SBP)", desc:"Petits-déjeuners scolaires gratuits ou à faible coût pour élèves éligibles." },
+           es:{ title:"Programa de Desayunos Escolares (SBP)", desc:"Desayunos escolares gratuitos o de bajo costo para estudiantes elegibles." } } },
 
   // Health
   { category:"Health", link:"https://www.medicaid.gov",
@@ -162,6 +166,10 @@ const ALL = [
     i18n:{ en:{ title:"LIHEAP", desc:"Help paying heating/cooling bills and some energy repairs." },
            fr:{ title:"LIHEAP", desc:"Aide pour payer les factures de chauffage/climatisation et certaines réparations énergétiques." },
            es:{ title:"LIHEAP", desc:"Ayuda para pagar facturas de calefacción/aire y algunas reparaciones energéticas." } } },
+  { category:"Utilities", link:"https://www.energy.gov/scep/wap/weatherization-assistance-program",
+    i18n:{ en:{ title:"WAP (Weatherization Assistance)", desc:"Home energy efficiency repairs for eligible households." },
+           fr:{ title:"WAP (Aide à l’isolation)", desc:"Travaux d’efficacité énergétique pour les ménages éligibles." },
+           es:{ title:"WAP (Asistencia de Climatización)", desc:"Reparaciones de eficiencia energética para hogares elegibles." } } },
   { category:"Utilities", link:"https://www.lifelinesupport.org/",
     i18n:{ en:{ title:"Lifeline (Phone/Internet)", desc:"Discounted phone or internet for eligible households." },
            fr:{ title:"Lifeline (Téléphone/Internet)", desc:"Réduction sur le téléphone ou l’internet pour les ménages éligibles." },
@@ -235,7 +243,7 @@ const ALL = [
            fr:{ title:"CDBG (Dév. communautaire)", desc:"Financement du logement et du développement local via les partenaires HUD." },
            es:{ title:"Subvención en Bloque para Desarrollo Comunitario (CDBG)", desc:"Financia vivienda y desarrollo comunitario a través de socios de HUD." } } },
 
-  // State-specific demo
+  // State-specific demo (CA / TX / NY)
   { category:"Food", link:"https://www.cdss.ca.gov/calfresh", states:["CA"],
     i18n:{ en:{ title:"CalFresh (CA SNAP)", desc:"California’s SNAP program for food assistance." },
            fr:{ title:"CalFresh (SNAP Californie)", desc:"Programme SNAP de Californie pour l’aide alimentaire." },
@@ -244,6 +252,20 @@ const ALL = [
     i18n:{ en:{ title:"Medi-Cal (CA Medicaid)", desc:"California’s Medicaid program." },
            fr:{ title:"Medi-Cal (Medicaid Californie)", desc:"Programme Medicaid de Californie." },
            es:{ title:"Medi-Cal (Medicaid de California)", desc:"Programa Medicaid del estado de California." } } },
+
+  { category:"Food", link:"https://www.yourtexasbenefits.com/Learn/SNAP", states:["TX"],
+    i18n:{ en:{ title:"Texas SNAP (Your Texas Benefits)", desc:"Food assistance for eligible households in Texas." },
+           fr:{ title:"SNAP Texas (Your Texas Benefits)", desc:"Aide alimentaire pour ménages éligibles au Texas." },
+           es:{ title:"SNAP de Texas (Your Texas Benefits)", desc:"Asistencia alimentaria para hogares elegibles en Texas." } } },
+  { category:"Health", link:"https://www.yourtexasbenefits.com/Learn/Medicaid", states:["TX"],
+    i18n:{ en:{ title:"Texas Medicaid", desc:"Health coverage for eligible Texans via Your Texas Benefits." },
+           fr:{ title:"Medicaid Texas", desc:"Couverture santé pour Texans éligibles via Your Texas Benefits." },
+           es:{ title:"Medicaid de Texas", desc:"Cobertura de salud para texanos elegibles vía Your Texas Benefits." } } },
+
+  { category:"Food", link:"https://otda.ny.gov/programs/snap/", states:["NY"],
+    i18n:{ en:{ title:"New York SNAP", desc:"Food assistance for eligible households in New York." },
+           fr:{ title:"SNAP New York", desc:"Aide alimentaire pour ménages éligibles à New York." },
+           es:{ title:"SNAP de Nueva York", desc:"Asistencia alimentaria para hogares elegibles en Nueva York." } } },
   { category:"Utilities", link:"https://otda.ny.gov/programs/heap/", states:["NY"],
     i18n:{ en:{ title:"HEAP (NY Home Energy Assistance)", desc:"Help with heating & cooling costs for eligible NY residents." },
            fr:{ title:"HEAP (Aide énergie NY)", desc:"Aide aux coûts de chauffage/climatisation pour résidents éligibles de NY." },
@@ -252,8 +274,23 @@ const ALL = [
 
 /** ===== Main Component ===== */
 export default function Home() {
-  // language
+  // language with persistence (remember choice; default to browser if first visit)
   const [lang, setLang] = useState("en");
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("aidfinder_lang");
+      if (saved) {
+        setLang(saved);
+      } else {
+        const br = (navigator.language || "en").slice(0,2);
+        if (["en","fr","es"].includes(br)) setLang(br);
+      }
+    } catch {}
+  }, []);
+  useEffect(() => {
+    try { localStorage.setItem("aidfinder_lang", lang); } catch {}
+  }, [lang]);
+
   const T = UI[lang];
 
   // search, category, state
@@ -338,6 +375,7 @@ export default function Home() {
         <title>AidFinder — {T.title}</title>
         <meta name="description" content={T.subtitle} />
         <meta name="theme-color" content="#16a34a" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </Head>
@@ -394,7 +432,7 @@ export default function Home() {
           <div className="filtersRow">
             {/* Category chips */}
             <div className="chips scrollX" role="tablist" aria-label="Categories">
-              {CAT_ORDER.map(key=>{
+              {["All","Food","Health","Housing","Utilities","Education","Income","Saved"].map(key=>{
                 const label = catDisplay(key);
                 return (
                   <button

@@ -32,6 +32,18 @@ html, body {
   font-size: 20px;
   color: #111827; /* gray-900 */
 }
+.topnav {
+  display: none;
+  gap: 14px;
+}
+.toplink {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: .8;
+}
+.toplink:hover { opacity: 1; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -58,12 +70,16 @@ html, body {
 /* ---------- Toolbar (Search + Chips) ---------- */
 .toolbar { margin: 8px 0 16px; }
 
-/* Search bar */
+.searchWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
 .search {
   display: block;
   width: 100%;
   max-width: 520px;
-  margin: 18px auto 8px;
   padding: 12px 14px;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
@@ -75,14 +91,28 @@ html, body {
   border-color: #16a34a;
   box-shadow: 0 0 0 3px rgba(22,163,74,0.15);
 }
+.clearBtn {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.clearBtn:hover { background: #f1f5f9; }
 
-/* Category Chips */
+.scrollX {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .chips {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 8px;
-  justify-content: center;
-  margin: 8px 0 16px;
+  justify-content: flex-start;
+  margin: 12px auto 8px;
+  max-width: 100%;
+  padding-bottom: 4px;
 }
 .chip {
   border: 1px solid #cbd5e1;
@@ -92,6 +122,7 @@ html, body {
   cursor: pointer;
   font-size: 14px;
   transition: all .15s ease;
+  white-space: nowrap;
 }
 .chip:hover { filter: brightness(0.98); }
 .chipActive {
@@ -99,6 +130,11 @@ html, body {
   color: #ffffff;
   border-color: #16a34a;
 }
+.countRow {
+  text-align: center;
+  margin-top: 4px;
+}
+.muted { color: #64748b; font-size: 13px; }
 
 /* ---------- Grid & Cards ---------- */
 .grid {
@@ -130,9 +166,12 @@ html, body {
   padding: 4px 10px;
   border-radius: 9999px;
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 0 0 8px 0;
   font-size: 18px;
   font-weight: 800;
@@ -160,6 +199,37 @@ html, body {
 }
 .apply:hover { background: #15803d; }
 
+/* ---------- Empty state ---------- */
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  background: #ffffff;
+  border: 1px dashed #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+}
+.emptyArt {
+  font-size: 40px;
+  margin-bottom: 8px;
+  opacity: .7;
+}
+
+/* ---------- Back to top ---------- */
+.totop {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.totop:hover { background: #f8fafc; }
+
 /* ---------- Footer ---------- */
 .footer {
   text-align: center;
@@ -172,6 +242,9 @@ html, body {
 }
 
 /* ---------- Responsive Tweaks ---------- */
+@media (min-width: 880px) {
+  .topnav { display: flex; }
+}
 @media (max-width: 640px) {
   .hero { padding: 28px 16px; border-radius: 12px; }
   .hero h1 { font-size: 24px; }

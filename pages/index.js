@@ -1,13 +1,20 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
-/** ===== Heart icon (white when saved on red background) ===== */
-const HeartIcon = ({ on = false, size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" style={{ display: "block" }}>
+/** ===== Heart icon (inside red only, outline always red, optional pulse) ===== */
+const HeartIcon = ({ on = false, size = 20, animate = false }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    className={animate ? "pulse" : ""}
+    style={{ display: "block" }}
+  >
     <path
       d="M12.001 20.727s-7.2-4.315-10.285-8.32C-0.03 9.74 1.1 6.2 4.14 5.146c1.92-.68 4.02-.12 5.36 1.327l.5.537.5-.537c1.34-1.447 3.44-2.007 5.36-1.327 3.04 1.054 4.17 4.594 2.424 7.261-3.085 4.005-10.283 8.32-10.283 8.32z"
-      fill={on ? "#ffffff" : "none"}
-      stroke={on ? "#ffffff" : "#e11d48"}
+      fill={on ? "#e11d48" : "none"}   /* inside fill turns red when liked */
+      stroke="#e11d48"                 /* outline always red */
       strokeWidth="1.8"
     />
   </svg>
@@ -106,7 +113,7 @@ const US_STATES = [
   "SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
 ];
 
-/** ===== Data model with i18n: en, fr, es ===== */
+/** ===== Programs with i18n (EN/FR/ES). Add more any time. ===== */
 const ALL = [
   // Food
   {
@@ -211,7 +218,7 @@ const ALL = [
     i18n:{
       en:{ title:"Lifeline (Phone/Internet)", desc:"Discounted phone or internet for eligible households." },
       fr:{ title:"Lifeline (Téléphone/Internet)", desc:"Réduction sur le téléphone ou l’internet pour les ménages éligibles." },
-    es:{ title:"Lifeline (Teléfono/Internet)", desc:"Descuento en teléfono o internet para hogares elegibles." }
+      es:{ title:"Lifeline (Teléfono/Internet)", desc:"Descuento en teléfono o internet para hogares elegibles." }
     }
   },
   {
@@ -395,6 +402,7 @@ const ALL = [
 export default function Home() {
   // language
   const [lang, setLang] = useState("en");
+  const T = UI[lang];
 
   // search, category, state
   const [query, setQuery] = useState("");
@@ -419,7 +427,13 @@ export default function Home() {
     return () => document.removeEventListener("click", onDocClick);
   }, []);
 
-  const T = UI[lang];
+  // category order + localized labels
+  const CAT_ORDER = ["All","Food","Health","Housing","Utilities","Education","Income","Saved"];
+  const catDisplay = (key) => {
+    const map = UI[lang].catLabels;
+    if (key === "All" || key === "Saved") return map[key];
+    return map[key] || key;
+  };
 
   // share actions (localized title/desc)
   const shareEmail = (p) => {
@@ -430,14 +444,6 @@ export default function Home() {
   const shareWhatsApp = (p) => {
     const text = encodeURIComponent(`${p.i18n[lang].title} — ${p.i18n[lang].desc}\n${p.link}`);
     window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
-  };
-
-  // category order + localized labels
-  const CAT_ORDER = ["All","Food","Health","Housing","Utilities","Education","Income","Saved"];
-  const catDisplay = (key) => {
-    const map = UI[lang].catLabels;
-    if (key === "All" || key === "Saved") return map[key];
-    return map[key] || key;
   };
 
   // filtering
@@ -495,7 +501,7 @@ export default function Home() {
               onChange={(e)=>{
                 const v = e.target.value;
                 setLang(v);
-                setCat("All"); // reset to avoid mismatch on switch
+                setCat("All"); // reset on switch to avoid mismatch
               }}
             >
               <option value="en">English</option>
@@ -527,7 +533,7 @@ export default function Home() {
           </div>
 
           <div className="filtersRow">
-            {/* Category chips (localized labels, internal keys) */}
+            {/* Category chips */}
             <div className="chips scrollX" role="tablist" aria-label="Categories">
               {CAT_ORDER.map(key=>{
                 const label = catDisplay(key);
@@ -584,15 +590,15 @@ export default function Home() {
                 <p>{desc}</p>
 
                 <div className="cardActions">
-                  {/* Like */}
+                  {/* Like (no red button bg; only heart fill changes) */}
                   <button
                     type="button"
-                    className={`iconBtn ${isFav(p.link) ? "heartOn":""}`}
+                    className="iconBtn"
                     aria-pressed={isFav(p.link)}
                     onClick={(e)=>{ e.stopPropagation(); toggleFav(p.link); }}
                     title={isFav(p.link) ? T.saved : T.unsaved}
                   >
-                    <HeartIcon on={isFav(p.link)} />
+                    <HeartIcon on={isFav(p.link)} animate={isFav(p.link)} />
                   </button>
 
                   {/* Details */}
@@ -651,8 +657,8 @@ export default function Home() {
               <h3 className="modalTitle">{ICONS[current.category] || "📌"} {current.i18n[lang].title}</h3>
               <p className="modalBody">{current.i18n[lang].desc}</p>
               <div className="modalActions" onClick={(e)=>e.stopPropagation()}>
-                <button className={`iconBtn ${isFav(current.link) ? "heartOn":""}`} onClick={()=>toggleFav(current.link)}>
-                  <HeartIcon on={isFav(current.link)} />
+                <button className="iconBtn" onClick={()=>toggleFav(current.link)}>
+                  <HeartIcon on={isFav(current.link)} animate={isFav(current.link)} />
                   <span style={{marginLeft:8}}>{isFav(current.link) ? T.saved : T.unsaved}</span>
                 </button>
 
@@ -674,6 +680,16 @@ export default function Home() {
 
         <footer className="footer">{T.footer}</footer>
       </main>
+
+      {/* Tiny global CSS for the heart pulse so you don't have to edit styles/globals.css */}
+      <style jsx global>{`
+        .pulse { animation: pulseAnim 0.3s ease-in-out; }
+        @keyframes pulseAnim {
+          0% { transform: scale(1); opacity: 0.85; }
+          50% { transform: scale(1.3); opacity: 1; }
+          100% { transform: scale(1); opacity: 1; }
+        }
+      `}</style>
     </>
   );
 }

@@ -1,8 +1,8 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
-/** ====== CONFIG: set where suggestions go (email subject only) ====== */
-const ADMIN_EMAIL = "you@example.com"; // ← change this to your email (for mailto link)
+/** ====== CONFIG: where suggestions go (email subject only) ====== */
+const ADMIN_EMAIL = "you@example.com"; // ← change this to your email
 
 /** Reusable Heart SVG (always visible) */
 const HeartIcon = ({ on = false, size = 18 }) => (
@@ -16,7 +16,7 @@ const HeartIcon = ({ on = false, size = 18 }) => (
   </svg>
 );
 
-/** UI (English kept for clarity) */
+/** UI (English) */
 const UI = {
   brand: "AidFinder",
   title: "Find Aid Programs Easily",
@@ -37,9 +37,8 @@ const UI = {
   stateLabel: "Your State",
   allStates: "All States",
   share: "Share",
-  shareCopy: "Copy Link",
-  shareWhatsApp: "WhatsApp",
-  shareEmail: "Email",
+  shareWhatsApp: "Share via WhatsApp",
+  shareEmail: "Share via Email",
   suggest: "Suggest a program",
   formTitle: "Suggest a program",
   formName: "Program name",
@@ -50,7 +49,7 @@ const UI = {
   formSendEmail: "Send Email",
   formSendWhatsApp: "Send WhatsApp",
   formCopy: "Copy",
-  formNote: "Choose Email, WhatsApp or Copy.",
+  formNote: "Choose Email or WhatsApp.",
   copied: "Link copied!",
   shared: "Shared!",
 };
@@ -133,25 +132,6 @@ export default function Home() {
   const toggleFav = (id)=> setFavs(prev => prev.includes(id) ? prev.filter(x=>x!==id) : [...prev, id]);
   const isFav = (id)=> favs.includes(id);
 
-  // share helpers
-  const [toast, setToast] = useState("");
-  const flash = (m)=>{ setToast(m); setTimeout(()=>setToast(""), 1600); };
-  const copyToClipboard = async (text) => {
-    try {
-      if (navigator.clipboard) { await navigator.clipboard.writeText(text); flash(UI.copied); }
-      else { const t = document.createElement("textarea"); t.value = text; document.body.appendChild(t); t.select(); document.execCommand("copy"); document.body.removeChild(t); flash(UI.copied); }
-    } catch {}
-  };
-  const shareWhatsApp = (p) => {
-    const text = encodeURIComponent(`${p.title} — ${p.desc}\n${p.link}`);
-    window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
-  };
-  const shareEmail = (p) => {
-    const subject = encodeURIComponent(`Aid program: ${p.title}`);
-    const body = encodeURIComponent(`${p.title}\n\n${p.desc}\n\nLink: ${p.link}`);
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
-  };
-
   // details modal
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(null);
@@ -182,25 +162,21 @@ ${fDesc}
     const text = encodeURIComponent(buildSuggestionText());
     window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
   };
-  const copySuggestion = () => copyToClipboard(buildSuggestionText());
 
   // filtering
   const programs = useMemo(()=>{
     let base = ALL;
 
-    // Saved category
     if (cat === "Saved") {
       base = base.filter(p => favs.includes(p.link));
     } else if (cat !== "All") {
       base = base.filter(p => p.category === cat);
     }
 
-    // State filter: include national (no p.states) + those matching the state
     if (stateSel && stateSel !== "All States") {
       base = base.filter(p => !p.states || p.states.includes(stateSel));
     }
 
-    // Search
     if (query.trim()) {
       const q = query.toLowerCase();
       base = base.filter(p =>
@@ -211,6 +187,28 @@ ${fDesc}
     }
     return base;
   }, [cat, favs, stateSel, query]);
+
+  // share menu state (per card and for modal)
+  const [shareOpenIndex, setShareOpenIndex] = useState(null);
+  const [shareOpenModal, setShareOpenModal] = useState(false);
+
+  // share actions
+  const shareEmail = (p) => {
+    const subject = encodeURIComponent(`Aid program: ${p.title}`);
+    const body = encodeURIComponent(`${p.title}\n\n${p.desc}\n\nLink: ${p.link}`);
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+  };
+  const shareWhatsApp = (p) => {
+    const text = encodeURIComponent(`${p.title} — ${p.desc}\n${p.link}`);
+    window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
+  };
+
+  // close menus when clicking outside
+  useEffect(() => {
+    const onDocClick = () => { setShareOpenIndex(null); setShareOpenModal(false); };
+    document.addEventListener("click", onDocClick);
+    return () => document.removeEventListener("click", onDocClick);
+  }, []);
 
   return (
     <>
@@ -253,7 +251,6 @@ ${fDesc}
           </div>
 
           <div className="filtersRow">
-            {/* Category chips */}
             <div className="chips scrollX">
               {UI.categories.map(label=>(
                 <button
@@ -267,7 +264,6 @@ ${fDesc}
               ))}
             </div>
 
-            {/* State selector */}
             <div className="stateSelectWrap">
               <label htmlFor="stateSel">{UI.stateLabel}:</label>
               <select
@@ -307,7 +303,7 @@ ${fDesc}
                   type="button"
                   className={`iconBtn ${isFav(p.link) ? "heartOn":""}`}
                   aria-pressed={isFav(p.link)}
-                  onClick={()=>toggleFav(p.link)}
+                  onClick={(e)=>{ e.stopPropagation(); toggleFav(p.link); }}
                   title={isFav(p.link) ? UI.saved : UI.unsaved}
                 >
                   <HeartIcon on={isFav(p.link)} />
@@ -318,17 +314,21 @@ ${fDesc}
                   {UI.details}
                 </button>
 
-                {/* Share menu: Copy | WhatsApp | Email */}
-                <div className="btnGroup">
-                  <button type="button" className="secondary" onClick={()=>copyToClipboard(p.link)}>
-                    {UI.shareCopy}
+                {/* Share (single button + menu) */}
+                <div className="menuWrap" onClick={(e)=>e.stopPropagation()}>
+                  <button
+                    type="button"
+                    className="secondary"
+                    onClick={()=>setShareOpenIndex(shareOpenIndex===i? null : i)}
+                  >
+                    {UI.share} ▾
                   </button>
-                  <button type="button" className="secondary" onClick={()=>shareWhatsApp(p)}>
-                    {UI.shareWhatsApp}
-                  </button>
-                  <button type="button" className="secondary" onClick={()=>shareEmail(p)}>
-                    {UI.shareEmail}
-                  </button>
+                  {shareOpenIndex===i && (
+                    <div className="menu">
+                      <button onClick={()=>shareWhatsApp(p)}>{UI.shareWhatsApp}</button>
+                      <button onClick={()=>shareEmail(p)}>{UI.shareEmail}</button>
+                    </div>
+                  )}
                 </div>
 
                 {/* Apply */}
@@ -351,26 +351,31 @@ ${fDesc}
         {/* Details Modal */}
         {open && current && (
           <>
-            <div className="backdrop" onClick={()=>setOpen(false)} />
+            <div className="backdrop" onClick={()=>{ setOpen(false); setShareOpenModal(false); }} />
             <div className="modal" role="dialog" aria-modal="true" aria-label="Program details">
               <div className="modalHeader">
                 <span className="badge" style={{background: ICONS_BADGE_BG[current.category] || "#e2e8f0"}}>
                   {current.category}
                 </span>
-                <button className="closeX" onClick={()=>setOpen(false)} aria-label={UI.close}>✕</button>
+                <button className="closeX" onClick={()=>{ setOpen(false); setShareOpenModal(false); }} aria-label={UI.close}>✕</button>
               </div>
               <h3 className="modalTitle">{ICONS[current.category] || "📌"} {current.title}</h3>
               <p className="modalBody">{current.desc}</p>
-              <div className="modalActions">
+              <div className="modalActions" onClick={(e)=>e.stopPropagation()}>
                 <button className={`iconBtn ${isFav(current.link) ? "heartOn":""}`} onClick={()=>toggleFav(current.link)}>
                   <HeartIcon on={isFav(current.link)} />
                   <span style={{marginLeft:8}}>{isFav(current.link) ? UI.saved : UI.unsaved}</span>
                 </button>
 
-                <div className="btnGroup">
-                  <button className="secondary" onClick={()=>copyToClipboard(current.link)}>{UI.shareCopy}</button>
-                  <button className="secondary" onClick={()=>shareWhatsApp(current)}>{UI.shareWhatsApp}</button>
-                  <button className="secondary" onClick={()=>shareEmail(current)}>{UI.shareEmail}</button>
+                {/* Share menu inside modal */}
+                <div className="menuWrap">
+                  <button className="secondary" onClick={()=>setShareOpenModal(v=>!v)}>{UI.share} ▾</button>
+                  {shareOpenModal && (
+                    <div className="menu">
+                      <button onClick={()=>shareWhatsApp(current)}>{UI.shareWhatsApp}</button>
+                      <button onClick={()=>shareEmail(current)}>{UI.shareEmail}</button>
+                    </div>
+                  )}
                 </div>
 
                 <a className="apply" href={current.link} target="_blank" rel="noreferrer">{UI.apply}</a>
@@ -383,7 +388,7 @@ ${fDesc}
         {openForm && (
           <>
             <div className="backdrop" onClick={()=>setOpenForm(false)} />
-            <div className="modal" role="dialog" aria-modal="true" aria-label={UI.formTitle}>
+            <div className="modal" role="dialog" aria-modal="true" aria-label={UI.formTitle} onClick={(e)=>e.stopPropagation()}>
               <div className="modalHeader">
                 <strong>{UI.formTitle}</strong>
                 <button className="closeX" onClick={()=>setOpenForm(false)} aria-label={UI.close}>✕</button>
@@ -415,7 +420,6 @@ ${fDesc}
                   <div className="btnGroup">
                     <button className="secondary" onClick={sendSuggestionEmail}>{UI.formSendEmail}</button>
                     <button className="secondary" onClick={sendSuggestionWhatsApp}>{UI.formSendWhatsApp}</button>
-                    <button className="secondary" onClick={copySuggestion}>{UI.formCopy}</button>
                   </div>
                   <span className="muted">{UI.formNote}</span>
                 </div>
@@ -423,9 +427,6 @@ ${fDesc}
             </div>
           </>
         )}
-
-        {/* Toast */}
-        {toast && <div className="toast">{toast}</div>}
 
         <footer className="footer">{UI.footer}</footer>
       </main>

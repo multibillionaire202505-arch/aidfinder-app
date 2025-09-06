@@ -1,4 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
+import Head from "next/head";
 
 /** UI translations */
 const UI = {
@@ -14,6 +15,8 @@ const UI = {
     apply: "Apply Now",
     footer: "Demo preview • © AidFinder",
     language: "Language",
+    programCount: "programs",
+    clear: "Clear",
   },
   es: {
     brand: "AidFinder",
@@ -27,6 +30,8 @@ const UI = {
     apply: "Solicitar",
     footer: "Vista de demostración • © AidFinder",
     language: "Idioma",
+    programCount: "programas",
+    clear: "Limpiar",
   },
   fr: {
     brand: "AidFinder",
@@ -40,10 +45,12 @@ const UI = {
     apply: "Postuler",
     footer: "Aperçu démo • © AidFinder",
     language: "Langue",
+    programCount: "programmes",
+    clear: "Effacer",
   },
 };
 
-/** Category labels (for translated chip text) */
+/** Category labels for translated chips */
 const CAT_LABEL = {
   en: { All: "All", Food: "Food", Health: "Health", Housing: "Housing", Utilities: "Utilities", Education: "Education", Income: "Income" },
   es: { All: "Todos", Food: "Alimentos", Health: "Salud", Housing: "Vivienda", Utilities: "Servicios", Education: "Educación", Income: "Ingresos" },
@@ -98,7 +105,18 @@ const ALL = [
   { title:"Community Development Block Grant (CDBG)", category:"Housing", desc:"Funds local housing & community development needs via HUD partners.", link:"https://www.hud.gov/program_offices/comm_planning/communitydevelopment/programs" }
 ];
 
+/** Icons per category */
+const ICONS_BADGE_BG = {
+  Food: "#E1F5EB",
+  Health: "#E6F3FF",
+  Housing: "#F4EBFF",
+  Utilities: "#FFF4E5",
+  Education: "#EAF0FF",
+  Income: "#E8FFF4",
+};
+
 export default function Home() {
+  // language remember
   const [lang, setLang] = useState("en");
   useEffect(()=>{
     const saved = typeof window!=="undefined" && localStorage.getItem("aidfinder_lang");
@@ -109,32 +127,71 @@ export default function Home() {
   },[lang]);
 
   const T = UI[lang];
+
+  // search + category
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState(T.categories[0]); // translated "All"
+  useEffect(()=>{ setCat(UI[lang].categories[0]); }, [lang]); // keep chip in sync when language changes
 
+  // map translated chip back to canonical category key
   const activeCatKey = useMemo(()=>{
     const map = CAT_LABEL[lang];
     const entry = Object.entries(map).find(([key,label]) => label === cat);
     return entry ? entry[0] : "All";
   }, [cat, lang]);
 
+  // filtered list
   const programs = useMemo(()=>{
     const q = query.trim().toLowerCase();
     return ALL.filter(p=>{
       const catOk = activeCatKey === "All" || p.category === activeCatKey;
-      const qOk = !q || p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
+      const qOk = !q || p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
       return catOk && qOk;
     });
   },[query, activeCatKey]);
 
   return (
     <>
+      <Head>
+        <title>AidFinder — Find Aid Programs Easily</title>
+        <meta name="description" content="Explore U.S. aid programs across Food, Health, Housing, Utilities, Education, and Income—all in one place. Search and apply quickly with AidFinder." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#16a34a" />
+        <link rel="canonical" href="https://aidfinder-app-uqzw.vercel.app/" />
+        <meta property="og:title" content="AidFinder — Find Aid Programs Easily" />
+        <meta property="og:description" content="Explore aid programs across Food, Health, Housing, Utilities, Education, and Income—search and apply, all in one place." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://aidfinder-app-uqzw.vercel.app/" />
+        <meta property="og:site_name" content="AidFinder" />
+        <meta property="og:image" content="https://aidfinder-app-uqzw.vercel.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AidFinder — Find Aid Programs Easily" />
+        <meta name="twitter:description" content="Explore U.S. aid programs across Food, Health, Housing, Utilities, Education, and Income—search and apply quickly." />
+        <meta name="twitter:image" content="https://aidfinder-app-uqzw.vercel.app/og-image.png" />
+        <link rel="alternate" hrefLang="en" href="https://aidfinder-app-uqzw.vercel.app/" />
+        <link rel="alternate" hrefLang="es" href="https://aidfinder-app-uqzw.vercel.app/" />
+        <link rel="alternate" hrefLang="fr" href="https://aidfinder-app-uqzw.vercel.app/" />
+        <link rel="alternate" hrefLang="x-default" href="https://aidfinder-app-uqzw.vercel.app/" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      </Head>
+
+      {/* Header */}
       <header className="nav">
-        <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+        <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between', gap: 12}}>
           <div className="brand" style={{display:'flex',alignItems:'center',gap:10}}>
-            <img src="/logo.png" alt="AidFinder logo" style={{height:40}}/>
+            <img src="/logo.png" alt="AidFinder logo" style={{height:40, borderRadius:8}}/>
             <strong>{T.brand}</strong>
           </div>
+
+          <nav className="topnav">
+            <a href="#" className="toplink">Home</a>
+            <a href="#" className="toplink">About</a>
+            <a href="#" className="toplink">Contact</a>
+          </nav>
+
           <div className="langSwitch">
             <label htmlFor="lang" style={{fontSize:13,color:"#64748b"}}>{T.language}:</label>
             <select id="lang" value={lang} onChange={(e)=>setLang(e.target.value)} className="langSelect">
@@ -146,21 +203,29 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Main */}
       <main className="container">
+        {/* Hero */}
         <section className="hero">
           <h1>{T.title}</h1>
           <p>{T.subtitle}</p>
         </section>
 
+        {/* Toolbar */}
         <section className="toolbar">
-          <input
-            className="search"
-            placeholder={T.searchPlaceholder}
-            value={query}
-            onChange={(e)=>setQuery(e.target.value)}
-          />
-          <div className="chips">
-            {T.categories.map((label)=>(
+          <div className="searchWrap">
+            <input
+              className="search"
+              placeholder={T.searchPlaceholder}
+              value={query}
+              onChange={(e)=>setQuery(e.target.value)}
+            />
+            {query && (
+              <button className="clearBtn" onClick={()=>setQuery("")}>{T.clear}</button>
+            )}
+          </div>
+          <div className="chips scrollX">
+            {UI[lang].categories.map((label)=>(
               <button
                 key={label}
                 className={`chip ${cat===label ? "chipActive":""}`}
@@ -171,28 +236,38 @@ export default function Home() {
               </button>
             ))}
           </div>
+          <div className="countRow">
+            <span className="muted">{programs.length} {T.programCount}</span>
+          </div>
         </section>
 
+        {/* Cards */}
         <section className="grid">
           {programs.map((p,i)=>(
             <article className="card" key={i}>
-              <div className="badge">{CAT_LABEL[lang][p.category] || p.category}</div>
+              <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "#e2e8f0"}}>
+                {CAT_LABEL[lang][p.category] || p.category}
+              </div>
               <h3>{ICONS[p.category] || "📌"} {p.title}</h3>
               <p>{p.desc}</p>
               <a className="apply" href={p.link} target="_blank" rel="noreferrer">{T.apply}</a>
             </article>
           ))}
+
           {programs.length===0 && (
             <div className="empty">
+              <div className="emptyArt" aria-hidden>🔍</div>
               <strong>{T.noResultsTitle}</strong>
               <p>{T.noResultsBody}</p>
             </div>
           )}
         </section>
 
+        {/* Back to top */}
+        <button className="totop" onClick={()=>window.scrollTo({top:0, behavior:"smooth"})} title="Back to top">↑</button>
+
         <footer className="footer">{T.footer}</footer>
       </main>
     </>
   );
 }
-    

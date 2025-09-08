@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
-/** ===== Heart icon (inside red only, outline always red, optional pulse) ===== */
+/** ===== Heart icon (inside red only; outline constant; pulse on click) ===== */
 const HeartIcon = ({ on = false, size = 20, animate = false }) => (
   <svg
     width={size}
@@ -106,14 +106,14 @@ const ICONS_BADGE_BG = {
   Utilities:"var(--tint-utilities)", Education:"var(--tint-education)", Income:"var(--tint-income)"
 };
 
-/** Full US states (incl. DC) */
+/** Full US states incl. DC */
 const US_STATES = [
   "All States","AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA",
   "MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC",
   "SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
 ];
 
-/** ===== Programs with i18n (EN/FR/ES). National + CA/TX/NY samples. ===== */
+/** ===== Program data with i18n (national + CA/TX/NY samples) ===== */
 const ALL = [
   // Food
   { category:"Food", link:"https://www.fns.usda.gov/snap",
@@ -243,7 +243,7 @@ const ALL = [
            fr:{ title:"CDBG (Dév. communautaire)", desc:"Financement du logement et du développement local via les partenaires HUD." },
            es:{ title:"Subvención en Bloque para Desarrollo Comunitario (CDBG)", desc:"Financia vivienda y desarrollo comunitario a través de socios de HUD." } } },
 
-  // State-specific demo (CA / TX / NY)
+  // State-specific demos
   { category:"Food", link:"https://www.cdss.ca.gov/calfresh", states:["CA"],
     i18n:{ en:{ title:"CalFresh (CA SNAP)", desc:"California’s SNAP program for food assistance." },
            fr:{ title:"CalFresh (SNAP Californie)", desc:"Programme SNAP de Californie pour l’aide alimentaire." },
@@ -274,22 +274,19 @@ const ALL = [
 
 /** ===== Main Component ===== */
 export default function Home() {
-  // language with persistence (remember choice; default to browser if first visit)
+  // language (persist)
   const [lang, setLang] = useState("en");
   useEffect(() => {
     try {
       const saved = localStorage.getItem("aidfinder_lang");
-      if (saved) {
-        setLang(saved);
-      } else {
+      if (saved) setLang(saved);
+      else {
         const br = (navigator.language || "en").slice(0,2);
         if (["en","fr","es"].includes(br)) setLang(br);
       }
     } catch {}
   }, []);
-  useEffect(() => {
-    try { localStorage.setItem("aidfinder_lang", lang); } catch {}
-  }, [lang]);
+  useEffect(() => { try { localStorage.setItem("aidfinder_lang", lang); } catch {} }, [lang]);
 
   const T = UI[lang];
 
@@ -305,25 +302,25 @@ export default function Home() {
   const toggleFav = (id)=> setFavs(prev => prev.includes(id) ? prev.filter(x=>x!==id) : [...prev, id]);
   const isFav = (id)=> favs.includes(id);
 
-  // share menu state (per card + modal)
+  // share menu state
   const [shareOpenIndex, setShareOpenIndex] = useState(null);
   const [shareOpenModal, setShareOpenModal] = useState(false);
 
-  // pulse animation map (animate on every click)
+  // pulse animation mapping
   const [animMap, setAnimMap] = useState({});
   const triggerAnim = (id) => {
     setAnimMap(m => ({ ...m, [id]: true }));
     setTimeout(() => setAnimMap(m => ({ ...m, [id]: false })), 300);
   };
 
-  // close menus when clicking outside
+  // close share on outside click
   useEffect(() => {
     const onDocClick = () => { setShareOpenIndex(null); setShareOpenModal(false); };
     document.addEventListener("click", onDocClick);
     return () => document.removeEventListener("click", onDocClick);
   }, []);
 
-  // category order + localized labels
+  // category ordering + localized label
   const CAT_ORDER = ["All","Food","Health","Housing","Utilities","Education","Income","Saved"];
   const catDisplay = (key) => {
     const map = UI[lang].catLabels;
@@ -331,7 +328,7 @@ export default function Home() {
     return map[key] || key;
   };
 
-  // share actions (localized title/desc)
+  // share helpers
   const shareEmail = (p) => {
     const subject = encodeURIComponent(`Aid program: ${p.i18n[lang].title}`);
     const body = encodeURIComponent(`${p.i18n[lang].title}\n\n${p.i18n[lang].desc}\n\nLink: ${p.link}`);
@@ -376,6 +373,9 @@ export default function Home() {
         <meta name="description" content={T.subtitle} />
         <meta name="theme-color" content="#16a34a" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </Head>
@@ -398,7 +398,7 @@ export default function Home() {
               onChange={(e)=>{
                 const v = e.target.value;
                 setLang(v);
-                setCat("All"); // reset on switch to avoid mismatch
+                setCat("All"); // reset on switch
               }}
             >
               <option value="en">English</option>
@@ -432,7 +432,7 @@ export default function Home() {
           <div className="filtersRow">
             {/* Category chips */}
             <div className="chips scrollX" role="tablist" aria-label="Categories">
-              {["All","Food","Health","Housing","Utilities","Education","Income","Saved"].map(key=>{
+              {CAT_ORDER.map(key=>{
                 const label = catDisplay(key);
                 return (
                   <button
@@ -487,7 +487,7 @@ export default function Home() {
                 <p>{desc}</p>
 
                 <div className="cardActions">
-                  {/* Like: pulse on every click */}
+                  {/* Like */}
                   <button
                     type="button"
                     className="iconBtn"
@@ -507,7 +507,7 @@ export default function Home() {
                     {T.details}
                   </button>
 
-                  {/* Share (single button + menu) */}
+                  {/* Share (menu) */}
                   <div className="menuWrap" onClick={(e)=>e.stopPropagation()}>
                     <button
                       type="button"
@@ -585,7 +585,7 @@ export default function Home() {
         <footer className="footer">{T.footer}</footer>
       </main>
 
-      {/* Tiny global CSS for the heart pulse so you don't have to edit styles/globals.css */}
+      {/* Tiny global CSS just for heart pulse (rest is in styles/globals.css) */}
       <style jsx global>{`
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
         @keyframes pulseAnim {

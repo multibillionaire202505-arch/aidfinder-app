@@ -341,14 +341,6 @@ export default function Home() {
     return () => document.removeEventListener("click", onDocClick);
   }, []);
 
-  // category ordering + localized label
-  const CAT_ORDER = ["All","Food","Health","Housing","Utilities","Education","Income","Saved"];
-  const catDisplay = (key) => {
-    const map = UI[lang].catLabels;
-    if (key === "All" || key === "Saved") return map[key];
-    return map[key] || key;
-  };
-
   // share helpers
   const shareEmail = (p) => {
     const subject = encodeURIComponent(`Aid program: ${p.i18n[lang].title}`);
@@ -613,7 +605,17 @@ export default function Home() {
           </>
         )}
 
-        <footer className="footer">{T.footer}</footer>
+        {/* Footer with legal & contact links */}
+        <footer className="footer">
+          <div style={{display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap"}}>
+            <a href="/privacy">Privacy</a>
+            <span>•</span>
+            <a href="/terms">Terms</a>
+            <span>•</span>
+            <a href="/contact">Contact</a>
+          </div>
+          <div style={{marginTop:8}}>{T.footer}</div>
+        </footer>
       </main>
 
       {/* Tiny global CSS just for heart pulse (rest is in styles/globals.css) */}

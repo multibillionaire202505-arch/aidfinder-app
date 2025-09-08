@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
-/** ===== Heart icon (inside red only; outline constant; pulse on click) ===== */
+/** ===== Heart icon (red fill only inside; pulse on click) ===== */
 const HeartIcon = ({ on = false, size = 20, animate = false }) => (
   <svg
     width={size}
@@ -46,6 +46,9 @@ const UI = {
     shareWhatsApp: "Share via WhatsApp",
     shareEmail: "Share via Email",
     language: "Language",
+    theme: "Theme",
+    dark: "Dark",
+    light: "Light",
   },
   fr: {
     brand: "AidFinder",
@@ -71,6 +74,9 @@ const UI = {
     shareWhatsApp: "Partager via WhatsApp",
     shareEmail: "Partager par e-mail",
     language: "Langue",
+    theme: "Thème",
+    dark: "Sombre",
+    light: "Clair",
   },
   es: {
     brand: "AidFinder",
@@ -96,6 +102,9 @@ const UI = {
     shareWhatsApp: "Compartir por WhatsApp",
     shareEmail: "Compartir por correo",
     language: "Idioma",
+    theme: "Tema",
+    dark: "Oscuro",
+    light: "Claro",
   }
 };
 
@@ -108,13 +117,9 @@ const ICONS = {
   Income: "💲",
   Health: (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      width="20"
-      height="20"
-      style={{ fill: "red", verticalAlign: "middle" }}
-      aria-hidden="true"
-      focusable="false"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+      width="20" height="20" style={{ fill: "red", verticalAlign: "middle" }}
+      aria-hidden="true" focusable="false"
     >
       <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z" />
     </svg>
@@ -127,14 +132,14 @@ const ICONS_BADGE_BG = {
   Utilities:"var(--tint-utilities)", Education:"var(--tint-education)", Income:"var(--tint-income)"
 };
 
-/** ===== US States incl. DC ===== */
+/** ===== US states ===== */
 const US_STATES = [
   "All States","AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA",
   "MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC",
   "SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
 ];
 
-/** ===== Program data with i18n (national + CA/TX/NY samples) ===== */
+/** ===== Programs (same as your last good version) ===== */
 const ALL = [
   // Food
   { category:"Food", link:"https://www.fns.usda.gov/snap",
@@ -309,6 +314,24 @@ export default function Home() {
   }, []);
   useEffect(() => { try { localStorage.setItem("aidfinder_lang", lang); } catch {} }, [lang]);
 
+  // theme (persist)
+  const [theme, setTheme] = useState("light");
+  useEffect(()=>{
+    try{
+      const saved = localStorage.getItem("aidfinder_theme");
+      const sysDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const t = saved || (sysDark ? "dark":"light");
+      setTheme(t);
+      document.documentElement.setAttribute("data-theme", t==="dark" ? "dark": "light");
+    }catch{}
+  },[]);
+  useEffect(()=>{
+    try{
+      localStorage.setItem("aidfinder_theme", theme);
+      document.documentElement.setAttribute("data-theme", theme==="dark" ? "dark": "light");
+    }catch{}
+  },[theme]);
+
   const T = UI[lang];
 
   // search, category, state
@@ -327,14 +350,14 @@ export default function Home() {
   const [shareOpenIndex, setShareOpenIndex] = useState(null);
   const [shareOpenModal, setShareOpenModal] = useState(false);
 
-  // pulse animation mapping
+  // heart pulse
   const [animMap, setAnimMap] = useState({});
   const triggerAnim = (id) => {
     setAnimMap(m => ({ ...m, [id]: true }));
     setTimeout(() => setAnimMap(m => ({ ...m, [id]: false })), 300);
   };
 
-  // close share on outside click
+  // close share on doc click
   useEffect(() => {
     const onDocClick = () => { setShareOpenIndex(null); setShareOpenModal(false); };
     document.addEventListener("click", onDocClick);
@@ -350,6 +373,21 @@ export default function Home() {
   const shareWhatsApp = (p) => {
     const text = encodeURIComponent(`${p.i18n[lang].title} — ${p.i18n[lang].desc}\n${p.link}`);
     window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
+  };
+
+  // native share when available
+  const doNativeShare = async (p) => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: p.i18n[lang].title,
+          text: p.i18n[lang].desc,
+          url: p.link
+        });
+      } catch {}
+    } else {
+      setShareOpenModal(true);
+    }
   };
 
   // filtering
@@ -384,13 +422,14 @@ export default function Home() {
       <Head>
         <title>AidFinder — {T.title}</title>
         <meta name="description" content={T.subtitle} />
-        <meta name="theme-color" content="#16a34a" />
+        <meta name="theme-color" content={theme === "dark" ? "#0b1220" : "#16a34a"} />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+        {/* Social cards */}
+        <meta property="og:title" content="AidFinder — Find Aid Programs Easily" />
+        <meta property="og:description" content={T.subtitle} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       {/* Header */}
@@ -401,23 +440,38 @@ export default function Home() {
             <strong>{T.brand}</strong>
           </div>
 
-          {/* Language selector */}
-          <div className="stateSelectWrap">
-            <label htmlFor="langSel">{T.language}:</label>
-            <select
-              id="langSel"
-              className="langSelect"
-              value={lang}
-              onChange={(e)=>{
-                const v = e.target.value;
-                setLang(v);
-                setCat("All"); // reset on switch
-              }}
-            >
-              <option value="en">English</option>
-              <option value="fr">Français</option>
-              <option value="es">Español</option>
-            </select>
+          <div style={{display:"flex", alignItems:"center", gap:10}}>
+            {/* Language */}
+            <div className="stateSelectWrap">
+              <label htmlFor="langSel">{T.language}:</label>
+              <select
+                id="langSel"
+                className="langSelect"
+                value={lang}
+                onChange={(e)=>{
+                  const v = e.target.value;
+                  setLang(v);
+                }}
+              >
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+              </select>
+            </div>
+
+            {/* Theme */}
+            <div className="stateSelectWrap">
+              <label htmlFor="themeSel">{T.theme}:</label>
+              <select
+                id="themeSel"
+                className="langSelect"
+                value={theme}
+                onChange={(e)=>setTheme(e.target.value)}
+              >
+                <option value="light">{T.light}</option>
+                <option value="dark">{T.dark}</option>
+              </select>
+            </div>
           </div>
         </div>
       </header>
@@ -438,6 +492,7 @@ export default function Home() {
               placeholder={T.searchPlaceholder}
               value={query}
               onChange={(e)=>setQuery(e.target.value)}
+              aria-label={T.searchPlaceholder}
             />
             {query && <button className="clearBtn" onClick={()=>setQuery("")}>{T.clear}</button>}
           </div>
@@ -445,18 +500,18 @@ export default function Home() {
           <div className="filtersRow">
             {/* Category chips */}
             <div className="chips scrollX" role="tablist" aria-label="Categories">
-              {["All","Food","Health","Housing","Utilities","Education","Income","Saved"].map(key=>{
-                const label = UI[lang].catLabels[key] || key;
+              {UI[lang].categories.map(key=>{
+                const active = cat===key;
                 return (
                   <button
                     key={key}
-                    className={`chip ${cat===key ? "chipActive":""}`}
+                    className={`chip ${active ? "chipActive":""}`}
                     onClick={()=>setCat(key)}
                     type="button"
                     role="tab"
-                    aria-selected={cat===key}
+                    aria-selected={active}
                   >
-                    {label}
+                    {UI[lang].catLabels[key] || key}
                   </button>
                 );
               })}
@@ -516,27 +571,30 @@ export default function Home() {
                       triggerAnim(p.link);
                     }}
                     title={isFav(p.link) ? T.saved : T.unsaved}
+                    aria-label={isFav(p.link) ? T.saved : T.unsaved}
                   >
                     <HeartIcon on={isFav(p.link)} animate={!!animMap[p.link]} />
                   </button>
 
                   {/* Details */}
-                  <button type="button" className="secondary" onClick={()=>{setCurrent(p); setShareOpenModal(false); setShareOpenIndex(null); setOpen(true);}}>
+                  <button type="button" className="secondary" onClick={()=>{
+                    setCurrent(p); setShareOpenModal(false); setShareOpenIndex(null); setOpen(true);
+                  }}>
                     {T.details}
                   </button>
 
-                  {/* Share (menu) */}
+                  {/* Share */}
                   <div className="menuWrap" onClick={(e)=>e.stopPropagation()}>
                     <button
                       type="button"
                       className="secondary"
-                      onClick={()=>setShareOpenIndex(shareOpenIndex===i? null : i)}
+                      onClick={()=>navigator.share ? doNativeShare(p) : setShareOpenIndex(shareOpenIndex===i? null : i)}
                       aria-haspopup="menu"
                       aria-expanded={shareOpenIndex===i}
                     >
                       {T.share} ▾
                     </button>
-                    {shareOpenIndex===i && (
+                    {!navigator.share && shareOpenIndex===i && (
                       <div className="menu" role="menu">
                         <button role="menuitem" onClick={()=>shareWhatsApp(p)}>{T.shareWhatsApp}</button>
                         <button role="menuitem" onClick={()=>shareEmail(p)}>{T.shareEmail}</button>
@@ -605,7 +663,7 @@ export default function Home() {
           </>
         )}
 
-        {/* Footer with legal & contact links */}
+        {/* Footer */}
         <footer className="footer">
           <div style={{display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap"}}>
             <a href="/privacy">Privacy</a>
@@ -618,7 +676,7 @@ export default function Home() {
         </footer>
       </main>
 
-      {/* Tiny global CSS just for heart pulse (rest is in styles/globals.css) */}
+      {/* Tiny global CSS for heart pulse (rest in globals.css) */}
       <style jsx global>{`
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
         @keyframes pulseAnim {

@@ -99,14 +99,35 @@ const UI = {
   }
 };
 
-/** Category icons + badge tints */
-const ICONS = { Food:"🍏", Health:"➕", Housing:"🏠", Utilities:"💡", Education:"🎓", Income:"💲" };
+/** ===== Category Icons (Health = red cross SVG) ===== */
+const ICONS = {
+  Food: "🍏",
+  Housing: "🏠",
+  Utilities: "💡",
+  Education: "🎓",
+  Income: "💲",
+  Health: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      style={{ fill: "red", verticalAlign: "middle" }}
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z" />
+    </svg>
+  ),
+};
+
+/** ===== Badge tints ===== */
 const ICONS_BADGE_BG = {
   Food:"var(--tint-food)", Health:"var(--tint-health)", Housing:"var(--tint-housing)",
   Utilities:"var(--tint-utilities)", Education:"var(--tint-education)", Income:"var(--tint-income)"
 };
 
-/** Full US states incl. DC */
+/** ===== US States incl. DC ===== */
 const US_STATES = [
   "All States","AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA",
   "MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC",
@@ -243,7 +264,7 @@ const ALL = [
            fr:{ title:"CDBG (Dév. communautaire)", desc:"Financement du logement et du développement local via les partenaires HUD." },
            es:{ title:"Subvención en Bloque para Desarrollo Comunitario (CDBG)", desc:"Financia vivienda y desarrollo comunitario a través de socios de HUD." } } },
 
-  // State-specific demos
+  // State-specific demos (CA/TX/NY)
   { category:"Food", link:"https://www.cdss.ca.gov/calfresh", states:["CA"],
     i18n:{ en:{ title:"CalFresh (CA SNAP)", desc:"California’s SNAP program for food assistance." },
            fr:{ title:"CalFresh (SNAP Californie)", desc:"Programme SNAP de Californie pour l’aide alimentaire." },
@@ -355,7 +376,7 @@ export default function Home() {
       base = base.filter(p => {
         const t = p.i18n[lang].title.toLowerCase();
         const d = p.i18n[lang].desc.toLowerCase();
-        const c = catDisplay(p.category).toLowerCase();
+        const c = (UI[lang].catLabels[p.category] || p.category).toLowerCase();
         return t.includes(q) || d.includes(q) || c.includes(q);
       });
     }
@@ -432,8 +453,8 @@ export default function Home() {
           <div className="filtersRow">
             {/* Category chips */}
             <div className="chips scrollX" role="tablist" aria-label="Categories">
-              {CAT_ORDER.map(key=>{
-                const label = catDisplay(key);
+              {["All","Food","Health","Housing","Utilities","Education","Income","Saved"].map(key=>{
+                const label = UI[lang].catLabels[key] || key;
                 return (
                   <button
                     key={key}
@@ -483,7 +504,12 @@ export default function Home() {
                   {UI[lang].catLabels[p.category] || p.category}
                 </div>
 
-                <h3>{ICONS[p.category] || "📌"} {title}</h3>
+                <h3>
+                  <span style={{marginRight:6, display:"inline-block", transform:"translateY(1px)"}}>
+                    {ICONS[p.category] || "📌"}
+                  </span>
+                  {title}
+                </h3>
                 <p>{desc}</p>
 
                 <div className="cardActions">
@@ -555,7 +581,12 @@ export default function Home() {
                 </span>
                 <button className="closeX" onClick={()=>{ setOpen(false); setShareOpenModal(false); }} aria-label={T.close}>✕</button>
               </div>
-              <h3 className="modalTitle">{ICONS[current.category] || "📌"} {current.i18n[lang].title}</h3>
+              <h3 className="modalTitle">
+                <span style={{marginRight:6, display:"inline-block", transform:"translateY(1px)"}}>
+                  {ICONS[current.category] || "📌"}
+                </span>
+                {current.i18n[lang].title}
+              </h3>
               <p className="modalBody">{current.i18n[lang].desc}</p>
               <div className="modalActions" onClick={(e)=>e.stopPropagation()}>
                 <button className="iconBtn" onClick={()=>{

@@ -13,7 +13,6 @@ export default function PrivacyPolicy() {
           name="description"
           content="AidFinder Privacy Policy describing what we collect, how we use it, sharing, security, and your rights."
         />
-        {/* While pre-launch, keep search engines from indexing this page */}
         <meta name="robots" content="noindex" />
       </Head>
 
@@ -23,7 +22,6 @@ export default function PrivacyPolicy() {
           <p className="text-sm text-gray-500">Effective date: {EFFECTIVE_DATE}</p>
         </header>
 
-        {/* Quick summary card */}
         <div className="rounded-2xl bg-gray-50 border p-4 mb-6">
           <p className="text-sm">
             <strong>Summary:</strong> We collect the minimum data needed to run AidFinder (e.g., account

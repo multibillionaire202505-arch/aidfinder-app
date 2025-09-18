@@ -1,10 +1,13 @@
-// File: pages/_app.js
-// Global layout for every page: Header + Footer + page transitions.
-// One-time install if you haven't:  npm install framer-motion
+// pages/_app.js
+// Global layout for every page: Header + Footer + page transitions + PWA meta.
+// Requires: npm install framer-motion
+// Also ensure you have styles/globals.css in your project.
 
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
+import "../styles/globals.css";
 
 function Header() {
   const router = useRouter();
@@ -82,9 +85,31 @@ function Footer() {
 function Layout({ children }) {
   return (
     <>
+      <Head>
+        {/* PWA manifest + theme */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#16a34a" />
+
+        {/* Apple touch icon (iOS home screen) */}
+        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+        {/* Favicons (using your existing PNGs) */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-48.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-48.png" />
+        <link rel="shortcut icon" href="/icons/icon-192.png" />
+
+        {/* Basic SEO */}
+        <title>AidFinder</title>
+        <meta
+          name="description"
+          content="Find aid programs for Food, Health, Housing, Utilities, Education, and Income — all in one place."
+        />
+      </Head>
+
       <Header />
       <main className="page-wrap">{children}</main>
       <Footer />
+
       <style jsx global>{`
         html, body, #__next { height: 100%; }
         body {
@@ -111,7 +136,13 @@ export default function MyApp({ Component, pageProps, router }) {
   return (
     <Layout>
       <AnimatePresence mode="wait">
-        <motion.div key={router.route} variants={pageVariants} initial="initial" animate="animate" exit="exit">
+        <motion.div
+          key={router.route}
+          variants={pageVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>

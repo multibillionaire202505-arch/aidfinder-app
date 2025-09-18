@@ -145,7 +145,7 @@ const US_STATES = [
   "SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
 ];
 
-/** ===== Programs (national + examples; you can add more later) ===== */
+/** ===== Programs (data) ===== */
 const ALL = [
   // Food
   { category:"Food", link:"https://www.fns.usda.gov/snap",
@@ -415,6 +415,10 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(null);
 
+  /** ===== NEW: simple stagger-on-mount for cards ===== */
+  const [reveal, setReveal] = useState(false);
+  useEffect(() => { setReveal(true); }, []);
+
   return (
     <>
       <Head>
@@ -535,12 +539,12 @@ export default function Home() {
         </section>
 
         {/* Cards */}
-        <section className="grid">
+        <section className={`grid ${reveal ? "reveal" : ""}`}>
           {programs.map((p,i)=>{
             const title = p.i18n[lang]?.title || p.i18n.en.title;
             const desc  = p.i18n[lang]?.desc  || p.i18n.en.desc;
             return (
-              <article className="card" key={p.link}>
+              <article className="card" key={p.link} style={{ "--i": i }}>
                 <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "var(--border)"}}>
                   {UI[lang].catLabels[p.category] || p.category}
                 </div>
@@ -672,13 +676,38 @@ export default function Home() {
         </footer>
       </main>
 
-      {/* Tiny global CSS for heart pulse (rest lives in styles/globals.css) */}
+      {/* Tiny global CSS for animations (staggered reveal + hover lift) */}
       <style jsx global>{`
+        /* Heart click pulse (already in your code) */
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
         @keyframes pulseAnim {
           0% { transform: scale(1); opacity: 0.85; }
           50% { transform: scale(1.3); opacity: 1; }
           100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* NEW: card appear + hover polish */
+        .grid .card {
+          opacity: 0;
+          transform: translateY(16px);
+          transition:
+            opacity 480ms ease,
+            transform 480ms ease,
+            box-shadow 180ms ease,
+            transform 180ms ease;
+          /* stagger delay controlled by inline --i */
+          transition-delay: calc(var(--i, 0) * 70ms);
+          will-change: transform, opacity;
+        }
+        .grid.reveal .card {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .card:hover {
+          transform: translateY(-2px) scale(1.02);
+          box-shadow:
+            0 6px 18px rgba(0,0,0,0.10),
+            0 2px 6px rgba(0,0,0,0.06);
         }
       `}</style>
     </>

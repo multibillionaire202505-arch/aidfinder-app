@@ -1,7 +1,12 @@
 /* ============== CSS Reset (lightweight) ============== */
 * { box-sizing: border-box; }
 html, body, #__next { height: 100%; }
-body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--fg); }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--fg);
+}
 
 /* ============== Theme Tokens ============== */
 :root {
@@ -78,7 +83,6 @@ html[data-theme="dark"], :root[data-theme="dark"] {
   gap: 14px;
   padding: 14px 0 28px;
 }
-
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -87,6 +91,24 @@ html[data-theme="dark"], :root[data-theme="dark"] {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 480ms ease,
+    transform 480ms ease,
+    box-shadow 180ms ease;
+  transition-delay: calc(var(--i, 0) * 70ms);
+  will-change: transform, opacity;
+}
+.grid.reveal .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.10),
+    0 2px 6px rgba(0,0,0,0.06);
 }
 .card h3 { margin: 0; font-size: 18px; }
 .card p { margin: 0; color: var(--muted); }
@@ -99,8 +121,6 @@ html[data-theme="dark"], :root[data-theme="dark"] {
   background: var(--border);
   color: var(--fg);
 }
-
-/* badge background applied inline from JS via ICONS_BADGE_BG */
 
 /* ============== Buttons ============== */
 .apply {
@@ -215,10 +235,20 @@ html[data-theme="dark"], :root[data-theme="dark"] {
 .footer a { color: inherit; text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
 
-/* ============== Heart pulse (if not inlined) ============== */
+/* ============== Heart pulse ============== */
 .pulse { animation: pulseAnim 0.3s ease-in-out; }
 @keyframes pulseAnim {
   0% { transform: scale(1); opacity: 0.9; }
   50% { transform: scale(1.25); opacity: 1; }
   100% { transform: scale(1); opacity: 1; }
 }
+
+/* ============== Page Wrapper (About, Contact, Legal) ============== */
+.page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 16px;
+  line-height: 1.6;
+}
+.page h1 { font-size: 2rem; margin-bottom: 1rem; }
+.page p, .page li { margin-bottom: 1rem; color: var(--fg); }

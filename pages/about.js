@@ -1,13 +1,14 @@
+// pages/about.js
 import Head from "next/head";
 
 export default function About() {
   return (
     <>
       <Head>
-        <title>About Us — AidFinder</title>
+        <title>About — AidFinder</title>
         <meta
           name="description"
-          content="AidFinder helps people quickly discover official public aid programs—Food, Health, Housing, Utilities, Education, and Income—in one modern, simple app."
+          content="AidFinder helps people discover the many aid programs in the U.S. — Food, Health, Housing, Utilities, Education, and Income — all in one place."
         />
       </Head>
 
@@ -21,8 +22,24 @@ export default function About() {
           />
           <h1 style={{ margin: "0 0 8px" }}>About AidFinder</h1>
           <p style={{ color: "var(--muted)", margin: 0 }}>
-            One place to find real help—fast. Food, Health, Housing, Utilities, Education, and Income programs,
+            One place to find real help — fast.  
+            Food, Health, Housing, Utilities, Education, and Income programs,  
             all in a clean, modern experience.
+          </p>
+        </section>
+
+        {/* Social perception */}
+        <section className="card" style={{ marginTop: 16 }}>
+          <h3 style={{ marginTop: 0 }}>Changing the Perception</h3>
+          <p>
+            Around the world, people often say the United States has little or no social support.  
+            The truth is very different: America is one of the most generous countries in terms of
+            aid programs — from food and housing to healthcare, education, and income assistance.  
+            The problem is not the lack of aid, but the difficulty in finding the right information.
+          </p>
+          <p>
+            <strong>AidFinder was built to close that gap:</strong> making social programs visible,
+            clear, and accessible — so people can get the right help, fast.
           </p>
         </section>
 
@@ -32,29 +49,7 @@ export default function About() {
           <p>
             We believe access to essential programs should be simple and dignified. AidFinder organizes official
             federal, state, and local resources in one place so families, students, seniors, and veterans can
-            discover and apply in minutes—not hours.
-          </p>
-        </section>
-
-        {/* What we offer */}
-        <section className="card" style={{ marginTop: 16 }}>
-          <h3 style={{ marginTop: 0 }}>What We Offer</h3>
-          <ul>
-            <li>Browse verified programs across categories (Food, Health, Housing, Utilities, Education, Income)</li>
-            <li>Filter by category and state</li>
-            <li>Clear “Apply Now” links to official websites</li>
-            <li>Multilingual experience (English, Spanish, French)</li>
-            <li>Save favorites on your device (sync coming soon)</li>
-          </ul>
-        </section>
-
-        {/* Our story */}
-        <section className="card" style={{ marginTop: 16 }}>
-          <h3 style={{ marginTop: 0 }}>Our Story</h3>
-          <p>
-            AidFinder started with a simple idea: make it easier for people to find help when they need it most.
-            From a single page of links, it grew into a modern web app with dozens of programs—designed to be
-            fast, trustworthy, and easy for everyone.
+            discover and apply in minutes — not hours.
           </p>
         </section>
 
@@ -68,28 +63,8 @@ export default function About() {
             <li><strong>Privacy:</strong> We collect the minimum needed to operate</li>
           </ul>
           <p style={{ marginTop: 8, color: "var(--muted)" }}>
-            Read more: <a href="/privacy">Privacy Policy</a> • <a href="/terms">Terms of Service</a>
+            Read more: <a href="/legal/privacy-policy">Privacy Policy</a> • <a href="/legal/terms-of-service">Terms of Service</a>
           </p>
-        </section>
-
-        {/* Get involved */}
-        <section className="card" style={{ marginTop: 16 }}>
-          <h3 style={{ marginTop: 0 }}>Get Involved</h3>
-          <ul>
-            <li>
-              <a className="secondary" href="/support">Support the project</a> — keep AidFinder free for everyone
-            </li>
-            <li>
-              <a className="secondary" href="mailto:support@aidfinder.app?subject=Program%20Suggestion">
-                Suggest a program
-              </a>
-            </li>
-            <li>
-              <a className="secondary" href="mailto:support@aidfinder.app?subject=Partnership%20Inquiry">
-                Partner with us (nonprofits, schools, libraries, agencies)
-              </a>
-            </li>
-          </ul>
         </section>
 
         {/* Contact */}

@@ -1,43 +1,45 @@
+// pages/contact.js
 import Head from "next/head";
 
 export default function Contact() {
-  const subject = encodeURIComponent("AidFinder — Contact");
   return (
     <>
       <Head>
         <title>Contact — AidFinder</title>
-        <meta name="description" content="Contact the AidFinder team" />
+        <meta
+          name="description"
+          content="Get in touch with the AidFinder team — feedback, partnerships, or support."
+        />
       </Head>
 
-      <main className="container" style={{padding:"32px 0"}}>
-        <h1 style={{marginTop:0}}>Contact</h1>
-        <p style={{color:"var(--muted)"}}>
-          We’d love to hear from you — feedback, partnership ideas, or program suggestions.
+      <main
+        className="container"
+        style={{ maxWidth: "720px", margin: "40px auto", padding: "0 16px" }}
+      >
+        <h1 style={{ marginTop: 0, fontSize: "28px" }}>Contact Us</h1>
+        <p style={{ color: "var(--muted)", marginBottom: "24px" }}>
+          We’d love to hear from you — feedback, partnership ideas, or program
+          suggestions. Reach out anytime.
         </p>
 
-        <section className="card" style={{marginTop:16}}>
-          <h3 style={{marginTop:0}}>Email</h3>
+        <section className="card" style={{ marginTop: 16, padding: "20px" }}>
+          <h3>Email</h3>
           <p>
-            <a className="apply" href={`mailto:support@aidfinder.app?subject=${subject}`}>
-              Email support@aidfinder.app
+            <a href="mailto:aidfinder.app@gmail.com" style={{ color: "#2563eb" }}>
+              aidfinder.app@gmail.com
             </a>
-          </p>
-          <p style={{color:"var(--muted)"}}>
-            Tip: include your state and program name to help us respond faster.
           </p>
         </section>
 
-        <section className="card" style={{marginTop:16}}>
-          <h3 style={{marginTop:0}}>Suggest a Program</h3>
-          <p style={{marginBottom:12}}>
-            If a program is missing or a link is outdated, send it our way:
+        <section className="card" style={{ marginTop: 16, padding: "20px" }}>
+          <h3>Support</h3>
+          <p>
+            For help using AidFinder, visit our{" "}
+            <a href="/about" style={{ color: "#2563eb" }}>
+              About page
+            </a>{" "}
+            or email us directly.
           </p>
-          <a
-            className="secondary"
-            href={`mailto:support@aidfinder.app?subject=${encodeURIComponent("Program Suggestion — AidFinder")}`}
-          >
-            Send a suggestion
-          </a>
         </section>
       </main>
     </>

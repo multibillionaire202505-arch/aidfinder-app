@@ -1,7 +1,6 @@
 // pages/_app.js
-// Global layout for every page: Header + Footer + page transitions + PWA meta.
-// Requires: npm install framer-motion
-// Also ensure you have styles/globals.css in your project.
+// Global layout: Header (nav) + Footer (minimal) + page transitions + PWA meta.
+// Requires framer-motion in package.json (you already added it).
 
 import Head from "next/head";
 import Link from "next/link";
@@ -39,17 +38,28 @@ function Header() {
           max-width: 1040px; margin: 0 auto; padding: 12px 16px;
           display: flex; align-items: center; justify-content: space-between; gap: 12px;
         }
-        .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+
+        /* Make header links look professional (no purple underline) */
+        .site-header :global(a) { color: inherit; text-decoration: none; }
+        .site-header :global(a:hover) { text-decoration: none; }
+
+        .brand { display: inline-flex; align-items: center; gap: 10px; color: inherit; }
         .logo { font-size: 22px; line-height: 1; }
         .brand-text { font-weight: 800; font-size: 18px; letter-spacing: .2px; }
+
         .nav { display: inline-flex; gap: 14px; align-items: center; flex-wrap: wrap; }
         .nav :global(a) {
-          color: #444; text-decoration: none; padding: 8px 10px; border-radius: 10px;
+          color: #444; padding: 8px 10px; border-radius: 10px;
           transition: background .2s ease, color .2s ease;
         }
         .nav :global(a:hover) { background: #f2f4f7; color: #111; }
         .nav :global(a.active) { background: #eef2ff; color: #1d4ed8; font-weight: 600; }
-        @media (max-width:640px){ .wrap{ padding:10px 12px } .nav{ gap:8px } .brand-text{ font-size:16px } }
+
+        @media (max-width:640px){
+          .wrap{ padding:10px 12px }
+          .nav{ gap:8px }
+          .brand-text{ font-size:16px }
+        }
       `}</style>
     </header>
   );
@@ -59,24 +69,20 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="wrap">
-        <nav className="foot-nav" aria-label="Footer">
-          <Link href="/about">About</Link>
-          <Link href="/legal/privacy-policy">Privacy Policy</Link>
-          <Link href="/legal/terms-of-service">Terms of Service</Link>
-          <Link href="/contact">Contact</Link>
-        </nav>
-        <p className="copy">© {new Date().getFullYear()} AidFinder</p>
+        <p className="copy">© {new Date().getFullYear()} AidFinder — All rights reserved.</p>
+        <p className="legal">
+          <a href="/legal/privacy-policy">Privacy Policy</a> ·{" "}
+          <a href="/legal/terms-of-service">Terms of Service</a>
+        </p>
       </div>
 
       <style jsx>{`
         .site-footer { border-top: 1px solid #eee; margin-top: 32px; background: #fff; }
-        .wrap { max-width: 1040px; margin: 0 auto; padding: 16px; }
-        .foot-nav { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
-        .foot-nav :global(a) {
-          color: #444; text-decoration: none; padding: 6px 8px; border-radius: 8px; transition: background .2s ease;
-        }
-        .foot-nav :global(a:hover) { background: #f2f4f7; }
+        .wrap { max-width: 1040px; margin: 0 auto; padding: 16px; text-align: center; }
         .copy { margin: 0; color: #666; font-size: 14px; }
+        .legal { margin: 6px 0 0; font-size: 14px; color: #666; }
+        .legal a { color: inherit; text-decoration: none; margin: 0 6px; }
+        .legal a:hover { text-decoration: underline; }
       `}</style>
     </footer>
   );
@@ -93,12 +99,11 @@ function Layout({ children }) {
         {/* Apple touch icon (iOS home screen) */}
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
 
-        {/* Favicons (using your existing PNGs) */}
+        {/* Favicons (reuse PNGs you already have) */}
         <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-48.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-48.png" />
         <link rel="shortcut icon" href="/icons/icon-192.png" />
 
-        {/* Basic SEO */}
         <title>AidFinder</title>
         <meta
           name="description"
@@ -125,11 +130,11 @@ function Layout({ children }) {
   );
 }
 
-// Page transition animation
+// Page transition animation (keeps your professional feel)
 const pageVariants = {
   initial: { opacity: 0, y: 12 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.35 } },
-  exit: { opacity: 0, y: -12, transition: { duration: 0.25 } },
+  exit:    { opacity: 0, y: -12, transition: { duration: 0.25 } },
 };
 
 export default function MyApp({ Component, pageProps, router }) {

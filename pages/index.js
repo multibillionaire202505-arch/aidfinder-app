@@ -537,7 +537,7 @@ export default function Home() {
             <span className="muted">{programs.length} {T.programCount}</span>
           </div>
 
-          {/* ===== Donate with PayPal (simple, no env var needed) ===== */}
+          {/* ===== Donate with PayPal (simple, self-contained) ===== */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
             <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
@@ -552,7 +552,7 @@ export default function Home() {
               {/* 🔁 Replace with your PayPal business email */}
               <input type="hidden" name="business" value="your-paypal-email@example.com" />
               <input type="hidden" name="currency_code" value="USD" />
-              {/* 0 = allow recurring on PayPal if user chooses */}
+              {/* 0 = allow recurring on PayPal side if user chooses */}
               <input type="hidden" name="no_recurring" value="0" />
               <input type="hidden" name="item_name" value="Support AidFinder" />
               <button
@@ -578,7 +578,7 @@ export default function Home() {
         <section className={`grid ${reveal ? "reveal" : ""}`}>
           {programs.map((p,i)=>{
             const title = p.i18n[lang]?.title || p.i18n.en.title;
-            const desc  = p.i18n[lang]?.desc  || p.i9n?.en?.desc || p.i18n.en.desc; /* fallback safe */
+            const desc  = p.i18n[lang]?.desc  || p.i18n.en.desc; // ✅ fixed from i9n → i18n
             return (
               <article className="card" key={p.link} style={{ "--i": i }}>
                 <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "var(--border)"}}>
@@ -641,3 +641,111 @@ export default function Home() {
                     {T.details}
                   </button>
                 </div>
+              </article>
+            );
+          })}
+
+          {programs.length===0 && (
+            <div className="empty">
+              <div className="emptyArt" aria-hidden>🔍</div>
+              <strong>{T.noResultsTitle}</strong>
+              <p>{T.noResultsBody}</p>
+            </div>
+          )}
+        </section>
+
+        {/* Details Modal */}
+        {open && current && (
+          <>
+            <div className="backdrop" onClick={()=>{ setOpen(false); setShareOpenModal(false); }} />
+            <div className="modal" role="dialog" aria-modal="true" aria-label="Program details">
+              <div className="modalHeader">
+                <span className="badge" style={{background: ICONS_BADGE_BG[current.category] || "var(--border)"}}>
+                  {UI[lang].catLabels[current.category] || current.category}
+                </span>
+                <button className="closeX" onClick={()=>{ setOpen(false); setShareOpenModal(false); }} aria-label={T.close}>✕</button>
+              </div>
+              <h3 className="modalTitle">
+                <span style={{marginRight:6, display:"inline-block", transform:"translateY(1px)"}}>
+                  {ICONS[current.category] || "📌"}
+                </span>
+                {current.i18n[lang]?.title || current.i18n.en.title}
+              </h3>
+              <p className="modalBody">{current.i18n[lang]?.desc || current.i18n.en.desc}</p>
+              <div className="modalActions" onClick={(e)=>e.stopPropagation()}>
+                <button className="iconBtn" onClick={()=>{
+                  toggleFav(current.link);
+                  triggerAnim(current.link);
+                }}>
+                  <HeartIcon on={isFav(current.link)} animate={!!animMap[current.link]} />
+                  <span style={{marginLeft:8}}>{isFav(current.link) ? T.saved : T.unsaved}</span>
+                </button>
+
+                <div className="menuWrap">
+                  <button className="secondary" onClick={()=>setShareOpenModal(v=>!v)} aria-haspopup="menu" aria-expanded={shareOpenModal}>{T.share} ▾</button>
+                  {shareOpenModal && (
+                    <div className="menu" role="menu">
+                      <button role="menuitem" onClick={()=>shareWhatsApp(current)}>{T.shareWhatsApp}</button>
+                      <button role="menuitem" onClick={()=>shareEmail(current)}>{T.shareEmail}</button>
+                    </div>
+                  )}
+                </div>
+
+                <a className="apply" href={current.link} target="_blank" rel="noreferrer">{T.apply}</a>
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* Footer */}
+        <footer className="footer">
+          <div style={{display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap"}}>
+            <a href="/about">About</a>
+            <span>•</span>
+            <a href="/privacy">Privacy</a>
+            <span>•</span>
+            <a href="/terms">Terms</a>
+            <span>•</span>
+            <a href="/contact">Contact</a>
+          </div>
+          <div style={{marginTop:8}}>{T.footer}</div>
+        </footer>
+      </main>
+
+      {/* Tiny global CSS for animations (staggered reveal + hover lift) */}
+      <style jsx global>{`
+        /* Heart click pulse (already in your code) */
+        .pulse { animation: pulseAnim 0.3s ease-in-out; }
+        @keyframes pulseAnim {
+          0% { transform: scale(1); opacity: 0.85; }
+          50% { transform: scale(1.3); opacity: 1; }
+          100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* NEW: card appear + hover polish */
+        .grid .card {
+          opacity: 0;
+          transform: translateY(16px);
+          transition:
+            opacity 480ms ease,
+            transform 480ms ease,
+            box-shadow 180ms ease,
+            transform 180ms ease;
+          /* stagger delay controlled by inline --i */
+          transition-delay: calc(var(--i, 0) * 70ms);
+          will-change: transform, opacity;
+        }
+        .grid.reveal .card {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .card:hover {
+          transform: translateY(-2px) scale(1.02);
+          box-shadow:
+            0 6px 18px rgba(0,0,0,0.10),
+            0 2px 6px rgba(0,0,0,0.06);
+        }
+      `}</style>
+    </>
+  );
+}

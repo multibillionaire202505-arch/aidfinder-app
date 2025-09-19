@@ -1,12 +1,7 @@
 /* ============== CSS Reset (lightweight) ============== */
 * { box-sizing: border-box; }
 html, body, #__next { height: 100%; }
-body {
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  background: var(--bg);
-  color: var(--fg);
-}
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--fg); }
 
 /* ============== Theme Tokens ============== */
 :root {
@@ -37,12 +32,12 @@ html[data-theme="dark"], :root[data-theme="dark"] {
   --primary-contrast: #0b1220;
 
   /* Category tints (dark) */
-  --tint-food: #3f6212;       /* dark lime-ish */
-  --tint-health: #7f1d1d;     /* dark red */
-  --tint-housing: #312e81;    /* dark indigo */
-  --tint-utilities: #0e7490;  /* dark cyan */
-  --tint-education: #5b21b6;  /* dark purple */
-  --tint-income: #854d0e;     /* dark amber */
+  --tint-food: #3f6212;
+  --tint-health: #7f1d1d;
+  --tint-housing: #312e81;
+  --tint-utilities: #0e7490;
+  --tint-education: #5b21b6;
+  --tint-income: #854d0e;
 }
 
 /* ============== Layout ============== */
@@ -83,6 +78,7 @@ html[data-theme="dark"], :root[data-theme="dark"] {
   gap: 14px;
   padding: 14px 0 28px;
 }
+
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -91,24 +87,6 @@ html[data-theme="dark"], :root[data-theme="dark"] {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity 480ms ease,
-    transform 480ms ease,
-    box-shadow 180ms ease;
-  transition-delay: calc(var(--i, 0) * 70ms);
-  will-change: transform, opacity;
-}
-.grid.reveal .card {
-  opacity: 1;
-  transform: translateY(0);
-}
-.card:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow:
-    0 6px 18px rgba(0,0,0,0.10),
-    0 2px 6px rgba(0,0,0,0.06);
 }
 .card h3 { margin: 0; font-size: 18px; }
 .card p { margin: 0; color: var(--muted); }
@@ -243,12 +221,51 @@ html[data-theme="dark"], :root[data-theme="dark"] {
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* ============== Page Wrapper (About, Contact, Legal) ============== */
-.page {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 16px;
-  line-height: 1.6;
+/* ============== Search Bar Animation (NEW) ============== */
+.searchWrap {
+  position: relative;
 }
-.page h1 { font-size: 2rem; margin-bottom: 1rem; }
-.page p, .page li { margin-bottom: 1rem; color: var(--fg); }
+.searchWrap::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  opacity: .55;
+  pointer-events: none;
+  background: currentColor;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23000" viewBox="0 0 24 24"><path d="M10 18a8 8 0 1 1 5.293-14.293A8 8 0 0 1 10 18zm0-2a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm8.707 4.707-4.2-4.2a9.5 9.5 0 1 0-1.414 1.414l4.2 4.2a1 1 0 0 0 1.414-1.414z"/></svg>') center / contain no-repeat;
+          mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23000" viewBox="0 0 24 24"><path d="M10 18a8 8 0 1 1 5.293-14.293A8 8 0 0 1 10 18zm0-2a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm8.707 4.707-4.2-4.2a9.5 9.5 0 1 0-1.414 1.414l4.2 4.2a1 1 0 0 0 1.414-1.414z"/></svg>') center / contain no-repeat;
+}
+.searchWrap .search {
+  padding-left: 38px;
+}
+.search {
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease, background-color .2s ease, filter .2s ease;
+}
+.search:focus {
+  outline: none;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+  background: var(--card);
+  filter: saturate(1.02);
+  animation: ringPulse 1.6s ease-out infinite;
+}
+@keyframes ringPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.32); }
+  70%  { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0.00); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.00); }
+}
+.search::placeholder {
+  transition: opacity .2s ease;
+}
+.search:focus::placeholder {
+  opacity: .6;
+}
+@media (prefers-reduced-motion: reduce) {
+  .search { transition: none; }
+  .search:focus { animation: none; box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25); }
+}

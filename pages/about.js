@@ -8,7 +8,7 @@ export default function About() {
         <title>About — AidFinder</title>
         <meta
           name="description"
-          content="AidFinder helps people discover the many aid programs in the U.S. — Food, Health, Housing, Utilities, Education, and Income — all in one place."
+          content="AidFinder: One place to find real help — fast. Food, Health, Housing, Utilities, Education, and Income programs in a clean, modern experience."
         />
       </Head>
 
@@ -31,27 +31,10 @@ export default function About() {
         <section className="card" style={{ marginTop: 16, padding: 20 }}>
           <h3 style={{ marginTop: 0 }}>Changing the Perception</h3>
           <p style={{ margin: 0 }}>
-            Around the world, people often say the United States has little social support. The truth is different:
-            there are thousands of federal, state, and local programs—food, housing, healthcare, education, and income.
-            The real problem isn’t the lack of aid—it’s finding the right information.
-          </p>
-        </section>
-
-        {/* Mission */}
-        <section className="card" style={{ marginTop: 16, padding: 20 }}>
-          <h3 style={{ marginTop: 0 }}>Our Mission</h3>
-          <p style={{ margin: 0 }}>
-            AidFinder was built to make those programs visible, clear, and accessible—so people can get the right help, fast.
-          </p>
-        </section>
-
-        {/* Trust & Policies */}
-        <section className="card" style={{ marginTop: 16, padding: 20 }}>
-          <h3 style={{ marginTop: 0 }}>Trust & Policies</h3>
-          <p style={{ margin: 0 }}>
-            We respect your privacy and keep things transparent. Read our{" "}
-            <a href="/legal/privacy-policy">Privacy Policy</a> and{" "}
-            <a href="/legal/terms-of-service">Terms of Service</a>.
+            People abroad often say the United States lacks social support. In reality, the U.S. has thousands of
+            federal, state, and local programs—food, housing, healthcare, education, income support. The challenge
+            isn’t the amount of aid; it’s finding the right information. <strong>AidFinder</strong> makes these
+            programs visible, clear, and accessible—so people can get the right help, fast.
           </p>
         </section>
 

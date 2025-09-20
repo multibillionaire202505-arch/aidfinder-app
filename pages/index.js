@@ -537,7 +537,7 @@ export default function Home() {
             <span className="muted">{programs.length} {T.programCount}</span>
           </div>
 
-          {/* ===== Donate with PayPal (simple, self-contained) ===== */}
+          {/* ===== Donate with PayPal (simple, no env var needed) ===== */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
             <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
@@ -552,7 +552,7 @@ export default function Home() {
               {/* 🔁 Replace with your PayPal business email */}
               <input type="hidden" name="business" value="your-paypal-email@example.com" />
               <input type="hidden" name="currency_code" value="USD" />
-              {/* 0 = allow recurring on PayPal side if user chooses */}
+              {/* 0 = allow recurring on PayPal if user chooses */}
               <input type="hidden" name="no_recurring" value="0" />
               <input type="hidden" name="item_name" value="Support AidFinder" />
               <button
@@ -578,7 +578,7 @@ export default function Home() {
         <section className={`grid ${reveal ? "reveal" : ""}`}>
           {programs.map((p,i)=>{
             const title = p.i18n[lang]?.title || p.i18n.en.title;
-            const desc  = p.i18n[lang]?.desc  || p.i18n.en.desc; // ✅ fixed from i9n → i18n
+            const desc  = p.i18n[lang]?.desc  || p.i9n?.en?.desc || p.i18n.en.desc; /* fallback safe */
             return (
               <article className="card" key={p.link} style={{ "--i": i }}>
                 <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "var(--border)"}}>

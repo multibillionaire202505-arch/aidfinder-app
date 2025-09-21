@@ -7,6 +7,11 @@ import { useRouter } from "next/router";
 import { AnimatePresence, motion } from "framer-motion";
 import "../styles/globals.css";
 
+const SITE_NAME = "AidFinder";
+const SITE_URL = "https://aidfinder-app-uqzw.vercel.app";
+const SITE_DESC =
+  "Find aid programs for Food, Health, Housing, Utilities, Education, and Income — all in one place.";
+
 function Header() {
   const router = useRouter();
   const isActive = (href) => router.pathname === href;
@@ -70,17 +75,35 @@ function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>AidFinder</title>
+        {/* ---- Base SEO (site-wide defaults) ---- */}
+        <title>{SITE_NAME} — Find Assistance Fast</title>
+        <meta name="description" content={SITE_DESC} />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href={SITE_URL} />
+
         {/* Favicons / PWA */}
         <link rel="icon" href="/icons/icon-32.png" sizes="32x32" />
         <link rel="icon" href="/icons/icon-48.png" sizes="48x48" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#16a34a" />
-        <meta
-          name="description"
-          content="Find aid programs for Food, Health, Housing, Utilities, Education, and Income — all in one place."
-        />
+
+        {/* ---- Open Graph (Facebook, LinkedIn, etc.) ---- */}
+        <meta property="og:site_name" content={SITE_NAME} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={SITE_URL} />
+        <meta property="og:title" content={`${SITE_NAME} — Find Assistance Fast`} />
+        <meta property="og:description" content={SITE_DESC} />
+        <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* ---- Twitter Cards ---- */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${SITE_NAME} — Find Assistance Fast`} />
+        <meta name="twitter:description" content={SITE_DESC} />
+        <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
       </Head>
 
       <Header />

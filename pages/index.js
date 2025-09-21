@@ -2,6 +2,8 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
+const SITE_URL = "https://aidfinder-app-uqzw.vercel.app";
+
 /** ===== Heart icon (red inside only; pulse on click) ===== */
 const HeartIcon = ({ on = false, size = 20, animate = false }) => (
   <svg
@@ -422,15 +424,67 @@ export default function Home() {
   return (
     <>
       <Head>
+        {/* Page title/description */}
         <title>AidFinder — {T.title}</title>
         <meta name="description" content={T.subtitle} />
+
+        {/* Canonical */}
+        <link rel="canonical" href={SITE_URL} />
+
+        {/* Theming / PWA */}
         <meta name="theme-color" content={theme === "dark" ? "#0b1220" : "#16a34a"} />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Open Graph */}
+        <meta property="og:site_name" content="AidFinder" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={SITE_URL} />
         <meta property="og:title" content="AidFinder — Find Aid Programs Easily" />
         <meta property="og:description" content={T.subtitle} />
-        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="fr_FR" />
+        <meta property="og:locale:alternate" content="es_ES" />
+
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AidFinder — Find Aid Programs Easily" />
+        <meta name="twitter:description" content={T.subtitle} />
+        <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
+
+        {/* JSON-LD: WebSite + SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "AidFinder",
+              url: SITE_URL,
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${SITE_URL}/?q={query}`,
+                "query-input": "required name=query"
+              }
+            })
+          }}
+        />
+        {/* JSON-LD: Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "AidFinder",
+              url: SITE_URL,
+              logo: `${SITE_URL}/og-image.png`
+            })
+          }}
+        />
       </Head>
 
       {/* Header */}
@@ -578,7 +632,7 @@ export default function Home() {
         <section className={`grid ${reveal ? "reveal" : ""}`}>
           {programs.map((p,i)=>{
             const title = p.i18n[lang]?.title || p.i18n.en.title;
-            const desc  = p.i18n[lang]?.desc  || p.i9n?.en?.desc || p.i18n.en.desc; /* fallback safe */
+            const desc  = p.i18n[lang]?.desc  || p.i18n.en.desc; /* fallback safe */
             return (
               <article className="card" key={p.link} style={{ "--i": i }}>
                 <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "var(--border)"}}>
@@ -702,9 +756,9 @@ export default function Home() {
           <div style={{display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap"}}>
             <a href="/about">About</a>
             <span>•</span>
-            <a href="/privacy">Privacy</a>
+            <a href="/legal/privacy-policy">Privacy</a>
             <span>•</span>
-            <a href="/terms">Terms</a>
+            <a href="/legal/terms-of-service">Terms</a>
             <span>•</span>
             <a href="/contact">Contact</a>
           </div>

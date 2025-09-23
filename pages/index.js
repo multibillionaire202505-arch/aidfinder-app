@@ -29,6 +29,8 @@ const UI = {
     subtitle:
       "Explore programs across Food, Health, Housing, Utilities, Education, and Income — all in one place.",
     searchPlaceholder: "Search e.g. housing, food, health…",
+    searchBtn: "Search",
+    clearBtn: "Clear",
     categories: ["All","Food","Health","Housing","Utilities","Education","Income","Saved"],
     catLabels: { All:"All", Food:"Food", Health:"Health", Housing:"Housing", Utilities:"Utilities", Education:"Education", Income:"Income", Saved:"Saved" },
     noResultsTitle: "No results",
@@ -39,7 +41,6 @@ const UI = {
     unsaved: "Save",
     footer: "Demo preview • © AidFinder",
     programCount: "programs",
-    clear: "Clear",
     close: "Close",
     stateLabel: "Your State",
     allStates: "All States",
@@ -57,6 +58,8 @@ const UI = {
     subtitle:
       "Découvrez des programmes d’aide Alimentation, Santé, Logement, Services publics, Éducation et Revenus — au même endroit.",
     searchPlaceholder: "Rechercher ex. logement, alimentation, santé…",
+    searchBtn: "Rechercher",
+    clearBtn: "Effacer",
     categories: ["Tous","Alimentation","Santé","Logement","Services publics","Éducation","Revenus","Enregistrés"],
     catLabels: { All:"Tous", Food:"Alimentation", Health:"Santé", Housing:"Logement", Utilities:"Services publics", Education:"Éducation", Income:"Revenus", Saved:"Enregistrés" },
     noResultsTitle: "Aucun résultat",
@@ -67,7 +70,6 @@ const UI = {
     unsaved: "Enregistrer",
     footer: "Aperçu démo • © AidFinder",
     programCount: "programmes",
-    clear: "Effacer",
     close: "Fermer",
     stateLabel: "Votre État",
     allStates: "Tous les États",
@@ -85,6 +87,8 @@ const UI = {
     subtitle:
       "Explore programas de Alimentos, Salud, Vivienda, Servicios, Educación e Ingresos — todo en un solo lugar.",
     searchPlaceholder: "Buscar p. ej. vivienda, alimentos, salud…",
+    searchBtn: "Buscar",
+    clearBtn: "Borrar",
     categories: ["Todos","Alimentos","Salud","Vivienda","Servicios","Educación","Ingresos","Guardados"],
     catLabels: { All:"Todos", Food:"Alimentos", Health:"Salud", Housing:"Vivienda", Utilities:"Servicios", Education:"Educación", Income:"Ingresos", Saved:"Guardados" },
     noResultsTitle: "Sin resultados",
@@ -95,7 +99,6 @@ const UI = {
     unsaved: "Guardar",
     footer: "Vista previa • © AidFinder",
     programCount: "programas",
-    clear: "Borrar",
     close: "Cerrar",
     stateLabel: "Su estado",
     allStates: "Todos los estados",
@@ -304,6 +307,43 @@ const ALL = [
            es:{ title:"HEAP (Asistencia Energía NY)", desc:"Ayuda con costos de calefacción y refrigeración." } } },
 ];
 
+/** ===== Search helpers (multi-locale, tolerant) ===== */
+
+// Normalize strings (lowercase, strip accents)
+const norm = (s) => (s || "")
+  .toString()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .toLowerCase();
+
+// Build a searchable blob across EN/FR/ES + category labels + URL text
+const makeSearchText = (p) => {
+  const locales = ["en","fr","es"];
+  const parts = [];
+
+  for (const L of locales) {
+    parts.push(p.i18n?.[L]?.title || "");
+    parts.push(p.i18n?.[L]?.desc  || "");
+  }
+  parts.push(p.category || "");
+  for (const L of locales) {
+    const labels = UI?.[L]?.catLabels || {};
+    parts.push(labels[p.category] || "");
+  }
+  try {
+    const url = new URL(p.link);
+    parts.push(url.hostname, url.pathname);
+  } catch {}
+
+  return norm(parts.join(" "));
+};
+
+// Match if ALL query terms appear in the blob
+const matchesQuery = (blob, q) => {
+  const terms = norm(q).split(/\s+/).filter(Boolean);
+  return terms.every(t => blob.includes(t));
+};
+
 /** ===== Main Component ===== */
 export default function Home() {
   // language (persist)
@@ -352,7 +392,7 @@ export default function Home() {
   const toggleFav = (id)=> setFavs(prev => prev.includes(id) ? prev.filter(x=>x!==id) : [...prev, id]);
   const isFav = (id)=> favs.includes(id);
 
-  // share menu
+  // share menu state
   const [shareOpenIndex, setShareOpenIndex] = useState(null);
   const [shareOpenModal, setShareOpenModal] = useState(false);
 
@@ -388,7 +428,7 @@ export default function Home() {
     } else { setShareOpenModal(true); }
   };
 
-  // filtering
+  /** ===== SEARCHED PROGRAMS (improved) ===== */
   const programs = useMemo(()=>{
     let base = ALL;
 
@@ -399,23 +439,23 @@ export default function Home() {
       base = base.filter(p => !p.states || p.states.includes(stateSel));
     }
 
+    const blobs = new Map();
+    const getBlob = (p) => {
+      if (!blobs.has(p)) blobs.set(p, makeSearchText(p));
+      return blobs.get(p);
+    };
+
     if (query.trim()) {
-      const q = query.toLowerCase();
-      base = base.filter(p => {
-        const t = p.i18n[lang].title.toLowerCase();
-        const d = p.i18n[lang].desc.toLowerCase();
-        const c = (UI[lang].catLabels[p.category] || p.category).toLowerCase();
-        return t.includes(q) || d.includes(q) || c.includes(q);
-      });
+      base = base.filter(p => matchesQuery(getBlob(p), query));
     }
     return base;
-  }, [cat, favs, stateSel, query, lang]);
+  }, [cat, favs, stateSel, query]);
 
   // details modal
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(null);
 
-  // NEW: simple stagger-on-mount for cards
+  /** ===== NEW: simple stagger-on-mount for cards ===== */
   const [reveal, setReveal] = useState(false);
   useEffect(() => { setReveal(true); }, []);
 
@@ -423,31 +463,14 @@ export default function Home() {
     <>
       <Head>
         <title>AidFinder — {T.title}</title>
-        {/* SEO + Social */}
-        <meta name="description" content="Discover Food, Health, Housing, Utilities, Education, and Income aid programs — all in one place with AidFinder." />
-        <meta name="keywords" content="aid, assistance programs, SNAP, Medicaid, housing help, utilities, education aid, income support, financial help" />
-        <meta name="author" content="AidFinder Team" />
+        <meta name="description" content={T.subtitle} />
         <meta name="theme-color" content={theme === "dark" ? "#0b1220" : "#16a34a"} />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="AidFinder — Find Aid Programs Easily" />
-        <meta property="og:description" content="Discover Food, Health, Housing, Utilities, Education, and Income aid programs — all in one place with AidFinder." />
-        <meta property="og:url" content="https://www.aidfinder.org" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.aidfinder.org/preview.png" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AidFinder — Find Aid Programs Easily" />
-        <meta name="twitter:description" content="Explore programs across Food, Health, Housing, Utilities, Education, and Income — all in one place." />
-        <meta name="twitter:image" content="https://www.aidfinder.org/preview.png" />
-
-        {/* App icons / manifest */}
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="icon" href="/icons/icon-32.png" sizes="32x32" />
-        <link rel="icon" href="/icons/icon-48.png" sizes="48x48" />
-        <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+        <meta property="og:title" content="AidFinder — Find Aid Programs Easily" />
+        <meta property="og:description" content={T.subtitle} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       {/* Header */}
@@ -501,15 +524,33 @@ export default function Home() {
 
         {/* Toolbar */}
         <section className="toolbar">
+          {/* SEARCH with Search/Clear buttons */}
           <div className="searchWrap">
-            <input
-              className="search"
-              placeholder={T.searchPlaceholder}
-              value={query}
-              onChange={(e)=>setQuery(e.target.value)}
+            <form
+              className="searchForm"
+              onSubmit={(e)=>{ e.preventDefault(); }}
+              role="search"
               aria-label={T.searchPlaceholder}
-            />
-            {query && <button className="clearBtn" onClick={()=>setQuery("")}>{T.clear}</button>}
+            >
+              <input
+                className="search"
+                placeholder={T.searchPlaceholder}
+                value={query}
+                onChange={(e)=>setQuery(e.target.value)}
+                aria-label={T.searchPlaceholder}
+              />
+              <div className="searchBtns">
+                <button type="submit" className="primaryBtn">{T.searchBtn}</button>
+                <button
+                  type="button"
+                  className="secondaryBtn"
+                  onClick={()=>setQuery("")}
+                  aria-label={T.clearBtn}
+                >
+                  {T.clearBtn}
+                </button>
+              </div>
+            </form>
           </div>
 
           <div className="filtersRow">
@@ -554,7 +595,7 @@ export default function Home() {
             <span className="muted">{programs.length} {T.programCount}</span>
           </div>
 
-          {/* Donate with PayPal */}
+          {/* Donate (kept) */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
             <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
@@ -593,7 +634,7 @@ export default function Home() {
         <section className={`grid ${reveal ? "reveal" : ""}`}>
           {programs.map((p,i)=>{
             const title = p.i18n[lang]?.title || p.i18n.en.title;
-            const desc  = p.i18n[lang]?.desc  || p.i9n?.en?.desc || p.i18n.en.desc; // fallback safe
+            const desc  = p.i18n[lang]?.desc  || p.i18n.en.desc;
             return (
               <article className="card" key={p.link} style={{ "--i": i }}>
                 <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "var(--border)"}}>
@@ -686,7 +727,10 @@ export default function Home() {
               </h3>
               <p className="modalBody">{current.i18n[lang]?.desc || current.i18n.en.desc}</p>
               <div className="modalActions" onClick={(e)=>e.stopPropagation()}>
-                <button className="iconBtn" onClick={()=>{ toggleFav(current.link); triggerAnim(current.link); }}>
+                <button className="iconBtn" onClick={()=>{
+                  toggleFav(current.link);
+                  triggerAnim(current.link);
+                }}>
                   <HeartIcon on={isFav(current.link)} animate={!!animMap[current.link]} />
                   <span style={{marginLeft:8}}>{isFav(current.link) ? T.saved : T.unsaved}</span>
                 </button>
@@ -712,9 +756,9 @@ export default function Home() {
           <div style={{display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap"}}>
             <a href="/about">About</a>
             <span>•</span>
-            <a href="/legal/privacy-policy">Privacy</a>
+            <a href="/privacy">Privacy</a>
             <span>•</span>
-            <a href="/legal/terms-of-service">Terms</a>
+            <a href="/terms">Terms</a>
             <span>•</span>
             <a href="/contact">Contact</a>
           </div>
@@ -722,7 +766,7 @@ export default function Home() {
         </footer>
       </main>
 
-      {/* Tiny global CSS for animations (staggered reveal + hover lift) */}
+      {/* Tiny global CSS for animations + search buttons */}
       <style jsx global>{`
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
         @keyframes pulseAnim {
@@ -731,6 +775,24 @@ export default function Home() {
           100% { transform: scale(1); opacity: 1; }
         }
 
+        .searchForm{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+        .search{
+          flex:1 1 360px;
+          padding:12px 14px; border-radius:12px; border:1px solid #d1d5db;
+          outline:none; font-size:16px;
+        }
+        .search:focus{ border-color:#16a34a; box-shadow:0 0 0 3px rgba(22,163,74,.15); }
+        .searchBtns{ display:flex; gap:8px; }
+        .primaryBtn{
+          background:#1d4ed8; color:#fff; border:none; padding:10px 14px;
+          border-radius:10px; font-weight:700; cursor:pointer;
+        }
+        .secondaryBtn{
+          background:#eef2ff; color:#1d4ed8; border:1px solid #c7d2fe;
+          padding:10px 14px; border-radius:10px; font-weight:600; cursor:pointer;
+        }
+
+        /* Card appear + hover polish */
         .grid .card {
           opacity: 0;
           transform: translateY(16px);
@@ -742,15 +804,10 @@ export default function Home() {
           transition-delay: calc(var(--i, 0) * 70ms);
           will-change: transform, opacity;
         }
-        .grid.reveal .card {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        .grid.reveal .card { opacity: 1; transform: translateY(0); }
         .card:hover {
           transform: translateY(-2px) scale(1.02);
-          box-shadow:
-            0 6px 18px rgba(0,0,0,0.10),
-            0 2px 6px rgba(0,0,0,0.06);
+          box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06);
         }
       `}</style>
     </>

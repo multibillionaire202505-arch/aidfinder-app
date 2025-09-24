@@ -524,31 +524,44 @@ export default function Home() {
 
         {/* Toolbar */}
         <section className="toolbar">
-          {/* SEARCH with Search/Clear buttons */}
+          {/* SEARCH with inline Search/Clear inside the field */}
           <div className="searchWrap">
             <form
-              className="searchForm"
-              onSubmit={(e)=>{ e.preventDefault(); }}
+              className="searchInlineForm"
+              onSubmit={(e)=>{ e.preventDefault(); /* filtering reacts to `query` */ }}
               role="search"
               aria-label={T.searchPlaceholder}
             >
-              <input
-                className="search"
-                placeholder={T.searchPlaceholder}
-                value={query}
-                onChange={(e)=>setQuery(e.target.value)}
-                aria-label={T.searchPlaceholder}
-              />
-              <div className="searchBtns">
-                <button type="submit" className="primaryBtn">{T.searchBtn}</button>
-                <button
-                  type="button"
-                  className="secondaryBtn"
-                  onClick={()=>setQuery("")}
-                  aria-label={T.clearBtn}
-                >
-                  {T.clearBtn}
-                </button>
+              <div className="searchInline">
+                <input
+                  className="searchInlineInput"
+                  placeholder={T.searchPlaceholder}
+                  value={query}
+                  onChange={(e)=>setQuery(e.target.value)}
+                  aria-label={T.searchPlaceholder}
+                />
+
+                <div className="searchInlineActions">
+                  {/* Search button: only when there is text */}
+                  {(query.trim().length > 0) && (
+                    <button type="submit" className="searchInlineBtn primary" aria-label={T.searchBtn} title={T.searchBtn}>
+                      🔎 <span className="vh">{T.searchBtn}</span>
+                    </button>
+                  )}
+
+                  {/* Clear button: only when there is text */}
+                  {query && (
+                    <button
+                      type="button"
+                      className="searchInlineBtn ghost"
+                      onClick={()=>setQuery("")}
+                      aria-label={T.clearBtn}
+                      title={T.clearBtn}
+                    >
+                      ✕ <span className="vh">{T.clearBtn}</span>
+                    </button>
+                  )}
+                </div>
               </div>
             </form>
           </div>
@@ -766,7 +779,7 @@ export default function Home() {
         </footer>
       </main>
 
-      {/* Tiny global CSS for animations + search buttons */}
+      {/* Global CSS: animations + inline search styles */}
       <style jsx global>{`
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
         @keyframes pulseAnim {
@@ -775,21 +788,59 @@ export default function Home() {
           100% { transform: scale(1); opacity: 1; }
         }
 
-        .searchForm{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
-        .search{
-          flex:1 1 360px;
-          padding:12px 14px; border-radius:12px; border:1px solid #d1d5db;
-          outline:none; font-size:16px;
+        /* Inline search field with embedded buttons */
+        .searchInlineForm { width: 100%; margin-top: 20px; }
+        .searchInline {
+          position: relative;
+          width: 100%;
         }
-        .search:focus{ border-color:#16a34a; box-shadow:0 0 0 3px rgba(22,163,74,.15); }
-        .searchBtns{ display:flex; gap:8px; }
-        .primaryBtn{
-          background:#1d4ed8; color:#fff; border:none; padding:10px 14px;
-          border-radius:10px; font-weight:700; cursor:pointer;
+        .searchInlineInput {
+          width: 100%;
+          padding: 12px 116px 12px 14px; /* room on right for buttons */
+          border-radius: 12px;
+          border: 1px solid #d1d5db;
+          outline: none;
+          font-size: 16px;
+          background: #fff;
         }
-        .secondaryBtn{
-          background:#eef2ff; color:#1d4ed8; border:1px solid #c7d2fe;
-          padding:10px 14px; border-radius:10px; font-weight:600; cursor:pointer;
+        .searchInlineInput:focus {
+          border-color: #16a34a;
+          box-shadow: 0 0 0 3px rgba(22,163,74,.15);
+        }
+        .searchInlineActions {
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          gap: 6px;
+        }
+        .searchInlineBtn {
+          height: 36px; min-width: 36px;
+          padding: 0 10px;
+          border-radius: 10px;
+          border: 1px solid transparent;
+          font-weight: 700;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .searchInlineBtn.primary {
+          background: #1d4ed8;
+          color: #fff;
+        }
+        .searchInlineBtn.ghost {
+          background: #eef2ff;
+          color: #1d4ed8;
+          border-color: #c7d2fe;
+        }
+        /* Visually hidden text for a11y labels */
+        .vh {
+          position: absolute !important;
+          height: 1px; width: 1px;
+          overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+          white-space: nowrap;
         }
 
         /* Card appear + hover polish */

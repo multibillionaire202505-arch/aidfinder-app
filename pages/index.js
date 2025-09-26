@@ -17,7 +17,7 @@ const BrandLogo = ({ size = 40 }) => (
   />
 );
 
-// ===== Heart Icon =====
+/** ===== Heart icon (red inside only; pulse on click) ===== */
 const HeartIcon = ({ on = false, size = 20, animate = false }) => (
   <svg
     width={size}
@@ -36,7 +36,7 @@ const HeartIcon = ({ on = false, size = 20, animate = false }) => (
   </svg>
 );
 
-// UI translations
+/** ===== UI strings (EN only here for brevity, keep your full UI object) ===== */
 const UI = {
   en: {
     brand: "AidFinder",
@@ -69,24 +69,47 @@ const UI = {
   }
 };
 
-// ===== Main Component =====
+// Example data (trimmed for brevity)
+const ALL = [
+  { category:"Food", link:"https://www.fns.usda.gov/snap",
+    i18n:{ en:{ title:"SNAP (Food Stamps)", desc:"Monthly funds to buy groceries for eligible households." } } }
+];
+
+/** ===== Helpers ===== */
+const norm = (s) => (s || "")
+  .toString()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .toLowerCase();
+
+const makeSearchText = (p) => {
+  const parts = [p.i18n.en.title, p.i18n.en.desc, p.category];
+  try { const url = new URL(p.link); parts.push(url.hostname, url.pathname); } catch {}
+  return norm(parts.join(" "));
+};
+
+const matchesQuery = (blob, q) => {
+  const terms = norm(q).split(/\s+/).filter(Boolean);
+  return terms.every(t => blob.includes(t));
+};
+
+/** ===== Main Component ===== */
 export default function Home() {
   const [lang, setLang] = useState("en");
   const [theme, setTheme] = useState("light");
   const T = UI[lang];
 
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem("aidfinder_lang");
-      if (saved) setLang(saved);
-    } catch {}
-  }, []);
+  const [query, setQuery] = useState("");
+  const [cat, setCat] = useState("All");
+  const [favs, setFavs] = useState([]);
+  const [animMap, setAnimMap] = useState({});
 
-  useEffect(() => {
-    try {
-      localStorage.setItem("aidfinder_lang", lang);
-    } catch {}
-  }, [lang]);
+  const programs = useMemo(()=>{
+    let base = ALL;
+    if (cat !== "All") base = base.filter(p => p.category === cat);
+    if (query.trim()) base = base.filter(p => matchesQuery(makeSearchText(p), query));
+    return base;
+  }, [cat, query]);
 
   return (
     <>
@@ -100,64 +123,106 @@ export default function Home() {
         <div className="container headerRow">
           <div className="brandRow">
             <BrandLogo size={40} />
-            <strong style={{ marginLeft: "8px" }}>{T.brand}</strong>
-          </div>
-
-          <div style={{display:"flex", alignItems:"center", gap:16}}>
-            {/* Language */}
-            <div className="stateSelectWrap">
-              <label htmlFor="langSel">{T.language}:</label>
-              <select
-                id="langSel"
-                className="langSelect"
-                value={lang}
-                onChange={(e)=> setLang(e.target.value)}
-              >
-                <option value="en">English</option>
-              </select>
-            </div>
-
-            {/* Theme */}
-            <div className="stateSelectWrap">
-              <label htmlFor="themeSel">{T.theme}:</label>
-              <select
-                id="themeSel"
-                className="langSelect"
-                value={theme}
-                onChange={(e)=>setTheme(e.target.value)}
-              >
-                <option value="light">{T.light}</option>
-                <option value="dark">{T.dark}</option>
-              </select>
-            </div>
+            <strong>{T.brand}</strong>
           </div>
         </div>
       </header>
 
+      {/* Main */}
       <main className="container">
+        {/* Hero */}
         <section className="hero">
           <h1>{T.title}</h1>
           <p>{T.subtitle}</p>
         </section>
+
+        {/* Search Bar */}
+        <section className="toolbar">
+          <div className="searchWrap">
+            <form
+              className="searchInlineForm"
+              onSubmit={(e)=>{ e.preventDefault(); }}
+              role="search"
+              aria-label={T.searchPlaceholder}
+            >
+              <div className="searchInline">
+                <input
+                  className="searchInlineInput"
+                  placeholder={T.searchPlaceholder}
+                  value={query}
+                  onChange={(e)=>setQuery(e.target.value)}
+                  aria-label={T.searchPlaceholder}
+                />
+
+                <div className="searchInlineActions">
+                  {(query.trim().length > 0) && (
+                    <button type="submit" className="searchInlineBtn iconOnly" aria-label={T.searchBtn}>
+                      🔎
+                    </button>
+                  )}
+
+                  {query && (
+                    <button
+                      type="button"
+                      className="searchInlineBtn iconOnly"
+                      onClick={()=>setQuery("")}
+                      aria-label={T.clearBtn}
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        {/* Cards */}
+        <section className="grid">
+          {programs.map((p)=>(
+            <article className="card" key={p.link}>
+              <h3>{p.i18n.en.title}</h3>
+              <p>{p.i18n.en.desc}</p>
+              <a className="apply" href={p.link} target="_blank" rel="noreferrer">{T.apply}</a>
+            </article>
+          ))}
+        </section>
+
+        {/* Footer */}
+        <footer className="footer">
+          <a href="/about">About</a> • <a href="/privacy">Privacy</a> • <a href="/terms">Terms</a> • <a href="/contact">Contact</a>
+          <div style={{marginTop:8}}>{T.footer}</div>
+        </footer>
       </main>
 
+      {/* Styles */}
       <style jsx global>{`
-        .headerRow {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+        .searchInlineForm { width: 100%; margin-top: 20px; }
+        .searchInline { position: relative; width: 100%; }
+        .searchInlineInput {
+          width: 100%;
+          padding: 12px 80px 12px 14px;
+          border-radius: 12px;
+          border: 1px solid #d1d5db;
+          font-size: 16px;
+          background: #fff;
         }
-        .brandRow {
-          display: flex;
-          align-items: center;
+        .searchInlineActions {
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex; gap: 6px;
         }
-        .brandRow strong {
-          font-size: 20px;
+        .searchInlineBtn.iconOnly {
+          background: transparent;
+          border: none;
+          color: #16a34a; /* green */
+          font-size: 18px;
+          cursor: pointer;
         }
-        .stateSelectWrap {
-          display: flex;
-          align-items: center;
-          gap: 6px;
+        .searchInlineBtn.iconOnly:hover {
+          color: #15803d; /* darker green */
         }
       `}</style>
     </>

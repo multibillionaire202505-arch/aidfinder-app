@@ -2,6 +2,21 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
+/** ===== Robust logo (fallback to /icons/icon-192.png) ===== */
+const BrandLogo = ({ size = 40 }) => (
+  <img
+    src="/logo.png"
+    alt="AidFinder logo"
+    width={size}
+    height={size}
+    style={{ width: size, height: size, borderRadius: 8, objectFit: "contain" }}
+    onError={(e) => {
+      e.currentTarget.onerror = null;
+      e.currentTarget.src = "/icons/icon-192.png";
+    }}
+  />
+);
+
 /** ===== Heart icon (red inside only; pulse on click) ===== */
 const HeartIcon = ({ on = false, size = 20, animate = false }) => (
   <svg
@@ -308,15 +323,12 @@ const ALL = [
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */
-
-// Normalize strings (lowercase, strip accents)
 const norm = (s) => (s || "")
   .toString()
   .normalize("NFD")
   .replace(/[\u0300-\u036f]/g, "")
   .toLowerCase();
 
-// Build a searchable blob across EN/FR/ES + category labels + URL text
 const makeSearchText = (p) => {
   const locales = ["en","fr","es"];
   const parts = [];
@@ -338,7 +350,6 @@ const makeSearchText = (p) => {
   return norm(parts.join(" "));
 };
 
-// Match if ALL query terms appear in the blob
 const matchesQuery = (blob, q) => {
   const terms = norm(q).split(/\s+/).filter(Boolean);
   return terms.every(t => blob.includes(t));
@@ -477,7 +488,7 @@ export default function Home() {
       <header className="nav">
         <div className="container headerRow">
           <div className="brandRow">
-            <img src="/logo.png" alt="AidFinder logo" style={{height:40, borderRadius:8}}/>
+            <BrandLogo size={40} />
             <strong>{T.brand}</strong>
           </div>
 
@@ -542,14 +553,12 @@ export default function Home() {
                 />
 
                 <div className="searchInlineActions">
-                  {/* Search button: only when there is text */}
                   {(query.trim().length > 0) && (
                     <button type="submit" className="searchInlineBtn primary" aria-label={T.searchBtn} title={T.searchBtn}>
                       🔎 <span className="vh">{T.searchBtn}</span>
                     </button>
                   )}
 
-                  {/* Clear button: only when there is text */}
                   {query && (
                     <button
                       type="button"
@@ -608,7 +617,7 @@ export default function Home() {
             <span className="muted">{programs.length} {T.programCount}</span>
           </div>
 
-          {/* Donate (kept) */}
+          {/* Donate */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
             <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
@@ -790,13 +799,10 @@ export default function Home() {
 
         /* Inline search field with embedded buttons */
         .searchInlineForm { width: 100%; margin-top: 20px; }
-        .searchInline {
-          position: relative;
-          width: 100%;
-        }
+        .searchInline { position: relative; width: 100%; }
         .searchInlineInput {
           width: 100%;
-          padding: 12px 116px 12px 14px; /* room on right for buttons */
+          padding: 12px 116px 12px 14px;
           border-radius: 12px;
           border: 1px solid #d1d5db;
           outline: none;
@@ -812,8 +818,7 @@ export default function Home() {
           right: 8px;
           top: 50%;
           transform: translateY(-50%);
-          display: flex;
-          gap: 6px;
+          display: flex; gap: 6px;
         }
         .searchInlineBtn {
           height: 36px; min-width: 36px;
@@ -822,45 +827,25 @@ export default function Home() {
           border: 1px solid transparent;
           font-weight: 700;
           cursor: pointer;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
+          display: inline-flex; align-items: center; justify-content: center;
         }
-        .searchInlineBtn.primary {
-          background: #1d4ed8;
-          color: #fff;
-        }
-        .searchInlineBtn.ghost {
-          background: #eef2ff;
-          color: #1d4ed8;
-          border-color: #c7d2fe;
-        }
-        /* Visually hidden text for a11y labels */
+        .searchInlineBtn.primary { background: #1d4ed8; color: #fff; }
+        .searchInlineBtn.ghost   { background: #eef2ff; color: #1d4ed8; border-color: #c7d2fe; }
         .vh {
-          position: absolute !important;
-          height: 1px; width: 1px;
-          overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
-          white-space: nowrap;
+          position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
         }
 
         /* Card appear + hover polish */
         .grid .card {
-          opacity: 0;
-          transform: translateY(16px);
-          transition:
-            opacity 480ms ease,
-            transform 480ms ease,
-            box-shadow 180ms ease,
-            transform 180ms ease;
+          opacity: 0; transform: translateY(16px);
+          transition: opacity 480ms ease, transform 480ms ease, box-shadow 180ms ease, transform 180ms ease;
           transition-delay: calc(var(--i, 0) * 70ms);
           will-change: transform, opacity;
         }
         .grid.reveal .card { opacity: 1; transform: translateY(0); }
-        .card:hover {
-          transform: translateY(-2px) scale(1.02);
-          box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06);
-        }
+        .card:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
       `}</style>
     </>
   );
 }
+```0

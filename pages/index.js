@@ -535,7 +535,7 @@ export default function Home() {
 
         {/* Toolbar */}
         <section className="toolbar">
-          {/* SEARCH with inline Search/Clear inside the field */}
+          {/* SEARCH with inline Search/Clear inside the field (green, minimal) */}
           <div className="searchWrap">
             <form
               className="searchInlineForm"
@@ -554,20 +554,20 @@ export default function Home() {
 
                 <div className="searchInlineActions">
                   {(query.trim().length > 0) && (
-                    <button type="submit" className="searchInlineBtn primary" aria-label={T.searchBtn} title={T.searchBtn}>
-                      🔎 <span className="vh">{T.searchBtn}</span>
+                    <button type="submit" className="iconOnly" aria-label={T.searchBtn} title={T.searchBtn}>
+                      🔎
                     </button>
                   )}
 
                   {query && (
                     <button
                       type="button"
-                      className="searchInlineBtn ghost"
+                      className="iconOnly"
                       onClick={()=>setQuery("")}
                       aria-label={T.clearBtn}
                       title={T.clearBtn}
                     >
-                      ✕ <span className="vh">{T.clearBtn}</span>
+                      ✕
                     </button>
                   )}
                 </div>
@@ -797,12 +797,12 @@ export default function Home() {
           100% { transform: scale(1); opacity: 1; }
         }
 
-        /* Inline search field with embedded buttons */
+        /* Inline search field with icon-only actions (green, minimal) */
         .searchInlineForm { width: 100%; margin-top: 20px; }
         .searchInline { position: relative; width: 100%; }
         .searchInlineInput {
           width: 100%;
-          padding: 12px 116px 12px 14px;
+          padding: 12px 96px 12px 14px; /* room for icons on the right */
           border-radius: 12px;
           border: 1px solid #d1d5db;
           outline: none;
@@ -820,17 +820,23 @@ export default function Home() {
           transform: translateY(-50%);
           display: flex; gap: 6px;
         }
-        .searchInlineBtn {
+        /* Minimal green icon buttons */
+        .iconOnly {
           height: 36px; min-width: 36px;
-          padding: 0 10px;
-          border-radius: 10px;
+          padding: 0 8px;
+          border-radius: 8px;
           border: 1px solid transparent;
-          font-weight: 700;
+          background: transparent;      /* no blue background */
+          color: #16a34a;               /* AidFinder green */
           cursor: pointer;
           display: inline-flex; align-items: center; justify-content: center;
+          font-size: 18px; line-height: 1;
         }
-        .searchInlineBtn.primary { background: #1d4ed8; color: #fff; }
-        .searchInlineBtn.ghost   { background: #eef2ff; color: #1d4ed8; border-color: #c7d2fe; }
+        .iconOnly:hover, .iconOnly:focus {
+          background: rgba(22,163,74,0.08); /* subtle hover */
+          outline: none;
+        }
+
         .vh {
           position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
         }

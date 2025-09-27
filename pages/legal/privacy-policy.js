@@ -1,90 +1,137 @@
-// pages/legal/privacy-policy.js
+// pages/privacy/index.js
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
-export default function PrivacyPolicy() {
-  const EFFECTIVE_DATE = "September 17, 2025";
-  const SUPPORT_EMAIL = "aidfinder.app@gmail.com";
+export default function Privacy() {
+  // trigger fade-in after mount
+  const [reveal, setReveal] = useState(false);
+  useEffect(() => { setReveal(true); }, []);
 
   return (
     <>
       <Head>
         <title>Privacy Policy — AidFinder</title>
-        <meta name="description" content="AidFinder privacy policy." />
+        <meta
+          name="description"
+          content="AidFinder Privacy Policy – how we collect, use, and protect your data."
+        />
       </Head>
 
-      <main style={{ maxWidth: 720, margin: "40px auto", padding: 16, lineHeight: 1.6 }}>
-        <header style={{ marginBottom: 24 }}>
-          <h1 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>Privacy Policy</h1>
-          <p style={{ fontSize: 14, color: "#666" }}>Effective date: {EFFECTIVE_DATE}</p>
-        </header>
-
-        <section style={{ border: "1px solid #ddd", background: "#f9f9f9", borderRadius: 8, padding: 16, marginBottom: 24 }}>
-          <p>
-            <strong>Summary:</strong> We collect the minimum data needed to run AidFinder (e.g., account email and basic usage).
-            We <strong>do not sell or share</strong> your personal information for advertising. You can request access or deletion any time at{" "}
-            <a href={`mailto:${SUPPORT_EMAIL}`} style={{ color: "#2563eb", textDecoration: "underline" }}>
-              {SUPPORT_EMAIL}
-            </a>.
+      <main className="privacyPage">
+        {/* Hero */}
+        <section className="hero">
+          <img
+            src="/logo.png"
+            alt="AidFinder logo"
+            width={72}
+            height={72}
+            className="logo"
+            onError={(e) => {
+              e.currentTarget.onerror = null;
+              e.currentTarget.src = "/icons/icon-192.png";
+            }}
+          />
+          <h1>Privacy Policy</h1>
+          <p className="muted">
+            Last updated: September 27, 2025
+          </p>
+          <p className="muted">
+            We respect your privacy. This page explains what we collect and how
+            we handle your information.
           </p>
         </section>
 
-        <h2>1) Who We Are</h2>
-        <p>
-          AidFinder (“AidFinder,” “we,” “us,” or “our”) helps people discover assistance resources across Food, Health, Housing,
-          Financial, and Education categories. This Privacy Policy explains how we handle information when you use our web or
-          mobile app (the “Service”).
-        </p>
+        {/* Cards */}
+        <section className={`grid ${reveal ? "reveal" : ""}`}>
+          <article className="card" style={{ "--i": 0 }}>
+            <h3>1. Information We Collect</h3>
+            <p>
+              We collect only the minimum information needed to operate the app
+              (such as language preference, device type) and any details you
+              voluntarily submit. We do not sell your data.
+            </p>
+          </article>
 
-        <h2 style={{ marginTop: 24 }}>2) Information We Collect</h2>
-        <ul>
-          <li><strong>Account information you provide:</strong> Email and password if you create an account.</li>
-          <li><strong>Communications:</strong> Messages you send us.</li>
-          <li><strong>Usage data:</strong> Pages viewed, searches made, device type (no precise location).</li>
-          <li><strong>Security logs:</strong> IP address and metadata for safety.</li>
-        </ul>
+          <article className="card" style={{ "--i": 1 }}>
+            <h3>2. How We Use It</h3>
+            <ul>
+              <li>Provide and improve AidFinder features</li>
+              <li>Personalize your experience</li>
+              <li>Maintain app security and reliability</li>
+            </ul>
+          </article>
 
-        <h2 style={{ marginTop: 24 }}>3) How We Use Information</h2>
-        <ul>
-          <li>Provide, maintain, and improve the Service.</li>
-          <li>Authenticate users and secure accounts.</li>
-          <li>Respond to support requests.</li>
-          <li>Comply with legal obligations.</li>
-        </ul>
+          <article className="card" style={{ "--i": 2 }}>
+            <h3>3. Sharing</h3>
+            <p>
+              We never share personal information except when required by law or
+              to protect users and the service. Trusted providers working on our
+              behalf must follow strict confidentiality.
+            </p>
+          </article>
 
-        <h2 style={{ marginTop: 24 }}>4) How We Share Information</h2>
-        <p>We do not sell or share your personal data for advertising. We only share with:</p>
-        <ul>
-          <li><strong>Service providers:</strong> Vercel (hosting), Supabase (database, auth), email provider.</li>
-          <li><strong>Legal purposes:</strong> If required by law.</li>
-          <li><strong>Business transfers:</strong> If AidFinder is merged or acquired.</li>
-        </ul>
+          <article className="card" style={{ "--i": 3 }}>
+            <h3>4. Data Security</h3>
+            <p>
+              We use reasonable safeguards to protect your data but cannot
+              guarantee absolute security. We continuously improve our measures.
+            </p>
+          </article>
 
-        <h2 style={{ marginTop: 24 }}>5) Your Rights</h2>
-        <p>
-          You may request access, correction, or deletion of your data at any time by emailing{" "}
-          <a href={`mailto:${SUPPORT_EMAIL}`} style={{ color: "#2563eb", textDecoration: "underline" }}>
-            {SUPPORT_EMAIL}
-          </a>.
-        </p>
+          <article className="card" style={{ "--i": 4 }}>
+            <h3>5. Your Rights</h3>
+            <ul>
+              <li>Request access or deletion of your data</li>
+              <li>Contact us for privacy questions</li>
+              <li>Opt out of optional communications</li>
+            </ul>
+          </article>
 
-        <h2 style={{ marginTop: 24 }}>6) Children’s Privacy</h2>
-        <p>
-          AidFinder is not directed to children under 13, and we do not knowingly collect their personal information.
-        </p>
+          <article className="card" style={{ "--i": 5 }}>
+            <h3>6. Children’s Privacy</h3>
+            <p>
+              AidFinder is not directed to children under 13. We do not knowingly
+              collect their information.
+            </p>
+          </article>
 
-        <h2 style={{ marginTop: 24 }}>7) Changes to This Policy</h2>
-        <p>
-          We may update this Privacy Policy from time to time. The “Effective date” above shows the last revision date.
-        </p>
-
-        <h2 style={{ marginTop: 24 }}>8) Contact Us</h2>
-        <p>
-          If you have questions about this Privacy Policy, email us at{" "}
-          <a href={`mailto:${SUPPORT_EMAIL}`} style={{ color: "#2563eb", textDecoration: "underline" }}>
-            {SUPPORT_EMAIL}
-          </a>.
-        </p>
+          <article className="card" style={{ "--i": 6 }}>
+            <h3>7. Changes & Contact</h3>
+            <p>
+              We may update this policy; changes will be posted here. Questions?
+              Email us at <a className="link" href="mailto:support@aidfinder.app">support@aidfinder.app</a>.
+            </p>
+          </article>
+        </section>
       </main>
-    </>
-  );
-}
+
+      <style jsx>{`
+        .privacyPage {
+          max-width: 840px;
+          margin: 40px auto;
+          padding: 0 16px 40px;
+          line-height: 1.6;
+        }
+        .hero {
+          text-align: center;
+          margin-bottom: 18px;
+        }
+        .logo {
+          display: inline-block;
+          margin-bottom: 10px;
+          border-radius: 12px;
+          object-fit: contain;
+        }
+        h1 {
+          margin: 0 0 6px;
+          font-size: 32px;
+          font-weight: 800;
+        }
+        .muted {
+          color: #6b7280;
+          margin: 0;
+        }
+        /* Cards grid + staggered appear */
+        .grid {
+          display: grid;
+          grid-template-columns: 1fr;

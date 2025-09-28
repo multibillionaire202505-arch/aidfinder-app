@@ -193,14 +193,42 @@ const US_STATES = [
   "SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
 ];
 
-/** ===== Programs (data) ===== */
+/** ===== Programs (data) =====
+ * Keep your full `ALL` array. Add an `id` per item for stable keys.
+ * If you can’t add ids now, the code falls back to a derived key.
+*/
 const ALL = [
-  // (unchanged – your programs array)
-  { category:"Food", link:"https://www.fns.usda.gov/snap",
-    i18n:{ en:{ title:"SNAP (Food Stamps)", desc:"Monthly funds to buy groceries for eligible households." },
-           fr:{ title:"SNAP (Bons alimentaires)", desc:"Aide mensuelle pour acheter des produits alimentaires." },
-           es:{ title:"SNAP (Cupones de Alimentos)", desc:"Fondos mensuales para comestibles." } } },
-  // ... keep the rest of your ALL array exactly as in your current file ...
+  {
+    id: "snap",
+    category:"Food",
+    link:"https://www.fns.usda.gov/snap",
+    i18n:{
+      en:{ title:"SNAP (Food Stamps)", desc:"Monthly funds to buy groceries for eligible households." },
+      fr:{ title:"SNAP (Bons alimentaires)", desc:"Aide mensuelle pour acheter des produits alimentaires." },
+      es:{ title:"SNAP (Cupones de Alimentos)", desc:"Fondos mensuales para comestibles." }
+    }
+  },
+  {
+    id: "wic",
+    category:"Food",
+    link:"https://www.fns.usda.gov/wic",
+    i18n:{
+      en:{ title:"WIC – Women, Infants, and Children", desc:"Nutrition support for pregnant/postpartum women and children under 5." },
+      fr:{ title:"WIC – Femmes, nourrissons et enfants", desc:"Soutien nutritionnel pour femmes enceintes/post-partum et enfants < 5 ans." },
+      es:{ title:"WIC – Mujeres, Infantes y Niños", desc:"Apoyo nutricional para mujeres embarazadas/posparto y niños menores de 5." }
+    }
+  },
+  {
+    id: "chip",
+    category:"Health",
+    link:"https://www.medicaid.gov/chip",
+    i18n:{
+      en:{ title:"CHIP – Children’s Health Insurance", desc:"Low-cost coverage for children in families that earn too much for Medicaid." },
+      fr:{ title:"CHIP – Assurance santé enfants", desc:"Couverture à faible coût pour enfants ne remplissant pas les critères Medicaid." },
+      es:{ title:"CHIP – Seguro de salud infantil", desc:"Cobertura de bajo costo para niños que exceden Medicaid." }
+    }
+  },
+  // 👉 Add the rest of your items here with unique `id`s
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */
@@ -235,6 +263,10 @@ const matchesQuery = (blob, q) => {
   const terms = norm(q).split(/\s+/).filter(Boolean);
   return terms.every(t => blob.includes(t));
 };
+
+/** ===== Helper: stable key even without `id` ===== */
+const programKey = (p, i) =>
+  p.id || `${p.category}|${p.link}` || `idx-${i}`;
 
 /** ===== Main Component ===== */
 export default function Home() {
@@ -320,7 +352,7 @@ export default function Home() {
     } else { setShareOpenModal(true); }
   };
 
-  /** ===== PayPal helpers ===== */
+  /** ===== PayPal helpers (Merchant-ID donate) ===== */
   const [showDonate, setShowDonate] = useState(false);
   const [customAmount, setCustomAmount] = useState("");
   const [donateError, setDonateError] = useState("");
@@ -328,7 +360,6 @@ export default function Home() {
   const openPayPal = (amt) => {
     const amount = Number(amt);
     if (Number.isFinite(amount)) {
-      // Build a PayPal Donate URL using Merchant ID
       const base = "https://www.paypal.com/donate";
       const params = new URLSearchParams({
         business: PAYPAL_MERCHANT_ID,
@@ -352,21 +383,23 @@ export default function Home() {
     openPayPal(val);
   };
 
-  /** ===== SEARCHED PROGRAMS (improved) ===== */
+  /** ===== Filtered Programs (stable, all cards show) ===== */
   const programs = useMemo(()=>{
     let base = ALL;
 
-    if (cat === "Saved") base = base.filter(p => favs.includes(p.link));
+    if (cat === "Saved") base = base.filter(p => favs.includes(p.link) || favs.includes(p.id));
     else if (cat !== "All") base = base.filter(p => p.category === cat);
 
     if (stateSel && stateSel !== "All States") {
       base = base.filter(p => !p.states || p.states.includes(stateSel));
     }
 
+    // Precompute blobs for fast search
     const blobs = new Map();
     const getBlob = (p) => {
-      if (!blobs.has(p)) blobs.set(p, makeSearchText(p));
-      return blobs.get(p);
+      const key = programKey(p);
+      if (!blobs.has(key)) blobs.set(key, makeSearchText(p));
+      return blobs.get(key);
     };
 
     if (query.trim()) {
@@ -379,7 +412,7 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(null);
 
-  /** ===== NEW: simple stagger-on-mount for cards ===== */
+  // simple stagger-on-mount for cards
   const [reveal, setReveal] = useState(false);
   useEffect(() => { setReveal(true); }, []);
 
@@ -448,11 +481,11 @@ export default function Home() {
 
         {/* Toolbar */}
         <section className="toolbar">
-          {/* SEARCH with inline Search/Clear inside the field (green, minimal) */}
+          {/* SEARCH */}
           <div className="searchWrap">
             <form
               className="searchInlineForm"
-              onSubmit={(e)=>{ e.preventDefault(); /* filtering reacts to `query` */ }}
+              onSubmit={(e)=>{ e.preventDefault(); }}
               role="search"
               aria-label={T.searchPlaceholder}
             >
@@ -464,14 +497,10 @@ export default function Home() {
                   onChange={(e)=>setQuery(e.target.value)}
                   aria-label={T.searchPlaceholder}
                 />
-
                 <div className="searchInlineActions">
                   {(query.trim().length > 0) && (
-                    <button type="submit" className="iconOnly" aria-label={T.searchBtn} title={T.searchBtn}>
-                      🔎
-                    </button>
+                    <button type="submit" className="iconOnly" aria-label={T.searchBtn} title={T.searchBtn}>🔎</button>
                   )}
-
                   {query && (
                     <button
                       type="button"
@@ -535,7 +564,6 @@ export default function Home() {
             <h3 style={{ marginBottom: 6 }}>{T.donateH3}</h3>
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>{T.donateP}</p>
 
-            {/* Single main button that reveals quick/custom options */}
             <button
               type="button"
               className="paypalBtn"
@@ -565,6 +593,14 @@ export default function Home() {
                     <button type="submit" className="goBtn">{T.donateGo}</button>
                   </form>
                 </div>
+                {/* Optional quick amounts */}
+                <div className="donateRow" style={{ marginTop: 8 }}>
+                  {[5,10,20,50].map(v => (
+                    <button key={v} type="button" className="quickBtn" onClick={() => openPayPal(v)}>
+                      ${v}
+                    </button>
+                  ))}
+                </div>
                 {donateError && <div className="errorText">{donateError}</div>}
               </div>
             )}
@@ -576,8 +612,10 @@ export default function Home() {
           {programs.map((p,i)=>{
             const title = p.i18n[lang]?.title || p.i18n.en.title;
             const desc  = p.i18n[lang]?.desc  || p.i18n.en.desc;
+            const key = programKey(p, i);
+
             return (
-              <article className="card" key={p.link} style={{ "--i": i }}>
+              <article className="card" key={key} style={{ "--i": i }}>
                 <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "var(--border)"}}>
                   {UI[lang].catLabels[p.category] || p.category}
                 </div>
@@ -595,16 +633,16 @@ export default function Home() {
                   <button
                     type="button"
                     className="iconBtn"
-                    aria-pressed={isFav(p.link)}
+                    aria-pressed={isFav(p.link) || isFav(p.id)}
                     onClick={(e)=>{ 
                       e.stopPropagation(); 
-                      toggleFav(p.link); 
-                      triggerAnim(p.link);
+                      toggleFav(p.id || p.link); 
+                      triggerAnim(p.id || p.link);
                     }}
-                    title={isFav(p.link) ? T.saved : T.unsaved}
-                    aria-label={isFav(p.link) ? T.saved : T.unsaved}
+                    title={isFav(p.id || p.link) ? T.saved : T.unsaved}
+                    aria-label={isFav(p.id || p.link) ? T.saved : T.unsaved}
                   >
-                    <HeartIcon on={isFav(p.link)} animate={!!animMap[p.link]} />
+                    <HeartIcon on={isFav(p.id || p.link)} animate={!!animMap[p.id || p.link]} />
                   </button>
 
                   {/* Share */}
@@ -632,7 +670,16 @@ export default function Home() {
                   </a>
 
                   {/* Details */}
-                  <button type="button" className="secondary" onClick={()=>{ setCurrent(p); setShareOpenModal(false); setShareOpenIndex(null); setOpen(true); }}>
+                  <button
+                    type="button"
+                    className="secondary"
+                    onClick={()=>{
+                      setCurrent(p);
+                      setShareOpenModal(false);
+                      setShareOpenIndex(null);
+                      setOpen(true);
+                    }}
+                  >
                     {T.details}
                   </button>
                 </div>
@@ -669,11 +716,11 @@ export default function Home() {
               <p className="modalBody">{current.i18n[lang]?.desc || current.i18n.en.desc}</p>
               <div className="modalActions" onClick={(e)=>e.stopPropagation()}>
                 <button className="iconBtn" onClick={()=>{
-                  toggleFav(current.link);
-                  triggerAnim(current.link);
+                  toggleFav(current.id || current.link);
+                  triggerAnim(current.id || current.link);
                 }}>
-                  <HeartIcon on={isFav(current.link)} animate={!!animMap[current.link]} />
-                  <span style={{marginLeft:8}}>{isFav(current.link) ? T.saved : T.unsaved}</span>
+                  <HeartIcon on={isFav(current.id || current.link)} animate={!!animMap[current.id || current.link]} />
+                  <span style={{marginLeft:8}}>{isFav(current.id || current.link) ? T.saved : T.unsaved}</span>
                 </button>
 
                 <div className="menuWrap">
@@ -709,7 +756,7 @@ export default function Home() {
         </footer>
       </main>
 
-      {/* Global CSS: animations + inline search styles + donate panel */}
+      {/* Global CSS: layout/grid + animations + donate styles */}
       <style jsx global>{`
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
         @keyframes pulseAnim {
@@ -718,12 +765,70 @@ export default function Home() {
           100% { transform: scale(1); opacity: 1; }
         }
 
-        /* Inline search field with icon-only actions (green, minimal) */
+        :root {
+          --bg: #ffffff;
+          --fg: #111827;
+          --muted: #6b7280;
+          --border: #e5e7eb;
+          --brand: #16a34a;
+
+          --tint-food: #ecfdf5;
+          --tint-health: #fee2e2;
+          --tint-housing: #eff6ff;
+          --tint-utilities: #fefce8;
+          --tint-education: #f5f3ff;
+          --tint-income: #f0f9ff;
+        }
+        [data-theme="dark"] {
+          --bg: #0b1220;
+          --fg: #e5e7eb;
+          --muted: #9ca3af;
+          --border: #1f2937;
+          --brand: #22c55e;
+
+          --tint-food: #052e22;
+          --tint-health: #301414;
+          --tint-housing: #0e223d;
+          --tint-utilities: #2b2608;
+          --tint-education: #1c1532;
+          --tint-income: #062731;
+        }
+
+        body { background: var(--bg); color: var(--fg); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 16px; }
+
+        .nav { border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 20; }
+        .headerRow { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; }
+        .brandRow { display: flex; align-items: center; gap: 10px; font-weight: 800; }
+
+        .hero { margin: 20px 0 6px; }
+        .hero h1 { margin: 0 0 6px; font-size: 26px; }
+        .hero p { margin: 0; color: var(--muted); }
+
+        .toolbar { display: grid; gap: 10px; margin-top: 8px; }
+        .filtersRow { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .chips { display: flex; gap: 8px; flex-wrap: nowrap; overflow: auto; }
+        .scrollX { scrollbar-width: thin; }
+        .chip {
+          padding: 8px 12px;
+          border-radius: 999px;
+          border: 1px solid var(--border);
+          background: transparent;
+          color: var(--fg);
+          cursor: pointer;
+          white-space: nowrap;
+        }
+        .chipActive { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+        .stateSelectWrap { display: inline-flex; align-items: center; gap: 6px; }
+        .langSelect { padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); color: var(--fg); }
+        .countRow { color: var(--muted); font-size: 14px; }
+
+        /* Inline search */
         .searchInlineForm { width: 100%; margin-top: 20px; }
         .searchInline { position: relative; width: 100%; }
         .searchInlineInput {
           width: 100%;
-          padding: 12px 96px 12px 14px; /* room for icons on the right */
+          padding: 12px 96px 12px 14px;
           border-radius: 12px;
           border: 1px solid #d1d5db;
           outline: none;
@@ -735,31 +840,104 @@ export default function Home() {
           box-shadow: 0 0 0 3px rgba(22,163,74,.15);
         }
         .searchInlineActions {
-          position: absolute;
-          right: 8px;
-          top: 50%;
-          transform: translateY(-50%);
+          position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
           display: flex; gap: 6px;
         }
         .iconOnly {
-          height: 36px; min-width: 36px;
-          padding: 0 8px;
-          border-radius: 8px;
-          border: 1px solid transparent;
-          background: transparent;
-          color: #16a34a; /* green */
-          cursor: pointer;
-          display: inline-flex; align-items: center; justify-content: center;
+          height: 36px; min-width: 36px; padding: 0 8px; border-radius: 8px;
+          border: 1px solid transparent; background: transparent; color: #16a34a;
+          cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
           font-size: 18px; line-height: 1;
         }
-        .iconOnly:hover, .iconOnly:focus {
-          background: rgba(22,163,74,0.08);
-          outline: none;
+        .iconOnly:hover, .iconOnly:focus { background: rgba(22,163,74,0.08); outline: none; }
+
+        /* Grid + Card */
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+          gap: 12px;
+          margin-top: 10px;
+          align-items: start;
         }
+        .grid .card {
+          opacity: 0; transform: translateY(16px);
+          transition: opacity 480ms ease, transform 480ms ease, box-shadow 180ms ease, transform 180ms ease;
+          transition-delay: calc(var(--i, 0) * 70ms);
+          will-change: transform, opacity;
+        }
+        .grid.reveal .card { opacity: 1; transform: translateY(0); }
+
+        .card {
+          background: var(--bg);
+          border: 1px solid var(--border);
+          border-radius: 14px;
+          padding: 14px;
+          box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+          overflow: visible;
+        }
+        .card:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
+        .card h3 { margin: 6px 0 6px; font-size: 17px; }
+        .card p { margin: 0 0 12px; color: var(--muted); }
+
+        .badge {
+          display: inline-block;
+          font-size: 12px;
+          padding: 4px 8px;
+          border-radius: 999px;
+          border: 1px solid var(--border);
+          background: var(--tint-food);
+          color: var(--fg);
+        }
+
+        .cardActions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+        .iconBtn {
+          border: 1px solid var(--border); background: transparent; color: var(--fg);
+          border-radius: 10px; padding: 8px; cursor: pointer;
+        }
+        .secondary {
+          border: 1px solid var(--border); background: transparent; color: var(--fg);
+          border-radius: 10px; padding: 8px 10px; cursor: pointer;
+        }
+        .apply {
+          text-decoration: none; font-weight: 700;
+          background: var(--fg); color: var(--bg);
+          padding: 10px 12px; border-radius: 10px; border: 1px solid var(--fg);
+        }
+
+        /* Share menu */
+        .menuWrap { position: relative; }
+        .menu {
+          position: absolute; top: calc(100% + 6px); left: 0; z-index: 12;
+          background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+          min-width: 180px; padding: 6px; box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+        }
+        .menu button {
+          display: block; width: 100%; text-align: left; padding: 8px 10px;
+          border: none; background: transparent; color: var(--fg); cursor: pointer; border-radius: 8px;
+        }
+        .menu button:hover { background: rgba(0,0,0,0.04); }
+
+        /* Empty state */
+        .empty { grid-column: 1 / -1; border: 1px dashed var(--border); border-radius: 12px; padding: 20px; text-align: center; }
+        .emptyArt { font-size: 28px; margin-bottom: 8px; }
+        .muted { color: var(--muted); }
+
+        /* Modal */
+        .backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 40; }
+        .modal { position: fixed; inset: 0; display: grid; place-items: center; z-index: 41; }
+        .modal > * { background: var(--bg); color: var(--fg); width: min(680px, 92vw); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+        .modalHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+        .modalTitle { margin: 8px 0; }
+        .modalBody { color: var(--muted); margin: 0 0 12px; }
+        .modalActions { display: flex; gap: 8px; flex-wrap: wrap; }
+        .closeX { border: 1px solid var(--border); background: transparent; border-radius: 10px; padding: 6px 10px; cursor: pointer; }
+
+        /* Footer */
+        .footer { margin: 24px 0 8px; padding-top: 12px; border-top: 1px solid var(--border); text-align: center; color: var(--muted); }
 
         /* Donate UI */
         .paypalBtn {
-          background: #ffd140; /* PayPal-ish accent */
+          background: #ffd140;
           color: #111827;
           border: 1px solid #f3c43a;
           padding: 12px 18px;
@@ -772,18 +950,12 @@ export default function Home() {
         .donatePanel {
           margin: 12px auto 0;
           padding: 10px;
-          border: 1px solid #e5e7eb;
+          border: 1px solid var(--border);
           border-radius: 12px;
           max-width: 520px;
-          background: #fff;
+          background: var(--bg);
         }
-        .donateRow {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 8px;
-        }
+        .donateRow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; }
         .quickBtn {
           background: #16a34a;
           color: #fff;
@@ -794,50 +966,26 @@ export default function Home() {
           font-weight: 700;
         }
         .quickBtn:hover { filter: brightness(0.98); }
-        .customDonate {
-          display: inline-flex;
-          gap: 8px;
-          align-items: center;
-        }
+        .customDonate { display: inline-flex; gap: 8px; align-items: center; }
         .customDonate input {
           width: 160px;
           padding: 10px 12px;
           border: 1px solid #d1d5db;
           border-radius: 10px;
           outline: none;
+          background: var(--bg); color: var(--fg);
         }
-        .customDonate input:focus {
-          border-color: #16a34a;
-          box-shadow: 0 0 0 3px rgba(22,163,74,.15);
-        }
+        .customDonate input:focus { border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,.15); }
         .goBtn {
-          background: #111827;
-          color: #fff;
-          border: 1px solid #111827;
+          background: var(--fg);
+          color: var(--bg);
+          border: 1px solid var(--fg);
           padding: 10px 14px;
           border-radius: 10px;
           cursor: pointer;
           font-weight: 700;
         }
-        .errorText {
-          margin-top: 8px;
-          color: #b91c1c;
-          font-size: 14px;
-        }
-
-        .vh {
-          position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
-        }
-
-        /* Card appear + hover polish */
-        .grid .card {
-          opacity: 0; transform: translateY(16px);
-          transition: opacity 480ms ease, transform 480ms ease, box-shadow 180ms ease, transform 180ms ease;
-          transition-delay: calc(var(--i, 0) * 70ms);
-          will-change: transform, opacity;
-        }
-        .grid.reveal .card { opacity: 1; transform: translateY(0); }
-        .card:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
+        .errorText { margin-top: 8px; color: #b91c1c; font-size: 14px; }
       `}</style>
     </>
   );

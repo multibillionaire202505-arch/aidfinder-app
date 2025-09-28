@@ -623,32 +623,69 @@ export default function Home() {
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
               Your donation helps keep this app free for families in need ❤️
             </p>
-            <form
-              action="https://www.paypal.com/donate"
-              method="post"
-              target="_blank"
-              style={{ display: "inline-block" }}
-            >
-              <input type="hidden" name="business" value="your-paypal-email@example.com" />
-              <input type="hidden" name="currency_code" value="USD" />
-              <input type="hidden" name="no_recurring" value="0" />
-              <input type="hidden" name="item_name" value="Support AidFinder" />
-              <button
-                type="submit"
-                style={{
-                  backgroundColor: "#0070f3",
-                  color: "#fff",
-                  border: "none",
-                  padding: "12px 18px",
-                  borderRadius: 10,
-                  cursor: "pointer",
-                  fontWeight: 600,
-                  boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
-                }}
+
+            {/* Buttons row */}
+            <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
+              {/* Suggest $2 (editable on PayPal) */}
+              <form
+                action="https://www.paypal.com/donate"
+                method="get"
+                target="_blank"
+                rel="noreferrer"
+                style={{ display: "inline-block" }}
               >
-                Donate with PayPal
-              </button>
-            </form>
+                <input type="hidden" name="business" value="T7UXDRDVCHGKE" />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input type="hidden" name="no_recurring" value="0" />
+                <input type="hidden" name="item_name" value="Support AidFinder" />
+                <input type="hidden" name="amount" value="2" />
+                <button
+                  type="submit"
+                  style={{
+                    backgroundColor: "#16a34a",
+                    color: "#fff",
+                    border: "none",
+                    padding: "12px 18px",
+                    borderRadius: 10,
+                    cursor: "pointer",
+                    fontWeight: 700,
+                    boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
+                  }}
+                >
+                  Donate $2 (editable)
+                </button>
+              </form>
+
+              {/* Any amount (no preset) */}
+              <form
+                action="https://www.paypal.com/donate"
+                method="get"
+                target="_blank"
+                rel="noreferrer"
+                style={{ display: "inline-block" }}
+              >
+                <input type="hidden" name="business" value="T7UXDRDVCHGKE" />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input type="hidden" name="no_recurring" value="0" />
+                <input type="hidden" name="item_name" value="Support AidFinder" />
+                {/* no "amount" here -> donor types any amount */}
+                <button
+                  type="submit"
+                  style={{
+                    backgroundColor: "#16a34a",
+                    color: "#fff",
+                    border: "none",
+                    padding: "12px 18px",
+                    borderRadius: 10,
+                    cursor: "pointer",
+                    fontWeight: 700,
+                    boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
+                  }}
+                >
+                  Choose any amount
+                </button>
+              </form>
+            </div>
           </div>
         </section>
 

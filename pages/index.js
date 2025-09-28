@@ -2,9 +2,6 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
-/** ====== CONFIG: PayPal Merchant ID (no email needed) ====== */
-const PAYPAL_MERCHANT_ID = "T7UXDRDVCHGKE";
-
 /** ===== Robust logo (fallback to /icons/icon-192.png) ===== */
 const BrandLogo = ({ size = 40 }) => (
   <img
@@ -69,15 +66,6 @@ const UI = {
     theme: "Theme",
     dark: "Dark",
     light: "Light",
-    donateH3: "Support AidFinder",
-    donateP:  "Your donation helps keep this app free for families in need ❤️",
-    donateBtn: "Donate with PayPal",
-    donateQuick: "Donate $1",
-    donateOr: "or",
-    donateAny: "Donate custom amount",
-    donateInputPH: "USD (e.g. 5, 10, 25)",
-    donateGo: "Donate",
-    donateError: "Please enter a valid amount (1–5000).",
   },
   fr: {
     brand: "AidFinder",
@@ -107,15 +95,6 @@ const UI = {
     theme: "Thème",
     dark: "Sombre",
     light: "Clair",
-    donateH3: "Soutenir AidFinder",
-    donateP:  "Votre don aide à garder cette application gratuite ❤️",
-    donateBtn: "Donner avec PayPal",
-    donateQuick: "Donner 1 $",
-    donateOr: "ou",
-    donateAny: "Don personnalisé",
-    donateInputPH: "USD (ex. 5, 10, 25)",
-    donateGo: "Donner",
-    donateError: "Entrez un montant valide (1–5000).",
   },
   es: {
     brand: "AidFinder",
@@ -145,15 +124,6 @@ const UI = {
     theme: "Tema",
     dark: "Oscuro",
     light: "Claro",
-    donateH3: "Apoya AidFinder",
-    donateP:  "Tu donación ayuda a mantener la app gratuita ❤️",
-    donateBtn: "Donar con PayPal",
-    donateQuick: "Donar $1",
-    donateOr: "o",
-    donateAny: "Donación personalizada",
-    donateInputPH: "USD (ej. 5, 10, 25)",
-    donateGo: "Donar",
-    donateError: "Ingresa un monto válido (1–5000).",
   }
 };
 
@@ -193,42 +163,163 @@ const US_STATES = [
   "SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
 ];
 
-/** ===== Programs (data) =====
- * Keep your full `ALL` array. Add an `id` per item for stable keys.
- * If you can’t add ids now, the code falls back to a derived key.
-*/
+/** ===== Programs (data) ===== */
 const ALL = [
-  {
-    id: "snap",
-    category:"Food",
-    link:"https://www.fns.usda.gov/snap",
-    i18n:{
-      en:{ title:"SNAP (Food Stamps)", desc:"Monthly funds to buy groceries for eligible households." },
-      fr:{ title:"SNAP (Bons alimentaires)", desc:"Aide mensuelle pour acheter des produits alimentaires." },
-      es:{ title:"SNAP (Cupones de Alimentos)", desc:"Fondos mensuales para comestibles." }
-    }
-  },
-  {
-    id: "wic",
-    category:"Food",
-    link:"https://www.fns.usda.gov/wic",
-    i18n:{
-      en:{ title:"WIC – Women, Infants, and Children", desc:"Nutrition support for pregnant/postpartum women and children under 5." },
-      fr:{ title:"WIC – Femmes, nourrissons et enfants", desc:"Soutien nutritionnel pour femmes enceintes/post-partum et enfants < 5 ans." },
-      es:{ title:"WIC – Mujeres, Infantes y Niños", desc:"Apoyo nutricional para mujeres embarazadas/posparto y niños menores de 5." }
-    }
-  },
-  {
-    id: "chip",
-    category:"Health",
-    link:"https://www.medicaid.gov/chip",
-    i18n:{
-      en:{ title:"CHIP – Children’s Health Insurance", desc:"Low-cost coverage for children in families that earn too much for Medicaid." },
-      fr:{ title:"CHIP – Assurance santé enfants", desc:"Couverture à faible coût pour enfants ne remplissant pas les critères Medicaid." },
-      es:{ title:"CHIP – Seguro de salud infantil", desc:"Cobertura de bajo costo para niños que exceden Medicaid." }
-    }
-  },
-  // 👉 Add the rest of your items here with unique `id`s
+  // Food
+  { category:"Food", link:"https://www.fns.usda.gov/snap",
+    i18n:{ en:{ title:"SNAP (Food Stamps)", desc:"Monthly funds to buy groceries for eligible households." },
+           fr:{ title:"SNAP (Bons alimentaires)", desc:"Aide mensuelle pour acheter des produits alimentaires." },
+           es:{ title:"SNAP (Cupones de Alimentos)", desc:"Fondos mensuales para comestibles." } } },
+  { category:"Food", link:"https://www.fns.usda.gov/wic",
+    i18n:{ en:{ title:"WIC (Women, Infants, and Children)", desc:"Nutrition assistance & health referrals for women and young children." },
+           fr:{ title:"WIC (Femmes, nourrissons et enfants)", desc:"Aide nutritionnelle et orientations santé." },
+           es:{ title:"WIC (Mujeres, Infantes y Niños)", desc:"Asistencia nutricional y referencias de salud." } } },
+  { category:"Food", link:"https://www.fns.usda.gov/nslp",
+    i18n:{ en:{ title:"National School Lunch Program (NSLP)", desc:"Low-cost or free school lunches for eligible children." },
+           fr:{ title:"Programme national de déjeuner scolaire (NSLP)", desc:"Repas scolaires à faible coût ou gratuits." },
+           es:{ title:"Programa Nacional de Almuerzos (NSLP)", desc:"Almuerzos escolares gratuitos o de bajo costo." } } },
+  { category:"Food", link:"https://www.fns.usda.gov/csfp",
+    i18n:{ en:{ title:"Commodity Supplemental Food Program (CSFP)", desc:"Monthly food boxes for low-income seniors." },
+           fr:{ title:"CSFP (Aide alimentaire pour aînés)", desc:"Colis alimentaires mensuels pour les aînés." },
+           es:{ title:"Programa CSFP", desc:"Cajas mensuales de alimentos para adultos mayores." } } },
+  { category:"Food", link:"https://www.fns.usda.gov/sbp",
+    i18n:{ en:{ title:"School Breakfast Program (SBP)", desc:"Free or low-cost school breakfasts for eligible students." },
+           fr:{ title:"Programme de petit-déjeuner scolaire (SBP)", desc:"Petits-déjeuners gratuits ou à faible coût." },
+           es:{ title:"Programa de Desayunos Escolares (SBP)", desc:"Desayunos gratuitos o de bajo costo." } } },
+
+  // Health
+  { category:"Health", link:"https://www.medicaid.gov",
+    i18n:{ en:{ title:"Medicaid", desc:"Free or low-cost health coverage for eligible individuals and families." },
+           fr:{ title:"Medicaid", desc:"Couverture santé gratuite ou à faible coût." },
+           es:{ title:"Medicaid", desc:"Cobertura de salud gratuita o de bajo costo." } } },
+  { category:"Health", link:"https://findahealthcenter.hrsa.gov/",
+    i18n:{ en:{ title:"Community Health Centers", desc:"Affordable primary care, dental, and mental health services." },
+           fr:{ title:"Centres de santé communautaires", desc:"Soins primaires, dentaires et de santé mentale abordables." },
+           es:{ title:"Centros de Salud Comunitarios", desc:"Atención primaria, dental y mental accesible." } } },
+  { category:"Health", link:"https://www.medicaid.gov/chip/index.html",
+    i18n:{ en:{ title:"Children’s Health Insurance Program (CHIP)", desc:"Low-cost coverage for children who don’t qualify for Medicaid." },
+           fr:{ title:"Assurance santé enfants (CHIP)", desc:"Couverture à faible coût pour les enfants non éligibles à Medicaid." },
+           es:{ title:"Seguro Médico Infantil (CHIP)", desc:"Cobertura de bajo costo para niños que no califican." } } },
+
+  // Housing
+  { category:"Housing", link:"https://home.treasury.gov/.../emergency-rental-assistance-program",
+    i18n:{ en:{ title:"Emergency Rental Assistance (ERA)", desc:"Help with rent and utilities during hardship." },
+           fr:{ title:"Aide d’urgence au loyer (ERA)", desc:"Aide pour le loyer et les services publics en cas de difficultés." },
+           es:{ title:"Asistencia de Alquiler de Emergencia (ERA)", desc:"Ayuda con alquiler y servicios." } } },
+  { category:"Housing", link:"https://www.hud.gov/topics/housing_choice_voucher_program_section8",
+    i18n:{ en:{ title:"Section 8 Housing Choice Voucher", desc:"Helps very low-income families afford decent housing." },
+           fr:{ title:"Bons logement Section 8", desc:"Aide les ménages à très faible revenu à se loger." },
+           es:{ title:"Vales de Vivienda Sección 8", desc:"Ayuda a familias de muy bajos ingresos." } } },
+
+  // Utilities
+  { category:"Utilities", link:"https://www.acf.hhs.gov/ocs/programs/liheap",
+    i18n:{ en:{ title:"LIHEAP", desc:"Help paying heating/cooling bills and some energy repairs." },
+           fr:{ title:"LIHEAP", desc:"Aide pour factures de chauffage/climatisation et réparations." },
+           es:{ title:"LIHEAP", desc:"Ayuda para facturas de calefacción/aire." } } },
+  { category:"Utilities", link:"https://www.energy.gov/scep/wap/weatherization-assistance-program",
+    i18n:{ en:{ title:"WAP (Weatherization Assistance)", desc:"Home energy efficiency repairs for eligible households." },
+           fr:{ title:"WAP (Aide à l’isolation)", desc:"Travaux d’efficacité énergétique à domicile." },
+           es:{ title:"WAP (Climatización)", desc:"Mejoras de eficiencia energética en el hogar." } } },
+  { category:"Utilities", link:"https://www.lifelinesupport.org/",
+    i18n:{ en:{ title:"Lifeline (Phone/Internet)", desc:"Discounted phone or internet for eligible households." },
+           fr:{ title:"Lifeline (Téléphone/Internet)", desc:"Réductions sur téléphone ou internet." },
+           es:{ title:"Lifeline (Teléfono/Internet)", desc:"Descuento en teléfono o internet." } } },
+  { category:"Utilities", link:"https://www.acf.hhs.gov/ocs/programs/lihwap",
+    i18n:{ en:{ title:"LIHWAP (Water Assistance)", desc:"Helps low-income households with water & wastewater bills." },
+           fr:{ title:"LIHWAP (Aide à l’eau)", desc:"Aide pour les factures d’eau et d’assainissement." },
+           es:{ title:"LIHWAP (Ayuda de Agua)", desc:"Ayuda con facturas de agua y alcantarillado." } } },
+
+  // Education
+  { category:"Education", link:"https://studentaid.gov/understand-aid/types/grants/pell",
+    i18n:{ en:{ title:"Federal Pell Grant", desc:"Grants for undergrads with financial need — no repayment." },
+           fr:{ title:"Bourse fédérale Pell", desc:"Bourses pour étudiants, sans remboursement." },
+           es:{ title:"Beca Federal Pell", desc:"Becas para estudiantes; no se reembolsan." } } },
+  { category:"Education", link:"https://www.acf.hhs.gov/ohs",
+    i18n:{ en:{ title:"Head Start", desc:"School readiness & family support for infants to preschoolers." },
+           fr:{ title:"Head Start", desc:"Préparation scolaire et soutien familial." },
+           es:{ title:"Head Start", desc:"Preparación escolar y apoyo familiar." } } },
+  { category:"Education", link:"https://studentaid.gov/h/apply-for-aid/fafsa",
+    i18n:{ en:{ title:"FAFSA", desc:"Apply for federal student aid (grants, loans, work-study)." },
+           fr:{ title:"FAFSA", desc:"Demande d’aide fédérale (bourses, prêts, travail-études)." },
+           es:{ title:"FAFSA", desc:"Solicite ayuda federal (becas, préstamos, estudio-trabajo)." } } },
+
+  // Income
+  { category:"Income", link:"https://www.ssa.gov/ssi/",
+    i18n:{ en:{ title:"SSI (Supplemental Security Income)", desc:"Monthly payments for people with disabilities or very low income (65+)." },
+           fr:{ title:"SSI (Revenu de Sécurité Supplémentaire)", desc:"Paiements mensuels pour personnes handicapées ou à très faible revenu (65+)." },
+           es:{ title:"SSI (Ingreso Suplementario de Seguridad)", desc:"Pagos mensuales para personas con discapacidad o muy bajos ingresos (65+)." } } },
+  { category:"Income", link:"https://www.dol.gov/general/topic/unemployment-insurance",
+    i18n:{ en:{ title:"Unemployment Insurance (UI)", desc:"Temporary income for eligible unemployed workers." },
+           fr:{ title:"Assurance chômage (UI)", desc:"Revenu temporaire pour travailleurs au chômage." },
+           es:{ title:"Seguro de Desempleo (UI)", desc:"Ingreso temporal para trabajadores desempleados." } } },
+  { category:"Income", link:"https://www.acf.hhs.gov/ofa/programs/tanf",
+    i18n:{ en:{ title:"TANF", desc:"Cash assistance & support services for low-income families with children." },
+           fr:{ title:"TANF", desc:"Aide financière et services de soutien pour familles à faible revenu." },
+           es:{ title:"TANF", desc:"Asistencia en efectivo y apoyo para familias de bajos ingresos." } } },
+  { category:"Income", link:"https://www.irs.gov/credits-deductions/individuals/earned-income-tax-credit",
+    i18n:{ en:{ title:"Earned Income Tax Credit (EITC)", desc:"Refundable tax credit for low-to-moderate income workers." },
+           fr:{ title:"Crédit d’impôt EITC", desc:"Crédit remboursable pour travailleurs à revenu faible/modéré." },
+           es:{ title:"Crédito por Ingreso del Trabajo (EITC)", desc:"Crédito reembolsable para trabajadores de bajos/moderados ingresos." } } },
+
+  // Universal
+  { category:"Health", link:"https://988lifeline.org",
+    i18n:{ en:{ title:"988 Suicide & Crisis Lifeline", desc:"24/7 free confidential help — call or text 988." },
+           fr:{ title:"Ligne 988 (Suicide & Crise)", desc:"Aide gratuite et confidentielle 24/7 — appelez/textez 988." },
+           es:{ title:"Línea 988 de Suicidio y Crisis", desc:"Ayuda gratuita y confidencial 24/7 — llame o envíe texto al 988." } } },
+  { category:"Utilities", link:"https://www.211.org",
+    i18n:{ en:{ title:"211 Helpline (United Way)", desc:"Free 24/7 referrals for local help: food, housing, bills, health." },
+           fr:{ title:"Ligne 211 (United Way)", desc:"Orientation 24/7 vers aides locales : alimentation, logement, factures, santé." },
+           es:{ title:"Línea 211 (United Way)", desc:"Referencias gratis 24/7: comida, vivienda, facturas, salud." } } },
+  { category:"Housing", link:"https://www.disasterassistance.gov",
+    i18n:{ en:{ title:"FEMA Disaster Assistance", desc:"Help after federally declared disasters — housing, repairs." },
+           fr:{ title:"Aide catastrophe FEMA", desc:"Aide après catastrophes — logement, réparations." },
+           es:{ title:"Asistencia por Desastre FEMA", desc:"Ayuda tras desastres — vivienda, reparaciones." } } },
+  { category:"Health", link:"https://www.healthcare.gov",
+    i18n:{ en:{ title:"Healthcare.gov Marketplace", desc:"Shop health plans. Financial help varies by income." },
+           fr:{ title:"Marketplace Healthcare.gov", desc:"Comparer des plans santé; aides selon revenus." },
+           es:{ title:"Mercado de Healthcare.gov", desc:"Compare planes de salud; ayuda según ingresos." } } },
+  { category:"Income", link:"https://www.sba.gov/funding-programs",
+    i18n:{ en:{ title:"SBA Small Business Programs", desc:"Loans, counseling & resources for entrepreneurs." },
+           fr:{ title:"Programmes SBA", desc:"Prêts, accompagnement et ressources pour entrepreneurs." },
+           es:{ title:"Programas de la SBA", desc:"Préstamos, asesoría y recursos para emprendedores." } } },
+  { category:"Education", link:"https://www.apprenticeship.gov/apprenticeship-job-finder",
+    i18n:{ en:{ title:"Apprenticeship Finder", desc:"Paid earn-while-you-learn training programs." },
+           fr:{ title:"Trouver une alternance", desc:"Formations rémunérées en alternance." },
+           es:{ title:"Buscador de Aprendizajes", desc:"Programas pagados de formación." } } },
+
+  // Community development
+  { category:"Housing", link:"https://www.hud.gov/program_offices/comm_planning/communitydevelopment/programs",
+    i18n:{ en:{ title:"Community Development Block Grant (CDBG)", desc:"Funds local housing & community development via HUD partners." },
+           fr:{ title:"CDBG (Dév. communautaire)", desc:"Financement logement & développement local via HUD." },
+           es:{ title:"Subvención CDBG", desc:"Financia vivienda y desarrollo comunitario." } } },
+
+  // State-specific demos (CA/TX/NY)
+  { category:"Food", link:"https://www.cdss.ca.gov/calfresh", states:["CA"],
+    i18n:{ en:{ title:"CalFresh (CA SNAP)", desc:"California’s SNAP program for food assistance." },
+           fr:{ title:"CalFresh (SNAP Californie)", desc:"Programme SNAP de Californie." },
+           es:{ title:"CalFresh (SNAP CA)", desc:"Programa SNAP de California." } } },
+  { category:"Health", link:"https://www.dhcs.ca.gov/services/medi-cal", states:["CA"],
+    i18n:{ en:{ title:"Medi-Cal (CA Medicaid)", desc:"California’s Medicaid program." },
+           fr:{ title:"Medi-Cal (Medicaid Californie)", desc:"Programme Medicaid de Californie." },
+           es:{ title:"Medi-Cal (Medicaid CA)", desc:"Programa Medicaid de California." } } },
+
+  { category:"Food", link:"https://www.yourtexasbenefits.com/Learn/SNAP", states:["TX"],
+    i18n:{ en:{ title:"Texas SNAP (Your Texas Benefits)", desc:"Food assistance for eligible households in Texas." },
+           fr:{ title:"SNAP Texas", desc:"Aide alimentaire pour ménages au Texas." },
+           es:{ title:"SNAP de Texas", desc:"Asistencia alimentaria para Texas." } } },
+  { category:"Health", link:"https://www.yourtexasbenefits.com/Learn/Medicaid", states:["TX"],
+    i18n:{ en:{ title:"Texas Medicaid", desc:"Health coverage for eligible Texans." },
+           fr:{ title:"Medicaid Texas", desc:"Couverture santé pour Texans éligibles." },
+           es:{ title:"Medicaid de Texas", desc:"Cobertura de salud para texanos elegibles." } } },
+
+  { category:"Food", link:"https://otda.ny.gov/programs/snap/", states:["NY"],
+    i18n:{ en:{ title:"New York SNAP", desc:"Food assistance for eligible households in New York." },
+           fr:{ title:"SNAP New York", desc:"Aide alimentaire pour ménages à New York." },
+           es:{ title:"SNAP de Nueva York", desc:"Asistencia alimentaria en Nueva York." } } },
+  { category:"Utilities", link:"https://otda.ny.gov/programs/heap/", states:["NY"],
+    i18n:{ en:{ title:"HEAP (NY Energy Assistance)", desc:"Help with heating & cooling costs for eligible NY residents." },
+           fr:{ title:"HEAP (Aide énergie NY)", desc:"Aide aux coûts de chauffage/climatisation à NY." },
+           es:{ title:"HEAP (Asistencia Energía NY)", desc:"Ayuda con costos de calefacción y refrigeración." } } },
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */
@@ -263,10 +354,6 @@ const matchesQuery = (blob, q) => {
   const terms = norm(q).split(/\s+/).filter(Boolean);
   return terms.every(t => blob.includes(t));
 };
-
-/** ===== Helper: stable key even without `id` ===== */
-const programKey = (p, i) =>
-  p.id || `${p.category}|${p.link}` || `idx-${i}`;
 
 /** ===== Main Component ===== */
 export default function Home() {
@@ -352,54 +439,21 @@ export default function Home() {
     } else { setShareOpenModal(true); }
   };
 
-  /** ===== PayPal helpers (Merchant-ID donate) ===== */
-  const [showDonate, setShowDonate] = useState(false);
-  const [customAmount, setCustomAmount] = useState("");
-  const [donateError, setDonateError] = useState("");
-
-  const openPayPal = (amt) => {
-    const amount = Number(amt);
-    if (Number.isFinite(amount)) {
-      const base = "https://www.paypal.com/donate";
-      const params = new URLSearchParams({
-        business: PAYPAL_MERCHANT_ID,
-        currency_code: "USD",
-        no_recurring: "0",
-        item_name: "Support AidFinder",
-        amount: amount.toFixed(2)
-      });
-      window.open(`${base}?${params.toString()}`, "_blank", "noopener,noreferrer");
-    }
-  };
-
-  const handleCustomDonate = (e) => {
-    e.preventDefault();
-    setDonateError("");
-    const val = parseFloat((customAmount || "").toString().replace(",", "."));
-    if (!Number.isFinite(val) || val < 1 || val > 5000) {
-      setDonateError(T.donateError);
-      return;
-    }
-    openPayPal(val);
-  };
-
-  /** ===== Filtered Programs (stable, all cards show) ===== */
+  /** ===== SEARCHED PROGRAMS (improved) ===== */
   const programs = useMemo(()=>{
     let base = ALL;
 
-    if (cat === "Saved") base = base.filter(p => favs.includes(p.link) || favs.includes(p.id));
+    if (cat === "Saved") base = base.filter(p => favs.includes(p.link));
     else if (cat !== "All") base = base.filter(p => p.category === cat);
 
     if (stateSel && stateSel !== "All States") {
       base = base.filter(p => !p.states || p.states.includes(stateSel));
     }
 
-    // Precompute blobs for fast search
     const blobs = new Map();
     const getBlob = (p) => {
-      const key = programKey(p);
-      if (!blobs.has(key)) blobs.set(key, makeSearchText(p));
-      return blobs.get(key);
+      if (!blobs.has(p)) blobs.set(p, makeSearchText(p));
+      return blobs.get(p);
     };
 
     if (query.trim()) {
@@ -412,7 +466,7 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(null);
 
-  // simple stagger-on-mount for cards
+  /** ===== NEW: simple stagger-on-mount for cards ===== */
   const [reveal, setReveal] = useState(false);
   useEffect(() => { setReveal(true); }, []);
 
@@ -481,11 +535,11 @@ export default function Home() {
 
         {/* Toolbar */}
         <section className="toolbar">
-          {/* SEARCH */}
+          {/* SEARCH with inline Search/Clear inside the field */}
           <div className="searchWrap">
             <form
               className="searchInlineForm"
-              onSubmit={(e)=>{ e.preventDefault(); }}
+              onSubmit={(e)=>{ e.preventDefault(); /* filtering reacts to `query` */ }}
               role="search"
               aria-label={T.searchPlaceholder}
             >
@@ -497,19 +551,23 @@ export default function Home() {
                   onChange={(e)=>setQuery(e.target.value)}
                   aria-label={T.searchPlaceholder}
                 />
+
                 <div className="searchInlineActions">
                   {(query.trim().length > 0) && (
-                    <button type="submit" className="iconOnly" aria-label={T.searchBtn} title={T.searchBtn}>🔎</button>
+                    <button type="submit" className="searchInlineBtn primary" aria-label={T.searchBtn} title={T.searchBtn}>
+                      🔎 <span className="vh">{T.searchBtn}</span>
+                    </button>
                   )}
+
                   {query && (
                     <button
                       type="button"
-                      className="iconOnly"
+                      className="searchInlineBtn ghost"
                       onClick={()=>setQuery("")}
                       aria-label={T.clearBtn}
                       title={T.clearBtn}
                     >
-                      ✕
+                      ✕ <span className="vh">{T.clearBtn}</span>
                     </button>
                   )}
                 </div>
@@ -561,49 +619,36 @@ export default function Home() {
 
           {/* Donate */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
-            <h3 style={{ marginBottom: 6 }}>{T.donateH3}</h3>
-            <p style={{ margin: "0 0 12px", color: "#4b5563" }}>{T.donateP}</p>
-
-            <button
-              type="button"
-              className="paypalBtn"
-              onClick={(e)=>{ e.stopPropagation(); setShowDonate(v=>!v); }}
+            <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
+            <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
+              Your donation helps keep this app free for families in need ❤️
+            </p>
+            <form
+              action="https://www.paypal.com/donate"
+              method="post"
+              target="_blank"
+              style={{ display: "inline-block" }}
             >
-              <span style={{marginRight:8}}>🅿️</span>{T.donateBtn}
-            </button>
-
-            {showDonate && (
-              <div className="donatePanel" onClick={(e)=>e.stopPropagation()}>
-                <div className="donateRow">
-                  <button type="button" className="quickBtn" onClick={()=>openPayPal(1)}>
-                    {T.donateQuick}
-                  </button>
-                  <span className="muted" style={{margin:"0 8px"}}>{T.donateOr}</span>
-                  <form className="customDonate" onSubmit={handleCustomDonate}>
-                    <input
-                      inputMode="decimal"
-                      pattern="[0-9]*[.,]?[0-9]{0,2}"
-                      min="1"
-                      step="0.01"
-                      placeholder={T.donateInputPH}
-                      value={customAmount}
-                      onChange={(e)=>setCustomAmount(e.target.value)}
-                      aria-label={T.donateAny}
-                    />
-                    <button type="submit" className="goBtn">{T.donateGo}</button>
-                  </form>
-                </div>
-                {/* Optional quick amounts */}
-                <div className="donateRow" style={{ marginTop: 8 }}>
-                  {[5,10,20,50].map(v => (
-                    <button key={v} type="button" className="quickBtn" onClick={() => openPayPal(v)}>
-                      ${v}
-                    </button>
-                  ))}
-                </div>
-                {donateError && <div className="errorText">{donateError}</div>}
-              </div>
-            )}
+              <input type="hidden" name="business" value="your-paypal-email@example.com" />
+              <input type="hidden" name="currency_code" value="USD" />
+              <input type="hidden" name="no_recurring" value="0" />
+              <input type="hidden" name="item_name" value="Support AidFinder" />
+              <button
+                type="submit"
+                style={{
+                  backgroundColor: "#0070f3",
+                  color: "#fff",
+                  border: "none",
+                  padding: "12px 18px",
+                  borderRadius: 10,
+                  cursor: "pointer",
+                  fontWeight: 600,
+                  boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
+                }}
+              >
+                Donate with PayPal
+              </button>
+            </form>
           </div>
         </section>
 
@@ -612,10 +657,8 @@ export default function Home() {
           {programs.map((p,i)=>{
             const title = p.i18n[lang]?.title || p.i18n.en.title;
             const desc  = p.i18n[lang]?.desc  || p.i18n.en.desc;
-            const key = programKey(p, i);
-
             return (
-              <article className="card" key={key} style={{ "--i": i }}>
+              <article className="card" key={p.link} style={{ "--i": i }}>
                 <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "var(--border)"}}>
                   {UI[lang].catLabels[p.category] || p.category}
                 </div>
@@ -633,16 +676,16 @@ export default function Home() {
                   <button
                     type="button"
                     className="iconBtn"
-                    aria-pressed={isFav(p.link) || isFav(p.id)}
+                    aria-pressed={isFav(p.link)}
                     onClick={(e)=>{ 
                       e.stopPropagation(); 
-                      toggleFav(p.id || p.link); 
-                      triggerAnim(p.id || p.link);
+                      toggleFav(p.link); 
+                      triggerAnim(p.link);
                     }}
-                    title={isFav(p.id || p.link) ? T.saved : T.unsaved}
-                    aria-label={isFav(p.id || p.link) ? T.saved : T.unsaved}
+                    title={isFav(p.link) ? T.saved : T.unsaved}
+                    aria-label={isFav(p.link) ? T.saved : T.unsaved}
                   >
-                    <HeartIcon on={isFav(p.id || p.link)} animate={!!animMap[p.id || p.link]} />
+                    <HeartIcon on={isFav(p.link)} animate={!!animMap[p.link]} />
                   </button>
 
                   {/* Share */}
@@ -670,16 +713,7 @@ export default function Home() {
                   </a>
 
                   {/* Details */}
-                  <button
-                    type="button"
-                    className="secondary"
-                    onClick={()=>{
-                      setCurrent(p);
-                      setShareOpenModal(false);
-                      setShareOpenIndex(null);
-                      setOpen(true);
-                    }}
-                  >
+                  <button type="button" className="secondary" onClick={()=>{ setCurrent(p); setShareOpenModal(false); setShareOpenIndex(null); setOpen(true); }}>
                     {T.details}
                   </button>
                 </div>
@@ -716,11 +750,11 @@ export default function Home() {
               <p className="modalBody">{current.i18n[lang]?.desc || current.i18n.en.desc}</p>
               <div className="modalActions" onClick={(e)=>e.stopPropagation()}>
                 <button className="iconBtn" onClick={()=>{
-                  toggleFav(current.id || current.link);
-                  triggerAnim(current.id || current.link);
+                  toggleFav(current.link);
+                  triggerAnim(current.link);
                 }}>
-                  <HeartIcon on={isFav(current.id || current.link)} animate={!!animMap[current.id || current.link]} />
-                  <span style={{marginLeft:8}}>{isFav(current.id || current.link) ? T.saved : T.unsaved}</span>
+                  <HeartIcon on={isFav(current.link)} animate={!!animMap[current.link]} />
+                  <span style={{marginLeft:8}}>{isFav(current.link) ? T.saved : T.unsaved}</span>
                 </button>
 
                 <div className="menuWrap">
@@ -749,14 +783,12 @@ export default function Home() {
             <a href="/terms">Terms</a>
             <span>•</span>
             <a href="/contact">Contact</a>
-            <span>•</span>
-            <a href="/support">Support</a>
           </div>
           <div style={{marginTop:8}}>{T.footer}</div>
         </footer>
       </main>
 
-      {/* Global CSS: layout/grid + animations + donate styles */}
+      {/* Global CSS: animations + inline search styles */}
       <style jsx global>{`
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
         @keyframes pulseAnim {
@@ -765,70 +797,12 @@ export default function Home() {
           100% { transform: scale(1); opacity: 1; }
         }
 
-        :root {
-          --bg: #ffffff;
-          --fg: #111827;
-          --muted: #6b7280;
-          --border: #e5e7eb;
-          --brand: #16a34a;
-
-          --tint-food: #ecfdf5;
-          --tint-health: #fee2e2;
-          --tint-housing: #eff6ff;
-          --tint-utilities: #fefce8;
-          --tint-education: #f5f3ff;
-          --tint-income: #f0f9ff;
-        }
-        [data-theme="dark"] {
-          --bg: #0b1220;
-          --fg: #e5e7eb;
-          --muted: #9ca3af;
-          --border: #1f2937;
-          --brand: #22c55e;
-
-          --tint-food: #052e22;
-          --tint-health: #301414;
-          --tint-housing: #0e223d;
-          --tint-utilities: #2b2608;
-          --tint-education: #1c1532;
-          --tint-income: #062731;
-        }
-
-        body { background: var(--bg); color: var(--fg); }
-        .container { max-width: 1100px; margin: 0 auto; padding: 16px; }
-
-        .nav { border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 20; }
-        .headerRow { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 56px; }
-        .brandRow { display: flex; align-items: center; gap: 10px; font-weight: 800; }
-
-        .hero { margin: 20px 0 6px; }
-        .hero h1 { margin: 0 0 6px; font-size: 26px; }
-        .hero p { margin: 0; color: var(--muted); }
-
-        .toolbar { display: grid; gap: 10px; margin-top: 8px; }
-        .filtersRow { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-        .chips { display: flex; gap: 8px; flex-wrap: nowrap; overflow: auto; }
-        .scrollX { scrollbar-width: thin; }
-        .chip {
-          padding: 8px 12px;
-          border-radius: 999px;
-          border: 1px solid var(--border);
-          background: transparent;
-          color: var(--fg);
-          cursor: pointer;
-          white-space: nowrap;
-        }
-        .chipActive { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-        .stateSelectWrap { display: inline-flex; align-items: center; gap: 6px; }
-        .langSelect { padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); color: var(--fg); }
-        .countRow { color: var(--muted); font-size: 14px; }
-
-        /* Inline search */
+        /* Inline search field with embedded buttons */
         .searchInlineForm { width: 100%; margin-top: 20px; }
         .searchInline { position: relative; width: 100%; }
         .searchInlineInput {
           width: 100%;
-          padding: 12px 96px 12px 14px;
+          padding: 12px 116px 12px 14px;
           border-radius: 12px;
           border: 1px solid #d1d5db;
           outline: none;
@@ -840,25 +814,28 @@ export default function Home() {
           box-shadow: 0 0 0 3px rgba(22,163,74,.15);
         }
         .searchInlineActions {
-          position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          transform: translateY(-50%);
           display: flex; gap: 6px;
         }
-        .iconOnly {
-          height: 36px; min-width: 36px; padding: 0 8px; border-radius: 8px;
-          border: 1px solid transparent; background: transparent; color: #16a34a;
-          cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
-          font-size: 18px; line-height: 1;
+        .searchInlineBtn {
+          height: 36px; min-width: 36px;
+          padding: 0 10px;
+          border-radius: 10px;
+          border: 1px solid transparent;
+          font-weight: 700;
+          cursor: pointer;
+          display: inline-flex; align-items: center; justify-content: center;
         }
-        .iconOnly:hover, .iconOnly:focus { background: rgba(22,163,74,0.08); outline: none; }
+        .searchInlineBtn.primary { background: #1d4ed8; color: #fff; }
+        .searchInlineBtn.ghost   { background: #eef2ff; color: #1d4ed8; border-color: #c7d2fe; }
+        .vh {
+          position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
+        }
 
-        /* Grid + Card */
-        .grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-          gap: 12px;
-          margin-top: 10px;
-          align-items: start;
-        }
+        /* Card appear + hover polish */
         .grid .card {
           opacity: 0; transform: translateY(16px);
           transition: opacity 480ms ease, transform 480ms ease, box-shadow 180ms ease, transform 180ms ease;
@@ -866,126 +843,7 @@ export default function Home() {
           will-change: transform, opacity;
         }
         .grid.reveal .card { opacity: 1; transform: translateY(0); }
-
-        .card {
-          background: var(--bg);
-          border: 1px solid var(--border);
-          border-radius: 14px;
-          padding: 14px;
-          box-shadow: 0 1px 0 rgba(0,0,0,0.03);
-          overflow: visible;
-        }
         .card:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
-        .card h3 { margin: 6px 0 6px; font-size: 17px; }
-        .card p { margin: 0 0 12px; color: var(--muted); }
-
-        .badge {
-          display: inline-block;
-          font-size: 12px;
-          padding: 4px 8px;
-          border-radius: 999px;
-          border: 1px solid var(--border);
-          background: var(--tint-food);
-          color: var(--fg);
-        }
-
-        .cardActions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-        .iconBtn {
-          border: 1px solid var(--border); background: transparent; color: var(--fg);
-          border-radius: 10px; padding: 8px; cursor: pointer;
-        }
-        .secondary {
-          border: 1px solid var(--border); background: transparent; color: var(--fg);
-          border-radius: 10px; padding: 8px 10px; cursor: pointer;
-        }
-        .apply {
-          text-decoration: none; font-weight: 700;
-          background: var(--fg); color: var(--bg);
-          padding: 10px 12px; border-radius: 10px; border: 1px solid var(--fg);
-        }
-
-        /* Share menu */
-        .menuWrap { position: relative; }
-        .menu {
-          position: absolute; top: calc(100% + 6px); left: 0; z-index: 12;
-          background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
-          min-width: 180px; padding: 6px; box-shadow: 0 10px 24px rgba(0,0,0,0.10);
-        }
-        .menu button {
-          display: block; width: 100%; text-align: left; padding: 8px 10px;
-          border: none; background: transparent; color: var(--fg); cursor: pointer; border-radius: 8px;
-        }
-        .menu button:hover { background: rgba(0,0,0,0.04); }
-
-        /* Empty state */
-        .empty { grid-column: 1 / -1; border: 1px dashed var(--border); border-radius: 12px; padding: 20px; text-align: center; }
-        .emptyArt { font-size: 28px; margin-bottom: 8px; }
-        .muted { color: var(--muted); }
-
-        /* Modal */
-        .backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 40; }
-        .modal { position: fixed; inset: 0; display: grid; place-items: center; z-index: 41; }
-        .modal > * { background: var(--bg); color: var(--fg); width: min(680px, 92vw); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
-        .modalHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-        .modalTitle { margin: 8px 0; }
-        .modalBody { color: var(--muted); margin: 0 0 12px; }
-        .modalActions { display: flex; gap: 8px; flex-wrap: wrap; }
-        .closeX { border: 1px solid var(--border); background: transparent; border-radius: 10px; padding: 6px 10px; cursor: pointer; }
-
-        /* Footer */
-        .footer { margin: 24px 0 8px; padding-top: 12px; border-top: 1px solid var(--border); text-align: center; color: var(--muted); }
-
-        /* Donate UI */
-        .paypalBtn {
-          background: #ffd140;
-          color: #111827;
-          border: 1px solid #f3c43a;
-          padding: 12px 18px;
-          border-radius: 10px;
-          cursor: pointer;
-          font-weight: 700;
-          box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-        }
-        .paypalBtn:hover { filter: brightness(0.97); }
-        .donatePanel {
-          margin: 12px auto 0;
-          padding: 10px;
-          border: 1px solid var(--border);
-          border-radius: 12px;
-          max-width: 520px;
-          background: var(--bg);
-        }
-        .donateRow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; }
-        .quickBtn {
-          background: #16a34a;
-          color: #fff;
-          border: 1px solid #15803d;
-          padding: 10px 14px;
-          border-radius: 10px;
-          cursor: pointer;
-          font-weight: 700;
-        }
-        .quickBtn:hover { filter: brightness(0.98); }
-        .customDonate { display: inline-flex; gap: 8px; align-items: center; }
-        .customDonate input {
-          width: 160px;
-          padding: 10px 12px;
-          border: 1px solid #d1d5db;
-          border-radius: 10px;
-          outline: none;
-          background: var(--bg); color: var(--fg);
-        }
-        .customDonate input:focus { border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,.15); }
-        .goBtn {
-          background: var(--fg);
-          color: var(--bg);
-          border: 1px solid var(--fg);
-          padding: 10px 14px;
-          border-radius: 10px;
-          cursor: pointer;
-          font-weight: 700;
-        }
-        .errorText { margin-top: 8px; color: #b91c1c; font-size: 14px; }
       `}</style>
     </>
   );

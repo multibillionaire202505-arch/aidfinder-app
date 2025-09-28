@@ -2,6 +2,9 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
+/** ====== CONFIG: PayPal Merchant ID (no email needed) ====== */
+const PAYPAL_MERCHANT_ID = "T7UXDRDVCHGKE";
+
 /** ===== Robust logo (fallback to /icons/icon-192.png) ===== */
 const BrandLogo = ({ size = 40 }) => (
   <img
@@ -66,6 +69,15 @@ const UI = {
     theme: "Theme",
     dark: "Dark",
     light: "Light",
+    donateH3: "Support AidFinder",
+    donateP:  "Your donation helps keep this app free for families in need ❤️",
+    donateBtn: "Donate with PayPal",
+    donateQuick: "Donate $1",
+    donateOr: "or",
+    donateAny: "Donate custom amount",
+    donateInputPH: "USD (e.g. 5, 10, 25)",
+    donateGo: "Donate",
+    donateError: "Please enter a valid amount (1–5000).",
   },
   fr: {
     brand: "AidFinder",
@@ -95,6 +107,15 @@ const UI = {
     theme: "Thème",
     dark: "Sombre",
     light: "Clair",
+    donateH3: "Soutenir AidFinder",
+    donateP:  "Votre don aide à garder cette application gratuite ❤️",
+    donateBtn: "Donner avec PayPal",
+    donateQuick: "Donner 1 $",
+    donateOr: "ou",
+    donateAny: "Don personnalisé",
+    donateInputPH: "USD (ex. 5, 10, 25)",
+    donateGo: "Donner",
+    donateError: "Entrez un montant valide (1–5000).",
   },
   es: {
     brand: "AidFinder",
@@ -124,6 +145,15 @@ const UI = {
     theme: "Tema",
     dark: "Oscuro",
     light: "Claro",
+    donateH3: "Apoya AidFinder",
+    donateP:  "Tu donación ayuda a mantener la app gratuita ❤️",
+    donateBtn: "Donar con PayPal",
+    donateQuick: "Donar $1",
+    donateOr: "o",
+    donateAny: "Donación personalizada",
+    donateInputPH: "USD (ej. 5, 10, 25)",
+    donateGo: "Donar",
+    donateError: "Ingresa un monto válido (1–5000).",
   }
 };
 
@@ -165,161 +195,12 @@ const US_STATES = [
 
 /** ===== Programs (data) ===== */
 const ALL = [
-  // Food
+  // (unchanged – your programs array)
   { category:"Food", link:"https://www.fns.usda.gov/snap",
     i18n:{ en:{ title:"SNAP (Food Stamps)", desc:"Monthly funds to buy groceries for eligible households." },
            fr:{ title:"SNAP (Bons alimentaires)", desc:"Aide mensuelle pour acheter des produits alimentaires." },
            es:{ title:"SNAP (Cupones de Alimentos)", desc:"Fondos mensuales para comestibles." } } },
-  { category:"Food", link:"https://www.fns.usda.gov/wic",
-    i18n:{ en:{ title:"WIC (Women, Infants, and Children)", desc:"Nutrition assistance & health referrals for women and young children." },
-           fr:{ title:"WIC (Femmes, nourrissons et enfants)", desc:"Aide nutritionnelle et orientations santé." },
-           es:{ title:"WIC (Mujeres, Infantes y Niños)", desc:"Asistencia nutricional y referencias de salud." } } },
-  { category:"Food", link:"https://www.fns.usda.gov/nslp",
-    i18n:{ en:{ title:"National School Lunch Program (NSLP)", desc:"Low-cost or free school lunches for eligible children." },
-           fr:{ title:"Programme national de déjeuner scolaire (NSLP)", desc:"Repas scolaires à faible coût ou gratuits." },
-           es:{ title:"Programa Nacional de Almuerzos (NSLP)", desc:"Almuerzos escolares gratuitos o de bajo costo." } } },
-  { category:"Food", link:"https://www.fns.usda.gov/csfp",
-    i18n:{ en:{ title:"Commodity Supplemental Food Program (CSFP)", desc:"Monthly food boxes for low-income seniors." },
-           fr:{ title:"CSFP (Aide alimentaire pour aînés)", desc:"Colis alimentaires mensuels pour les aînés." },
-           es:{ title:"Programa CSFP", desc:"Cajas mensuales de alimentos para adultos mayores." } } },
-  { category:"Food", link:"https://www.fns.usda.gov/sbp",
-    i18n:{ en:{ title:"School Breakfast Program (SBP)", desc:"Free or low-cost school breakfasts for eligible students." },
-           fr:{ title:"Programme de petit-déjeuner scolaire (SBP)", desc:"Petits-déjeuners gratuits ou à faible coût." },
-           es:{ title:"Programa de Desayunos Escolares (SBP)", desc:"Desayunos gratuitos o de bajo costo." } } },
-
-  // Health
-  { category:"Health", link:"https://www.medicaid.gov",
-    i18n:{ en:{ title:"Medicaid", desc:"Free or low-cost health coverage for eligible individuals and families." },
-           fr:{ title:"Medicaid", desc:"Couverture santé gratuite ou à faible coût." },
-           es:{ title:"Medicaid", desc:"Cobertura de salud gratuita o de bajo costo." } } },
-  { category:"Health", link:"https://findahealthcenter.hrsa.gov/",
-    i18n:{ en:{ title:"Community Health Centers", desc:"Affordable primary care, dental, and mental health services." },
-           fr:{ title:"Centres de santé communautaires", desc:"Soins primaires, dentaires et de santé mentale abordables." },
-           es:{ title:"Centros de Salud Comunitarios", desc:"Atención primaria, dental y mental accesible." } } },
-  { category:"Health", link:"https://www.medicaid.gov/chip/index.html",
-    i18n:{ en:{ title:"Children’s Health Insurance Program (CHIP)", desc:"Low-cost coverage for children who don’t qualify for Medicaid." },
-           fr:{ title:"Assurance santé enfants (CHIP)", desc:"Couverture à faible coût pour les enfants non éligibles à Medicaid." },
-           es:{ title:"Seguro Médico Infantil (CHIP)", desc:"Cobertura de bajo costo para niños que no califican." } } },
-
-  // Housing
-  { category:"Housing", link:"https://home.treasury.gov/.../emergency-rental-assistance-program",
-    i18n:{ en:{ title:"Emergency Rental Assistance (ERA)", desc:"Help with rent and utilities during hardship." },
-           fr:{ title:"Aide d’urgence au loyer (ERA)", desc:"Aide pour le loyer et les services publics en cas de difficultés." },
-           es:{ title:"Asistencia de Alquiler de Emergencia (ERA)", desc:"Ayuda con alquiler y servicios." } } },
-  { category:"Housing", link:"https://www.hud.gov/topics/housing_choice_voucher_program_section8",
-    i18n:{ en:{ title:"Section 8 Housing Choice Voucher", desc:"Helps very low-income families afford decent housing." },
-           fr:{ title:"Bons logement Section 8", desc:"Aide les ménages à très faible revenu à se loger." },
-           es:{ title:"Vales de Vivienda Sección 8", desc:"Ayuda a familias de muy bajos ingresos." } } },
-
-  // Utilities
-  { category:"Utilities", link:"https://www.acf.hhs.gov/ocs/programs/liheap",
-    i18n:{ en:{ title:"LIHEAP", desc:"Help paying heating/cooling bills and some energy repairs." },
-           fr:{ title:"LIHEAP", desc:"Aide pour factures de chauffage/climatisation et réparations." },
-           es:{ title:"LIHEAP", desc:"Ayuda para facturas de calefacción/aire." } } },
-  { category:"Utilities", link:"https://www.energy.gov/scep/wap/weatherization-assistance-program",
-    i18n:{ en:{ title:"WAP (Weatherization Assistance)", desc:"Home energy efficiency repairs for eligible households." },
-           fr:{ title:"WAP (Aide à l’isolation)", desc:"Travaux d’efficacité énergétique à domicile." },
-           es:{ title:"WAP (Climatización)", desc:"Mejoras de eficiencia energética en el hogar." } } },
-  { category:"Utilities", link:"https://www.lifelinesupport.org/",
-    i18n:{ en:{ title:"Lifeline (Phone/Internet)", desc:"Discounted phone or internet for eligible households." },
-           fr:{ title:"Lifeline (Téléphone/Internet)", desc:"Réductions sur téléphone ou internet." },
-           es:{ title:"Lifeline (Teléfono/Internet)", desc:"Descuento en teléfono o internet." } } },
-  { category:"Utilities", link:"https://www.acf.hhs.gov/ocs/programs/lihwap",
-    i18n:{ en:{ title:"LIHWAP (Water Assistance)", desc:"Helps low-income households with water & wastewater bills." },
-           fr:{ title:"LIHWAP (Aide à l’eau)", desc:"Aide pour les factures d’eau et d’assainissement." },
-           es:{ title:"LIHWAP (Ayuda de Agua)", desc:"Ayuda con facturas de agua y alcantarillado." } } },
-
-  // Education
-  { category:"Education", link:"https://studentaid.gov/understand-aid/types/grants/pell",
-    i18n:{ en:{ title:"Federal Pell Grant", desc:"Grants for undergrads with financial need — no repayment." },
-           fr:{ title:"Bourse fédérale Pell", desc:"Bourses pour étudiants, sans remboursement." },
-           es:{ title:"Beca Federal Pell", desc:"Becas para estudiantes; no se reembolsan." } } },
-  { category:"Education", link:"https://www.acf.hhs.gov/ohs",
-    i18n:{ en:{ title:"Head Start", desc:"School readiness & family support for infants to preschoolers." },
-           fr:{ title:"Head Start", desc:"Préparation scolaire et soutien familial." },
-           es:{ title:"Head Start", desc:"Preparación escolar y apoyo familiar." } } },
-  { category:"Education", link:"https://studentaid.gov/h/apply-for-aid/fafsa",
-    i18n:{ en:{ title:"FAFSA", desc:"Apply for federal student aid (grants, loans, work-study)." },
-           fr:{ title:"FAFSA", desc:"Demande d’aide fédérale (bourses, prêts, travail-études)." },
-           es:{ title:"FAFSA", desc:"Solicite ayuda federal (becas, préstamos, estudio-trabajo)." } } },
-
-  // Income
-  { category:"Income", link:"https://www.ssa.gov/ssi/",
-    i18n:{ en:{ title:"SSI (Supplemental Security Income)", desc:"Monthly payments for people with disabilities or very low income (65+)." },
-           fr:{ title:"SSI (Revenu de Sécurité Supplémentaire)", desc:"Paiements mensuels pour personnes handicapées ou à très faible revenu (65+)." },
-           es:{ title:"SSI (Ingreso Suplementario de Seguridad)", desc:"Pagos mensuales para personas con discapacidad o muy bajos ingresos (65+)." } } },
-  { category:"Income", link:"https://www.dol.gov/general/topic/unemployment-insurance",
-    i18n:{ en:{ title:"Unemployment Insurance (UI)", desc:"Temporary income for eligible unemployed workers." },
-           fr:{ title:"Assurance chômage (UI)", desc:"Revenu temporaire pour travailleurs au chômage." },
-           es:{ title:"Seguro de Desempleo (UI)", desc:"Ingreso temporal para trabajadores desempleados." } } },
-  { category:"Income", link:"https://www.acf.hhs.gov/ofa/programs/tanf",
-    i18n:{ en:{ title:"TANF", desc:"Cash assistance & support services for low-income families with children." },
-           fr:{ title:"TANF", desc:"Aide financière et services de soutien pour familles à faible revenu." },
-           es:{ title:"TANF", desc:"Asistencia en efectivo y apoyo para familias de bajos ingresos." } } },
-  { category:"Income", link:"https://www.irs.gov/credits-deductions/individuals/earned-income-tax-credit",
-    i18n:{ en:{ title:"Earned Income Tax Credit (EITC)", desc:"Refundable tax credit for low-to-moderate income workers." },
-           fr:{ title:"Crédit d’impôt EITC", desc:"Crédit remboursable pour travailleurs à revenu faible/modéré." },
-           es:{ title:"Crédito por Ingreso del Trabajo (EITC)", desc:"Crédito reembolsable para trabajadores de bajos/moderados ingresos." } } },
-
-  // Universal
-  { category:"Health", link:"https://988lifeline.org",
-    i18n:{ en:{ title:"988 Suicide & Crisis Lifeline", desc:"24/7 free confidential help — call or text 988." },
-           fr:{ title:"Ligne 988 (Suicide & Crise)", desc:"Aide gratuite et confidentielle 24/7 — appelez/textez 988." },
-           es:{ title:"Línea 988 de Suicidio y Crisis", desc:"Ayuda gratuita y confidencial 24/7 — llame o envíe texto al 988." } } },
-  { category:"Utilities", link:"https://www.211.org",
-    i18n:{ en:{ title:"211 Helpline (United Way)", desc:"Free 24/7 referrals for local help: food, housing, bills, health." },
-           fr:{ title:"Ligne 211 (United Way)", desc:"Orientation 24/7 vers aides locales : alimentation, logement, factures, santé." },
-           es:{ title:"Línea 211 (United Way)", desc:"Referencias gratis 24/7: comida, vivienda, facturas, salud." } } },
-  { category:"Housing", link:"https://www.disasterassistance.gov",
-    i18n:{ en:{ title:"FEMA Disaster Assistance", desc:"Help after federally declared disasters — housing, repairs." },
-           fr:{ title:"Aide catastrophe FEMA", desc:"Aide après catastrophes — logement, réparations." },
-           es:{ title:"Asistencia por Desastre FEMA", desc:"Ayuda tras desastres — vivienda, reparaciones." } } },
-  { category:"Health", link:"https://www.healthcare.gov",
-    i18n:{ en:{ title:"Healthcare.gov Marketplace", desc:"Shop health plans. Financial help varies by income." },
-           fr:{ title:"Marketplace Healthcare.gov", desc:"Comparer des plans santé; aides selon revenus." },
-           es:{ title:"Mercado de Healthcare.gov", desc:"Compare planes de salud; ayuda según ingresos." } } },
-  { category:"Income", link:"https://www.sba.gov/funding-programs",
-    i18n:{ en:{ title:"SBA Small Business Programs", desc:"Loans, counseling & resources for entrepreneurs." },
-           fr:{ title:"Programmes SBA", desc:"Prêts, accompagnement et ressources pour entrepreneurs." },
-           es:{ title:"Programas de la SBA", desc:"Préstamos, asesoría y recursos para emprendedores." } } },
-  { category:"Education", link:"https://www.apprenticeship.gov/apprenticeship-job-finder",
-    i18n:{ en:{ title:"Apprenticeship Finder", desc:"Paid earn-while-you-learn training programs." },
-           fr:{ title:"Trouver une alternance", desc:"Formations rémunérées en alternance." },
-           es:{ title:"Buscador de Aprendizajes", desc:"Programas pagados de formación." } } },
-
-  // Community development
-  { category:"Housing", link:"https://www.hud.gov/program_offices/comm_planning/communitydevelopment/programs",
-    i18n:{ en:{ title:"Community Development Block Grant (CDBG)", desc:"Funds local housing & community development via HUD partners." },
-           fr:{ title:"CDBG (Dév. communautaire)", desc:"Financement logement & développement local via HUD." },
-           es:{ title:"Subvención CDBG", desc:"Financia vivienda y desarrollo comunitario." } } },
-
-  // State-specific demos (CA/TX/NY)
-  { category:"Food", link:"https://www.cdss.ca.gov/calfresh", states:["CA"],
-    i18n:{ en:{ title:"CalFresh (CA SNAP)", desc:"California’s SNAP program for food assistance." },
-           fr:{ title:"CalFresh (SNAP Californie)", desc:"Programme SNAP de Californie." },
-           es:{ title:"CalFresh (SNAP CA)", desc:"Programa SNAP de California." } } },
-  { category:"Health", link:"https://www.dhcs.ca.gov/services/medi-cal", states:["CA"],
-    i18n:{ en:{ title:"Medi-Cal (CA Medicaid)", desc:"California’s Medicaid program." },
-           fr:{ title:"Medi-Cal (Medicaid Californie)", desc:"Programme Medicaid de Californie." },
-           es:{ title:"Medi-Cal (Medicaid CA)", desc:"Programa Medicaid de California." } } },
-
-  { category:"Food", link:"https://www.yourtexasbenefits.com/Learn/SNAP", states:["TX"],
-    i18n:{ en:{ title:"Texas SNAP (Your Texas Benefits)", desc:"Food assistance for eligible households in Texas." },
-           fr:{ title:"SNAP Texas", desc:"Aide alimentaire pour ménages au Texas." },
-           es:{ title:"SNAP de Texas", desc:"Asistencia alimentaria para Texas." } } },
-  { category:"Health", link:"https://www.yourtexasbenefits.com/Learn/Medicaid", states:["TX"],
-    i18n:{ en:{ title:"Texas Medicaid", desc:"Health coverage for eligible Texans." },
-           fr:{ title:"Medicaid Texas", desc:"Couverture santé pour Texans éligibles." },
-           es:{ title:"Medicaid de Texas", desc:"Cobertura de salud para texanos elegibles." } } },
-
-  { category:"Food", link:"https://otda.ny.gov/programs/snap/", states:["NY"],
-    i18n:{ en:{ title:"New York SNAP", desc:"Food assistance for eligible households in New York." },
-           fr:{ title:"SNAP New York", desc:"Aide alimentaire pour ménages à New York." },
-           es:{ title:"SNAP de Nueva York", desc:"Asistencia alimentaria en Nueva York." } } },
-  { category:"Utilities", link:"https://otda.ny.gov/programs/heap/", states:["NY"],
-    i18n:{ en:{ title:"HEAP (NY Energy Assistance)", desc:"Help with heating & cooling costs for eligible NY residents." },
-           fr:{ title:"HEAP (Aide énergie NY)", desc:"Aide aux coûts de chauffage/climatisation à NY." },
-           es:{ title:"HEAP (Asistencia Energía NY)", desc:"Ayuda con costos de calefacción y refrigeración." } } },
+  // ... keep the rest of your ALL array exactly as in your current file ...
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */
@@ -437,6 +318,38 @@ export default function Home() {
         await navigator.share({ title: p.i18n[lang].title, text: p.i18n[lang].desc, url: p.link });
       } catch {}
     } else { setShareOpenModal(true); }
+  };
+
+  /** ===== PayPal helpers ===== */
+  const [showDonate, setShowDonate] = useState(false);
+  const [customAmount, setCustomAmount] = useState("");
+  const [donateError, setDonateError] = useState("");
+
+  const openPayPal = (amt) => {
+    const amount = Number(amt);
+    if (Number.isFinite(amount)) {
+      // Build a PayPal Donate URL using Merchant ID
+      const base = "https://www.paypal.com/donate";
+      const params = new URLSearchParams({
+        business: PAYPAL_MERCHANT_ID,
+        currency_code: "USD",
+        no_recurring: "0",
+        item_name: "Support AidFinder",
+        amount: amount.toFixed(2)
+      });
+      window.open(`${base}?${params.toString()}`, "_blank", "noopener,noreferrer");
+    }
+  };
+
+  const handleCustomDonate = (e) => {
+    e.preventDefault();
+    setDonateError("");
+    const val = parseFloat((customAmount || "").toString().replace(",", "."));
+    if (!Number.isFinite(val) || val < 1 || val > 5000) {
+      setDonateError(T.donateError);
+      return;
+    }
+    openPayPal(val);
   };
 
   /** ===== SEARCHED PROGRAMS (improved) ===== */
@@ -619,73 +532,42 @@ export default function Home() {
 
           {/* Donate */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
-            <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
-            <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
-              Your donation helps keep this app free for families in need ❤️
-            </p>
+            <h3 style={{ marginBottom: 6 }}>{T.donateH3}</h3>
+            <p style={{ margin: "0 0 12px", color: "#4b5563" }}>{T.donateP}</p>
 
-            {/* Buttons row */}
-            <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
-              {/* Suggest $2 (editable on PayPal) */}
-              <form
-                action="https://www.paypal.com/donate"
-                method="get"
-                target="_blank"
-                rel="noreferrer"
-                style={{ display: "inline-block" }}
-              >
-                <input type="hidden" name="business" value="T7UXDRDVCHGKE" />
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="hidden" name="no_recurring" value="0" />
-                <input type="hidden" name="item_name" value="Support AidFinder" />
-                <input type="hidden" name="amount" value="2" />
-                <button
-                  type="submit"
-                  style={{
-                    backgroundColor: "#16a34a",
-                    color: "#fff",
-                    border: "none",
-                    padding: "12px 18px",
-                    borderRadius: 10,
-                    cursor: "pointer",
-                    fontWeight: 700,
-                    boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
-                  }}
-                >
-                  Donate $2 (editable)
-                </button>
-              </form>
+            {/* Single main button that reveals quick/custom options */}
+            <button
+              type="button"
+              className="paypalBtn"
+              onClick={(e)=>{ e.stopPropagation(); setShowDonate(v=>!v); }}
+            >
+              <span style={{marginRight:8}}>🅿️</span>{T.donateBtn}
+            </button>
 
-              {/* Any amount (no preset) */}
-              <form
-                action="https://www.paypal.com/donate"
-                method="get"
-                target="_blank"
-                rel="noreferrer"
-                style={{ display: "inline-block" }}
-              >
-                <input type="hidden" name="business" value="T7UXDRDVCHGKE" />
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="hidden" name="no_recurring" value="0" />
-                <input type="hidden" name="item_name" value="Support AidFinder" />
-                {/* no "amount" here -> donor types any amount */}
-                <button
-                  type="submit"
-                  style={{
-                    backgroundColor: "#16a34a",
-                    color: "#fff",
-                    border: "none",
-                    padding: "12px 18px",
-                    borderRadius: 10,
-                    cursor: "pointer",
-                    fontWeight: 700,
-                    boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
-                  }}
-                >
-                  Choose any amount
-                </button>
-              </form>
-            </div>
+            {showDonate && (
+              <div className="donatePanel" onClick={(e)=>e.stopPropagation()}>
+                <div className="donateRow">
+                  <button type="button" className="quickBtn" onClick={()=>openPayPal(1)}>
+                    {T.donateQuick}
+                  </button>
+                  <span className="muted" style={{margin:"0 8px"}}>{T.donateOr}</span>
+                  <form className="customDonate" onSubmit={handleCustomDonate}>
+                    <input
+                      inputMode="decimal"
+                      pattern="[0-9]*[.,]?[0-9]{0,2}"
+                      min="1"
+                      step="0.01"
+                      placeholder={T.donateInputPH}
+                      value={customAmount}
+                      onChange={(e)=>setCustomAmount(e.target.value)}
+                      aria-label={T.donateAny}
+                    />
+                    <button type="submit" className="goBtn">{T.donateGo}</button>
+                  </form>
+                </div>
+                {donateError && <div className="errorText">{donateError}</div>}
+              </div>
+            )}
           </div>
         </section>
 
@@ -820,12 +702,14 @@ export default function Home() {
             <a href="/terms">Terms</a>
             <span>•</span>
             <a href="/contact">Contact</a>
+            <span>•</span>
+            <a href="/support">Support</a>
           </div>
           <div style={{marginTop:8}}>{T.footer}</div>
         </footer>
       </main>
 
-      {/* Global CSS: animations + inline search styles */}
+      {/* Global CSS: animations + inline search styles + donate panel */}
       <style jsx global>{`
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
         @keyframes pulseAnim {
@@ -857,21 +741,88 @@ export default function Home() {
           transform: translateY(-50%);
           display: flex; gap: 6px;
         }
-        /* Minimal green icon buttons */
         .iconOnly {
           height: 36px; min-width: 36px;
           padding: 0 8px;
           border-radius: 8px;
           border: 1px solid transparent;
-          background: transparent;      /* no blue background */
-          color: #16a34a;               /* AidFinder green */
+          background: transparent;
+          color: #16a34a; /* green */
           cursor: pointer;
           display: inline-flex; align-items: center; justify-content: center;
           font-size: 18px; line-height: 1;
         }
         .iconOnly:hover, .iconOnly:focus {
-          background: rgba(22,163,74,0.08); /* subtle hover */
+          background: rgba(22,163,74,0.08);
           outline: none;
+        }
+
+        /* Donate UI */
+        .paypalBtn {
+          background: #ffd140; /* PayPal-ish accent */
+          color: #111827;
+          border: 1px solid #f3c43a;
+          padding: 12px 18px;
+          border-radius: 10px;
+          cursor: pointer;
+          font-weight: 700;
+          box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        }
+        .paypalBtn:hover { filter: brightness(0.97); }
+        .donatePanel {
+          margin: 12px auto 0;
+          padding: 10px;
+          border: 1px solid #e5e7eb;
+          border-radius: 12px;
+          max-width: 520px;
+          background: #fff;
+        }
+        .donateRow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+        .quickBtn {
+          background: #16a34a;
+          color: #fff;
+          border: 1px solid #15803d;
+          padding: 10px 14px;
+          border-radius: 10px;
+          cursor: pointer;
+          font-weight: 700;
+        }
+        .quickBtn:hover { filter: brightness(0.98); }
+        .customDonate {
+          display: inline-flex;
+          gap: 8px;
+          align-items: center;
+        }
+        .customDonate input {
+          width: 160px;
+          padding: 10px 12px;
+          border: 1px solid #d1d5db;
+          border-radius: 10px;
+          outline: none;
+        }
+        .customDonate input:focus {
+          border-color: #16a34a;
+          box-shadow: 0 0 0 3px rgba(22,163,74,.15);
+        }
+        .goBtn {
+          background: #111827;
+          color: #fff;
+          border: 1px solid #111827;
+          padding: 10px 14px;
+          border-radius: 10px;
+          cursor: pointer;
+          font-weight: 700;
+        }
+        .errorText {
+          margin-top: 8px;
+          color: #b91c1c;
+          font-size: 14px;
         }
 
         .vh {

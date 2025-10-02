@@ -492,6 +492,7 @@ export default function Home() {
             <strong>{T.brand}</strong>
           </div>
 
+            {/* Right side: Language + Theme */}
           <div style={{display:"flex", alignItems:"center", gap:10}}>
             {/* Language */}
             <div className="stateSelectWrap">
@@ -623,16 +624,46 @@ export default function Home() {
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
               Your donation helps keep this app free for families in need ❤️
             </p>
+
+            {/* Donate $1 (fixed amount) */}
+            <form
+              action="https://www.paypal.com/donate"
+              method="post"
+              target="_blank"
+              style={{ display: "inline-block", marginRight: 10 }}
+            >
+              <input type="hidden" name="business" value="T7UXDRDVCHGKE" />
+              <input type="hidden" name="currency_code" value="USD" />
+              <input type="hidden" name="amount" value="1" />
+              <input type="hidden" name="item_name" value="Support AidFinder" />
+              <button
+                type="submit"
+                style={{
+                  backgroundColor: "#16a34a",
+                  color: "#fff",
+                  border: "none",
+                  padding: "12px 18px",
+                  borderRadius: 10,
+                  cursor: "pointer",
+                  fontWeight: 600,
+                  boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
+                }}
+              >
+                Donate $1
+              </button>
+            </form>
+
+            {/* Donate Any Amount (lets donor choose on PayPal) */}
             <form
               action="https://www.paypal.com/donate"
               method="post"
               target="_blank"
               style={{ display: "inline-block" }}
             >
-              <input type="hidden" name="business" value="your-paypal-email@example.com" />
+              <input type="hidden" name="business" value="T7UXDRDVCHGKE" />
               <input type="hidden" name="currency_code" value="USD" />
-              <input type="hidden" name="no_recurring" value="0" />
               <input type="hidden" name="item_name" value="Support AidFinder" />
+              {/* no amount field here -> user enters custom amount on PayPal */}
               <button
                 type="submit"
                 style={{
@@ -646,7 +677,7 @@ export default function Home() {
                   boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
                 }}
               >
-                Donate with PayPal
+                Donate Any Amount
               </button>
             </form>
           </div>

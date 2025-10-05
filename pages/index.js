@@ -492,7 +492,7 @@ export default function Home() {
             <strong>{T.brand}</strong>
           </div>
 
-            {/* Right side: Language + Theme */}
+          {/* Right side: Language + Theme */}
           <div style={{display:"flex", alignItems:"center", gap:10}}>
             {/* Language */}
             <div className="stateSelectWrap">
@@ -618,68 +618,24 @@ export default function Home() {
             <span className="muted">{programs.length} {T.programCount}</span>
           </div>
 
-          {/* Donate */}
+          {/* Donate (single animated button) */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
             <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
               Your donation helps keep this app free for families in need ❤️
             </p>
 
-            {/* Donate $1 (fixed amount) */}
-            <form
-              action="https://www.paypal.com/donate"
-              method="post"
+            <a
+              className="af-donate"
+              href="https://www.paypal.com/donate?business=T7UXDRDVCHGKE&currency_code=USD"
               target="_blank"
-              style={{ display: "inline-block", marginRight: 10 }}
+              rel="noopener"
+              aria-label="Donate to AidFinder"
             >
-              <input type="hidden" name="business" value="T7UXDRDVCHGKE" />
-              <input type="hidden" name="currency_code" value="USD" />
-              <input type="hidden" name="amount" value="1" />
-              <input type="hidden" name="item_name" value="Support AidFinder" />
-              <button
-                type="submit"
-                style={{
-                  backgroundColor: "#16a34a",
-                  color: "#fff",
-                  border: "none",
-                  padding: "12px 18px",
-                  borderRadius: 10,
-                  cursor: "pointer",
-                  fontWeight: 600,
-                  boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
-                }}
-              >
-                Donate $1
-              </button>
-            </form>
-
-            {/* Donate Any Amount (lets donor choose on PayPal) */}
-            <form
-              action="https://www.paypal.com/donate"
-              method="post"
-              target="_blank"
-              style={{ display: "inline-block" }}
-            >
-              <input type="hidden" name="business" value="T7UXDRDVCHGKE" />
-              <input type="hidden" name="currency_code" value="USD" />
-              <input type="hidden" name="item_name" value="Support AidFinder" />
-              {/* no amount field here -> user enters custom amount on PayPal */}
-              <button
-                type="submit"
-                style={{
-                  backgroundColor: "#0070f3",
-                  color: "#fff",
-                  border: "none",
-                  padding: "12px 18px",
-                  borderRadius: 10,
-                  cursor: "pointer",
-                  fontWeight: 600,
-                  boxShadow: "0 6px 16px rgba(0,0,0,0.12)"
-                }}
-              >
-                Donate Any Amount
-              </button>
-            </form>
+              <span className="af-donate__icon">💚</span>
+              <span className="af-donate__text">Donate</span>
+              <span className="af-donate__sub">Keep AidFinder Free</span>
+            </a>
           </div>
         </section>
 
@@ -819,7 +775,7 @@ export default function Home() {
         </footer>
       </main>
 
-      {/* Global CSS: animations + inline search styles */}
+      {/* Global CSS: animations + inline search styles + donate styles */}
       <style jsx global>{`
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
         @keyframes pulseAnim {
@@ -857,14 +813,14 @@ export default function Home() {
           padding: 0 8px;
           border-radius: 8px;
           border: 1px solid transparent;
-          background: transparent;      /* no blue background */
-          color: #16a34a;               /* AidFinder green */
+          background: transparent;
+          color: #16a34a;
           cursor: pointer;
           display: inline-flex; align-items: center; justify-content: center;
           font-size: 18px; line-height: 1;
         }
         .iconOnly:hover, .iconOnly:focus {
-          background: rgba(22,163,74,0.08); /* subtle hover */
+          background: rgba(22,163,74,0.08);
           outline: none;
         }
 
@@ -881,6 +837,89 @@ export default function Home() {
         }
         .grid.reveal .card { opacity: 1; transform: translateY(0); }
         .card:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
+
+        /* ===== AidFinder Animated Donate Button ===== */
+        :root{
+          --af-donate-bg:#19c37d;
+          --af-donate-bg-dark:#17a56b;
+          --af-donate-text:#0b1f17;
+          --af-donate-ring:rgba(25,195,125,.45);
+          --af-donate-shadow:rgba(25,195,125,.55);
+        }
+        @media (prefers-color-scheme: dark){
+          :root{
+            --af-donate-text:#05110c;
+            --af-donate-ring:rgba(25,195,125,.55);
+            --af-donate-shadow:rgba(25,195,125,.75);
+          }
+        }
+
+        .af-donate{
+          position:relative;
+          display:inline-grid;
+          grid-auto-flow:column;
+          align-items:center;
+          gap:.6rem;
+          padding:.9rem 1.25rem;
+          border-radius:999px;
+          background:var(--af-donate-bg);
+          color:var(--af-donate-text);
+          font-weight:700;
+          text-decoration:none;
+          line-height:1;
+          box-shadow:
+            0 10px 24px -8px var(--af-donate-shadow),
+            0 2px 0 rgba(0,0,0,.06) inset;
+          isolation:isolate;
+          transform:translateZ(0);
+        }
+        .af-donate__icon{font-size:1.2rem;}
+        .af-donate__text{font-size:1.05rem; letter-spacing:.2px;}
+        .af-donate__sub{font-size:.78rem; font-weight:600; opacity:.9;}
+
+        @media (max-width:420px){
+          .af-donate{grid-auto-flow:row; text-align:center; padding:.95rem 1.1rem;}
+        }
+
+        .af-donate:hover{
+          background:var(--af-donate-bg-dark);
+          box-shadow:
+            0 16px 36px -10px var(--af-donate-shadow),
+            0 2px 0 rgba(0,0,0,.08) inset;
+          transform:translateY(-1px);
+        }
+        .af-donate:active{ transform: translateY(0); }
+
+        /* glow + pulsing ring */
+        .af-donate::before,
+        .af-donate::after{
+          content:"";
+          position:absolute;
+          inset:-6px;
+          border-radius:inherit;
+          z-index:-1;
+          pointer-events:none;
+        }
+        .af-donate::before{
+          background: radial-gradient(60% 60% at 50% 50%,
+                      var(--af-donate-ring) 0%, transparent 70%);
+          filter: blur(12px);
+          opacity:.85;
+        }
+        .af-donate::after{
+          border:2px solid var(--af-donate-ring);
+          animation: af-ring 2.2s ease-out infinite;
+        }
+        @keyframes af-ring{
+          0%   { opacity:.9; transform: scale(.98); }
+          70%  { opacity:0;  transform: scale(1.25); }
+          100% { opacity:0;  transform: scale(1.25); }
+        }
+
+        /* accessibility: respect reduced motion */
+        @media (prefers-reduced-motion: reduce){
+          .af-donate::after{ animation:none; opacity:.35; }
+        }
       `}</style>
     </>
   );

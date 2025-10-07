@@ -783,10 +783,14 @@ export default function Home() {
            AidFinder Global Styles
            ========================= */
 
-        /* ---------- Fonts: body (modern sans), headings (classic serif) ---------- */
+        /* Fonts: everything modern sans (Inter) */
         :root{
-          --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-          --font-serif: "Times New Roman", Times, serif;
+          /* Inter variable (from next/font) */
+          --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                       Roboto, Helvetica, Arial, "Apple Color Emoji",
+                       "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+          /* Keep var for compatibility if referenced elsewhere */
+          --font-serif: var(--font-sans);
 
           /* Brand colors */
           --af-green: #19c37d;
@@ -828,14 +832,14 @@ export default function Home() {
           margin:0; padding:0;
         }
         h1,h2,h3,h4,h5,h6{
-          font-family: var(--font-serif);
+          font-family: var(--font-sans);
           font-weight:700;
           letter-spacing:.2px;
           margin:0 0 .35em 0;
         }
         p{ margin:.5em 0 1em; }
 
-        /* ---------- Layout basics ---------- */
+        /* Layout basics */
         .container{ width: min(1100px, 92%); margin: 0 auto; }
         .nav{
           position: sticky; top: 0; z-index: 20;
@@ -861,7 +865,7 @@ export default function Home() {
         .countRow{ margin-top:10px; }
         .muted{ color: var(--muted); }
 
-        /* ---------- Chips ---------- */
+        /* Chips */
         .chips{ display:flex; gap:8px; overflow:auto; padding:2px 0; }
         .chips::-webkit-scrollbar{ display:none; }
         .chip{
@@ -871,6 +875,7 @@ export default function Home() {
           border-radius: 999px;
           padding: 8px 12px;
           cursor:pointer;
+          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
         }
         .chipActive{
           background: #e6f8f0;
@@ -881,28 +886,31 @@ export default function Home() {
           background:#0f2a22; border-color:#0e3527; color:#c6f0dc;
         }
 
-        /* ---------- Buttons ---------- */
+        /* Buttons */
         .apply{
           background:#111827; color:#fff; border:0;
           border-radius:10px; padding:10px 14px; text-decoration:none; font-weight:700;
+          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
         }
         [data-theme="dark"] .apply{ background:#e5e7eb; color:#0b1220; }
         .secondary{
           background:transparent; color:var(--text);
           border:1px solid var(--border);
           border-radius:10px; padding:9px 12px; cursor:pointer;
+          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
         }
         .iconBtn{
           background:transparent; border:1px solid var(--border); border-radius:10px;
           padding:8px 10px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer;
         }
+        .apply:hover, .secondary:hover, .chip:hover { transform: translateY(-1px); }
 
-        /* ---------- Search (inline field) ---------- */
+        /* Search (inline field) */
         .searchInlineForm { width: 100%; margin-top: 20px; }
         .searchInline { position: relative; width: 100%; }
         .searchInlineInput {
           width: 100%;
-          padding: 12px 96px 12px 14px; /* space for icons */
+          padding: 12px 96px 12px 14px;
           border-radius: 12px;
           border: 1px solid var(--border);
           outline: none;
@@ -932,12 +940,9 @@ export default function Home() {
           display: inline-flex; align-items: center; justify-content: center;
           font-size: 18px; line-height: 1;
         }
-        .iconOnly:hover, .iconOnly:focus {
-          background: rgba(22,163,74,0.08);
-          outline: none;
-        }
+        .iconOnly:hover, .iconOnly:focus { background: rgba(22,163,74,0.08); outline: none; }
 
-        /* ---------- Cards + grid ---------- */
+        /* Cards + grid */
         .grid{
           display:grid; gap:14px;
           grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -948,26 +953,20 @@ export default function Home() {
           border-radius:16px; padding:14px;
           box-shadow: 0 2px 6px rgba(0,0,0,.03);
           transition: box-shadow 180ms ease, transform 180ms ease, opacity 480ms ease;
+          opacity: 0; transform: translateY(16px);
         }
+        .grid.reveal .card { opacity: 1; transform: translateY(0); }
+        .card:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
         .card h3{ display:flex; align-items:center; gap:6px; margin:6px 0 6px; }
         .badge{
           display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px;
           border:1px solid var(--border); margin-bottom:8px; color:#0f172a;
         }
         [data-theme="dark"] .badge{ color:#cbd5e1; }
-        .cardActions{
-          display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px;
-        }
+        .cardActions{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px; }
 
-        /* Appear animation */
-        .grid .card { opacity: 0; transform: translateY(16px); will-change: transform, opacity; }
-        .grid.reveal .card { opacity: 1; transform: translateY(0); }
-        .card:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
-
-        /* ---------- Modal ---------- */
-        .backdrop{
-          position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:40;
-        }
+        /* Modal */
+        .backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:40; }
         .modal{
           position:fixed; inset:auto 0 0 0; margin:auto; top:10%;
           width:min(680px, 92%); background:var(--bg); color:var(--text);
@@ -978,11 +977,9 @@ export default function Home() {
         .modalTitle{ margin:.25rem 0 .5rem; }
         .modalBody{ color: var(--text); }
         .modalActions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
-        .closeX{
-          background:transparent; border:0; cursor:pointer; font-size:18px; color:var(--text);
-        }
+        .closeX{ background:transparent; border:0; cursor:pointer; font-size:18px; color:var(--text); }
 
-        /* ---------- Menus ---------- */
+        /* Menus */
         .menuWrap{ position:relative; display:inline-block; }
         .menu{
           position:absolute; top:100%; left:0; margin-top:6px; min-width: 220px;
@@ -994,25 +991,18 @@ export default function Home() {
         }
         .menu button:hover{ background: rgba(22,163,74,.08); }
 
-        /* ---------- Empty state ---------- */
+        /* Empty state */
         .empty{ text-align:center; padding:32px 0; color:var(--muted); }
         .emptyArt{ font-size:46px; margin-bottom:10px; }
 
-        /* ---------- Footer ---------- */
-        .footer{
-          border-top:1px solid var(--border);
-          text-align:center; padding:18px 0; color: var(--muted);
-        }
+        /* Footer */
+        .footer{ border-top:1px solid var(--border); text-align:center; padding:18px 0; color: var(--muted); }
 
-        /* ---------- Heart pulse (favorites) ---------- */
+        /* Heart pulse */
         .pulse { animation: pulseAnim 0.3s ease-in-out; }
-        @keyframes pulseAnim {
-          0% { transform: scale(1); opacity: 0.85; }
-          50% { transform: scale(1.3); opacity: 1; }
-          100% { transform: scale(1); opacity: 1; }
-        }
+        @keyframes pulseAnim { 0% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.3); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
 
-        /* ---------- Donate button (animated) ---------- */
+        /* Donate button (animated) */
         :root{
           --af-donate-bg: var(--af-green);
           --af-donate-bg-dark: var(--af-green-dark);
@@ -1028,70 +1018,30 @@ export default function Home() {
           }
         }
         .af-donate{
-          position:relative;
-          display:inline-grid;
-          grid-auto-flow:column;
-          align-items:center;
-          gap:.6rem;
-          padding:1.05rem 1.4rem;           /* bigger */
-          border-radius:999px;
-          background:var(--af-donate-bg);
-          color:var(--af-donate-text);
-          font-weight:700;
-          text-decoration:none;
-          line-height:1;
-          box-shadow:
-            0 10px 24px -8px var(--af-donate-shadow),
-            0 2px 0 rgba(0,0,0,.06) inset;
-          isolation:isolate;
-          transform:translateZ(0);
+          position:relative; display:inline-grid; grid-auto-flow:column; align-items:center; gap:.6rem;
+          padding:1.05rem 1.4rem; border-radius:999px; background:var(--af-donate-bg); color:var(--af-donate-text);
+          font-weight:700; text-decoration:none; line-height:1;
+          box-shadow: 0 10px 24px -8px var(--af-donate-shadow), 0 2px 0 rgba(0,0,0,.06) inset;
+          isolation:isolate; transform:translateZ(0);
+          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
         }
         .af-donate__icon{ font-size: 1.35rem; }
         .af-donate__text{ font-size: 1.15rem; letter-spacing:.2px; }
         .af-donate__sub { font-size: .86rem; font-weight:600; opacity:.9; }
-
-        @media (max-width:480px){
-          .af-donate{
-            grid-auto-flow:row; text-align:center; padding:1.1rem 1.2rem; width:min(92%, 460px);
-          }
-        }
-        .af-donate:hover{
-          background:var(--af-donate-bg-dark);
-          box-shadow:
-            0 16px 36px -10px var(--af-donate-shadow),
-            0 2px 0 rgba(0,0,0,.08) inset;
-          transform:translateY(-1px);
-        }
+        @media (max-width:480px){ .af-donate{ grid-auto-flow:row; text-align:center; padding:1.1rem 1.2rem; width:min(92%, 460px); } }
+        .af-donate:hover{ background:var(--af-donate-bg-dark); box-shadow: 0 16px 36px -10px var(--af-donate-shadow), 0 2px 0 rgba(0,0,0,.08) inset; transform:translateY(-1px); }
         .af-donate:active{ transform: translateY(0); }
-        .af-donate::before,
-        .af-donate::after{
-          content:"";
-          position:absolute; inset:-6px; border-radius:inherit; z-index:-1; pointer-events:none;
-        }
-        .af-donate::before{
-          background: radial-gradient(60% 60% at 50% 50%, var(--af-donate-ring) 0%, transparent 70%);
-          filter: blur(12px); opacity:.85;
-        }
-        .af-donate::after{
-          border:2px solid var(--af-donate-ring);
-          animation: af-ring 2.2s ease-out infinite;
-        }
-        @keyframes af-ring{
-          0% { opacity:.9; transform: scale(.98); }
-          70%,100% { opacity:0; transform: scale(1.25); }
-        }
-        @media (prefers-reduced-motion: reduce){
-          .af-donate::after{ animation:none; opacity:.35; }
-          .card, .chip, .apply, .secondary, .af-donate { transition: none !important; }
-        }
+        .af-donate::before, .af-donate::after{ content:""; position:absolute; inset:-6px; border-radius:inherit; z-index:-1; pointer-events:none; }
+        .af-donate::before{ background: radial-gradient(60% 60% at 50% 50%, var(--af-donate-ring) 0%, transparent 70%); filter: blur(12px); opacity:.85; }
+        .af-donate::after{ border:2px solid var(--af-donate-ring); animation: af-ring 2.2s ease-out infinite; }
+        @keyframes af-ring{ 0% { opacity:.9; transform: scale(.98); } 70%,100% { opacity:0; transform: scale(1.25); } }
+        @media (prefers-reduced-motion: reduce){ .af-donate::after{ animation:none; opacity:.35; } .card, .chip, .apply, .secondary, .af-donate { transition: none !important; } }
 
-        /* ---------- Signature micro-interaction (lift on hover) ---------- */
+        /* Signature micro-interaction (lift on hover) */
         a.apply, .secondary, .chip, .af-donate {
           transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
         }
-        a.apply:hover, .secondary:hover, .chip:hover {
-          transform: translateY(-1px);
-        }
+        a.apply:hover, .secondary:hover, .chip:hover { transform: translateY(-1px); }
       `}</style>
     </>
   );

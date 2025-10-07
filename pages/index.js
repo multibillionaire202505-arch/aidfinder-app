@@ -386,7 +386,7 @@ export default function Home() {
   useEffect(()=>{
     try{
       localStorage.setItem("aidfinder_theme", theme);
-      document.documentElement.setAttribute("data-theme", theme==="dark" ? "dark": "light");
+      document.documentElement.setAttribute("data-theme", theme==="dark" ? "dark" : "light");
     }catch{}
   },[theme]);
 

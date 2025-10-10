@@ -1,10 +1,9 @@
-// @ts-nocheck
-// pages/index.tsx
-import React, { useMemo, useState, useEffect } from "react";
+// pages/index.js
+import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
 /** ===== Robust logo (fallback to /icons/icon-192.png) ===== */
-const BrandLogo = ({ size = 40 }: { size?: number }) => (
+const BrandLogo = ({ size = 40 }) => (
   <img
     src="/logo.png"
     alt="AidFinder logo"
@@ -12,14 +11,14 @@ const BrandLogo = ({ size = 40 }: { size?: number }) => (
     height={size}
     style={{ width: size, height: size, borderRadius: 8, objectFit: "contain" }}
     onError={(e) => {
-      (e.currentTarget as HTMLImageElement).onerror = null;
-      (e.currentTarget as HTMLImageElement).src = "/icons/icon-192.png";
+      e.currentTarget.onerror = null;
+      e.currentTarget.src = "/icons/icon-192.png";
     }}
   />
 );
 
 /** ===== Heart icon (red inside only; pulse on click) ===== */
-const HeartIcon = ({ on = false, size = 20, animate = false }: { on?: boolean; size?: number; animate?: boolean }) => (
+const HeartIcon = ({ on = false, size = 20, animate = false }) => (
   <svg
     width={size}
     height={size}
@@ -129,26 +128,21 @@ const UI = {
 };
 
 /** ===== Category Icons (Health = red cross SVG) ===== */
-const ICONS: Record<string, React.ReactNode> = {
+const ICONS = {
   Food: "🍏",
   Housing: "🏠",
   Utilities: "💡",
   Education: "🎓",
   Income: "💲",
   Health: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-      width="20" height="20" style={{ verticalAlign: "middle" }}
-      aria-hidden="true" focusable="false"
-    >
-      <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"
-        fill="red" stroke="red" strokeWidth="1.5" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style={{ verticalAlign: "middle" }} aria-hidden="true" focusable="false">
+      <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z" fill="red" stroke="red" strokeWidth="1.5" />
     </svg>
   ),
 };
 
 /** ===== Badge tints ===== */
-const ICONS_BADGE_BG: Record<string, string> = {
+const ICONS_BADGE_BG = {
   Food:"var(--tint-food)",
   Health:"var(--tint-health, #fee2e2)",
   Housing:"var(--tint-housing)",
@@ -158,7 +152,7 @@ const ICONS_BADGE_BG: Record<string, string> = {
 };
 
 /** ===== US states ===== */
-const US_STATES: string[] = [
+const US_STATES = [
   "All States","AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA",
   "MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC",
   "SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"
@@ -324,15 +318,11 @@ const ALL = [
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */
-const norm = (s: any) => (s || "")
-  .toString()
-  .normalize("NFD")
-  .replace(/[\u0300-\u036f]/g, "")
-  .toLowerCase();
+const norm = (s) => (s || "").toString().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-const makeSearchText = (p: any) => {
+const makeSearchText = (p) => {
   const locales = ["en","fr","es"];
-  const parts: string[] = [];
+  const parts = [];
 
   for (const L of locales) {
     parts.push(p.i18n?.[L]?.title || "");
@@ -340,7 +330,7 @@ const makeSearchText = (p: any) => {
   }
   parts.push(p.category || "");
   for (const L of locales) {
-    const labels = (UI as any)?.[L]?.catLabels || {};
+    const labels = UI?.[L]?.catLabels || {};
     parts.push(labels[p.category] || "");
   }
   try {
@@ -351,7 +341,7 @@ const makeSearchText = (p: any) => {
   return norm(parts.join(" "));
 };
 
-const matchesQuery = (blob: string, q: string) => {
+const matchesQuery = (blob, q) => {
   const terms = norm(q).split(/\s+/).filter(Boolean);
   return terms.every(t => blob.includes(t));
 };
@@ -359,26 +349,26 @@ const matchesQuery = (blob: string, q: string) => {
 /** ===== Main Component ===== */
 export default function Home() {
   // language (persist)
-  const [lang, setLang] = useState<"en"|"fr"|"es">("en");
+  const [lang, setLang] = useState("en");
   useEffect(() => {
     try {
       const saved = localStorage.getItem("aidfinder_lang");
-      if (saved) setLang(saved as any);
+      if (saved) setLang(saved);
       else {
         const br = (navigator.language || "en").slice(0,2);
-        if (["en","fr","es"].includes(br)) setLang(br as any);
+        if (["en","fr","es"].includes(br)) setLang(br);
       }
     } catch {}
   }, []);
   useEffect(() => { try { localStorage.setItem("aidfinder_lang", lang); } catch {} }, [lang]);
 
   // theme (persist)
-  const [theme, setTheme] = useState<"light"|"dark">("light");
+  const [theme, setTheme] = useState("light");
   useEffect(()=>{
     try{
       const saved = localStorage.getItem("aidfinder_theme");
       const sysDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const t = (saved as any) || (sysDark ? "dark":"light");
+      const t = saved || (sysDark ? "dark":"light");
       setTheme(t);
       document.documentElement.setAttribute("data-theme", t==="dark" ? "dark": "light");
     }catch{}
@@ -390,7 +380,7 @@ export default function Home() {
     }catch{}
   },[theme]);
 
-  const T = (UI as any)[lang];
+  const T = UI[lang];
 
   // search, category, state
   const [query, setQuery] = useState("");
@@ -398,19 +388,19 @@ export default function Home() {
   const [stateSel, setStateSel] = useState("All States");
 
   // favorites (persist)
-  const [favs, setFavs] = useState<string[]>([]);
+  const [favs, setFavs] = useState([]);
   useEffect(()=>{ const raw = localStorage.getItem("aidfinder_favs"); if(raw) setFavs(JSON.parse(raw)); },[]);
   useEffect(()=>{ localStorage.setItem("aidfinder_favs", JSON.stringify(favs)); },[favs]);
-  const toggleFav = (id: string)=> setFavs(prev => prev.includes(id) ? prev.filter(x=>x!==id) : [...prev, id]);
-  const isFav = (id: string)=> favs.includes(id);
+  const toggleFav = (id)=> setFavs(prev => prev.includes(id) ? prev.filter(x=>x!==id) : [...prev, id]);
+  const isFav = (id)=> favs.includes(id);
 
   // share menu state
-  const [shareOpenIndex, setShareOpenIndex] = useState<number|null>(null);
+  const [shareOpenIndex, setShareOpenIndex] = useState(null);
   const [shareOpenModal, setShareOpenModal] = useState(false);
 
   // heart pulse
-  const [animMap, setAnimMap] = useState<Record<string, boolean>>({});
-  const triggerAnim = (id: string) => {
+  const [animMap, setAnimMap] = useState({});
+  const triggerAnim = (id) => {
     setAnimMap(m => ({ ...m, [id]: true }));
     setTimeout(() => setAnimMap(m => ({ ...m, [id]: false })), 300);
   };
@@ -423,16 +413,16 @@ export default function Home() {
   }, []);
 
   // share helpers
-  const shareEmail = (p: any) => {
+  const shareEmail = (p) => {
     const subject = encodeURIComponent(`Aid program: ${p.i18n[lang].title}`);
     const body = encodeURIComponent(`${p.i18n[lang].title}\n\n${p.i18n[lang].desc}\n\nLink: ${p.link}`);
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
   };
-  const shareWhatsApp = (p: any) => {
+  const shareWhatsApp = (p) => {
     const text = encodeURIComponent(`${p.i18n[lang].title} — ${p.i18n[lang].desc}\n${p.link}`);
     window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
   };
-  const doNativeShare = async (p: any) => {
+  const doNativeShare = async (p) => {
     if (navigator.share) {
       try {
         await navigator.share({ title: p.i18n[lang].title, text: p.i18n[lang].desc, url: p.link });
@@ -452,7 +442,7 @@ export default function Home() {
     }
 
     const blobs = new Map();
-    const getBlob = (p: any) => {
+    const getBlob = (p) => {
       if (!blobs.has(p)) blobs.set(p, makeSearchText(p));
       return blobs.get(p);
     };
@@ -465,9 +455,9 @@ export default function Home() {
 
   // details modal
   const [open, setOpen] = useState(false);
-  const [current, setCurrent] = useState<any>(null);
+  const [current, setCurrent] = useState(null);
 
-  /** ===== NEW: simple stagger-on-mount for cards ===== */
+  /** ===== simple stagger-on-mount for cards ===== */
   const [reveal, setReveal] = useState(false);
   useEffect(() => { setReveal(true); }, []);
 
@@ -502,7 +492,7 @@ export default function Home() {
                 id="langSel"
                 className="langSelect"
                 value={lang}
-                onChange={(e)=> setLang(e.target.value as any)}
+                onChange={(e)=> setLang(e.target.value)}
               >
                 <option value="en">English</option>
                 <option value="fr">Français</option>
@@ -517,7 +507,7 @@ export default function Home() {
                 id="themeSel"
                 className="langSelect"
                 value={theme}
-                onChange={(e)=>setTheme(e.target.value as any)}
+                onChange={(e)=>setTheme(e.target.value)}
               >
                 <option value="light">{T.light}</option>
                 <option value="dark">{T.dark}</option>
@@ -541,7 +531,7 @@ export default function Home() {
           <div className="searchWrap">
             <form
               className="searchInlineForm"
-              onSubmit={(e)=>{ e.preventDefault(); /* filtering reacts to `query` */ }}
+              onSubmit={(e)=>{ e.preventDefault(); }}
               role="search"
               aria-label={T.searchPlaceholder}
             >
@@ -580,7 +570,7 @@ export default function Home() {
           <div className="filtersRow">
             {/* Category chips */}
             <div className="chips scrollX" role="tablist" aria-label="Categories">
-              {UI[lang].categories.map((key: string)=>{
+              {UI[lang].categories.map(key=>{
                 const active = cat===key;
                 return (
                   <button
@@ -619,13 +609,12 @@ export default function Home() {
             <span className="muted">{programs.length} {T.programCount}</span>
           </div>
 
-          {/* Donate (single animated button) */}
+          {/* Donate (single button to PayPal – custom amount) */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
             <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
               Your donation helps keep this app free for families in need ❤️
             </p>
-
             <a
               className="af-donate"
               href="https://www.paypal.com/donate?business=T7UXDRDVCHGKE&currency_code=USD"
@@ -643,12 +632,12 @@ export default function Home() {
 
         {/* Cards */}
         <section className={`grid ${reveal ? "reveal" : ""}`}>
-          {programs.map((p: any, i: number)=>{
+          {programs.map((p,i)=>{
             const title = p.i18n[lang]?.title || p.i18n.en.title;
             const desc  = p.i18n[lang]?.desc  || p.i18n.en.desc;
             return (
-              <article className="card" key={p.link} style={{ ["--i" as any]: i }}>
-                <div className="badge" style={{background: (ICONS_BADGE_BG as any)[p.category] || "var(--border)"}}>
+              <article className="card" key={p.link} style={{ "--i": i }}>
+                <div className="badge" style={{background: ICONS_BADGE_BG[p.category] || "var(--border)"}}>
                   {UI[lang].catLabels[p.category] || p.category}
                 </div>
 
@@ -725,7 +714,7 @@ export default function Home() {
             <div className="backdrop" onClick={()=>{ setOpen(false); setShareOpenModal(false); }} />
             <div className="modal" role="dialog" aria-modal="true" aria-label="Program details">
               <div className="modalHeader">
-                <span className="badge" style={{background: (ICONS_BADGE_BG as any)[current.category] || "var(--border)"}}>
+                <span className="badge" style={{background: ICONS_BADGE_BG[current.category] || "var(--border)"}}>
                   {UI[lang].catLabels[current.category] || current.category}
                 </span>
                 <button className="closeX" onClick={()=>{ setOpen(false); setShareOpenModal(false); }} aria-label={T.close}>✕</button>
@@ -777,271 +766,71 @@ export default function Home() {
         </footer>
       </main>
 
-      {/* Global CSS: typography, layout, effects, donate */}
+      {/* Global CSS */}
       <style jsx global>{`
-        /* =========================
-           AidFinder Global Styles
-           ========================= */
-
-        /* Fonts: everything modern sans (Inter) */
         :root{
-          /* Inter variable (from next/font) */
-          --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                       Roboto, Helvetica, Arial, "Apple Color Emoji",
-                       "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-          /* Keep var for compatibility if referenced elsewhere */
-          --font-serif: var(--font-sans);
-
-          /* Brand colors */
-          --af-green: #19c37d;
-          --af-green-dark: #17a56b;
-          --af-text-on-green: #0b1f17;
-
-          /* Tints used by badges (with sensible fallbacks) */
-          --tint-food: #ecfdf5;
-          --tint-health: #fee2e2;
-          --tint-housing: #eef2ff;
-          --tint-utilities: #f0f9ff;
-          --tint-education: #fff7ed;
-          --tint-income: #f5f3ff;
-
-          /* Surfaces */
-          --border:#e5e7eb;
-          --muted:#6b7280;
-          --bg:#ffffff;
-          --bg-soft:#fafafa;
-          --text:#0f172a;
+          --tint-food:#ecfdf5; --tint-health:#fee2e2; --tint-housing:#eef2ff; --tint-utilities:#f0f9ff; --tint-education:#fff7ed; --tint-income:#f5f3ff;
+          --border:#e5e7eb; --muted:#6b7280; --bg:#ffffff; --text:#0f172a;
+          --af-green:#19c37d; --af-green-dark:#17a56b; --af-text-on-green:#0b1f17;
         }
-        [data-theme="dark"] :root,
-        :root[data-theme="dark"]{
-          --bg:#0b1220;
-          --bg-soft:#0f172a;
-          --text:#e5e7eb;
-          --border:#1f2937;
-          --muted:#94a3b8;
+        [data-theme="dark"] :root, :root[data-theme="dark"]{
+          --bg:#0b1220; --text:#e5e7eb; --border:#1f2937; --muted:#94a3b8;
         }
-
-        html, body{
-          font-family: var(--font-sans);
-          font-size: 17px;
-          line-height: 1.55;
-          background: var(--bg);
-          color: var(--text);
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          margin:0; padding:0;
-        }
-        h1,h2,h3,h4,h5,h6{
-          font-family: var(--font-sans);
-          font-weight:700;
-          letter-spacing:.2px;
-          margin:0 0 .35em 0;
-        }
-        p{ margin:.5em 0 1em; }
-
-        /* Layout basics */
-        .container{ width: min(1100px, 92%); margin: 0 auto; }
-        .nav{
-          position: sticky; top: 0; z-index: 20;
-          background: var(--bg); border-bottom:1px solid var(--border);
-          backdrop-filter: saturate(1.2) blur(4px);
-        }
-        .headerRow{
-          display:flex; justify-content:space-between; align-items:center;
-          padding:10px 0;
-        }
+        html, body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+        .container{ width:min(1100px,92%); margin:0 auto; }
+        .nav{ position:sticky; top:0; z-index:20; background:var(--bg); border-bottom:1px solid var(--border); }
+        .headerRow{ display:flex; justify-content:space-between; align-items:center; padding:10px 0; }
         .brandRow{ display:flex; align-items:center; gap:10px; }
         .hero{ text-align:center; padding:28px 0 8px; }
-        .toolbar{ margin-top: 8px; }
-        .filtersRow{
-          display:flex; align-items:center; justify-content:space-between;
-          gap:12px; margin-top:12px; flex-wrap:wrap;
-        }
+        .toolbar{ margin-top:8px; }
+        .filtersRow{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:12px; flex-wrap:wrap; }
         .stateSelectWrap{ display:flex; align-items:center; gap:6px; }
-        .langSelect{
-          border:1px solid var(--border); background:var(--bg);
-          color:var(--text); border-radius:10px; padding:8px 10px;
-        }
+        .langSelect{ border:1px solid var(--border); background:var(--bg); color:var(--text); border-radius:10px; padding:8px 10px; }
         .countRow{ margin-top:10px; }
-        .muted{ color: var(--muted); }
-
-        /* Chips */
+        .muted{ color:var(--muted); }
         .chips{ display:flex; gap:8px; overflow:auto; padding:2px 0; }
         .chips::-webkit-scrollbar{ display:none; }
-        .chip{
-          border:1px solid var(--border);
-          background: var(--bg);
-          color: var(--text);
-          border-radius: 999px;
-          padding: 8px 12px;
-          cursor:pointer;
-          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
-        }
-        .chipActive{
-          background: #e6f8f0;
-          border-color: #cdeee1;
-          color:#0b3d2b;
-        }
-        [data-theme="dark"] .chipActive{
-          background:#0f2a22; border-color:#0e3527; color:#c6f0dc;
-        }
-
-        /* Buttons */
-        .apply{
-          background:#111827; color:#fff; border:0;
-          border-radius:10px; padding:10px 14px; text-decoration:none; font-weight:700;
-          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
-        }
+        .chip{ border:1px solid var(--border); background:var(--bg); color:var(--text); border-radius:999px; padding:8px 12px; cursor:pointer; }
+        .chipActive{ background:#e6f8f0; border-color:#cdeee1; color:#0b3d2b; }
+        [data-theme="dark"] .chipActive{ background:#0f2a22; border-color:#0e3527; color:#c6f0dc; }
+        .apply{ background:#111827; color:#fff; border:0; border-radius:10px; padding:10px 14px; text-decoration:none; font-weight:700; }
         [data-theme="dark"] .apply{ background:#e5e7eb; color:#0b1220; }
-        .secondary{
-          background:transparent; color:var(--text);
-          border:1px solid var(--border);
-          border-radius:10px; padding:9px 12px; cursor:pointer;
-          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
-        }
-        .iconBtn{
-          background:transparent; border:1px solid var(--border); border-radius:10px;
-          padding:8px 10px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer;
-        }
-        .apply:hover, .secondary:hover, .chip:hover { transform: translateY(-1px); }
-
-        /* Search (inline field) */
-        .searchInlineForm { width: 100%; margin-top: 20px; }
-        .searchInline { position: relative; width: 100%; }
-        .searchInlineInput {
-          width: 100%;
-          padding: 12px 96px 12px 14px;
-          border-radius: 12px;
-          border: 1px solid var(--border);
-          outline: none;
-          font-size: 16px;
-          background: var(--bg);
-          color: var(--text);
-        }
-        .searchInlineInput:focus {
-          border-color: var(--af-green);
-          box-shadow: 0 0 0 3px rgba(22,163,74,.15);
-        }
-        .searchInlineActions {
-          position: absolute;
-          right: 8px;
-          top: 50%;
-          transform: translateY(-50%);
-          display: flex; gap: 6px;
-        }
-        .iconOnly {
-          height: 36px; min-width: 36px;
-          padding: 0 8px;
-          border-radius: 8px;
-          border: 1px solid transparent;
-          background: transparent;
-          color: var(--af-green);
-          cursor: pointer;
-          display: inline-flex; align-items: center; justify-content: center;
-          font-size: 18px; line-height: 1;
-        }
-        .iconOnly:hover, .iconOnly:focus { background: rgba(22,163,74,0.08); outline: none; }
-
-        /* Cards + grid */
-        .grid{
-          display:grid; gap:14px;
-          grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-          margin: 16px 0 28px;
-        }
-        .card{
-          border:1px solid var(--border); background:var(--bg);
-          border-radius:16px; padding:14px;
-          box-shadow: 0 2px 6px rgba(0,0,0,.03);
-          transition: box-shadow 180ms ease, transform 180ms ease, opacity 480ms ease;
-          opacity: 0; transform: translateY(16px);
-        }
-        .grid.reveal .card { opacity: 1; transform: translateY(0); }
-        .card:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
+        .secondary{ background:transparent; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:9px 12px; cursor:pointer; }
+        .iconBtn{ background:transparent; border:1px solid var(--border); border-radius:10px; padding:8px 10px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; }
+        .searchInlineForm{ width:100%; margin-top:20px; }
+        .searchInline{ position:relative; width:100%; }
+        .searchInlineInput{ width:100%; padding:12px 96px 12px 14px; border-radius:12px; border:1px solid var(--border); outline:none; font-size:16px; background:var(--bg); color:var(--text); }
+        .searchInlineInput:focus{ border-color:var(--af-green); box-shadow:0 0 0 3px rgba(22,163,74,.15); }
+        .searchInlineActions{ position:absolute; right:8px; top:50%; transform:translateY(-50%); display:flex; gap:6px; }
+        .iconOnly{ height:36px; min-width:36px; padding:0 8px; border-radius:8px; border:1px solid transparent; background:transparent; color:var(--af-green); cursor:pointer; display:inline-flex; align-items:center; justify-content:center; font-size:18px; }
+        .grid{ display:grid; gap:14px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin:16px 0 28px; }
+        .card{ border:1px solid var(--border); background:var(--bg); border-radius:16px; padding:14px; box-shadow:0 2px 6px rgba(0,0,0,.03); transition: box-shadow 180ms ease, transform 180ms ease, opacity 480ms ease; opacity:0; transform:translateY(16px); }
+        .grid.reveal .card{ opacity:1; transform:translateY(0); }
+        .card:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
         .card h3{ display:flex; align-items:center; gap:6px; margin:6px 0 6px; }
-        .badge{
-          display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px;
-          border:1px solid var(--border); margin-bottom:8px; color:#0f172a;
-        }
+        .badge{ display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); margin-bottom:8px; color:#0f172a; }
         [data-theme="dark"] .badge{ color:#cbd5e1; }
         .cardActions{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px; }
-
-        /* Modal */
         .backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:40; }
-        .modal{
-          position:fixed; inset:auto 0 0 0; margin:auto; top:10%;
-          width:min(680px, 92%); background:var(--bg); color:var(--text);
-          border:1px solid var(--border); border-radius:16px; padding:16px; z-index:50;
-          box-shadow: 0 10px 30px rgba(0,0,0,.2);
-        }
+        .modal{ position:fixed; inset:auto 0 0 0; margin:auto; top:10%; width:min(680px,92%); background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:16px; padding:16px; z-index:50; box-shadow:0 10px 30px rgba(0,0,0,.2); }
         .modalHeader{ display:flex; align-items:center; justify-content:space-between; }
         .modalTitle{ margin:.25rem 0 .5rem; }
-        .modalBody{ color: var(--text); }
+        .modalBody{ color:var(--text); }
         .modalActions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
         .closeX{ background:transparent; border:0; cursor:pointer; font-size:18px; color:var(--text); }
-
-        /* Menus */
         .menuWrap{ position:relative; display:inline-block; }
-        .menu{
-          position:absolute; top:100%; left:0; margin-top:6px; min-width: 220px;
-          background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:6px;
-          box-shadow: 0 8px 24px rgba(0,0,0,.10); z-index:30;
-        }
-        .menu button{
-          width:100%; text-align:left; background:transparent; border:0; padding:8px 10px; border-radius:8px; cursor:pointer; color:var(--text);
-        }
+        .menu{ position:absolute; top:100%; left:0; margin-top:6px; min-width:220px; background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:6px; box-shadow:0 8px 24px rgba(0,0,0,.10); z-index:30; }
+        .menu button{ width:100%; text-align:left; background:transparent; border:0; padding:8px 10px; border-radius:8px; cursor:pointer; color:var(--text); }
         .menu button:hover{ background: rgba(22,163,74,.08); }
-
-        /* Empty state */
         .empty{ text-align:center; padding:32px 0; color:var(--muted); }
         .emptyArt{ font-size:46px; margin-bottom:10px; }
-
-        /* Footer */
-        .footer{ border-top:1px solid var(--border); text-align:center; padding:18px 0; color: var(--muted); }
-
-        /* Heart pulse */
-        .pulse { animation: pulseAnim 0.3s ease-in-out; }
-        @keyframes pulseAnim { 0% { transform: scale(1); opacity: 0.85; } 50% { transform: scale(1.3); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
-
-        /* Donate button (animated) */
-        :root{
-          --af-donate-bg: var(--af-green);
-          --af-donate-bg-dark: var(--af-green-dark);
-          --af-donate-text: var(--af-text-on-green);
-          --af-donate-ring: rgba(25,195,125,.45);
-          --af-donate-shadow: rgba(25,195,125,.55);
-        }
-        @media (prefers-color-scheme: dark){
-          :root{
-            --af-donate-text:#05110c;
-            --af-donate-ring:rgba(25,195,125,.55);
-            --af-donate-shadow:rgba(25,195,125,.75);
-          }
-        }
-        .af-donate{
-          position:relative; display:inline-grid; grid-auto-flow:column; align-items:center; gap:.6rem;
-          padding:1.05rem 1.4rem; border-radius:999px; background:var(--af-donate-bg); color:var(--af-donate-text);
-          font-weight:700; text-decoration:none; line-height:1;
-          box-shadow: 0 10px 24px -8px var(--af-donate-shadow), 0 2px 0 rgba(0,0,0,.06) inset;
-          isolation:isolate; transform:translateZ(0);
-          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
-        }
-        .af-donate__icon{ font-size: 1.35rem; }
-        .af-donate__text{ font-size: 1.15rem; letter-spacing:.2px; }
-        .af-donate__sub { font-size: .86rem; font-weight:600; opacity:.9; }
-        @media (max-width:480px){ .af-donate{ grid-auto-flow:row; text-align:center; padding:1.1rem 1.2rem; width:min(92%, 460px); } }
-        .af-donate:hover{ background:var(--af-donate-bg-dark); box-shadow: 0 16px 36px -10px var(--af-donate-shadow), 0 2px 0 rgba(0,0,0,.08) inset; transform:translateY(-1px); }
-        .af-donate:active{ transform: translateY(0); }
-        .af-donate::before, .af-donate::after{ content:""; position:absolute; inset:-6px; border-radius:inherit; z-index:-1; pointer-events:none; }
-        .af-donate::before{ background: radial-gradient(60% 60% at 50% 50%, var(--af-donate-ring) 0%, transparent 70%); filter: blur(12px); opacity:.85; }
-        .af-donate::after{ border:2px solid var(--af-donate-ring); animation: af-ring 2.2s ease-out infinite; }
-        @keyframes af-ring{ 0% { opacity:.9; transform: scale(.98); } 70%,100% { opacity:0; transform: scale(1.25); } }
-        @media (prefers-reduced-motion: reduce){ .af-donate::after{ animation:none; opacity:.35; } .card, .chip, .apply, .secondary, .af-donate { transition: none !important; } }
-
-        /* Signature micro-interaction (lift on hover) */
-        a.apply, .secondary, .chip, .af-donate {
-          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
-        }
-        a.apply:hover, .secondary:hover, .chip:hover { transform: translateY(-1px); }
+        .footer{ border-top:1px solid var(--border); text-align:center; padding:18px 0; color:var(--muted); }
+        .pulse{ animation:pulseAnim .3s ease-in-out; } @keyframes pulseAnim{ 0%{transform:scale(1);opacity:.85;} 50%{transform:scale(1.3);opacity:1;} 100%{transform:scale(1);opacity:1;} }
+        /* Donate button */
+        :root{ --af-donate-bg:#19c37d; --af-donate-bg-dark:#17a56b; --af-donate-text:#0b1f17; --af-donate-ring:rgba(25,195,125,.45); --af-donate-shadow:rgba(25,195,125,.55); }
+        .af-donate{ position:relative; display:inline-grid; grid-auto-flow:column; align-items:center; gap:.6rem; padding:1.05rem 1.4rem; border-radius:999px; background:var(--af-donate-bg); color:var(--af-donate-text); font-weight:700; text-decoration:none; line-height:1; box-shadow:0 10px 24px -8px var(--af-donate-shadow), 0 2px 0 rgba(0,0,0,.06) inset; isolation:isolate; transform:translateZ(0); }
+        .af-donate__icon{ font-size:1.35rem; } .af-donate__text{ font-size:1.15rem; letter-spacing:.2px; } .af-donate__sub{ font-size:.86rem; font-weight:600; opacity:.9; }
+        .af-donate:hover{ background:var(--af-donate-bg-dark); box-shadow:0 16px 36px -10px var(--af-donate-shadow), 0 2px 0 rgba(0,0,0,.08) inset; transform:translateY(-1px); }
       `}</style>
     </>
   );

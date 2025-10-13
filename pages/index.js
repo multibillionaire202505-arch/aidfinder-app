@@ -135,8 +135,13 @@ const ICONS = {
   Education: "🎓",
   Income: "💲",
   Health: (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" style={{ verticalAlign: "middle" }} aria-hidden="true" focusable="false">
-      <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z" fill="red" stroke="red" strokeWidth="1.5" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+      width="20" height="20" style={{ verticalAlign: "middle" }}
+      aria-hidden="true" focusable="false"
+    >
+      <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"
+        fill="red" stroke="red" strokeWidth="1.5" />
     </svg>
   ),
 };
@@ -457,7 +462,7 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(null);
 
-  /** ===== simple stagger-on-mount for cards ===== */
+  // stagger-on-mount for cards
   const [reveal, setReveal] = useState(false);
   useEffect(() => { setReveal(true); }, []);
 
@@ -527,7 +532,7 @@ export default function Home() {
 
         {/* Toolbar */}
         <section className="toolbar">
-          {/* SEARCH with inline Search/Clear inside the field (green, minimal) */}
+          {/* SEARCH with inline Search/Clear inside the field */}
           <div className="searchWrap">
             <form
               className="searchInlineForm"
@@ -609,7 +614,7 @@ export default function Home() {
             <span className="muted">{programs.length} {T.programCount}</span>
           </div>
 
-          {/* Donate (single button to PayPal – custom amount) */}
+          {/* Donate (single button → PayPal custom amount page) */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
             <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
@@ -776,7 +781,8 @@ export default function Home() {
         [data-theme="dark"] :root, :root[data-theme="dark"]{
           --bg:#0b1220; --text:#e5e7eb; --border:#1f2937; --muted:#94a3b8;
         }
-        html, body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+        html, body{ margin:0; padding:0; background:var(--bg); color:var(--text);
+          font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
         .container{ width:min(1100px,92%); margin:0 auto; }
         .nav{ position:sticky; top:0; z-index:20; background:var(--bg); border-bottom:1px solid var(--border); }
         .headerRow{ display:flex; justify-content:space-between; align-items:center; padding:10px 0; }
@@ -788,48 +794,102 @@ export default function Home() {
         .langSelect{ border:1px solid var(--border); background:var(--bg); color:var(--text); border-radius:10px; padding:8px 10px; }
         .countRow{ margin-top:10px; }
         .muted{ color:var(--muted); }
+
+        /* Chips */
         .chips{ display:flex; gap:8px; overflow:auto; padding:2px 0; }
         .chips::-webkit-scrollbar{ display:none; }
-        .chip{ border:1px solid var(--border); background:var(--bg); color:var(--text); border-radius:999px; padding:8px 12px; cursor:pointer; }
+        .chip{ border:1px solid var(--border); background:var(--bg); color:var(--text);
+          border-radius:999px; padding:8px 12px; cursor:pointer; }
         .chipActive{ background:#e6f8f0; border-color:#cdeee1; color:#0b3d2b; }
         [data-theme="dark"] .chipActive{ background:#0f2a22; border-color:#0e3527; color:#c6f0dc; }
+
+        /* Buttons */
         .apply{ background:#111827; color:#fff; border:0; border-radius:10px; padding:10px 14px; text-decoration:none; font-weight:700; }
         [data-theme="dark"] .apply{ background:#e5e7eb; color:#0b1220; }
-        .secondary{ background:transparent; color:var(--text); border:1px solid var(--border); border-radius:10px; padding:9px 12px; cursor:pointer; }
+        .secondary{ background:transparent; color:var(--text);
+          border:1px solid var(--border); border-radius:10px; padding:9px 12px; cursor:pointer; }
         .iconBtn{ background:transparent; border:1px solid var(--border); border-radius:10px; padding:8px 10px; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; }
+
+        /* Search */
         .searchInlineForm{ width:100%; margin-top:20px; }
         .searchInline{ position:relative; width:100%; }
-        .searchInlineInput{ width:100%; padding:12px 96px 12px 14px; border-radius:12px; border:1px solid var(--border); outline:none; font-size:16px; background:var(--bg); color:var(--text); }
+        .searchInlineInput{
+          width:100%; padding:12px 96px 12px 14px; border-radius:12px; border:1px solid var(--border);
+          outline:none; font-size:16px; background:var(--bg); color:var(--text);
+        }
         .searchInlineInput:focus{ border-color:var(--af-green); box-shadow:0 0 0 3px rgba(22,163,74,.15); }
         .searchInlineActions{ position:absolute; right:8px; top:50%; transform:translateY(-50%); display:flex; gap:6px; }
-        .iconOnly{ height:36px; min-width:36px; padding:0 8px; border-radius:8px; border:1px solid transparent; background:transparent; color:var(--af-green); cursor:pointer; display:inline-flex; align-items:center; justify-content:center; font-size:18px; }
+        .iconOnly{ height:36px; min-width:36px; padding:0 8px; border-radius:8px; border:1px solid transparent;
+          background:transparent; color:var(--af-green); cursor:pointer; display:inline-flex; align-items:center; justify-content:center; font-size:18px; }
+
+        /* Cards + grid */
         .grid{ display:grid; gap:14px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin:16px 0 28px; }
-        .card{ border:1px solid var(--border); background:var(--bg); border-radius:16px; padding:14px; box-shadow:0 2px 6px rgba(0,0,0,.03); transition: box-shadow 180ms ease, transform 180ms ease, opacity 480ms ease; opacity:0; transform:translateY(16px); }
+        .card{ border:1px solid var(--border); background:var(--bg); border-radius:16px; padding:14px;
+          box-shadow:0 2px 6px rgba(0,0,0,.03); transition: box-shadow 180ms ease, transform 180ms ease, opacity 480ms ease;
+          opacity:0; transform:translateY(16px); }
         .grid.reveal .card{ opacity:1; transform:translateY(0); }
         .card:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 6px 18px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06); }
         .card h3{ display:flex; align-items:center; gap:6px; margin:6px 0 6px; }
         .badge{ display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); margin-bottom:8px; color:#0f172a; }
         [data-theme="dark"] .badge{ color:#cbd5e1; }
         .cardActions{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:10px; }
+
+        /* Modal */
         .backdrop{ position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:40; }
-        .modal{ position:fixed; inset:auto 0 0 0; margin:auto; top:10%; width:min(680px,92%); background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:16px; padding:16px; z-index:50; box-shadow:0 10px 30px rgba(0,0,0,.2); }
+        .modal{
+          position:fixed; inset:auto 0 0 0; margin:auto; top:10%;
+          width:min(680px, 92%); background:var(--bg); color:var(--text);
+          border:1px solid var(--border); border-radius:16px; padding:16px; z-index:50;
+          box-shadow:0 10px 30px rgba(0,0,0,.2);
+        }
         .modalHeader{ display:flex; align-items:center; justify-content:space-between; }
         .modalTitle{ margin:.25rem 0 .5rem; }
-        .modalBody{ color:var(--text); }
+        .modalBody{ color: var(--text); }
         .modalActions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
         .closeX{ background:transparent; border:0; cursor:pointer; font-size:18px; color:var(--text); }
+
+        /* Menus */
         .menuWrap{ position:relative; display:inline-block; }
-        .menu{ position:absolute; top:100%; left:0; margin-top:6px; min-width:220px; background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:6px; box-shadow:0 8px 24px rgba(0,0,0,.10); z-index:30; }
-        .menu button{ width:100%; text-align:left; background:transparent; border:0; padding:8px 10px; border-radius:8px; cursor:pointer; color:var(--text); }
+        .menu{
+          position:absolute; top:100%; left:0; margin-top:6px; min-width: 220px;
+          background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:6px;
+          box-shadow: 0 8px 24px rgba(0,0,0,.10); z-index:30;
+        }
+        .menu button{
+          width:100%; text-align:left; background:transparent; border:0; padding:8px 10px; border-radius:8px; cursor:pointer; color:var(--text);
+        }
         .menu button:hover{ background: rgba(22,163,74,.08); }
+
+        /* Empty state */
         .empty{ text-align:center; padding:32px 0; color:var(--muted); }
         .emptyArt{ font-size:46px; margin-bottom:10px; }
-        .footer{ border-top:1px solid var(--border); text-align:center; padding:18px 0; color:var(--muted); }
-        .pulse{ animation:pulseAnim .3s ease-in-out; } @keyframes pulseAnim{ 0%{transform:scale(1);opacity:.85;} 50%{transform:scale(1.3);opacity:1;} 100%{transform:scale(1);opacity:1;} }
-        /* Donate button */
-        :root{ --af-donate-bg:#19c37d; --af-donate-bg-dark:#17a56b; --af-donate-text:#0b1f17; --af-donate-ring:rgba(25,195,125,.45); --af-donate-shadow:rgba(25,195,125,.55); }
-        .af-donate{ position:relative; display:inline-grid; grid-auto-flow:column; align-items:center; gap:.6rem; padding:1.05rem 1.4rem; border-radius:999px; background:var(--af-donate-bg); color:var(--af-donate-text); font-weight:700; text-decoration:none; line-height:1; box-shadow:0 10px 24px -8px var(--af-donate-shadow), 0 2px 0 rgba(0,0,0,.06) inset; isolation:isolate; transform:translateZ(0); }
-        .af-donate__icon{ font-size:1.35rem; } .af-donate__text{ font-size:1.15rem; letter-spacing:.2px; } .af-donate__sub{ font-size:.86rem; font-weight:600; opacity:.9; }
+
+        /* Footer */
+        .footer{ border-top:1px solid var(--border); text-align:center; padding:18px 0; color: var(--muted); }
+
+        /* Heart pulse */
+        .pulse{ animation:pulseAnim .3s ease-in-out; }
+        @keyframes pulseAnim{ 0%{transform:scale(1);opacity:.85;} 50%{transform:scale(1.3);opacity:1;} 100%{transform:scale(1);opacity:1;} }
+
+        /* Donate button (animated) */
+        :root{
+          --af-donate-bg:#19c37d;
+          --af-donate-bg-dark:#17a56b;
+          --af-donate-text:#0b1f17;
+          --af-donate-ring:rgba(25,195,125,.45);
+          --af-donate-shadow:rgba(25,195,125,.55);
+        }
+        .af-donate{
+          position:relative; display:inline-grid; grid-auto-flow:column; align-items:center; gap:.6rem;
+          padding:1.05rem 1.4rem; border-radius:999px; background:var(--af-donate-bg); color:var(--af-donate-text);
+          font-weight:700; text-decoration:none; line-height:1;
+          box-shadow: 0 10px 24px -8px var(--af-donate-shadow), 0 2px 0 rgba(0,0,0,.06) inset;
+          isolation:isolate; transform:translateZ(0);
+          transition: transform .16s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+        }
+        .af-donate__icon{ font-size:1.35rem; }
+        .af-donate__text{ font-size:1.15rem; letter-spacing:.2px; }
+        .af-donate__sub{ font-size:.86rem; font-weight:600; opacity:.9; }
         .af-donate:hover{ background:var(--af-donate-bg-dark); box-shadow:0 16px 36px -10px var(--af-donate-shadow), 0 2px 0 rgba(0,0,0,.08) inset; transform:translateY(-1px); }
       `}</style>
     </>

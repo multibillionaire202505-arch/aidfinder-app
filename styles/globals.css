@@ -2,10 +2,10 @@
    AidFinder Global Styles
    ========================= */
 
-/* ---------- Fonts ---------- */
+/* ---------- Fonts: body (modern sans), headings (classic serif) ---------- */
 :root {
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
-    "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans",
+    "Apple Color Emoji", "Segoe UI Emoji";
   --font-serif: "Times New Roman", Times, serif;
 
   /* Brand colors */
@@ -13,23 +13,33 @@
   --af-green-dark: #17a56b;
   --af-text-on-green: #0b1f17;
 
-  /* Category tints */
-  --tint-food: #ecfdf5;
-  --tint-health: #fee2e2;
-  --tint-housing: #eef2ff;
-  --tint-utilities: #f0f9ff;
-  --tint-education: #fff7ed;
-  --tint-income: #f5f3ff;
+  /* Tints used by badges */
+  --tint-food: #ecfdf5;       /* light green */
+  --tint-health: #fee2e2;     /* light red */
+  --tint-housing: #eef2ff;    /* light indigo */
+  --tint-utilities: #f0f9ff;  /* light sky */
+  --tint-education: #fff7ed;  /* light orange */
+  --tint-income: #f5f3ff;     /* light violet */
 
-  /* UI colors */
+  /* Surfaces */
   --border: #e5e7eb;
   --muted: #6b7280;
   --bg: #ffffff;
   --bg-soft: #fafafa;
   --text: #0f172a;
+
+  /* Donate button vars */
+  --af-donate-bg: var(--af-green);
+  --af-donate-bg-dark: var(--af-green-dark);
+  --af-donate-text: var(--af-text-on-green);
+  --af-donate-ring: rgba(25, 195, 125, 0.45);
+  --af-donate-shadow: rgba(25, 195, 125, 0.55);
 }
 
-[data-theme="dark"] {
+/* Optional manual dark mode toggle:
+   put data-theme="dark" on <html> or <body> */
+html[data-theme="dark"],
+body[data-theme="dark"] {
   --bg: #0b1220;
   --bg-soft: #0f172a;
   --text: #e5e7eb;
@@ -37,17 +47,26 @@
   --muted: #94a3b8;
 }
 
-/* ---------- Base ---------- */
+/* Automatic dark mode preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --af-donate-text: #05110c;
+    --af-donate-ring: rgba(25, 195, 125, 0.55);
+    --af-donate-shadow: rgba(25, 195, 125, 0.75);
+  }
+}
+
 html,
 body {
-  margin: 0;
-  padding: 0;
   font-family: var(--font-sans);
   font-size: 17px;
   line-height: 1.55;
   background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -58,26 +77,114 @@ h5,
 h6 {
   font-family: var(--font-serif);
   font-weight: 700;
-  margin: 0 0 0.35em;
+  letter-spacing: 0.2px;
+  margin: 0 0 0.35em 0;
 }
 
 p {
   margin: 0.5em 0 1em;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* ---------- Layout ---------- */
+/* ---------- Layout basics ---------- */
 .container {
   width: min(1100px, 92%);
   margin: 0 auto;
 }
 
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: saturate(1.2) blur(4px);
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero {
+  text-align: center;
+  padding: 28px 0 8px;
+}
+
+.toolbar {
+  margin-top: 8px;
+}
+
+.filtersRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.stateSelectWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.langSelect {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.countRow {
+  margin-top: 10px;
+}
+
 .muted {
   color: var(--muted);
+}
+
+/* ---------- Chips ---------- */
+.chips {
+  display: flex;
+  gap: 8px;
+  overflow: auto;
+  padding: 2px 0;
+}
+
+.chips::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.chipActive {
+  background: #e6f8f0;
+  border-color: #cdeee1;
+  color: #0b3d2b;
+}
+
+html[data-theme="dark"] .chipActive,
+body[data-theme="dark"] .chipActive {
+  background: #0f2a22;
+  border-color: #0e3527;
+  color: #c6f0dc;
 }
 
 /* ---------- Buttons ---------- */
@@ -87,8 +194,14 @@ a {
   border: 0;
   border-radius: 10px;
   padding: 10px 14px;
+  text-decoration: none;
   font-weight: 700;
-  cursor: pointer;
+}
+
+html[data-theme="dark"] .apply,
+body[data-theme="dark"] .apply {
+  background: #e5e7eb;
+  color: #0b1220;
 }
 
 .secondary {
@@ -100,7 +213,76 @@ a {
   cursor: pointer;
 }
 
-/* ---------- Cards ---------- */
+.iconBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ---------- Search (inline field) ---------- */
+.searchInlineForm {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.searchInline {
+  position: relative;
+  width: 100%;
+}
+
+.searchInlineInput {
+  width: 100%;
+  padding: 12px 96px 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 16px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.searchInlineInput:focus {
+  border-color: var(--af-green);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+}
+
+.searchInlineActions {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.iconOnly {
+  height: 36px;
+  min-width: 36px;
+  padding: 0 8px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--af-green);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.iconOnly:hover,
+.iconOnly:focus {
+  background: rgba(22, 163, 74, 0.08);
+  outline: none;
+}
+
+/* ---------- Cards + grid ---------- */
 .grid {
   display: grid;
   gap: 14px;
@@ -114,6 +296,153 @@ a {
   border-radius: 16px;
   padding: 14px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 180ms ease, transform 180ms ease, opacity 480ms ease;
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 6px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+html[data-theme="dark"] .badge,
+body[data-theme="dark"] .badge {
+  color: #cbd5e1;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Appear animation helpers */
+.grid .card {
+  opacity: 0;
+  transform: translateY(16px);
+  will-change: transform, opacity;
+}
+
+.grid.reveal .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Modal ---------- */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 40;
+}
+
+.modal {
+  position: fixed;
+  inset: auto 0 0 0;
+  margin: auto;
+  top: 10%;
+  width: min(680px, 92%);
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  z-index: 50;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalTitle {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.modalBody {
+  color: var(--text);
+}
+
+.modalActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.closeX {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text);
+}
+
+/* ---------- Menus ---------- */
+.menuWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 6px;
+  min-width: 220px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+  z-index: 30;
+}
+
+.menu button {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.menu button:hover {
+  background: rgba(22, 163, 74, 0.08);
+}
+
+/* ---------- Empty state ---------- */
+.empty {
+  text-align: center;
+  padding: 32px 0;
+  color: var(--muted);
+}
+
+.emptyArt {
+  font-size: 46px;
+  margin-bottom: 10px;
 }
 
 /* ---------- Footer ---------- */
@@ -124,19 +453,93 @@ a {
   color: var(--muted);
 }
 
-/* ---------- Donate Button ---------- */
+/* ---------- Heart pulse (favorites) ---------- */
+.pulse {
+  animation: pulseAnim 0.3s ease-in-out;
+}
+
+@keyframes pulseAnim {
+  0% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ---------- Donate button (animated) ---------- */
 .af-donate {
-  display: inline-flex;
+  position: relative;
+  display: inline-grid;
+  grid-auto-flow: column;
   align-items: center;
   gap: 0.6rem;
-  padding: 1rem 1.4rem;
+  padding: 1.05rem 1.4rem;
   border-radius: 999px;
-  background: var(--af-green);
-  color: var(--af-text-on-green);
+  background: var(--af-donate-bg);
+  color: var(--af-donate-text);
   font-weight: 700;
-  box-shadow: 0 10px 24px -8px rgba(25, 195, 125, 0.55);
+  text-decoration: none;
+  line-height: 1;
+  box-shadow: 0 10px 24px -8px var(--af-donate-shadow), 0 2px 0 rgba(0, 0, 0, 0.06) inset;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+.af-donate__icon { font-size: 1.35rem; }
+.af-donate__text { font-size: 1.15rem; letter-spacing: 0.2px; }
+.af-donate__sub  { font-size: 0.86rem; font-weight: 600; opacity: 0.9; }
+
+@media (max-width: 480px) {
+  .af-donate {
+    grid-auto-flow: row;
+    text-align: center;
+    padding: 1.1rem 1.2rem;
+    width: min(92%, 460px);
+  }
 }
 
 .af-donate:hover {
-  background: var(--af-green-dark);
+  background: var(--af-donate-bg-dark);
+  box-shadow: 0 16px 36px -10px var(--af-donate-shadow), 0 2px 0 rgba(0, 0, 0, 0.08) inset;
+  transform: translateY(-1px);
+}
+
+.af-donate:active { transform: translateY(0); }
+
+.af-donate::before,
+.af-donate::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.af-donate::before {
+  background: radial-gradient(60% 60% at 50% 50%, var(--af-donate-ring) 0%, transparent 70%);
+  filter: blur(12px);
+  opacity: 0.85;
+}
+
+.af-donate::after {
+  border: 2px solid var(--af-donate-ring);
+  animation: af-ring 2.2s ease-out infinite;
+}
+
+@keyframes af-ring {
+  0% { opacity: 0.9; transform: scale(0.98); }
+  70%, 100% { opacity: 0; transform: scale(1.25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .af-donate::after { animation: none; opacity: 0.35; }
+  .card, .chip, .apply, .secondary, .af-donate { transition: none !important; }
+}
+
+/* ---------- Signature micro-interaction (lift on hover) ---------- */
+a.apply, .secondary, .chip, .af-donate {
+  transition: transform 0.16s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+a.apply:hover, .secondary:hover, .chip:hover {
+  transform: translateY(-1px);
 }

@@ -514,9 +514,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          AidFinder — {T.title}
-        </title>
+        <title> AidFinder — {T.title} </title>
         <meta name="description" content={T.subtitle} />
         <meta
           name="theme-color"
@@ -540,7 +538,6 @@ export default function Home() {
 
           {/* Right side: Language + Theme */}
           <div className="headerControls">
-            {/* Language */}
             <div className="stateSelectWrap">
               <label htmlFor="langSel">{T.language}:</label>
               <select
@@ -555,7 +552,6 @@ export default function Home() {
               </select>
             </div>
 
-            {/* Theme */}
             <div className="stateSelectWrap">
               <label htmlFor="themeSel">{T.theme}:</label>
               <select
@@ -582,13 +578,10 @@ export default function Home() {
 
         {/* Toolbar */}
         <section className="toolbar">
-          {/* SEARCH with inline Search/Clear inside the field */}
           <div className="searchWrap">
             <form
               className="searchInlineForm"
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
+              onSubmit={(e) => e.preventDefault()}
               role="search"
               aria-label={T.searchPlaceholder}
             >
@@ -600,7 +593,6 @@ export default function Home() {
                   onChange={(e) => setQuery(e.target.value)}
                   aria-label={T.searchPlaceholder}
                 />
-
                 <div className="searchInlineActions">
                   {query.trim().length > 0 && (
                     <button
@@ -612,7 +604,6 @@ export default function Home() {
                       🔎
                     </button>
                   )}
-
                   {query && (
                     <button
                       type="button"
@@ -630,7 +621,6 @@ export default function Home() {
           </div>
 
           <div className="filtersRow">
-            {/* Category chips */}
             <div className="chips scrollX" role="tablist" aria-label="Categories">
               {UI[lang].categories.map((key) => {
                 const active = cat === key;
@@ -649,7 +639,6 @@ export default function Home() {
               })}
             </div>
 
-            {/* State selector */}
             <div className="stateSelectWrap">
               <label htmlFor="stateSel">{T.stateLabel}:</label>
               <select
@@ -673,7 +662,7 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Donate (single button → PayPal custom amount page) */}
+          {/* Donate */}
           <div style={{ textAlign: "center", marginTop: 16 }}>
             <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
             <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
@@ -729,7 +718,6 @@ export default function Home() {
                 <p>{desc}</p>
 
                 <div className="cardActions">
-                  {/* Like */}
                   <button
                     type="button"
                     className="iconBtn"
@@ -745,7 +733,6 @@ export default function Home() {
                     <HeartIcon on={isFav(p.link)} animate={!!animMap[p.link]} />
                   </button>
 
-                  {/* Share */}
                   <div className="menuWrap" onClick={(e) => e.stopPropagation()}>
                     <button
                       type="button"
@@ -772,12 +759,10 @@ export default function Home() {
                     )}
                   </div>
 
-                  {/* Apply */}
                   <a className="apply" href={p.link} target="_blank" rel="noreferrer">
                     {T.apply}
                   </a>
 
-                  {/* Details */}
                   <button
                     type="button"
                     className="secondary"
@@ -895,15 +880,17 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="footer">
-          <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+          {/* ✅ FIX: links never wrap ugly on mobile (scrollable row) */}
+          <div className="topLinks">
             <a href="/about">About</a>
-            <span>•</span>
+            <span className="dot">•</span>
             <a href="/legal/privacy-policy">Privacy</a>
-            <span>•</span>
+            <span className="dot">•</span>
             <a href="/terms">Terms</a>
-            <span>•</span>
+            <span className="dot">•</span>
             <a href="/contact">Contact</a>
           </div>
+
           <div style={{ marginTop: 8 }}>{T.footer}</div>
         </footer>
       </main>
@@ -953,7 +940,7 @@ export default function Home() {
           border-bottom: 1px solid var(--border);
         }
 
-        /* ✅ FIX: header wraps nicely on small screens (prevents logo + language overlap) */
+        /* Header layout (prevents overlap) */
         .headerRow {
           display: flex;
           justify-content: space-between;
@@ -985,20 +972,28 @@ export default function Home() {
         .toolbar {
           margin-top: 8px;
         }
+
+        /* ✅ FIX: State selector stays aligned cleanly */
         .filtersRow {
           display: flex;
           align-items: center;
-          justify-content: space-between;
           gap: 12px;
           margin-top: 12px;
           flex-wrap: wrap;
+        }
+        .chips {
+          flex: 1 1 520px;
+          min-width: 240px;
         }
         .stateSelectWrap {
           display: flex;
           align-items: center;
           gap: 6px;
           white-space: nowrap;
+          margin-left: auto;
+          flex: 0 0 auto;
         }
+
         .langSelect {
           border: 1px solid var(--border);
           background: var(--bg);
@@ -1006,36 +1001,12 @@ export default function Home() {
           border-radius: 10px;
           padding: 8px 10px;
         }
+
         .countRow {
           margin-top: 10px;
         }
         .muted {
           color: var(--muted);
-        }
-
-        /* ✅ FIX: mobile tweaks */
-        @media (max-width: 560px) {
-          .headerControls {
-            width: 100%;
-            justify-content: space-between;
-          }
-          .brandRow strong {
-            font-size: 16px;
-          }
-          /* shrink the logo on small screens (inline styles require !important) */
-          .brandRow img {
-            width: 32px !important;
-            height: 32px !important;
-          }
-          /* hide labels to save space (still accessible via select options) */
-          .stateSelectWrap label {
-            display: none;
-          }
-          .langSelect {
-            padding: 8px 10px;
-            font-size: 14px;
-            max-width: 46vw;
-          }
         }
 
         /* Chips */
@@ -1292,6 +1263,64 @@ export default function Home() {
           text-align: center;
           padding: 18px 0;
           color: var(--muted);
+        }
+
+        /* ✅ FIX: footer links aligned + scroll on mobile (no wrapping) */
+        .topLinks {
+          display: flex;
+          gap: 12px;
+          justify-content: center;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        .topLinks .dot {
+          opacity: 0.6;
+        }
+        @media (max-width: 560px) {
+          .topLinks {
+            justify-content: flex-start;
+            overflow-x: auto;
+            white-space: nowrap;
+            flex-wrap: nowrap;
+            -webkit-overflow-scrolling: touch;
+            padding: 6px 0;
+          }
+          .topLinks::-webkit-scrollbar {
+            display: none;
+          }
+          .topLinks a,
+          .topLinks .dot {
+            flex: 0 0 auto;
+          }
+
+          /* Mobile: if State drops, make it full-width and clean */
+          .filtersRow {
+            align-items: stretch;
+          }
+          .stateSelectWrap {
+            margin-left: 0;
+            width: 100%;
+          }
+          .stateSelectWrap .langSelect {
+            width: 100%;
+          }
+
+          /* Optional: shrink logo + hide header labels to save space */
+          .brandRow img {
+            width: 32px !important;
+            height: 32px !important;
+          }
+          .headerControls {
+            width: 100%;
+            justify-content: space-between;
+          }
+          .stateSelectWrap label {
+            display: none;
+          }
+          .langSelect {
+            max-width: 46vw;
+            font-size: 14px;
+          }
         }
 
         /* Heart pulse */

@@ -539,7 +539,7 @@ export default function Home() {
           </div>
 
           {/* Right side: Language + Theme */}
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <div className="headerControls">
             {/* Language */}
             <div className="stateSelectWrap">
               <label htmlFor="langSel">{T.language}:</label>
@@ -952,17 +952,32 @@ export default function Home() {
           background: var(--bg);
           border-bottom: 1px solid var(--border);
         }
+
+        /* ✅ FIX: header wraps nicely on small screens (prevents logo + language overlap) */
         .headerRow {
           display: flex;
           justify-content: space-between;
           align-items: center;
           padding: 10px 0;
+          gap: 12px;
+          flex-wrap: wrap;
         }
         .brandRow {
           display: flex;
           align-items: center;
           gap: 10px;
+          flex: 1 1 auto;
+          min-width: 180px;
         }
+        .headerControls {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex: 0 0 auto;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+        }
+
         .hero {
           text-align: center;
           padding: 28px 0 8px;
@@ -982,6 +997,7 @@ export default function Home() {
           display: flex;
           align-items: center;
           gap: 6px;
+          white-space: nowrap;
         }
         .langSelect {
           border: 1px solid var(--border);
@@ -995,6 +1011,31 @@ export default function Home() {
         }
         .muted {
           color: var(--muted);
+        }
+
+        /* ✅ FIX: mobile tweaks */
+        @media (max-width: 560px) {
+          .headerControls {
+            width: 100%;
+            justify-content: space-between;
+          }
+          .brandRow strong {
+            font-size: 16px;
+          }
+          /* shrink the logo on small screens (inline styles require !important) */
+          .brandRow img {
+            width: 32px !important;
+            height: 32px !important;
+          }
+          /* hide labels to save space (still accessible via select options) */
+          .stateSelectWrap label {
+            display: none;
+          }
+          .langSelect {
+            padding: 8px 10px;
+            font-size: 14px;
+            max-width: 46vw;
+          }
         }
 
         /* Chips */

@@ -512,3 +512,33 @@ button, input, select{ font-family:inherit; }
   padding:18px 0;
   color:var(--muted);
 }
+
+/* ✅ NEW: Footer links alignment fix (About / Privacy / Terms / Contact) */
+.footer > div:first-child{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.footer a{
+  font-weight:500;
+  text-decoration:none;
+  color:inherit;
+  white-space:nowrap;
+}
+
+.footer span{
+  opacity:.6;
+}
+
+@media (max-width:560px){
+  .footer > div:first-child{
+    gap:14px;
+  }
+  /* Hide dots so links wrap cleanly and “Contact” won’t look odd */
+  .footer span{
+    display:none;
+  }
+}

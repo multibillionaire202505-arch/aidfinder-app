@@ -42,7 +42,7 @@ const UI = {
     brand: "AidFinder",
     title: "Find Real Assistance Programs Fast",
     subtitle:
-      "Explore programs across Food, Health, Housing, Utilities, Education, and Income — all in one place.",
+     "Discover verified assistance programs across the United States — all in one place.",
     searchPlaceholder: "Search e.g. housing, food, health…",
     searchBtn: "Search",
     clearBtn: "Clear",

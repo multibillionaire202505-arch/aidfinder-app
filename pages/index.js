@@ -575,6 +575,1547 @@ const ALL = [
       es: { title: "HEAP (Asistencia Energía NY)", desc: "Ayuda con costos de calefacción y refrigeración." },
     },
   },
+  // ===== ADDITIONAL 166 PROGRAMS FOR AIDFINDER =====
+// Paste this block inside const ALL = [ ... ], right before the final closing ];
+// Your current file has 34 programs, so this brings the total to 200.
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/tefap",
+    i18n: {
+      en: { title: "TEFAP (Emergency Food Assistance)", desc: "Emergency food support through local food banks and state agencies." },
+      fr: { title: "TEFAP (Emergency Food Assistance)", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "TEFAP (Emergency Food Assistance)", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/summer/sunbucks",
+    i18n: {
+      en: { title: "Summer EBT / SUN Bucks", desc: "Summer food benefits for eligible school-age children." },
+      fr: { title: "Summer EBT / SUN Bucks", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Summer EBT / SUN Bucks", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/cacfp",
+    i18n: {
+      en: { title: "CACFP Child and Adult Care Food Program", desc: "Meals and snacks for eligible children and adults in care settings." },
+      fr: { title: "CACFP Child and Adult Care Food Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "CACFP Child and Adult Care Food Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/sfsp",
+    i18n: {
+      en: { title: "SFSP Summer Food Service Program", desc: "Free meals for children during summer break." },
+      fr: { title: "SFSP Summer Food Service Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "SFSP Summer Food Service Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/fdpir",
+    i18n: {
+      en: { title: "FDPIR Food Distribution Program on Indian Reservations", desc: "Monthly USDA food packages for eligible households on or near reservations." },
+      fr: { title: "FDPIR Food Distribution Program on Indian Reservations", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "FDPIR Food Distribution Program on Indian Reservations", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/sfmnp",
+    i18n: {
+      en: { title: "Senior Farmers Market Nutrition Program", desc: "Coupons for eligible seniors to buy fresh local produce." },
+      fr: { title: "Senior Farmers Market Nutrition Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Senior Farmers Market Nutrition Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/fmnp",
+    i18n: {
+      en: { title: "Farmers Market Nutrition Program", desc: "Fresh produce benefits for WIC participants at farmers markets." },
+      fr: { title: "Farmers Market Nutrition Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Farmers Market Nutrition Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.mealsonwheelsamerica.org/find-meals",
+    i18n: {
+      en: { title: "Meals on Wheels America", desc: "Local meal delivery and nutrition support for older adults." },
+      fr: { title: "Meals on Wheels America", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Meals on Wheels America", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.feedingamerica.org/find-your-local-foodbank",
+    i18n: {
+      en: { title: "Feeding America Food Bank Finder", desc: "Find local food banks and emergency food resources." },
+      fr: { title: "Feeding America Food Bank Finder", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Feeding America Food Bank Finder", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/national-hunger-hotline",
+    i18n: {
+      en: { title: "USDA National Hunger Hotline", desc: "Connects people with local food assistance." },
+      fr: { title: "USDA National Hunger Hotline", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "USDA National Hunger Hotline", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://doubleupamerica.org",
+    i18n: {
+      en: { title: "Double Up Food Bucks", desc: "Matches SNAP dollars for fruits and vegetables in participating areas." },
+      fr: { title: "Double Up Food Bucks", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Double Up Food Bucks", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://snaped.fns.usda.gov",
+    i18n: {
+      en: { title: "SNAP-Ed Nutrition Education", desc: "Nutrition education for SNAP-eligible communities." },
+      fr: { title: "SNAP-Ed Nutrition Education", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "SNAP-Ed Nutrition Education", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/smp",
+    i18n: {
+      en: { title: "Special Milk Program", desc: "Milk assistance for children in eligible schools and institutions." },
+      fr: { title: "Special Milk Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Special Milk Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.fns.usda.gov/ffvp",
+    i18n: {
+      en: { title: "Fresh Fruit and Vegetable Program", desc: "Free fresh produce in participating elementary schools." },
+      fr: { title: "Fresh Fruit and Vegetable Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Fresh Fruit and Vegetable Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.usa.gov/food-help",
+    i18n: {
+      en: { title: "The Emergency Food Program Locator", desc: "Official guide to emergency food help and nutrition programs." },
+      fr: { title: "The Emergency Food Program Locator", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "The Emergency Food Program Locator", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.localharvest.org",
+    i18n: {
+      en: { title: "Local Harvest Food Resources", desc: "Find local farms, markets, and food resources." },
+      fr: { title: "Local Harvest Food Resources", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Local Harvest Food Resources", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://whyhunger.org/find-food/",
+    i18n: {
+      en: { title: "WhyHunger Hotline", desc: "Find emergency food providers and community resources." },
+      fr: { title: "WhyHunger Hotline", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "WhyHunger Hotline", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.usa.gov/food-help#older-adults",
+    i18n: {
+      en: { title: "Food Help for Older Adults", desc: "Food assistance options for people age 60 and older." },
+      fr: { title: "Food Help for Older Adults", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Food Help for Older Adults", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.usa.gov/food-help#school-meals",
+    i18n: {
+      en: { title: "School Meals for Children", desc: "Free or reduced school meals and child nutrition help." },
+      fr: { title: "School Meals for Children", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "School Meals for Children", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.usa.gov/food-help#native-americans",
+    i18n: {
+      en: { title: "Native American Food Assistance", desc: "Food assistance information for Native American communities." },
+      fr: { title: "Native American Food Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Native American Food Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://texaswic.org",
+    states: ["TX"],
+    i18n: {
+      en: { title: "Texas WIC", desc: "Nutrition support for eligible Texas women, infants, and children." },
+      fr: { title: "Texas WIC", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Texas WIC", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.feedingtexas.org/get-help/",
+    states: ["TX"],
+    i18n: {
+      en: { title: "Texas Food Bank Network", desc: "Find food assistance through Feeding Texas." },
+      fr: { title: "Texas Food Bank Network", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Texas Food Bank Network", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.cafoodbanks.org/find-food-bank/",
+    states: ["CA"],
+    i18n: {
+      en: { title: "California Food Banks", desc: "Find local food banks throughout California." },
+      fr: { title: "California Food Banks", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "California Food Banks", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://otda.ny.gov/programs/food-stamps/",
+    states: ["NY"],
+    i18n: {
+      en: { title: "New York Food Assistance", desc: "Food assistance resources for eligible New Yorkers." },
+      fr: { title: "New York Food Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "New York Food Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.myflfamilies.com/services/public-assistance/supplemental-nutrition-assistance-program-snap",
+    states: ["FL"],
+    i18n: {
+      en: { title: "Florida Food Assistance", desc: "Florida SNAP and food support information." },
+      fr: { title: "Florida Food Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Florida Food Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://www.dhs.state.il.us/page.aspx?item=30357",
+    states: ["IL"],
+    i18n: {
+      en: { title: "Illinois Food Assistance", desc: "Illinois SNAP and food assistance resources." },
+      fr: { title: "Illinois Food Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Illinois Food Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://dfcs.georgia.gov/snap-food-stamps",
+    states: ["GA"],
+    i18n: {
+      en: { title: "Georgia Food Stamps", desc: "Georgia SNAP food assistance information." },
+      fr: { title: "Georgia Food Stamps", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Georgia Food Stamps", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Food",
+    link: "https://des.az.gov/na",
+    states: ["AZ"],
+    i18n: {
+      en: { title: "Arizona Nutrition Assistance", desc: "Arizona Nutrition Assistance for eligible households." },
+      fr: { title: "Arizona Nutrition Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Arizona Nutrition Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.medicare.gov",
+    i18n: {
+      en: { title: "Medicare", desc: "Health coverage for people 65+ and certain people with disabilities." },
+      fr: { title: "Medicare", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Medicare", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.medicare.gov/basics/costs/help/medicare-savings-programs",
+    i18n: {
+      en: { title: "Medicare Savings Programs", desc: "Help paying Medicare premiums and some out-of-pocket costs." },
+      fr: { title: "Medicare Savings Programs", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Medicare Savings Programs", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.ssa.gov/medicare/part-d-extra-help",
+    i18n: {
+      en: { title: "Extra Help with Medicare Drug Costs", desc: "Help paying Medicare prescription drug costs." },
+      fr: { title: "Extra Help with Medicare Drug Costs", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Extra Help with Medicare Drug Costs", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.dol.gov/general/topic/health-plans/cobra",
+    i18n: {
+      en: { title: "COBRA Health Coverage", desc: "Temporary continuation of employer health coverage after job loss or changes." },
+      fr: { title: "COBRA Health Coverage", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "COBRA Health Coverage", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://ryanwhite.hrsa.gov",
+    i18n: {
+      en: { title: "Ryan White HIV/AIDS Program", desc: "Medical care and support for people living with HIV." },
+      fr: { title: "Ryan White HIV/AIDS Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Ryan White HIV/AIDS Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://findahealthcenter.hrsa.gov#community-health-center-directory",
+    i18n: {
+      en: { title: "HRSA Find a Health Center", desc: "Find affordable community health centers near you." },
+      fr: { title: "HRSA Find a Health Center", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "HRSA Find a Health Center", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.hrsa.gov/get-health-care/affordable/hill-burton",
+    i18n: {
+      en: { title: "Hill-Burton Free and Reduced-Cost Care", desc: "Free or reduced-cost care at certain facilities." },
+      fr: { title: "Hill-Burton Free and Reduced-Cost Care", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Hill-Burton Free and Reduced-Cost Care", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.cdc.gov/vaccines-for-children/",
+    i18n: {
+      en: { title: "Vaccines for Children Program", desc: "Free vaccines for eligible children." },
+      fr: { title: "Vaccines for Children Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Vaccines for Children Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://findtreatment.gov",
+    i18n: {
+      en: { title: "SAMHSA Treatment Locator", desc: "Find mental health and substance use treatment." },
+      fr: { title: "SAMHSA Treatment Locator", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "SAMHSA Treatment Locator", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://screening.mhanational.org",
+    i18n: {
+      en: { title: "Mental Health America Screening", desc: "Free mental health screening tools and resources." },
+      fr: { title: "Mental Health America Screening", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Mental Health America Screening", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.nami.org/help",
+    i18n: {
+      en: { title: "NAMI HelpLine", desc: "Mental health support, education, and referrals." },
+      fr: { title: "NAMI HelpLine", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "NAMI HelpLine", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://988lifeline.org/chat/",
+    i18n: {
+      en: { title: "988 Lifeline Chat", desc: "Online crisis chat support through the 988 Lifeline." },
+      fr: { title: "988 Lifeline Chat", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "988 Lifeline Chat", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.poison.org",
+    i18n: {
+      en: { title: "Poison Control", desc: "24/7 poison emergency help and guidance." },
+      fr: { title: "Poison Control", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Poison Control", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.cdc.gov/vaccines/",
+    i18n: {
+      en: { title: "CDC Vaccines and Immunizations", desc: "Vaccine information and public health resources." },
+      fr: { title: "CDC Vaccines and Immunizations", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "CDC Vaccines and Immunizations", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://localhelp.healthcare.gov",
+    i18n: {
+      en: { title: "HealthCare.gov Local Help", desc: "Find local help enrolling in Marketplace coverage." },
+      fr: { title: "HealthCare.gov Local Help", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "HealthCare.gov Local Help", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.shiphelp.org",
+    i18n: {
+      en: { title: "SHIP Medicare Counseling", desc: "Free Medicare counseling through State Health Insurance Assistance Programs." },
+      fr: { title: "SHIP Medicare Counseling", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "SHIP Medicare Counseling", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://dentallifeline.org",
+    i18n: {
+      en: { title: "Dental Lifeline Network", desc: "Dental care access for people with disabilities, elderly adults, and medically fragile people." },
+      fr: { title: "Dental Lifeline Network", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Dental Lifeline Network", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.needymeds.org",
+    i18n: {
+      en: { title: "NeedyMeds", desc: "Information on prescription savings and patient assistance programs." },
+      fr: { title: "NeedyMeds", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "NeedyMeds", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.rxassist.org",
+    i18n: {
+      en: { title: "RxAssist Patient Assistance", desc: "Find prescription drug assistance programs." },
+      fr: { title: "RxAssist Patient Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "RxAssist Patient Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.goodrx.com/care",
+    i18n: {
+      en: { title: "GoodRx Care Resources", desc: "Affordable healthcare and prescription information." },
+      fr: { title: "GoodRx Care Resources", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "GoodRx Care Resources", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://nafcclinics.org/find-clinic/",
+    i18n: {
+      en: { title: "Free Clinics Directory", desc: "Find charitable clinics and pharmacies." },
+      fr: { title: "Free Clinics Directory", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Free Clinics Directory", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://opa-fpclinicdb.hhs.gov",
+    i18n: {
+      en: { title: "Title X Family Planning Clinics", desc: "Find low-cost family planning and preventive health services." },
+      fr: { title: "Title X Family Planning Clinics", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Title X Family Planning Clinics", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://mchb.hrsa.gov/national-maternal-mental-health-hotline",
+    i18n: {
+      en: { title: "Maternal and Child Health Hotline", desc: "Support for pregnant and postpartum parents." },
+      fr: { title: "Maternal and Child Health Hotline", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Maternal and Child Health Hotline", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.healthytexaswomen.org",
+    states: ["TX"],
+    i18n: {
+      en: { title: "Healthy Texas Women", desc: "Women's health and family planning services in Texas." },
+      fr: { title: "Healthy Texas Women", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Healthy Texas Women", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.dhcs.ca.gov/services/medi-cal/Pages/ApplyforMedi-Cal.aspx",
+    states: ["CA"],
+    i18n: {
+      en: { title: "Medi-Cal Apply", desc: "Apply for California Medi-Cal health coverage." },
+      fr: { title: "Medi-Cal Apply", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Medi-Cal Apply", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://nystateofhealth.ny.gov",
+    states: ["NY"],
+    i18n: {
+      en: { title: "New York State of Health", desc: "NY health insurance marketplace and assistance." },
+      fr: { title: "New York State of Health", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "New York State of Health", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://www.myflfamilies.com/services/public-assistance/medicaid",
+    states: ["FL"],
+    i18n: {
+      en: { title: "Florida Medicaid", desc: "Florida Medicaid coverage information." },
+      fr: { title: "Florida Medicaid", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Florida Medicaid", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Health",
+    link: "https://hfs.illinois.gov/medicalclients/medicaidguide.html",
+    states: ["IL"],
+    i18n: {
+      en: { title: "Illinois Medicaid", desc: "Illinois Medicaid coverage guide." },
+      fr: { title: "Illinois Medicaid", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Illinois Medicaid", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.hud.gov/topics/rental_assistance/phprog",
+    i18n: {
+      en: { title: "Public Housing Program", desc: "Affordable rental housing through local public housing agencies." },
+      fr: { title: "Public Housing Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Public Housing Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://resources.hud.gov",
+    i18n: {
+      en: { title: "HUD Resource Locator", desc: "Find HUD offices, housing counselors, and affordable housing resources." },
+      fr: { title: "HUD Resource Locator", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "HUD Resource Locator", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.hud.gov/counseling",
+    i18n: {
+      en: { title: "HUD Housing Counseling", desc: "Find HUD-approved housing counseling agencies." },
+      fr: { title: "HUD Housing Counseling", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "HUD Housing Counseling", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.hud.gov/program_offices/public_indian_housing/programs/hcv/vash",
+    i18n: {
+      en: { title: "HUD-VASH Veterans Housing", desc: "Housing vouchers and services for eligible veterans." },
+      fr: { title: "HUD-VASH Veterans Housing", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "HUD-VASH Veterans Housing", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.hudexchange.info/programs/coc/",
+    i18n: {
+      en: { title: "Continuum of Care Program", desc: "Local homeless assistance planning and housing services." },
+      fr: { title: "Continuum of Care Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Continuum of Care Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.hudexchange.info/programs/esg/",
+    i18n: {
+      en: { title: "Emergency Solutions Grants", desc: "Emergency shelter, street outreach, and homelessness prevention support." },
+      fr: { title: "Emergency Solutions Grants", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Emergency Solutions Grants", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.hud.gov/program_offices/comm_planning/home",
+    i18n: {
+      en: { title: "HOME Investment Partnerships Program", desc: "Federal funds for affordable housing activities." },
+      fr: { title: "HOME Investment Partnerships Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "HOME Investment Partnerships Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.hudexchange.info/programs/htf/",
+    i18n: {
+      en: { title: "Housing Trust Fund", desc: "Supports affordable housing for extremely low-income households." },
+      fr: { title: "Housing Trust Fund", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Housing Trust Fund", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.rd.usda.gov/programs-services/multifamily-housing-programs/multifamily-housing-rental-assistance",
+    i18n: {
+      en: { title: "USDA Rural Rental Assistance", desc: "Rental assistance for eligible tenants in rural rental housing." },
+      fr: { title: "USDA Rural Rental Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "USDA Rural Rental Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.rd.usda.gov/programs-services/single-family-housing-programs/single-family-housing-repair-loans-grants",
+    i18n: {
+      en: { title: "USDA Single Family Housing Repair Loans & Grants", desc: "Loans and grants for eligible rural homeowners to repair homes." },
+      fr: { title: "USDA Single Family Housing Repair Loans & Grants", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "USDA Single Family Housing Repair Loans & Grants", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.rd.usda.gov/programs-services/single-family-housing-programs/single-family-housing-direct-home-loans",
+    i18n: {
+      en: { title: "USDA Single Family Housing Direct Home Loans", desc: "Homeownership assistance for eligible low-income rural applicants." },
+      fr: { title: "USDA Single Family Housing Direct Home Loans", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "USDA Single Family Housing Direct Home Loans", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.va.gov/housing-assistance/home-loans/",
+    i18n: {
+      en: { title: "VA Home Loan Program", desc: "Home loan benefits for eligible veterans and service members." },
+      fr: { title: "VA Home Loan Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "VA Home Loan Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.va.gov/homeless/",
+    i18n: {
+      en: { title: "VA Homeless Veterans Help", desc: "Programs and resources for veterans experiencing homelessness." },
+      fr: { title: "VA Homeless Veterans Help", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "VA Homeless Veterans Help", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.fema.gov/assistance/individual/sheltering",
+    i18n: {
+      en: { title: "FEMA Transitional Sheltering Assistance", desc: "Short-term sheltering help after eligible disasters." },
+      fr: { title: "FEMA Transitional Sheltering Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "FEMA Transitional Sheltering Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.fema.gov/assistance/individual/program",
+    i18n: {
+      en: { title: "FEMA Individuals and Households Program", desc: "Housing and repair help after federally declared disasters." },
+      fr: { title: "FEMA Individuals and Households Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "FEMA Individuals and Households Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://nlihc.org/rental-assistance",
+    i18n: {
+      en: { title: "National Low Income Housing Coalition", desc: "Rental assistance and affordable housing information." },
+      fr: { title: "National Low Income Housing Coalition", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "National Low Income Housing Coalition", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.affordablehousing.com",
+    i18n: {
+      en: { title: "AffordableHousing.com", desc: "Search affordable rentals and housing programs." },
+      fr: { title: "AffordableHousing.com", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "AffordableHousing.com", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.findhelp.org/housing",
+    i18n: {
+      en: { title: "FindHelp Housing Search", desc: "Search local housing and shelter resources." },
+      fr: { title: "FindHelp Housing Search", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "FindHelp Housing Search", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.tdhca.state.tx.us",
+    states: ["TX"],
+    i18n: {
+      en: { title: "Texas Department of Housing & Community Affairs", desc: "Texas housing and community assistance programs." },
+      fr: { title: "Texas Department of Housing & Community Affairs", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Texas Department of Housing & Community Affairs", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.tdhca.state.tx.us/texans.htm",
+    states: ["TX"],
+    i18n: {
+      en: { title: "Texas Rent Relief Resources", desc: "Texas housing help and local resource links." },
+      fr: { title: "Texas Rent Relief Resources", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Texas Rent Relief Resources", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://housing.ca.gov",
+    states: ["CA"],
+    i18n: {
+      en: { title: "California Housing Is Key", desc: "California housing resources and tenant protections." },
+      fr: { title: "California Housing Is Key", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "California Housing Is Key", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://hcr.ny.gov",
+    states: ["NY"],
+    i18n: {
+      en: { title: "New York Homes and Community Renewal", desc: "New York affordable housing and rent support programs." },
+      fr: { title: "New York Homes and Community Renewal", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "New York Homes and Community Renewal", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.floridahousing.org",
+    states: ["FL"],
+    i18n: {
+      en: { title: "Florida Housing Finance Corporation", desc: "Florida affordable housing and homebuyer programs." },
+      fr: { title: "Florida Housing Finance Corporation", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Florida Housing Finance Corporation", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.ihda.org",
+    states: ["IL"],
+    i18n: {
+      en: { title: "Illinois Housing Development Authority", desc: "Illinois housing assistance and affordable housing resources." },
+      fr: { title: "Illinois Housing Development Authority", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Illinois Housing Development Authority", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.georgiahousingsearch.org",
+    states: ["GA"],
+    i18n: {
+      en: { title: "Georgia Housing Search", desc: "Find affordable rental housing in Georgia." },
+      fr: { title: "Georgia Housing Search", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Georgia Housing Search", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://housing.az.gov",
+    states: ["AZ"],
+    i18n: {
+      en: { title: "Arizona Department of Housing", desc: "Arizona housing assistance and affordable housing programs." },
+      fr: { title: "Arizona Department of Housing", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Arizona Department of Housing", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.hud.gov/states/california/renting",
+    states: ["CA"],
+    i18n: {
+      en: { title: "California Section 8 / Housing Choice Voucher", desc: "HUD rental help resources for California." },
+      fr: { title: "California Section 8 / Housing Choice Voucher", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "California Section 8 / Housing Choice Voucher", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Housing",
+    link: "https://www.hud.gov/states/texas/renting",
+    states: ["TX"],
+    i18n: {
+      en: { title: "Texas Section 8 / Housing Choice Voucher", desc: "HUD rental help resources for Texas." },
+      fr: { title: "Texas Section 8 / Housing Choice Voucher", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Texas Section 8 / Housing Choice Voucher", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.fcc.gov/acp",
+    i18n: {
+      en: { title: "Affordable Connectivity Program Information", desc: "Information about internet affordability programs and status." },
+      fr: { title: "Affordable Connectivity Program Information", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Affordable Connectivity Program Information", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.fcc.gov/lifeline-consumers",
+    i18n: {
+      en: { title: "FCC Lifeline Consumer Guide", desc: "Phone and internet discount information for eligible consumers." },
+      fr: { title: "FCC Lifeline Consumer Guide", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "FCC Lifeline Consumer Guide", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.acf.hhs.gov/ocs/map/liheap-map-state-and-territory-contact-listing",
+    i18n: {
+      en: { title: "Energy Assistance Local Providers", desc: "Find LIHEAP contacts by state or territory." },
+      fr: { title: "Energy Assistance Local Providers", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Energy Assistance Local Providers", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.energy.gov/scep/wap/how-apply-weatherization-assistance",
+    i18n: {
+      en: { title: "Weatherization State Contacts", desc: "How to apply for weatherization help through your state." },
+      fr: { title: "Weatherization State Contacts", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Weatherization State Contacts", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.acf.hhs.gov/ocs/programs/lihwap#water-assistance-info",
+    i18n: {
+      en: { title: "Low Income Household Water Assistance Program Info", desc: "Water and wastewater bill assistance program information." },
+      fr: { title: "Low Income Household Water Assistance Program Info", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Low Income Household Water Assistance Program Info", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.energy.gov/energysaver/energy-saver",
+    i18n: {
+      en: { title: "Save on Energy Bills", desc: "Energy-saving guidance that can reduce household utility costs." },
+      fr: { title: "Save on Energy Bills", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Save on Energy Bills", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.energystar.gov/rebate-finder",
+    i18n: {
+      en: { title: "Energy Star Rebates Finder", desc: "Find energy-efficiency rebates by ZIP code." },
+      fr: { title: "Energy Star Rebates Finder", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Energy Star Rebates Finder", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.dsireusa.org",
+    i18n: {
+      en: { title: "DSIRE Clean Energy Incentives", desc: "Find state and local energy incentives." },
+      fr: { title: "DSIRE Clean Energy Incentives", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "DSIRE Clean Energy Incentives", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://broadbandmap.fcc.gov",
+    i18n: {
+      en: { title: "FCC Broadband Map", desc: "Check internet service availability by location." },
+      fr: { title: "FCC Broadband Map", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "FCC Broadband Map", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.everyoneon.org",
+    i18n: {
+      en: { title: "EveryoneOn Internet Help", desc: "Find low-cost internet offers and digital inclusion resources." },
+      fr: { title: "EveryoneOn Internet Help", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "EveryoneOn Internet Help", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.human-i-t.org/low-cost-internet/",
+    i18n: {
+      en: { title: "Human-I-T Low-Cost Internet", desc: "Low-cost internet assistance and device resources." },
+      fr: { title: "Human-I-T Low-Cost Internet", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Human-I-T Low-Cost Internet", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.pcsforpeople.org/internet/",
+    i18n: {
+      en: { title: "PCs for People Internet", desc: "Low-cost internet and technology access resources." },
+      fr: { title: "PCs for People Internet", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "PCs for People Internet", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://texasutilityhelp.com",
+    states: ["TX"],
+    i18n: {
+      en: { title: "Texas Utility Help", desc: "Utility bill assistance for eligible Texas households." },
+      fr: { title: "Texas Utility Help", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Texas Utility Help", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.tdhca.state.tx.us/community-affairs/ceap/index.htm",
+    states: ["TX"],
+    i18n: {
+      en: { title: "Texas CEAP Energy Assistance", desc: "Texas Comprehensive Energy Assistance Program information." },
+      fr: { title: "Texas CEAP Energy Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Texas CEAP Energy Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.csd.ca.gov/Pages/LIHEAPProgram.aspx",
+    states: ["CA"],
+    i18n: {
+      en: { title: "California LIHEAP", desc: "California home energy assistance information." },
+      fr: { title: "California LIHEAP", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "California LIHEAP", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://otda.ny.gov/programs/heap/#ny-heap-expanded",
+    states: ["NY"],
+    i18n: {
+      en: { title: "New York HEAP", desc: "Heating and cooling assistance for eligible New Yorkers." },
+      fr: { title: "New York HEAP", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "New York HEAP", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.myflfamilies.com/services/public-assistance/low-income-home-energy-assistance-program-liheap",
+    states: ["FL"],
+    i18n: {
+      en: { title: "Florida Low-Income Home Energy Assistance", desc: "Florida LIHEAP energy bill assistance." },
+      fr: { title: "Florida Low-Income Home Energy Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Florida Low-Income Home Energy Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://dceo.illinois.gov/communityservices/utilitybillassistance.html",
+    states: ["IL"],
+    i18n: {
+      en: { title: "Illinois LIHEAP", desc: "Illinois utility bill assistance information." },
+      fr: { title: "Illinois LIHEAP", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Illinois LIHEAP", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://dfcs.georgia.gov/services/low-income-home-energy-assistance-program-liheap",
+    states: ["GA"],
+    i18n: {
+      en: { title: "Georgia Energy Assistance", desc: "Georgia LIHEAP information." },
+      fr: { title: "Georgia Energy Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Georgia Energy Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://des.az.gov/utility-assistance",
+    states: ["AZ"],
+    i18n: {
+      en: { title: "Arizona Utility Assistance", desc: "Arizona utility assistance resources." },
+      fr: { title: "Arizona Utility Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Arizona Utility Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://oklahoma.gov/okdhs/services/liheap.html",
+    states: ["OK"],
+    i18n: {
+      en: { title: "Oklahoma LIHEAP", desc: "Oklahoma energy assistance program information." },
+      fr: { title: "Oklahoma LIHEAP", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Oklahoma LIHEAP", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.ncdhhs.gov/divisions/social-services/energy-assistance",
+    states: ["NC"],
+    i18n: {
+      en: { title: "North Carolina Energy Assistance", desc: "North Carolina heating and cooling assistance." },
+      fr: { title: "North Carolina Energy Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "North Carolina Energy Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.pa.gov/services/dhs/apply-for-liheap.html",
+    states: ["PA"],
+    i18n: {
+      en: { title: "Pennsylvania LIHEAP", desc: "Pennsylvania heating assistance application information." },
+      fr: { title: "Pennsylvania LIHEAP", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Pennsylvania LIHEAP", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://development.ohio.gov/individual/energy-assistance/energy-assistance-programs",
+    states: ["OH"],
+    i18n: {
+      en: { title: "Ohio HEAP", desc: "Ohio energy assistance programs." },
+      fr: { title: "Ohio HEAP", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Ohio HEAP", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.michigan.gov/mdhhs/assistance-programs/emergency-relief/energy-assistance",
+    states: ["MI"],
+    i18n: {
+      en: { title: "Michigan Energy Assistance Program", desc: "Michigan energy assistance resources." },
+      fr: { title: "Michigan Energy Assistance Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Michigan Energy Assistance Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.commerce.wa.gov/growing-the-economy/energy/low-income-home-energy-assistance/",
+    states: ["WA"],
+    i18n: {
+      en: { title: "Washington Energy Assistance", desc: "Washington LIHEAP assistance information." },
+      fr: { title: "Washington Energy Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Washington Energy Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://www.oregon.gov/ohcs/energy-weatherization/Pages/energy-assistance.aspx",
+    states: ["OR"],
+    i18n: {
+      en: { title: "Oregon Energy Assistance", desc: "Oregon energy and weatherization assistance." },
+      fr: { title: "Oregon Energy Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Oregon Energy Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Utilities",
+    link: "https://cdhs.colorado.gov/leap",
+    states: ["CO"],
+    i18n: {
+      en: { title: "Colorado LEAP", desc: "Colorado Low-income Energy Assistance Program." },
+      fr: { title: "Colorado LEAP", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Colorado LEAP", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://studentaid.gov/understand-aid/types/work-study",
+    i18n: {
+      en: { title: "Federal Work-Study", desc: "Part-time jobs for eligible students with financial need." },
+      fr: { title: "Federal Work-Study", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Federal Work-Study", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://studentaid.gov/understand-aid/types/grants/fseog",
+    i18n: {
+      en: { title: "Federal Supplemental Educational Opportunity Grant", desc: "Campus-based grants for undergraduate students with exceptional financial need." },
+      fr: { title: "Federal Supplemental Educational Opportunity Grant", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Federal Supplemental Educational Opportunity Grant", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://studentaid.gov/understand-aid/types/grants/teach",
+    i18n: {
+      en: { title: "TEACH Grant", desc: "Grant support for students who agree to teach in high-need fields." },
+      fr: { title: "TEACH Grant", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "TEACH Grant", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://studentaid.gov/understand-aid/types/grants/iraq-afghanistan-service",
+    i18n: {
+      en: { title: "Iraq and Afghanistan Service Grant", desc: "Grant for eligible students whose parent or guardian died during military service." },
+      fr: { title: "Iraq and Afghanistan Service Grant", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Iraq and Afghanistan Service Grant", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://studentaid.gov/manage-loans/forgiveness-cancellation",
+    i18n: {
+      en: { title: "Federal Student Loan Forgiveness", desc: "Information on student loan forgiveness and cancellation programs." },
+      fr: { title: "Federal Student Loan Forgiveness", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Federal Student Loan Forgiveness", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://studentaid.gov/manage-loans/forgiveness-cancellation/public-service",
+    i18n: {
+      en: { title: "Public Service Loan Forgiveness", desc: "Loan forgiveness for qualifying public service employment." },
+      fr: { title: "Public Service Loan Forgiveness", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Public Service Loan Forgiveness", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://studentaid.gov/idr/",
+    i18n: {
+      en: { title: "Income-Driven Repayment Plans", desc: "Lower federal student loan payments based on income and family size." },
+      fr: { title: "Income-Driven Repayment Plans", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Income-Driven Repayment Plans", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.ed.gov/grants-and-programs/grants-special-populations/grants-special-populations-higher-education/federal-trio-programs",
+    i18n: {
+      en: { title: "TRIO Programs", desc: "Education outreach and support for disadvantaged students." },
+      fr: { title: "TRIO Programs", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "TRIO Programs", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.ed.gov/grants-and-programs/grants-special-populations/grants-special-populations-higher-education/gaining-early-awareness-and-readiness-for-undergraduate-programs-gear-up",
+    i18n: {
+      en: { title: "Gaining Early Awareness and Readiness for Undergraduate Programs", desc: "College readiness support for low-income students." },
+      fr: { title: "Gaining Early Awareness and Readiness for Undergraduate Programs", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Gaining Early Awareness and Readiness for Undergraduate Programs", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.ed.gov/grants-and-programs/grants-special-populations/adult-education-and-literacy",
+    i18n: {
+      en: { title: "Adult Education and Literacy", desc: "Adult basic education, English learning, and literacy support." },
+      fr: { title: "Adult Education and Literacy", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Adult Education and Literacy", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.jobcorps.gov",
+    i18n: {
+      en: { title: "Job Corps", desc: "Free career training and education for eligible young adults." },
+      fr: { title: "Job Corps", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Job Corps", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.careeronestop.org/Toolkit/Training/find-training.aspx",
+    i18n: {
+      en: { title: "CareerOneStop Training Finder", desc: "Find training programs, certifications, and education resources." },
+      fr: { title: "CareerOneStop Training Finder", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "CareerOneStop Training Finder", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.careeronestop.org/LocalHelp/AmericanJobCenters/find-american-job-centers.aspx",
+    i18n: {
+      en: { title: "American Job Centers", desc: "Find local career and training centers." },
+      fr: { title: "American Job Centers", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "American Job Centers", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.dol.gov/agencies/eta/workforce-investment/adult",
+    i18n: {
+      en: { title: "WIOA Adult Program", desc: "Employment and training services for eligible adults." },
+      fr: { title: "WIOA Adult Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "WIOA Adult Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.dol.gov/agencies/eta/youth",
+    i18n: {
+      en: { title: "WIOA Youth Program", desc: "Education and job training services for eligible youth." },
+      fr: { title: "WIOA Youth Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "WIOA Youth Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.dol.gov/agencies/eta/youth/youthbuild",
+    i18n: {
+      en: { title: "YouthBuild", desc: "Education and construction skills training for young adults." },
+      fr: { title: "YouthBuild", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "YouthBuild", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.apprenticeship.gov#registered-apprenticeship-expanded",
+    i18n: {
+      en: { title: "Registered Apprenticeship", desc: "Paid career training through apprenticeship programs." },
+      fr: { title: "Registered Apprenticeship", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Registered Apprenticeship", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://americorps.gov/members-volunteers/segal-americorps-education-award",
+    i18n: {
+      en: { title: "AmeriCorps Education Award", desc: "Education award for eligible AmeriCorps service members." },
+      fr: { title: "AmeriCorps Education Award", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "AmeriCorps Education Award", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://collegescorecard.ed.gov",
+    i18n: {
+      en: { title: "College Scorecard", desc: "Compare colleges by cost, graduation, and earnings data." },
+      fr: { title: "College Scorecard", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "College Scorecard", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.childcareaware.org/fee-assistancerespite/",
+    i18n: {
+      en: { title: "Child Care Aware Fee Assistance", desc: "Child care fee assistance information for eligible families." },
+      fr: { title: "Child Care Aware Fee Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Child Care Aware Fee Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.acf.hhs.gov/occ/programs/child-care-and-development-fund",
+    i18n: {
+      en: { title: "Child Care and Development Fund", desc: "Child care assistance for eligible low-income families." },
+      fr: { title: "Child Care and Development Fund", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Child Care and Development Fund", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.acf.hhs.gov/ohs/about/head-start#early-head-start-expanded",
+    i18n: {
+      en: { title: "Early Head Start", desc: "Early learning and family support for infants, toddlers, and pregnant women." },
+      fr: { title: "Early Head Start", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Early Head Start", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://sites.ed.gov/idea/",
+    i18n: {
+      en: { title: "IDEA Special Education", desc: "Special education rights and services for eligible children." },
+      fr: { title: "IDEA Special Education", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "IDEA Special Education", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://rsa.ed.gov/about/states",
+    i18n: {
+      en: { title: "Vocational Rehabilitation State Programs", desc: "Employment support for people with disabilities through state VR agencies." },
+      fr: { title: "Vocational Rehabilitation State Programs", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Vocational Rehabilitation State Programs", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.twc.texas.gov/programs/job-training",
+    states: ["TX"],
+    i18n: {
+      en: { title: "Texas Workforce Commission Training", desc: "Texas job training and workforce programs." },
+      fr: { title: "Texas Workforce Commission Training", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Texas Workforce Commission Training", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.cccco.edu/Students/Pay-for-College/California-College-Promise-Grant",
+    states: ["CA"],
+    i18n: {
+      en: { title: "California College Promise Grant", desc: "California community college fee waiver for eligible students." },
+      fr: { title: "California College Promise Grant", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "California College Promise Grant", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.hesc.ny.gov/pay-for-college/financial-aid/types-of-financial-aid/nys-grants-scholarships-awards/tuition-assistance-program-tap/",
+    states: ["NY"],
+    i18n: {
+      en: { title: "New York TAP Grant", desc: "Tuition Assistance Program for eligible New York students." },
+      fr: { title: "New York TAP Grant", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "New York TAP Grant", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Education",
+    link: "https://www.floridastudentfinancialaidsg.org/SAPBFMAIN/SAPBFMAIN",
+    states: ["FL"],
+    i18n: {
+      en: { title: "Florida Bright Futures", desc: "Florida scholarship program for eligible students." },
+      fr: { title: "Florida Bright Futures", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Florida Bright Futures", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.ssa.gov/retirement",
+    i18n: {
+      en: { title: "Social Security Retirement Benefits", desc: "Monthly retirement benefits for eligible workers." },
+      fr: { title: "Social Security Retirement Benefits", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Social Security Retirement Benefits", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.ssa.gov/disability",
+    i18n: {
+      en: { title: "Social Security Disability Insurance", desc: "Disability benefits for eligible workers with qualifying disabilities." },
+      fr: { title: "Social Security Disability Insurance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Social Security Disability Insurance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.ssa.gov/survivor",
+    i18n: {
+      en: { title: "Survivors Benefits", desc: "Benefits for eligible family members after a worker dies." },
+      fr: { title: "Survivors Benefits", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Survivors Benefits", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.ssa.gov/payee/",
+    i18n: {
+      en: { title: "SSA Representative Payee Program", desc: "Support for beneficiaries who need help managing payments." },
+      fr: { title: "SSA Representative Payee Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "SSA Representative Payee Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.irs.gov/credits-deductions/individuals/child-tax-credit",
+    i18n: {
+      en: { title: "Child Tax Credit", desc: "Tax credit for eligible families with qualifying children." },
+      fr: { title: "Child Tax Credit", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Child Tax Credit", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.irs.gov/credits-deductions/individuals/credit-for-other-dependents",
+    i18n: {
+      en: { title: "Credit for Other Dependents", desc: "Tax credit for eligible dependents who do not qualify for the Child Tax Credit." },
+      fr: { title: "Credit for Other Dependents", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Credit for Other Dependents", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.irs.gov/credits-deductions/individuals/child-and-dependent-care-credit-information",
+    i18n: {
+      en: { title: "Child and Dependent Care Credit", desc: "Tax credit for eligible child and dependent care expenses." },
+      fr: { title: "Child and Dependent Care Credit", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Child and Dependent Care Credit", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.irs.gov/filing/free-file-do-your-federal-taxes-for-free",
+    i18n: {
+      en: { title: "Free File IRS", desc: "Free federal tax filing for eligible taxpayers." },
+      fr: { title: "Free File IRS", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Free File IRS", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+    i18n: {
+      en: { title: "VITA Free Tax Help", desc: "Free tax preparation help for eligible people." },
+      fr: { title: "VITA Free Tax Help", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "VITA Free Tax Help", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.irs.gov/individuals/tax-counseling-for-the-elderly",
+    i18n: {
+      en: { title: "TCE Tax Counseling for the Elderly", desc: "Free tax help focused on older adults." },
+      fr: { title: "TCE Tax Counseling for the Elderly", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "TCE Tax Counseling for the Elderly", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.dol.gov/agencies/owcp",
+    i18n: {
+      en: { title: "Workers Compensation State Resources", desc: "Information on workers compensation and related programs." },
+      fr: { title: "Workers Compensation State Resources", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Workers Compensation State Resources", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.dol.gov/agencies/eta/dislocated-workers",
+    i18n: {
+      en: { title: "Dislocated Worker Program", desc: "Employment and training help after layoffs or job loss." },
+      fr: { title: "Dislocated Worker Program", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Dislocated Worker Program", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.dol.gov/agencies/eta/tradeact",
+    i18n: {
+      en: { title: "Trade Adjustment Assistance", desc: "Help for workers affected by foreign trade." },
+      fr: { title: "Trade Adjustment Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Trade Adjustment Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://oui.doleta.gov/unemploy/disaster.asp",
+    i18n: {
+      en: { title: "Disaster Unemployment Assistance", desc: "Unemployment help for people affected by declared disasters." },
+      fr: { title: "Disaster Unemployment Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Disaster Unemployment Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.benefits.gov/benefit-finder",
+    i18n: {
+      en: { title: "Benefits.gov Benefit Finder", desc: "Official tool to find benefits based on your situation." },
+      fr: { title: "Benefits.gov Benefit Finder", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Benefits.gov Benefit Finder", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.usa.gov/unclaimed-money",
+    i18n: {
+      en: { title: "Unclaimed Money Search", desc: "Find unclaimed money from government and financial sources." },
+      fr: { title: "Unclaimed Money Search", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Unclaimed Money Search", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.sba.gov/funding-programs/disaster-assistance",
+    i18n: {
+      en: { title: "SBA Disaster Assistance Loans", desc: "Low-interest disaster loans for eligible homeowners, renters, and businesses." },
+      fr: { title: "SBA Disaster Assistance Loans", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "SBA Disaster Assistance Loans", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.score.org",
+    i18n: {
+      en: { title: "SCORE Small Business Mentoring", desc: "Free small business mentoring and education." },
+      fr: { title: "SCORE Small Business Mentoring", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "SCORE Small Business Mentoring", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.sba.gov/local-assistance/resource-partners/small-business-development-centers-sbdc",
+    i18n: {
+      en: { title: "Small Business Development Centers", desc: "Local small business counseling and training." },
+      fr: { title: "Small Business Development Centers", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Small Business Development Centers", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.va.gov/pension/",
+    i18n: {
+      en: { title: "Veterans Pension", desc: "Monthly payments for eligible wartime veterans with limited income." },
+      fr: { title: "Veterans Pension", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Veterans Pension", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.va.gov/disability/",
+    i18n: {
+      en: { title: "VA Disability Compensation", desc: "Monthly tax-free payments for eligible veterans with service-connected disabilities." },
+      fr: { title: "VA Disability Compensation", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "VA Disability Compensation", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.va.gov/pension/survivors-pension/",
+    i18n: {
+      en: { title: "VA Survivors Pension", desc: "Monthly payments for eligible surviving spouses and children." },
+      fr: { title: "VA Survivors Pension", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "VA Survivors Pension", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.va.gov/education/",
+    i18n: {
+      en: { title: "VA Education and Training Benefits", desc: "Education benefits for veterans, service members, and families." },
+      fr: { title: "VA Education and Training Benefits", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "VA Education and Training Benefits", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.acf.hhs.gov/css",
+    i18n: {
+      en: { title: "Child Support Enforcement", desc: "Help locating parents and collecting child support." },
+      fr: { title: "Child Support Enforcement", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Child Support Enforcement", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.acf.hhs.gov/orr/programs/cma/about",
+    i18n: {
+      en: { title: "Refugee Cash Assistance", desc: "Cash and medical assistance for eligible refugees and entrants." },
+      fr: { title: "Refugee Cash Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Refugee Cash Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+  {
+    category: "Income",
+    link: "https://www.usa.gov/benefits-native-americans",
+    i18n: {
+      en: { title: "Native American Financial Assistance", desc: "Financial assistance and services for Native American communities." },
+      fr: { title: "Native American Financial Assistance", desc: "Ressource d’aide pour les ménages admissibles. Vérifiez les critères et faites une demande via le lien officiel." },
+      es: { title: "Native American Financial Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
+    },
+  },
+
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */

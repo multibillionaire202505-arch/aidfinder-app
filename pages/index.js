@@ -40,7 +40,7 @@ const HeartIcon = ({ on = false, size = 20, animate = false }) => (
 const UI = {
   en: {
     brand: "AidFinder",
-    title: "Find Aid Programs Easily",
+    title: "Find Real Assistance Programs Fast",
     subtitle:
       "Explore programs across Food, Health, Housing, Utilities, Education, and Income — all in one place.",
     searchPlaceholder: "Search e.g. housing, food, health…",

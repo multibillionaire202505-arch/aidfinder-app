@@ -63,7 +63,7 @@ const UI = {
     details: "Details",
     saved: "Saved",
     unsaved: "Save",
-    footer: "Demo preview • © AidFinder",
+    footer: "© 2026 AidFinder — Helping people find real assistance programs.",
     programCount: "programs",
     close: "Close",
     stateLabel: "Your State",

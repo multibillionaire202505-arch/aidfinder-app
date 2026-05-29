@@ -2589,6 +2589,462 @@ const ALL = [
     es: { title: "Child Care Aware", desc: "Recursos de cuidado infantil, referencias y apoyo familiar." },
   },
 },
+  // ===== PROGRAMS 251-300 =====
+
+{
+  category: "Housing",
+  link: "https://www.consumerfinance.gov/housing/housing-insecurity/help-for-homeowners/",
+  i18n: {
+    en: { title: "CFPB Help for Homeowners", desc: "Mortgage, foreclosure prevention, and housing stability resources for homeowners." },
+    fr: { title: "Aide CFPB pour propriétaires", desc: "Ressources hypothécaires, prévention saisie et stabilité du logement." },
+    es: { title: "Ayuda CFPB para Propietarios", desc: "Recursos hipotecarios, prevención de ejecución hipotecaria y estabilidad de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.consumerfinance.gov/housing/housing-insecurity/help-for-renters/",
+  i18n: {
+    en: { title: "CFPB Help for Renters", desc: "Resources for renters facing eviction, rent problems, or housing insecurity." },
+    fr: { title: "Aide CFPB pour locataires", desc: "Ressources pour locataires confrontés à expulsion ou instabilité logement." },
+    es: { title: "Ayuda CFPB para Inquilinos", desc: "Recursos para inquilinos con problemas de alquiler, desalojo o vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/housing/sfh/hcc",
+  i18n: {
+    en: { title: "HUD Housing Counseling Agencies", desc: "Find HUD-approved counselors for renting, buying, foreclosure, and credit help." },
+    fr: { title: "Conseillers logement HUD", desc: "Trouvez des conseillers HUD pour location, achat, saisie et crédit." },
+    es: { title: "Consejeros de Vivienda HUD", desc: "Encuentre consejeros HUD para alquiler, compra, ejecución hipotecaria y crédito." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.usa.gov/eviction-foreclosure",
+  i18n: {
+    en: { title: "Eviction and Foreclosure Help", desc: "Government guide for renters and homeowners facing eviction or foreclosure." },
+    fr: { title: "Aide expulsion et saisie", desc: "Guide gouvernemental pour locataires et propriétaires en difficulté." },
+    es: { title: "Ayuda con Desalojo y Ejecución", desc: "Guía del gobierno para inquilinos y propietarios en riesgo." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.va.gov/housing-assistance/disability-housing-grants/",
+  i18n: {
+    en: { title: "VA Disability Housing Grants", desc: "Housing grants for eligible veterans with service-connected disabilities." },
+    fr: { title: "Subventions logement handicap VA", desc: "Aides au logement pour vétérans handicapés admissibles." },
+    es: { title: "Subvenciones de Vivienda VA", desc: "Ayuda de vivienda para veteranos elegibles con discapacidades." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/public_indian_housing/ih",
+  i18n: {
+    en: { title: "HUD Indian Housing Programs", desc: "Housing support and development resources for Native communities." },
+    fr: { title: "Programmes logement autochtones HUD", desc: "Soutien au logement et développement pour communautés autochtones." },
+    es: { title: "Programas de Vivienda Indígena HUD", desc: "Apoyo y desarrollo de vivienda para comunidades nativas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/healthy_homes",
+  i18n: {
+    en: { title: "HUD Healthy Homes Program", desc: "Resources to reduce home health hazards and improve housing safety." },
+    fr: { title: "Programme maisons saines HUD", desc: "Ressources pour réduire les dangers domestiques et améliorer la sécurité." },
+    es: { title: "Programa Hogares Saludables HUD", desc: "Recursos para reducir riesgos en el hogar y mejorar seguridad." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/healthy_homes/healthyhomes/lead",
+  i18n: {
+    en: { title: "HUD Lead Hazard Control", desc: "Resources for lead-safe housing and lead hazard reduction." },
+    fr: { title: "Réduction plomb HUD", desc: "Ressources pour logement sans plomb et réduction des risques." },
+    es: { title: "Control de Plomo HUD", desc: "Recursos para viviendas seguras y reducción de riesgos de plomo." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hudexchange.info/programs/hopwa/",
+  i18n: {
+    en: { title: "HOPWA Housing Assistance", desc: "Housing support for eligible people living with HIV/AIDS and their families." },
+    fr: { title: "Aide logement HOPWA", desc: "Soutien logement pour personnes vivant avec VIH/SIDA et familles." },
+    es: { title: "Asistencia de Vivienda HOPWA", desc: "Ayuda de vivienda para personas con VIH/SIDA y sus familias." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.usich.gov",
+  i18n: {
+    en: { title: "U.S. Interagency Council on Homelessness", desc: "Federal homelessness strategy and resources for local support systems." },
+    fr: { title: "Conseil américain sur l’itinérance", desc: "Stratégies et ressources fédérales contre le sans-abrisme." },
+    es: { title: "Consejo Interagencial sobre Personas sin Hogar", desc: "Estrategias y recursos federales contra la falta de vivienda." },
+  },
+},
+
+{
+  category: "Utilities",
+  link: "https://www.usa.gov/help-with-energy-bills",
+  i18n: {
+    en: { title: "Help With Energy Bills", desc: "Government guide to energy bill assistance and home energy programs." },
+    fr: { title: "Aide factures énergie", desc: "Guide gouvernemental pour aide énergie et programmes domestiques." },
+    es: { title: "Ayuda con Facturas de Energía", desc: "Guía del gobierno para asistencia energética del hogar." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.usa.gov/help-with-phone-internet-bills",
+  i18n: {
+    en: { title: "Help With Phone and Internet Bills", desc: "Find programs that help reduce phone and internet costs." },
+    fr: { title: "Aide téléphone et Internet", desc: "Trouvez des programmes réduisant les coûts téléphone et Internet." },
+    es: { title: "Ayuda con Teléfono e Internet", desc: "Encuentre programas para reducir costos de teléfono e Internet." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fcc.gov/lifeline-consumers",
+  i18n: {
+    en: { title: "FCC Lifeline Consumer Help", desc: "Federal phone and internet discount information for eligible households." },
+    fr: { title: "Aide consommateur Lifeline FCC", desc: "Informations sur réductions téléphone et Internet pour ménages admissibles." },
+    es: { title: "Ayuda Lifeline FCC", desc: "Información de descuentos de teléfono e Internet para hogares elegibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fcc.gov/acp",
+  i18n: {
+    en: { title: "FCC Affordable Connectivity Updates", desc: "Connectivity benefit updates and consumer information from the FCC." },
+    fr: { title: "Mises à jour connectivité FCC", desc: "Informations consommateurs sur les aides de connectivité." },
+    es: { title: "Actualizaciones de Conectividad FCC", desc: "Información del consumidor sobre beneficios de conectividad." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.rd.usda.gov/programs-services/water-environmental-programs",
+  i18n: {
+    en: { title: "USDA Water and Environmental Programs", desc: "Water, wastewater, and environmental utility support for rural communities." },
+    fr: { title: "Programmes eau USDA", desc: "Soutien eau, eaux usées et services ruraux." },
+    es: { title: "Programas de Agua USDA", desc: "Apoyo de agua, alcantarillado y servicios rurales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.rd.usda.gov/programs-services/electric-programs",
+  i18n: {
+    en: { title: "USDA Electric Programs", desc: "Electric infrastructure and utility support for rural areas." },
+    fr: { title: "Programmes électriques USDA", desc: "Soutien infrastructure électrique et services publics ruraux." },
+    es: { title: "Programas Eléctricos USDA", desc: "Apoyo de infraestructura eléctrica para zonas rurales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.rd.usda.gov/programs-services/telecommunications-programs",
+  i18n: {
+    en: { title: "USDA Telecommunications Programs", desc: "Rural broadband and telecommunications support programs." },
+    fr: { title: "Programmes télécommunications USDA", desc: "Soutien Internet rural et télécommunications." },
+    es: { title: "Programas de Telecomunicaciones USDA", desc: "Apoyo de banda ancha rural y telecomunicaciones." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/scep/home-energy-rebate-programs",
+  i18n: {
+    en: { title: "Home Energy Rebate Programs", desc: "Energy rebates to help households improve efficiency and reduce costs." },
+    fr: { title: "Programmes rabais énergie maison", desc: "Rabais énergie pour améliorer l’efficacité et réduire les coûts." },
+    es: { title: "Programas de Reembolsos de Energía", desc: "Reembolsos para mejorar eficiencia y reducir costos." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/energysaver/energy-saver",
+  i18n: {
+    en: { title: "Energy Saver Resources", desc: "Federal energy-saving guidance to lower home utility costs." },
+    fr: { title: "Ressources économies énergie", desc: "Conseils fédéraux pour réduire les factures d’énergie." },
+    es: { title: "Recursos Energy Saver", desc: "Guía federal para reducir costos de energía en el hogar." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/watersense",
+  i18n: {
+    en: { title: "EPA WaterSense", desc: "Water-saving resources that can help households reduce water costs." },
+    fr: { title: "EPA WaterSense", desc: "Ressources pour économiser l’eau et réduire les coûts." },
+    es: { title: "EPA WaterSense", desc: "Recursos para ahorrar agua y reducir costos." },
+  },
+},
+
+{
+  category: "Education",
+  link: "https://www2.ed.gov/about/offices/list/ovae/pi/AdultEd/index.html",
+  i18n: {
+    en: { title: "Adult Education and Literacy", desc: "Federal resources for adult education, literacy, and basic skills." },
+    fr: { title: "Éducation adultes et alphabétisation", desc: "Ressources fédérales pour éducation adulte et compétences de base." },
+    es: { title: "Educación de Adultos y Alfabetización", desc: "Recursos federales para educación adulta y habilidades básicas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.careeronestop.org/FindTraining/find-training.aspx",
+  i18n: {
+    en: { title: "CareerOneStop Training Finder", desc: "Search training programs, certifications, and local education options." },
+    fr: { title: "Recherche formation CareerOneStop", desc: "Trouvez formations, certifications et options locales." },
+    es: { title: "Buscador de Capacitación CareerOneStop", desc: "Busque capacitaciones, certificaciones y opciones locales." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.careeronestop.org/FindTraining/Types/community-colleges.aspx",
+  i18n: {
+    en: { title: "Community College Finder", desc: "Find community colleges and affordable local education programs." },
+    fr: { title: "Recherche collèges communautaires", desc: "Trouvez collèges communautaires et formations abordables." },
+    es: { title: "Buscador de Colegios Comunitarios", desc: "Encuentre colegios comunitarios y educación local asequible." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.careeronestop.org/FindTraining/Pay/find-money-for-training.aspx",
+  i18n: {
+    en: { title: "Find Money for Training", desc: "CareerOneStop guide to scholarships, grants, and training funds." },
+    fr: { title: "Trouver aide pour formation", desc: "Guide bourses, subventions et fonds de formation." },
+    es: { title: "Encontrar Dinero para Capacitación", desc: "Guía de becas, subvenciones y fondos de capacitación." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.dol.gov/agencies/eta/youth/youthbuild",
+  i18n: {
+    en: { title: "DOL YouthBuild Program", desc: "Education and job training for young adults in high-demand fields." },
+    fr: { title: "Programme YouthBuild DOL", desc: "Éducation et formation professionnelle pour jeunes adultes." },
+    es: { title: "Programa YouthBuild DOL", desc: "Educación y capacitación laboral para jóvenes adultos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.dol.gov/agencies/eta/youth",
+  i18n: {
+    en: { title: "DOL Youth Employment Programs", desc: "Employment, education, and training resources for young people." },
+    fr: { title: "Programmes emploi jeunes DOL", desc: "Ressources emploi, éducation et formation pour jeunes." },
+    es: { title: "Programas de Empleo Juvenil DOL", desc: "Recursos de empleo, educación y capacitación para jóvenes." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.jobcorps.gov/explore",
+  i18n: {
+    en: { title: "Job Corps Career Training Areas", desc: "Explore free career training options through Job Corps." },
+    fr: { title: "Formations Job Corps", desc: "Explorez les options gratuites de formation professionnelle." },
+    es: { title: "Áreas de Capacitación Job Corps", desc: "Explore opciones gratuitas de capacitación laboral." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.usa.gov/financial-aid",
+  i18n: {
+    en: { title: "Financial Aid for Students", desc: "Government guide to grants, loans, scholarships, and student aid." },
+    fr: { title: "Aide financière étudiants", desc: "Guide gouvernemental bourses, prêts et aide étudiante." },
+    es: { title: "Ayuda Financiera para Estudiantes", desc: "Guía del gobierno sobre becas, préstamos y ayuda estudiantil." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/grants-and-programs",
+  i18n: {
+    en: { title: "Department of Education Grants and Programs", desc: "Federal education grants, resources, and program information." },
+    fr: { title: "Subventions et programmes Éducation", desc: "Subventions et ressources fédérales d’éducation." },
+    es: { title: "Subvenciones y Programas de Educación", desc: "Subvenciones federales, recursos y programas educativos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nld.org",
+  i18n: {
+    en: { title: "National Literacy Directory Search", desc: "Find literacy, GED, and adult education programs by location." },
+    fr: { title: "Recherche alphabétisation nationale", desc: "Trouvez alphabétisation, GED et éducation adulte par région." },
+    es: { title: "Búsqueda Nacional de Alfabetización", desc: "Encuentre alfabetización, GED y educación adulta por ubicación." },
+  },
+},
+
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/meals4kids",
+  i18n: {
+    en: { title: "USDA Meals for Kids Site Finder", desc: "Find nearby meal sites for children during summer and school breaks." },
+    fr: { title: "Recherche repas enfants USDA", desc: "Trouvez des sites de repas pour enfants pendant vacances scolaires." },
+    es: { title: "Buscador de Comidas para Niños USDA", desc: "Encuentre sitios cercanos de comidas para niños." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/team-nutrition",
+  i18n: {
+    en: { title: "Team Nutrition", desc: "USDA nutrition education resources for children, families, and schools." },
+    fr: { title: "Team Nutrition", desc: "Ressources USDA d’éducation nutritionnelle pour familles et écoles." },
+    es: { title: "Team Nutrition", desc: "Recursos USDA de educación nutricional para familias y escuelas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/cn",
+  i18n: {
+    en: { title: "USDA Child Nutrition Programs", desc: "Federal child nutrition programs supporting meals for children." },
+    fr: { title: "Programmes nutrition enfants USDA", desc: "Programmes fédéraux de repas et nutrition pour enfants." },
+    es: { title: "Programas de Nutrición Infantil USDA", desc: "Programas federales de comidas y nutrición para niños." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/snap/retailer",
+  i18n: {
+    en: { title: "SNAP Retailer Locator Resources", desc: "Information for finding and understanding SNAP-authorized retailers." },
+    fr: { title: "Ressources détaillants SNAP", desc: "Informations sur les détaillants autorisés SNAP." },
+    es: { title: "Recursos de Tiendas SNAP", desc: "Información sobre tiendas autorizadas para SNAP." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/snap/online-purchasing-pilot",
+  i18n: {
+    en: { title: "SNAP Online Purchasing", desc: "Information about using SNAP benefits for online grocery purchases." },
+    fr: { title: "Achats en ligne SNAP", desc: "Informations sur l’utilisation de SNAP pour achats alimentaires en ligne." },
+    es: { title: "Compras en Línea SNAP", desc: "Información para usar SNAP en compras de comida en línea." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/wic/wic-families",
+  i18n: {
+    en: { title: "WIC for Families", desc: "Nutrition and health support information for WIC families." },
+    fr: { title: "WIC pour familles", desc: "Informations nutrition et santé pour familles WIC." },
+    es: { title: "WIC para Familias", desc: "Información de nutrición y salud para familias WIC." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/cn/nutrition-education",
+  i18n: {
+    en: { title: "Child Nutrition Education", desc: "Nutrition education resources for children and school meal programs." },
+    fr: { title: "Éducation nutrition enfants", desc: "Ressources nutritionnelles pour enfants et repas scolaires." },
+    es: { title: "Educación Nutricional Infantil", desc: "Recursos de nutrición para niños y comidas escolares." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.hungerfreeamerica.org/en-us/usda-national-hunger-hotline",
+  i18n: {
+    en: { title: "Hunger Free America Hotline", desc: "Food assistance hotline support and local hunger relief connections." },
+    fr: { title: "Ligne aide Hunger Free America", desc: "Soutien alimentaire et orientation vers ressources locales." },
+    es: { title: "Línea Hunger Free America", desc: "Apoyo de alimentos y conexiones con recursos locales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.nutrition.gov/topics/food-security-and-access",
+  i18n: {
+    en: { title: "Nutrition.gov Food Security Resources", desc: "Federal food access, nutrition, and food security information." },
+    fr: { title: "Ressources sécurité alimentaire Nutrition.gov", desc: "Informations fédérales sur accès alimentaire et nutrition." },
+    es: { title: "Recursos de Seguridad Alimentaria Nutrition.gov", desc: "Información federal de acceso a alimentos y nutrición." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.nutrition.gov/topics/shopping-cooking-and-meal-planning",
+  i18n: {
+    en: { title: "Meal Planning on a Budget", desc: "Nutrition.gov resources for affordable cooking and meal planning." },
+    fr: { title: "Planification repas budget", desc: "Ressources pour cuisiner et planifier à petit budget." },
+    es: { title: "Planificación de Comidas Económicas", desc: "Recursos para cocinar y planificar comidas con bajo presupuesto." },
+  },
+},
+
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/consumer-tools/debt-collection/",
+  i18n: {
+    en: { title: "CFPB Debt Collection Help", desc: "Tools and guidance for dealing with debt collectors and protecting your rights." },
+    fr: { title: "Aide CFPB recouvrement dette", desc: "Outils pour gérer les agents de recouvrement et protéger vos droits." },
+    es: { title: "Ayuda CFPB con Cobro de Deudas", desc: "Herramientas para tratar con cobradores y proteger sus derechos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/",
+  i18n: {
+    en: { title: "CFPB Credit Reports and Scores", desc: "Resources to understand credit reports, scores, and credit improvement." },
+    fr: { title: "Rapports et scores crédit CFPB", desc: "Ressources pour comprendre et améliorer le crédit." },
+    es: { title: "Reportes y Puntajes de Crédito CFPB", desc: "Recursos para entender y mejorar el crédito." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/consumer-tools/auto-loans/",
+  i18n: {
+    en: { title: "CFPB Auto Loan Help", desc: "Tools for understanding auto loans, payments, and consumer protections." },
+    fr: { title: "Aide prêts auto CFPB", desc: "Outils pour comprendre prêts auto, paiements et protections." },
+    es: { title: "Ayuda CFPB con Préstamos de Auto", desc: "Herramientas para entender préstamos de auto y pagos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/consumer-tools/student-loans/",
+  i18n: {
+    en: { title: "CFPB Student Loan Help", desc: "Resources for managing student loans, repayment, and financial decisions." },
+    fr: { title: "Aide prêts étudiants CFPB", desc: "Ressources pour gérer prêts étudiants et remboursement." },
+    es: { title: "Ayuda CFPB con Préstamos Estudiantiles", desc: "Recursos para manejar préstamos estudiantiles y pagos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.usa.gov/taxes",
+  i18n: {
+    en: { title: "USA.gov Tax Help", desc: "Government guide to tax filing, credits, refunds, and tax assistance." },
+    fr: { title: "Aide impôts USA.gov", desc: "Guide gouvernemental déclaration, crédits, remboursements et aide fiscale." },
+    es: { title: "Ayuda de Impuestos USA.gov", desc: "Guía del gobierno sobre impuestos, créditos y reembolsos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.taxpayeradvocate.irs.gov",
+  i18n: {
+    en: { title: "Taxpayer Advocate Service", desc: "Independent IRS help for taxpayers facing unresolved tax problems." },
+    fr: { title: "Service défense contribuables", desc: "Aide indépendante IRS pour problèmes fiscaux non résolus." },
+    es: { title: "Servicio del Defensor del Contribuyente", desc: "Ayuda independiente del IRS para problemas fiscales." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.irs.gov/credits-deductions/individuals/education-credits-aotc-llc",
+  i18n: {
+    en: { title: "IRS Education Credits", desc: "Tax credits for eligible education expenses and students." },
+    fr: { title: "Crédits impôt éducation IRS", desc: "Crédits fiscaux pour dépenses d’éducation admissibles." },
+    es: { title: "Créditos de Educación IRS", desc: "Créditos fiscales para gastos educativos elegibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.irs.gov/credits-deductions/individuals/savers-credit",
+  i18n: {
+    en: { title: "Saver’s Credit", desc: "Tax credit for eligible retirement savings contributions." },
+    fr: { title: "Crédit épargne retraite", desc: "Crédit fiscal pour contributions retraite admissibles." },
+    es: { title: "Crédito del Ahorrador", desc: "Crédito fiscal por contribuciones de jubilación elegibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.usa.gov/financial-hardship",
+  i18n: {
+    en: { title: "Financial Hardship Help", desc: "Government guide to resources for bills, debt, unemployment, and housing hardship." },
+    fr: { title: "Aide difficulté financière", desc: "Guide ressources factures, dette, chômage et logement." },
+    es: { title: "Ayuda por Dificultad Financiera", desc: "Guía de recursos para facturas, deudas, desempleo y vivienda." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.usa.gov/disability-benefits",
+  i18n: {
+    en: { title: "Disability Benefits Guide", desc: "Government guide to disability benefits, applications, and support programs." },
+    fr: { title: "Guide prestations handicap", desc: "Guide gouvernemental prestations handicap et demandes." },
+    es: { title: "Guía de Beneficios por Discapacidad", desc: "Guía del gobierno sobre beneficios y solicitudes por discapacidad." },
+  },
+},
 
 ];
 

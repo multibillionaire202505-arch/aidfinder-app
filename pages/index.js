@@ -3501,6 +3501,462 @@ const ALL = [
     es: { title: "Buscador de American Job Centers", desc: "Encuentre centros locales de empleo y capacitación." },
   },
 },
+  // ===== PROGRAMS 351-400 =====
+
+{
+  category: "Health",
+  link: "https://www.caregiver.va.gov",
+  i18n: {
+    en: { title: "VA Caregiver Support Program", desc: "Support, resources, and services for caregivers of eligible veterans." },
+    fr: { title: "Programme de soutien aux aidants VA", desc: "Soutien et ressources pour aidants de vétérans admissibles." },
+    es: { title: "Programa de Apoyo a Cuidadores VA", desc: "Apoyo y recursos para cuidadores de veteranos elegibles." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.vetcenter.va.gov",
+  i18n: {
+    en: { title: "Vet Center Services", desc: "Counseling and support services for veterans, service members, and families." },
+    fr: { title: "Services Vet Center", desc: "Conseils et soutien pour vétérans, militaires et familles." },
+    es: { title: "Servicios Vet Center", desc: "Consejería y apoyo para veteranos, militares y familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.veteranscrisisline.net",
+  i18n: {
+    en: { title: "Veterans Crisis Line", desc: "24/7 confidential crisis support for veterans and loved ones." },
+    fr: { title: "Ligne de crise vétérans", desc: "Soutien confidentiel 24/7 pour vétérans et proches." },
+    es: { title: "Línea de Crisis para Veteranos", desc: "Apoyo confidencial 24/7 para veteranos y familias." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.va.gov/careers-employment/education-and-career-counseling/",
+  i18n: {
+    en: { title: "VA Education and Career Counseling", desc: "Career guidance and education counseling for eligible veterans and dependents." },
+    fr: { title: "Conseil carrière et éducation VA", desc: "Orientation carrière et éducation pour vétérans et familles." },
+    es: { title: "Consejería Educativa y Profesional VA", desc: "Orientación educativa y profesional para veteranos elegibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/careers-employment/vocational-rehabilitation/",
+  i18n: {
+    en: { title: "Veteran Readiness and Employment", desc: "Employment, training, and independent living help for eligible veterans." },
+    fr: { title: "Préparation et emploi vétérans", desc: "Aide emploi, formation et autonomie pour vétérans." },
+    es: { title: "Preparación y Empleo para Veteranos", desc: "Ayuda de empleo, capacitación y vida independiente." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dol.gov/agencies/vets/programs/hvrp",
+  i18n: {
+    en: { title: "Homeless Veterans Reintegration Program", desc: "Employment support for veterans experiencing or at risk of homelessness." },
+    fr: { title: "Réinsertion vétérans sans-abri", desc: "Soutien emploi pour vétérans sans logement ou à risque." },
+    es: { title: "Reintegración de Veteranos sin Hogar", desc: "Apoyo laboral para veteranos sin hogar o en riesgo." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.prevention.va.gov",
+  i18n: {
+    en: { title: "VA Preventive Health Resources", desc: "Wellness, prevention, and health education resources for veterans." },
+    fr: { title: "Ressources prévention santé VA", desc: "Bien-être, prévention et éducation santé pour vétérans." },
+    es: { title: "Recursos Preventivos de Salud VA", desc: "Bienestar, prevención y educación de salud para veteranos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.mentalhealth.va.gov",
+  i18n: {
+    en: { title: "VA Mental Health Services", desc: "Mental health care and support services for veterans." },
+    fr: { title: "Services santé mentale VA", desc: "Soins et soutien en santé mentale pour vétérans." },
+    es: { title: "Servicios de Salud Mental VA", desc: "Atención y apoyo de salud mental para veteranos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.va.gov/education/about-gi-bill-benefits/",
+  i18n: {
+    en: { title: "GI Bill Education Benefits", desc: "Education and training benefits for veterans, service members, and families." },
+    fr: { title: "Avantages éducatifs GI Bill", desc: "Aide éducation et formation pour vétérans et familles." },
+    es: { title: "Beneficios Educativos GI Bill", desc: "Educación y capacitación para veteranos y familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.va.gov/geriatrics/",
+  i18n: {
+    en: { title: "VA Geriatrics and Extended Care", desc: "Long-term care, caregiver, and senior health resources for veterans." },
+    fr: { title: "Soins gériatriques VA", desc: "Soins longue durée et ressources seniors pour vétérans." },
+    es: { title: "Geriatría y Cuidado Extendido VA", desc: "Cuidado prolongado y recursos para veteranos mayores." },
+  },
+},
+
+{
+  category: "Health",
+  link: "https://acl.gov/programs/aging-and-disability-networks/aging-and-disability-resource-centers",
+  i18n: {
+    en: { title: "Aging and Disability Resource Centers", desc: "Local help connecting older adults and people with disabilities to services." },
+    fr: { title: "Centres ressources vieillissement handicap", desc: "Aide locale pour aînés et personnes handicapées." },
+    es: { title: "Centros de Recursos para Envejecimiento y Discapacidad", desc: "Ayuda local para adultos mayores y personas con discapacidades." },
+  },
+},
+{
+  category: "Health",
+  link: "https://acl.gov/programs/assistive-technology",
+  i18n: {
+    en: { title: "Assistive Technology Programs", desc: "Assistive technology resources for people with disabilities and older adults." },
+    fr: { title: "Programmes technologie d’assistance", desc: "Ressources technologiques pour handicap et vieillissement." },
+    es: { title: "Programas de Tecnología Asistiva", desc: "Recursos tecnológicos para personas con discapacidades." },
+  },
+},
+{
+  category: "Income",
+  link: "https://askjan.org",
+  i18n: {
+    en: { title: "Job Accommodation Network", desc: "Workplace accommodation guidance for workers with disabilities and employers." },
+    fr: { title: "Réseau adaptation emploi", desc: "Conseils d’adaptation au travail pour handicap." },
+    es: { title: "Red de Adaptación Laboral", desc: "Orientación sobre adaptaciones laborales para discapacidad." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ada.gov",
+  i18n: {
+    en: { title: "ADA.gov Disability Rights", desc: "Information about disability rights and accessibility under the ADA." },
+    fr: { title: "Droits handicap ADA.gov", desc: "Informations droits handicap et accessibilité." },
+    es: { title: "Derechos de Discapacidad ADA.gov", desc: "Información sobre derechos y accesibilidad." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ssa.gov/work/",
+  i18n: {
+    en: { title: "Social Security Work Incentives", desc: "Work support and incentive information for disability beneficiaries." },
+    fr: { title: "Incitations travail sécurité sociale", desc: "Aide travail pour bénéficiaires handicap." },
+    es: { title: "Incentivos Laborales del Seguro Social", desc: "Apoyo laboral para beneficiarios por discapacidad." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.specialolympics.org/programs",
+  i18n: {
+    en: { title: "Special Olympics Programs", desc: "Sports, health, and inclusion programs for people with intellectual disabilities." },
+    fr: { title: "Programmes Special Olympics", desc: "Sport, santé et inclusion pour handicap intellectuel." },
+    es: { title: "Programas Special Olympics", desc: "Deporte, salud e inclusión para discapacidad intelectual." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.parentcenterhub.org/find-your-center/",
+  i18n: {
+    en: { title: "Parent Center Hub", desc: "Find parent training and information centers for children with disabilities." },
+    fr: { title: "Centre ressources parents", desc: "Trouvez formations et informations pour enfants handicapés." },
+    es: { title: "Centro de Recursos para Padres", desc: "Encuentre apoyo para niños con discapacidades." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.thearc.org/find-a-chapter/",
+  i18n: {
+    en: { title: "The Arc Local Chapters", desc: "Local advocacy and support for people with intellectual and developmental disabilities." },
+    fr: { title: "Chapitres locaux The Arc", desc: "Soutien local pour handicaps intellectuels et développementaux." },
+    es: { title: "Capítulos Locales The Arc", desc: "Apoyo local para discapacidades intelectuales y del desarrollo." },
+  },
+},
+{
+  category: "Health",
+  link: "https://autismsociety.org/contact-us/#affiliate-network",
+  i18n: {
+    en: { title: "Autism Society Affiliate Network", desc: "Local autism support, education, and community resources." },
+    fr: { title: "Réseau Autism Society", desc: "Soutien local, éducation et ressources autisme." },
+    es: { title: "Red de Autism Society", desc: "Apoyo local, educación y recursos sobre autismo." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fcc.gov/accessibility",
+  i18n: {
+    en: { title: "FCC Accessibility Resources", desc: "Communication accessibility resources for people with disabilities." },
+    fr: { title: "Ressources accessibilité FCC", desc: "Accessibilité communication pour personnes handicapées." },
+    es: { title: "Recursos de Accesibilidad FCC", desc: "Accesibilidad en comunicaciones para personas con discapacidades." },
+  },
+},
+
+{
+  category: "Health",
+  link: "https://www.smpresource.org",
+  i18n: {
+    en: { title: "Senior Medicare Patrol", desc: "Helps seniors prevent, detect, and report Medicare fraud." },
+    fr: { title: "Patrouille Medicare seniors", desc: "Aide les aînés à signaler fraude Medicare." },
+    es: { title: "Patrulla Medicare para Adultos Mayores", desc: "Ayuda a prevenir y reportar fraude de Medicare." },
+  },
+},
+{
+  category: "Health",
+  link: "https://acl.gov/programs/protecting-rights-and-preventing-abuse/long-term-care-ombudsman-program",
+  i18n: {
+    en: { title: "Long-Term Care Ombudsman Program", desc: "Advocacy for residents of nursing homes and long-term care facilities." },
+    fr: { title: "Ombudsman soins longue durée", desc: "Défense des résidents en établissements de soins." },
+    es: { title: "Defensor de Cuidado a Largo Plazo", desc: "Defensa para residentes de centros de cuidado." },
+  },
+},
+{
+  category: "Health",
+  link: "https://acl.gov/programs/health-wellness/falls-prevention",
+  i18n: {
+    en: { title: "Falls Prevention Programs", desc: "Programs and resources to help older adults prevent falls." },
+    fr: { title: "Prévention des chutes", desc: "Programmes pour aider les aînés à éviter les chutes." },
+    es: { title: "Programas de Prevención de Caídas", desc: "Recursos para prevenir caídas en adultos mayores." },
+  },
+},
+{
+  category: "Health",
+  link: "https://acl.gov/programs/health-wellness/chronic-disease-self-management-education-programs",
+  i18n: {
+    en: { title: "Chronic Disease Self-Management Education", desc: "Programs helping older adults manage chronic health conditions." },
+    fr: { title: "Gestion maladies chroniques", desc: "Programmes pour gérer les maladies chroniques." },
+    es: { title: "Educación para Manejo de Enfermedades Crónicas", desc: "Programas para manejar condiciones crónicas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://acl.gov/programs/health-wellness/nutrition-services",
+  i18n: {
+    en: { title: "ACL Senior Nutrition Services", desc: "Nutrition programs supporting meals and food access for older adults." },
+    fr: { title: "Services nutrition seniors ACL", desc: "Repas et accès alimentaire pour aînés." },
+    es: { title: "Servicios de Nutrición para Mayores ACL", desc: "Programas de comidas para adultos mayores." },
+  },
+},
+{
+  category: "Health",
+  link: "https://acl.gov/programs/support-caregivers",
+  i18n: {
+    en: { title: "ACL Caregiver Support", desc: "Caregiver support resources for families helping older adults and people with disabilities." },
+    fr: { title: "Soutien aidants ACL", desc: "Ressources pour familles aidantes." },
+    es: { title: "Apoyo para Cuidadores ACL", desc: "Recursos para familias cuidadoras." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.seniorserviceamerica.org",
+  i18n: {
+    en: { title: "Senior Service America", desc: "Employment and community service opportunities for older workers." },
+    fr: { title: "Senior Service America", desc: "Emploi et service communautaire pour travailleurs âgés." },
+    es: { title: "Senior Service America", desc: "Empleo y servicio comunitario para adultos mayores." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nia.nih.gov/health",
+  i18n: {
+    en: { title: "National Institute on Aging Health Resources", desc: "Health and aging information for older adults and caregivers." },
+    fr: { title: "Ressources santé vieillissement NIA", desc: "Informations santé pour aînés et aidants." },
+    es: { title: "Recursos de Salud del NIA", desc: "Información de salud y envejecimiento." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://eldercare.acl.gov/Public/Resources/Factsheets/Home_Modification.aspx",
+  i18n: {
+    en: { title: "Home Modification for Older Adults", desc: "Home safety and modification resources for aging in place." },
+    fr: { title: "Adaptation domicile pour aînés", desc: "Ressources sécurité maison pour vieillir chez soi." },
+    es: { title: "Modificación del Hogar para Mayores", desc: "Recursos de seguridad para envejecer en casa." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.n4a.org",
+  i18n: {
+    en: { title: "Area Agencies on Aging", desc: "Local aging services and community support through area agencies." },
+    fr: { title: "Agences locales vieillissement", desc: "Services locaux pour aînés." },
+    es: { title: "Agencias Locales sobre Envejecimiento", desc: "Servicios locales para adultos mayores." },
+  },
+},
+
+{
+  category: "Utilities",
+  link: "https://www.nadtc.org",
+  i18n: {
+    en: { title: "National Aging and Disability Transportation Center", desc: "Transportation resources for older adults and people with disabilities." },
+    fr: { title: "Centre transport vieillissement handicap", desc: "Ressources transport pour aînés et handicap." },
+    es: { title: "Centro de Transporte para Mayores y Discapacidad", desc: "Recursos de transporte para mayores y discapacidad." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.nationalrtap.org",
+  i18n: {
+    en: { title: "National Rural Transit Assistance Program", desc: "Rural transportation resources and transit assistance information." },
+    fr: { title: "Aide transport rural national", desc: "Ressources de transport rural." },
+    es: { title: "Programa Nacional de Transporte Rural", desc: "Recursos de transporte rural." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicaid.gov/medicaid/benefits/non-emergency-medical-transportation/index.html",
+  i18n: {
+    en: { title: "Medicaid Non-Emergency Medical Transportation", desc: "Transportation benefit information for eligible Medicaid members." },
+    fr: { title: "Transport médical non urgent Medicaid", desc: "Information transport pour bénéficiaires Medicaid." },
+    es: { title: "Transporte Médico No Urgente Medicaid", desc: "Información de transporte para miembros Medicaid." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/ada-regulations",
+  i18n: {
+    en: { title: "ADA Transit Rights", desc: "Transportation accessibility rights and ADA transit guidance." },
+    fr: { title: "Droits transport ADA", desc: "Accessibilité transport et droits ADA." },
+    es: { title: "Derechos de Transporte ADA", desc: "Accesibilidad en transporte y derechos ADA." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.transit.dot.gov/funding/grants/enhanced-mobility-seniors-individuals-disabilities-section-5310",
+  i18n: {
+    en: { title: "Enhanced Mobility for Seniors and Disabilities", desc: "Transit support for seniors and people with disabilities." },
+    fr: { title: "Mobilité seniors et handicap", desc: "Soutien transport pour aînés et handicap." },
+    es: { title: "Movilidad para Mayores y Discapacidad", desc: "Apoyo de transporte para mayores y discapacidad." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.transit.dot.gov/rural-formula-grants-5311",
+  i18n: {
+    en: { title: "Rural Public Transportation Grants", desc: "Federal rural transit program information and support." },
+    fr: { title: "Subventions transport rural", desc: "Programme fédéral transport rural." },
+    es: { title: "Subvenciones de Transporte Rural", desc: "Programa federal de transporte rural." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.transportation.gov/rural",
+  i18n: {
+    en: { title: "Rural Transportation Resources", desc: "Transportation resources for rural communities and local mobility." },
+    fr: { title: "Ressources transport rural", desc: "Mobilité pour communautés rurales." },
+    es: { title: "Recursos de Transporte Rural", desc: "Movilidad para comunidades rurales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.transportation.gov/accessibility",
+  i18n: {
+    en: { title: "DOT Accessibility Resources", desc: "Transportation accessibility and civil rights information." },
+    fr: { title: "Ressources accessibilité DOT", desc: "Accessibilité transport et droits civils." },
+    es: { title: "Recursos de Accesibilidad DOT", desc: "Accesibilidad y derechos civiles en transporte." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.benefits.gov/benefit/623",
+  i18n: {
+    en: { title: "Benefits.gov Transportation Support", desc: "Transportation assistance information for eligible individuals." },
+    fr: { title: "Aide transport Benefits.gov", desc: "Informations aide transport pour personnes admissibles." },
+    es: { title: "Apoyo de Transporte Benefits.gov", desc: "Información de ayuda de transporte para personas elegibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.va.gov/health-care/get-reimbursed-for-travel-pay/",
+  i18n: {
+    en: { title: "VA Travel Reimbursement", desc: "Travel pay reimbursement for eligible veterans going to VA health care." },
+    fr: { title: "Remboursement voyage VA", desc: "Aide transport pour soins VA admissibles." },
+    es: { title: "Reembolso de Viaje VA", desc: "Reembolso de transporte para atención médica VA." },
+  },
+},
+
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/complaint/",
+  i18n: {
+    en: { title: "CFPB Consumer Complaint System", desc: "Submit complaints about financial products, credit, debt, and banking." },
+    fr: { title: "Plaintes consommateurs CFPB", desc: "Déposer plaintes crédit, dette, banque et produits financiers." },
+    es: { title: "Sistema de Quejas CFPB", desc: "Presente quejas sobre crédito, deuda, banca y finanzas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.identitytheft.gov",
+  i18n: {
+    en: { title: "IdentityTheft.gov Recovery", desc: "Official recovery steps for identity theft and fraud victims." },
+    fr: { title: "Récupération vol identité", desc: "Étapes officielles pour victimes d’usurpation." },
+    es: { title: "Recuperación de Robo de Identidad", desc: "Pasos oficiales para víctimas de fraude." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.thehotline.org",
+  i18n: {
+    en: { title: "National Domestic Violence Hotline", desc: "24/7 confidential support for people experiencing domestic violence." },
+    fr: { title: "Ligne violence domestique", desc: "Soutien confidentiel 24/7 contre violence domestique." },
+    es: { title: "Línea Nacional de Violencia Doméstica", desc: "Apoyo confidencial 24/7 para violencia doméstica." },
+  },
+},
+{
+  category: "Health",
+  link: "https://victimconnect.org",
+  i18n: {
+    en: { title: "VictimConnect Resource Center", desc: "Confidential referrals and support for victims of crime." },
+    fr: { title: "Centre VictimConnect", desc: "Orientation confidentielle pour victimes de crime." },
+    es: { title: "Centro VictimConnect", desc: "Referencias confidenciales para víctimas de crimen." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.childhelphotline.org",
+  i18n: {
+    en: { title: "Childhelp National Child Abuse Hotline", desc: "24/7 support for child abuse prevention and crisis help." },
+    fr: { title: "Ligne Childhelp maltraitance enfants", desc: "Soutien 24/7 prévention et crise." },
+    es: { title: "Línea Childhelp de Abuso Infantil", desc: "Apoyo 24/7 para prevención y crisis." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.missingkids.org",
+  i18n: {
+    en: { title: "National Center for Missing & Exploited Children", desc: "Resources for missing children, exploitation prevention, and family support." },
+    fr: { title: "Centre enfants disparus exploités", desc: "Ressources enfants disparus et soutien familial." },
+    es: { title: "Centro Nacional para Niños Desaparecidos", desc: "Recursos para niños desaparecidos y apoyo familiar." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.usa.gov/consumer",
+  i18n: {
+    en: { title: "USA.gov Consumer Protection", desc: "Consumer rights, scams, complaints, and protection resources." },
+    fr: { title: "Protection consommateur USA.gov", desc: "Droits consommateurs, arnaques et plaintes." },
+    es: { title: "Protección al Consumidor USA.gov", desc: "Derechos del consumidor, estafas y quejas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://reportfraud.ftc.gov",
+  i18n: {
+    en: { title: "FTC Report Fraud", desc: "Report scams, fraud, and identity theft to the FTC." },
+    fr: { title: "Signaler fraude FTC", desc: "Signaler arnaques, fraude et vol d’identité." },
+    es: { title: "Reportar Fraude FTC", desc: "Reporte estafas, fraude y robo de identidad." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.justice.gov/elderjustice",
+  i18n: {
+    en: { title: "Elder Justice Initiative", desc: "Resources for elder abuse prevention, reporting, and justice support." },
+    fr: { title: "Initiative justice aînés", desc: "Prévention et signalement abus envers aînés." },
+    es: { title: "Iniciativa de Justicia para Mayores", desc: "Prevención y reporte de abuso a adultos mayores." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.usa.gov/legal-aid",
+  i18n: {
+    en: { title: "USA.gov Legal Aid", desc: "Government guide to free and low-cost legal help." },
+    fr: { title: "Aide juridique USA.gov", desc: "Guide aide juridique gratuite ou abordable." },
+    es: { title: "Ayuda Legal USA.gov", desc: "Guía de ayuda legal gratuita o de bajo costo." },
+  },
+},
 
 ];
 

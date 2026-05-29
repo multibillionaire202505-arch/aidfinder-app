@@ -3045,6 +3045,462 @@ const ALL = [
     es: { title: "Guía de Beneficios por Discapacidad", desc: "Guía del gobierno sobre beneficios y solicitudes por discapacidad." },
   },
 },
+  // ===== PROGRAMS 301-350 =====
+
+{
+  category: "Health",
+  link: "https://www.mhanational.org/finding-help",
+  i18n: {
+    en: { title: "Mental Health America Find Help", desc: "Mental health resources, support tools, and help finding care." },
+    fr: { title: "Aide Mental Health America", desc: "Ressources santé mentale et outils pour trouver de l’aide." },
+    es: { title: "Ayuda Mental Health America", desc: "Recursos de salud mental y apoyo para encontrar atención." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nimh.nih.gov/health/find-help",
+  i18n: {
+    en: { title: "NIMH Find Help for Mental Health", desc: "Federal mental health information and help-finding resources." },
+    fr: { title: "Aide santé mentale NIMH", desc: "Informations fédérales pour trouver de l’aide en santé mentale." },
+    es: { title: "Ayuda de Salud Mental NIMH", desc: "Información federal para encontrar ayuda de salud mental." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.samhsa.gov/find-help/national-helpline",
+  i18n: {
+    en: { title: "SAMHSA National Helpline", desc: "Confidential treatment referral and information service for mental health and substance use." },
+    fr: { title: "Ligne nationale SAMHSA", desc: "Orientation confidentielle pour santé mentale et dépendance." },
+    es: { title: "Línea Nacional SAMHSA", desc: "Servicio confidencial de referencia para salud mental y sustancias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.samhsa.gov/find-help/disaster-distress-helpline",
+  i18n: {
+    en: { title: "Disaster Distress Helpline", desc: "Crisis counseling for people experiencing disaster-related emotional distress." },
+    fr: { title: "Ligne détresse catastrophe", desc: "Soutien de crise après catastrophes." },
+    es: { title: "Línea de Angustia por Desastres", desc: "Apoyo emocional por estrés relacionado con desastres." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hrsa.gov/get-health-care/affordable",
+  i18n: {
+    en: { title: "HRSA Affordable Health Care", desc: "Federal resources for affordable health care and clinics." },
+    fr: { title: "Soins abordables HRSA", desc: "Ressources fédérales pour soins et cliniques abordables." },
+    es: { title: "Atención Médica Asequible HRSA", desc: "Recursos federales para clínicas y atención asequible." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hrsa.gov/get-health-care/affordable/health-centers",
+  i18n: {
+    en: { title: "HRSA Health Center Program", desc: "Health center program information for affordable community care." },
+    fr: { title: "Programme centres santé HRSA", desc: "Informations sur soins communautaires abordables." },
+    es: { title: "Programa de Centros de Salud HRSA", desc: "Información sobre atención comunitaria asequible." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cdc.gov/diabetes/programs/stateandlocal/index.html",
+  i18n: {
+    en: { title: "CDC Diabetes State Programs", desc: "Diabetes prevention and management resources through state programs." },
+    fr: { title: "Programmes diabète CDC", desc: "Prévention et gestion du diabète par programmes d’État." },
+    es: { title: "Programas Estatales de Diabetes CDC", desc: "Prevención y manejo de diabetes por programas estatales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cdc.gov/tobacco/campaign/tips/quit-smoking/index.html",
+  i18n: {
+    en: { title: "CDC Quit Smoking Resources", desc: "Free resources and support to help people stop smoking." },
+    fr: { title: "Ressources arrêt tabac CDC", desc: "Aide gratuite pour arrêter de fumer." },
+    es: { title: "Recursos CDC para Dejar de Fumar", desc: "Ayuda gratuita para dejar de fumar." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cancer.org/support-programs-and-services.html",
+  i18n: {
+    en: { title: "American Cancer Society Support Programs", desc: "Support services for people facing cancer and their families." },
+    fr: { title: "Soutien American Cancer Society", desc: "Services de soutien pour personnes touchées par le cancer." },
+    es: { title: "Apoyo American Cancer Society", desc: "Servicios de apoyo para personas con cáncer y familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.komen.org/support-resources/",
+  i18n: {
+    en: { title: "Susan G. Komen Support Resources", desc: "Breast cancer support, education, and patient resources." },
+    fr: { title: "Ressources Susan G. Komen", desc: "Soutien et éducation cancer du sein." },
+    es: { title: "Recursos Susan G. Komen", desc: "Apoyo y educación sobre cáncer de mama." },
+  },
+},
+
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/avoiding_foreclosure",
+  i18n: {
+    en: { title: "HUD Avoiding Foreclosure", desc: "Foreclosure prevention information and housing counseling resources." },
+    fr: { title: "Éviter saisie HUD", desc: "Informations prévention saisie et conseil logement." },
+    es: { title: "Evitar Ejecución Hipotecaria HUD", desc: "Información y consejería para prevenir ejecución hipotecaria." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/rental_assistance",
+  i18n: {
+    en: { title: "HUD Rental Assistance Overview", desc: "Federal guide to rental assistance and affordable housing options." },
+    fr: { title: "Aide locative HUD aperçu", desc: "Guide fédéral d’aide au loyer et logement abordable." },
+    es: { title: "Resumen de Asistencia de Alquiler HUD", desc: "Guía federal de ayuda de alquiler y vivienda asequible." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/buying_a_home",
+  i18n: {
+    en: { title: "HUD Buying a Home", desc: "Homebuyer education and affordable homeownership resources." },
+    fr: { title: "Acheter maison HUD", desc: "Éducation acheteurs et ressources propriété abordable." },
+    es: { title: "Comprar Casa HUD", desc: "Educación para compradores y recursos de propiedad asequible." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/home_improvements",
+  i18n: {
+    en: { title: "HUD Home Improvements", desc: "Home repair, improvement, and safety resources for homeowners." },
+    fr: { title: "Améliorations maison HUD", desc: "Réparations, améliorations et sécurité du logement." },
+    es: { title: "Mejoras del Hogar HUD", desc: "Reparación, mejoras y seguridad de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/information_for_disabled_persons",
+  i18n: {
+    en: { title: "HUD Housing for Disabled Persons", desc: "Housing rights and assistance information for people with disabilities." },
+    fr: { title: "Logement HUD personnes handicapées", desc: "Droits et aide logement pour personnes handicapées." },
+    es: { title: "Vivienda HUD para Personas con Discapacidad", desc: "Derechos y ayuda de vivienda para personas con discapacidades." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/information_for_senior_citizens",
+  i18n: {
+    en: { title: "HUD Housing for Seniors", desc: "Housing information and assistance resources for older adults." },
+    fr: { title: "Logement HUD pour aînés", desc: "Informations et aides logement pour personnes âgées." },
+    es: { title: "Vivienda HUD para Adultos Mayores", desc: "Información y ayuda de vivienda para adultos mayores." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/homelessness",
+  i18n: {
+    en: { title: "HUD Homelessness Resources", desc: "Federal resources for homelessness prevention and shelter support." },
+    fr: { title: "Ressources sans-abri HUD", desc: "Ressources prévention sans-abrisme et refuges." },
+    es: { title: "Recursos HUD para Personas sin Hogar", desc: "Prevención y apoyo de refugio." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/fair_housing_equal_opp",
+  i18n: {
+    en: { title: "HUD Fair Housing Help", desc: "Fair housing rights, discrimination help, and complaint resources." },
+    fr: { title: "Aide logement équitable HUD", desc: "Droits logement et plaintes discrimination." },
+    es: { title: "Ayuda de Vivienda Justa HUD", desc: "Derechos de vivienda y quejas por discriminación." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.fanniemae.com/education",
+  i18n: {
+    en: { title: "Fannie Mae Homebuyer Education", desc: "Homebuyer education and mortgage readiness resources." },
+    fr: { title: "Éducation acheteurs Fannie Mae", desc: "Préparation achat maison et hypothèque." },
+    es: { title: "Educación para Compradores Fannie Mae", desc: "Preparación para compra de vivienda e hipoteca." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://myhome.freddiemac.com",
+  i18n: {
+    en: { title: "Freddie Mac My Home", desc: "Homebuying, renting, mortgage, and housing education resources." },
+    fr: { title: "Freddie Mac My Home", desc: "Ressources achat, location et hypothèque." },
+    es: { title: "Freddie Mac My Home", desc: "Recursos de compra, alquiler e hipoteca." },
+  },
+},
+
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/communitysolar/community-solar",
+  i18n: {
+    en: { title: "Community Solar Resources", desc: "Information about community solar options that may reduce energy costs." },
+    fr: { title: "Ressources solaire communautaire", desc: "Options solaires communautaires pour réduire coûts énergie." },
+    es: { title: "Recursos de Solar Comunitaria", desc: "Opciones solares comunitarias para reducir costos." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/scep/slsc",
+  i18n: {
+    en: { title: "State and Local Solution Center", desc: "Energy efficiency resources for state and local programs." },
+    fr: { title: "Centre solutions énergie locales", desc: "Ressources efficacité énergétique locales et d’État." },
+    es: { title: "Centro de Soluciones Estatales y Locales", desc: "Recursos de eficiencia energética." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/scep/low-income-community-energy-solutions",
+  i18n: {
+    en: { title: "Low-Income Community Energy Solutions", desc: "Energy resources focused on low-income communities." },
+    fr: { title: "Solutions énergie faible revenu", desc: "Ressources énergie pour communautés à faible revenu." },
+    es: { title: "Soluciones Energéticas para Bajos Ingresos", desc: "Recursos de energía para comunidades de bajos ingresos." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/green-power-markets",
+  i18n: {
+    en: { title: "EPA Green Power Resources", desc: "Information about cleaner energy choices and community energy programs." },
+    fr: { title: "Ressources énergie verte EPA", desc: "Informations sur choix énergie propre." },
+    es: { title: "Recursos de Energía Verde EPA", desc: "Información sobre energía limpia." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/indoor-air-quality-iaq",
+  i18n: {
+    en: { title: "EPA Indoor Air Quality Help", desc: "Home air quality and safety information for healthier housing." },
+    fr: { title: "Qualité air intérieur EPA", desc: "Information sécurité et air sain à domicile." },
+    es: { title: "Calidad del Aire Interior EPA", desc: "Información para hogares más saludables." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/safewater",
+  i18n: {
+    en: { title: "EPA Safe Drinking Water", desc: "Drinking water safety resources and consumer information." },
+    fr: { title: "Eau potable sûre EPA", desc: "Ressources sécurité eau potable." },
+    es: { title: "Agua Potable Segura EPA", desc: "Recursos de seguridad del agua potable." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fcc.gov/general/tribal",
+  i18n: {
+    en: { title: "FCC Tribal Broadband Resources", desc: "Connectivity and broadband resources for Tribal communities." },
+    fr: { title: "Ressources Internet tribal FCC", desc: "Connectivité pour communautés tribales." },
+    es: { title: "Recursos de Banda Ancha Tribal FCC", desc: "Conectividad para comunidades tribales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fcc.gov/consumers/guides/telephone-bill-cramming",
+  i18n: {
+    en: { title: "FCC Phone Bill Protection", desc: "Consumer help for unwanted charges on phone bills." },
+    fr: { title: "Protection facture téléphone FCC", desc: "Aide contre frais non désirés." },
+    es: { title: "Protección de Facturas FCC", desc: "Ayuda contra cargos no deseados." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fcc.gov/consumers/guides/telecommunications-relay-service-trs",
+  i18n: {
+    en: { title: "Telecommunications Relay Service", desc: "Phone communication support for people with hearing or speech disabilities." },
+    fr: { title: "Service relais télécommunications", desc: "Soutien téléphonique pour handicap auditif ou parole." },
+    es: { title: "Servicio de Retransmisión de Telecomunicaciones", desc: "Apoyo telefónico para discapacidad auditiva o del habla." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fcc.gov/consumers/guides/emergency-broadband-benefit",
+  i18n: {
+    en: { title: "Emergency Broadband Benefit Archive", desc: "Consumer information about emergency broadband assistance history." },
+    fr: { title: "Archive aide Internet urgence", desc: "Informations consommateur sur aide Internet d’urgence." },
+    es: { title: "Archivo Beneficio de Banda Ancha", desc: "Información de asistencia de internet de emergencia." },
+  },
+},
+
+{
+  category: "Education",
+  link: "https://studentaid.gov/manage-loans/forgiveness-cancellation/public-service",
+  i18n: {
+    en: { title: "Public Service Loan Forgiveness", desc: "Student loan forgiveness information for qualifying public service workers." },
+    fr: { title: "Annulation prêts service public", desc: "Informations remise prêts étudiants service public." },
+    es: { title: "Perdón de Préstamos Servicio Público", desc: "Información para trabajadores de servicio público." },
+  },
+},
+{
+  category: "Education",
+  link: "https://studentaid.gov/manage-loans/repayment/plans/income-driven",
+  i18n: {
+    en: { title: "Income-Driven Repayment Plans", desc: "Student loan repayment plans based on income and family size." },
+    fr: { title: "Remboursement selon revenu", desc: "Plans prêts étudiants selon revenu et famille." },
+    es: { title: "Planes de Pago Según Ingresos", desc: "Pagos de préstamos estudiantiles según ingresos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://studentaid.gov/borrower-defense/",
+  i18n: {
+    en: { title: "Borrower Defense to Repayment", desc: "Student loan discharge help for eligible school misconduct claims." },
+    fr: { title: "Défense emprunteur remboursement", desc: "Aide annulation prêts en cas de faute école." },
+    es: { title: "Defensa del Prestatario", desc: "Ayuda para descarga de préstamos por conducta escolar." },
+  },
+},
+{
+  category: "Education",
+  link: "https://studentaid.gov/manage-loans/forgiveness-cancellation/disability-discharge",
+  i18n: {
+    en: { title: "Total and Permanent Disability Discharge", desc: "Student loan discharge for eligible borrowers with total and permanent disability." },
+    fr: { title: "Décharge invalidité totale permanente", desc: "Annulation prêts étudiants pour invalidité admissible." },
+    es: { title: "Descarga por Discapacidad Total", desc: "Cancelación de préstamos por discapacidad elegible." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/about/ed-offices/oese",
+  i18n: {
+    en: { title: "Office of Elementary and Secondary Education", desc: "Federal education resources for schools, students, and families." },
+    fr: { title: "Bureau éducation primaire secondaire", desc: "Ressources fédérales pour élèves et familles." },
+    es: { title: "Oficina de Educación Primaria y Secundaria", desc: "Recursos federales para estudiantes y familias." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/about/ed-offices/ocr",
+  i18n: {
+    en: { title: "Education Civil Rights Help", desc: "Support for education discrimination complaints and student rights." },
+    fr: { title: "Droits civils éducation", desc: "Aide plaintes discrimination scolaire." },
+    es: { title: "Ayuda de Derechos Civiles Educación", desc: "Apoyo para quejas de discriminación escolar." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/laws-and-policy/individuals-disabilities",
+  i18n: {
+    en: { title: "Education Disability Rights", desc: "Federal education rights and resources for students with disabilities." },
+    fr: { title: "Droits handicap éducation", desc: "Droits scolaires pour élèves handicapés." },
+    es: { title: "Derechos Educativos de Discapacidad", desc: "Recursos para estudiantes con discapacidades." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/grants-and-programs/formula-grants/special-populations/idea",
+  i18n: {
+    en: { title: "IDEA Special Education Program", desc: "Federal special education support for children with disabilities." },
+    fr: { title: "Programme éducation spécialisée IDEA", desc: "Soutien éducation spécialisée pour enfants handicapés." },
+    es: { title: "Programa IDEA Educación Especial", desc: "Apoyo educativo para niños con discapacidades." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/grants-and-programs/formula-grants/special-populations/education-homeless-children-and-youths",
+  i18n: {
+    en: { title: "Education for Homeless Children and Youth", desc: "School support resources for children and youth experiencing homelessness." },
+    fr: { title: "Éducation enfants sans-abri", desc: "Soutien scolaire pour enfants et jeunes sans logement." },
+    es: { title: "Educación para Niños sin Hogar", desc: "Apoyo escolar para jóvenes sin vivienda." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/grants-and-programs/grants-special-populations/english-language-acquisition",
+  i18n: {
+    en: { title: "English Language Acquisition Programs", desc: "Federal resources supporting English learners and multilingual students." },
+    fr: { title: "Programmes apprentissage anglais", desc: "Soutien aux élèves apprenant l’anglais." },
+    es: { title: "Programas de Aprendizaje de Inglés", desc: "Apoyo a estudiantes multilingües." },
+  },
+},
+
+{
+  category: "Income",
+  link: "https://www.dol.gov/agencies/vets",
+  i18n: {
+    en: { title: "Veterans Employment and Training Service", desc: "Employment resources for veterans, service members, and spouses." },
+    fr: { title: "Service emploi vétérans", desc: "Ressources emploi pour vétérans et conjoints." },
+    es: { title: "Servicio de Empleo para Veteranos", desc: "Recursos laborales para veteranos y cónyuges." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dol.gov/agencies/vets/programs",
+  i18n: {
+    en: { title: "DOL VETS Programs", desc: "Veteran workforce programs and employment support services." },
+    fr: { title: "Programmes emploi vétérans DOL", desc: "Soutien travail pour vétérans." },
+    es: { title: "Programas DOL para Veteranos", desc: "Apoyo laboral para veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.careeronestop.org/Veterans/default.aspx",
+  i18n: {
+    en: { title: "CareerOneStop Veterans Resources", desc: "Career, training, and employment resources for veterans." },
+    fr: { title: "Ressources vétérans CareerOneStop", desc: "Carrière, formation et emploi pour vétérans." },
+    es: { title: "Recursos para Veteranos CareerOneStop", desc: "Carrera, capacitación y empleo para veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.careeronestop.org/WorkerReEmployment/default.aspx",
+  i18n: {
+    en: { title: "Worker ReEmployment Resources", desc: "Help for laid-off workers, job seekers, and career changers." },
+    fr: { title: "Ressources retour emploi", desc: "Aide pour travailleurs licenciés et chercheurs emploi." },
+    es: { title: "Recursos de Reempleo", desc: "Ayuda para trabajadores despedidos y buscadores de empleo." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.careeronestop.org/ResourcesFor/EntryLevelWorkers/entry-level-workers.aspx",
+  i18n: {
+    en: { title: "Entry-Level Worker Resources", desc: "Career tools and job resources for new workers." },
+    fr: { title: "Ressources travailleurs débutants", desc: "Outils carrière pour nouveaux travailleurs." },
+    es: { title: "Recursos para Trabajadores Principiantes", desc: "Herramientas laborales para nuevos trabajadores." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.careeronestop.org/ResourcesFor/OlderWorkers/older-workers.aspx",
+  i18n: {
+    en: { title: "Older Worker Career Resources", desc: "Job search and career resources for older workers." },
+    fr: { title: "Ressources travailleurs âgés", desc: "Aide emploi pour travailleurs plus âgés." },
+    es: { title: "Recursos para Trabajadores Mayores", desc: "Ayuda laboral para trabajadores mayores." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.careeronestop.org/ResourcesFor/WorkersWithDisabilities/workers-with-disabilities.aspx",
+  i18n: {
+    en: { title: "Workers With Disabilities Resources", desc: "Career and employment support for workers with disabilities." },
+    fr: { title: "Ressources travailleurs handicapés", desc: "Soutien carrière pour travailleurs handicapés." },
+    es: { title: "Recursos para Trabajadores con Discapacidades", desc: "Apoyo laboral para trabajadores con discapacidades." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.careeronestop.org/ResourcesFor/ExOffenders/ex-offenders.aspx",
+  i18n: {
+    en: { title: "Reentry Employment Resources", desc: "Job search and career resources for people returning from incarceration." },
+    fr: { title: "Ressources emploi réinsertion", desc: "Aide emploi après incarcération." },
+    es: { title: "Recursos de Reintegración Laboral", desc: "Ayuda laboral para personas que regresan de encarcelamiento." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.careeronestop.org/ResourcesFor/Veteran/veteran.aspx",
+  i18n: {
+    en: { title: "Veteran Career Transition Help", desc: "Career transition tools and job search resources for veterans." },
+    fr: { title: "Transition carrière vétérans", desc: "Outils de transition professionnelle pour vétérans." },
+    es: { title: "Transición Profesional para Veteranos", desc: "Herramientas de carrera para veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.careeronestop.org/LocalHelp/AmericanJobCenters/american-job-centers.aspx",
+  i18n: {
+    en: { title: "American Job Centers Finder", desc: "Find local American Job Centers for employment and training support." },
+    fr: { title: "Recherche American Job Centers", desc: "Trouvez centres locaux pour emploi et formation." },
+    es: { title: "Buscador de American Job Centers", desc: "Encuentre centros locales de empleo y capacitación." },
+  },
+},
 
 ];
 

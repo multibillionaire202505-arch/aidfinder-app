@@ -2115,6 +2115,244 @@ const ALL = [
       es: { title: "Native American Financial Assistance", desc: "Recurso de asistencia para hogares elegibles. Revise los requisitos y solicite ayuda en el enlace oficial." },
     },
   },
+  // ===== PROGRAMS 201-225 =====
+
+// FOOD (5)
+{
+  category: "Food",
+  link: "https://www.foodpantries.org",
+  i18n: {
+    en: { title: "Food Pantries Directory", desc: "Find local food pantries and food assistance programs." },
+    fr: { title: "Répertoire des banques alimentaires", desc: "Trouvez des banques alimentaires locales et des programmes d'aide alimentaire." },
+    es: { title: "Directorio de Bancos de Alimentos", desc: "Encuentre bancos de alimentos y programas de asistencia alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.mealconnect.org",
+  i18n: {
+    en: { title: "MealConnect", desc: "Connects surplus food resources with local communities in need." },
+    fr: { title: "MealConnect", desc: "Relie les surplus alimentaires aux communautés dans le besoin." },
+    es: { title: "MealConnect", desc: "Conecta excedentes de alimentos con comunidades necesitadas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.endhunger.org",
+  i18n: {
+    en: { title: "End Hunger Network", desc: "Programs and resources focused on hunger prevention." },
+    fr: { title: "Réseau contre la faim", desc: "Programmes et ressources de prévention de la faim." },
+    es: { title: "Red Contra el Hambre", desc: "Programas y recursos para prevenir el hambre." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.nokidhungry.org",
+  i18n: {
+    en: { title: "No Kid Hungry", desc: "Programs helping children gain access to nutritious meals." },
+    fr: { title: "No Kid Hungry", desc: "Programmes aidant les enfants à accéder à des repas nutritifs." },
+    es: { title: "No Kid Hungry", desc: "Programas que ayudan a niños a obtener comidas nutritivas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodfinder.us",
+  i18n: {
+    en: { title: "FoodFinder", desc: "Search tool for nearby food assistance resources." },
+    fr: { title: "FoodFinder", desc: "Outil de recherche d'aide alimentaire à proximité." },
+    es: { title: "FoodFinder", desc: "Herramienta para encontrar ayuda alimentaria cercana." },
+  },
+},
+
+// HEALTH (5)
+{
+  category: "Health",
+  link: "https://findahealthcenter.hrsa.gov",
+  i18n: {
+    en: { title: "HRSA Health Center Locator", desc: "Find federally supported community health centers." },
+    fr: { title: "Localisateur HRSA", desc: "Trouvez des centres de santé communautaires." },
+    es: { title: "Localizador HRSA", desc: "Encuentre centros de salud comunitarios." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.needymeds.org",
+  i18n: {
+    en: { title: "NeedyMeds", desc: "Prescription assistance and healthcare savings programs." },
+    fr: { title: "NeedyMeds", desc: "Programmes d'assistance aux médicaments." },
+    es: { title: "NeedyMeds", desc: "Programas de ayuda para medicamentos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.rxassist.org",
+  i18n: {
+    en: { title: "RxAssist", desc: "Medication assistance resources for qualifying patients." },
+    fr: { title: "RxAssist", desc: "Ressources d'aide aux médicaments." },
+    es: { title: "RxAssist", desc: "Recursos de ayuda para medicamentos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.pparx.org",
+  i18n: {
+    en: { title: "Partnership for Prescription Assistance", desc: "Helps patients access prescription assistance programs." },
+    fr: { title: "Aide aux prescriptions", desc: "Aide à accéder aux programmes de médicaments." },
+    es: { title: "Asistencia para Medicamentos", desc: "Ayuda para acceder a medicamentos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.211.org",
+  i18n: {
+    en: { title: "211 Health Resources", desc: "Health and wellness assistance through local 211 services." },
+    fr: { title: "Ressources santé 211", desc: "Aide santé via les services 211." },
+    es: { title: "Recursos de Salud 211", desc: "Ayuda de salud a través del servicio 211." },
+  },
+},
+
+// HOUSING (5)
+{
+  category: "Housing",
+  link: "https://www.hudexchange.info",
+  i18n: {
+    en: { title: "HUD Exchange Housing Resources", desc: "Housing and homelessness support resources." },
+    fr: { title: "Ressources logement HUD", desc: "Ressources logement et lutte contre l'itinérance." },
+    es: { title: "Recursos HUD", desc: "Recursos de vivienda y personas sin hogar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.coalitionforthehomeless.org",
+  i18n: {
+    en: { title: "Coalition for the Homeless", desc: "Support and housing resources for homeless individuals." },
+    fr: { title: "Coalition pour les sans-abri", desc: "Soutien et logement pour les sans-abri." },
+    es: { title: "Coalición para Personas sin Hogar", desc: "Apoyo y vivienda para personas sin hogar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://nationalhomeless.org",
+  i18n: {
+    en: { title: "National Coalition for the Homeless", desc: "Housing advocacy and homelessness assistance." },
+    fr: { title: "Coalition nationale des sans-abri", desc: "Défense et assistance logement." },
+    es: { title: "Coalición Nacional para Personas sin Hogar", desc: "Defensa y asistencia de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rebuildingtogether.org",
+  i18n: {
+    en: { title: "Rebuilding Together", desc: "Home repair assistance for qualifying households." },
+    fr: { title: "Rebuilding Together", desc: "Aide à la réparation de logements." },
+    es: { title: "Rebuilding Together", desc: "Ayuda para reparación de viviendas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.habitat.org",
+  i18n: {
+    en: { title: "Habitat for Humanity", desc: "Affordable housing and homeownership opportunities." },
+    fr: { title: "Habitat pour l'Humanité", desc: "Logement abordable et accès à la propriété." },
+    es: { title: "Hábitat para la Humanidad", desc: "Vivienda asequible y propiedad." },
+  },
+},
+
+// UTILITIES (5)
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/eere/wap/weatherization-assistance-program",
+  i18n: {
+    en: { title: "Weatherization Assistance Program", desc: "Home energy efficiency assistance for eligible households." },
+    fr: { title: "Programme d'isolation", desc: "Aide à l'efficacité énergétique du logement." },
+    es: { title: "Programa de Climatización", desc: "Ayuda para eficiencia energética del hogar." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.benefits.gov/benefit/623",
+  i18n: {
+    en: { title: "Transportation Assistance Resources", desc: "Transportation support for eligible individuals." },
+    fr: { title: "Aide au transport", desc: "Soutien au transport pour les personnes admissibles." },
+    es: { title: "Ayuda de Transporte", desc: "Apoyo de transporte para personas elegibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.ruraldevelopment.usda.gov",
+  i18n: {
+    en: { title: "USDA Rural Development Utilities", desc: "Utility and infrastructure support in rural communities." },
+    fr: { title: "Développement rural USDA", desc: "Soutien aux services publics ruraux." },
+    es: { title: "Desarrollo Rural USDA", desc: "Apoyo a servicios públicos rurales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fcc.gov/broadbandbenefit",
+  i18n: {
+    en: { title: "Broadband Assistance Resources", desc: "Internet affordability and connectivity resources." },
+    fr: { title: "Aide Internet", desc: "Ressources pour l'accès abordable à Internet." },
+    es: { title: "Ayuda de Internet", desc: "Recursos para acceso asequible a Internet." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.usa.gov/help-with-bills",
+  i18n: {
+    en: { title: "Help With Bills", desc: "Government resources for utility and household bills." },
+    fr: { title: "Aide aux factures", desc: "Ressources gouvernementales pour les factures." },
+    es: { title: "Ayuda con Facturas", desc: "Recursos gubernamentales para facturas." },
+  },
+},
+
+// EDUCATION (3)
+{
+  category: "Education",
+  link: "https://www.edx.org",
+  i18n: {
+    en: { title: "edX Learning Programs", desc: "Free and low-cost educational courses and certifications." },
+    fr: { title: "Cours edX", desc: "Cours et certifications gratuits ou abordables." },
+    es: { title: "Cursos edX", desc: "Cursos y certificaciones gratuitos o económicos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.coursera.org",
+  i18n: {
+    en: { title: "Coursera Financial Aid", desc: "Financial aid opportunities for online learning." },
+    fr: { title: "Aide financière Coursera", desc: "Aide financière pour les cours en ligne." },
+    es: { title: "Ayuda Financiera Coursera", desc: "Ayuda financiera para cursos en línea." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.literacydirectory.org",
+  i18n: {
+    en: { title: "National Literacy Directory", desc: "Adult education and literacy resources." },
+    fr: { title: "Répertoire d'alphabétisation", desc: "Ressources d'éducation pour adultes." },
+    es: { title: "Directorio de Alfabetización", desc: "Recursos educativos para adultos." },
+  },
+},
+
+// INCOME (2)
+{
+  category: "Income",
+  link: "https://www.nfcc.org",
+  i18n: {
+    en: { title: "National Foundation for Credit Counseling", desc: "Financial counseling and debt management assistance." },
+    fr: { title: "Fondation nationale de conseil en crédit", desc: "Conseils financiers et gestion des dettes." },
+    es: { title: "Fundación Nacional de Consejería Crediticia", desc: "Asesoría financiera y gestión de deudas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.operationhope.org",
+  i18n: {
+    en: { title: "Operation HOPE", desc: "Financial coaching, credit improvement, and economic empowerment." },
+    fr: { title: "Operation HOPE", desc: "Coaching financier et amélioration du crédit." },
+    es: { title: "Operation HOPE", desc: "Coaching financiero y mejora del crédito." },
+  },
+},
 
 ];
 

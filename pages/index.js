@@ -2353,6 +2353,242 @@ const ALL = [
     es: { title: "Operation HOPE", desc: "Coaching financiero y mejora del crédito." },
   },
 },
+  // ===== PROGRAMS 226-250 =====
+
+// LEGAL AID (5)
+{
+  category: "Income",
+  link: "https://www.lsc.gov/about-lsc/what-legal-aid/get-legal-help",
+  i18n: {
+    en: { title: "Legal Services Corporation Legal Help", desc: "Find free civil legal aid for eligible low-income individuals and families." },
+    fr: { title: "Aide juridique Legal Services Corporation", desc: "Trouvez une aide juridique civile gratuite pour les personnes et familles admissibles." },
+    es: { title: "Ayuda Legal de Legal Services Corporation", desc: "Encuentre ayuda legal civil gratuita para personas y familias elegibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.lawhelp.org",
+  i18n: {
+    en: { title: "LawHelp.org", desc: "Find free legal aid programs, court forms, and legal information by state." },
+    fr: { title: "LawHelp.org", desc: "Trouvez des programmes d’aide juridique, formulaires et informations par État." },
+    es: { title: "LawHelp.org", desc: "Encuentre ayuda legal gratuita, formularios judiciales e información por estado." },
+  },
+},
+{
+  category: "Income",
+  link: "https://abafreelegalanswers.org",
+  i18n: {
+    en: { title: "ABA Free Legal Answers", desc: "Online legal questions answered by volunteer attorneys for eligible users." },
+    fr: { title: "Réponses juridiques gratuites ABA", desc: "Questions juridiques en ligne répondues par des avocats bénévoles." },
+    es: { title: "Respuestas Legales Gratuitas ABA", desc: "Preguntas legales en línea respondidas por abogados voluntarios." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.nlada.org",
+  i18n: {
+    en: { title: "National Legal Aid & Defender Association", desc: "Legal aid and defender resources for people needing justice support." },
+    fr: { title: "Association nationale d’aide juridique", desc: "Ressources d’aide juridique et de défense pour les personnes ayant besoin de soutien." },
+    es: { title: "Asociación Nacional de Ayuda Legal", desc: "Recursos de ayuda legal y defensa para personas que necesitan apoyo." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.justia.com/lawyers/legal-aid-and-pro-bono",
+  i18n: {
+    en: { title: "Justia Legal Aid & Pro Bono Directory", desc: "Directory to find legal aid and pro bono lawyers by location." },
+    fr: { title: "Répertoire d’aide juridique Justia", desc: "Répertoire pour trouver une aide juridique et des avocats bénévoles par région." },
+    es: { title: "Directorio de Ayuda Legal Justia", desc: "Directorio para encontrar ayuda legal y abogados pro bono por ubicación." },
+  },
+},
+
+// DISABILITY ASSISTANCE (5)
+{
+  category: "Income",
+  link: "https://choosework.ssa.gov",
+  i18n: {
+    en: { title: "Ticket to Work", desc: "Employment support program for people receiving Social Security disability benefits." },
+    fr: { title: "Ticket to Work", desc: "Programme d’aide à l’emploi pour les bénéficiaires d’invalidité de la Sécurité sociale." },
+    es: { title: "Ticket to Work", desc: "Programa de apoyo laboral para personas que reciben beneficios por discapacidad." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ndrn.org",
+  i18n: {
+    en: { title: "National Disability Rights Network", desc: "Protection and advocacy resources for people with disabilities." },
+    fr: { title: "Réseau national des droits des personnes handicapées", desc: "Ressources de protection et de défense pour les personnes handicapées." },
+    es: { title: "Red Nacional de Derechos de Discapacidad", desc: "Recursos de protección y defensa para personas con discapacidades." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.easterseals.com",
+  i18n: {
+    en: { title: "Easterseals Disability Services", desc: "Services for people with disabilities, veterans, seniors, and families." },
+    fr: { title: "Services handicap Easterseals", desc: "Services pour personnes handicapées, vétérans, aînés et familles." },
+    es: { title: "Servicios de Discapacidad Easterseals", desc: "Servicios para personas con discapacidades, veteranos, adultos mayores y familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory",
+  i18n: {
+    en: { title: "Centers for Independent Living Directory", desc: "Find local independent living centers supporting people with disabilities." },
+    fr: { title: "Répertoire des centres de vie autonome", desc: "Trouvez des centres locaux aidant les personnes handicapées." },
+    es: { title: "Directorio de Centros de Vida Independiente", desc: "Encuentre centros locales que apoyan a personas con discapacidades." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.disabilitybenefits101.org",
+  i18n: {
+    en: { title: "Disability Benefits 101", desc: "Benefits planning tools for people with disabilities and workers." },
+    fr: { title: "Disability Benefits 101", desc: "Outils de planification des prestations pour personnes handicapées." },
+    es: { title: "Disability Benefits 101", desc: "Herramientas de planificación de beneficios para personas con discapacidades." },
+  },
+},
+
+// SENIOR ASSISTANCE (5)
+{
+  category: "Health",
+  link: "https://eldercare.acl.gov",
+  i18n: {
+    en: { title: "Eldercare Locator", desc: "Find local services for older adults and caregivers." },
+    fr: { title: "Localisateur Eldercare", desc: "Trouvez des services locaux pour les aînés et les aidants." },
+    es: { title: "Localizador Eldercare", desc: "Encuentre servicios locales para adultos mayores y cuidadores." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.benefitscheckup.org",
+  i18n: {
+    en: { title: "BenefitsCheckUp", desc: "Find benefit programs that may help older adults pay for food, medicine, housing, and more." },
+    fr: { title: "BenefitsCheckUp", desc: "Trouvez des programmes aidant les aînés à payer nourriture, médicaments, logement et plus." },
+    es: { title: "BenefitsCheckUp", desc: "Encuentre programas que ayudan a adultos mayores con comida, medicinas, vivienda y más." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dol.gov/agencies/eta/seniors",
+  i18n: {
+    en: { title: "Senior Community Service Employment Program", desc: "Job training and part-time community service work for eligible older adults." },
+    fr: { title: "Programme d’emploi communautaire pour aînés", desc: "Formation professionnelle et travail communautaire à temps partiel pour aînés admissibles." },
+    es: { title: "Programa de Empleo Comunitario para Adultos Mayores", desc: "Capacitación laboral y trabajo comunitario parcial para adultos mayores elegibles." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ncoa.org",
+  i18n: {
+    en: { title: "National Council on Aging", desc: "Resources for older adults, caregivers, benefits, health, and financial security." },
+    fr: { title: "Conseil national sur le vieillissement", desc: "Ressources pour aînés, aidants, santé, prestations et sécurité financière." },
+    es: { title: "Consejo Nacional sobre el Envejecimiento", desc: "Recursos para adultos mayores, cuidadores, salud, beneficios y seguridad financiera." },
+  },
+},
+{
+  category: "Health",
+  link: "https://acl.gov/programs/support-caregivers/national-family-caregiver-support-program",
+  i18n: {
+    en: { title: "National Family Caregiver Support Program", desc: "Support services for family caregivers helping older adults." },
+    fr: { title: "Programme national de soutien aux aidants familiaux", desc: "Services de soutien pour les aidants familiaux des aînés." },
+    es: { title: "Programa Nacional de Apoyo a Cuidadores Familiares", desc: "Servicios de apoyo para cuidadores familiares de adultos mayores." },
+  },
+},
+
+// WORKFORCE & JOB TRAINING (5)
+{
+  category: "Education",
+  link: "https://www.apprenticeship.gov",
+  i18n: {
+    en: { title: "Apprenticeship.gov", desc: "Find paid apprenticeship and career training opportunities." },
+    fr: { title: "Apprenticeship.gov", desc: "Trouvez des apprentissages rémunérés et formations professionnelles." },
+    es: { title: "Apprenticeship.gov", desc: "Encuentre aprendizajes pagados y oportunidades de capacitación laboral." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.goodwill.org/jobs-training/",
+  i18n: {
+    en: { title: "Goodwill Jobs and Training", desc: "Job training, career support, and employment services through Goodwill." },
+    fr: { title: "Emploi et formation Goodwill", desc: "Formation, soutien professionnel et services d’emploi par Goodwill." },
+    es: { title: "Empleos y Capacitación Goodwill", desc: "Capacitación laboral, apoyo profesional y servicios de empleo por Goodwill." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dol.gov/agencies/eta/agriculture",
+  i18n: {
+    en: { title: "National Farmworker Jobs Program", desc: "Employment and training services for eligible migrant and seasonal farmworkers." },
+    fr: { title: "Programme d’emploi pour travailleurs agricoles", desc: "Services d’emploi et de formation pour travailleurs agricoles admissibles." },
+    es: { title: "Programa Nacional de Empleo para Trabajadores Agrícolas", desc: "Servicios de empleo y capacitación para trabajadores agrícolas elegibles." },
+  },
+},
+{
+  category: "Education",
+  link: "https://youthbuild.org",
+  i18n: {
+    en: { title: "YouthBuild", desc: "Education, job training, and leadership programs for young adults." },
+    fr: { title: "YouthBuild", desc: "Éducation, formation professionnelle et leadership pour jeunes adultes." },
+    es: { title: "YouthBuild", desc: "Educación, capacitación laboral y liderazgo para jóvenes adultos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.workforcegps.org",
+  i18n: {
+    en: { title: "WorkforceGPS", desc: "Workforce development resources, training tools, and employment program support." },
+    fr: { title: "WorkforceGPS", desc: "Ressources de développement professionnel, formation et soutien emploi." },
+    es: { title: "WorkforceGPS", desc: "Recursos de desarrollo laboral, capacitación y apoyo de empleo." },
+  },
+},
+
+// FAMILY & CHILDCARE (5)
+{
+  category: "Health",
+  link: "https://www.childwelfare.gov",
+  i18n: {
+    en: { title: "Child Welfare Information Gateway", desc: "Family support, child welfare, adoption, and safety resources." },
+    fr: { title: "Portail d’information sur la protection de l’enfance", desc: "Soutien familial, protection de l’enfance, adoption et sécurité." },
+    es: { title: "Portal de Información de Bienestar Infantil", desc: "Apoyo familiar, bienestar infantil, adopción y seguridad." },
+  },
+},
+{
+  category: "Health",
+  link: "https://mchb.hrsa.gov/programs-impact/healthy-start",
+  i18n: {
+    en: { title: "Healthy Start Program", desc: "Support for pregnant women, infants, and families to improve health outcomes." },
+    fr: { title: "Programme Healthy Start", desc: "Soutien aux femmes enceintes, nourrissons et familles pour améliorer la santé." },
+    es: { title: "Programa Healthy Start", desc: "Apoyo para embarazadas, bebés y familias para mejorar la salud." },
+  },
+},
+{
+  category: "Food",
+  link: "https://nationaldiaperbanknetwork.org",
+  i18n: {
+    en: { title: "National Diaper Bank Network", desc: "Find diaper assistance and basic needs support for families." },
+    fr: { title: "Réseau national des banques de couches", desc: "Trouvez une aide en couches et besoins essentiels pour familles." },
+    es: { title: "Red Nacional de Bancos de Pañales", desc: "Encuentre ayuda con pañales y necesidades básicas para familias." },
+  },
+},
+{
+  category: "Education",
+  link: "https://parentsasteachers.org",
+  i18n: {
+    en: { title: "Parents as Teachers", desc: "Parent education and early childhood support programs." },
+    fr: { title: "Parents as Teachers", desc: "Éducation parentale et soutien à la petite enfance." },
+    es: { title: "Parents as Teachers", desc: "Educación para padres y apoyo a la primera infancia." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.childcareaware.org",
+  i18n: {
+    en: { title: "Child Care Aware", desc: "Child care resources, referrals, and family support information." },
+    fr: { title: "Child Care Aware", desc: "Ressources de garde d’enfants, orientations et soutien familial." },
+    es: { title: "Child Care Aware", desc: "Recursos de cuidado infantil, referencias y apoyo familiar." },
+  },
+},
 
 ];
 

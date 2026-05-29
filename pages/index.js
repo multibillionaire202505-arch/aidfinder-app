@@ -3957,6 +3957,189 @@ const ALL = [
     es: { title: "Ayuda Legal USA.gov", desc: "Guía de ayuda legal gratuita o de bajo costo." },
   },
 },
+  // ===== PROGRAMS 401-450 =====
+
+{
+  category: "Housing",
+  link: "https://www.naca.com",
+  i18n: {
+    en: { title: "NACA Homeownership Program", desc: "Affordable homeownership and mortgage assistance resources." },
+    fr: { title: "Programme accession propriété NACA", desc: "Ressources hypothécaires et accès à la propriété." },
+    es: { title: "Programa de Vivienda NACA", desc: "Recursos de hipotecas y acceso a la vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.habitat.org",
+  i18n: {
+    en: { title: "Habitat for Humanity", desc: "Affordable housing and homeownership assistance." },
+    fr: { title: "Habitat pour l’Humanité", desc: "Logement abordable et accès à la propriété." },
+    es: { title: "Hábitat para la Humanidad", desc: "Vivienda asequible y acceso a la propiedad." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rebuildingtogether.org",
+  i18n: {
+    en: { title: "Rebuilding Together", desc: "Home repair and safety improvements for eligible households." },
+    fr: { title: "Rebuilding Together", desc: "Réparations domiciliaires pour ménages admissibles." },
+    es: { title: "Rebuilding Together", desc: "Reparaciones y mejoras de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.nlihc.org",
+  i18n: {
+    en: { title: "National Low Income Housing Coalition", desc: "Housing advocacy and affordable housing resources." },
+    fr: { title: "Coalition logement faible revenu", desc: "Défense et ressources logement abordable." },
+    es: { title: "Coalición Nacional de Vivienda", desc: "Recursos de vivienda asequible." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.enterprisecommunity.org",
+  i18n: {
+    en: { title: "Enterprise Community Partners", desc: "Affordable housing and community development resources." },
+    fr: { title: "Enterprise Community Partners", desc: "Développement communautaire et logement." },
+    es: { title: "Enterprise Community Partners", desc: "Vivienda asequible y desarrollo comunitario." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://nationalfairhousing.org",
+  i18n: {
+    en: { title: "National Fair Housing Alliance", desc: "Fair housing rights and discrimination assistance." },
+    fr: { title: "Alliance logement équitable", desc: "Droits logement et discrimination." },
+    es: { title: "Alianza Nacional de Vivienda Justa", desc: "Derechos de vivienda y discriminación." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.neighborworks.org",
+  i18n: {
+    en: { title: "NeighborWorks America", desc: "Homeownership, financial capability, and housing support." },
+    fr: { title: "NeighborWorks America", desc: "Propriété, finances et soutien logement." },
+    es: { title: "NeighborWorks America", desc: "Propiedad de vivienda y educación financiera." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.aarp.org/home-family/",
+  i18n: {
+    en: { title: "AARP Home Resources", desc: "Housing and home safety information for older adults." },
+    fr: { title: "Ressources logement AARP", desc: "Sécurité et logement pour aînés." },
+    es: { title: "Recursos de Vivienda AARP", desc: "Seguridad y vivienda para adultos mayores." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hopelink.org",
+  i18n: {
+    en: { title: "Hopelink Housing Assistance", desc: "Housing stability and emergency assistance resources." },
+    fr: { title: "Aide logement Hopelink", desc: "Stabilité résidentielle et aide d’urgence." },
+    es: { title: "Asistencia de Vivienda Hopelink", desc: "Estabilidad de vivienda y ayuda de emergencia." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://endhomelessness.org",
+  i18n: {
+    en: { title: "National Alliance to End Homelessness", desc: "Homelessness prevention and housing resources." },
+    fr: { title: "Alliance fin du sans-abrisme", desc: "Prévention et ressources logement." },
+    es: { title: "Alianza para Acabar con la Falta de Vivienda", desc: "Prevención y recursos de vivienda." },
+  },
+},
+
+{
+  category: "Income",
+  link: "https://www.score.org",
+  i18n: {
+    en: { title: "SCORE Small Business Mentoring", desc: "Free mentoring and business guidance." },
+    fr: { title: "Mentorat SCORE", desc: "Mentorat gratuit pour entrepreneurs." },
+    es: { title: "Mentoría SCORE", desc: "Mentoría gratuita para emprendedores." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sba.gov/local-assistance",
+  i18n: {
+    en: { title: "SBA Local Assistance", desc: "Find local small business support centers." },
+    fr: { title: "Assistance locale SBA", desc: "Centres locaux de soutien aux entreprises." },
+    es: { title: "Asistencia Local SBA", desc: "Centros locales de apoyo empresarial." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sba.gov/business-guide",
+  i18n: {
+    en: { title: "SBA Business Guide", desc: "Resources to start, manage, and grow a business." },
+    fr: { title: "Guide entreprise SBA", desc: "Créer, gérer et développer une entreprise." },
+    es: { title: "Guía Empresarial SBA", desc: "Crear y desarrollar un negocio." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.apprenticeship.gov",
+  i18n: {
+    en: { title: "Registered Apprenticeship Finder", desc: "Career training and apprenticeship opportunities." },
+    fr: { title: "Recherche apprentissage", desc: "Formation et apprentissages." },
+    es: { title: "Buscador de Aprendizajes", desc: "Capacitación y oportunidades laborales." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.mynextmove.org",
+  i18n: {
+    en: { title: "My Next Move Career Explorer", desc: "Career exploration and job planning resources." },
+    fr: { title: "Explorateur carrière", desc: "Exploration de carrière et emploi." },
+    es: { title: "Explorador de Carreras", desc: "Exploración profesional y empleo." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.onetonline.org",
+  i18n: {
+    en: { title: "O*NET Career Database", desc: "Occupational information and career planning." },
+    fr: { title: "Base carrières O*NET", desc: "Informations métiers et carrières." },
+    es: { title: "Base de Datos O*NET", desc: "Información ocupacional y carreras." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.benefits.gov/benefit-finder",
+  i18n: {
+    en: { title: "Benefits Finder", desc: "Find government benefits you may qualify for." },
+    fr: { title: "Recherche prestations", desc: "Trouvez les aides auxquelles vous pourriez avoir droit." },
+    es: { title: "Buscador de Beneficios", desc: "Encuentre beneficios gubernamentales." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+  i18n: {
+    en: { title: "CFPB Budgeting Tools", desc: "Budgeting and money management resources." },
+    fr: { title: "Outils budget CFPB", desc: "Gestion financière et budgétaire." },
+    es: { title: "Herramientas de Presupuesto CFPB", desc: "Administración de dinero y presupuesto." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/consumer-tools/mortgages/",
+  i18n: {
+    en: { title: "CFPB Mortgage Resources", desc: "Mortgage education and homeowner resources." },
+    fr: { title: "Ressources hypothèques CFPB", desc: "Éducation hypothécaire et propriété." },
+    es: { title: "Recursos Hipotecarios CFPB", desc: "Educación hipotecaria y propiedad." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+  i18n: {
+    en: { title: "CFPB Banking Resources", desc: "Banking information and consumer protections." },
+    fr: { title: "Ressources bancaires CFPB", desc: "Informations bancaires et protections." },
+    es: { title: "Recursos Bancarios CFPB", desc: "Información bancaria y protección del consumidor." },
+  },
+},
 
 ];
 

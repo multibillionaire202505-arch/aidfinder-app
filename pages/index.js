@@ -4502,6 +4502,478 @@ const ALL = [
     es: { title: "Sistema de Elegibilidad Wyoming", desc: "Acceda a beneficios y asistencia de Wyoming." },
   },
 },
+  // ===== PROGRAMS 457-500 =====
+
+{
+  category: "Income",
+  link: "https://www.alabamalegalhelp.org",
+  states: ["AL"],
+  i18n: {
+    en: { title: "Alabama Legal Help", desc: "Free legal information and assistance resources for Alabama residents." },
+    fr: { title: "Aide juridique Alabama", desc: "Ressources juridiques gratuites pour les résidents de l’Alabama." },
+    es: { title: "Ayuda Legal Alabama", desc: "Recursos legales gratuitos para residentes de Alabama." },
+  },
+},
+{
+  category: "Income",
+  link: "https://alaskalawhelp.org",
+  states: ["AK"],
+  i18n: {
+    en: { title: "Alaska Law Help", desc: "Legal aid and self-help resources for Alaska residents." },
+    fr: { title: "Aide juridique Alaska", desc: "Ressources d’aide juridique pour les résidents de l’Alaska." },
+    es: { title: "Ayuda Legal Alaska", desc: "Recursos de ayuda legal para residentes de Alaska." },
+  },
+},
+{
+  category: "Income",
+  link: "https://azlawhelp.org",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "Arizona Law Help", desc: "Free legal help and information for Arizona families and individuals." },
+    fr: { title: "Aide juridique Arizona", desc: "Aide juridique gratuite pour familles et personnes en Arizona." },
+    es: { title: "Ayuda Legal Arizona", desc: "Ayuda legal gratuita para familias e individuos en Arizona." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.arkansaslegal.org",
+  states: ["AR"],
+  i18n: {
+    en: { title: "Arkansas Legal Services", desc: "Legal aid and civil legal assistance resources in Arkansas." },
+    fr: { title: "Services juridiques Arkansas", desc: "Aide juridique civile pour résidents de l’Arkansas." },
+    es: { title: "Servicios Legales Arkansas", desc: "Ayuda legal civil para residentes de Arkansas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.lawhelpca.org",
+  states: ["CA"],
+  i18n: {
+    en: { title: "LawHelpCA", desc: "California legal aid directory and free legal information." },
+    fr: { title: "LawHelpCA", desc: "Répertoire d’aide juridique gratuite en Californie." },
+    es: { title: "LawHelpCA", desc: "Directorio de ayuda legal gratuita en California." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.coloradolegalservices.org",
+  states: ["CO"],
+  i18n: {
+    en: { title: "Colorado Legal Services", desc: "Civil legal aid for eligible Colorado residents." },
+    fr: { title: "Services juridiques Colorado", desc: "Aide juridique civile pour résidents admissibles du Colorado." },
+    es: { title: "Servicios Legales Colorado", desc: "Ayuda legal civil para residentes elegibles de Colorado." },
+  },
+},
+{
+  category: "Income",
+  link: "https://ctlawhelp.org",
+  states: ["CT"],
+  i18n: {
+    en: { title: "Connecticut Law Help", desc: "Free legal information and resources for Connecticut residents." },
+    fr: { title: "Aide juridique Connecticut", desc: "Informations juridiques gratuites pour résidents du Connecticut." },
+    es: { title: "Ayuda Legal Connecticut", desc: "Información legal gratuita para residentes de Connecticut." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.delegalhelplink.org",
+  states: ["DE"],
+  i18n: {
+    en: { title: "Delaware Legal Help Link", desc: "Legal help referrals and resources for Delaware residents." },
+    fr: { title: "Aide juridique Delaware", desc: "Orientation et ressources juridiques au Delaware." },
+    es: { title: "Ayuda Legal Delaware", desc: "Referencias y recursos legales en Delaware." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.legalaiddc.org",
+  states: ["DC"],
+  i18n: {
+    en: { title: "Legal Aid DC", desc: "Civil legal services and support for low-income DC residents." },
+    fr: { title: "Aide juridique DC", desc: "Services juridiques civils pour résidents à faible revenu de DC." },
+    es: { title: "Ayuda Legal DC", desc: "Servicios legales civiles para residentes de bajos ingresos en DC." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.floridalawhelp.org",
+  states: ["FL"],
+  i18n: {
+    en: { title: "Florida Law Help", desc: "Free legal information and legal aid resources in Florida." },
+    fr: { title: "Aide juridique Floride", desc: "Informations et ressources juridiques gratuites en Floride." },
+    es: { title: "Ayuda Legal Florida", desc: "Información y ayuda legal gratuita en Florida." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.georgialegalaid.org",
+  states: ["GA"],
+  i18n: {
+    en: { title: "Georgia Legal Aid", desc: "Legal information and assistance resources for Georgia residents." },
+    fr: { title: "Aide juridique Géorgie", desc: "Informations et aide juridique pour résidents de Géorgie." },
+    es: { title: "Ayuda Legal Georgia", desc: "Información y ayuda legal para residentes de Georgia." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.legalaidhawaii.org",
+  states: ["HI"],
+  i18n: {
+    en: { title: "Legal Aid Society of Hawaii", desc: "Legal services and advocacy for eligible Hawaii residents." },
+    fr: { title: "Aide juridique Hawaï", desc: "Services juridiques pour résidents admissibles d’Hawaï." },
+    es: { title: "Ayuda Legal Hawái", desc: "Servicios legales para residentes elegibles de Hawái." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.idaholegalaid.org",
+  states: ["ID"],
+  i18n: {
+    en: { title: "Idaho Legal Aid Services", desc: "Civil legal help and resources for Idaho residents." },
+    fr: { title: "Aide juridique Idaho", desc: "Aide juridique civile pour résidents de l’Idaho." },
+    es: { title: "Ayuda Legal Idaho", desc: "Ayuda legal civil para residentes de Idaho." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.illinoislegalaid.org",
+  states: ["IL"],
+  i18n: {
+    en: { title: "Illinois Legal Aid Online", desc: "Legal information and self-help resources for Illinois residents." },
+    fr: { title: "Aide juridique Illinois", desc: "Informations juridiques et ressources d’auto-assistance en Illinois." },
+    es: { title: "Ayuda Legal Illinois", desc: "Información legal y recursos de autoayuda en Illinois." },
+  },
+},
+{
+  category: "Income",
+  link: "https://indianalegalhelp.org",
+  states: ["IN"],
+  i18n: {
+    en: { title: "Indiana Legal Help", desc: "Legal resources and help finding civil legal assistance in Indiana." },
+    fr: { title: "Aide juridique Indiana", desc: "Ressources pour trouver une aide juridique civile en Indiana." },
+    es: { title: "Ayuda Legal Indiana", desc: "Recursos para encontrar ayuda legal civil en Indiana." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.iowalegalaid.org",
+  states: ["IA"],
+  i18n: {
+    en: { title: "Iowa Legal Aid", desc: "Free civil legal assistance for eligible Iowa residents." },
+    fr: { title: "Aide juridique Iowa", desc: "Aide juridique civile gratuite pour résidents admissibles de l’Iowa." },
+    es: { title: "Ayuda Legal Iowa", desc: "Ayuda legal civil gratuita para residentes elegibles de Iowa." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.kansaslegalservices.org",
+  states: ["KS"],
+  i18n: {
+    en: { title: "Kansas Legal Services", desc: "Civil legal aid and legal information for Kansas residents." },
+    fr: { title: "Services juridiques Kansas", desc: "Aide juridique civile pour résidents du Kansas." },
+    es: { title: "Servicios Legales Kansas", desc: "Ayuda legal civil para residentes de Kansas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.kyjustice.org",
+  states: ["KY"],
+  i18n: {
+    en: { title: "Kentucky Legal Aid Resources", desc: "Legal information and assistance resources for Kentucky residents." },
+    fr: { title: "Aide juridique Kentucky", desc: "Ressources juridiques pour résidents du Kentucky." },
+    es: { title: "Ayuda Legal Kentucky", desc: "Recursos legales para residentes de Kentucky." },
+  },
+},
+{
+  category: "Income",
+  link: "https://louisianalawhelp.org",
+  states: ["LA"],
+  i18n: {
+    en: { title: "Louisiana Law Help", desc: "Free legal information and referrals for Louisiana residents." },
+    fr: { title: "Aide juridique Louisiane", desc: "Informations juridiques gratuites et orientations en Louisiane." },
+    es: { title: "Ayuda Legal Luisiana", desc: "Información legal gratuita y referencias en Luisiana." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ptla.org",
+  states: ["ME"],
+  i18n: {
+    en: { title: "Pine Tree Legal Assistance", desc: "Free legal help for eligible Maine residents." },
+    fr: { title: "Pine Tree Legal Assistance", desc: "Aide juridique gratuite pour résidents admissibles du Maine." },
+    es: { title: "Pine Tree Legal Assistance", desc: "Ayuda legal gratuita para residentes elegibles de Maine." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.peoples-law.org",
+  states: ["MD"],
+  i18n: {
+    en: { title: "Maryland People’s Law Library", desc: "Legal information and self-help resources for Maryland residents." },
+    fr: { title: "Bibliothèque juridique Maryland", desc: "Informations juridiques et auto-assistance au Maryland." },
+    es: { title: "Biblioteca Legal Maryland", desc: "Información legal y autoayuda en Maryland." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.masslegalhelp.org",
+  states: ["MA"],
+  i18n: {
+    en: { title: "MassLegalHelp", desc: "Free legal information and resources for Massachusetts residents." },
+    fr: { title: "MassLegalHelp", desc: "Informations juridiques gratuites pour résidents du Massachusetts." },
+    es: { title: "MassLegalHelp", desc: "Información legal gratuita para residentes de Massachusetts." },
+  },
+},
+{
+  category: "Income",
+  link: "https://michiganlegalhelp.org",
+  states: ["MI"],
+  i18n: {
+    en: { title: "Michigan Legal Help", desc: "Legal self-help tools and information for Michigan residents." },
+    fr: { title: "Aide juridique Michigan", desc: "Outils d’auto-assistance juridique pour résidents du Michigan." },
+    es: { title: "Ayuda Legal Michigan", desc: "Herramientas de autoayuda legal para residentes de Michigan." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.lawhelpmn.org",
+  states: ["MN"],
+  i18n: {
+    en: { title: "LawHelpMN", desc: "Minnesota legal aid directory and legal self-help resources." },
+    fr: { title: "LawHelpMN", desc: "Répertoire d’aide juridique du Minnesota." },
+    es: { title: "LawHelpMN", desc: "Directorio de ayuda legal de Minnesota." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.mslegalservices.org",
+  states: ["MS"],
+  i18n: {
+    en: { title: "Mississippi Legal Services", desc: "Legal aid resources for eligible Mississippi residents." },
+    fr: { title: "Services juridiques Mississippi", desc: "Ressources d’aide juridique pour résidents admissibles du Mississippi." },
+    es: { title: "Servicios Legales Mississippi", desc: "Recursos de ayuda legal para residentes elegibles de Mississippi." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.lsmo.org",
+  states: ["MO"],
+  i18n: {
+    en: { title: "Legal Services of Missouri", desc: "Civil legal aid and legal resources for Missouri residents." },
+    fr: { title: "Services juridiques Missouri", desc: "Aide juridique civile pour résidents du Missouri." },
+    es: { title: "Servicios Legales Missouri", desc: "Ayuda legal civil para residentes de Missouri." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.montanalawhelp.org",
+  states: ["MT"],
+  i18n: {
+    en: { title: "Montana Law Help", desc: "Legal information and assistance resources for Montana residents." },
+    fr: { title: "Aide juridique Montana", desc: "Informations et aide juridique pour résidents du Montana." },
+    es: { title: "Ayuda Legal Montana", desc: "Información y ayuda legal para residentes de Montana." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.legalaidofnebraska.org",
+  states: ["NE"],
+  i18n: {
+    en: { title: "Legal Aid of Nebraska", desc: "Free civil legal services for eligible Nebraska residents." },
+    fr: { title: "Aide juridique Nebraska", desc: "Services juridiques civils gratuits pour résidents admissibles du Nebraska." },
+    es: { title: "Ayuda Legal Nebraska", desc: "Servicios legales civiles gratuitos para residentes elegibles de Nebraska." },
+  },
+},
+{
+  category: "Income",
+  link: "https://nevadalegalservices.org",
+  states: ["NV"],
+  i18n: {
+    en: { title: "Nevada Legal Services", desc: "Legal aid and civil legal resources for Nevada residents." },
+    fr: { title: "Services juridiques Nevada", desc: "Aide juridique civile pour résidents du Nevada." },
+    es: { title: "Servicios Legales Nevada", desc: "Ayuda legal civil para residentes de Nevada." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.603legalaid.org",
+  states: ["NH"],
+  i18n: {
+    en: { title: "603 Legal Aid", desc: "Legal help and referrals for New Hampshire residents." },
+    fr: { title: "603 Legal Aid", desc: "Aide juridique et orientations au New Hampshire." },
+    es: { title: "603 Legal Aid", desc: "Ayuda legal y referencias en New Hampshire." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.lsnjlaw.org",
+  states: ["NJ"],
+  i18n: {
+    en: { title: "Legal Services of New Jersey", desc: "Free legal information and assistance resources for New Jersey residents." },
+    fr: { title: "Services juridiques New Jersey", desc: "Aide juridique gratuite pour résidents du New Jersey." },
+    es: { title: "Servicios Legales New Jersey", desc: "Ayuda legal gratuita para residentes de New Jersey." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.lawhelpnewmexico.org",
+  states: ["NM"],
+  i18n: {
+    en: { title: "Law Help New Mexico", desc: "Legal aid information and resources for New Mexico residents." },
+    fr: { title: "Aide juridique Nouveau-Mexique", desc: "Ressources juridiques pour résidents du Nouveau-Mexique." },
+    es: { title: "Ayuda Legal Nuevo México", desc: "Recursos legales para residentes de Nuevo México." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.lawhelpny.org",
+  states: ["NY"],
+  i18n: {
+    en: { title: "LawHelpNY", desc: "Find free legal help and legal information in New York." },
+    fr: { title: "LawHelpNY", desc: "Trouvez une aide juridique gratuite à New York." },
+    es: { title: "LawHelpNY", desc: "Encuentre ayuda legal gratuita en Nueva York." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.legalaidnc.org",
+  states: ["NC"],
+  i18n: {
+    en: { title: "Legal Aid of North Carolina", desc: "Free civil legal help for eligible North Carolina residents." },
+    fr: { title: "Aide juridique Caroline du Nord", desc: "Aide juridique civile gratuite pour résidents admissibles." },
+    es: { title: "Ayuda Legal Carolina del Norte", desc: "Ayuda legal civil gratuita para residentes elegibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.legalassist.org",
+  states: ["ND"],
+  i18n: {
+    en: { title: "Legal Services of North Dakota", desc: "Legal aid and civil legal help for North Dakota residents." },
+    fr: { title: "Services juridiques Dakota du Nord", desc: "Aide juridique civile pour résidents du Dakota du Nord." },
+    es: { title: "Servicios Legales Dakota del Norte", desc: "Ayuda legal civil para residentes de Dakota del Norte." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ohiolegalhelp.org",
+  states: ["OH"],
+  i18n: {
+    en: { title: "Ohio Legal Help", desc: "Legal self-help tools and resources for Ohio residents." },
+    fr: { title: "Aide juridique Ohio", desc: "Outils juridiques et ressources pour résidents de l’Ohio." },
+    es: { title: "Ayuda Legal Ohio", desc: "Herramientas legales y recursos para residentes de Ohio." },
+  },
+},
+{
+  category: "Income",
+  link: "https://oklaw.org",
+  states: ["OK"],
+  i18n: {
+    en: { title: "OKLaw", desc: "Oklahoma legal information and legal aid resources." },
+    fr: { title: "OKLaw", desc: "Informations juridiques et aide juridique en Oklahoma." },
+    es: { title: "OKLaw", desc: "Información legal y ayuda legal en Oklahoma." },
+  },
+},
+{
+  category: "Income",
+  link: "https://oregonlawhelp.org",
+  states: ["OR"],
+  i18n: {
+    en: { title: "Oregon Law Help", desc: "Free legal information and legal aid resources for Oregon residents." },
+    fr: { title: "Aide juridique Oregon", desc: "Informations juridiques gratuites pour résidents de l’Oregon." },
+    es: { title: "Ayuda Legal Oregon", desc: "Información legal gratuita para residentes de Oregon." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.palawhelp.org",
+  states: ["PA"],
+  i18n: {
+    en: { title: "PALawHelp", desc: "Pennsylvania legal aid information and self-help resources." },
+    fr: { title: "PALawHelp", desc: "Informations juridiques et auto-assistance en Pennsylvanie." },
+    es: { title: "PALawHelp", desc: "Información legal y autoayuda en Pennsylvania." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.helprilaw.org",
+  states: ["RI"],
+  i18n: {
+    en: { title: "Rhode Island Legal Services", desc: "Legal aid and civil legal assistance resources in Rhode Island." },
+    fr: { title: "Services juridiques Rhode Island", desc: "Aide juridique civile au Rhode Island." },
+    es: { title: "Servicios Legales Rhode Island", desc: "Ayuda legal civil en Rhode Island." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sclegal.org",
+  states: ["SC"],
+  i18n: {
+    en: { title: "South Carolina Legal Services", desc: "Civil legal aid for eligible South Carolina residents." },
+    fr: { title: "Services juridiques Caroline du Sud", desc: "Aide juridique civile pour résidents admissibles." },
+    es: { title: "Servicios Legales Carolina del Sur", desc: "Ayuda legal civil para residentes elegibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sdlawhelp.org",
+  states: ["SD"],
+  i18n: {
+    en: { title: "South Dakota Law Help", desc: "Legal information and assistance resources for South Dakota residents." },
+    fr: { title: "Aide juridique Dakota du Sud", desc: "Ressources juridiques pour résidents du Dakota du Sud." },
+    es: { title: "Ayuda Legal Dakota del Sur", desc: "Recursos legales para residentes de Dakota del Sur." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.tnjustice.org",
+  states: ["TN"],
+  i18n: {
+    en: { title: "Tennessee Justice Center", desc: "Legal advocacy and assistance resources for Tennessee families." },
+    fr: { title: "Centre justice Tennessee", desc: "Aide et défense juridique pour familles du Tennessee." },
+    es: { title: "Centro de Justicia Tennessee", desc: "Defensa y ayuda legal para familias de Tennessee." },
+  },
+},
+{
+  category: "Income",
+  link: "https://texaslawhelp.org",
+  states: ["TX"],
+  i18n: {
+    en: { title: "Texas Law Help", desc: "Free legal information and self-help tools for Texas residents." },
+    fr: { title: "Texas Law Help", desc: "Informations juridiques gratuites pour résidents du Texas." },
+    es: { title: "Texas Law Help", desc: "Información legal gratuita para residentes de Texas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.utahlegalservices.org",
+  states: ["UT"],
+  i18n: {
+    en: { title: "Utah Legal Services", desc: "Free legal help for eligible low-income Utah residents." },
+    fr: { title: "Services juridiques Utah", desc: "Aide juridique gratuite pour résidents admissibles de l’Utah." },
+    es: { title: "Servicios Legales Utah", desc: "Ayuda legal gratuita para residentes elegibles de Utah." },
+  },
+},
+{
+  category: "Income",
+  link: "https://vtlawhelp.org",
+  states: ["VT"],
+  i18n: {
+    en: { title: "Vermont Law Help", desc: "Legal information and civil legal aid resources in Vermont." },
+    fr: { title: "Aide juridique Vermont", desc: "Informations juridiques et aide civile au Vermont." },
+    es: { title: "Ayuda Legal Vermont", desc: "Información legal y ayuda civil en Vermont." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.valegalaid.org",
+  states: ["VA"],
+  i18n: {
+    en: { title: "Virginia Legal Aid", desc: "Free legal information and legal aid resources for Virginia residents." },
+    fr: { title: "Aide juridique Virginie", desc: "Informations juridiques gratuites pour résidents de Virginie." },
+    es: { title: "Ayuda Legal Virginia", desc: "Información legal gratuita para residentes de Virginia." },
+  },
+},
 
 ];
 

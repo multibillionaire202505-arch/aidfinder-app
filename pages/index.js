@@ -3961,15 +3961,6 @@ const ALL = [
 },
 {
   category: "Housing",
-  link: "https://www.habitat.org",
-  i18n: {
-    en: { title: "Habitat for Humanity", desc: "Affordable housing and homeownership assistance." },
-    fr: { title: "Habitat pour l’Humanité", desc: "Logement abordable et accès à la propriété." },
-    es: { title: "Hábitat para la Humanidad", desc: "Vivienda asequible y acceso a la propiedad." },
-  },
-},
-{
-  category: "Housing",
   link: "https://www.nlihc.org",
   i18n: {
     en: { title: "National Low Income Housing Coalition", desc: "Housing advocacy and affordable housing resources." },

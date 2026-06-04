@@ -5199,7 +5199,10 @@ const categoryCounts = useMemo(() => {
                     role="tab"
                     aria-selected={active}
                   >
-                  {UI[lang].catLabels[key] || key}
+                 {UI[lang].catLabels[key] || key}
+{key !== "Saved" && categoryCounts[key]
+  ? ` (${categoryCounts[key]})`
+  : ""}
 {key !== "Saved" && categoryCounts[key]
   ? ` (${categoryCounts[key]})`
   : ""}

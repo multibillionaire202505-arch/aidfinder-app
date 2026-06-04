@@ -3969,7 +3969,6 @@ const ALL = [
   },
 },
 {
-{
   category: "Housing",
   link: "https://www.nlihc.org",
   i18n: {

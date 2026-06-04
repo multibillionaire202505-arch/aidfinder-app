@@ -2754,16 +2754,6 @@ const ALL = [
     es: { title: "EPA WaterSense", desc: "Recursos para ahorrar agua y reducir costos." },
   },
 },
-
-{
-  category: "Education",
-  link: "https://www2.ed.gov/about/offices/list/ovae/pi/AdultEd/index.html",
-  i18n: {
-    en: { title: "Adult Education and Literacy", desc: "Federal resources for adult education, literacy, and basic skills." },
-    fr: { title: "Éducation adultes et alphabétisation", desc: "Ressources fédérales pour éducation adulte et compétences de base." },
-    es: { title: "Educación de Adultos y Alfabetización", desc: "Recursos federales para educación adulta y habilidades básicas." },
-  },
-},
 {
   category: "Education",
   link: "https://www.careeronestop.org/FindTraining/find-training.aspx",

@@ -2175,8 +2175,6 @@ const ALL = [
   },
 },
 {
-
-{
   category: "Health",
   link: "https://www.rxassist.org",
   i18n: {

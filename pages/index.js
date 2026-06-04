@@ -3969,14 +3969,6 @@ const ALL = [
   },
 },
 {
-  category: "Housing",
-  link: "https://www.rebuildingtogether.org",
-  i18n: {
-    en: { title: "Rebuilding Together", desc: "Home repair and safety improvements for eligible households." },
-    fr: { title: "Rebuilding Together", desc: "Réparations domiciliaires pour ménages admissibles." },
-    es: { title: "Rebuilding Together", desc: "Reparaciones y mejoras de vivienda." },
-  },
-},
 {
   category: "Housing",
   link: "https://www.nlihc.org",

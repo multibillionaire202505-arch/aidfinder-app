@@ -5035,7 +5035,13 @@ export default function Home() {
       setShareOpenModal(true);
     }
   };
-
+const categoryCounts = useMemo(() => {
+  return ALL.reduce((acc, program) => {
+    acc[program.category] = (acc[program.category] || 0) + 1;
+    acc.All = (acc.All || 0) + 1;
+    return acc;
+  }, {});
+}, []);
   /** ===== SEARCHED PROGRAMS (improved) ===== */
   const programs = useMemo(() => {
     let base = ALL;
@@ -5193,7 +5199,10 @@ export default function Home() {
                     role="tab"
                     aria-selected={active}
                   >
-                    {UI[lang].catLabels[key] || key}
+                  {UI[lang].catLabels[key] || key}
+{key !== "Saved" && categoryCounts[key]
+  ? ` (${categoryCounts[key]})`
+  : ""}
                   </button>
                 );
               })}

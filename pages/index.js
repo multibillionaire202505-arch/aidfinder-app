@@ -2756,15 +2756,6 @@ const ALL = [
 },
 {
   category: "Education",
-  link: "https://www.careeronestop.org/FindTraining/find-training.aspx",
-  i18n: {
-    en: { title: "CareerOneStop Training Finder", desc: "Search training programs, certifications, and local education options." },
-    fr: { title: "Recherche formation CareerOneStop", desc: "Trouvez formations, certifications et options locales." },
-    es: { title: "Buscador de Capacitación CareerOneStop", desc: "Busque capacitaciones, certificaciones y opciones locales." },
-  },
-},
-{
-  category: "Education",
   link: "https://www.careeronestop.org/FindTraining/Types/community-colleges.aspx",
   i18n: {
     en: { title: "Community College Finder", desc: "Find community colleges and affordable local education programs." },

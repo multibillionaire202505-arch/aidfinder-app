@@ -2175,14 +2175,7 @@ const ALL = [
   },
 },
 {
-  category: "Health",
-  link: "https://www.needymeds.org",
-  i18n: {
-    en: { title: "NeedyMeds", desc: "Prescription assistance and healthcare savings programs." },
-    fr: { title: "NeedyMeds", desc: "Programmes d'assistance aux médicaments." },
-    es: { title: "NeedyMeds", desc: "Programas de ayuda para medicamentos." },
-  },
-},
+
 {
   category: "Health",
   link: "https://www.rxassist.org",

@@ -3303,15 +3303,6 @@ const ALL = [
 },
 {
   category: "Education",
-  link: "https://studentaid.gov/manage-loans/repayment/plans/income-driven",
-  i18n: {
-    en: { title: "Income-Driven Repayment Plans", desc: "Student loan repayment plans based on income and family size." },
-    fr: { title: "Remboursement selon revenu", desc: "Plans prêts étudiants selon revenu et famille." },
-    es: { title: "Planes de Pago Según Ingresos", desc: "Pagos de préstamos estudiantiles según ingresos." },
-  },
-},
-{
-  category: "Education",
   link: "https://studentaid.gov/borrower-defense/",
   i18n: {
     en: { title: "Borrower Defense to Repayment", desc: "Student loan discharge help for eligible school misconduct claims." },

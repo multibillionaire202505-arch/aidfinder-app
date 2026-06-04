@@ -3310,16 +3310,6 @@ const ALL = [
     es: { title: "Archivo Beneficio de Banda Ancha", desc: "Información de asistencia de internet de emergencia." },
   },
 },
-
-{
-  category: "Education",
-  link: "https://studentaid.gov/manage-loans/forgiveness-cancellation/public-service",
-  i18n: {
-    en: { title: "Public Service Loan Forgiveness", desc: "Student loan forgiveness information for qualifying public service workers." },
-    fr: { title: "Annulation prêts service public", desc: "Informations remise prêts étudiants service public." },
-    es: { title: "Perdón de Préstamos Servicio Público", desc: "Información para trabajadores de servicio público." },
-  },
-},
 {
   category: "Education",
   link: "https://studentaid.gov/manage-loans/repayment/plans/income-driven",

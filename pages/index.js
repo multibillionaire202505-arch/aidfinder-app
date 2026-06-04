@@ -3942,15 +3942,6 @@ const ALL = [
 },
 {
   category: "Housing",
-  link: "https://www.nlihc.org",
-  i18n: {
-    en: { title: "National Low Income Housing Coalition", desc: "Housing advocacy and affordable housing resources." },
-    fr: { title: "Coalition logement faible revenu", desc: "Défense et ressources logement abordable." },
-    es: { title: "Coalición Nacional de Vivienda", desc: "Recursos de vivienda asequible." },
-  },
-},
-{
-  category: "Housing",
   link: "https://www.enterprisecommunity.org",
   i18n: {
     en: { title: "Enterprise Community Partners", desc: "Affordable housing and community development resources." },

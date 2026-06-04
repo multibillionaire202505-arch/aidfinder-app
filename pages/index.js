@@ -3969,15 +3969,6 @@ const ALL = [
 
 {
   category: "Income",
-  link: "https://www.score.org",
-  i18n: {
-    en: { title: "SCORE Small Business Mentoring", desc: "Free mentoring and business guidance." },
-    fr: { title: "Mentorat SCORE", desc: "Mentorat gratuit pour entrepreneurs." },
-    es: { title: "Mentoría SCORE", desc: "Mentoría gratuita para emprendedores." },
-  },
-},
-{
-  category: "Income",
   link: "https://www.sba.gov/local-assistance",
   i18n: {
     en: { title: "SBA Local Assistance", desc: "Find local small business support centers." },

@@ -2516,15 +2516,6 @@ const ALL = [
   },
 },
 {
-  category: "Education",
-  link: "https://youthbuild.org",
-  i18n: {
-    en: { title: "YouthBuild", desc: "Education, job training, and leadership programs for young adults." },
-    fr: { title: "YouthBuild", desc: "Éducation, formation professionnelle et leadership pour jeunes adultes." },
-    es: { title: "YouthBuild", desc: "Educación, capacitación laboral y liderazgo para jóvenes adultos." },
-  },
-},
-{
   category: "Income",
   link: "https://www.workforcegps.org",
   i18n: {

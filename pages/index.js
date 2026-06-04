@@ -5203,9 +5203,7 @@ const categoryCounts = useMemo(() => {
 {key !== "Saved" && categoryCounts[key]
   ? ` (${categoryCounts[key]})`
   : ""}
-{key !== "Saved" && categoryCounts[key]
-  ? ` (${categoryCounts[key]})`
-  : ""}
+
                   </button>
                 );
               })}

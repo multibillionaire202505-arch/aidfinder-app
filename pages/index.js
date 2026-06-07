@@ -5271,9 +5271,8 @@ const categoryCounts = useMemo(() => {
             return (
               <article className="card" key={`${p.link}-${p.category}-${i}`} style={{ "--i": i }}>
                 <div
-                  className="badge"
-                  style={{ background: ICONS_BADGE_BG[p.category] || "var(--border)" }}
-                >
+  className={`badge ${p.category.toLowerCase()}`}
+>
                   {UI[lang].catLabels[p.category] || p.category}
                 </div>
 

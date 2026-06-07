@@ -5194,7 +5194,13 @@ const categoryCounts = useMemo(() => {
                   <button
                     key={key}
                     className={`chip ${active ? "chipActive" : ""}`}
-                    onClick={() => setCat(key)}
+                    onClick={() => {
+  setOpen(false);
+  setCurrent(null);
+  setShareOpenModal(false);
+  setShareOpenIndex(null);
+  setCat(key);
+}}
                     type="button"
                     role="tab"
                     aria-selected={active}

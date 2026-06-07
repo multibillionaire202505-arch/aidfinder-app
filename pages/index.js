@@ -5483,13 +5483,12 @@ const categoryCounts = useMemo(() => {
           --af-green-dark: #17a56b;
           --af-text-on-green: #0b1f17;
         }
-        [data-theme="dark"] :root,
         :root[data-theme="dark"] {
-          --bg: #0b1220;
-          --text: #e5e7eb;
-          --border: #1f2937;
-          --muted: #94a3b8;
-        }
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --border: #1f2937;
+  --muted: #94a3b8;
+}
 
         html,
         body {

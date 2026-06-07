@@ -5269,7 +5269,7 @@ const categoryCounts = useMemo(() => {
             const title = p.i18n[lang]?.title || p.i18n.en.title;
             const desc = p.i18n[lang]?.desc || p.i18n.en.desc;
             return (
-              <article className="card" key={p.link} style={{ "--i": i }}>
+              <article className="card" key={`${p.link}-${p.category}-${i}`} style={{ "--i": i }}>
                 <div
                   className="badge"
                   style={{ background: ICONS_BADGE_BG[p.category] || "var(--border)" }}

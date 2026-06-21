@@ -2,17 +2,21 @@
 import { useMemo, useState, useEffect } from "react";
 import Head from "next/head";
 
-/** ===== Robust logo (fallback to /icons/icon-192.png) ===== */
+/** ===== Robust logo (fixed first load) ===== */
 const BrandLogo = ({ size = 40 }) => (
   <img
-    src="/logo.png"
+    src="/icons/icon-192.png"
     alt="AidFinder logo"
     width={size}
     height={size}
-    style={{ width: size, height: size, borderRadius: 8, objectFit: "contain" }}
-    onError={(e) => {
-      e.currentTarget.onerror = null;
-      e.currentTarget.src = "/icons/icon-192.png";
+    loading="eager"
+    decoding="sync"
+    style={{
+      width: size,
+      height: size,
+      borderRadius: 8,
+      objectFit: "contain",
+      display: "block",
     }}
   />
 );

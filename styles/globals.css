@@ -354,20 +354,19 @@ button,input,select{
 .muted{
   color:var(--muted);
 }
- 
+
 /* =========================================================
    CATEGORY CHIPS
    ========================================================= */
- 
+
 .chips{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
   gap:8px;
-
   overflow:visible;
-
-  padding:2px 0;
-
+  padding:4px 0;
   width:100%;
 }
 
@@ -377,21 +376,14 @@ button,input,select{
 
 .chip{
   border:1px solid var(--border);
-
   background:var(--bg);
-
   color:var(--text);
-
   border-radius:999px;
-
-  padding:10px 8px;
-
+  padding:9px 14px;
   cursor:pointer;
-
   font-weight:600;
-
-  text-align:center;
-
+  font-size:15px;
+  line-height:1;
   white-space:nowrap;
 
   transition:
@@ -406,11 +398,8 @@ button,input,select{
 
 .chipActive{
   background:var(--af-green-soft);
-
   border-color:rgba(25,195,125,.40);
-
   color:#0b3d2b;
-
   font-weight:700;
 }
 
@@ -420,31 +409,29 @@ button,input,select{
   color:#c6f0dc;
 }
 
-@media (max-width:560px){
+@media (max-width:768px){
   .chips{
-    grid-template-columns:repeat(2,minmax(0,1fr));
+    justify-content:center;
+    gap:7px;
+  }
+
+  .chip{
+    padding:8px 12px;
+    font-size:14px;
   }
 }
- 
-.chip:hover{
-  transform:translateY(-1px);
+
+@media (max-width:480px){
+  .chips{
+    gap:6px;
+  }
+
+  .chip{
+    padding:8px 10px;
+    font-size:13px;
+  }
 }
- 
-.chipActive{
-  background:var(--af-green-soft);
- 
-  border-color:rgba(25,195,125,.40);
- 
-  color:#0b3d2b;
- 
-  font-weight:700;
-}
- 
-:root[data-theme="dark"] .chipActive{
-  background:#0f2a22;
-  border-color:#0e3527;
-  color:#c6f0dc;
-}
+
  
 /* =========================================================
    DONATE SECTION

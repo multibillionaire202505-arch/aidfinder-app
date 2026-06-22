@@ -360,38 +360,70 @@ button,input,select{
    ========================================================= */
  
 .chips{
-  display:flex;
-  gap:10px;
- 
-  overflow:auto;
- 
-  /* FIX 4 — prevent first chip from clipping on mobile */
-  padding:2px 4px;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+
+  overflow:visible;
+
+  padding:2px 0;
+
+  width:100%;
 }
- 
+
 .chips::-webkit-scrollbar{
   display:none;
 }
- 
+
 .chip{
   border:1px solid var(--border);
- 
+
   background:var(--bg);
- 
+
   color:var(--text);
- 
+
   border-radius:999px;
- 
-  padding:10px 16px;
- 
+
+  padding:10px 8px;
+
   cursor:pointer;
- 
+
   font-weight:600;
- 
+
+  text-align:center;
+
+  white-space:nowrap;
+
   transition:
     background .18s ease,
     border-color .18s ease,
     transform .12s ease;
+}
+
+.chip:hover{
+  transform:translateY(-1px);
+}
+
+.chipActive{
+  background:var(--af-green-soft);
+
+  border-color:rgba(25,195,125,.40);
+
+  color:#0b3d2b;
+
+  font-weight:700;
+}
+
+:root[data-theme="dark"] .chipActive{
+  background:#0f2a22;
+  border-color:#0e3527;
+  color:#c6f0dc;
+}
+
+@media (max-width:560px){
+  .chips{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
 }
  
 .chip:hover{

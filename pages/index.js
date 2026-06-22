@@ -5236,11 +5236,11 @@ const categoryCounts = useMemo(() => {
             </div>
           </div>
 
-          <div className="countRow">
-            <span className="muted">
-              {programs.length} {T.programCount}
-            </span>
-          </div>
+         <div className="countRow">
+  <span className="programCount">
+    ✅ {programs.length} Verified Assistance Programs
+  </span>
+</div>
 
           {/* Donate */}
           <div style={{ textAlign: "center", marginTop: 16 }}>

@@ -42,8 +42,8 @@ export default function Contact() {
               Have a question about AidFinder or how it works? Contact us and we’ll respond as soon as possible.
             </p>
             <p>
-              <a className="link" href="mailto:support@aidfinder.app">
-                support@aidfinder.app
+              <a className="link" href="mailto:support@aidfinder.org">
+                support@aidfinder.org
               </a>
             </p>
           </article>
@@ -54,7 +54,7 @@ export default function Contact() {
               Know of an assistance program we should include? Send us the program name, website, location, and category.
             </p>
             <p>
-              <a className="link" href="mailto:support@aidfinder.app?subject=Program%20Suggestion">
+              <a className="link" href="mailto:support@aidfinder.org?subject=Program%20Suggestion">
                 Suggest a program
               </a>
             </p>
@@ -66,7 +66,7 @@ export default function Contact() {
               Found a broken link, outdated information, or a program that needs review? Let us know so we can improve the directory.
             </p>
             <p>
-              <a className="link" href="mailto:support@aidfinder.app?subject=Program%20Update%20or%20Broken%20Link">
+              <a className="link" href="mailto:support@aidfinder.org?subject=Program%20Update%20or%20Broken%20Link">
                 Report an update
               </a>
             </p>
@@ -78,7 +78,7 @@ export default function Contact() {
               Nonprofits, schools, libraries, community organizations, and agencies are welcome to connect with AidFinder.
             </p>
             <p>
-              <a className="link" href="mailto:support@aidfinder.app?subject=Partnership%20Inquiry">
+              <a className="link" href="mailto:support@aidfinder.org?subject=Partnership%20Inquiry">
                 Partnership inquiry
               </a>
             </p>

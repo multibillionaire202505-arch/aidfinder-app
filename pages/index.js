@@ -5349,6 +5349,469 @@ const ALL = [
     es: { title: "Herramientas de Presupuesto Gratuitas", desc: "Herramientas gratuitas para rastrear gastos y crear un presupuesto." },
   },
 },
+  // ===== PROGRAMS 551-600 =====
+
+// FOOD (8)
+{
+  category: "Food",
+  link: "https://www.angelfoodministries.com",
+  i18n: {
+    en: { title: "Community Food Co-op Programs", desc: "Bulk discount food box programs available through local community groups." },
+    fr: { title: "Programmes coopératifs alimentaires", desc: "Programmes de boîtes alimentaires à prix réduit via des groupes communautaires." },
+    es: { title: "Programas Cooperativos de Alimentos", desc: "Programas de cajas de alimentos a precio reducido a través de grupos comunitarios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.growingpower.org",
+  i18n: {
+    en: { title: "Urban Agriculture & Food Access Programs", desc: "Community gardens and urban farming initiatives improving local food access." },
+    fr: { title: "Programmes d'agriculture urbaine", desc: "Jardins communautaires et initiatives agricoles urbaines pour l'accès alimentaire." },
+    es: { title: "Programas de Agricultura Urbana", desc: "Jardines comunitarios e iniciativas agrícolas urbanas para el acceso a alimentos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/fdpir/fdpir-income-deductions",
+  i18n: {
+    en: { title: "FDPIR Eligibility Guidance", desc: "Income and deduction guidance for the Food Distribution Program on Indian Reservations." },
+    fr: { title: "Admissibilité FDPIR", desc: "Directives sur le revenu pour le programme de distribution alimentaire dans les réserves." },
+    es: { title: "Guía de Elegibilidad FDPIR", desc: "Guía de ingresos para el programa de distribución de alimentos en reservas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/wic/wic-eligibility-requirements",
+  i18n: {
+    en: { title: "WIC Eligibility Requirements", desc: "Official income and eligibility rules for the WIC program." },
+    fr: { title: "Conditions d'admissibilité WIC", desc: "Règles officielles de revenu et d'admissibilité pour WIC." },
+    es: { title: "Requisitos de Elegibilidad WIC", desc: "Reglas oficiales de ingresos y elegibilidad para WIC." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.911foodrescue.org",
+  i18n: {
+    en: { title: "911 Food Rescue", desc: "Connects surplus food from businesses to people facing food insecurity." },
+    fr: { title: "911 Food Rescue", desc: "Relie les surplus alimentaires des entreprises aux personnes en insécurité alimentaire." },
+    es: { title: "911 Food Rescue", desc: "Conecta excedentes de alimentos de empresas con personas en inseguridad alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.communityfoodbank.net",
+  i18n: {
+    en: { title: "Community Food Bank Network Search", desc: "Search tool for regional community food bank networks." },
+    fr: { title: "Recherche réseau banques alimentaires", desc: "Outil de recherche pour les réseaux régionaux de banques alimentaires." },
+    es: { title: "Búsqueda de Red de Bancos de Alimentos", desc: "Herramienta de búsqueda para redes regionales de bancos de alimentos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.rescuingleftovercuisine.org",
+  i18n: {
+    en: { title: "Rescuing Leftover Cuisine", desc: "Redistributes surplus food from restaurants and events to communities in need." },
+    fr: { title: "Rescuing Leftover Cuisine", desc: "Redistribue les surplus de restaurants et événements aux communautés dans le besoin." },
+    es: { title: "Rescuing Leftover Cuisine", desc: "Redistribuye excedentes de restaurantes y eventos a comunidades necesitadas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.cityharvest.org",
+  i18n: {
+    en: { title: "City Harvest Food Rescue", desc: "Food rescue and redistribution network serving urban communities." },
+    fr: { title: "City Harvest Food Rescue", desc: "Réseau de récupération et redistribution alimentaire pour communautés urbaines." },
+    es: { title: "City Harvest Food Rescue", desc: "Red de rescate y redistribución de alimentos para comunidades urbanas." },
+  },
+},
+
+// HEALTH (10)
+{
+  category: "Health",
+  link: "https://www.samhsa.gov/find-help/988",
+  i18n: {
+    en: { title: "SAMHSA 988 Resources", desc: "Federal information and resources about the 988 Suicide & Crisis Lifeline." },
+    fr: { title: "Ressources SAMHSA 988", desc: "Informations fédérales sur la ligne 988 de suicide et de crise." },
+    es: { title: "Recursos SAMHSA 988", desc: "Información federal sobre la línea 988 de suicidio y crisis." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nsvrc.org",
+  i18n: {
+    en: { title: "National Sexual Violence Resource Center", desc: "Information and support resources related to sexual violence prevention." },
+    fr: { title: "Centre national ressources violence sexuelle", desc: "Informations et ressources sur la prévention de la violence sexuelle." },
+    es: { title: "Centro Nacional de Recursos sobre Violencia Sexual", desc: "Información y recursos sobre prevención de violencia sexual." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.datocms-assets.com/psychologytoday",
+  i18n: {
+    en: { title: "Psychology Today Therapist Finder", desc: "Directory to find therapists, including those offering sliding-scale fees." },
+    fr: { title: "Recherche thérapeutes Psychology Today", desc: "Répertoire pour trouver des thérapeutes, y compris à tarifs ajustés." },
+    es: { title: "Buscador de Terapeutas Psychology Today", desc: "Directorio para encontrar terapeutas, incluidos los de tarifa ajustada." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.openpathcollective.org",
+  i18n: {
+    en: { title: "Open Path Collective", desc: "Affordable therapy sessions for individuals, couples, and families." },
+    fr: { title: "Open Path Collective", desc: "Séances de thérapie abordables pour individus, couples et familles." },
+    es: { title: "Open Path Collective", desc: "Sesiones de terapia asequibles para individuos, parejas y familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.freerehabcenters.org",
+  i18n: {
+    en: { title: "Free Rehab Centers Directory", desc: "Directory of free and low-cost addiction treatment centers." },
+    fr: { title: "Répertoire centres de réhabilitation gratuits", desc: "Répertoire des centres de traitement des dépendances gratuits ou abordables." },
+    es: { title: "Directorio de Centros de Rehabilitación Gratuitos", desc: "Directorio de centros de tratamiento de adicciones gratuitos o de bajo costo." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hrsa.gov/opioid-epidemic",
+  i18n: {
+    en: { title: "HRSA Opioid Epidemic Resources", desc: "Federal resources for opioid use disorder treatment and prevention." },
+    fr: { title: "Ressources épidémie opioïdes HRSA", desc: "Ressources fédérales pour le traitement des troubles liés aux opioïdes." },
+    es: { title: "Recursos sobre Epidemia de Opioides HRSA", desc: "Recursos federales para el tratamiento de trastornos por opioides." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.samhsa.gov/find-help/harm-reduction",
+  i18n: {
+    en: { title: "SAMHSA Harm Reduction Resources", desc: "Federal harm reduction information and program resources." },
+    fr: { title: "Ressources réduction des méfaits SAMHSA", desc: "Informations fédérales sur la réduction des méfaits." },
+    es: { title: "Recursos de Reducción de Daños SAMHSA", desc: "Información federal sobre reducción de daños." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hillsidechildrenscenter.org",
+  i18n: {
+    en: { title: "Children's Behavioral Health Resource Directory", desc: "Directory-style resources for children's mental and behavioral health services." },
+    fr: { title: "Répertoire santé comportementale enfants", desc: "Ressources pour les services de santé mentale et comportementale des enfants." },
+    es: { title: "Directorio de Salud Conductual Infantil", desc: "Recursos para servicios de salud mental y conductual infantil." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.postpartum.net",
+  i18n: {
+    en: { title: "Postpartum Support International", desc: "Support and resources for perinatal mental health concerns." },
+    fr: { title: "Postpartum Support International", desc: "Soutien et ressources pour la santé mentale périnatale." },
+    es: { title: "Postpartum Support International", desc: "Apoyo y recursos para la salud mental perinatal." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.give.org",
+  i18n: {
+    en: { title: "BBB Give.org Charity Health Directory", desc: "Verify and find accredited health-related charities." },
+    fr: { title: "Répertoire caritatif santé BBB Give.org", desc: "Vérifiez et trouvez des organismes de bienfaisance en santé accrédités." },
+    es: { title: "Directorio de Caridad de Salud BBB Give.org", desc: "Verifique y encuentre organizaciones benéficas de salud acreditadas." },
+  },
+},
+
+// HOUSING (10)
+{
+  category: "Housing",
+  link: "https://www.hudexchange.info/programs/hmis/",
+  i18n: {
+    en: { title: "Homeless Management Information Systems Info", desc: "Information on local systems that coordinate homelessness services." },
+    fr: { title: "Systèmes d'information sans-abrisme", desc: "Informations sur les systèmes locaux coordonnant les services aux sans-abri." },
+    es: { title: "Información de Sistemas de Gestión para Personas sin Hogar", desc: "Información sobre sistemas locales que coordinan servicios." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.covenanthouse.org",
+  i18n: {
+    en: { title: "Covenant House", desc: "Shelter and support services for homeless and at-risk youth." },
+    fr: { title: "Covenant House", desc: "Refuge et services de soutien pour jeunes sans-abri ou à risque." },
+    es: { title: "Covenant House", desc: "Refugio y servicios de apoyo para jóvenes sin hogar o en riesgo." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.familypromise.org",
+  i18n: {
+    en: { title: "Family Promise", desc: "Shelter, case management, and stability support for homeless families." },
+    fr: { title: "Family Promise", desc: "Refuge, gestion de cas et soutien à la stabilité pour familles sans-abri." },
+    es: { title: "Family Promise", desc: "Refugio, gestión de casos y apoyo para familias sin hogar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.volunteersofamerica.org/housing",
+  i18n: {
+    en: { title: "Volunteers of America Housing Programs", desc: "Affordable housing and supportive services across many communities." },
+    fr: { title: "Programmes logement Volunteers of America", desc: "Logement abordable et services de soutien dans de nombreuses communautés." },
+    es: { title: "Programas de Vivienda Volunteers of America", desc: "Vivienda asequible y servicios de apoyo en muchas comunidades." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.salvationarmyusa.org/usn/housing/",
+  i18n: {
+    en: { title: "Salvation Army Housing Services", desc: "Emergency shelter and transitional housing programs nationwide." },
+    fr: { title: "Services logement Armée du Salut", desc: "Refuge d'urgence et logement transitoire à l'échelle nationale." },
+    es: { title: "Servicios de Vivienda del Ejército de Salvación", desc: "Refugio de emergencia y vivienda transitoria a nivel nacional." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.catholiccharitiesusa.org/find-help/",
+  i18n: {
+    en: { title: "Catholic Charities Housing Help", desc: "Local housing assistance and emergency services through Catholic Charities." },
+    fr: { title: "Aide logement Catholic Charities", desc: "Aide au logement et services d'urgence locaux via Catholic Charities." },
+    es: { title: "Ayuda de Vivienda Catholic Charities", desc: "Asistencia de vivienda y servicios de emergencia a través de Catholic Charities." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.jfna.org/find-help",
+  i18n: {
+    en: { title: "Jewish Federations Housing & Family Services", desc: "Local housing and family support services through Jewish Federations." },
+    fr: { title: "Services logement Jewish Federations", desc: "Services locaux de logement et de soutien familial via Jewish Federations." },
+    es: { title: "Servicios de Vivienda Jewish Federations", desc: "Servicios locales de vivienda y apoyo familiar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.unitedwaywilming.org/housing",
+  i18n: {
+    en: { title: "United Way Housing Stability Programs", desc: "Local United Way chapters offering housing stability assistance." },
+    fr: { title: "Programmes stabilité logement United Way", desc: "Chapitres locaux United Way offrant une aide à la stabilité résidentielle." },
+    es: { title: "Programas de Estabilidad de Vivienda United Way", desc: "Capítulos locales de United Way que ofrecen ayuda de estabilidad de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/rental_assistance/tenantrights",
+  i18n: {
+    en: { title: "HUD Tenant Rights Information", desc: "Federal information on tenant rights in HUD-assisted housing." },
+    fr: { title: "Droits des locataires HUD", desc: "Informations fédérales sur les droits des locataires dans le logement subventionné HUD." },
+    es: { title: "Derechos del Inquilino HUD", desc: "Información federal sobre derechos de inquilinos en vivienda asistida por HUD." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.stewards.org",
+  i18n: {
+    en: { title: "Community Land Trust Directory", desc: "Directory of community land trusts supporting long-term affordable housing." },
+    fr: { title: "Répertoire fiducies foncières communautaires", desc: "Répertoire des fiducies foncières soutenant le logement abordable à long terme." },
+    es: { title: "Directorio de Fideicomisos de Tierra Comunitarios", desc: "Directorio de fideicomisos que apoyan vivienda asequible a largo plazo." },
+  },
+},
+
+// UTILITIES (7)
+{
+  category: "Utilities",
+  link: "https://www.salvationarmyusa.org/usn/utility-assistance/",
+  i18n: {
+    en: { title: "Salvation Army Utility Assistance", desc: "Emergency utility bill assistance through local Salvation Army units." },
+    fr: { title: "Aide services publics Armée du Salut", desc: "Aide d'urgence aux factures via les unités locales de l'Armée du Salut." },
+    es: { title: "Asistencia de Servicios Ejército de Salvación", desc: "Ayuda de emergencia con facturas a través de unidades locales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.catholiccharitiesusa.org/find-help/utility-assistance/",
+  i18n: {
+    en: { title: "Catholic Charities Utility Assistance", desc: "Local emergency utility bill assistance through Catholic Charities." },
+    fr: { title: "Aide services publics Catholic Charities", desc: "Aide d'urgence locale aux factures via Catholic Charities." },
+    es: { title: "Asistencia de Servicios Catholic Charities", desc: "Ayuda local de emergencia con facturas de servicios." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.unitedway.org/find-your-united-way",
+  i18n: {
+    en: { title: "Find Your Local United Way", desc: "Locate the United Way chapter serving your community for utility and other help." },
+    fr: { title: "Trouver votre United Way local", desc: "Trouvez le chapitre United Way de votre communauté pour de l'aide." },
+    es: { title: "Encuentre su United Way Local", desc: "Localice el capítulo de United Way que sirve a su comunidad." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/eere/buildings/home-energy-audits",
+  i18n: {
+    en: { title: "Home Energy Audit Guidance", desc: "Federal guidance on getting a home energy audit to lower utility costs." },
+    fr: { title: "Guide audit énergétique domicile", desc: "Conseils fédéraux pour un audit énergétique réduisant les coûts." },
+    es: { title: "Guía de Auditoría Energética del Hogar", desc: "Orientación federal para reducir costos de servicios." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.consumer.ftc.gov/articles/utility-scams",
+  i18n: {
+    en: { title: "FTC Utility Scam Protection", desc: "Consumer guidance to recognize and avoid utility-related scams." },
+    fr: { title: "Protection arnaques services publics FTC", desc: "Conseils pour reconnaître et éviter les arnaques liées aux services." },
+    es: { title: "Protección contra Estafas de Servicios FTC", desc: "Orientación para reconocer y evitar estafas de servicios públicos." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.211.org/services/utilities",
+  i18n: {
+    en: { title: "211 Utility Assistance Directory", desc: "Local utility bill assistance referrals through the 211 network." },
+    fr: { title: "Répertoire aide services publics 211", desc: "Orientation vers l'aide aux factures via le réseau 211." },
+    es: { title: "Directorio de Asistencia de Servicios 211", desc: "Referencias de ayuda con facturas a través de la red 211." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.usa.gov/help-with-water-bills",
+  i18n: {
+    en: { title: "Help With Water Bills Guide", desc: "Government guide to water bill assistance programs." },
+    fr: { title: "Guide aide factures d'eau", desc: "Guide gouvernemental pour l'aide aux factures d'eau." },
+    es: { title: "Guía de Ayuda con Facturas de Agua", desc: "Guía del gobierno sobre asistencia para facturas de agua." },
+  },
+},
+
+// EDUCATION (8)
+{
+  category: "Education",
+  link: "https://www.mooc-list.com",
+  i18n: {
+    en: { title: "MOOC List", desc: "Directory of free massive open online courses across many subjects." },
+    fr: { title: "MOOC List", desc: "Répertoire de cours en ligne massifs et gratuits sur de nombreux sujets." },
+    es: { title: "MOOC List", desc: "Directorio de cursos en línea masivos y gratuitos en muchos temas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.udemy.com/topic/free-courses/",
+  i18n: {
+    en: { title: "Udemy Free Courses", desc: "Selection of free online courses across professional and personal topics." },
+    fr: { title: "Cours gratuits Udemy", desc: "Sélection de cours en ligne gratuits sur des sujets professionnels et personnels." },
+    es: { title: "Cursos Gratuitos Udemy", desc: "Selección de cursos en línea gratuitos sobre temas profesionales y personales." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.futurelearn.com",
+  i18n: {
+    en: { title: "FutureLearn", desc: "Online courses from universities, many available free to audit." },
+    fr: { title: "FutureLearn", desc: "Cours en ligne d'universités, plusieurs gratuits en mode audit." },
+    es: { title: "FutureLearn", desc: "Cursos en línea de universidades, muchos gratuitos para auditar." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.codecademy.com",
+  i18n: {
+    en: { title: "Codecademy", desc: "Free introductory coding lessons across many programming languages." },
+    fr: { title: "Codecademy", desc: "Leçons de programmation gratuites dans de nombreux langages." },
+    es: { title: "Codecademy", desc: "Lecciones gratuitas de programación en muchos lenguajes." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.freecodecamp.org",
+  i18n: {
+    en: { title: "freeCodeCamp", desc: "Free coding curriculum and certifications for web development." },
+    fr: { title: "freeCodeCamp", desc: "Programme de codage gratuit et certifications pour le développement web." },
+    es: { title: "freeCodeCamp", desc: "Currículo de programación gratuito y certificaciones para desarrollo web." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.usa.gov/adult-education",
+  i18n: {
+    en: { title: "USA.gov Adult Education Guide", desc: "Government guide to GED, ESL, and adult basic education programs." },
+    fr: { title: "Guide éducation adultes USA.gov", desc: "Guide gouvernemental sur GED, ESL et éducation de base pour adultes." },
+    es: { title: "Guía de Educación de Adultos USA.gov", desc: "Guía del gobierno sobre GED, ESL y educación básica para adultos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.usa.gov/vocational-rehabilitation",
+  i18n: {
+    en: { title: "USA.gov Vocational Rehabilitation Guide", desc: "Government guide to state vocational rehabilitation services." },
+    fr: { title: "Guide réadaptation professionnelle USA.gov", desc: "Guide gouvernemental sur les services de réadaptation professionnelle." },
+    es: { title: "Guía de Rehabilitación Vocacional USA.gov", desc: "Guía del gobierno sobre servicios de rehabilitación vocacional." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.bigfuture.collegeboard.org",
+  i18n: {
+    en: { title: "BigFuture by College Board", desc: "College planning, scholarship search, and financial aid tools." },
+    fr: { title: "BigFuture par College Board", desc: "Planification universitaire, recherche de bourses et outils d'aide financière." },
+    es: { title: "BigFuture de College Board", desc: "Planificación universitaria, búsqueda de becas y herramientas de ayuda financiera." },
+  },
+},
+
+// INCOME (7)
+{
+  category: "Income",
+  link: "https://www.gogetfunding.com/community-support",
+  i18n: {
+    en: { title: "Community Crowdfunding Resources", desc: "Guidance on using crowdfunding platforms for emergency financial needs." },
+    fr: { title: "Ressources sociofinancement communautaire", desc: "Conseils sur l'utilisation des plateformes de sociofinancement pour urgences." },
+    es: { title: "Recursos de Financiamiento Colectivo Comunitario", desc: "Orientación sobre plataformas de financiamiento para necesidades urgentes." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.211.org/services/financial-assistance",
+  i18n: {
+    en: { title: "211 Financial Assistance Directory", desc: "Local emergency financial assistance referrals through the 211 network." },
+    fr: { title: "Répertoire aide financière 211", desc: "Orientation vers l'aide financière d'urgence via le réseau 211." },
+    es: { title: "Directorio de Asistencia Financiera 211", desc: "Referencias de ayuda financiera de emergencia a través de la red 211." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.modestneeds.org",
+  i18n: {
+    en: { title: "Modest Needs", desc: "Small emergency grants to help working individuals avoid financial crisis." },
+    fr: { title: "Modest Needs", desc: "Petites subventions d'urgence pour aider les travailleurs à éviter une crise financière." },
+    es: { title: "Modest Needs", desc: "Pequeñas subvenciones de emergencia para ayudar a trabajadores a evitar crisis financieras." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.uwaysite.org/emergency-financial-assistance",
+  i18n: {
+    en: { title: "United Way Emergency Financial Assistance", desc: "Local emergency financial help through United Way affiliates." },
+    fr: { title: "Aide financière d'urgence United Way", desc: "Aide financière d'urgence locale via les affiliés United Way." },
+    es: { title: "Asistencia Financiera de Emergencia United Way", desc: "Ayuda financiera de emergencia local a través de afiliados de United Way." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.stgeorgeutah.gov/emergency-assistance",
+  i18n: {
+    en: { title: "Local Government Emergency Assistance Portals", desc: "Example of municipal emergency financial assistance programs." },
+    fr: { title: "Portails d'aide d'urgence municipaux", desc: "Exemple de programmes municipaux d'aide financière d'urgence." },
+    es: { title: "Portales de Asistencia de Emergencia Municipal", desc: "Ejemplo de programas municipales de asistencia financiera de emergencia." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.gofundme.com/c/community",
+  i18n: {
+    en: { title: "GoFundMe Community Support", desc: "Platform for community fundraising for emergencies and hardship." },
+    fr: { title: "Soutien communautaire GoFundMe", desc: "Plateforme de collecte de fonds communautaire pour urgences et difficultés." },
+    es: { title: "Apoyo Comunitario GoFundMe", desc: "Plataforma de recaudación de fondos comunitaria para emergencias." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.211.org/services/income",
+  i18n: {
+    en: { title: "211 Income Support Directory", desc: "Local income and cash assistance referrals through the 211 network." },
+    fr: { title: "Répertoire soutien revenu 211", desc: "Orientation vers l'aide au revenu via le réseau 211." },
+    es: { title: "Directorio de Apoyo de Ingresos 211", desc: "Referencias de ayuda de ingresos a través de la red 211." },
+  },
+},
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */

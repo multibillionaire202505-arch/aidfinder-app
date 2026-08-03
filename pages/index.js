@@ -6275,6 +6275,469 @@ const ALL = [
     es: { title: "Feed the Children", desc: "Asistencia de emergencia que incluye comida, productos esenciales y ayuda en desastres." },
   },
 },
+  // ===== PROGRAMS 601-650 =====
+
+// FOOD (8)
+{
+  category: "Food",
+  link: "https://www.acf.hhs.gov/ocs/programs/csfp",
+  i18n: {
+    en: { title: "ACF Commodity Supplemental Food Program Info", desc: "Federal program details for monthly food packages for low-income seniors." },
+    fr: { title: "Info Programme CSFP ACF", desc: "Détails du programme fédéral de colis alimentaires mensuels pour aînés." },
+    es: { title: "Información Programa CSFP ACF", desc: "Detalles del programa federal de paquetes de alimentos mensuales para mayores." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.usda.gov/nutrition-security",
+  i18n: {
+    en: { title: "USDA Nutrition Security Initiative", desc: "Federal initiative connecting nutrition programs to improve food security." },
+    fr: { title: "Initiative sécurité nutritionnelle USDA", desc: "Initiative fédérale reliant les programmes de nutrition à la sécurité alimentaire." },
+    es: { title: "Iniciativa de Seguridad Nutricional USDA", desc: "Iniciativa federal que conecta programas de nutrición con la seguridad alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.mazon.org",
+  i18n: {
+    en: { title: "MAZON: A Jewish Response to Hunger", desc: "Advocacy and support organization working to end hunger nationwide." },
+    fr: { title: "MAZON: réponse juive à la faim", desc: "Organisation de plaidoyer travaillant à mettre fin à la faim à l'échelle nationale." },
+    es: { title: "MAZON: Respuesta Judía al Hambre", desc: "Organización de defensa que trabaja para acabar con el hambre a nivel nacional." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.bread.org",
+  i18n: {
+    en: { title: "Bread for the World", desc: "Advocacy organization focused on ending hunger through policy change." },
+    fr: { title: "Bread for the World", desc: "Organisation de plaidoyer axée sur mettre fin à la faim par des changements politiques." },
+    es: { title: "Bread for the World", desc: "Organización de defensa enfocada en acabar con el hambre mediante políticas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodresearch.org",
+  i18n: {
+    en: { title: "Food Research & Action Center", desc: "Research and policy resources on hunger and nutrition programs." },
+    fr: { title: "Food Research & Action Center", desc: "Ressources de recherche et politiques sur la faim et la nutrition." },
+    es: { title: "Food Research & Action Center", desc: "Recursos de investigación y políticas sobre el hambre y la nutrición." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.rootcapital.org",
+  i18n: {
+    en: { title: "Root Capital Food System Resources", desc: "Resources supporting sustainable food systems and rural food access." },
+    fr: { title: "Ressources système alimentaire Root Capital", desc: "Ressources soutenant les systèmes alimentaires durables et l'accès rural." },
+    es: { title: "Recursos del Sistema Alimentario Root Capital", desc: "Recursos que apoyan sistemas alimentarios sostenibles y acceso rural." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodallianceinc.org",
+  i18n: {
+    en: { title: "Food Allergy & Assistance Directory", desc: "Directory-style resources for families needing food with allergy accommodations." },
+    fr: { title: "Répertoire allergies et aide alimentaire", desc: "Ressources pour familles ayant besoin d'aliments adaptés aux allergies." },
+    es: { title: "Directorio de Alergias y Asistencia Alimentaria", desc: "Recursos para familias que necesitan alimentos adaptados a alergias." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.usda.gov/media/blog/food-assistance",
+  i18n: {
+    en: { title: "USDA Food Assistance Blog & Updates", desc: "Official USDA updates on food assistance program changes and news." },
+    fr: { title: "Blog assistance alimentaire USDA", desc: "Mises à jour officielles de l'USDA sur les programmes d'aide alimentaire." },
+    es: { title: "Blog de Asistencia Alimentaria USDA", desc: "Actualizaciones oficiales del USDA sobre programas de asistencia alimentaria." },
+  },
+},
+
+// HEALTH (10)
+{
+  category: "Health",
+  link: "https://www.thenationalcouncil.org",
+  i18n: {
+    en: { title: "National Council for Mental Wellbeing", desc: "Directory and advocacy resources for community mental health providers." },
+    fr: { title: "Conseil national du bien-être mental", desc: "Répertoire et ressources de plaidoyer pour les fournisseurs de santé mentale." },
+    es: { title: "Consejo Nacional para el Bienestar Mental", desc: "Directorio y recursos de defensa para proveedores de salud mental." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.mentalhealthfirstaid.org",
+  i18n: {
+    en: { title: "Mental Health First Aid", desc: "Training and resources to help recognize and respond to mental health crises." },
+    fr: { title: "Premiers secours en santé mentale", desc: "Formation et ressources pour reconnaître et répondre aux crises de santé mentale." },
+    es: { title: "Primeros Auxilios de Salud Mental", desc: "Capacitación y recursos para reconocer y responder a crisis de salud mental." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.dbsalliance.org",
+  i18n: {
+    en: { title: "Depression and Bipolar Support Alliance", desc: "Peer support groups and resources for mood disorders." },
+    fr: { title: "Alliance soutien dépression et bipolarité", desc: "Groupes de soutien par les pairs pour les troubles de l'humeur." },
+    es: { title: "Alianza de Apoyo para Depresión y Bipolaridad", desc: "Grupos de apoyo entre pares para trastornos del estado de ánimo." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.adaa.org",
+  i18n: {
+    en: { title: "Anxiety & Depression Association of America", desc: "Resources and treatment provider directory for anxiety and depression." },
+    fr: { title: "Association anxiété et dépression Amérique", desc: "Ressources et répertoire de traitements pour l'anxiété et la dépression." },
+    es: { title: "Asociación de Ansiedad y Depresión de América", desc: "Recursos y directorio de tratamiento para ansiedad y depresión." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.eatingdisorderhope.com",
+  i18n: {
+    en: { title: "Eating Disorder Hope Resources", desc: "Information and treatment resources for eating disorder recovery." },
+    fr: { title: "Ressources Eating Disorder Hope", desc: "Informations et ressources de traitement pour la guérison des troubles alimentaires." },
+    es: { title: "Recursos Eating Disorder Hope", desc: "Información y recursos de tratamiento para la recuperación de trastornos alimentarios." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nationaleatingdisorders.org",
+  i18n: {
+    en: { title: "National Alliance for Eating Disorders", desc: "Support, referrals, and helpline resources for eating disorders." },
+    fr: { title: "Alliance nationale troubles alimentaires", desc: "Soutien, orientations et ligne d'aide pour les troubles alimentaires." },
+    es: { title: "Alianza Nacional para Trastornos Alimentarios", desc: "Apoyo, referencias y línea de ayuda para trastornos alimentarios." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.diabetes.org/tools-support",
+  i18n: {
+    en: { title: "American Diabetes Association Support Tools", desc: "Resources and support tools for people managing diabetes." },
+    fr: { title: "Outils soutien American Diabetes Association", desc: "Ressources et outils de soutien pour la gestion du diabète." },
+    es: { title: "Herramientas de Apoyo American Diabetes Association", desc: "Recursos y herramientas de apoyo para el manejo de la diabetes." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.heart.org/en/health-topics/consumer-healthcare",
+  i18n: {
+    en: { title: "American Heart Association Consumer Health Care", desc: "Consumer resources for affordable heart health care and prevention." },
+    fr: { title: "Soins de santé consommateurs American Heart Association", desc: "Ressources pour des soins cardiaques abordables et la prévention." },
+    es: { title: "Atención Médica del Consumidor American Heart Association", desc: "Recursos para atención cardíaca asequible y prevención." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.lung.org/help-support",
+  i18n: {
+    en: { title: "American Lung Association Help & Support", desc: "Support resources for respiratory health conditions and lung disease." },
+    fr: { title: "Aide et soutien American Lung Association", desc: "Ressources de soutien pour les maladies respiratoires et pulmonaires." },
+    es: { title: "Ayuda y Apoyo American Lung Association", desc: "Recursos de apoyo para condiciones respiratorias y enfermedades pulmonares." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.kidneyfund.org",
+  i18n: {
+    en: { title: "American Kidney Fund", desc: "Financial assistance and support for people with kidney disease." },
+    fr: { title: "American Kidney Fund", desc: "Aide financière et soutien pour les personnes atteintes de maladie rénale." },
+    es: { title: "American Kidney Fund", desc: "Ayuda financiera y apoyo para personas con enfermedad renal." },
+  },
+},
+
+// HOUSING (10)
+{
+  category: "Housing",
+  link: "https://www.hudexchange.info/programs/ceas/",
+  i18n: {
+    en: { title: "Coordinated Entry System Info", desc: "Information on local systems that prioritize housing assistance for those most in need." },
+    fr: { title: "Info système d'entrée coordonnée", desc: "Informations sur les systèmes locaux priorisant l'aide au logement." },
+    es: { title: "Información del Sistema de Entrada Coordinada", desc: "Información sobre sistemas locales que priorizan la ayuda de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hudexchange.info/programs/samples/",
+  i18n: {
+    en: { title: "HUD Program Sample Documents", desc: "Sample forms and guidance documents for HUD housing programs." },
+    fr: { title: "Documents exemples programmes HUD", desc: "Formulaires et documents d'orientation pour les programmes de logement HUD." },
+    es: { title: "Documentos de Muestra de Programas HUD", desc: "Formularios y documentos de orientación para programas de vivienda HUD." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.svdpusa.org",
+  i18n: {
+    en: { title: "St. Vincent de Paul National Council", desc: "National network offering housing and emergency assistance services." },
+    fr: { title: "Conseil national Saint-Vincent-de-Paul", desc: "Réseau national offrant des services d'aide au logement et d'urgence." },
+    es: { title: "Consejo Nacional San Vicente de Paúl", desc: "Red nacional que ofrece servicios de vivienda y asistencia de emergencia." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.compassionintl.org/find-help",
+  i18n: {
+    en: { title: "Faith-Based Housing Assistance Directory", desc: "Directory of faith-based organizations offering housing support." },
+    fr: { title: "Répertoire aide logement religieuse", desc: "Répertoire d'organisations religieuses offrant un soutien au logement." },
+    es: { title: "Directorio de Asistencia de Vivienda Religiosa", desc: "Directorio de organizaciones religiosas que ofrecen apoyo de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.local211.org/housing",
+  i18n: {
+    en: { title: "Local 211 Housing Portal", desc: "Regional housing referral portals connected to the 211 network." },
+    fr: { title: "Portail logement local 211", desc: "Portails régionaux d'orientation logement connectés au réseau 211." },
+    es: { title: "Portal Local 211 de Vivienda", desc: "Portales regionales de referencia de vivienda conectados a la red 211." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.mutualhousing.com",
+  i18n: {
+    en: { title: "Mutual Housing Association Directory", desc: "Directory of mutual housing associations offering resident-owned housing models." },
+    fr: { title: "Répertoire associations logement mutuel", desc: "Répertoire d'associations de logement mutuel avec modèles de propriété résidente." },
+    es: { title: "Directorio de Asociaciones de Vivienda Mutua", desc: "Directorio de asociaciones de vivienda mutua con modelos de propiedad residente." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rurallisc.org",
+  i18n: {
+    en: { title: "LISC Rural Housing Resources", desc: "Community development financial resources for rural housing projects." },
+    fr: { title: "Ressources logement rural LISC", desc: "Ressources financières de développement communautaire pour le logement rural." },
+    es: { title: "Recursos de Vivienda Rural LISC", desc: "Recursos financieros de desarrollo comunitario para proyectos de vivienda rural." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.homelessshelterdirectory.org",
+  i18n: {
+    en: { title: "Homeless Shelter Directory", desc: "Nationwide directory of homeless shelters and transitional housing." },
+    fr: { title: "Répertoire refuges sans-abri", desc: "Répertoire national des refuges pour sans-abri et logements transitoires." },
+    es: { title: "Directorio de Refugios para Personas sin Hogar", desc: "Directorio nacional de refugios y vivienda transitoria." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.sheltertech.org",
+  i18n: {
+    en: { title: "ShelterTech Resource App", desc: "Digital resource tool connecting people to shelter and housing services." },
+    fr: { title: "Application ressources ShelterTech", desc: "Outil numérique reliant les personnes aux services de refuge et logement." },
+    es: { title: "Aplicación de Recursos ShelterTech", desc: "Herramienta digital que conecta a personas con servicios de refugio y vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/multifamily_housing",
+  i18n: {
+    en: { title: "HUD Multifamily Housing Programs", desc: "Federal information on affordable multifamily housing developments." },
+    fr: { title: "Programmes logement multifamilial HUD", desc: "Informations fédérales sur les logements multifamiliaux abordables." },
+    es: { title: "Programas de Vivienda Multifamiliar HUD", desc: "Información federal sobre desarrollos de vivienda multifamiliar asequible." },
+  },
+},
+
+// UTILITIES (7)
+{
+  category: "Utilities",
+  link: "https://www.needhelppayingbills.com",
+  i18n: {
+    en: { title: "Need Help Paying Bills Directory", desc: "Directory of programs helping with utility, rent, and other household bills." },
+    fr: { title: "Répertoire aide paiement factures", desc: "Répertoire de programmes aidant avec factures de services et loyer." },
+    es: { title: "Directorio de Ayuda para Pagar Facturas", desc: "Directorio de programas que ayudan con facturas de servicios y alquiler." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/scep/slsc/state-local-and-tribal-government-resources",
+  i18n: {
+    en: { title: "State, Local, and Tribal Energy Resources", desc: "Federal directory connecting to state and tribal energy assistance programs." },
+    fr: { title: "Ressources énergie État, local et tribal", desc: "Répertoire fédéral vers les programmes d'aide énergétique locaux et tribaux." },
+    es: { title: "Recursos Energéticos Estatales, Locales y Tribales", desc: "Directorio federal a programas de asistencia energética locales y tribales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.rd.usda.gov/programs-services/community-facilities",
+  i18n: {
+    en: { title: "USDA Community Facilities Programs", desc: "Rural infrastructure funding for essential community facilities and utilities." },
+    fr: { title: "Programmes installations communautaires USDA", desc: "Financement des infrastructures rurales pour installations communautaires essentielles." },
+    es: { title: "Programas de Instalaciones Comunitarias USDA", desc: "Financiamiento de infraestructura rural para instalaciones comunitarias esenciales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.pge.com/en/save-energy-money/help-paying-your-bill.html",
+  i18n: {
+    en: { title: "Utility Company Bill Assistance Programs", desc: "Example of a utility company's own customer bill assistance program." },
+    fr: { title: "Programmes aide facture compagnie services", desc: "Exemple de programme d'aide aux factures d'une compagnie de services." },
+    es: { title: "Programas de Asistencia de Facturas de Compañías", desc: "Ejemplo de programa de asistencia de facturas de una compañía de servicios." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.usa.gov/help-with-heating-cooling",
+  i18n: {
+    en: { title: "Help With Heating and Cooling Costs", desc: "Government guide to seasonal heating and cooling bill assistance." },
+    fr: { title: "Aide coûts chauffage et climatisation", desc: "Guide gouvernemental pour l'aide saisonnière aux factures de chauffage/climatisation." },
+    es: { title: "Ayuda con Costos de Calefacción y Refrigeración", desc: "Guía del gobierno sobre asistencia estacional para facturas de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.consumer.ftc.gov/articles/energy-savings-tips",
+  i18n: {
+    en: { title: "FTC Energy Savings Tips", desc: "Consumer tips for reducing home energy costs safely and effectively." },
+    fr: { title: "Conseils économie énergie FTC", desc: "Conseils aux consommateurs pour réduire les coûts énergétiques en toute sécurité." },
+    es: { title: "Consejos de Ahorro de Energía FTC", desc: "Consejos para el consumidor para reducir costos de energía de forma segura." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.solarunitedneighbors.org",
+  i18n: {
+    en: { title: "Solar United Neighbors", desc: "Community solar co-op resources that may reduce long-term energy costs." },
+    fr: { title: "Solar United Neighbors", desc: "Ressources coopératives solaires communautaires réduisant les coûts énergétiques." },
+    es: { title: "Solar United Neighbors", desc: "Recursos de cooperativas solares comunitarias que reducen costos energéticos." },
+  },
+},
+
+// EDUCATION (8)
+{
+  category: "Education",
+  link: "https://www.usa.gov/apprenticeships",
+  i18n: {
+    en: { title: "USA.gov Apprenticeships Guide", desc: "Government guide to finding and applying for apprenticeship programs." },
+    fr: { title: "Guide apprentissages USA.gov", desc: "Guide gouvernemental pour trouver et postuler à des programmes d'apprentissage." },
+    es: { title: "Guía de Aprendizajes USA.gov", desc: "Guía del gobierno para encontrar y solicitar programas de aprendizaje." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.dol.gov/agencies/eta/skills-training",
+  i18n: {
+    en: { title: "DOL Skills Training Programs", desc: "Federal skills training program information for job seekers." },
+    fr: { title: "Programmes formation compétences DOL", desc: "Informations sur les programmes fédéraux de formation aux compétences." },
+    es: { title: "Programas de Capacitación en Habilidades DOL", desc: "Información sobre programas federales de capacitación para buscadores de empleo." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.usa.gov/computer-internet-help",
+  i18n: {
+    en: { title: "USA.gov Computer & Internet Skills Guide", desc: "Government guide to free computer and internet literacy programs." },
+    fr: { title: "Guide compétences informatiques USA.gov", desc: "Guide gouvernemental pour les programmes gratuits d'alphabétisation numérique." },
+    es: { title: "Guía de Habilidades de Computación e Internet USA.gov", desc: "Guía del gobierno para programas gratuitos de alfabetización digital." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.usalearns.org",
+  i18n: {
+    en: { title: "USA Learns", desc: "Free English language courses for adult learners nationwide." },
+    fr: { title: "USA Learns", desc: "Cours d'anglais gratuits pour apprenants adultes à l'échelle nationale." },
+    es: { title: "USA Learns", desc: "Cursos gratuitos de inglés para adultos a nivel nacional." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.duolingo.com",
+  i18n: {
+    en: { title: "Duolingo", desc: "Free language learning app covering English and many other languages." },
+    fr: { title: "Duolingo", desc: "Application gratuite d'apprentissage des langues couvrant l'anglais et d'autres langues." },
+    es: { title: "Duolingo", desc: "Aplicación gratuita de aprendizaje de idiomas que incluye inglés y otros idiomas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/grants-and-programs/formula-grants/special-populations/adult-education-family-literacy-act",
+  i18n: {
+    en: { title: "Adult Education and Family Literacy Act Info", desc: "Federal law information supporting adult and family literacy programs." },
+    fr: { title: "Info loi alphabétisation adultes et familles", desc: "Informations sur la loi fédérale soutenant les programmes d'alphabétisation." },
+    es: { title: "Información de la Ley de Alfabetización Familiar y de Adultos", desc: "Información de la ley federal que apoya programas de alfabetización." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.libraries.org",
+  i18n: {
+    en: { title: "Public Library Directory", desc: "Find your local public library, which often offers free classes and resources." },
+    fr: { title: "Répertoire bibliothèques publiques", desc: "Trouvez votre bibliothèque publique locale, offrant souvent cours et ressources gratuits." },
+    es: { title: "Directorio de Bibliotecas Públicas", desc: "Encuentre su biblioteca pública local, que a menudo ofrece clases y recursos gratuitos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.communityactionpartnership.com",
+  i18n: {
+    en: { title: "Community Action Partnership", desc: "Network of local agencies offering education, job training, and poverty support." },
+    fr: { title: "Community Action Partnership", desc: "Réseau d'agences locales offrant éducation, formation et soutien contre la pauvreté." },
+    es: { title: "Community Action Partnership", desc: "Red de agencias locales que ofrecen educación, capacitación y apoyo contra la pobreza." },
+  },
+},
+
+// INCOME (7)
+{
+  category: "Income",
+  link: "https://www.communityactionpartnership.com/find-a-cap/",
+  i18n: {
+    en: { title: "Find Your Local Community Action Agency", desc: "Locate a community action agency offering financial and utility assistance." },
+    fr: { title: "Trouver votre agence d'action communautaire", desc: "Localisez une agence offrant une aide financière et aux services publics." },
+    es: { title: "Encuentre su Agencia de Acción Comunitaria Local", desc: "Localice una agencia que ofrece asistencia financiera y de servicios." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.salvationarmyusa.org/usn/financial-assistance/",
+  i18n: {
+    en: { title: "Salvation Army Financial Assistance", desc: "Local emergency financial assistance through Salvation Army units." },
+    fr: { title: "Aide financière Armée du Salut", desc: "Aide financière d'urgence locale via les unités de l'Armée du Salut." },
+    es: { title: "Asistencia Financiera Ejército de Salvación", desc: "Asistencia financiera de emergencia local a través de unidades del Ejército de Salvación." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.catholiccharitiesusa.org/find-help/financial-assistance/",
+  i18n: {
+    en: { title: "Catholic Charities Financial Assistance", desc: "Emergency financial assistance programs through Catholic Charities." },
+    fr: { title: "Aide financière Catholic Charities", desc: "Programmes d'aide financière d'urgence via Catholic Charities." },
+    es: { title: "Asistencia Financiera Catholic Charities", desc: "Programas de asistencia financiera de emergencia a través de Catholic Charities." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.jfna.org/emergency-cash-assistance",
+  i18n: {
+    en: { title: "Jewish Federations Emergency Cash Assistance", desc: "Emergency cash assistance through local Jewish Federation chapters." },
+    fr: { title: "Aide financière urgence Jewish Federations", desc: "Aide financière d'urgence via les chapitres locaux de Jewish Federations." },
+    es: { title: "Asistencia en Efectivo de Emergencia Jewish Federations", desc: "Asistencia en efectivo de emergencia a través de capítulos locales." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.211.org/services/veterans",
+  i18n: {
+    en: { title: "211 Veterans Services Directory", desc: "Local referrals for veterans needing financial or other support services." },
+    fr: { title: "Répertoire services vétérans 211", desc: "Orientation locale pour vétérans ayant besoin de soutien financier ou autre." },
+    es: { title: "Directorio de Servicios para Veteranos 211", desc: "Referencias locales para veteranos que necesitan apoyo financiero u otro." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.usa.gov/emergency-financial-assistance",
+  i18n: {
+    en: { title: "USA.gov Emergency Financial Assistance Guide", desc: "Government guide to finding emergency financial help programs." },
+    fr: { title: "Guide aide financière d'urgence USA.gov", desc: "Guide gouvernemental pour trouver des programmes d'aide financière d'urgence." },
+    es: { title: "Guía de Asistencia Financiera de Emergencia USA.gov", desc: "Guía del gobierno para encontrar programas de ayuda financiera de emergencia." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.feedthechildren.org",
+  i18n: {
+    en: { title: "Feed the Children", desc: "Emergency assistance including food, essentials, and disaster relief for families." },
+    fr: { title: "Feed the Children", desc: "Aide d'urgence incluant nourriture, produits essentiels et secours en cas de catastrophe." },
+    es: { title: "Feed the Children", desc: "Asistencia de emergencia que incluye comida, productos esenciales y ayuda en desastres." },
+  },
+},
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */

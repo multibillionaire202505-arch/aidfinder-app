@@ -6738,6 +6738,53 @@ const ALL = [
     es: { title: "Feed the Children", desc: "Asistencia de emergencia que incluye comida, productos esenciales y ayuda en desastres." },
   },
 },
+  // check-duplicates.js
+// Usage: node check-duplicates.js path/to/pages/index.js
+//
+// This script extracts every `link: "..."` value from the file and reports
+// any that appear more than once, along with how many times each duplicate
+// occurs. It does NOT modify your file — it only reports findings.
+
+const fs = require("fs");
+
+const filePath = process.argv[2];
+if (!filePath) {
+  console.error("Please provide the path to your index.js file.");
+  console.error("Example: node check-duplicates.js pages/index.js");
+  process.exit(1);
+}
+
+const content = fs.readFileSync(filePath, "utf8");
+
+// Matches lines like: link: "https://example.com",
+const linkRegex = /link:\s*"([^"]+)"/g;
+
+const seen = new Map(); // link -> count
+let match;
+let total = 0;
+
+while ((match = linkRegex.exec(content)) !== null) {
+  const link = match[1].trim().toLowerCase();
+  total++;
+  seen.set(link, (seen.get(link) || 0) + 1);
+}
+
+const duplicates = [...seen.entries()].filter(([, count]) => count > 1);
+
+console.log(`Total program entries found: ${total}`);
+console.log(`Unique links found: ${seen.size}`);
+console.log(`Duplicate links found: ${duplicates.length}\n`);
+
+if (duplicates.length > 0) {
+  console.log("=== Duplicates (link -> times it appears) ===");
+  duplicates
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([link, count]) => {
+      console.log(`${count}x  ${link}`);
+    });
+} else {
+  console.log("No duplicate links found. ✅");
+}
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */

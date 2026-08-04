@@ -6276,6 +6276,784 @@ const ALL = [
     es: { title: "Feed the Children", desc: "Asistencia de emergencia que incluye comida, productos esenciales y ayuda en desastres." },
   },
 },
+    // ===== PROGRAMS 751-850 =====
+
+// FOOD (15)
+{
+  category: "Food",
+  link: "https://www.foodforward.org",
+  i18n: {
+    en: { title: "Food Forward", desc: "Rescues fresh produce and distributes it to hunger relief agencies." },
+    fr: { title: "Food Forward", desc: "Récupère des produits frais et les distribue à des organismes de lutte contre la faim." },
+    es: { title: "Food Forward", desc: "Rescata productos frescos y los distribuye a agencias de ayuda contra el hambre." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.copia.co",
+  i18n: {
+    en: { title: "Copia Food Surplus Platform", desc: "Connects businesses with surplus food to local nonprofits fighting hunger." },
+    fr: { title: "Plateforme surplus alimentaire Copia", desc: "Relie les entreprises ayant des surplus alimentaires aux organismes locaux." },
+    es: { title: "Plataforma de Excedentes Copia", desc: "Conecta empresas con excedentes de comida a organizaciones locales contra el hambre." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.spoonerfoundation.org",
+  i18n: {
+    en: { title: "Spooner Foundation Nutrition Programs", desc: "Supports school meal and nutrition programs for children in need." },
+    fr: { title: "Programmes nutrition Spooner Foundation", desc: "Soutient les programmes de repas scolaires et nutrition pour enfants." },
+    es: { title: "Programas de Nutrición Spooner Foundation", desc: "Apoya programas de comidas escolares y nutrición para niños necesitados." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/farm-to-school",
+  i18n: {
+    en: { title: "USDA Farm to School Program", desc: "Connects schools with local farms to improve access to fresh food." },
+    fr: { title: "Programme Farm to School USDA", desc: "Relie les écoles aux fermes locales pour améliorer l'accès aux aliments frais." },
+    es: { title: "Programa Farm to School USDA", desc: "Conecta escuelas con granjas locales para mejorar el acceso a alimentos frescos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.acf.hhs.gov/ana/programs",
+  i18n: {
+    en: { title: "ANA Native American Nutrition Programs", desc: "Federal nutrition program support for Native American communities." },
+    fr: { title: "Programmes nutrition autochtone ANA", desc: "Soutien fédéral aux programmes de nutrition pour communautés autochtones." },
+    es: { title: "Programas de Nutrición Nativa Americana ANA", desc: "Apoyo federal a programas de nutrición para comunidades nativas americanas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.hungeractionalliance.org",
+  i18n: {
+    en: { title: "Hunger Action Alliance", desc: "Advocacy and resource network working to reduce hunger regionally." },
+    fr: { title: "Hunger Action Alliance", desc: "Réseau de plaidoyer et de ressources travaillant à réduire la faim régionalement." },
+    es: { title: "Hunger Action Alliance", desc: "Red de defensa y recursos que trabaja para reducir el hambre regionalmente." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/ofs/farm-fresh-schools",
+  i18n: {
+    en: { title: "Farm Fresh School Programs", desc: "Federal resources helping schools source fresh local produce for meals." },
+    fr: { title: "Programmes scolaires produits frais", desc: "Ressources fédérales aidant les écoles à s'approvisionner en produits frais locaux." },
+    es: { title: "Programas Escolares de Productos Frescos", desc: "Recursos federales que ayudan a las escuelas a obtener productos frescos locales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/farmers-market-directory",
+  i18n: {
+    en: { title: "USDA Farmers Market Directory", desc: "National directory of farmers markets, many accepting SNAP and WIC benefits." },
+    fr: { title: "Répertoire marchés fermiers USDA", desc: "Répertoire national des marchés fermiers, plusieurs acceptant SNAP et WIC." },
+    es: { title: "Directorio de Mercados de Agricultores USDA", desc: "Directorio nacional de mercados agrícolas, muchos aceptan SNAP y WIC." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/wic/wic-vendor",
+  i18n: {
+    en: { title: "WIC Approved Vendor Info", desc: "Information on where WIC benefits can be used to purchase approved foods." },
+    fr: { title: "Info fournisseurs approuvés WIC", desc: "Informations sur où utiliser les prestations WIC pour acheter des aliments approuvés." },
+    es: { title: "Información de Proveedores Aprobados WIC", desc: "Información sobre dónde usar los beneficios de WIC para comprar alimentos aprobados." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.harvestforall.org",
+  i18n: {
+    en: { title: "Harvest for All", desc: "Farmer-led hunger relief program donating food to local pantries." },
+    fr: { title: "Harvest for All", desc: "Programme de lutte contre la faim dirigé par des agriculteurs, donnant de la nourriture." },
+    es: { title: "Harvest for All", desc: "Programa liderado por agricultores que dona alimentos a despensas locales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.actionagainsthunger.org",
+  i18n: {
+    en: { title: "Action Against Hunger USA", desc: "Nutrition and hunger relief programs supporting vulnerable communities." },
+    fr: { title: "Action Against Hunger USA", desc: "Programmes de nutrition et lutte contre la faim pour communautés vulnérables." },
+    es: { title: "Action Against Hunger USA", desc: "Programas de nutrición y ayuda contra el hambre para comunidades vulnerables." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.savethechildren.org/us/what-we-do/hunger-nutrition",
+  i18n: {
+    en: { title: "Save the Children Hunger & Nutrition", desc: "Nutrition support programs for children in underserved US communities." },
+    fr: { title: "Faim et nutrition Save the Children", desc: "Programmes de soutien nutritionnel pour enfants dans les communautés défavorisées." },
+    es: { title: "Hambre y Nutrición Save the Children", desc: "Programas de apoyo nutricional para niños en comunidades desatendidas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.unitedwaywilming.org/food",
+  i18n: {
+    en: { title: "United Way Local Food Assistance", desc: "Local United Way chapters connecting families to food resources." },
+    fr: { title: "Aide alimentaire locale United Way", desc: "Chapitres locaux United Way reliant les familles aux ressources alimentaires." },
+    es: { title: "Asistencia Alimentaria Local United Way", desc: "Capítulos locales de United Way que conectan a familias con recursos alimentarios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties",
+  i18n: {
+    en: { title: "Food Pantries by County Directory", desc: "Search food pantries organized by county across the United States." },
+    fr: { title: "Répertoire garde-manger par comté", desc: "Recherchez des garde-manger organisés par comté à travers les États-Unis." },
+    es: { title: "Directorio de Despensas por Condado", desc: "Busque despensas de alimentos organizadas por condado en Estados Unidos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.usda.gov/media/press-releases/nutrition-assistance",
+  i18n: {
+    en: { title: "USDA Nutrition Assistance Press Updates", desc: "Official USDA press updates on nutrition assistance program changes." },
+    fr: { title: "Mises à jour presse assistance nutrition USDA", desc: "Mises à jour officielles de l'USDA sur les changements de programmes." },
+    es: { title: "Actualizaciones de Prensa de Asistencia Nutricional USDA", desc: "Actualizaciones oficiales del USDA sobre cambios en programas." },
+  },
+},
+
+// HEALTH (15)
+{
+  category: "Health",
+  link: "https://www.leukemia-lymphoma.org/patient-support",
+  i18n: {
+    en: { title: "Leukemia & Lymphoma Society Patient Support", desc: "Financial and emotional support for people with blood cancers." },
+    fr: { title: "Soutien patients Leukemia & Lymphoma Society", desc: "Soutien financier et émotionnel pour les personnes atteintes de cancers du sang." },
+    es: { title: "Apoyo a Pacientes Leukemia & Lymphoma Society", desc: "Apoyo financiero y emocional para personas con cánceres de la sangre." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cancercare.org",
+  i18n: {
+    en: { title: "CancerCare", desc: "Free counseling, support groups, and financial assistance for cancer patients." },
+    fr: { title: "CancerCare", desc: "Conseils gratuits, groupes de soutien et aide financière pour patients cancéreux." },
+    es: { title: "CancerCare", desc: "Consejería gratuita, grupos de apoyo y ayuda financiera para pacientes con cáncer." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cff.org",
+  i18n: {
+    en: { title: "Cystic Fibrosis Foundation", desc: "Support and financial assistance resources for people with cystic fibrosis." },
+    fr: { title: "Cystic Fibrosis Foundation", desc: "Ressources de soutien et d'aide financière pour personnes atteintes de fibrose kystique." },
+    es: { title: "Cystic Fibrosis Foundation", desc: "Recursos de apoyo y ayuda financiera para personas con fibrosis quística." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hemophilia.org",
+  i18n: {
+    en: { title: "National Hemophilia Foundation", desc: "Support and resources for people with bleeding disorders." },
+    fr: { title: "National Hemophilia Foundation", desc: "Soutien et ressources pour les personnes atteintes de troubles de la coagulation." },
+    es: { title: "National Hemophilia Foundation", desc: "Apoyo y recursos para personas con trastornos de coagulación." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.epilepsy.com/living-epilepsy/getting-help",
+  i18n: {
+    en: { title: "Epilepsy Foundation Support Resources", desc: "Support, education, and financial assistance for people with epilepsy." },
+    fr: { title: "Ressources soutien Epilepsy Foundation", desc: "Soutien, éducation et aide financière pour personnes épileptiques." },
+    es: { title: "Recursos de Apoyo Epilepsy Foundation", desc: "Apoyo, educación y ayuda financiera para personas con epilepsia." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.lupus.org/resources",
+  i18n: {
+    en: { title: "Lupus Foundation of America Resources", desc: "Support, education, and financial resources for people with lupus." },
+    fr: { title: "Ressources Lupus Foundation of America", desc: "Soutien, éducation et ressources financières pour personnes atteintes de lupus." },
+    es: { title: "Recursos Lupus Foundation of America", desc: "Apoyo, educación y recursos financieros para personas con lupus." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nationalmssociety.org/resources-support",
+  i18n: {
+    en: { title: "National MS Society Resources & Support", desc: "Support, education, and financial help for people with multiple sclerosis." },
+    fr: { title: "Ressources National MS Society", desc: "Soutien, éducation et aide financière pour personnes atteintes de sclérose en plaques." },
+    es: { title: "Recursos National MS Society", desc: "Apoyo, educación y ayuda financiera para personas con esclerosis múltiple." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.michaeljfox.org/patient-resources",
+  i18n: {
+    en: { title: "Michael J. Fox Foundation Patient Resources", desc: "Resources and support for people living with Parkinson's disease." },
+    fr: { title: "Ressources patients Michael J. Fox Foundation", desc: "Ressources et soutien pour personnes atteintes de la maladie de Parkinson." },
+    es: { title: "Recursos para Pacientes Michael J. Fox Foundation", desc: "Recursos y apoyo para personas con la enfermedad de Parkinson." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.alz.org/help-support",
+  i18n: {
+    en: { title: "Alzheimer's Association Help & Support", desc: "24/7 helpline and resources for families affected by Alzheimer's and dementia." },
+    fr: { title: "Aide et soutien Alzheimer's Association", desc: "Ligne d'assistance 24/7 et ressources pour familles touchées par Alzheimer." },
+    es: { title: "Ayuda y Apoyo Alzheimer's Association", desc: "Línea de ayuda 24/7 y recursos para familias afectadas por Alzheimer y demencia." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.parkinson.org/find-help",
+  i18n: {
+    en: { title: "Parkinson's Foundation Find Help", desc: "Helpline and resources for people living with Parkinson's disease." },
+    fr: { title: "Trouver de l'aide Parkinson's Foundation", desc: "Ligne d'assistance et ressources pour personnes atteintes de Parkinson." },
+    es: { title: "Encuentre Ayuda Parkinson's Foundation", desc: "Línea de ayuda y recursos para personas con la enfermedad de Parkinson." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.aidshealth.org",
+  i18n: {
+    en: { title: "AIDS Healthcare Foundation", desc: "HIV/AIDS medical care, testing, and support services." },
+    fr: { title: "AIDS Healthcare Foundation", desc: "Soins médicaux VIH/SIDA, dépistage et services de soutien." },
+    es: { title: "AIDS Healthcare Foundation", desc: "Atención médica de VIH/SIDA, pruebas y servicios de apoyo." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hiv.gov/hiv-basics/starting-hiv-care",
+  i18n: {
+    en: { title: "HIV.gov Care Starting Guide", desc: "Federal guide to starting HIV medical care and finding local providers." },
+    fr: { title: "Guide démarrage soins HIV.gov", desc: "Guide fédéral pour commencer les soins VIH et trouver des prestataires locaux." },
+    es: { title: "Guía de Inicio de Atención HIV.gov", desc: "Guía federal para comenzar la atención del VIH y encontrar proveedores locales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.plannedparenthood.org/learn/health-and-wellness",
+  i18n: {
+    en: { title: "Planned Parenthood Health & Wellness Info", desc: "Reproductive and general health information and services directory." },
+    fr: { title: "Info santé et bien-être Planned Parenthood", desc: "Répertoire d'informations et services de santé reproductive et générale." },
+    es: { title: "Información de Salud y Bienestar Planned Parenthood", desc: "Directorio de información y servicios de salud reproductiva y general." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.marchofdimes.org/find-a-hospital",
+  i18n: {
+    en: { title: "March of Dimes NICU Hospital Finder", desc: "Find hospitals with NICU services rated for premature infant care." },
+    fr: { title: "Recherche hôpitaux NICU March of Dimes", desc: "Trouvez des hôpitaux avec services NICU pour les soins aux prématurés." },
+    es: { title: "Buscador de Hospitales NICU March of Dimes", desc: "Encuentre hospitales con servicios NICU para cuidado de bebés prematuros." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.marchofdimes.org/find-support/nicu-family-support",
+  i18n: {
+    en: { title: "NICU Family Support Program", desc: "Support for families with babies in neonatal intensive care." },
+    fr: { title: "Programme soutien familial NICU", desc: "Soutien pour les familles avec bébés en soins intensifs néonatals." },
+    es: { title: "Programa de Apoyo Familiar NICU", desc: "Apoyo para familias con bebés en cuidados intensivos neonatales." },
+  },
+},
+
+// HOUSING (15)
+{
+  category: "Housing",
+  link: "https://www.projecthome.org",
+  i18n: {
+    en: { title: "Project HOME", desc: "Housing, healthcare, and education services for people experiencing homelessness." },
+    fr: { title: "Project HOME", desc: "Services de logement, santé et éducation pour personnes sans-abri." },
+    es: { title: "Project HOME", desc: "Servicios de vivienda, salud y educación para personas sin hogar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.pathwaystohousing.org",
+  i18n: {
+    en: { title: "Pathways to Housing", desc: "Housing First model programs providing permanent housing with support." },
+    fr: { title: "Pathways to Housing", desc: "Programmes de modèle Housing First offrant logement permanent avec soutien." },
+    es: { title: "Pathways to Housing", desc: "Programas del modelo Housing First que ofrecen vivienda permanente con apoyo." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hudexchange.info/programs/vawa/",
+  i18n: {
+    en: { title: "VAWA Housing Protections Info", desc: "Federal housing protections for survivors of domestic violence." },
+    fr: { title: "Info protections logement VAWA", desc: "Protections fédérales du logement pour survivants de violence domestique." },
+    es: { title: "Información de Protecciones de Vivienda VAWA", desc: "Protecciones federales de vivienda para sobrevivientes de violencia doméstica." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.domesticshelters.org",
+  i18n: {
+    en: { title: "DomesticShelters.org", desc: "Directory of domestic violence shelters and housing safety resources." },
+    fr: { title: "DomesticShelters.org", desc: "Répertoire de refuges pour violence domestique et ressources de sécurité." },
+    es: { title: "DomesticShelters.org", desc: "Directorio de refugios para violencia doméstica y recursos de seguridad." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.safehorizon.org/get-help/housing/",
+  i18n: {
+    en: { title: "Safe Horizon Housing Help", desc: "Housing safety resources for survivors of violence and abuse." },
+    fr: { title: "Aide logement Safe Horizon", desc: "Ressources de sécurité logement pour survivants de violence et abus." },
+    es: { title: "Ayuda de Vivienda Safe Horizon", desc: "Recursos de seguridad de vivienda para sobrevivientes de violencia y abuso." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/family_self_sufficiency_program",
+  i18n: {
+    en: { title: "HUD Family Self-Sufficiency Program", desc: "Program helping HUD-assisted families increase income and build savings." },
+    fr: { title: "Programme autosuffisance familiale HUD", desc: "Programme aidant les familles assistées par HUD à augmenter revenus et épargne." },
+    es: { title: "Programa de Autosuficiencia Familiar HUD", desc: "Programa que ayuda a familias asistidas por HUD a aumentar ingresos y ahorros." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hudexchange.info/programs/rad/",
+  i18n: {
+    en: { title: "Rental Assistance Demonstration Program Info", desc: "Federal program converting public housing to long-term affordable housing." },
+    fr: { title: "Info programme démonstration aide loyer", desc: "Programme fédéral convertissant le logement public en logement abordable durable." },
+    es: { title: "Información del Programa de Demostración de Asistencia de Alquiler", desc: "Programa federal que convierte vivienda pública en vivienda asequible a largo plazo." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.reversemortgage.org",
+  i18n: {
+    en: { title: "National Reverse Mortgage Lenders Association", desc: "Consumer education on reverse mortgages for eligible senior homeowners." },
+    fr: { title: "Association nationale prêteurs hypothèque inversée", desc: "Éducation consommateur sur les hypothèques inversées pour aînés propriétaires." },
+    es: { title: "Asociación Nacional de Prestamistas de Hipoteca Inversa", desc: "Educación al consumidor sobre hipotecas inversas para propietarios mayores." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.consumerfinance.gov/consumer-tools/reverse-mortgages/",
+  i18n: {
+    en: { title: "CFPB Reverse Mortgage Guidance", desc: "Consumer protection guidance on reverse mortgage products for seniors." },
+    fr: { title: "Conseils hypothèque inversée CFPB", desc: "Conseils de protection consommateur sur les hypothèques inversées pour aînés." },
+    es: { title: "Guía de Hipotecas Inversas CFPB", desc: "Orientación de protección al consumidor sobre hipotecas inversas para mayores." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/manufactured_home_communities",
+  i18n: {
+    en: { title: "HUD Manufactured Home Community Info", desc: "Federal information on rights and resources for manufactured home community residents." },
+    fr: { title: "Info communautés maisons préfabriquées HUD", desc: "Informations fédérales sur droits et ressources pour résidents de communautés préfabriquées." },
+    es: { title: "Información de Comunidades de Vivienda Prefabricada HUD", desc: "Información federal sobre derechos y recursos para residentes de comunidades prefabricadas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.manufacturedhousing.org",
+  i18n: {
+    en: { title: "Manufactured Housing Institute Resources", desc: "Consumer resources and information about manufactured housing options." },
+    fr: { title: "Ressources Manufactured Housing Institute", desc: "Ressources consommateurs et informations sur les options de logement préfabriqué." },
+    es: { title: "Recursos Manufactured Housing Institute", desc: "Recursos del consumidor e información sobre opciones de vivienda prefabricada." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/rental_assistance/localofficesearch",
+  i18n: {
+    en: { title: "HUD Local Office Search", desc: "Find your local HUD field office for rental assistance program help." },
+    fr: { title: "Recherche bureau local HUD", desc: "Trouvez votre bureau local HUD pour l'aide aux programmes locatifs." },
+    es: { title: "Búsqueda de Oficina Local HUD", desc: "Encuentre su oficina local de HUD para ayuda con programas de alquiler." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.dav.org/veterans/resources/housing/",
+  i18n: {
+    en: { title: "Disabled American Veterans Housing Resources", desc: "Housing assistance information for disabled veterans." },
+    fr: { title: "Ressources logement Disabled American Veterans", desc: "Informations d'aide au logement pour vétérans handicapés." },
+    es: { title: "Recursos de Vivienda Disabled American Veterans", desc: "Información de asistencia de vivienda para veteranos con discapacidad." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.homesforourtroops.org",
+  i18n: {
+    en: { title: "Homes for Our Troops", desc: "Builds specially adapted homes for severely injured post-9/11 veterans." },
+    fr: { title: "Homes for Our Troops", desc: "Construit des maisons spécialement adaptées pour vétérans gravement blessés." },
+    es: { title: "Homes for Our Troops", desc: "Construye casas especialmente adaptadas para veteranos gravemente heridos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.operationfinallybatmen.org",
+  i18n: {
+    en: { title: "Operation FINALLY HOME", desc: "Provides mortgage-free homes for wounded veterans and Gold Star families." },
+    fr: { title: "Operation FINALLY HOME", desc: "Fournit des maisons sans hypothèque pour vétérans blessés et familles Gold Star." },
+    es: { title: "Operation FINALLY HOME", desc: "Proporciona casas sin hipoteca para veteranos heridos y familias Gold Star." },
+  },
+},
+
+// UTILITIES (12)
+{
+  category: "Utilities",
+  link: "https://www.rd.usda.gov/programs-services/community-facilities/community-facilities-direct-loan-grant-program",
+  i18n: {
+    en: { title: "Community Facilities Direct Loan & Grant Program", desc: "Funding for essential community facilities including water and utility systems." },
+    fr: { title: "Programme prêt et subvention installations communautaires", desc: "Financement des installations communautaires essentielles incluant eau et services." },
+    es: { title: "Programa de Préstamos y Subvenciones para Instalaciones Comunitarias", desc: "Financiamiento para instalaciones comunitarias esenciales incluyendo agua y servicios." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/dwsrf",
+  i18n: {
+    en: { title: "EPA Drinking Water State Revolving Fund", desc: "Federal funding supporting local drinking water infrastructure improvements." },
+    fr: { title: "Fonds renouvelable eau potable EPA", desc: "Financement fédéral soutenant les améliorations d'infrastructure d'eau potable locale." },
+    es: { title: "Fondo Rotatorio Estatal de Agua Potable EPA", desc: "Financiamiento federal que apoya mejoras de infraestructura de agua potable local." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/cwsrf",
+  i18n: {
+    en: { title: "EPA Clean Water State Revolving Fund", desc: "Federal funding supporting local wastewater infrastructure improvements." },
+    fr: { title: "Fonds renouvelable eau propre EPA", desc: "Financement fédéral soutenant les améliorations d'infrastructure des eaux usées." },
+    es: { title: "Fondo Rotatorio Estatal de Agua Limpia EPA", desc: "Financiamiento federal que apoya mejoras de infraestructura de aguas residuales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.usa.gov/help-with-trash-recycling",
+  i18n: {
+    en: { title: "Help With Trash and Recycling Costs", desc: "Government guide to local waste service assistance for low-income households." },
+    fr: { title: "Aide coûts déchets et recyclage", desc: "Guide gouvernemental pour l'aide aux services de déchets pour ménages à faible revenu." },
+    es: { title: "Ayuda con Costos de Basura y Reciclaje", desc: "Guía del gobierno sobre asistencia de servicios de residuos para hogares de bajos ingresos." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.211.org/services/internet",
+  i18n: {
+    en: { title: "211 Internet Assistance Directory", desc: "Local internet access assistance referrals through the 211 network." },
+    fr: { title: "Répertoire aide Internet 211", desc: "Orientation vers l'aide à l'accès Internet via le réseau 211." },
+    es: { title: "Directorio de Asistencia de Internet 211", desc: "Referencias de ayuda de acceso a internet a través de la red 211." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.tmobile.com/brand/project-10million",
+  i18n: {
+    en: { title: "T-Mobile Project 10Million", desc: "Free or discounted internet hotspots for eligible school-connected households." },
+    fr: { title: "T-Mobile Project 10Million", desc: "Points d'accès Internet gratuits ou réduits pour ménages scolaires admissibles." },
+    es: { title: "T-Mobile Project 10Million", desc: "Puntos de acceso a internet gratuitos o con descuento para hogares escolares elegibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.usa.gov/help-with-phone-bills",
+  i18n: {
+    en: { title: "Help With Phone Bills Guide", desc: "Government guide to phone service discount programs for eligible households." },
+    fr: { title: "Guide aide factures téléphone", desc: "Guide gouvernemental pour les programmes de réduction téléphone pour ménages admissibles." },
+    es: { title: "Guía de Ayuda con Facturas de Teléfono", desc: "Guía del gobierno sobre programas de descuento telefónico para hogares elegibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.consumer.ftc.gov/articles/how-avoid-scam",
+  i18n: {
+    en: { title: "FTC Scam Avoidance for Utility Customers", desc: "Guidance for utility customers to recognize and avoid common scams." },
+    fr: { title: "Éviter les arnaques FTC pour clients services publics", desc: "Conseils pour reconnaître et éviter les arnaques courantes." },
+    es: { title: "Evitar Estafas FTC para Clientes de Servicios", desc: "Orientación para reconocer y evitar estafas comunes de servicios." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/scep/wap/wap-network",
+  i18n: {
+    en: { title: "Weatherization Assistance Program Network", desc: "Network of local agencies delivering weatherization services." },
+    fr: { title: "Réseau programme d'aide à l'isolation", desc: "Réseau d'agences locales offrant des services d'isolation." },
+    es: { title: "Red del Programa de Asistencia de Climatización", desc: "Red de agencias locales que brindan servicios de climatización." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.rd.usda.gov/programs-services/water-environmental-programs/rural-alaska-village-grants",
+  i18n: {
+    en: { title: "Rural Alaska Village Grants", desc: "Funding for water and sanitation infrastructure in remote Alaska villages." },
+    fr: { title: "Subventions villages ruraux Alaska", desc: "Financement pour infrastructure d'eau et assainissement dans villages reculés d'Alaska." },
+    es: { title: "Subvenciones para Aldeas Rurales de Alaska", desc: "Financiamiento para infraestructura de agua y saneamiento en aldeas remotas de Alaska." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/eere/slsc/tribal-energy-programs",
+  i18n: {
+    en: { title: "Tribal Energy Programs", desc: "Federal energy program resources specifically for Tribal communities." },
+    fr: { title: "Programmes énergie tribale", desc: "Ressources de programmes énergétiques fédéraux spécifiquement pour communautés tribales." },
+    es: { title: "Programas de Energía Tribal", desc: "Recursos de programas de energía federal específicamente para comunidades tribales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/tribal-drinking-water",
+  i18n: {
+    en: { title: "EPA Tribal Drinking Water Programs", desc: "Federal drinking water resources and funding for Tribal communities." },
+    fr: { title: "Programmes eau potable tribale EPA", desc: "Ressources et financement fédéraux d'eau potable pour communautés tribales." },
+    es: { title: "Programas de Agua Potable Tribal EPA", desc: "Recursos y financiamiento federal de agua potable para comunidades tribales." },
+  },
+},
+
+// EDUCATION (13)
+{
+  category: "Education",
+  link: "https://www.jointbaseonline.org",
+  i18n: {
+    en: { title: "Military Spouse Education Resources", desc: "Education and career resources tailored for military spouses." },
+    fr: { title: "Ressources éducation conjoints militaires", desc: "Ressources éducatives et professionnelles pour conjoints de militaires." },
+    es: { title: "Recursos Educativos para Cónyuges Militares", desc: "Recursos educativos y profesionales para cónyuges de militares." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.msepjobs.militaryonesource.mil",
+  i18n: {
+    en: { title: "Military Spouse Employment Partnership", desc: "Career and education resources connecting military spouses with employers." },
+    fr: { title: "Partenariat emploi conjoints militaires", desc: "Ressources de carrière et d'éducation reliant conjoints militaires et employeurs." },
+    es: { title: "Sociedad de Empleo para Cónyuges Militares", desc: "Recursos de carrera y educación que conectan a cónyuges militares con empleadores." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.militaryonesource.mil/education-employment/",
+  i18n: {
+    en: { title: "Military OneSource Education & Employment", desc: "Education and employment resources for military families." },
+    fr: { title: "Éducation et emploi Military OneSource", desc: "Ressources éducatives et professionnelles pour familles militaires." },
+    es: { title: "Educación y Empleo Military OneSource", desc: "Recursos educativos y de empleo para familias militares." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.operationhomefront.org/scholarships",
+  i18n: {
+    en: { title: "Operation Homefront Scholarships", desc: "Scholarships for military children and spouses." },
+    fr: { title: "Bourses Operation Homefront", desc: "Bourses pour enfants et conjoints de militaires." },
+    es: { title: "Becas Operation Homefront", desc: "Becas para hijos y cónyuges de militares." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.fisherhouse.org/programs/scholarships/",
+  i18n: {
+    en: { title: "Fisher House Foundation Scholarships", desc: "Scholarship programs for military and veteran family members." },
+    fr: { title: "Bourses Fisher House Foundation", desc: "Programmes de bourses pour membres de familles militaires et vétérans." },
+    es: { title: "Becas Fisher House Foundation", desc: "Programas de becas para miembros de familias militares y de veteranos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.pat-tillman.org/scholars",
+  i18n: {
+    en: { title: "Pat Tillman Foundation Scholars", desc: "Scholarships for veterans and military spouses pursuing higher education." },
+    fr: { title: "Boursiers Pat Tillman Foundation", desc: "Bourses pour vétérans et conjoints militaires poursuivant des études supérieures." },
+    es: { title: "Becarios Pat Tillman Foundation", desc: "Becas para veteranos y cónyuges militares que buscan educación superior." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.foldsofhonor.org",
+  i18n: {
+    en: { title: "Folds of Honor", desc: "Scholarships for spouses and children of fallen or disabled service members." },
+    fr: { title: "Folds of Honor", desc: "Bourses pour conjoints et enfants de militaires tombés ou handicapés." },
+    es: { title: "Folds of Honor", desc: "Becas para cónyuges e hijos de militares caídos o discapacitados." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.acs.org/education/students/students-with-disabilities.html",
+  i18n: {
+    en: { title: "STEM Education Resources for Students with Disabilities", desc: "Resources supporting STEM education access for students with disabilities." },
+    fr: { title: "Ressources STEM pour élèves handicapés", desc: "Ressources soutenant l'accès à l'éducation STEM pour élèves handicapés." },
+    es: { title: "Recursos STEM para Estudiantes con Discapacidades", desc: "Recursos que apoyan el acceso a educación STEM para estudiantes con discapacidades." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.thinkcollege.net",
+  i18n: {
+    en: { title: "Think College", desc: "Directory of college programs for students with intellectual disabilities." },
+    fr: { title: "Think College", desc: "Répertoire de programmes collégiaux pour étudiants avec handicap intellectuel." },
+    es: { title: "Think College", desc: "Directorio de programas universitarios para estudiantes con discapacidad intelectual." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.heath.gwu.edu",
+  i18n: {
+    en: { title: "HEATH Resource Center", desc: "Postsecondary education resources for students with disabilities." },
+    fr: { title: "HEATH Resource Center", desc: "Ressources d'éducation postsecondaire pour étudiants handicapés." },
+    es: { title: "HEATH Resource Center", desc: "Recursos de educación postsecundaria para estudiantes con discapacidades." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nasdse.org",
+  i18n: {
+    en: { title: "National Association of State Directors of Special Education", desc: "Special education policy resources and state contact directory." },
+    fr: { title: "Association nationale directeurs éducation spécialisée", desc: "Ressources politiques et répertoire de contacts d'État pour l'éducation spécialisée." },
+    es: { title: "Asociación Nacional de Directores Estatales de Educación Especial", desc: "Recursos de política y directorio de contactos estatales para educación especial." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.understood.org",
+  i18n: {
+    en: { title: "Understood.org", desc: "Resources for parents of children with learning and thinking differences." },
+    fr: { title: "Understood.org", desc: "Ressources pour parents d'enfants ayant des différences d'apprentissage." },
+    es: { title: "Understood.org", desc: "Recursos para padres de niños con diferencias de aprendizaje y pensamiento." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.wrightslaw.com",
+  i18n: {
+    en: { title: "Wrightslaw Special Education Law", desc: "Special education law and advocacy resources for parents and educators." },
+    fr: { title: "Droit éducation spécialisée Wrightslaw", desc: "Ressources juridiques et de plaidoyer en éducation spécialisée pour parents." },
+    es: { title: "Ley de Educación Especial Wrightslaw", desc: "Recursos legales y de defensa en educación especial para padres y educadores." },
+  },
+},
+
+// INCOME (15)
+{
+  category: "Income",
+  link: "https://www.va.gov/family-and-caregiver-benefits/",
+  i18n: {
+    en: { title: "VA Family and Caregiver Benefits", desc: "Financial and support benefits for families and caregivers of veterans." },
+    fr: { title: "Prestations famille et aidants VA", desc: "Prestations financières et de soutien pour familles et aidants de vétérans." },
+    es: { title: "Beneficios Familiares y de Cuidadores VA", desc: "Beneficios financieros y de apoyo para familias y cuidadores de veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.militaryonesource.mil/financial-legal/",
+  i18n: {
+    en: { title: "Military OneSource Financial & Legal Resources", desc: "Financial counseling and legal resources for military families." },
+    fr: { title: "Ressources financières et juridiques Military OneSource", desc: "Conseils financiers et ressources juridiques pour familles militaires." },
+    es: { title: "Recursos Financieros y Legales Military OneSource", desc: "Asesoría financiera y recursos legales para familias militares." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.usa4militaryfamilies.dod.mil",
+  i18n: {
+    en: { title: "USA4 Military Families", desc: "State-by-state resources supporting military family relocation and benefits." },
+    fr: { title: "USA4 Military Families", desc: "Ressources par État soutenant la relocalisation et prestations des familles militaires." },
+    es: { title: "USA4 Military Families", desc: "Recursos estado por estado que apoyan la reubicación y beneficios de familias militares." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.nmfa.org",
+  i18n: {
+    en: { title: "National Military Family Association", desc: "Advocacy and financial support resources for military families." },
+    fr: { title: "National Military Family Association", desc: "Ressources de plaidoyer et soutien financier pour familles militaires." },
+    es: { title: "National Military Family Association", desc: "Recursos de defensa y apoyo financiero para familias militares." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.navyleague.org",
+  i18n: {
+    en: { title: "Navy League Financial Assistance", desc: "Financial support programs for Navy and Coast Guard families." },
+    fr: { title: "Aide financière Navy League", desc: "Programmes de soutien financier pour familles de la Marine et Garde côtière." },
+    es: { title: "Asistencia Financiera Navy League", desc: "Programas de apoyo financiero para familias de la Marina y Guardia Costera." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.afas.org",
+  i18n: {
+    en: { title: "Air Force Aid Society", desc: "Emergency financial assistance and education support for Air Force families." },
+    fr: { title: "Air Force Aid Society", desc: "Aide financière d'urgence et soutien éducatif pour familles de l'Air Force." },
+    es: { title: "Air Force Aid Society", desc: "Asistencia financiera de emergencia y apoyo educativo para familias de la Fuerza Aérea." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.aerhq.org",
+  i18n: {
+    en: { title: "Army Emergency Relief", desc: "Emergency financial assistance for soldiers and their families." },
+    fr: { title: "Army Emergency Relief", desc: "Aide financière d'urgence pour soldats et leurs familles." },
+    es: { title: "Army Emergency Relief", desc: "Asistencia financiera de emergencia para soldados y sus familias." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.nmcrs.org",
+  i18n: {
+    en: { title: "Navy-Marine Corps Relief Society", desc: "Financial assistance, education, and counseling for Navy and Marine families." },
+    fr: { title: "Navy-Marine Corps Relief Society", desc: "Aide financière, éducation et conseil pour familles de la Marine et des Marines." },
+    es: { title: "Navy-Marine Corps Relief Society", desc: "Asistencia financiera, educación y consejería para familias de la Marina y Marines." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.coastguardfoundation.org",
+  i18n: {
+    en: { title: "Coast Guard Foundation", desc: "Financial support and scholarships for Coast Guard members and families." },
+    fr: { title: "Coast Guard Foundation", desc: "Soutien financier et bourses pour membres de la Garde côtière et familles." },
+    es: { title: "Coast Guard Foundation", desc: "Apoyo financiero y becas para miembros de la Guardia Costera y familias." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.disabledveterans.org",
+  i18n: {
+    en: { title: "Disabled Veterans National Foundation", desc: "Financial and support services for disabled veterans." },
+    fr: { title: "Fondation nationale vétérans handicapés", desc: "Services financiers et de soutien pour vétérans handicapés." },
+    es: { title: "Fundación Nacional de Veteranos Discapacitados", desc: "Servicios financieros y de apoyo para veteranos discapacitados." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.wwp.org",
+  i18n: {
+    en: { title: "Wounded Warrior Project", desc: "Comprehensive support for post-9/11 injured veterans and their families." },
+    fr: { title: "Wounded Warrior Project", desc: "Soutien complet pour vétérans blessés après le 11 septembre et leurs familles." },
+    es: { title: "Wounded Warrior Project", desc: "Apoyo integral para veteranos heridos post-11 de septiembre y sus familias." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.iava.org",
+  i18n: {
+    en: { title: "Iraq and Afghanistan Veterans of America", desc: "Advocacy and resource connections for post-9/11 veterans." },
+    fr: { title: "Iraq and Afghanistan Veterans of America", desc: "Plaidoyer et connexions de ressources pour vétérans post-11 septembre." },
+    es: { title: "Iraq and Afghanistan Veterans of America", desc: "Defensa y conexiones de recursos para veteranos post-11 de septiembre." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.hirevets.gov",
+  i18n: {
+    en: { title: "HIRE Vets Medallion Program", desc: "Recognizes employers committed to hiring veterans; helpful for veteran job seekers." },
+    fr: { title: "Programme médaillon HIRE Vets", desc: "Reconnaît les employeurs engagés à embaucher des vétérans." },
+    es: { title: "Programa de Medalla HIRE Vets", desc: "Reconoce a empleadores comprometidos con contratar veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.taonline.com",
+  i18n: {
+    en: { title: "Transition Assistance Online", desc: "Job search resources specifically for transitioning service members." },
+    fr: { title: "Transition Assistance Online", desc: "Ressources de recherche d'emploi spécifiquement pour militaires en transition." },
+    es: { title: "Transition Assistance Online", desc: "Recursos de búsqueda de empleo específicamente para militares en transición." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.hireheroesusa.org",
+  i18n: {
+    en: { title: "Hire Heroes USA", desc: "Free career coaching and job placement services for veterans and spouses." },
+    fr: { title: "Hire Heroes USA", desc: "Coaching de carrière gratuit et services de placement pour vétérans et conjoints." },
+    es: { title: "Hire Heroes USA", desc: "Asesoría profesional gratuita y servicios de colocación laboral para veteranos y cónyuges." },
+  },
+},
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */

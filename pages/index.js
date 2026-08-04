@@ -5349,6 +5349,7 @@ const ALL = [
     es: { title: "Herramientas de Presupuesto Gratuitas", desc: "Herramientas gratuitas para rastrear gastos y crear un presupuesto." },
   },
 },
+  
   // ===== PROGRAMS 551-600 =====
 
 // FOOD (8)
@@ -6276,6 +6277,785 @@ const ALL = [
     es: { title: "Feed the Children", desc: "Asistencia de emergencia que incluye comida, productos esenciales y ayuda en desastres." },
   },
 },
+    // ===== PROGRAMS 651-750 =====
+
+// FOOD (15)
+{
+  category: "Food",
+  link: "https://www.foodbankcentraleastern.org",
+  i18n: {
+    en: { title: "Regional Food Bank Directory Example", desc: "Example of a regional food bank offering distribution and pantry services." },
+    fr: { title: "Exemple répertoire banque alimentaire régionale", desc: "Exemple de banque alimentaire régionale offrant distribution et services de garde-manger." },
+    es: { title: "Ejemplo de Directorio de Banco de Alimentos Regional", desc: "Ejemplo de banco de alimentos regional que ofrece distribución y servicios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.secondharvest.org",
+  i18n: {
+    en: { title: "Second Harvest Food Bank Network", desc: "Network of food banks providing meals and groceries to communities in need." },
+    fr: { title: "Réseau Second Harvest", desc: "Réseau de banques alimentaires fournissant repas et provisions aux communautés." },
+    es: { title: "Red Second Harvest", desc: "Red de bancos de alimentos que proporciona comidas y comestibles a comunidades necesitadas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/st/food-stamps",
+  i18n: {
+    en: { title: "Food Pantries SNAP State Guide", desc: "State-by-state guide to SNAP food assistance application info." },
+    fr: { title: "Guide SNAP par État Food Pantries", desc: "Guide État par État pour les informations de demande d'aide alimentaire SNAP." },
+    es: { title: "Guía Estatal de SNAP Food Pantries", desc: "Guía estado por estado para información de solicitud de asistencia alimentaria SNAP." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.acf.hhs.gov/ocs/programs/community-services-block-grant",
+  i18n: {
+    en: { title: "Community Services Block Grant", desc: "Federal grant funding local agencies that provide food and basic needs help." },
+    fr: { title: "Subvention services communautaires en bloc", desc: "Subvention fédérale finançant les agences locales offrant nourriture et besoins de base." },
+    es: { title: "Subvención en Bloque de Servicios Comunitarios", desc: "Subvención federal que financia agencias locales que ofrecen comida y necesidades básicas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.growfoodgrowhope.org",
+  i18n: {
+    en: { title: "Grow Food Grow Hope", desc: "Community garden program teaching families to grow their own produce." },
+    fr: { title: "Grow Food Grow Hope", desc: "Programme de jardin communautaire enseignant aux familles à cultiver leurs produits." },
+    es: { title: "Grow Food Grow Hope", desc: "Programa de jardín comunitario que enseña a familias a cultivar sus propios productos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.plentifulapp.com",
+  i18n: {
+    en: { title: "Plentiful App", desc: "App to find and reserve appointments at local food pantries." },
+    fr: { title: "Application Plentiful", desc: "Application pour trouver et réserver des rendez-vous dans les garde-manger locaux." },
+    es: { title: "Aplicación Plentiful", desc: "Aplicación para encontrar y reservar citas en despensas de alimentos locales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.freshtrak.com",
+  i18n: {
+    en: { title: "FreshTrak Food Pantry Finder", desc: "Search tool for food pantries and their operating schedules." },
+    fr: { title: "Recherche garde-manger FreshTrak", desc: "Outil de recherche pour les garde-manger et leurs horaires." },
+    es: { title: "Buscador de Despensas FreshTrak", desc: "Herramienta de búsqueda para despensas de alimentos y sus horarios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.givefreely.io",
+  i18n: {
+    en: { title: "GiveFreely Community Resource Sharing", desc: "Platform connecting community members with free food and essentials." },
+    fr: { title: "Partage de ressources GiveFreely", desc: "Plateforme reliant les membres de la communauté à la nourriture gratuite." },
+    es: { title: "Compartir Recursos GiveFreely", desc: "Plataforma que conecta a miembros de la comunidad con comida gratuita." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.brownfieldnews.com/nutrition",
+  i18n: {
+    en: { title: "Rural Nutrition Program News", desc: "News and updates related to rural nutrition assistance programs." },
+    fr: { title: "Actualités programme nutrition rural", desc: "Actualités liées aux programmes d'aide nutritionnelle rurale." },
+    es: { title: "Noticias del Programa de Nutrición Rural", desc: "Noticias relacionadas con programas de asistencia nutricional rural." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpolicy.org",
+  i18n: {
+    en: { title: "Food Policy Networks", desc: "Local and regional food policy council directory and resources." },
+    fr: { title: "Réseaux de politique alimentaire", desc: "Répertoire et ressources des conseils de politique alimentaire locaux." },
+    es: { title: "Redes de Política Alimentaria", desc: "Directorio y recursos de consejos de política alimentaria locales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.projectbread.org",
+  i18n: {
+    en: { title: "Project Bread FoodSource Hotline", desc: "Hotline connecting people to local food resources and SNAP application help." },
+    fr: { title: "Ligne FoodSource Project Bread", desc: "Ligne reliant les personnes aux ressources alimentaires locales et à l'aide SNAP." },
+    es: { title: "Línea FoodSource Project Bread", desc: "Línea que conecta a personas con recursos alimentarios locales y ayuda con SNAP." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.communityfoodshare.org",
+  i18n: {
+    en: { title: "Community Food Share", desc: "Regional food bank offering food distribution and mobile pantry services." },
+    fr: { title: "Community Food Share", desc: "Banque alimentaire régionale offrant distribution et services de garde-manger mobiles." },
+    es: { title: "Community Food Share", desc: "Banco de alimentos regional que ofrece distribución y servicios de despensa móvil." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodshare.org",
+  i18n: {
+    en: { title: "FoodShare Network", desc: "Regional hunger relief network coordinating food banks and pantries." },
+    fr: { title: "Réseau FoodShare", desc: "Réseau régional de lutte contre la faim coordonnant banques alimentaires et garde-manger." },
+    es: { title: "Red FoodShare", desc: "Red regional de ayuda contra el hambre que coordina bancos de alimentos y despensas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/disaster",
+  i18n: {
+    en: { title: "USDA Disaster Nutrition Assistance", desc: "Federal food assistance programs activated during declared disasters." },
+    fr: { title: "Aide nutritionnelle catastrophe USDA", desc: "Programmes fédéraux d'aide alimentaire activés lors de catastrophes déclarées." },
+    es: { title: "Asistencia Nutricional por Desastre USDA", desc: "Programas federales de asistencia alimentaria activados durante desastres declarados." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/d-snap",
+  i18n: {
+    en: { title: "D-SNAP Disaster Food Assistance", desc: "Temporary food assistance for households affected by a declared disaster." },
+    fr: { title: "D-SNAP aide alimentaire catastrophe", desc: "Aide alimentaire temporaire pour les ménages touchés par une catastrophe déclarée." },
+    es: { title: "D-SNAP Asistencia Alimentaria por Desastre", desc: "Asistencia alimentaria temporal para hogares afectados por un desastre declarado." },
+  },
+},
+
+// HEALTH (15)
+{
+  category: "Health",
+  link: "https://www.marchofdimes.org/find-support",
+  i18n: {
+    en: { title: "March of Dimes Family Support", desc: "Resources for maternal and infant health, including NICU family support." },
+    fr: { title: "Soutien familial March of Dimes", desc: "Ressources pour la santé maternelle et infantile, y compris le soutien en NICU." },
+    es: { title: "Apoyo Familiar March of Dimes", desc: "Recursos para la salud materna e infantil, incluido el apoyo en UCIN." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.stjude.org/patient-resources.html",
+  i18n: {
+    en: { title: "St. Jude Patient Resources", desc: "Support resources for families of children being treated for cancer and other diseases." },
+    fr: { title: "Ressources patients St. Jude", desc: "Ressources de soutien pour les familles d'enfants traités pour cancer et autres maladies." },
+    es: { title: "Recursos para Pacientes St. Jude", desc: "Recursos de apoyo para familias de niños tratados por cáncer y otras enfermedades." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ronaldmcdonaldhouse.org",
+  i18n: {
+    en: { title: "Ronald McDonald House Charities", desc: "Housing and support for families of hospitalized children." },
+    fr: { title: "Fondation Manoir Ronald McDonald", desc: "Logement et soutien pour les familles d'enfants hospitalisés." },
+    es: { title: "Casa Ronald McDonald", desc: "Vivienda y apoyo para familias de niños hospitalizados." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.caringvoice.org",
+  i18n: {
+    en: { title: "Caring Voice Coalition", desc: "Financial and emotional support for people with chronic or rare diseases." },
+    fr: { title: "Caring Voice Coalition", desc: "Soutien financier et émotionnel pour les personnes atteintes de maladies chroniques ou rares." },
+    es: { title: "Caring Voice Coalition", desc: "Apoyo financiero y emocional para personas con enfermedades crónicas o raras." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.patientadvocate.org",
+  i18n: {
+    en: { title: "Patient Advocate Foundation", desc: "Case management and financial aid for people with chronic illnesses." },
+    fr: { title: "Patient Advocate Foundation", desc: "Gestion de cas et aide financière pour les personnes atteintes de maladies chroniques." },
+    es: { title: "Patient Advocate Foundation", desc: "Gestión de casos y ayuda financiera para personas con enfermedades crónicas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hillburtonobligated.hrsa.gov",
+  i18n: {
+    en: { title: "Hill-Burton Facility Search", desc: "Search tool for facilities obligated to provide free or reduced-cost care." },
+    fr: { title: "Recherche installations Hill-Burton", desc: "Outil de recherche pour les installations tenues d'offrir des soins gratuits ou réduits." },
+    es: { title: "Búsqueda de Instalaciones Hill-Burton", desc: "Herramienta de búsqueda para instalaciones obligadas a ofrecer atención gratuita o reducida." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.patientaccessnetwork.org",
+  i18n: {
+    en: { title: "Patient Access Network Foundation", desc: "Copay assistance for people with chronic and life-threatening illnesses." },
+    fr: { title: "Patient Access Network Foundation", desc: "Aide aux quotes-parts pour les personnes atteintes de maladies chroniques et graves." },
+    es: { title: "Patient Access Network Foundation", desc: "Ayuda con copagos para personas con enfermedades crónicas y graves." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.copays.org",
+  i18n: {
+    en: { title: "Patient Advocate Foundation Co-Pay Relief", desc: "Financial assistance for prescription drug co-pays for eligible patients." },
+    fr: { title: "Aide quote-part Patient Advocate Foundation", desc: "Aide financière pour les quotes-parts de médicaments pour patients admissibles." },
+    es: { title: "Alivio de Copagos Patient Advocate Foundation", desc: "Ayuda financiera para copagos de medicamentos para pacientes elegibles." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.healthwellfoundation.org",
+  i18n: {
+    en: { title: "HealthWell Foundation", desc: "Financial assistance for insurance premiums, copays, and coinsurance." },
+    fr: { title: "HealthWell Foundation", desc: "Aide financière pour les primes d'assurance, quotes-parts et coassurance." },
+    es: { title: "HealthWell Foundation", desc: "Ayuda financiera para primas de seguro, copagos y coseguro." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.goodpillhealth.com",
+  i18n: {
+    en: { title: "GoodPill Health Discount Resources", desc: "Discount and assistance resources to lower prescription costs." },
+    fr: { title: "Ressources rabais GoodPill Health", desc: "Ressources de rabais et d'aide pour réduire les coûts de médicaments." },
+    es: { title: "Recursos de Descuento GoodPill Health", desc: "Recursos de descuento y ayuda para reducir costos de medicamentos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.singlecare.com",
+  i18n: {
+    en: { title: "SingleCare Prescription Discounts", desc: "Free prescription discount card accepted at most major pharmacies." },
+    fr: { title: "Rabais ordonnance SingleCare", desc: "Carte de rabais gratuite acceptée dans la plupart des grandes pharmacies." },
+    es: { title: "Descuentos de Recetas SingleCare", desc: "Tarjeta de descuento gratuita aceptada en la mayoría de las farmacias principales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.wellrx.com",
+  i18n: {
+    en: { title: "WellRx Prescription Savings", desc: "Free prescription savings card to lower medication costs." },
+    fr: { title: "Économies ordonnance WellRx", desc: "Carte gratuite d'économies pour réduire les coûts de médicaments." },
+    es: { title: "Ahorros de Recetas WellRx", desc: "Tarjeta gratuita de ahorro para reducir el costo de medicamentos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.blinkhealth.com",
+  i18n: {
+    en: { title: "Blink Health", desc: "Prescription discount platform helping lower out-of-pocket medication costs." },
+    fr: { title: "Blink Health", desc: "Plateforme de rabais sur ordonnance aidant à réduire les coûts de médicaments." },
+    es: { title: "Blink Health", desc: "Plataforma de descuento de recetas que ayuda a reducir los costos de medicamentos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.211.org/services/mental-health",
+  i18n: {
+    en: { title: "211 Mental Health Services Directory", desc: "Local mental health service referrals through the 211 network." },
+    fr: { title: "Répertoire santé mentale 211", desc: "Orientation vers services de santé mentale locaux via le réseau 211." },
+    es: { title: "Directorio de Servicios de Salud Mental 211", desc: "Referencias a servicios de salud mental locales a través de la red 211." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cdc.gov/aging/publications/features/healthy-aging.html",
+  i18n: {
+    en: { title: "CDC Healthy Aging Resources", desc: "Federal health resources and tips for healthy aging." },
+    fr: { title: "Ressources vieillissement en santé CDC", desc: "Ressources fédérales et conseils pour un vieillissement en santé." },
+    es: { title: "Recursos de Envejecimiento Saludable CDC", desc: "Recursos federales y consejos para un envejecimiento saludable." },
+  },
+},
+
+// HOUSING (15)
+{
+  category: "Housing",
+  link: "https://www.habitat.org/volunteer",
+  i18n: {
+    en: { title: "Habitat for Humanity Volunteer & Homebuyer Info", desc: "Information on becoming a Habitat homeowner or volunteer." },
+    fr: { title: "Info bénévole et acheteur Habitat", desc: "Informations pour devenir propriétaire Habitat ou bénévole." },
+    es: { title: "Información de Voluntario y Comprador Habitat", desc: "Información para convertirse en propietario o voluntario de Habitat." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rebuildingtogether.org/find-an-affiliate",
+  i18n: {
+    en: { title: "Rebuilding Together Local Affiliate Finder", desc: "Find local Rebuilding Together affiliates offering free home repairs." },
+    fr: { title: "Recherche affilié local Rebuilding Together", desc: "Trouvez des affiliés locaux offrant des réparations domiciliaires gratuites." },
+    es: { title: "Buscador de Afiliados Locales Rebuilding Together", desc: "Encuentre afiliados locales que ofrecen reparaciones de vivienda gratuitas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rebuildingamericashomes.org",
+  i18n: {
+    en: { title: "Rebuilding America's Homes", desc: "Home repair assistance program for eligible low-income homeowners." },
+    fr: { title: "Rebuilding America's Homes", desc: "Programme d'aide à la réparation domiciliaire pour propriétaires à faible revenu." },
+    es: { title: "Rebuilding America's Homes", desc: "Programa de ayuda para reparación de vivienda para propietarios de bajos ingresos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.usda.gov/topics/rural/single-family-housing-repair",
+  i18n: {
+    en: { title: "USDA Home Repair Program Overview", desc: "Overview of USDA loans and grants for rural home repairs." },
+    fr: { title: "Aperçu programme réparation domicile USDA", desc: "Aperçu des prêts et subventions USDA pour réparations domiciliaires rurales." },
+    es: { title: "Resumen del Programa de Reparación de Vivienda USDA", desc: "Resumen de préstamos y subvenciones USDA para reparaciones de vivienda rural." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.homeswithhope.org",
+  i18n: {
+    en: { title: "Homes With Hope", desc: "Local affordable housing and homelessness prevention programs." },
+    fr: { title: "Homes With Hope", desc: "Programmes locaux de logement abordable et de prévention du sans-abrisme." },
+    es: { title: "Homes With Hope", desc: "Programas locales de vivienda asequible y prevención de personas sin hogar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.homelesshub.ca/resources",
+  i18n: {
+    en: { title: "Homeless Hub Resource Library", desc: "Research and resource library on homelessness prevention strategies." },
+    fr: { title: "Bibliothèque ressources Homeless Hub", desc: "Bibliothèque de recherche sur les stratégies de prévention du sans-abrisme." },
+    es: { title: "Biblioteca de Recursos Homeless Hub", desc: "Biblioteca de investigación sobre estrategias de prevención de personas sin hogar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.va.gov/homeless/nchav.asp",
+  i18n: {
+    en: { title: "VA National Call Center for Homeless Veterans", desc: "24/7 hotline for veterans experiencing or at risk of homelessness." },
+    fr: { title: "Centre d'appel national VA sans-abri vétérans", desc: "Ligne d'assistance 24/7 pour vétérans sans-abri ou à risque." },
+    es: { title: "Centro Nacional de Llamadas VA para Veteranos sin Hogar", desc: "Línea de ayuda 24/7 para veteranos sin hogar o en riesgo." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.supportivehousingcoalition.org",
+  i18n: {
+    en: { title: "Supportive Housing Coalition Directory", desc: "Directory of supportive housing programs combining housing and services." },
+    fr: { title: "Répertoire coalition logement soutenu", desc: "Répertoire de programmes de logement soutenu combinant logement et services." },
+    es: { title: "Directorio de Coalición de Vivienda de Apoyo", desc: "Directorio de programas de vivienda de apoyo que combinan vivienda y servicios." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/section_202_supportive_housing_for_the_elderly",
+  i18n: {
+    en: { title: "Section 202 Supportive Housing for the Elderly", desc: "HUD program funding affordable housing with services for low-income seniors." },
+    fr: { title: "Logement soutenu Section 202 aînés", desc: "Programme HUD finançant du logement abordable avec services pour aînés à faible revenu." },
+    es: { title: "Vivienda de Apoyo Sección 202 para Mayores", desc: "Programa HUD que financia vivienda asequible con servicios para mayores de bajos ingresos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/section_811_supportive_housing_for_persons_with_disabilities",
+  i18n: {
+    en: { title: "Section 811 Supportive Housing for Persons with Disabilities", desc: "HUD program funding housing with services for people with disabilities." },
+    fr: { title: "Logement soutenu Section 811 handicap", desc: "Programme HUD finançant du logement avec services pour personnes handicapées." },
+    es: { title: "Vivienda de Apoyo Sección 811 para Personas con Discapacidad", desc: "Programa HUD que financia vivienda con servicios para personas con discapacidad." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rd.usda.gov/programs-services/multifamily-housing-programs/farm-labor-housing-direct-loans-grants",
+  i18n: {
+    en: { title: "USDA Farm Labor Housing Loans & Grants", desc: "Housing funding for farmworkers and their families in rural areas." },
+    fr: { title: "Prêts logement travailleurs agricoles USDA", desc: "Financement du logement pour travailleurs agricoles et leurs familles en zones rurales." },
+    es: { title: "Préstamos y Subvenciones de Vivienda para Trabajadores Agrícolas USDA", desc: "Financiamiento de vivienda para trabajadores agrícolas y sus familias en zonas rurales." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.tribalhousing.org",
+  i18n: {
+    en: { title: "Tribal Housing Resource Directory", desc: "Directory of housing resources specifically for Tribal communities." },
+    fr: { title: "Répertoire ressources logement tribal", desc: "Répertoire de ressources logement spécifiquement pour communautés tribales." },
+    es: { title: "Directorio de Recursos de Vivienda Tribal", desc: "Directorio de recursos de vivienda específicamente para comunidades tribales." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.nahasda.org",
+  i18n: {
+    en: { title: "Native American Housing Assistance Info", desc: "Information on housing block grants for Native American and Alaska Native communities." },
+    fr: { title: "Info aide logement autochtone", desc: "Informations sur les subventions logement pour communautés autochtones." },
+    es: { title: "Información de Asistencia de Vivienda Nativa Americana", desc: "Información sobre subvenciones de vivienda para comunidades nativas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.disabilityhousingnetwork.org",
+  i18n: {
+    en: { title: "Disability Housing Network", desc: "Accessible and supportive housing resources for people with disabilities." },
+    fr: { title: "Réseau logement handicap", desc: "Ressources de logement accessible et soutenu pour personnes handicapées." },
+    es: { title: "Red de Vivienda para Discapacidad", desc: "Recursos de vivienda accesible y de apoyo para personas con discapacidades." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.211.org/services/homeless-shelters",
+  i18n: {
+    en: { title: "211 Homeless Shelter Directory", desc: "Local emergency shelter referrals through the 211 network." },
+    fr: { title: "Répertoire refuges sans-abri 211", desc: "Orientation vers refuges d'urgence locaux via le réseau 211." },
+    es: { title: "Directorio de Refugios para Personas sin Hogar 211", desc: "Referencias a refugios de emergencia locales a través de la red 211." },
+  },
+},
+
+// UTILITIES (12)
+{
+  category: "Utilities",
+  link: "https://www.rd.usda.gov/programs-services/broadband-programs",
+  i18n: {
+    en: { title: "USDA Broadband Programs", desc: "Federal funding programs expanding rural broadband access." },
+    fr: { title: "Programmes internet haut débit USDA", desc: "Programmes fédéraux de financement pour élargir l'accès Internet rural." },
+    es: { title: "Programas de Banda Ancha USDA", desc: "Programas federales de financiamiento para expandir el acceso a internet rural." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.internetessentials.com",
+  i18n: {
+    en: { title: "Internet Essentials", desc: "Low-cost internet program for eligible low-income households." },
+    fr: { title: "Internet Essentials", desc: "Programme Internet à faible coût pour ménages à faible revenu admissibles." },
+    es: { title: "Internet Essentials", desc: "Programa de internet de bajo costo para hogares de bajos ingresos elegibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.att.com/internet/access/",
+  i18n: {
+    en: { title: "AT&T Access Program", desc: "Discounted home internet program for qualifying households." },
+    fr: { title: "Programme AT&T Access", desc: "Programme Internet résidentiel à prix réduit pour ménages admissibles." },
+    es: { title: "Programa AT&T Access", desc: "Programa de internet residencial con descuento para hogares elegibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.spectrum.com/browse/content/spectrum-internet-assist",
+  i18n: {
+    en: { title: "Spectrum Internet Assist", desc: "Low-cost internet program for eligible households through Spectrum." },
+    fr: { title: "Spectrum Internet Assist", desc: "Programme Internet à faible coût pour ménages admissibles via Spectrum." },
+    es: { title: "Spectrum Internet Assist", desc: "Programa de internet de bajo costo para hogares elegibles a través de Spectrum." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.pcsforpeople.org",
+  i18n: {
+    en: { title: "PCs for People", desc: "Low-cost computers and internet access for eligible individuals and nonprofits." },
+    fr: { title: "PCs for People", desc: "Ordinateurs et accès Internet à faible coût pour personnes et organismes admissibles." },
+    es: { title: "PCs for People", desc: "Computadoras e internet de bajo costo para personas y organizaciones elegibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.digitunity.org",
+  i18n: {
+    en: { title: "Digitunity Device Access", desc: "Helps connect people in need with refurbished computers and devices." },
+    fr: { title: "Accès appareils Digitunity", desc: "Aide à connecter les personnes dans le besoin avec des ordinateurs reconditionnés." },
+    es: { title: "Acceso a Dispositivos Digitunity", desc: "Ayuda a conectar a personas necesitadas con computadoras reacondicionadas." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.connectall.gov",
+  i18n: {
+    en: { title: "Internet for All Initiative", desc: "Federal initiative expanding affordable high-speed internet access nationwide." },
+    fr: { title: "Initiative Internet pour tous", desc: "Initiative fédérale élargissant l'accès Internet haut débit abordable." },
+    es: { title: "Iniciativa Internet para Todos", desc: "Iniciativa federal que expande el acceso a internet de alta velocidad asequible." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.usa.gov/help-with-devices",
+  i18n: {
+    en: { title: "USA.gov Device Assistance Guide", desc: "Government guide to programs offering low-cost computers and devices." },
+    fr: { title: "Guide aide appareils USA.gov", desc: "Guide gouvernemental pour les programmes offrant des ordinateurs à faible coût." },
+    es: { title: "Guía de Asistencia de Dispositivos USA.gov", desc: "Guía del gobierno para programas que ofrecen computadoras de bajo costo." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.mobilecitizen.org",
+  i18n: {
+    en: { title: "Mobile Citizen", desc: "Low-cost mobile internet service for nonprofits and community programs." },
+    fr: { title: "Mobile Citizen", desc: "Service Internet mobile à faible coût pour organismes et programmes communautaires." },
+    es: { title: "Mobile Citizen", desc: "Servicio de internet móvil de bajo costo para organizaciones sin fines de lucro." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.freegeek.org",
+  i18n: {
+    en: { title: "Free Geek", desc: "Low-cost refurbished computers and digital skills training." },
+    fr: { title: "Free Geek", desc: "Ordinateurs reconditionnés à faible coût et formation aux compétences numériques." },
+    es: { title: "Free Geek", desc: "Computadoras reacondicionadas de bajo costo y capacitación en habilidades digitales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.compudopt.org",
+  i18n: {
+    en: { title: "Compudopt", desc: "Provides computers and digital literacy training to underserved communities." },
+    fr: { title: "Compudopt", desc: "Fournit ordinateurs et formation numérique aux communautés mal desservies." },
+    es: { title: "Compudopt", desc: "Proporciona computadoras y capacitación digital a comunidades desatendidas." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.interconnection.org",
+  i18n: {
+    en: { title: "InterConnection", desc: "Affordable refurbished computers for nonprofits and low-income individuals." },
+    fr: { title: "InterConnection", desc: "Ordinateurs reconditionnés abordables pour organismes et personnes à faible revenu." },
+    es: { title: "InterConnection", desc: "Computadoras reacondicionadas asequibles para organizaciones y personas de bajos ingresos." },
+  },
+},
+
+// EDUCATION (13)
+{
+  category: "Education",
+  link: "https://www.goodwill.org/gcf",
+  i18n: {
+    en: { title: "Goodwill Community Foundation Learning", desc: "Free online learning tools covering digital literacy and workplace skills." },
+    fr: { title: "Apprentissage Goodwill Community Foundation", desc: "Outils d'apprentissage en ligne gratuits couvrant compétences numériques et professionnelles." },
+    es: { title: "Aprendizaje Goodwill Community Foundation", desc: "Herramientas de aprendizaje en línea gratuitas sobre alfabetización digital y habilidades laborales." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.pluralsight.org",
+  i18n: {
+    en: { title: "Pluralsight One Nonprofit Learning", desc: "Free technology skills training for underserved individuals and nonprofits." },
+    fr: { title: "Pluralsight One apprentissage à but non lucratif", desc: "Formation gratuite en compétences technologiques pour personnes défavorisées." },
+    es: { title: "Aprendizaje sin Fines de Lucro Pluralsight One", desc: "Capacitación gratuita en habilidades tecnológicas para personas desatendidas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.techsoup.org",
+  i18n: {
+    en: { title: "TechSoup", desc: "Technology resources and training support for nonprofits and communities." },
+    fr: { title: "TechSoup", desc: "Ressources technologiques et soutien à la formation pour organismes et communautés." },
+    es: { title: "TechSoup", desc: "Recursos tecnológicos y apoyo de capacitación para organizaciones y comunidades." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.yearup.org",
+  i18n: {
+    en: { title: "Year Up", desc: "Career training and internship program for young adults from underserved communities." },
+    fr: { title: "Year Up", desc: "Programme de formation professionnelle et de stage pour jeunes adultes défavorisés." },
+    es: { title: "Year Up", desc: "Programa de capacitación profesional y pasantías para jóvenes adultos desatendidos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.perscholas.org",
+  i18n: {
+    en: { title: "Per Scholas", desc: "Free technology career training for adults from underserved communities." },
+    fr: { title: "Per Scholas", desc: "Formation professionnelle technologique gratuite pour adultes défavorisés." },
+    es: { title: "Per Scholas", desc: "Capacitación profesional tecnológica gratuita para adultos desatendidos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.generation.org",
+  i18n: {
+    en: { title: "Generation USA", desc: "Free job training programs matching graduates with employers." },
+    fr: { title: "Generation USA", desc: "Programmes de formation professionnelle gratuits reliant diplômés et employeurs." },
+    es: { title: "Generation USA", desc: "Programas gratuitos de capacitación laboral que conectan graduados con empleadores." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nulmef.org",
+  i18n: {
+    en: { title: "National Urban League Education Fund", desc: "Educational and workforce programs for underserved urban communities." },
+    fr: { title: "Fonds éducation National Urban League", desc: "Programmes éducatifs et professionnels pour communautés urbaines défavorisées." },
+    es: { title: "Fondo Educativo National Urban League", desc: "Programas educativos y laborales para comunidades urbanas desatendidas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.uncf.org",
+  i18n: {
+    en: { title: "United Negro College Fund", desc: "Scholarships and support for students attending historically Black colleges." },
+    fr: { title: "United Negro College Fund", desc: "Bourses et soutien pour étudiants dans les collèges historiquement noirs." },
+    es: { title: "United Negro College Fund", desc: "Becas y apoyo para estudiantes en universidades históricamente afroamericanas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.hsf.net",
+  i18n: {
+    en: { title: "Hispanic Scholarship Fund", desc: "Scholarships and support resources for Hispanic students pursuing higher education." },
+    fr: { title: "Fonds bourse hispanique", desc: "Bourses et ressources de soutien pour étudiants hispaniques dans l'enseignement supérieur." },
+    es: { title: "Fondo de Becas Hispanas", desc: "Becas y recursos de apoyo para estudiantes hispanos en la educación superior." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.aigcs.org",
+  i18n: {
+    en: { title: "American Indian Graduate Center", desc: "Scholarships and graduate support for Native American students." },
+    fr: { title: "American Indian Graduate Center", desc: "Bourses et soutien aux études supérieures pour étudiants amérindiens." },
+    es: { title: "American Indian Graduate Center", desc: "Becas y apoyo de posgrado para estudiantes nativos americanos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.imaginebetter.org",
+  i18n: {
+    en: { title: "Imagine America Foundation", desc: "Scholarships for career and vocational education students." },
+    fr: { title: "Imagine America Foundation", desc: "Bourses pour étudiants en formation professionnelle et technique." },
+    es: { title: "Imagine America Foundation", desc: "Becas para estudiantes de educación profesional y vocacional." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.dreamkeepers.org",
+  i18n: {
+    en: { title: "Dream Keepers Scholarship Directory", desc: "Directory of scholarships for first-generation and underserved students." },
+    fr: { title: "Répertoire bourses Dream Keepers", desc: "Répertoire de bourses pour étudiants de première génération et défavorisés." },
+    es: { title: "Directorio de Becas Dream Keepers", desc: "Directorio de becas para estudiantes de primera generación y desatendidos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.fastweb.com",
+  i18n: {
+    en: { title: "Fastweb Scholarship Search", desc: "Searchable database of scholarships matched to student profiles." },
+    fr: { title: "Recherche bourses Fastweb", desc: "Base de données de bourses consultable selon le profil de l'étudiant." },
+    es: { title: "Búsqueda de Becas Fastweb", desc: "Base de datos de becas buscable según el perfil del estudiante." },
+  },
+},
+
+// INCOME (15)
+{
+  category: "Income",
+  link: "https://www.opportunityfund.org",
+  i18n: {
+    en: { title: "Opportunity Fund Small Business Loans", desc: "Affordable small business loans for underserved entrepreneurs." },
+    fr: { title: "Prêts petites entreprises Opportunity Fund", desc: "Prêts abordables aux petites entreprises pour entrepreneurs défavorisés." },
+    es: { title: "Préstamos para Pequeñas Empresas Opportunity Fund", desc: "Préstamos asequibles para pequeñas empresas para emprendedores desatendidos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.kiva.org",
+  i18n: {
+    en: { title: "Kiva Microloans", desc: "Crowdfunded microloans supporting entrepreneurs and small businesses." },
+    fr: { title: "Microprêts Kiva", desc: "Microprêts financés par sociofinancement soutenant entrepreneurs et petites entreprises." },
+    es: { title: "Microcréditos Kiva", desc: "Microcréditos financiados colectivamente que apoyan a emprendedores y pequeñas empresas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.accion.org",
+  i18n: {
+    en: { title: "Accion Opportunity Fund", desc: "Small business loans and coaching for underserved entrepreneurs." },
+    fr: { title: "Accion Opportunity Fund", desc: "Prêts aux petites entreprises et coaching pour entrepreneurs défavorisés." },
+    es: { title: "Accion Opportunity Fund", desc: "Préstamos para pequeñas empresas y asesoría para emprendedores desatendidos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.grameenamerica.org",
+  i18n: {
+    en: { title: "Grameen America", desc: "Microloans and financial training for women entrepreneurs in poverty." },
+    fr: { title: "Grameen America", desc: "Microprêts et formation financière pour femmes entrepreneures en situation de pauvreté." },
+    es: { title: "Grameen America", desc: "Microcréditos y capacitación financiera para mujeres emprendedoras en pobreza." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.lift.org",
+  i18n: {
+    en: { title: "LIFT", desc: "Coaching and financial support helping families build economic stability." },
+    fr: { title: "LIFT", desc: "Coaching et soutien financier aidant les familles à bâtir une stabilité économique." },
+    es: { title: "LIFT", desc: "Asesoría y apoyo financiero que ayuda a las familias a construir estabilidad económica." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.singlestop.org",
+  i18n: {
+    en: { title: "Single Stop", desc: "Screening tool connecting individuals to benefits, tax help, and financial coaching." },
+    fr: { title: "Single Stop", desc: "Outil de dépistage reliant les personnes aux prestations, aide fiscale et coaching financier." },
+    es: { title: "Single Stop", desc: "Herramienta de evaluación que conecta a personas con beneficios, ayuda fiscal y asesoría financiera." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.prosperitynow.org",
+  i18n: {
+    en: { title: "Prosperity Now", desc: "Financial capability resources and policy tools promoting economic security." },
+    fr: { title: "Prosperity Now", desc: "Ressources de capacité financière et outils politiques favorisant la sécurité économique." },
+    es: { title: "Prosperity Now", desc: "Recursos de capacidad financiera y herramientas de políticas que promueven seguridad económica." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.211.org/services/employment",
+  i18n: {
+    en: { title: "211 Employment Services Directory", desc: "Local job search and employment support referrals through 211." },
+    fr: { title: "Répertoire services emploi 211", desc: "Orientation locale vers recherche d'emploi et soutien via le réseau 211." },
+    es: { title: "Directorio de Servicios de Empleo 211", desc: "Referencias locales de búsqueda de empleo y apoyo a través de la red 211." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dressforsuccess.org",
+  i18n: {
+    en: { title: "Dress for Success", desc: "Professional attire and career development support for women entering the workforce." },
+    fr: { title: "Dress for Success", desc: "Tenue professionnelle et soutien au développement de carrière pour femmes." },
+    es: { title: "Dress for Success", desc: "Vestimenta profesional y apoyo de desarrollo profesional para mujeres." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.careergear.org",
+  i18n: {
+    en: { title: "Career Gear", desc: "Professional attire and career coaching for men entering the workforce." },
+    fr: { title: "Career Gear", desc: "Tenue professionnelle et coaching de carrière pour hommes entrant sur le marché du travail." },
+    es: { title: "Career Gear", desc: "Vestimenta profesional y asesoría de carrera para hombres que ingresan al mercado laboral." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.stepup.org",
+  i18n: {
+    en: { title: "Step Up Women's Network", desc: "Mentorship and career development programs for underserved women and girls." },
+    fr: { title: "Step Up Women's Network", desc: "Programmes de mentorat et développement de carrière pour femmes et filles défavorisées." },
+    es: { title: "Step Up Women's Network", desc: "Programas de mentoría y desarrollo profesional para mujeres y niñas desatendidas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.upwardlyglobal.org",
+  i18n: {
+    en: { title: "Upwardly Global", desc: "Career support for immigrants and refugees rebuilding professional careers." },
+    fr: { title: "Upwardly Global", desc: "Soutien professionnel pour immigrants et réfugiés reconstruisant leur carrière." },
+    es: { title: "Upwardly Global", desc: "Apoyo profesional para inmigrantes y refugiados que reconstruyen sus carreras." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.refugeeworks.org",
+  i18n: {
+    en: { title: "Refugee Works Employment Support", desc: "Employment and career support resources for refugees." },
+    fr: { title: "Soutien emploi Refugee Works", desc: "Ressources de soutien à l'emploi et à la carrière pour réfugiés." },
+    es: { title: "Apoyo de Empleo Refugee Works", desc: "Recursos de apoyo de empleo y carrera para refugiados." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.nationalimmigrationforum.org",
+  i18n: {
+    en: { title: "National Immigration Forum", desc: "Immigration policy resources and support for newcomer economic integration." },
+    fr: { title: "National Immigration Forum", desc: "Ressources politiques d'immigration et soutien à l'intégration économique." },
+    es: { title: "National Immigration Forum", desc: "Recursos de política de inmigración y apoyo a la integración económica." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.reentry.net",
+  i18n: {
+    en: { title: "Reentry.net", desc: "Resources and directory for people reentering society after incarceration." },
+    fr: { title: "Reentry.net", desc: "Ressources et répertoire pour personnes se réinsérant après incarcération." },
+    es: { title: "Reentry.net", desc: "Recursos y directorio para personas que se reintegran tras encarcelamiento." },
+  },
+},
+
     // ===== PROGRAMS 751-850 =====
 
 // FOOD (15)

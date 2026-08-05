@@ -210,41 +210,6 @@ const HERO_ANNOUNCEMENTS = {
   ],
 };
 
-
-/** ===== Dynamic category experience ===== */
-const CATEGORY_EXPERIENCE = {
-  en: {
-    All: { eyebrow: "AidFinder", title: "Find Real Assistance Programs Fast", subtitle: "Discover verified assistance programs across the United States — all in one place.", placeholder: "Search e.g. housing, food, health…" },
-    Food: { eyebrow: "Food Assistance", title: "Find Food Assistance Fast", subtitle: "Explore food benefits, meal programs, pantries, and nutrition resources.", placeholder: "Search SNAP, food pantries, meals, groceries…" },
-    Health: { eyebrow: "Health Assistance", title: "Find Health Assistance Fast", subtitle: "Explore health coverage, clinics, prescriptions, mental health, and care resources.", placeholder: "Search Medicaid, clinics, prescriptions, mental health…" },
-    Housing: { eyebrow: "Housing Assistance", title: "Find Housing Assistance Fast", subtitle: "Explore rent help, shelters, housing programs, home repair, and tenant resources.", placeholder: "Search rent, eviction, shelter, Section 8…" },
-    Utilities: { eyebrow: "Utility Assistance", title: "Find Utility Assistance Fast", subtitle: "Explore help with energy, water, phone, internet, and transportation costs.", placeholder: "Search energy, water, phone, internet, transportation…" },
-    Education: { eyebrow: "Education Assistance", title: "Find Education Assistance Fast", subtitle: "Explore grants, scholarships, job training, childcare, and learning resources.", placeholder: "Search scholarships, grants, training, childcare…" },
-    Income: { eyebrow: "Income Assistance", title: "Find Income Assistance Fast", subtitle: "Explore cash benefits, employment, legal aid, tax help, and financial resources.", placeholder: "Search cash assistance, jobs, legal aid, tax help…" },
-    Saved: { eyebrow: "Saved Programs", title: "Your Saved Assistance Programs", subtitle: "Review the assistance programs you saved for later.", placeholder: "Search your saved programs…" },
-  },
-  fr: {
-    All: { eyebrow: "AidFinder", title: "Trouvez rapidement de vraies aides", subtitle: "Découvrez des programmes d’aide vérifiés aux États-Unis — au même endroit.", placeholder: "Rechercher logement, alimentation, santé…" },
-    Food: { eyebrow: "Aide alimentaire", title: "Trouvez rapidement une aide alimentaire", subtitle: "Explorez les prestations alimentaires, repas, banques alimentaires et ressources nutritionnelles.", placeholder: "Rechercher SNAP, banques alimentaires, repas…" },
-    Health: { eyebrow: "Aide santé", title: "Trouvez rapidement une aide santé", subtitle: "Explorez la couverture santé, les cliniques, médicaments et ressources de santé mentale.", placeholder: "Rechercher Medicaid, cliniques, médicaments…" },
-    Housing: { eyebrow: "Aide au logement", title: "Trouvez rapidement une aide au logement", subtitle: "Explorez l’aide au loyer, les refuges, le logement et les droits des locataires.", placeholder: "Rechercher loyer, expulsion, refuge, Section 8…" },
-    Utilities: { eyebrow: "Aide aux services", title: "Trouvez rapidement une aide aux services publics", subtitle: "Explorez l’aide pour l’énergie, l’eau, le téléphone, Internet et le transport.", placeholder: "Rechercher énergie, eau, téléphone, Internet…" },
-    Education: { eyebrow: "Aide à l’éducation", title: "Trouvez rapidement une aide à l’éducation", subtitle: "Explorez les bourses, subventions, formations, garde d’enfants et ressources éducatives.", placeholder: "Rechercher bourses, subventions, formation…" },
-    Income: { eyebrow: "Aide au revenu", title: "Trouvez rapidement une aide au revenu", subtitle: "Explorez les prestations, l’emploi, l’aide juridique, fiscale et financière.", placeholder: "Rechercher aide financière, emploi, aide juridique…" },
-    Saved: { eyebrow: "Programmes enregistrés", title: "Vos programmes d’aide enregistrés", subtitle: "Retrouvez les programmes d’aide que vous avez enregistrés.", placeholder: "Rechercher dans vos programmes enregistrés…" },
-  },
-  es: {
-    All: { eyebrow: "AidFinder", title: "Encuentre Ayuda Real Rápidamente", subtitle: "Descubra programas de asistencia verificados en Estados Unidos — todo en un solo lugar.", placeholder: "Buscar vivienda, alimentos, salud…" },
-    Food: { eyebrow: "Ayuda de alimentos", title: "Encuentre Ayuda de Alimentos Rápidamente", subtitle: "Explore beneficios de alimentos, comidas, despensas y recursos de nutrición.", placeholder: "Buscar SNAP, despensas, comidas, comestibles…" },
-    Health: { eyebrow: "Ayuda de salud", title: "Encuentre Ayuda de Salud Rápidamente", subtitle: "Explore cobertura médica, clínicas, recetas y recursos de salud mental.", placeholder: "Buscar Medicaid, clínicas, recetas, salud mental…" },
-    Housing: { eyebrow: "Ayuda de vivienda", title: "Encuentre Ayuda de Vivienda Rápidamente", subtitle: "Explore ayuda con alquiler, refugios, vivienda y derechos de inquilinos.", placeholder: "Buscar alquiler, desalojo, refugio, Sección 8…" },
-    Utilities: { eyebrow: "Ayuda de servicios", title: "Encuentre Ayuda de Servicios Rápidamente", subtitle: "Explore ayuda con energía, agua, teléfono, internet y transporte.", placeholder: "Buscar energía, agua, teléfono, internet…" },
-    Education: { eyebrow: "Ayuda educativa", title: "Encuentre Ayuda Educativa Rápidamente", subtitle: "Explore becas, subvenciones, capacitación, cuidado infantil y aprendizaje.", placeholder: "Buscar becas, subvenciones, capacitación…" },
-    Income: { eyebrow: "Ayuda de ingresos", title: "Encuentre Ayuda de Ingresos Rápidamente", subtitle: "Explore beneficios, empleo, ayuda legal, impuestos y recursos financieros.", placeholder: "Buscar asistencia en efectivo, empleo, ayuda legal…" },
-    Saved: { eyebrow: "Programas guardados", title: "Sus Programas de Ayuda Guardados", subtitle: "Revise los programas de asistencia que guardó para más tarde.", placeholder: "Buscar en sus programas guardados…" },
-  },
-};
-
 /** ===== Category Icons (Health = red cross SVG) ===== */
 const ICONS = {
   Food: "🍏",
@@ -9747,12 +9712,6 @@ export default function Home() {
 
   const T = UI[lang];
 
-  // search, category, state
-  // Keep these state declarations before any effect that reads `cat`.
-  const [query, setQuery] = useState("");
-  const [cat, setCat] = useState("All");
-  const [stateSel, setStateSel] = useState("All States");
-
   // rotating hero announcements
   const heroItems = useMemo(
     () => (HERO_ANNOUNCEMENTS[lang] || HERO_ANNOUNCEMENTS.en).filter((item) => item.active),
@@ -9763,7 +9722,7 @@ export default function Home() {
 
   useEffect(() => {
     setHeroIndex(0);
-  }, [lang, cat]);
+  }, [lang]);
 
   useEffect(() => {
     if (heroPaused || heroItems.length < 2) return undefined;
@@ -9779,13 +9738,10 @@ export default function Home() {
     subtitle: T.subtitle,
   };
 
-  const categoryExperience =
-    CATEGORY_EXPERIENCE[lang]?.[cat] || CATEGORY_EXPERIENCE.en.All;
-  const displayedHeroItem =
-    heroIndex === 0
-      ? { ...heroItem, ...categoryExperience }
-      : heroItem;
-  const activeSearchPlaceholder = categoryExperience.placeholder || T.searchPlaceholder;
+  // search, category, state
+  const [query, setQuery] = useState("");
+  const [cat, setCat] = useState("All");
+  const [stateSel, setStateSel] = useState("All States");
 
   // favorites (persist)
   const [favs, setFavs] = useState([]);
@@ -9951,28 +9907,28 @@ const categoryCounts = useMemo(() => {
       <main className="container">
         {/* Hero */}
         <section
-          className={`hero heroRotator hero-${cat.toLowerCase()}`}
+          className="hero heroRotator"
           aria-live="polite"
           onMouseEnter={() => setHeroPaused(true)}
           onMouseLeave={() => setHeroPaused(false)}
           onFocusCapture={() => setHeroPaused(true)}
           onBlurCapture={() => setHeroPaused(false)}
         >
-          <div className="heroMessage" key={`${lang}-${cat}-${displayedHeroItem.id || heroIndex}`}>
+          <div className="heroMessage" key={`${lang}-${heroItem.id || heroIndex}`}>
             <div className="heroEyebrowRow">
-              <span className="heroEyebrow">{displayedHeroItem.eyebrow}</span>
-              {displayedHeroItem.sponsored && <span className="sponsoredBadge">Sponsored</span>}
+              <span className="heroEyebrow">{heroItem.eyebrow}</span>
+              {heroItem.sponsored && <span className="sponsoredBadge">Sponsored</span>}
             </div>
-            <h1>{displayedHeroItem.title}</h1>
-            <p>{displayedHeroItem.subtitle}</p>
-            {displayedHeroItem.url && displayedHeroItem.cta && (
+            <h1>{heroItem.title}</h1>
+            <p>{heroItem.subtitle}</p>
+            {heroItem.url && heroItem.cta && (
               <a
                 className="heroCta"
-                href={displayedHeroItem.url}
+                href={heroItem.url}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
               >
-                {displayedHeroItem.cta}
+                {heroItem.cta}
               </a>
             )}
           </div>
@@ -10000,15 +9956,15 @@ const categoryCounts = useMemo(() => {
               className="searchInlineForm"
               onSubmit={(e) => e.preventDefault()}
               role="search"
-              aria-label={activeSearchPlaceholder}
+              aria-label={T.searchPlaceholder}
             >
               <div className="searchInline">
                 <input
                   className="searchInlineInput"
-                  placeholder={activeSearchPlaceholder}
+                  placeholder={T.searchPlaceholder}
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  aria-label={activeSearchPlaceholder}
+                  aria-label={T.searchPlaceholder}
                 />
 
                 <div className="searchInlineActions">
@@ -10086,15 +10042,8 @@ const categoryCounts = useMemo(() => {
           </div>
 
          <div className="countRow">
-  <span className={`programCount programCount-${cat.toLowerCase()}`}>
-    {cat !== "All" && cat !== "Saved" ? ICONS[cat] : cat === "Saved" ? "♥" : "✅"}
-    <span>
-      {lang === "fr"
-        ? `${programs.length} ${cat === "All" ? "programmes d’aide vérifiés" : cat === "Saved" ? "programmes enregistrés" : `programmes — ${UI.fr.catLabels[cat]}`}`
-        : lang === "es"
-        ? `${programs.length} ${cat === "All" ? "programas de asistencia verificados" : cat === "Saved" ? "programas guardados" : `programas de ${UI.es.catLabels[cat].toLowerCase()}`}`
-        : `${programs.length} ${cat === "All" ? "Verified Assistance Programs" : cat === "Saved" ? "Saved Programs" : `${cat} Assistance Programs`}`}
-    </span>
+  <span className="programCount">
+    ✅ {programs.length} Verified Assistance Programs
   </span>
 </div>
 
@@ -10422,31 +10371,6 @@ const categoryCounts = useMemo(() => {
           position: relative;
           overflow: hidden;
         }
-
-        .heroRotator {
-          margin-top: 14px;
-          padding: 34px 24px 26px;
-          border: 1px solid var(--hero-border, rgba(37, 99, 235, 0.16));
-          border-radius: 24px;
-          background: var(--hero-bg, linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(5, 150, 105, 0.08)));
-          box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
-          transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-        }
-        .hero-all { --hero-bg: linear-gradient(135deg, rgba(37, 99, 235, 0.09), rgba(5, 150, 105, 0.09)); --hero-border: rgba(37, 99, 235, 0.16); --hero-accent: #15803d; --hero-soft: #dcfce7; }
-        .hero-food { --hero-bg: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(251, 191, 36, 0.06)); --hero-border: rgba(217, 119, 6, 0.22); --hero-accent: #92400e; --hero-soft: #fef3c7; }
-        .hero-health { --hero-bg: linear-gradient(135deg, rgba(220, 38, 38, 0.09), rgba(244, 63, 94, 0.05)); --hero-border: rgba(220, 38, 38, 0.18); --hero-accent: #991b1b; --hero-soft: #fee2e2; }
-        .hero-housing { --hero-bg: linear-gradient(135deg, rgba(37, 99, 235, 0.11), rgba(14, 165, 233, 0.05)); --hero-border: rgba(37, 99, 235, 0.2); --hero-accent: #1d4ed8; --hero-soft: #dbeafe; }
-        .hero-utilities { --hero-bg: linear-gradient(135deg, rgba(234, 179, 8, 0.11), rgba(245, 158, 11, 0.05)); --hero-border: rgba(202, 138, 4, 0.2); --hero-accent: #854d0e; --hero-soft: #fef9c3; }
-        .hero-education { --hero-bg: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(168, 85, 247, 0.05)); --hero-border: rgba(124, 58, 237, 0.19); --hero-accent: #6d28d9; --hero-soft: #ede9fe; }
-        .hero-income { --hero-bg: linear-gradient(135deg, rgba(5, 150, 105, 0.11), rgba(34, 197, 94, 0.05)); --hero-border: rgba(5, 150, 105, 0.2); --hero-accent: #047857; --hero-soft: #d1fae5; }
-        .hero-saved { --hero-bg: linear-gradient(135deg, rgba(225, 29, 72, 0.08), rgba(244, 63, 94, 0.04)); --hero-border: rgba(225, 29, 72, 0.17); --hero-accent: #be123c; --hero-soft: #ffe4e6; }
-        .heroRotator .heroEyebrow { background: var(--hero-soft); color: var(--hero-accent); }
-        .heroRotator .heroDotActive { background: var(--hero-accent); }
-        [data-theme="dark"] .heroRotator {
-          background: color-mix(in srgb, var(--hero-bg) 55%, #0f172a);
-          border-color: color-mix(in srgb, var(--hero-border) 70%, #334155);
-          box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
-        }
         .heroMessage {
           width: min(820px, 100%);
           animation: heroFadeUp 0.55s ease both;
@@ -10589,15 +10513,6 @@ const categoryCounts = useMemo(() => {
           border: 1px solid #a7f3d0;
           font-weight: 800;
         }
-
-        .programCount-food { background: #fef3c7; color: #92400e; border-color: #fde68a; }
-        .programCount-health { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
-        .programCount-housing { background: #dbeafe; color: #1d4ed8; border-color: #bfdbfe; }
-        .programCount-utilities { background: #fef9c3; color: #854d0e; border-color: #fde68a; }
-        .programCount-education { background: #ede9fe; color: #6d28d9; border-color: #ddd6fe; }
-        .programCount-income { background: #d1fae5; color: #047857; border-color: #a7f3d0; }
-        .programCount-saved { background: #ffe4e6; color: #be123c; border-color: #fecdd3; }
-        .programCount svg { width: 18px; height: 18px; }
         [data-theme="dark"] .programCount {
           background: #063b30;
           color: #a7f3d0;

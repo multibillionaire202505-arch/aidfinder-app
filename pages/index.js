@@ -88,7 +88,7 @@ const UI = {
     searchPlaceholder: "Rechercher ex. logement, alimentation, santé…",
     searchBtn: "Rechercher",
     clearBtn: "Effacer",
-    categories: ["Tous", "Alimentation", "Santé", "Logement", "Services publics", "Éducation", "Revenus", "Enregistrés"],
+    categories: ["All", "Food", "Health", "Housing", "Utilities", "Education", "Income", "Saved"],
     catLabels: {
       All: "Tous",
       Food: "Alimentation",
@@ -126,7 +126,7 @@ const UI = {
     searchPlaceholder: "Buscar p. ej. vivienda, alimentos, salud…",
     searchBtn: "Buscar",
     clearBtn: "Borrar",
-    categories: ["Todos", "Alimentos", "Salud", "Vivienda", "Servicios", "Educación", "Ingresos", "Guardados"],
+    categories: ["All", "Food", "Health", "Housing", "Utilities", "Education", "Income", "Saved"],
     catLabels: {
       All: "Todos",
       Food: "Alimentos",
@@ -10710,6 +10710,7 @@ const categoryCounts = useMemo(() => {
           right: 0;
           height: 5px;
           background: var(--card-accent, #16a34a);
+          border-radius: 16px 16px 7px 7px;
         }
         .card-food { --card-accent: var(--food); background: linear-gradient(180deg, var(--food-soft), var(--bg) 38%); }
         .card-health { --card-accent: var(--health); background: linear-gradient(180deg, var(--health-soft), var(--bg) 38%); }
@@ -10728,8 +10729,20 @@ const categoryCounts = useMemo(() => {
           transform: translateY(0);
         }
         .card:hover {
-          transform: translateY(-2px) scale(1.02);
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.06);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10), 0 3px 8px rgba(15, 23, 42, 0.05);
+        }
+        .card:focus-within {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10), 0 3px 8px rgba(15, 23, 42, 0.05);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .card,
+          .card:hover,
+          .card:focus-within {
+            transition: none;
+            transform: none;
+          }
         }
         .card h3 {
           display: flex;

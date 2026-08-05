@@ -10002,7 +10002,7 @@ const categoryCounts = useMemo(() => {
                 return (
                   <button
                     key={key}
-                    className={`chip ${active ? "chipActive" : ""}`}
+                    className={`chip chip-${key.toLowerCase()} ${active ? "chipActive" : ""}`}
                     onClick={() => {
   setOpen(false);
   setCurrent(null);
@@ -10048,9 +10048,9 @@ const categoryCounts = useMemo(() => {
 </div>
 
           {/* Donate */}
-          <div style={{ textAlign: "center", marginTop: 16 }}>
-            <h3 style={{ marginBottom: 6 }}>Support AidFinder</h3>
-            <p style={{ margin: "0 0 12px", color: "#4b5563" }}>
+          <div className="donatePanel">
+            <h3>Support AidFinder</h3>
+            <p>
               Your donation helps keep this app free for families in need ❤️
             </p>
             <a
@@ -10078,7 +10078,7 @@ const categoryCounts = useMemo(() => {
             const title = p.i18n[lang]?.title || p.i18n.en.title;
             const desc = p.i18n[lang]?.desc || p.i18n.en.desc;
             return (
-              <article className="card" key={`${p.link}-${p.category}-${i}`} style={{ "--i": i }}>
+              <article className={`card card-${p.category.toLowerCase()}`} key={`${p.link}-${p.category}-${i}`} style={{ "--i": i }}>
                 <div
   className={`badge ${p.category.toLowerCase()}`}
 >
@@ -10291,6 +10291,18 @@ const categoryCounts = useMemo(() => {
           --af-green: #19c37d;
           --af-green-dark: #17a56b;
           --af-text-on-green: #0b1f17;
+          --food: #f59e0b;
+          --food-soft: #fff7e6;
+          --health: #e11d48;
+          --health-soft: #fff1f4;
+          --housing: #2563eb;
+          --housing-soft: #eff6ff;
+          --utilities: #ca8a04;
+          --utilities-soft: #fefce8;
+          --education: #7c3aed;
+          --education-soft: #f5f3ff;
+          --income: #059669;
+          --income-soft: #ecfdf5;
         }
         :root[data-theme="dark"] {
   --bg: #0b1220;
@@ -10454,7 +10466,14 @@ const categoryCounts = useMemo(() => {
           .heroRotator h1 { font-size: clamp(28px, 9vw, 42px); }
         }
         .toolbar {
-          margin-top: 8px;
+          margin-top: 12px;
+          padding: 18px;
+          border: 1px solid var(--border);
+          border-radius: 20px;
+          background: linear-gradient(135deg, rgba(37, 99, 235, 0.045), rgba(5, 150, 105, 0.055));
+        }
+        [data-theme="dark"] .toolbar {
+          background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(5, 150, 105, 0.1));
         }
 
         .filtersRow {
@@ -10482,7 +10501,22 @@ const categoryCounts = useMemo(() => {
         }
 
         .countRow {
-          margin-top: 10px;
+          margin-top: 14px;
+        }
+        .programCount {
+          display: inline-flex;
+          align-items: center;
+          padding: 8px 12px;
+          border-radius: 999px;
+          background: var(--income-soft);
+          color: #065f46;
+          border: 1px solid #a7f3d0;
+          font-weight: 800;
+        }
+        [data-theme="dark"] .programCount {
+          background: #063b30;
+          color: #a7f3d0;
+          border-color: #047857;
         }
         .muted {
           color: var(--muted);
@@ -10539,6 +10573,20 @@ const categoryCounts = useMemo(() => {
           border-color: #0e3527;
           color: #c6f0dc;
         }
+        .chip-food.chipActive { background: var(--food-soft); border-color: #fcd34d; color: #92400e; }
+        .chip-health.chipActive { background: var(--health-soft); border-color: #fda4af; color: #9f1239; }
+        .chip-housing.chipActive { background: var(--housing-soft); border-color: #93c5fd; color: #1e40af; }
+        .chip-utilities.chipActive { background: var(--utilities-soft); border-color: #fde047; color: #854d0e; }
+        .chip-education.chipActive { background: var(--education-soft); border-color: #c4b5fd; color: #5b21b6; }
+        .chip-income.chipActive { background: var(--income-soft); border-color: #6ee7b7; color: #065f46; }
+        .chip-saved.chipActive { background: #fff1f2; border-color: #fda4af; color: #9f1239; }
+        [data-theme="dark"] .chip-food.chipActive,
+        [data-theme="dark"] .chip-health.chipActive,
+        [data-theme="dark"] .chip-housing.chipActive,
+        [data-theme="dark"] .chip-utilities.chipActive,
+        [data-theme="dark"] .chip-education.chipActive,
+        [data-theme="dark"] .chip-income.chipActive,
+        [data-theme="dark"] .chip-saved.chipActive { color: #f8fafc; }
 
         /* Buttons */
         .apply {
@@ -10619,6 +10667,22 @@ const categoryCounts = useMemo(() => {
           font-size: 18px;
         }
 
+        .donatePanel {
+          text-align: center;
+          margin-top: 18px;
+          padding: 18px;
+          border-radius: 18px;
+          border: 1px solid #bbf7d0;
+          background: linear-gradient(135deg, #ecfdf5, #eff6ff);
+        }
+        .donatePanel h3 { margin: 0 0 6px; }
+        .donatePanel p { margin: 0 0 12px; color: #475569; }
+        [data-theme="dark"] .donatePanel {
+          background: linear-gradient(135deg, #082f2a, #13213a);
+          border-color: #166534;
+        }
+        [data-theme="dark"] .donatePanel p { color: #cbd5e1; }
+
         /* Cards + grid */
         .grid {
           display: grid;
@@ -10627,15 +10691,38 @@ const categoryCounts = useMemo(() => {
           margin: 16px 0 28px;
         }
         .card {
+          position: relative;
+          overflow: hidden;
           border: 1px solid var(--border);
           background: var(--bg);
           border-radius: 16px;
-          padding: 14px;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+          padding: 16px;
+          box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
           transition: box-shadow 180ms ease, transform 180ms ease, opacity 480ms ease;
           opacity: 0;
           transform: translateY(16px);
         }
+        .card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 5px;
+          background: var(--card-accent, #16a34a);
+        }
+        .card-food { --card-accent: var(--food); background: linear-gradient(180deg, var(--food-soft), var(--bg) 38%); }
+        .card-health { --card-accent: var(--health); background: linear-gradient(180deg, var(--health-soft), var(--bg) 38%); }
+        .card-housing { --card-accent: var(--housing); background: linear-gradient(180deg, var(--housing-soft), var(--bg) 38%); }
+        .card-utilities { --card-accent: var(--utilities); background: linear-gradient(180deg, var(--utilities-soft), var(--bg) 38%); }
+        .card-education { --card-accent: var(--education); background: linear-gradient(180deg, var(--education-soft), var(--bg) 38%); }
+        .card-income { --card-accent: var(--income); background: linear-gradient(180deg, var(--income-soft), var(--bg) 38%); }
+        [data-theme="dark"] .card-food,
+        [data-theme="dark"] .card-health,
+        [data-theme="dark"] .card-housing,
+        [data-theme="dark"] .card-utilities,
+        [data-theme="dark"] .card-education,
+        [data-theme="dark"] .card-income { background: var(--bg); }
         .grid.reveal .card {
           opacity: 1;
           transform: translateY(0);
@@ -10662,6 +10749,18 @@ const categoryCounts = useMemo(() => {
         [data-theme="dark"] .badge {
           color: #cbd5e1;
         }
+        .badge.food { background: var(--food-soft); border-color: #fcd34d; color: #92400e; }
+        .badge.health { background: var(--health-soft); border-color: #fda4af; color: #9f1239; }
+        .badge.housing { background: var(--housing-soft); border-color: #93c5fd; color: #1e40af; }
+        .badge.utilities { background: var(--utilities-soft); border-color: #fde047; color: #854d0e; }
+        .badge.education { background: var(--education-soft); border-color: #c4b5fd; color: #5b21b6; }
+        .badge.income { background: var(--income-soft); border-color: #6ee7b7; color: #065f46; }
+        [data-theme="dark"] .badge.food,
+        [data-theme="dark"] .badge.health,
+        [data-theme="dark"] .badge.housing,
+        [data-theme="dark"] .badge.utilities,
+        [data-theme="dark"] .badge.education,
+        [data-theme="dark"] .badge.income { color: #f8fafc; background: #172033; }
         .cardActions {
           display: flex;
           align-items: center;

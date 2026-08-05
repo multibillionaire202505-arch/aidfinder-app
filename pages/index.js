@@ -158,6 +158,58 @@ const UI = {
   },
 };
 
+/** ===== Hero announcements =====
+ * Keep the main AidFinder message first.
+ * To publish a paid announcement later, add an item with active: true,
+ * sponsored: true, and its official destination URL.
+ */
+const HERO_ANNOUNCEMENTS = {
+  en: [
+    {
+      id: "main",
+      eyebrow: "AidFinder",
+      title: "Find Real Assistance Programs Fast",
+      subtitle: "Discover verified assistance programs across the United States — all in one place.",
+      active: true,
+    },
+    {
+      id: "milestone-1000",
+      eyebrow: "Milestone",
+      title: "1,000 Assistance Programs in One Place",
+      subtitle: "Search food, health, housing, utilities, education, and income resources for free.",
+      active: true,
+    },
+    {
+      id: "always-free",
+      eyebrow: "Our Promise",
+      title: "AidFinder Is Free for Everyone",
+      subtitle: "People searching for assistance will never be charged to use AidFinder.",
+      active: true,
+    },
+    // Paid announcement template — leave inactive until approved and paid.
+    {
+      id: "sponsor-template",
+      eyebrow: "Featured Announcement",
+      title: "Organization announcement goes here",
+      subtitle: "Add a short, accurate description of the opportunity.",
+      url: "https://example.org",
+      cta: "Learn More",
+      sponsored: true,
+      active: false,
+    },
+  ],
+  fr: [
+    { id: "main", eyebrow: "AidFinder", title: "Trouvez facilement des aides", subtitle: "Découvrez des programmes d’aide vérifiés aux États-Unis — au même endroit.", active: true },
+    { id: "milestone-1000", eyebrow: "Étape importante", title: "1 000 programmes d’aide au même endroit", subtitle: "Recherchez gratuitement des ressources d’alimentation, santé, logement, services publics, éducation et revenus.", active: true },
+    { id: "always-free", eyebrow: "Notre promesse", title: "AidFinder est gratuit pour tous", subtitle: "Les personnes recherchant de l’aide ne paieront jamais pour utiliser AidFinder.", active: true },
+  ],
+  es: [
+    { id: "main", eyebrow: "AidFinder", title: "Encuentre Ayuda Fácilmente", subtitle: "Descubra programas de asistencia verificados en Estados Unidos — todo en un solo lugar.", active: true },
+    { id: "milestone-1000", eyebrow: "Hito", title: "1,000 programas de ayuda en un solo lugar", subtitle: "Busque gratis recursos de alimentos, salud, vivienda, servicios, educación e ingresos.", active: true },
+    { id: "always-free", eyebrow: "Nuestra promesa", title: "AidFinder es gratis para todos", subtitle: "Las personas que buscan ayuda nunca pagarán por usar AidFinder.", active: true },
+  ],
+};
+
 /** ===== Category Icons (Health = red cross SVG) ===== */
 const ICONS = {
   Food: "🍏",
@@ -9556,6 +9608,26 @@ const ALL = [
   },
 },
 
+  // ===== PROGRAM 1000: MILESTONE ADDITION =====
+  {
+    category: "Income",
+    link: "https://www.legion.org/get-involved/community-programs/temporary-financial-assistance",
+    i18n: {
+      en: {
+        title: "American Legion Temporary Financial Assistance",
+        desc: "One-time financial grants for eligible military or veteran families with minor children facing hardship.",
+      },
+      fr: {
+        title: "Aide financière temporaire de l’American Legion",
+        desc: "Subventions financières ponctuelles pour familles militaires ou vétéranes admissibles avec enfants mineurs en difficulté.",
+      },
+      es: {
+        title: "Asistencia Financiera Temporal de American Legion",
+        desc: "Subvenciones financieras únicas para familias militares o veteranas elegibles con hijos menores que enfrentan dificultades.",
+      },
+    },
+  },
+
 ];
 
 /** ===== Search helpers (multi-locale, tolerant) ===== */
@@ -9639,6 +9711,32 @@ export default function Home() {
   }, [theme]);
 
   const T = UI[lang];
+
+  // rotating hero announcements
+  const heroItems = useMemo(
+    () => (HERO_ANNOUNCEMENTS[lang] || HERO_ANNOUNCEMENTS.en).filter((item) => item.active),
+    [lang]
+  );
+  const [heroIndex, setHeroIndex] = useState(0);
+  const [heroPaused, setHeroPaused] = useState(false);
+
+  useEffect(() => {
+    setHeroIndex(0);
+  }, [lang]);
+
+  useEffect(() => {
+    if (heroPaused || heroItems.length < 2) return undefined;
+    const timer = window.setInterval(() => {
+      setHeroIndex((current) => (current + 1) % heroItems.length);
+    }, 7000);
+    return () => window.clearInterval(timer);
+  }, [heroItems.length, heroPaused]);
+
+  const heroItem = heroItems[heroIndex] || {
+    eyebrow: T.brand,
+    title: T.title,
+    subtitle: T.subtitle,
+  };
 
   // search, category, state
   const [query, setQuery] = useState("");
@@ -9808,9 +9906,47 @@ const categoryCounts = useMemo(() => {
       {/* Main */}
       <main className="container">
         {/* Hero */}
-        <section className="hero">
-          <h1>{T.title}</h1>
-          <p>{T.subtitle}</p>
+        <section
+          className="hero heroRotator"
+          aria-live="polite"
+          onMouseEnter={() => setHeroPaused(true)}
+          onMouseLeave={() => setHeroPaused(false)}
+          onFocusCapture={() => setHeroPaused(true)}
+          onBlurCapture={() => setHeroPaused(false)}
+        >
+          <div className="heroMessage" key={`${lang}-${heroItem.id || heroIndex}`}>
+            <div className="heroEyebrowRow">
+              <span className="heroEyebrow">{heroItem.eyebrow}</span>
+              {heroItem.sponsored && <span className="sponsoredBadge">Sponsored</span>}
+            </div>
+            <h1>{heroItem.title}</h1>
+            <p>{heroItem.subtitle}</p>
+            {heroItem.url && heroItem.cta && (
+              <a
+                className="heroCta"
+                href={heroItem.url}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+              >
+                {heroItem.cta}
+              </a>
+            )}
+          </div>
+
+          {heroItems.length > 1 && (
+            <div className="heroDots" aria-label="Announcement navigation">
+              {heroItems.map((item, index) => (
+                <button
+                  key={item.id || index}
+                  type="button"
+                  className={`heroDot ${index === heroIndex ? "heroDotActive" : ""}`}
+                  aria-label={`Show announcement ${index + 1}`}
+                  aria-current={index === heroIndex ? "true" : undefined}
+                  onClick={() => setHeroIndex(index)}
+                />
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Toolbar */}
@@ -10213,6 +10349,109 @@ const categoryCounts = useMemo(() => {
         .hero {
           text-align: center;
           padding: 28px 0 8px;
+        }
+        .heroRotator {
+          min-height: 180px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+        }
+        .heroMessage {
+          width: min(820px, 100%);
+          animation: heroFadeUp 0.55s ease both;
+        }
+        .heroEyebrowRow {
+          min-height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          margin-bottom: 8px;
+        }
+        .heroEyebrow,
+        .sponsoredBadge {
+          display: inline-flex;
+          align-items: center;
+          border-radius: 999px;
+          padding: 5px 10px;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+        }
+        .heroEyebrow {
+          background: var(--tint-food, #dcfce7);
+          color: #166534;
+        }
+        .sponsoredBadge {
+          background: #fff7ed;
+          color: #9a3412;
+          border: 1px solid #fed7aa;
+        }
+        [data-theme="dark"] .heroEyebrow {
+          background: #123326;
+          color: #bbf7d0;
+        }
+        [data-theme="dark"] .sponsoredBadge {
+          background: #3b2414;
+          color: #fed7aa;
+          border-color: #7c2d12;
+        }
+        .heroRotator h1 {
+          margin: 0;
+        }
+        .heroRotator p {
+          max-width: 720px;
+          margin: 10px auto 0;
+        }
+        .heroCta {
+          display: inline-flex;
+          margin-top: 16px;
+          padding: 10px 16px;
+          border-radius: 999px;
+          background: #16a34a;
+          color: white;
+          text-decoration: none;
+          font-weight: 800;
+        }
+        .heroCta:hover {
+          background: #15803d;
+          transform: translateY(-1px);
+        }
+        .heroDots {
+          display: flex;
+          justify-content: center;
+          gap: 7px;
+          margin-top: 18px;
+        }
+        .heroDot {
+          width: 8px;
+          height: 8px;
+          border: 0;
+          border-radius: 999px;
+          background: var(--border);
+          padding: 0;
+          cursor: pointer;
+          transition: width 0.2s ease, background 0.2s ease;
+        }
+        .heroDotActive {
+          width: 24px;
+          background: #16a34a;
+        }
+        @keyframes heroFadeUp {
+          from { opacity: 0; transform: translateY(8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .heroMessage { animation: none; }
+          .heroDot { transition: none; }
+        }
+        @media (max-width: 560px) {
+          .heroRotator { min-height: 210px; padding-top: 22px; }
+          .heroRotator h1 { font-size: clamp(28px, 9vw, 42px); }
         }
         .toolbar {
           margin-top: 8px;

@@ -9747,6 +9747,12 @@ export default function Home() {
 
   const T = UI[lang];
 
+  // search, category, state
+  // Keep these state declarations before any effect that reads `cat`.
+  const [query, setQuery] = useState("");
+  const [cat, setCat] = useState("All");
+  const [stateSel, setStateSel] = useState("All States");
+
   // rotating hero announcements
   const heroItems = useMemo(
     () => (HERO_ANNOUNCEMENTS[lang] || HERO_ANNOUNCEMENTS.en).filter((item) => item.active),
@@ -9772,11 +9778,6 @@ export default function Home() {
     title: T.title,
     subtitle: T.subtitle,
   };
-
-  // search, category, state
-  const [query, setQuery] = useState("");
-  const [cat, setCat] = useState("All");
-  const [stateSel, setStateSel] = useState("All States");
 
   const categoryExperience =
     CATEGORY_EXPERIENCE[lang]?.[cat] || CATEGORY_EXPERIENCE.en.All;

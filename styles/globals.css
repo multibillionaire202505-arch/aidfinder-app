@@ -573,11 +573,19 @@ button,input,select{
   pointer-events:none;
 }
  
-/* FIX 3 — stagger animation per card */
+/* FIX 3 — stagger animation per card
+   Previously: transition-delay:calc(var(--i) * 40ms);
+   With 1,000+ programs now in the grid, cards far down the
+   filtered list (e.g. index 500) ended up with multi-second
+   delays (500 * 40ms = 20s), so they stayed dim/invisible if
+   scrolled into view before their delay finished — this is
+   what showed up as "washed out" cards in dark mode.
+   Fix: clamp the multiplier to a max of 20, so no card ever
+   waits more than 20 * 40ms = 800ms, regardless of position. */
 .grid.reveal .card{
   opacity:1;
   transform:translateY(0);
-  transition-delay:calc(var(--i) * 40ms);
+  transition-delay:calc(min(var(--i), 20) * 40ms);
 }
  
 .card:hover{

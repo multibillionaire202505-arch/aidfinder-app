@@ -1649,3 +1649,4 @@ const categoryCounts = useMemo(() => {
   );
 
 }
+

@@ -16854,4 +16854,1474 @@ export const ALL = [
     es: { title: "Guía de Subvenciones para Pequeñas Empresas USA.gov", desc: "Guía del gobierno para encontrar subvenciones y financiamiento para pequeñas empresas." },
   },
 },
+      // ===== PROGRAMS 1830-2005 =====
+
+// FOOD (28)
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/tn",
+  states: ["TN"],
+  i18n: {
+    en: { title: "Tennessee Food Pantries Directory", desc: "County-level directory of food pantries across Tennessee." },
+    fr: { title: "Répertoire garde-manger Tennessee", desc: "Répertoire par comté des garde-manger à travers le Tennessee." },
+    es: { title: "Directorio de Despensas de Tennessee", desc: "Directorio por condado de despensas de alimentos en Tennessee." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/nv",
+  states: ["NV"],
+  i18n: {
+    en: { title: "Nevada Food Pantries Directory", desc: "County-level directory of food pantries across Nevada." },
+    fr: { title: "Répertoire garde-manger Nevada", desc: "Répertoire par comté des garde-manger à travers le Nevada." },
+    es: { title: "Directorio de Despensas de Nevada", desc: "Directorio por condado de despensas de alimentos en Nevada." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/nj",
+  states: ["NJ"],
+  i18n: {
+    en: { title: "New Jersey Food Pantries Directory", desc: "County-level directory of food pantries across New Jersey." },
+    fr: { title: "Répertoire garde-manger New Jersey", desc: "Répertoire par comté des garde-manger à travers le New Jersey." },
+    es: { title: "Directorio de Despensas de Nueva Jersey", desc: "Directorio por condado de despensas de alimentos en Nueva Jersey." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ut",
+  states: ["UT"],
+  i18n: {
+    en: { title: "Utah Food Pantries Directory", desc: "County-level directory of food pantries across Utah." },
+    fr: { title: "Répertoire garde-manger Utah", desc: "Répertoire par comté des garde-manger à travers l'Utah." },
+    es: { title: "Directorio de Despensas de Utah", desc: "Directorio por condado de despensas de alimentos en Utah." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/id",
+  states: ["ID"],
+  i18n: {
+    en: { title: "Idaho Food Pantries Directory", desc: "County-level directory of food pantries across Idaho." },
+    fr: { title: "Répertoire garde-manger Idaho", desc: "Répertoire par comté des garde-manger à travers l'Idaho." },
+    es: { title: "Directorio de Despensas de Idaho", desc: "Directorio por condado de despensas de alimentos en Idaho." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/nm",
+  states: ["NM"],
+  i18n: {
+    en: { title: "New Mexico Food Pantries Directory", desc: "County-level directory of food pantries across New Mexico." },
+    fr: { title: "Répertoire garde-manger Nouveau-Mexique", desc: "Répertoire par comté des garde-manger à travers le Nouveau-Mexique." },
+    es: { title: "Directorio de Despensas de Nuevo México", desc: "Directorio por condado de despensas de alimentos en Nuevo México." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ks",
+  states: ["KS"],
+  i18n: {
+    en: { title: "Kansas Food Pantries Directory", desc: "County-level directory of food pantries across Kansas." },
+    fr: { title: "Répertoire garde-manger Kansas", desc: "Répertoire par comté des garde-manger à travers le Kansas." },
+    es: { title: "Directorio de Despensas de Kansas", desc: "Directorio por condado de despensas de alimentos en Kansas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ar",
+  states: ["AR"],
+  i18n: {
+    en: { title: "Arkansas Food Pantries Directory", desc: "County-level directory of food pantries across Arkansas." },
+    fr: { title: "Répertoire garde-manger Arkansas", desc: "Répertoire par comté des garde-manger à travers l'Arkansas." },
+    es: { title: "Directorio de Despensas de Arkansas", desc: "Directorio por condado de despensas de alimentos en Arkansas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ms",
+  states: ["MS"],
+  i18n: {
+    en: { title: "Mississippi Food Pantries Directory", desc: "County-level directory of food pantries across Mississippi." },
+    fr: { title: "Répertoire garde-manger Mississippi", desc: "Répertoire par comté des garde-manger à travers le Mississippi." },
+    es: { title: "Directorio de Despensas de Mississippi", desc: "Directorio por condado de despensas de alimentos en Mississippi." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ne",
+  states: ["NE"],
+  i18n: {
+    en: { title: "Nebraska Food Pantries Directory", desc: "County-level directory of food pantries across Nebraska." },
+    fr: { title: "Répertoire garde-manger Nebraska", desc: "Répertoire par comté des garde-manger à travers le Nebraska." },
+    es: { title: "Directorio de Despensas de Nebraska", desc: "Directorio por condado de despensas de alimentos en Nebraska." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/wv",
+  states: ["WV"],
+  i18n: {
+    en: { title: "West Virginia Food Pantries Directory", desc: "County-level directory of food pantries across West Virginia." },
+    fr: { title: "Répertoire garde-manger Virginie-Occidentale", desc: "Répertoire par comté des garde-manger à travers la Virginie-Occidentale." },
+    es: { title: "Directorio de Despensas de Virginia Occidental", desc: "Directorio por condado de despensas de alimentos en Virginia Occidental." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/me",
+  states: ["ME"],
+  i18n: {
+    en: { title: "Maine Food Pantries Directory", desc: "County-level directory of food pantries across Maine." },
+    fr: { title: "Répertoire garde-manger Maine", desc: "Répertoire par comté des garde-manger à travers le Maine." },
+    es: { title: "Directorio de Despensas de Maine", desc: "Directorio por condado de despensas de alimentos en Maine." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/nh",
+  states: ["NH"],
+  i18n: {
+    en: { title: "New Hampshire Food Pantries Directory", desc: "County-level directory of food pantries across New Hampshire." },
+    fr: { title: "Répertoire garde-manger New Hampshire", desc: "Répertoire par comté des garde-manger à travers le New Hampshire." },
+    es: { title: "Directorio de Despensas de New Hampshire", desc: "Directorio por condado de despensas de alimentos en New Hampshire." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ri",
+  states: ["RI"],
+  i18n: {
+    en: { title: "Rhode Island Food Pantries Directory", desc: "County-level directory of food pantries across Rhode Island." },
+    fr: { title: "Répertoire garde-manger Rhode Island", desc: "Répertoire par comté des garde-manger à travers Rhode Island." },
+    es: { title: "Directorio de Despensas de Rhode Island", desc: "Directorio por condado de despensas de alimentos en Rhode Island." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/de",
+  states: ["DE"],
+  i18n: {
+    en: { title: "Delaware Food Pantries Directory", desc: "County-level directory of food pantries across Delaware." },
+    fr: { title: "Répertoire garde-manger Delaware", desc: "Répertoire par comté des garde-manger à travers le Delaware." },
+    es: { title: "Directorio de Despensas de Delaware", desc: "Directorio por condado de despensas de alimentos en Delaware." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/vt",
+  states: ["VT"],
+  i18n: {
+    en: { title: "Vermont Food Pantries Directory", desc: "County-level directory of food pantries across Vermont." },
+    fr: { title: "Répertoire garde-manger Vermont", desc: "Répertoire par comté des garde-manger à travers le Vermont." },
+    es: { title: "Directorio de Despensas de Vermont", desc: "Directorio por condado de despensas de alimentos en Vermont." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/mt",
+  states: ["MT"],
+  i18n: {
+    en: { title: "Montana Food Pantries Directory", desc: "County-level directory of food pantries across Montana." },
+    fr: { title: "Répertoire garde-manger Montana", desc: "Répertoire par comté des garde-manger à travers le Montana." },
+    es: { title: "Directorio de Despensas de Montana", desc: "Directorio por condado de despensas de alimentos en Montana." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/wy",
+  states: ["WY"],
+  i18n: {
+    en: { title: "Wyoming Food Pantries Directory", desc: "County-level directory of food pantries across Wyoming." },
+    fr: { title: "Répertoire garde-manger Wyoming", desc: "Répertoire par comté des garde-manger à travers le Wyoming." },
+    es: { title: "Directorio de Despensas de Wyoming", desc: "Directorio por condado de despensas de alimentos en Wyoming." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/nd",
+  states: ["ND"],
+  i18n: {
+    en: { title: "North Dakota Food Pantries Directory", desc: "County-level directory of food pantries across North Dakota." },
+    fr: { title: "Répertoire garde-manger Dakota du Nord", desc: "Répertoire par comté des garde-manger à travers le Dakota du Nord." },
+    es: { title: "Directorio de Despensas de Dakota del Norte", desc: "Directorio por condado de despensas de alimentos en Dakota del Norte." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/sd",
+  states: ["SD"],
+  i18n: {
+    en: { title: "South Dakota Food Pantries Directory", desc: "County-level directory of food pantries across South Dakota." },
+    fr: { title: "Répertoire garde-manger Dakota du Sud", desc: "Répertoire par comté des garde-manger à travers le Dakota du Sud." },
+    es: { title: "Directorio de Despensas de Dakota del Sur", desc: "Directorio por condado de despensas de alimentos en Dakota del Sur." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ak",
+  states: ["AK"],
+  i18n: {
+    en: { title: "Alaska Food Pantries Directory", desc: "Borough-level directory of food pantries across Alaska." },
+    fr: { title: "Répertoire garde-manger Alaska", desc: "Répertoire par arrondissement des garde-manger à travers l'Alaska." },
+    es: { title: "Directorio de Despensas de Alaska", desc: "Directorio por distrito de despensas de alimentos en Alaska." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/hi",
+  states: ["HI"],
+  i18n: {
+    en: { title: "Hawaii Food Pantries Directory", desc: "County-level directory of food pantries across Hawaii." },
+    fr: { title: "Répertoire garde-manger Hawaï", desc: "Répertoire par comté des garde-manger à travers Hawaï." },
+    es: { title: "Directorio de Despensas de Hawái", desc: "Directorio por condado de despensas de alimentos en Hawái." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.hawaiifoodbank.org",
+  states: ["HI"],
+  i18n: {
+    en: { title: "Hawaii Foodbank", desc: "Statewide food bank network serving communities across the Hawaiian islands." },
+    fr: { title: "Hawaii Foodbank", desc: "Réseau alimentaire à l'échelle de l'État desservant les communautés des îles hawaïennes." },
+    es: { title: "Hawaii Foodbank", desc: "Red estatal de banco de alimentos que sirve a comunidades de las islas hawaianas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodbankalaska.org",
+  states: ["AK"],
+  i18n: {
+    en: { title: "Food Bank of Alaska", desc: "Statewide food bank network distributing food across remote Alaska communities." },
+    fr: { title: "Food Bank of Alaska", desc: "Réseau alimentaire à l'échelle de l'État distribuant de la nourriture dans les communautés reculées." },
+    es: { title: "Food Bank of Alaska", desc: "Red estatal de banco de alimentos que distribuye comida en comunidades remotas de Alaska." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.mtfoodbanknetwork.org",
+  states: ["MT"],
+  i18n: {
+    en: { title: "Montana Food Bank Network", desc: "Statewide food bank network distributing food across Montana communities." },
+    fr: { title: "Montana Food Bank Network", desc: "Réseau alimentaire à l'échelle de l'État distribuant de la nourriture dans le Montana." },
+    es: { title: "Montana Food Bank Network", desc: "Red estatal de banco de alimentos que distribuye comida en comunidades de Montana." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.wyomingfoodbank.org",
+  states: ["WY"],
+  i18n: {
+    en: { title: "Wyoming Food Bank of the Rockies", desc: "Regional food bank network serving communities across Wyoming." },
+    fr: { title: "Wyoming Food Bank of the Rockies", desc: "Réseau régional de banque alimentaire desservant les communautés du Wyoming." },
+    es: { title: "Wyoming Food Bank of the Rockies", desc: "Red regional de banco de alimentos que sirve a comunidades de Wyoming." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.greatplainsfoodbank.org",
+  states: ["ND", "SD"],
+  i18n: {
+    en: { title: "Great Plains Food Bank", desc: "Regional food bank network serving North Dakota and South Dakota communities." },
+    fr: { title: "Great Plains Food Bank", desc: "Réseau régional de banque alimentaire desservant le Dakota du Nord et du Sud." },
+    es: { title: "Great Plains Food Bank", desc: "Red regional de banco de alimentos que sirve a Dakota del Norte y del Sur." },
+  },
+},
+
+// HEALTH (35)
+{
+  category: "Health",
+  link: "https://www.va.gov/health-care/about-va-health-benefits/lgbtq-health-program/",
+  i18n: {
+    en: { title: "VA LGBTQ+ Health Program", desc: "Federal health program specifically supporting LGBTQ+ veterans." },
+    fr: { title: "Programme santé LGBTQ+ VA", desc: "Programme de santé fédéral soutenant spécifiquement les vétérans LGBTQ+." },
+    es: { title: "Programa de Salud LGBTQ+ VA", desc: "Programa de salud federal que apoya específicamente a veteranos LGBTQ+." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.lgbtagingcenter.org",
+  i18n: {
+    en: { title: "National Resource Center on LGBT Aging", desc: "Resources supporting the health and wellbeing of LGBTQ+ older adults." },
+    fr: { title: "Centre national ressources vieillissement LGBT", desc: "Ressources soutenant la santé et le bien-être des aînés LGBTQ+." },
+    es: { title: "Centro Nacional de Recursos sobre Envejecimiento LGBT", desc: "Recursos que apoyan la salud y bienestar de adultos mayores LGBTQ+." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.sageusa.org",
+  i18n: {
+    en: { title: "SAGE (Services and Advocacy for GLBT Elders)", desc: "Support services and advocacy specifically for LGBTQ+ older adults." },
+    fr: { title: "SAGE (Services et plaidoyer pour aînés GLBT)", desc: "Services de soutien et plaidoyer spécifiquement pour aînés LGBTQ+." },
+    es: { title: "SAGE (Servicios y Defensa para Mayores GLBT)", desc: "Servicios de apoyo y defensa específicamente para adultos mayores LGBTQ+." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.pflag.org",
+  i18n: {
+    en: { title: "PFLAG", desc: "Support, education, and advocacy resources for LGBTQ+ people and their families." },
+    fr: { title: "PFLAG", desc: "Ressources de soutien, d'éducation et de plaidoyer pour personnes LGBTQ+ et leurs familles." },
+    es: { title: "PFLAG", desc: "Recursos de apoyo, educación y defensa para personas LGBTQ+ y sus familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hrc.org/resources",
+  i18n: {
+    en: { title: "Human Rights Campaign Resources", desc: "Health and wellbeing resources supporting the LGBTQ+ community." },
+    fr: { title: "Ressources Human Rights Campaign", desc: "Ressources de santé et de bien-être soutenant la communauté LGBTQ+." },
+    es: { title: "Recursos Human Rights Campaign", desc: "Recursos de salud y bienestar que apoyan a la comunidad LGBTQ+." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.thetrevorproject.org/resources",
+  i18n: {
+    en: { title: "Trevor Project Resource Library", desc: "Mental health resources specifically for LGBTQ+ young people." },
+    fr: { title: "Bibliothèque ressources Trevor Project", desc: "Ressources de santé mentale spécifiquement pour jeunes LGBTQ+." },
+    es: { title: "Biblioteca de Recursos Trevor Project", desc: "Recursos de salud mental específicamente para jóvenes LGBTQ+." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.translifeline.org",
+  i18n: {
+    en: { title: "Trans Lifeline", desc: "Peer support hotline run by and for transgender people." },
+    fr: { title: "Trans Lifeline", desc: "Ligne d'assistance par les pairs gérée par et pour les personnes transgenres." },
+    es: { title: "Trans Lifeline", desc: "Línea de apoyo entre pares gestionada por y para personas transgénero." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.wpath.org/resources",
+  i18n: {
+    en: { title: "World Professional Association for Transgender Health", desc: "Professional standards and resources for transgender health care." },
+    fr: { title: "World Professional Association for Transgender Health", desc: "Normes professionnelles et ressources pour les soins de santé transgenres." },
+    es: { title: "World Professional Association for Transgender Health", desc: "Normas profesionales y recursos para atención médica transgénero." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.plannedparenthood.org/learn/transgender-services",
+  i18n: {
+    en: { title: "Planned Parenthood Transgender Services", desc: "Gender-affirming health care services and information from Planned Parenthood." },
+    fr: { title: "Services transgenres Planned Parenthood", desc: "Services de soins de santé affirmatifs du genre et informations de Planned Parenthood." },
+    es: { title: "Servicios Transgénero Planned Parenthood", desc: "Servicios de atención médica afirmativa de género e información de Planned Parenthood." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.pointoflight.org",
+  i18n: {
+    en: { title: "Point of Light Health Access Programs", desc: "Community health volunteer programs improving local health access." },
+    fr: { title: "Programmes accès santé Point of Light", desc: "Programmes bénévoles de santé communautaire améliorant l'accès local à la santé." },
+    es: { title: "Programas de Acceso a la Salud Point of Light", desc: "Programas voluntarios de salud comunitaria que mejoran el acceso local a la salud." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.rotary.org/en/our-causes/fighting-disease",
+  i18n: {
+    en: { title: "Rotary Fighting Disease Programs", desc: "Community health initiatives supporting disease prevention and treatment access." },
+    fr: { title: "Programmes lutte contre les maladies Rotary", desc: "Initiatives de santé communautaire soutenant la prévention et le traitement des maladies." },
+    es: { title: "Programas de Lucha contra Enfermedades Rotary", desc: "Iniciativas de salud comunitaria que apoyan la prevención y tratamiento de enfermedades." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.lionsclubs.org/en/our-causes/diabetes",
+  i18n: {
+    en: { title: "Lions Clubs Diabetes Programs", desc: "Community programs supporting diabetes awareness and access to care." },
+    fr: { title: "Programmes diabète Lions Clubs", desc: "Programmes communautaires soutenant la sensibilisation au diabète et l'accès aux soins." },
+    es: { title: "Programas de Diabetes Lions Clubs", desc: "Programas comunitarios que apoyan la concientización sobre diabetes y acceso a atención." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.lionsclubs.org/en/our-causes/vision",
+  i18n: {
+    en: { title: "Lions Clubs Vision Programs", desc: "Community programs providing eye exams and glasses for people in need." },
+    fr: { title: "Programmes vision Lions Clubs", desc: "Programmes communautaires offrant examens de la vue et lunettes pour personnes dans le besoin." },
+    es: { title: "Programas de Visión Lions Clubs", desc: "Programas comunitarios que ofrecen exámenes de la vista y anteojos para personas necesitadas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.kiwanis.org/who-we-are/our-impact/health",
+  i18n: {
+    en: { title: "Kiwanis Health Impact Programs", desc: "Community health initiatives improving child and family wellbeing." },
+    fr: { title: "Programmes impact santé Kiwanis", desc: "Initiatives de santé communautaire améliorant le bien-être des enfants et familles." },
+    es: { title: "Programas de Impacto en Salud Kiwanis", desc: "Iniciativas de salud comunitaria que mejoran el bienestar de niños y familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.jaycees.org",
+  i18n: {
+    en: { title: "Junior Chamber International USA", desc: "Community service organization supporting local health and wellness initiatives." },
+    fr: { title: "Junior Chamber International USA", desc: "Organisation de service communautaire soutenant les initiatives de santé locales." },
+    es: { title: "Junior Chamber International USA", desc: "Organización de servicio comunitario que apoya iniciativas locales de salud y bienestar." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.elks.org/comm/health",
+  i18n: {
+    en: { title: "Elks Community Health Programs", desc: "Local Elks lodges offering community health support and resources." },
+    fr: { title: "Programmes santé communautaire Elks", desc: "Loges Elks locales offrant soutien et ressources de santé communautaire." },
+    es: { title: "Programas de Salud Comunitaria Elks", desc: "Logias Elks locales que ofrecen apoyo y recursos de salud comunitaria." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.shrinershospitalsforchildren.org",
+  i18n: {
+    en: { title: "Shriners Hospitals for Children", desc: "Free specialized pediatric medical care regardless of family's ability to pay." },
+    fr: { title: "Shriners Hospitals for Children", desc: "Soins médicaux pédiatriques spécialisés gratuits, quelle que soit la capacité de payer." },
+    es: { title: "Shriners Hospitals for Children", desc: "Atención médica pediátrica especializada gratuita, sin importar la capacidad de pago." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.stjude.org",
+  i18n: {
+    en: { title: "St. Jude Children's Research Hospital", desc: "Free treatment for children with cancer and other life-threatening diseases." },
+    fr: { title: "St. Jude Children's Research Hospital", desc: "Traitement gratuit pour enfants atteints de cancer et autres maladies graves." },
+    es: { title: "St. Jude Children's Research Hospital", desc: "Tratamiento gratuito para niños con cáncer y otras enfermedades graves." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.chop.edu/centers-programs/financial-assistance-program",
+  i18n: {
+    en: { title: "Children's Hospital Financial Assistance Programs", desc: "Example of a children's hospital financial assistance program for families." },
+    fr: { title: "Programmes aide financière hôpital enfants", desc: "Exemple de programme d'aide financière d'hôpital pour enfants pour familles." },
+    es: { title: "Programas de Asistencia Financiera de Hospital Infantil", desc: "Ejemplo de programa de asistencia financiera de hospital infantil para familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.chla.org/patients-and-families/financial-assistance",
+  states: ["CA"],
+  i18n: {
+    en: { title: "Children's Hospital LA Financial Assistance", desc: "Financial assistance program for families at Children's Hospital Los Angeles." },
+    fr: { title: "Aide financière Children's Hospital LA", desc: "Programme d'aide financière pour familles à l'hôpital pour enfants de Los Angeles." },
+    es: { title: "Asistencia Financiera Children's Hospital LA", desc: "Programa de asistencia financiera para familias en el Hospital Infantil de Los Ángeles." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.chop.edu",
+  states: ["PA"],
+  i18n: {
+    en: { title: "Children's Hospital of Philadelphia", desc: "Pediatric hospital offering financial assistance programs for eligible families." },
+    fr: { title: "Children's Hospital of Philadelphia", desc: "Hôpital pédiatrique offrant des programmes d'aide financière pour familles admissibles." },
+    es: { title: "Children's Hospital of Philadelphia", desc: "Hospital pediátrico que ofrece programas de asistencia financiera para familias elegibles." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.texaschildrens.org/patients-and-families/financial-services",
+  states: ["TX"],
+  i18n: {
+    en: { title: "Texas Children's Hospital Financial Services", desc: "Financial assistance program information for families at Texas Children's Hospital." },
+    fr: { title: "Services financiers Texas Children's Hospital", desc: "Informations sur le programme d'aide financière pour familles au Texas Children's Hospital." },
+    es: { title: "Servicios Financieros Texas Children's Hospital", desc: "Información del programa de asistencia financiera para familias en Texas Children's Hospital." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.seattlechildrens.org/patients-families/financial-assistance/",
+  states: ["WA"],
+  i18n: {
+    en: { title: "Seattle Children's Financial Assistance", desc: "Financial assistance program for families at Seattle Children's Hospital." },
+    fr: { title: "Aide financière Seattle Children's", desc: "Programme d'aide financière pour familles au Seattle Children's Hospital." },
+    es: { title: "Asistencia Financiera Seattle Children's", desc: "Programa de asistencia financiera para familias en Seattle Children's Hospital." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.luriechildrens.org/en/patients-families/billing-insurance/financial-assistance/",
+  states: ["IL"],
+  i18n: {
+    en: { title: "Lurie Children's Financial Assistance", desc: "Financial assistance program for families at Lurie Children's Hospital of Chicago." },
+    fr: { title: "Aide financière Lurie Children's", desc: "Programme d'aide financière pour familles au Lurie Children's Hospital de Chicago." },
+    es: { title: "Asistencia Financiera Lurie Children's", desc: "Programa de asistencia financiera para familias en Lurie Children's Hospital de Chicago." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.childrenshospital.org/patient-resources/billing-insurance/financial-assistance-program",
+  states: ["MA"],
+  i18n: {
+    en: { title: "Boston Children's Financial Assistance", desc: "Financial assistance program for families at Boston Children's Hospital." },
+    fr: { title: "Aide financière Boston Children's", desc: "Programme d'aide financière pour familles au Boston Children's Hospital." },
+    es: { title: "Asistencia Financiera Boston Children's", desc: "Programa de asistencia financiera para familias en Boston Children's Hospital." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.chop.edu/centers-programs/global-health-center",
+  i18n: {
+    en: { title: "Global Health Equity Resources", desc: "Resources connecting immigrant and refugee families to pediatric health equity programs." },
+    fr: { title: "Ressources équité santé mondiale", desc: "Ressources reliant familles immigrantes et réfugiées aux programmes d'équité en santé pédiatrique." },
+    es: { title: "Recursos de Equidad en Salud Global", desc: "Recursos que conectan a familias inmigrantes y refugiadas con programas de equidad en salud pediátrica." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cmnhospitals.org",
+  i18n: {
+    en: { title: "Children's Miracle Network Hospitals", desc: "Network of 170+ children's hospitals providing care regardless of family's ability to pay." },
+    fr: { title: "Children's Miracle Network Hospitals", desc: "Réseau de plus de 170 hôpitaux pour enfants offrant des soins sans égard à la capacité de payer." },
+    es: { title: "Children's Miracle Network Hospitals", desc: "Red de más de 170 hospitales infantiles que brindan atención sin importar la capacidad de pago." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ronaldmcdonaldhouse.org/find-a-chapter",
+  i18n: {
+    en: { title: "Ronald McDonald House Chapter Finder", desc: "Directory to find local Ronald McDonald House chapters near hospitals." },
+    fr: { title: "Recherche chapitre Ronald McDonald House", desc: "Répertoire pour trouver des chapitres locaux du Manoir Ronald McDonald près des hôpitaux." },
+    es: { title: "Buscador de Capítulos Ronald McDonald House", desc: "Directorio para encontrar capítulos locales de la Casa Ronald McDonald cerca de hospitales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.familyhousehq.org",
+  i18n: {
+    en: { title: "Family House", desc: "Free lodging for families of children receiving medical treatment away from home." },
+    fr: { title: "Family House", desc: "Hébergement gratuit pour familles d'enfants recevant un traitement médical loin de chez eux." },
+    es: { title: "Family House", desc: "Alojamiento gratuito para familias de niños que reciben tratamiento médico lejos de casa." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hopelodge.org",
+  i18n: {
+    en: { title: "American Cancer Society Hope Lodge", desc: "Free lodging for cancer patients traveling for treatment and their caregivers." },
+    fr: { title: "Hope Lodge American Cancer Society", desc: "Hébergement gratuit pour patients cancéreux voyageant pour traitement et leurs aidants." },
+    es: { title: "Hope Lodge American Cancer Society", desc: "Alojamiento gratuito para pacientes de cáncer que viajan para tratamiento y sus cuidadores." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hcsn.org",
+  i18n: {
+    en: { title: "Healthcare Hospitality Network", desc: "Directory of nonprofit lodging houses for patients and families near medical care." },
+    fr: { title: "Healthcare Hospitality Network", desc: "Répertoire de maisons d'hébergement à but non lucratif pour patients et familles." },
+    es: { title: "Healthcare Hospitality Network", desc: "Directorio de casas de alojamiento sin fines de lucro para pacientes y familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.airliftline.org",
+  i18n: {
+    en: { title: "Airlift Line", desc: "Free volunteer pilot flights for patients traveling for medical treatment." },
+    fr: { title: "Airlift Line", desc: "Vols de pilotes bénévoles gratuits pour patients voyageant pour traitement médical." },
+    es: { title: "Airlift Line", desc: "Vuelos gratuitos de pilotos voluntarios para pacientes que viajan para tratamiento médico." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.angelflight.org",
+  i18n: {
+    en: { title: "Angel Flight", desc: "Free volunteer pilot medical transportation for patients in need." },
+    fr: { title: "Angel Flight", desc: "Transport médical gratuit par pilotes bénévoles pour patients dans le besoin." },
+    es: { title: "Angel Flight", desc: "Transporte médico gratuito por pilotos voluntarios para pacientes necesitados." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.mercymedical.org",
+  i18n: {
+    en: { title: "Mercy Medical Angels", desc: "Free medical transportation coordination for patients unable to afford travel to care." },
+    fr: { title: "Mercy Medical Angels", desc: "Coordination de transport médical gratuit pour patients incapables de payer les déplacements." },
+    es: { title: "Mercy Medical Angels", desc: "Coordinación de transporte médico gratuito para pacientes que no pueden pagar viajes a atención." },
+  },
+},
+
+// HOUSING (30)
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/hawaii",
+  states: ["HI"],
+  i18n: {
+    en: { title: "HUD Hawaii Resources", desc: "Federal housing resources specific to Hawaii." },
+    fr: { title: "Ressources HUD Hawaï", desc: "Ressources fédérales de logement pour Hawaï." },
+    es: { title: "Recursos HUD de Hawái", desc: "Recursos federales de vivienda para Hawái." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/alaska",
+  states: ["AK"],
+  i18n: {
+    en: { title: "HUD Alaska Resources", desc: "Federal housing resources specific to Alaska." },
+    fr: { title: "Ressources HUD Alaska", desc: "Ressources fédérales de logement pour l'Alaska." },
+    es: { title: "Recursos HUD de Alaska", desc: "Recursos federales de vivienda para Alaska." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/montana",
+  states: ["MT"],
+  i18n: {
+    en: { title: "HUD Montana Resources", desc: "Federal housing resources specific to Montana." },
+    fr: { title: "Ressources HUD Montana", desc: "Ressources fédérales de logement pour le Montana." },
+    es: { title: "Recursos HUD de Montana", desc: "Recursos federales de vivienda para Montana." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/wyoming",
+  states: ["WY"],
+  i18n: {
+    en: { title: "HUD Wyoming Resources", desc: "Federal housing resources specific to Wyoming." },
+    fr: { title: "Ressources HUD Wyoming", desc: "Ressources fédérales de logement pour le Wyoming." },
+    es: { title: "Recursos HUD de Wyoming", desc: "Recursos federales de vivienda para Wyoming." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/north_dakota",
+  states: ["ND"],
+  i18n: {
+    en: { title: "HUD North Dakota Resources", desc: "Federal housing resources specific to North Dakota." },
+    fr: { title: "Ressources HUD Dakota du Nord", desc: "Ressources fédérales de logement pour le Dakota du Nord." },
+    es: { title: "Recursos HUD de Dakota del Norte", desc: "Recursos federales de vivienda para Dakota del Norte." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/south_dakota",
+  states: ["SD"],
+  i18n: {
+    en: { title: "HUD South Dakota Resources", desc: "Federal housing resources specific to South Dakota." },
+    fr: { title: "Ressources HUD Dakota du Sud", desc: "Ressources fédérales de logement pour le Dakota du Sud." },
+    es: { title: "Recursos HUD de Dakota del Sur", desc: "Recursos federales de vivienda para Dakota del Sur." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/rhode_island",
+  states: ["RI"],
+  i18n: {
+    en: { title: "HUD Rhode Island Resources", desc: "Federal housing resources specific to Rhode Island." },
+    fr: { title: "Ressources HUD Rhode Island", desc: "Ressources fédérales de logement pour Rhode Island." },
+    es: { title: "Recursos HUD de Rhode Island", desc: "Recursos federales de vivienda para Rhode Island." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/delaware",
+  states: ["DE"],
+  i18n: {
+    en: { title: "HUD Delaware Resources", desc: "Federal housing resources specific to Delaware." },
+    fr: { title: "Ressources HUD Delaware", desc: "Ressources fédérales de logement pour le Delaware." },
+    es: { title: "Recursos HUD de Delaware", desc: "Recursos federales de vivienda para Delaware." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/vermont",
+  states: ["VT"],
+  i18n: {
+    en: { title: "HUD Vermont Resources", desc: "Federal housing resources specific to Vermont." },
+    fr: { title: "Ressources HUD Vermont", desc: "Ressources fédérales de logement pour le Vermont." },
+    es: { title: "Recursos HUD de Vermont", desc: "Recursos federales de vivienda para Vermont." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.dbedt.hawaii.gov/hhfdc",
+  states: ["HI"],
+  i18n: {
+    en: { title: "Hawaii Housing Finance and Development Corporation", desc: "State agency offering affordable home loans for Hawaii residents." },
+    fr: { title: "Hawaii Housing Finance and Development Corporation", desc: "Agence d'État offrant des prêts immobiliers abordables à Hawaï." },
+    es: { title: "Hawaii Housing Finance and Development Corporation", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Hawái." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.ahfc.us",
+  states: ["AK"],
+  i18n: {
+    en: { title: "Alaska Housing Finance Corporation", desc: "State agency offering affordable home loans for Alaska residents." },
+    fr: { title: "Alaska Housing Finance Corporation", desc: "Agence d'État offrant des prêts immobiliers abordables en Alaska." },
+    es: { title: "Alaska Housing Finance Corporation", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Alaska." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.housing.mt.gov",
+  states: ["MT"],
+  i18n: {
+    en: { title: "Montana Board of Housing", desc: "State agency offering affordable home loans for Montana residents." },
+    fr: { title: "Montana Board of Housing", desc: "Agence d'État offrant des prêts immobiliers abordables au Montana." },
+    es: { title: "Montana Board of Housing", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Montana." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.wyomingcda.com",
+  states: ["WY"],
+  i18n: {
+    en: { title: "Wyoming Community Development Authority", desc: "State agency offering affordable home loans for Wyoming residents." },
+    fr: { title: "Wyoming Community Development Authority", desc: "Agence d'État offrant des prêts immobiliers abordables au Wyoming." },
+    es: { title: "Wyoming Community Development Authority", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Wyoming." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.ndhfa.org",
+  states: ["ND"],
+  i18n: {
+    en: { title: "North Dakota Housing Finance Agency", desc: "State agency offering affordable home loans for North Dakota residents." },
+    fr: { title: "North Dakota Housing Finance Agency", desc: "Agence d'État offrant des prêts immobiliers abordables au Dakota du Nord." },
+    es: { title: "North Dakota Housing Finance Agency", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Dakota del Norte." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.sdhda.org",
+  states: ["SD"],
+  i18n: {
+    en: { title: "South Dakota Housing Development Authority", desc: "State agency offering affordable home loans for South Dakota residents." },
+    fr: { title: "South Dakota Housing Development Authority", desc: "Agence d'État offrant des prêts immobiliers abordables au Dakota du Sud." },
+    es: { title: "South Dakota Housing Development Authority", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Dakota del Sur." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rihousing.com",
+  states: ["RI"],
+  i18n: {
+    en: { title: "RIHousing", desc: "State agency offering affordable home loans for Rhode Island residents." },
+    fr: { title: "RIHousing", desc: "Agence d'État offrant des prêts immobiliers abordables à Rhode Island." },
+    es: { title: "RIHousing", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Rhode Island." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.destatehousing.com",
+  states: ["DE"],
+  i18n: {
+    en: { title: "Delaware State Housing Authority", desc: "State agency offering affordable home loans for Delaware residents." },
+    fr: { title: "Delaware State Housing Authority", desc: "Agence d'État offrant des prêts immobiliers abordables au Delaware." },
+    es: { title: "Delaware State Housing Authority", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Delaware." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.vhfa.org",
+  states: ["VT"],
+  i18n: {
+    en: { title: "Vermont Housing Finance Agency", desc: "State agency offering affordable home loans for Vermont residents." },
+    fr: { title: "Vermont Housing Finance Agency", desc: "Agence d'État offrant des prêts immobiliers abordables au Vermont." },
+    es: { title: "Vermont Housing Finance Agency", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Vermont." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.icrc.hawaii.gov",
+  states: ["HI"],
+  i18n: {
+    en: { title: "Hawaii Civil Rights Commission Housing Discrimination", desc: "State agency handling housing discrimination complaints in Hawaii." },
+    fr: { title: "Discrimination logement Hawaii Civil Rights Commission", desc: "Agence d'État traitant les plaintes de discrimination au logement à Hawaï." },
+    es: { title: "Discriminación de Vivienda Hawaii Civil Rights Commission", desc: "Agencia estatal que maneja quejas de discriminación de vivienda en Hawái." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.commerce.alaska.gov/web/cra/",
+  states: ["AK"],
+  i18n: {
+    en: { title: "Alaska Division of Community and Regional Affairs", desc: "State agency supporting rural and remote community housing development." },
+    fr: { title: "Alaska Division of Community and Regional Affairs", desc: "Agence d'État soutenant le développement du logement rural et éloigné." },
+    es: { title: "Alaska Division of Community and Regional Affairs", desc: "Agencia estatal que apoya el desarrollo de vivienda rural y remota." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rd.usda.gov/programs-services/single-family-housing-programs/single-family-housing-guaranteed-loan-program/ak",
+  states: ["AK"],
+  i18n: {
+    en: { title: "USDA Rural Housing Alaska Info", desc: "Federal rural housing loan program information specific to Alaska villages." },
+    fr: { title: "Info logement rural USDA Alaska", desc: "Informations sur le programme de prêt logement rural spécifique aux villages d'Alaska." },
+    es: { title: "Información de Vivienda Rural USDA Alaska", desc: "Información del programa de préstamos de vivienda rural específico para aldeas de Alaska." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.anthc.org/what-we-do/housing/",
+  states: ["AK"],
+  i18n: {
+    en: { title: "Alaska Native Tribal Health Consortium Housing", desc: "Housing and infrastructure programs for Alaska Native villages." },
+    fr: { title: "Logement Alaska Native Tribal Health Consortium", desc: "Programmes de logement et d'infrastructure pour villages autochtones d'Alaska." },
+    es: { title: "Vivienda Alaska Native Tribal Health Consortium", desc: "Programas de vivienda e infraestructura para aldeas nativas de Alaska." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hawaiianhomelands.org",
+  states: ["HI"],
+  i18n: {
+    en: { title: "Hawaiian Homelands Program", desc: "Federal-state program providing homestead leases for eligible Native Hawaiians." },
+    fr: { title: "Programme Hawaiian Homelands", desc: "Programme fédéral-étatique offrant des baux de propriété pour Hawaïens autochtones admissibles." },
+    es: { title: "Programa Hawaiian Homelands", desc: "Programa federal-estatal que ofrece arrendamientos de propiedad para nativos hawaianos elegibles." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/puerto_rico",
+  states: ["PR"],
+  i18n: {
+    en: { title: "HUD Puerto Rico Resources", desc: "Federal housing resources specific to Puerto Rico." },
+    fr: { title: "Ressources HUD Porto Rico", desc: "Ressources fédérales de logement pour Porto Rico." },
+    es: { title: "Recursos HUD de Puerto Rico", desc: "Recursos federales de vivienda para Puerto Rico." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.vivienda.pr.gov",
+  states: ["PR"],
+  i18n: {
+    en: { title: "Puerto Rico Housing Department", desc: "Territory housing agency offering affordable housing programs for Puerto Rico residents." },
+    fr: { title: "Puerto Rico Housing Department", desc: "Agence de logement territoriale offrant des programmes abordables pour résidents de Porto Rico." },
+    es: { title: "Departamento de Vivienda de Puerto Rico", desc: "Agencia de vivienda territorial que ofrece programas asequibles para residentes de Puerto Rico." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/guam",
+  states: ["GU"],
+  i18n: {
+    en: { title: "HUD Guam Resources", desc: "Federal housing resources specific to Guam." },
+    fr: { title: "Ressources HUD Guam", desc: "Ressources fédérales de logement pour Guam." },
+    es: { title: "Recursos HUD de Guam", desc: "Recursos federales de vivienda para Guam." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/virgin_islands",
+  states: ["VI"],
+  i18n: {
+    en: { title: "HUD US Virgin Islands Resources", desc: "Federal housing resources specific to the US Virgin Islands." },
+    fr: { title: "Ressources HUD Îles Vierges américaines", desc: "Ressources fédérales de logement pour les îles Vierges américaines." },
+    es: { title: "Recursos HUD de las Islas Vírgenes de EE.UU.", desc: "Recursos federales de vivienda para las Islas Vírgenes de EE.UU." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/public_indian_housing/programs/ph/homeownership",
+  i18n: {
+    en: { title: "Public Housing Homeownership Program", desc: "Federal program allowing eligible public housing residents to purchase their homes." },
+    fr: { title: "Programme accession propriété logement public", desc: "Programme fédéral permettant aux résidents admissibles du logement public d'acheter leur maison." },
+    es: { title: "Programa de Propiedad de Vivienda Pública", desc: "Programa federal que permite a residentes elegibles de vivienda pública comprar sus casas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/rental_assistance/mtw",
+  i18n: {
+    en: { title: "Moving to Work Demonstration Program", desc: "Federal program giving housing authorities flexibility to design innovative programs." },
+    fr: { title: "Programme démonstration Moving to Work", desc: "Programme fédéral donnant aux autorités de logement la flexibilité de concevoir des programmes innovants." },
+    es: { title: "Programa de Demostración Moving to Work", desc: "Programa federal que da a autoridades de vivienda flexibilidad para diseñar programas innovadores." },
+  },
+},
+
+// UTILITIES (25)
+{
+  category: "Utilities",
+  link: "https://www.hi.gov/liheap",
+  states: ["HI"],
+  i18n: {
+    en: { title: "Hawaii LIHEAP", desc: "State energy assistance program information for Hawaii." },
+    fr: { title: "LIHEAP Hawaï", desc: "Informations sur le programme d'aide énergétique d'Hawaï." },
+    es: { title: "LIHEAP de Hawái", desc: "Información del programa de asistencia energética de Hawái." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.commerce.alaska.gov/liheap",
+  states: ["AK"],
+  i18n: {
+    en: { title: "Alaska Heating Assistance Program", desc: "State energy assistance program information for Alaska." },
+    fr: { title: "Programme aide chauffage Alaska", desc: "Informations sur le programme d'aide énergétique de l'Alaska." },
+    es: { title: "Programa de Asistencia de Calefacción de Alaska", desc: "Información del programa de asistencia energética de Alaska." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dphhs.mt.gov/liheap",
+  states: ["MT"],
+  i18n: {
+    en: { title: "Montana LIHEAP", desc: "State energy assistance program information for Montana." },
+    fr: { title: "LIHEAP Montana", desc: "Informations sur le programme d'aide énergétique du Montana." },
+    es: { title: "LIHEAP de Montana", desc: "Información del programa de asistencia energética de Montana." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dfs.wyo.gov/liheap",
+  states: ["WY"],
+  i18n: {
+    en: { title: "Wyoming LIHEAP", desc: "State energy assistance program information for Wyoming." },
+    fr: { title: "LIHEAP Wyoming", desc: "Informations sur le programme d'aide énergétique du Wyoming." },
+    es: { title: "LIHEAP de Wyoming", desc: "Información del programa de asistencia energética de Wyoming." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.nd.gov/dhs/liheap",
+  states: ["ND"],
+  i18n: {
+    en: { title: "North Dakota LIHEAP", desc: "State energy assistance program information for North Dakota." },
+    fr: { title: "LIHEAP Dakota du Nord", desc: "Informations sur le programme d'aide énergétique du Dakota du Nord." },
+    es: { title: "LIHEAP de Dakota del Norte", desc: "Información del programa de asistencia energética de Dakota del Norte." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dss.sd.gov/liheap",
+  states: ["SD"],
+  i18n: {
+    en: { title: "South Dakota LIHEAP", desc: "State energy assistance program information for South Dakota." },
+    fr: { title: "LIHEAP Dakota du Sud", desc: "Informations sur le programme d'aide énergétique du Dakota du Sud." },
+    es: { title: "LIHEAP de Dakota del Sur", desc: "Información del programa de asistencia energética de Dakota del Sur." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhs.ri.gov/liheap",
+  states: ["RI"],
+  i18n: {
+    en: { title: "Rhode Island LIHEAP", desc: "State energy assistance program information for Rhode Island." },
+    fr: { title: "LIHEAP Rhode Island", desc: "Informations sur le programme d'aide énergétique de Rhode Island." },
+    es: { title: "LIHEAP de Rhode Island", desc: "Información del programa de asistencia energética de Rhode Island." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhss.delaware.gov/liheap",
+  states: ["DE"],
+  i18n: {
+    en: { title: "Delaware LIHEAP", desc: "State energy assistance program information for Delaware." },
+    fr: { title: "LIHEAP Delaware", desc: "Informations sur le programme d'aide énergétique du Delaware." },
+    es: { title: "LIHEAP de Delaware", desc: "Información del programa de asistencia energética de Delaware." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dcf.vermont.gov/liheap",
+  states: ["VT"],
+  i18n: {
+    en: { title: "Vermont LIHEAP", desc: "State energy assistance program information for Vermont." },
+    fr: { title: "LIHEAP Vermont", desc: "Informations sur le programme d'aide énergétique du Vermont." },
+    es: { title: "LIHEAP de Vermont", desc: "Información del programa de asistencia energética de Vermont." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.pr.gov/liheap",
+  states: ["PR"],
+  i18n: {
+    en: { title: "Puerto Rico LIHEAP", desc: "Territory energy assistance program information for Puerto Rico." },
+    fr: { title: "LIHEAP Porto Rico", desc: "Informations sur le programme d'aide énergétique territorial de Porto Rico." },
+    es: { title: "LIHEAP de Puerto Rico", desc: "Información del programa de asistencia energética territorial de Puerto Rico." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.heco.com/billing-and-payment/payment-assistance",
+  states: ["HI"],
+  i18n: {
+    en: { title: "Hawaiian Electric Payment Assistance", desc: "Utility bill assistance programs for qualifying Hawaii households." },
+    fr: { title: "Aide paiement Hawaiian Electric", desc: "Programmes d'aide aux factures pour ménages admissibles à Hawaï." },
+    es: { title: "Asistencia de Pago Hawaiian Electric", desc: "Programas de asistencia de facturas para hogares elegibles en Hawái." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.chugachelectric.com/save-energy/energy-assistance",
+  states: ["AK"],
+  i18n: {
+    en: { title: "Chugach Electric Energy Assistance", desc: "Utility bill assistance programs for qualifying Alaska households." },
+    fr: { title: "Aide énergie Chugach Electric", desc: "Programmes d'aide aux factures pour ménages admissibles en Alaska." },
+    es: { title: "Asistencia Energética Chugach Electric", desc: "Programas de asistencia de facturas para hogares elegibles en Alaska." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.northwesternenergy.com/billing-and-payments/energy-assistance",
+  states: ["MT"],
+  i18n: {
+    en: { title: "NorthWestern Energy Assistance", desc: "Utility bill assistance programs for qualifying Montana households." },
+    fr: { title: "Aide NorthWestern Energy", desc: "Programmes d'aide aux factures pour ménages admissibles au Montana." },
+    es: { title: "Asistencia NorthWestern Energy", desc: "Programas de asistencia de facturas para hogares elegibles en Montana." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.rmp.pacificorp.com/help/payment-assistance",
+  states: ["WY", "UT", "ID"],
+  i18n: {
+    en: { title: "Rocky Mountain Power Payment Assistance", desc: "Utility bill assistance programs across Rocky Mountain Power service territories." },
+    fr: { title: "Aide paiement Rocky Mountain Power", desc: "Programmes d'aide aux factures dans les territoires de service Rocky Mountain Power." },
+    es: { title: "Asistencia de Pago Rocky Mountain Power", desc: "Programas de asistencia de facturas en territorios de servicio de Rocky Mountain Power." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.nationalgridus.com/RI-Home/Assistance-Programs",
+  states: ["RI"],
+  i18n: {
+    en: { title: "National Grid Rhode Island Assistance", desc: "Utility bill assistance programs for qualifying Rhode Island households." },
+    fr: { title: "Aide National Grid Rhode Island", desc: "Programmes d'aide aux factures pour ménages admissibles à Rhode Island." },
+    es: { title: "Asistencia National Grid Rhode Island", desc: "Programas de asistencia de facturas para hogares elegibles en Rhode Island." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.delmarva.com/save-energy-money/help-paying-bill",
+  states: ["DE"],
+  i18n: {
+    en: { title: "Delmarva Power Bill Help", desc: "Utility bill assistance programs for qualifying Delaware households." },
+    fr: { title: "Aide facture Delmarva Power", desc: "Programmes d'aide aux factures pour ménages admissibles au Delaware." },
+    es: { title: "Ayuda de Factura Delmarva Power", desc: "Programas de asistencia de facturas para hogares elegibles en Delaware." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.greenmountainpower.com/help-and-support/billing-and-payment-assistance/",
+  states: ["VT"],
+  i18n: {
+    en: { title: "Green Mountain Power Assistance", desc: "Utility bill assistance programs for qualifying Vermont households." },
+    fr: { title: "Aide Green Mountain Power", desc: "Programmes d'aide aux factures pour ménages admissibles au Vermont." },
+    es: { title: "Asistencia Green Mountain Power", desc: "Programas de asistencia de facturas para hogares elegibles en Vermont." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/scep/wap/where-apply-assistance",
+  i18n: {
+    en: { title: "Where to Apply for Weatherization Assistance", desc: "Federal directory helping applicants find the right local weatherization agency." },
+    fr: { title: "Où demander l'aide à l'isolation", desc: "Répertoire fédéral aidant les demandeurs à trouver l'agence locale appropriée." },
+    es: { title: "Dónde Solicitar Asistencia de Climatización", desc: "Directorio federal que ayuda a solicitantes a encontrar la agencia local adecuada." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.acf.hhs.gov/ocs/programs/liheap/liheap-and-covid-19",
+  i18n: {
+    en: { title: "LIHEAP Emergency Response Info", desc: "Federal information on LIHEAP emergency provisions during declared crises." },
+    fr: { title: "Info réponse d'urgence LIHEAP", desc: "Informations fédérales sur les dispositions d'urgence LIHEAP lors de crises déclarées." },
+    es: { title: "Información de Respuesta de Emergencia LIHEAP", desc: "Información federal sobre disposiciones de emergencia de LIHEAP durante crisis declaradas." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.liheapch.acf.hhs.gov",
+  i18n: {
+    en: { title: "LIHEAP Clearinghouse Resource Center", desc: "Federal resource hub with training and materials for LIHEAP program administrators." },
+    fr: { title: "Centre de ressources LIHEAP Clearinghouse", desc: "Centre de ressources fédéral avec formation et matériel pour administrateurs LIHEAP." },
+    es: { title: "Centro de Recursos LIHEAP Clearinghouse", desc: "Centro de recursos federal con capacitación y materiales para administradores de LIHEAP." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/scep/slsc/tribal-weatherization-assistance-program",
+  i18n: {
+    en: { title: "Tribal Weatherization Assistance Program", desc: "Federal weatherization program specifically for Tribal communities." },
+    fr: { title: "Programme aide isolation tribal", desc: "Programme fédéral d'isolation spécifiquement pour communautés tribales." },
+    es: { title: "Programa de Asistencia de Climatización Tribal", desc: "Programa federal de climatización específicamente para comunidades tribales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.itcaonline.com/programs/energy",
+  i18n: {
+    en: { title: "Inter Tribal Council Energy Programs", desc: "Tribal-led energy assistance and efficiency programs for Native communities." },
+    fr: { title: "Programmes énergie Inter Tribal Council", desc: "Programmes d'aide et d'efficacité énergétique dirigés par des tribus." },
+    es: { title: "Programas de Energía Inter Tribal Council", desc: "Programas de asistencia y eficiencia energética dirigidos por tribus." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.necanet.org",
+  i18n: {
+    en: { title: "National Energy & Utility Affordability Coalition", desc: "Advocacy coalition working to make energy costs more affordable nationwide." },
+    fr: { title: "National Energy & Utility Affordability Coalition", desc: "Coalition de plaidoyer travaillant à rendre les coûts énergétiques plus abordables." },
+    es: { title: "National Energy & Utility Affordability Coalition", desc: "Coalición de defensa que trabaja para hacer los costos de energía más asequibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.appliedpublicpolicyresearchinstituteforstudyofenergy.org",
+  i18n: {
+    en: { title: "Energy Policy Research Resources", desc: "Independent research on energy affordability policy solutions." },
+    fr: { title: "Ressources recherche politique énergétique", desc: "Recherche indépendante sur les solutions de politique d'abordabilité énergétique." },
+    es: { title: "Recursos de Investigación de Política Energética", desc: "Investigación independiente sobre soluciones de política de asequibilidad energética." },
+  },
+},
+
+// EDUCATION (25)
+{
+  category: "Education",
+  link: "https://www.hawaii.edu/financialaid",
+  states: ["HI"],
+  i18n: {
+    en: { title: "University of Hawaii Financial Aid", desc: "Financial aid information for students attending University of Hawaii system schools." },
+    fr: { title: "Aide financière University of Hawaii", desc: "Informations sur l'aide financière pour étudiants du système University of Hawaii." },
+    es: { title: "Ayuda Financiera University of Hawaii", desc: "Información de ayuda financiera para estudiantes del sistema University of Hawaii." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.alaska.edu/students/finaid/",
+  states: ["AK"],
+  i18n: {
+    en: { title: "University of Alaska Financial Aid", desc: "Financial aid information for students attending University of Alaska system schools." },
+    fr: { title: "Aide financière University of Alaska", desc: "Informations sur l'aide financière pour étudiants du système University of Alaska." },
+    es: { title: "Ayuda Financiera University of Alaska", desc: "Información de ayuda financiera para estudiantes del sistema University of Alaska." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.acpe.mt.gov",
+  states: ["MT"],
+  i18n: {
+    en: { title: "Montana Financial Aid Guide", desc: "State agency providing financial aid information for Montana students." },
+    fr: { title: "Guide aide financière Montana", desc: "Agence d'État offrant des informations sur l'aide financière pour étudiants du Montana." },
+    es: { title: "Guía de Ayuda Financiera de Montana", desc: "Agencia estatal que proporciona información de ayuda financiera para estudiantes de Montana." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.uwyo.edu/far/",
+  states: ["WY"],
+  i18n: {
+    en: { title: "University of Wyoming Financial Aid", desc: "Financial aid information for students attending the University of Wyoming." },
+    fr: { title: "Aide financière University of Wyoming", desc: "Informations sur l'aide financière pour étudiants de l'University of Wyoming." },
+    es: { title: "Ayuda Financiera University of Wyoming", desc: "Información de ayuda financiera para estudiantes de University of Wyoming." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ndus.edu/students/paying-for-college/",
+  states: ["ND"],
+  i18n: {
+    en: { title: "North Dakota University System Financial Aid", desc: "Financial aid information for North Dakota university system students." },
+    fr: { title: "Aide financière système universitaire Dakota du Nord", desc: "Informations sur l'aide financière pour étudiants du système universitaire." },
+    es: { title: "Ayuda Financiera del Sistema Universitario de Dakota del Norte", desc: "Información de ayuda financiera para estudiantes del sistema universitario." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.sdbor.edu/students/pages/financial-aid.aspx",
+  states: ["SD"],
+  i18n: {
+    en: { title: "South Dakota Board of Regents Financial Aid", desc: "Financial aid information for South Dakota public university students." },
+    fr: { title: "Aide financière South Dakota Board of Regents", desc: "Informations sur l'aide financière pour étudiants des universités publiques du Dakota du Sud." },
+    es: { title: "Ayuda Financiera South Dakota Board of Regents", desc: "Información de ayuda financiera para estudiantes de universidades públicas de Dakota del Sur." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.riopc.edu",
+  states: ["RI"],
+  i18n: {
+    en: { title: "Rhode Island Office of the Postsecondary Commissioner", desc: "State agency providing financial aid and college access resources for Rhode Island." },
+    fr: { title: "Rhode Island Office of the Postsecondary Commissioner", desc: "Agence d'État offrant aide financière et ressources d'accès collégial à Rhode Island." },
+    es: { title: "Rhode Island Office of the Postsecondary Commissioner", desc: "Agencia estatal que ofrece ayuda financiera y recursos de acceso universitario en Rhode Island." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.doe.k12.de.us/domain/136",
+  states: ["DE"],
+  i18n: {
+    en: { title: "Delaware Higher Education Office", desc: "State agency providing financial aid and college planning resources for Delaware." },
+    fr: { title: "Delaware Higher Education Office", desc: "Agence d'État offrant aide financière et ressources de planification collégiale au Delaware." },
+    es: { title: "Delaware Higher Education Office", desc: "Agencia estatal que ofrece ayuda financiera y recursos de planificación universitaria en Delaware." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.vsac.org",
+  states: ["VT"],
+  i18n: {
+    en: { title: "Vermont Student Assistance Corporation", desc: "State agency providing financial aid and college planning resources for Vermont students." },
+    fr: { title: "Vermont Student Assistance Corporation", desc: "Agence d'État offrant aide financière et ressources de planification collégiale au Vermont." },
+    es: { title: "Vermont Student Assistance Corporation", desc: "Agencia estatal que ofrece ayuda financiera y recursos de planificación universitaria en Vermont." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.upr.edu/estudios-graduados/ayuda-economica/",
+  states: ["PR"],
+  i18n: {
+    en: { title: "University of Puerto Rico Financial Aid", desc: "Financial aid information for students attending University of Puerto Rico system schools." },
+    fr: { title: "Aide financière University of Puerto Rico", desc: "Informations sur l'aide financière pour étudiants du système University of Puerto Rico." },
+    es: { title: "Ayuda Financiera University of Puerto Rico", desc: "Información de ayuda financiera para estudiantes del sistema Universidad de Puerto Rico." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.tribalcollegejournal.org",
+  i18n: {
+    en: { title: "Tribal College Journal", desc: "Resources and directory of tribal colleges serving Native American students." },
+    fr: { title: "Tribal College Journal", desc: "Ressources et répertoire de collèges tribaux desservant les étudiants amérindiens." },
+    es: { title: "Tribal College Journal", desc: "Recursos y directorio de colegios tribales que sirven a estudiantes nativos americanos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.aihec.org",
+  i18n: {
+    en: { title: "American Indian Higher Education Consortium", desc: "Network supporting tribal colleges and Native American higher education access." },
+    fr: { title: "American Indian Higher Education Consortium", desc: "Réseau soutenant les collèges tribaux et l'accès à l'enseignement supérieur amérindien." },
+    es: { title: "American Indian Higher Education Consortium", desc: "Red que apoya colegios tribales y acceso a educación superior nativa americana." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.collegefund.org",
+  i18n: {
+    en: { title: "American Indian College Fund", desc: "Scholarships and support specifically for Native American students in higher education." },
+    fr: { title: "American Indian College Fund", desc: "Bourses et soutien spécifiquement pour étudiants amérindiens dans l'enseignement supérieur." },
+    es: { title: "American Indian College Fund", desc: "Becas y apoyo específicamente para estudiantes nativos americanos en educación superior." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.bie.edu",
+  i18n: {
+    en: { title: "Bureau of Indian Education", desc: "Federal agency overseeing education programs for Native American students." },
+    fr: { title: "Bureau of Indian Education", desc: "Agence fédérale supervisant les programmes éducatifs pour étudiants amérindiens." },
+    es: { title: "Bureau of Indian Education", desc: "Agencia federal que supervisa programas educativos para estudiantes nativos americanos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.doi.gov/bie/programs/scholarships",
+  i18n: {
+    en: { title: "BIE Scholarship Programs", desc: "Federal scholarship programs specifically for eligible Native American students." },
+    fr: { title: "Programmes bourses BIE", desc: "Programmes de bourses fédéraux spécifiquement pour étudiants amérindiens admissibles." },
+    es: { title: "Programas de Becas BIE", desc: "Programas de becas federales específicamente para estudiantes nativos americanos elegibles." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.haskell.edu",
+  i18n: {
+    en: { title: "Haskell Indian Nations University", desc: "Federally chartered university specifically serving Native American students." },
+    fr: { title: "Haskell Indian Nations University", desc: "Université à charte fédérale desservant spécifiquement les étudiants amérindiens." },
+    es: { title: "Haskell Indian Nations University", desc: "Universidad con carta federal que sirve específicamente a estudiantes nativos americanos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.si.edu/scholarships",
+  i18n: {
+    en: { title: "Smithsonian Institution Scholarships and Fellowships", desc: "Research fellowships and internship opportunities across Smithsonian museums." },
+    fr: { title: "Bourses et stages Smithsonian Institution", desc: "Opportunités de bourses de recherche et stages dans les musées Smithsonian." },
+    es: { title: "Becas y Pasantías Smithsonian Institution", desc: "Oportunidades de becas de investigación y pasantías en museos Smithsonian." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nasa.gov/stem/forstudents/",
+  i18n: {
+    en: { title: "NASA STEM Education for Students", desc: "Free STEM education resources and internship opportunities from NASA." },
+    fr: { title: "Éducation STEM NASA pour étudiants", desc: "Ressources d'éducation STEM gratuites et opportunités de stage de la NASA." },
+    es: { title: "Educación STEM NASA para Estudiantes", desc: "Recursos gratuitos de educación STEM y oportunidades de pasantías de la NASA." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nsf.gov/funding/education.jsp",
+  i18n: {
+    en: { title: "National Science Foundation Education Funding", desc: "Federal funding opportunities supporting STEM education programs." },
+    fr: { title: "Financement éducation National Science Foundation", desc: "Opportunités de financement fédéral soutenant les programmes d'éducation STEM." },
+    es: { title: "Financiamiento Educativo National Science Foundation", desc: "Oportunidades de financiamiento federal que apoyan programas de educación STEM." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.energy.gov/eere/education/students",
+  i18n: {
+    en: { title: "Department of Energy Student Programs", desc: "Federal internship and education programs in energy-related STEM fields." },
+    fr: { title: "Programmes étudiants Department of Energy", desc: "Programmes fédéraux de stage et d'éducation dans les domaines STEM liés à l'énergie." },
+    es: { title: "Programas Estudiantiles Department of Energy", desc: "Programas federales de pasantías y educación en campos STEM relacionados con energía." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.usajobs.gov/students",
+  i18n: {
+    en: { title: "USAJobs Student and Recent Graduate Programs", desc: "Federal internship and entry-level job programs for students and recent graduates." },
+    fr: { title: "Programmes étudiants et diplômés USAJobs", desc: "Programmes fédéraux de stage et d'emploi débutant pour étudiants et diplômés récents." },
+    es: { title: "Programas de Estudiantes y Recién Graduados USAJobs", desc: "Programas federales de pasantías y empleo inicial para estudiantes y recién graduados." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.pathwaysprogram.opm.gov",
+  i18n: {
+    en: { title: "Pathways Programs for Students", desc: "Federal programs providing internships and career development for students in government." },
+    fr: { title: "Pathways Programs for Students", desc: "Programmes fédéraux offrant stages et développement de carrière pour étudiants." },
+    es: { title: "Pathways Programs for Students", desc: "Programas federales que ofrecen pasantías y desarrollo profesional para estudiantes." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.peacecorps.gov/educators/",
+  i18n: {
+    en: { title: "Peace Corps Educator Resources", desc: "Educational resources and volunteer opportunities from the Peace Corps." },
+    fr: { title: "Ressources éducateurs Peace Corps", desc: "Ressources éducatives et opportunités de bénévolat du Peace Corps." },
+    es: { title: "Recursos para Educadores Peace Corps", desc: "Recursos educativos y oportunidades de voluntariado del Cuerpo de Paz." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.americorps.gov/members",
+  i18n: {
+    en: { title: "AmeriCorps Member Benefits", desc: "Education award and living stipend benefits for AmeriCorps volunteer members." },
+    fr: { title: "Avantages membres AmeriCorps", desc: "Bourse d'études et allocation de subsistance pour membres bénévoles AmeriCorps." },
+    es: { title: "Beneficios de Miembros AmeriCorps", desc: "Beca educativa y estipendio de manutención para miembros voluntarios de AmeriCorps." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nationalservice.gov/programs/segal-americorps-education-award",
+  i18n: {
+    en: { title: "Segal AmeriCorps Education Award", desc: "Federal education award earned through AmeriCorps national service." },
+    fr: { title: "Bourse d'études Segal AmeriCorps", desc: "Bourse d'études fédérale gagnée par le service national AmeriCorps." },
+    es: { title: "Beca Educativa Segal AmeriCorps", desc: "Beca educativa federal obtenida a través del servicio nacional de AmeriCorps." },
+  },
+},
+
+// INCOME (12)
+{
+  category: "Income",
+  link: "https://www.ssa.gov/hi/",
+  states: ["HI"],
+  i18n: {
+    en: { title: "Social Security Hawaii Office Locator", desc: "Find Social Security office locations serving Hawaii residents." },
+    fr: { title: "Localisateur bureaux Sécurité sociale Hawaï", desc: "Trouvez les bureaux de la Sécurité sociale desservant les résidents d'Hawaï." },
+    es: { title: "Localizador de Oficinas del Seguro Social Hawái", desc: "Encuentre oficinas del Seguro Social que sirven a residentes de Hawái." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ssa.gov/ak/",
+  states: ["AK"],
+  i18n: {
+    en: { title: "Social Security Alaska Office Locator", desc: "Find Social Security office locations serving Alaska residents." },
+    fr: { title: "Localisateur bureaux Sécurité sociale Alaska", desc: "Trouvez les bureaux de la Sécurité sociale desservant les résidents de l'Alaska." },
+    es: { title: "Localizador de Oficinas del Seguro Social Alaska", desc: "Encuentre oficinas del Seguro Social que sirven a residentes de Alaska." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dfs.wyo.gov",
+  states: ["WY"],
+  i18n: {
+    en: { title: "Wyoming Department of Family Services", desc: "State agency administering cash assistance and family support programs for Wyoming." },
+    fr: { title: "Wyoming Department of Family Services", desc: "Agence d'État administrant l'aide en espèces et le soutien familial au Wyoming." },
+    es: { title: "Wyoming Department of Family Services", desc: "Agencia estatal que administra asistencia en efectivo y apoyo familiar en Wyoming." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dphhs.mt.gov/hcsd/economicsupport",
+  states: ["MT"],
+  i18n: {
+    en: { title: "Montana Economic Support Programs", desc: "State agency administering cash assistance and economic support programs for Montana." },
+    fr: { title: "Programmes soutien économique Montana", desc: "Agence d'État administrant l'aide en espèces et le soutien économique au Montana." },
+    es: { title: "Programas de Apoyo Económico de Montana", desc: "Agencia estatal que administra asistencia en efectivo y apoyo económico en Montana." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.nd.gov/dhs/services/financialhelp",
+  states: ["ND"],
+  i18n: {
+    en: { title: "North Dakota Financial Help Programs", desc: "State agency administering cash assistance and financial support programs." },
+    fr: { title: "Programmes aide financière Dakota du Nord", desc: "Agence d'État administrant l'aide en espèces et le soutien financier." },
+    es: { title: "Programas de Ayuda Financiera de Dakota del Norte", desc: "Agencia estatal que administra asistencia en efectivo y apoyo financiero." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dss.sd.gov/economicassistance",
+  states: ["SD"],
+  i18n: {
+    en: { title: "South Dakota Economic Assistance", desc: "State agency administering cash assistance and economic support programs." },
+    fr: { title: "Aide économique Dakota du Sud", desc: "Agence d'État administrant l'aide en espèces et le soutien économique." },
+    es: { title: "Asistencia Económica de Dakota del Sur", desc: "Agencia estatal que administra asistencia en efectivo y apoyo económico." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dhs.ri.gov/programs-and-services/cash-assistance",
+  states: ["RI"],
+  i18n: {
+    en: { title: "Rhode Island Cash Assistance Programs", desc: "State agency administering cash assistance programs for eligible families." },
+    fr: { title: "Programmes aide en espèces Rhode Island", desc: "Agence d'État administrant les programmes d'aide en espèces pour familles admissibles." },
+    es: { title: "Programas de Asistencia en Efectivo de Rhode Island", desc: "Agencia estatal que administra programas de asistencia en efectivo para familias elegibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dhss.delaware.gov/dhss/dss/",
+  states: ["DE"],
+  i18n: {
+    en: { title: "Delaware Division of Social Services", desc: "State agency administering cash assistance and social service programs." },
+    fr: { title: "Delaware Division of Social Services", desc: "Agence d'État administrant l'aide en espèces et les programmes de services sociaux." },
+    es: { title: "Delaware Division of Social Services", desc: "Agencia estatal que administra asistencia en efectivo y programas de servicios sociales." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dcf.vermont.gov/esd",
+  states: ["VT"],
+  i18n: {
+    en: { title: "Vermont Economic Services Division", desc: "State agency administering cash assistance and economic support programs." },
+    fr: { title: "Vermont Economic Services Division", desc: "Agence d'État administrant l'aide en espèces et le soutien économique." },
+    es: { title: "Vermont Economic Services Division", desc: "Agencia estatal que administra asistencia en efectivo y apoyo económico." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.familia.pr.gov",
+  states: ["PR"],
+  i18n: {
+    en: { title: "Puerto Rico Family Department", desc: "Territory agency administering cash assistance and family support programs." },
+    fr: { title: "Puerto Rico Family Department", desc: "Agence territoriale administrant l'aide en espèces et le soutien familial." },
+    es: { title: "Departamento de la Familia de Puerto Rico", desc: "Agencia territorial que administra asistencia en efectivo y apoyo familiar." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.211.org/services/native-american",
+  i18n: {
+    en: { title: "211 Native American Resources Directory", desc: "Local referrals for Native American individuals needing financial or other support." },
+    fr: { title: "Répertoire ressources amérindiennes 211", desc: "Orientation locale pour Amérindiens ayant besoin de soutien financier ou autre." },
+    es: { title: "Directorio de Recursos Nativos Americanos 211", desc: "Referencias locales para nativos americanos que necesitan apoyo financiero u otro." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ncai.org/policy-issues/economic-development-commerce",
+  i18n: {
+    en: { title: "National Congress of American Indians Economic Development", desc: "Advocacy and resources supporting Tribal economic development." },
+    fr: { title: "Développement économique National Congress of American Indians", desc: "Plaidoyer et ressources soutenant le développement économique tribal." },
+    es: { title: "Desarrollo Económico National Congress of American Indians", desc: "Defensa y recursos que apoyan el desarrollo económico tribal." },
+  },
+},
+
 ];

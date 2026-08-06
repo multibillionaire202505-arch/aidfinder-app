@@ -10580,6 +10580,1828 @@ const ALL = [
     es: { title: "The Arc", desc: "Servicios de defensa y apoyo para personas con discapacidades intelectuales y del desarrollo." },
   },
 },
+    // ===== PROGRAMS 1101-1300 =====
+
+// FOOD (32)
+{
+  category: "Food",
+  link: "https://www.acf.hhs.gov/ocs/programs/csfp/csfp-state-agencies",
+  i18n: {
+    en: { title: "CSFP State Agency Directory", desc: "Official directory of state agencies administering the senior food box program." },
+    fr: { title: "Répertoire agences d'État CSFP", desc: "Répertoire officiel des agences d'État administrant le programme de colis alimentaires." },
+    es: { title: "Directorio de Agencias Estatales CSFP", desc: "Directorio oficial de agencias estatales que administran el programa de cajas de alimentos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/nslp/nslp-application-process",
+  i18n: {
+    en: { title: "National School Lunch Application Process", desc: "Step-by-step official guide to applying for free or reduced school lunch." },
+    fr: { title: "Processus demande repas scolaire national", desc: "Guide officiel étape par étape pour demander un repas scolaire gratuit ou réduit." },
+    es: { title: "Proceso de Solicitud del Almuerzo Escolar Nacional", desc: "Guía oficial paso a paso para solicitar almuerzo escolar gratuito o reducido." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/cacfp",
+  i18n: {
+    en: { title: "Child and Adult Care Food Program", desc: "Federal program providing meals to children and adults in daycare settings." },
+    fr: { title: "Programme alimentaire garde enfants et adultes", desc: "Programme fédéral offrant des repas aux enfants et adultes en garderie." },
+    es: { title: "Programa de Alimentos para el Cuidado de Niños y Adultos", desc: "Programa federal que proporciona comidas a niños y adultos en guarderías." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/cacfp/adult-day-care",
+  i18n: {
+    en: { title: "CACFP Adult Day Care Meals", desc: "Meal benefits for eligible adults attending day care programs." },
+    fr: { title: "Repas CACFP garderie adultes", desc: "Prestations de repas pour adultes admissibles fréquentant des programmes de jour." },
+    es: { title: "Comidas CACFP para Cuidado de Adultos", desc: "Beneficios de comida para adultos elegibles que asisten a programas diurnos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodsecurity.org",
+  i18n: {
+    en: { title: "Community Food Security Coalition Resources", desc: "Advocacy and research resources on building local food security." },
+    fr: { title: "Ressources Community Food Security Coalition", desc: "Ressources de plaidoyer et recherche sur la sécurité alimentaire locale." },
+    es: { title: "Recursos Community Food Security Coalition", desc: "Recursos de defensa e investigación sobre seguridad alimentaria local." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.freshplacecville.org",
+  i18n: {
+    en: { title: "Fresh Farmacy Model Programs", desc: "Example of a healthcare-partnered fresh food prescription program." },
+    fr: { title: "Programmes modèle Fresh Farmacy", desc: "Exemple de programme de prescription d'aliments frais en partenariat médical." },
+    es: { title: "Programas Modelo Fresh Farmacy", desc: "Ejemplo de programa de prescripción de alimentos frescos en asociación médica." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.wholesomewave.org/our-work/produce-prescriptions",
+  i18n: {
+    en: { title: "Produce Prescription Programs", desc: "Programs where doctors prescribe fruits and vegetables to at-risk patients." },
+    fr: { title: "Programmes prescription de produits", desc: "Programmes où les médecins prescrivent fruits et légumes aux patients à risque." },
+    es: { title: "Programas de Prescripción de Productos", desc: "Programas donde los médicos recetan frutas y verduras a pacientes en riesgo." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/gusnip",
+  i18n: {
+    en: { title: "GusNIP Nutrition Incentive Program", desc: "Federal program funding fruit and vegetable incentives for SNAP participants." },
+    fr: { title: "Programme incitation nutrition GusNIP", desc: "Programme fédéral finançant des incitations aux fruits et légumes pour bénéficiaires SNAP." },
+    es: { title: "Programa de Incentivo Nutricional GusNIP", desc: "Programa federal que financia incentivos de frutas y verduras para participantes de SNAP." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.doublevalue.org",
+  i18n: {
+    en: { title: "Double Up Food Bucks Info", desc: "Programs that double SNAP dollars when spent on fresh fruits and vegetables." },
+    fr: { title: "Info Double Up Food Bucks", desc: "Programmes doublant les dollars SNAP dépensés en fruits et légumes frais." },
+    es: { title: "Información Double Up Food Bucks", desc: "Programas que duplican los dólares de SNAP gastados en frutas y verduras frescas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fairfoodnetwork.org/programs/double-up-food-bucks/",
+  i18n: {
+    en: { title: "Fair Food Network Double Up Food Bucks", desc: "Original Double Up Food Bucks program matching SNAP spending on produce." },
+    fr: { title: "Fair Food Network Double Up Food Bucks", desc: "Programme original doublant les dépenses SNAP en produits frais." },
+    es: { title: "Fair Food Network Double Up Food Bucks", desc: "Programa original que iguala el gasto de SNAP en productos frescos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodcorps.org",
+  i18n: {
+    en: { title: "FoodCorps", desc: "School-based programs teaching children about food, gardening, and nutrition." },
+    fr: { title: "FoodCorps", desc: "Programmes scolaires enseignant aux enfants l'alimentation et la nutrition." },
+    es: { title: "FoodCorps", desc: "Programas escolares que enseñan a los niños sobre alimentación y nutrición." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.chefsmovetoschools.org",
+  i18n: {
+    en: { title: "Chefs Move to Schools", desc: "Program connecting professional chefs with schools to improve meal quality." },
+    fr: { title: "Chefs Move to Schools", desc: "Programme reliant chefs professionnels et écoles pour améliorer la qualité des repas." },
+    es: { title: "Chefs Move to Schools", desc: "Programa que conecta chefs profesionales con escuelas para mejorar la calidad de comidas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.actionforhealthykids.org",
+  i18n: {
+    en: { title: "Action for Healthy Kids", desc: "Grants and resources supporting healthier school food and physical activity." },
+    fr: { title: "Action for Healthy Kids", desc: "Subventions et ressources soutenant une alimentation scolaire plus saine." },
+    es: { title: "Action for Healthy Kids", desc: "Subvenciones y recursos que apoyan comida escolar más saludable y actividad física." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.schoolnutrition.org",
+  i18n: {
+    en: { title: "School Nutrition Association Resources", desc: "Professional resources and advocacy for school meal program quality." },
+    fr: { title: "Ressources School Nutrition Association", desc: "Ressources professionnelles et plaidoyer pour la qualité des repas scolaires." },
+    es: { title: "Recursos School Nutrition Association", desc: "Recursos profesionales y defensa para la calidad de programas de comida escolar." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/cn/community-eligibility-provision",
+  i18n: {
+    en: { title: "Community Eligibility Provision", desc: "Federal option letting high-poverty schools offer free meals to all students." },
+    fr: { title: "Disposition d'admissibilité communautaire", desc: "Option fédérale permettant aux écoles pauvres d'offrir des repas gratuits à tous." },
+    es: { title: "Disposición de Elegibilidad Comunitaria", desc: "Opción federal que permite a escuelas de alta pobreza ofrecer comida gratis a todos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.frac.org/community-eligibility",
+  i18n: {
+    en: { title: "FRAC Community Eligibility Resources", desc: "Advocacy resources helping schools adopt universal free meal policies." },
+    fr: { title: "Ressources admissibilité communautaire FRAC", desc: "Ressources de plaidoyer aidant les écoles à adopter des repas gratuits universels." },
+    es: { title: "Recursos de Elegibilidad Comunitaria FRAC", desc: "Recursos de defensa que ayudan a escuelas a adoptar comida gratuita universal." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.mealsforkidsnearme.org",
+  i18n: {
+    en: { title: "Meals for Kids Near Me Finder", desc: "Search tool for free summer meal sites for children nationwide." },
+    fr: { title: "Recherche repas enfants proches", desc: "Outil de recherche pour sites de repas d'été gratuits pour enfants." },
+    es: { title: "Buscador de Comidas para Niños Cerca de Mí", desc: "Herramienta de búsqueda de sitios de comida de verano gratuita para niños." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.summerfoodsites.org",
+  i18n: {
+    en: { title: "Summer Food Sites Directory", desc: "Directory of summer meal program locations for children out of school." },
+    fr: { title: "Répertoire sites repas d'été", desc: "Répertoire des emplacements de programmes de repas d'été pour enfants." },
+    es: { title: "Directorio de Sitios de Comida de Verano", desc: "Directorio de ubicaciones de programas de comida de verano para niños." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.nokidhungry.org/find-help",
+  i18n: {
+    en: { title: "No Kid Hungry Find Help", desc: "Search tool to find free meal programs for kids in your area." },
+    fr: { title: "Trouver de l'aide No Kid Hungry", desc: "Outil de recherche pour trouver des programmes de repas gratuits pour enfants." },
+    es: { title: "Encuentre Ayuda No Kid Hungry", desc: "Herramienta de búsqueda para encontrar programas de comida gratuita para niños." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.summereats.org",
+  i18n: {
+    en: { title: "Summer Eats", desc: "Directory connecting families to free summer meal sites for kids." },
+    fr: { title: "Summer Eats", desc: "Répertoire reliant les familles aux sites de repas d'été gratuits pour enfants." },
+    es: { title: "Summer Eats", desc: "Directorio que conecta a familias con sitios de comida de verano gratuita para niños." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.hungerfreecolorado.org",
+  states: ["CO"],
+  i18n: {
+    en: { title: "Hunger Free Colorado", desc: "Statewide hunger relief hotline and food resource connection service." },
+    fr: { title: "Hunger Free Colorado", desc: "Ligne d'aide contre la faim et service de connexion aux ressources alimentaires." },
+    es: { title: "Hunger Free Colorado", desc: "Línea de ayuda contra el hambre y servicio de conexión de recursos alimentarios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.mazon.org/state-advocacy",
+  i18n: {
+    en: { title: "MAZON State Hunger Advocacy", desc: "State-level advocacy resources for ending hunger through policy." },
+    fr: { title: "Plaidoyer faim par État MAZON", desc: "Ressources de plaidoyer au niveau de l'État pour mettre fin à la faim." },
+    es: { title: "Defensa Estatal contra el Hambre MAZON", desc: "Recursos de defensa a nivel estatal para acabar con el hambre." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.txhunger.org",
+  states: ["TX"],
+  i18n: {
+    en: { title: "Texas Hunger Initiative", desc: "Statewide coalition connecting Texans to food assistance resources." },
+    fr: { title: "Texas Hunger Initiative", desc: "Coalition à l'échelle de l'État reliant les Texans aux ressources d'aide alimentaire." },
+    es: { title: "Texas Hunger Initiative", desc: "Coalición estatal que conecta a los tejanos con recursos de asistencia alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.flhunger.org",
+  states: ["FL"],
+  i18n: {
+    en: { title: "Feeding Florida", desc: "Statewide network of food banks serving all Florida counties." },
+    fr: { title: "Feeding Florida", desc: "Réseau à l'échelle de l'État de banques alimentaires desservant tous les comtés." },
+    es: { title: "Feeding Florida", desc: "Red estatal de bancos de alimentos que sirve a todos los condados de Florida." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.gafoodbanks.org",
+  states: ["GA"],
+  i18n: {
+    en: { title: "Georgia Food Bank Association", desc: "Statewide association coordinating food bank services across Georgia." },
+    fr: { title: "Georgia Food Bank Association", desc: "Association d'État coordonnant les services de banque alimentaire en Géorgie." },
+    es: { title: "Georgia Food Bank Association", desc: "Asociación estatal que coordina servicios de bancos de alimentos en Georgia." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.azfoodbanks.org",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "Arizona Food Bank Network", desc: "Statewide network coordinating food bank services across Arizona." },
+    fr: { title: "Arizona Food Bank Network", desc: "Réseau à l'échelle de l'État coordonnant les services de banque alimentaire en Arizona." },
+    es: { title: "Arizona Food Bank Network", desc: "Red estatal que coordina servicios de bancos de alimentos en Arizona." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.nvfoodbank.org",
+  states: ["NV"],
+  i18n: {
+    en: { title: "Three Square Food Bank", desc: "Regional food bank network serving southern Nevada communities." },
+    fr: { title: "Three Square Food Bank", desc: "Réseau régional de banque alimentaire desservant le sud du Nevada." },
+    es: { title: "Three Square Food Bank", desc: "Red regional de banco de alimentos que sirve al sur de Nevada." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.cfbnj.org",
+  states: ["NJ"],
+  i18n: {
+    en: { title: "Community FoodBank of New Jersey", desc: "Largest anti-hunger organization serving communities across New Jersey." },
+    fr: { title: "Community FoodBank of New Jersey", desc: "Plus grande organisation de lutte contre la faim du New Jersey." },
+    es: { title: "Community FoodBank of New Jersey", desc: "La organización contra el hambre más grande de Nueva Jersey." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.uofoodbank.org",
+  states: ["UT"],
+  i18n: {
+    en: { title: "Utah Food Bank", desc: "Statewide food bank network distributing food across Utah communities." },
+    fr: { title: "Utah Food Bank", desc: "Réseau alimentaire à l'échelle de l'État distribuant de la nourriture en Utah." },
+    es: { title: "Utah Food Bank", desc: "Red estatal de banco de alimentos que distribuye comida en comunidades de Utah." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.idahofoodbank.org",
+  states: ["ID"],
+  i18n: {
+    en: { title: "Idaho Foodbank", desc: "Statewide food bank network distributing food across Idaho communities." },
+    fr: { title: "Idaho Foodbank", desc: "Réseau alimentaire à l'échelle de l'État distribuant de la nourriture en Idaho." },
+    es: { title: "Idaho Foodbank", desc: "Red estatal de banco de alimentos que distribuye comida en comunidades de Idaho." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.rrfb.org",
+  states: ["NM"],
+  i18n: {
+    en: { title: "Roadrunner Food Bank", desc: "Largest food bank network in New Mexico serving statewide communities." },
+    fr: { title: "Roadrunner Food Bank", desc: "Plus grand réseau de banque alimentaire du Nouveau-Mexique." },
+    es: { title: "Roadrunner Food Bank", desc: "La red de banco de alimentos más grande de Nuevo México." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.kansasfoodbank.org",
+  states: ["KS"],
+  i18n: {
+    en: { title: "Kansas Food Bank", desc: "Statewide food bank network distributing food across Kansas communities." },
+    fr: { title: "Kansas Food Bank", desc: "Réseau alimentaire à l'échelle de l'État distribuant de la nourriture au Kansas." },
+    es: { title: "Kansas Food Bank", desc: "Red estatal de banco de alimentos que distribuye comida en comunidades de Kansas." },
+  },
+},
+
+// HEALTH (36)
+{
+  category: "Health",
+  link: "https://www.hrsa.gov/opa/index.html",
+  i18n: {
+    en: { title: "HRSA 340B Drug Pricing Program Info", desc: "Federal program info allowing eligible clinics to buy discounted medications." },
+    fr: { title: "Info programme prix médicaments 340B HRSA", desc: "Informations sur le programme fédéral d'achat de médicaments à prix réduit." },
+    es: { title: "Información del Programa de Precios de Medicamentos 340B HRSA", desc: "Información del programa federal de compra de medicamentos con descuento." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.needymeds.org",
+  i18n: {
+    en: { title: "NeedyMeds", desc: "Database of programs helping people afford medications and healthcare costs." },
+    fr: { title: "NeedyMeds", desc: "Base de données de programmes aidant à payer médicaments et soins de santé." },
+    es: { title: "NeedyMeds", desc: "Base de datos de programas que ayudan a pagar medicamentos y atención médica." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.rxassist.org",
+  i18n: {
+    en: { title: "RxAssist", desc: "Directory of pharmaceutical patient assistance programs by drug and company." },
+    fr: { title: "RxAssist", desc: "Répertoire de programmes d'aide aux patients pharmaceutiques par médicament." },
+    es: { title: "RxAssist", desc: "Directorio de programas de asistencia a pacientes farmacéuticos por medicamento." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.pparx.org",
+  i18n: {
+    en: { title: "Partnership for Prescription Assistance", desc: "Connects eligible patients with free or low-cost medication programs." },
+    fr: { title: "Partnership for Prescription Assistance", desc: "Relie les patients admissibles à des programmes de médicaments gratuits." },
+    es: { title: "Partnership for Prescription Assistance", desc: "Conecta a pacientes elegibles con programas de medicamentos gratuitos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.rxhope.com",
+  i18n: {
+    en: { title: "RxHope", desc: "Online platform simplifying access to pharmaceutical patient assistance programs." },
+    fr: { title: "RxHope", desc: "Plateforme en ligne simplifiant l'accès aux programmes d'aide pharmaceutique." },
+    es: { title: "RxHope", desc: "Plataforma en línea que simplifica el acceso a programas de asistencia farmacéutica." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.goodrx.com",
+  i18n: {
+    en: { title: "GoodRx", desc: "Free prescription discount coupons accepted at most major pharmacies." },
+    fr: { title: "GoodRx", desc: "Coupons de rabais gratuits sur ordonnance acceptés dans la plupart des pharmacies." },
+    es: { title: "GoodRx", desc: "Cupones de descuento de recetas gratuitos aceptados en la mayoría de farmacias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.costplusdrugs.com",
+  i18n: {
+    en: { title: "Cost Plus Drugs", desc: "Low-markup online pharmacy offering affordable generic medications." },
+    fr: { title: "Cost Plus Drugs", desc: "Pharmacie en ligne à faible marge offrant des médicaments génériques abordables." },
+    es: { title: "Cost Plus Drugs", desc: "Farmacia en línea de bajo margen que ofrece medicamentos genéricos asequibles." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.amerisourcebergen.com/patient-assistance",
+  i18n: {
+    en: { title: "AmerisourceBergen Patient Assistance Info", desc: "Information on manufacturer patient assistance program access." },
+    fr: { title: "Info aide patients AmerisourceBergen", desc: "Informations sur l'accès aux programmes d'aide aux patients des fabricants." },
+    es: { title: "Información de Asistencia al Paciente AmerisourceBergen", desc: "Información sobre acceso a programas de asistencia al paciente de fabricantes." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicare.gov/basics/get-started-with-medicare",
+  i18n: {
+    en: { title: "Medicare Get Started Guide", desc: "Official federal guide to understanding and enrolling in Medicare." },
+    fr: { title: "Guide démarrage Medicare", desc: "Guide fédéral officiel pour comprendre et s'inscrire à Medicare." },
+    es: { title: "Guía para Comenzar con Medicare", desc: "Guía federal oficial para entender e inscribirse en Medicare." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicare.gov/basics/costs/help",
+  i18n: {
+    en: { title: "Medicare Cost Help Programs", desc: "Official information on programs helping pay Medicare premiums and costs." },
+    fr: { title: "Programmes aide coûts Medicare", desc: "Informations officielles sur les programmes d'aide aux primes Medicare." },
+    es: { title: "Programas de Ayuda con Costos de Medicare", desc: "Información oficial sobre programas de ayuda con primas de Medicare." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicare.gov/plan-compare",
+  i18n: {
+    en: { title: "Medicare Plan Compare Tool", desc: "Official tool to compare Medicare plans and costs in your area." },
+    fr: { title: "Outil comparaison plans Medicare", desc: "Outil officiel pour comparer les plans et coûts Medicare dans votre région." },
+    es: { title: "Herramienta de Comparación de Planes Medicare", desc: "Herramienta oficial para comparar planes y costos de Medicare en su área." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.shiphelp.org",
+  i18n: {
+    en: { title: "State Health Insurance Assistance Program", desc: "Free, unbiased Medicare counseling available in every state." },
+    fr: { title: "Programme d'aide assurance santé d'État", desc: "Conseil Medicare gratuit et impartial disponible dans chaque État." },
+    es: { title: "Programa Estatal de Asistencia de Seguro de Salud", desc: "Consejería de Medicare gratuita e imparcial disponible en cada estado." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicaid.gov/about-us/beneficiary-resources/index.html",
+  i18n: {
+    en: { title: "Medicaid Beneficiary Resources", desc: "Official federal resources for current and prospective Medicaid beneficiaries." },
+    fr: { title: "Ressources bénéficiaires Medicaid", desc: "Ressources fédérales officielles pour bénéficiaires actuels et potentiels de Medicaid." },
+    es: { title: "Recursos para Beneficiarios de Medicaid", desc: "Recursos federales oficiales para beneficiarios actuales y potenciales de Medicaid." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicaid.gov/state-overviews/index.html",
+  i18n: {
+    en: { title: "Medicaid State Overview Pages", desc: "Official state-by-state overview of Medicaid programs and eligibility." },
+    fr: { title: "Pages aperçu Medicaid par État", desc: "Aperçu officiel État par État des programmes et admissibilité Medicaid." },
+    es: { title: "Páginas de Resumen Estatal de Medicaid", desc: "Resumen oficial estado por estado de programas y elegibilidad de Medicaid." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cms.gov/marketplace/agents-brokers/find-local-help",
+  i18n: {
+    en: { title: "CMS Find Local Marketplace Help", desc: "Official tool to find local certified marketplace enrollment assisters." },
+    fr: { title: "Trouver aide locale marché CMS", desc: "Outil officiel pour trouver des assistants d'inscription certifiés locaux." },
+    es: { title: "Encuentre Ayuda Local del Mercado CMS", desc: "Herramienta oficial para encontrar asistentes de inscripción certificados locales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.healthcare.gov/how-plans-work/",
+  i18n: {
+    en: { title: "HealthCare.gov How Plans Work", desc: "Official guide explaining how marketplace health insurance plans work." },
+    fr: { title: "Fonctionnement plans HealthCare.gov", desc: "Guide officiel expliquant le fonctionnement des plans du marché de l'assurance." },
+    es: { title: "Cómo Funcionan los Planes HealthCare.gov", desc: "Guía oficial que explica cómo funcionan los planes del mercado de seguros." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.healthcare.gov/lower-costs/",
+  i18n: {
+    en: { title: "HealthCare.gov Lower Your Costs", desc: "Official information on subsidies that can lower marketplace insurance costs." },
+    fr: { title: "Réduire vos coûts HealthCare.gov", desc: "Informations officielles sur les subventions réduisant les coûts d'assurance." },
+    es: { title: "Reduzca sus Costos HealthCare.gov", desc: "Información oficial sobre subsidios que pueden reducir los costos del mercado de seguros." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.kff.org/state-health-facts",
+  i18n: {
+    en: { title: "KFF State Health Facts", desc: "Independent research data on state-level health coverage and policy." },
+    fr: { title: "KFF State Health Facts", desc: "Données de recherche indépendantes sur la couverture santé au niveau des États." },
+    es: { title: "KFF State Health Facts", desc: "Datos de investigación independiente sobre cobertura de salud a nivel estatal." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.communitycatalyst.org/our-work/health-care-access",
+  i18n: {
+    en: { title: "Community Catalyst Health Care Access", desc: "Advocacy resources focused on expanding health care access." },
+    fr: { title: "Accès soins de santé Community Catalyst", desc: "Ressources de plaidoyer axées sur l'élargissement de l'accès aux soins." },
+    es: { title: "Acceso a Atención Médica Community Catalyst", desc: "Recursos de defensa enfocados en ampliar el acceso a la atención médica." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.211.org/services/prescription-assistance",
+  i18n: {
+    en: { title: "211 Prescription Assistance Directory", desc: "Local prescription assistance program referrals through the 211 network." },
+    fr: { title: "Répertoire aide ordonnance 211", desc: "Orientation vers programmes d'aide aux ordonnances via le réseau 211." },
+    es: { title: "Directorio de Asistencia de Recetas 211", desc: "Referencias de programas de asistencia de recetas a través de la red 211." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.togetherrxaccess.com",
+  i18n: {
+    en: { title: "Together Rx Access Card", desc: "Free prescription savings card for people without prescription insurance." },
+    fr: { title: "Carte Together Rx Access", desc: "Carte d'économies gratuite sur ordonnance pour personnes sans assurance médicaments." },
+    es: { title: "Tarjeta Together Rx Access", desc: "Tarjeta de ahorro de recetas gratuita para personas sin seguro de medicamentos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.freerxplus.com",
+  i18n: {
+    en: { title: "Free Rx Plus", desc: "Prescription discount card program offering savings at participating pharmacies." },
+    fr: { title: "Free Rx Plus", desc: "Programme de carte de rabais sur ordonnance offrant des économies en pharmacie." },
+    es: { title: "Free Rx Plus", desc: "Programa de tarjeta de descuento de recetas que ofrece ahorros en farmacias participantes." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.rxsaver.com",
+  i18n: {
+    en: { title: "RxSaver", desc: "Prescription price comparison and discount coupon platform." },
+    fr: { title: "RxSaver", desc: "Plateforme de comparaison de prix et de coupons de rabais sur ordonnance." },
+    es: { title: "RxSaver", desc: "Plataforma de comparación de precios y cupones de descuento de recetas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.familywize.org",
+  i18n: {
+    en: { title: "FamilyWize", desc: "Free prescription discount card for uninsured and underinsured individuals." },
+    fr: { title: "FamilyWize", desc: "Carte de rabais gratuite sur ordonnance pour personnes non ou sous-assurées." },
+    es: { title: "FamilyWize", desc: "Tarjeta de descuento de recetas gratuita para personas sin seguro o con seguro insuficiente." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.optumperks.com",
+  i18n: {
+    en: { title: "Optum Perks", desc: "Free prescription discount card and price comparison tool." },
+    fr: { title: "Optum Perks", desc: "Carte de rabais gratuite sur ordonnance et outil de comparaison de prix." },
+    es: { title: "Optum Perks", desc: "Tarjeta de descuento de recetas gratuita y herramienta de comparación de precios." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.scriptsave.com",
+  i18n: {
+    en: { title: "ScriptSave WellRx", desc: "Free prescription savings program with pharmacy price comparison." },
+    fr: { title: "ScriptSave WellRx", desc: "Programme d'économies sur ordonnance gratuit avec comparaison de prix en pharmacie." },
+    es: { title: "ScriptSave WellRx", desc: "Programa gratuito de ahorro de recetas con comparación de precios de farmacia." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.aarpmedicareplans.com",
+  i18n: {
+    en: { title: "AARP Medicare Plan Resources", desc: "Medicare plan information and resources for older adults." },
+    fr: { title: "Ressources plans Medicare AARP", desc: "Informations et ressources sur les plans Medicare pour aînés." },
+    es: { title: "Recursos de Planes Medicare AARP", desc: "Información y recursos de planes Medicare para adultos mayores." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicarerights.org",
+  i18n: {
+    en: { title: "Medicare Rights Center", desc: "Free counseling and advocacy helping people understand Medicare rights." },
+    fr: { title: "Medicare Rights Center", desc: "Conseil et plaidoyer gratuits aidant à comprendre les droits Medicare." },
+    es: { title: "Medicare Rights Center", desc: "Consejería y defensa gratuita que ayuda a entender los derechos de Medicare." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.n4a.org/eldercarelocator",
+  i18n: {
+    en: { title: "Eldercare Locator", desc: "Federal directory connecting older adults and caregivers to local services." },
+    fr: { title: "Eldercare Locator", desc: "Répertoire fédéral reliant aînés et aidants aux services locaux." },
+    es: { title: "Eldercare Locator", desc: "Directorio federal que conecta a adultos mayores y cuidadores con servicios locales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.caregiver.org",
+  i18n: {
+    en: { title: "Family Caregiver Alliance", desc: "Resources and support services for family caregivers of ill or aging relatives." },
+    fr: { title: "Family Caregiver Alliance", desc: "Ressources et services de soutien pour aidants familiaux de proches malades ou âgés." },
+    es: { title: "Family Caregiver Alliance", desc: "Recursos y servicios de apoyo para cuidadores familiares de parientes enfermos o mayores." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.caregiveraction.org",
+  i18n: {
+    en: { title: "Caregiver Action Network", desc: "Education, peer support, and resources for family caregivers." },
+    fr: { title: "Caregiver Action Network", desc: "Éducation, soutien par les pairs et ressources pour aidants familiaux." },
+    es: { title: "Caregiver Action Network", desc: "Educación, apoyo entre pares y recursos para cuidadores familiares." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.aginglifecare.org",
+  i18n: {
+    en: { title: "Aging Life Care Association", desc: "Directory of professional aging life care managers helping families plan care." },
+    fr: { title: "Aging Life Care Association", desc: "Répertoire de gestionnaires professionnels de soins pour aînés aidant les familles." },
+    es: { title: "Aging Life Care Association", desc: "Directorio de gestores profesionales de cuidado para mayores que ayudan a familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hospicefoundation.org",
+  i18n: {
+    en: { title: "Hospice Foundation of America", desc: "Education and resources on hospice and end-of-life care options." },
+    fr: { title: "Hospice Foundation of America", desc: "Éducation et ressources sur les soins palliatifs et de fin de vie." },
+    es: { title: "Hospice Foundation of America", desc: "Educación y recursos sobre opciones de cuidados paliativos y de fin de vida." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nhpco.org/find-hospice",
+  i18n: {
+    en: { title: "Find a Hospice Provider", desc: "Directory to locate hospice care providers by location." },
+    fr: { title: "Trouver un fournisseur de soins palliatifs", desc: "Répertoire pour localiser des fournisseurs de soins palliatifs." },
+    es: { title: "Encuentre un Proveedor de Cuidados Paliativos", desc: "Directorio para localizar proveedores de cuidados paliativos por ubicación." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.getpalliativecare.org",
+  i18n: {
+    en: { title: "Get Palliative Care", desc: "Information and provider directory for palliative care services." },
+    fr: { title: "Get Palliative Care", desc: "Informations et répertoire de fournisseurs de services de soins palliatifs." },
+    es: { title: "Get Palliative Care", desc: "Información y directorio de proveedores de servicios de cuidados paliativos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.compassionandchoices.org",
+  i18n: {
+    en: { title: "Compassion & Choices", desc: "Resources on end-of-life planning and patient rights." },
+    fr: { title: "Compassion & Choices", desc: "Ressources sur la planification de fin de vie et les droits des patients." },
+    es: { title: "Compassion & Choices", desc: "Recursos sobre planificación de fin de vida y derechos del paciente." },
+  },
+},
+
+// HOUSING (32)
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/california",
+  states: ["CA"],
+  i18n: {
+    en: { title: "HUD California Resources", desc: "Federal housing resources specific to California." },
+    fr: { title: "Ressources HUD Californie", desc: "Ressources fédérales de logement pour la Californie." },
+    es: { title: "Recursos HUD de California", desc: "Recursos federales de vivienda para California." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/new_york",
+  states: ["NY"],
+  i18n: {
+    en: { title: "HUD New York Resources", desc: "Federal housing resources specific to New York." },
+    fr: { title: "Ressources HUD New York", desc: "Ressources fédérales de logement pour New York." },
+    es: { title: "Recursos HUD de Nueva York", desc: "Recursos federales de vivienda para Nueva York." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/illinois",
+  states: ["IL"],
+  i18n: {
+    en: { title: "HUD Illinois Resources", desc: "Federal housing resources specific to Illinois." },
+    fr: { title: "Ressources HUD Illinois", desc: "Ressources fédérales de logement pour l'Illinois." },
+    es: { title: "Recursos HUD de Illinois", desc: "Recursos federales de vivienda para Illinois." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/arizona/homeownership",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "HUD Arizona Homeownership Programs", desc: "Federal homeownership program info specific to Arizona residents." },
+    fr: { title: "Programmes accession propriété Arizona HUD", desc: "Informations sur les programmes d'accession à la propriété en Arizona." },
+    es: { title: "Programas de Propiedad de Vivienda de Arizona HUD", desc: "Información de programas de propiedad de vivienda para residentes de Arizona." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.calhfa.ca.gov",
+  states: ["CA"],
+  i18n: {
+    en: { title: "California Housing Finance Agency", desc: "State agency offering affordable home loan programs for California residents." },
+    fr: { title: "California Housing Finance Agency", desc: "Agence d'État offrant des programmes de prêt immobilier abordables en Californie." },
+    es: { title: "California Housing Finance Agency", desc: "Agencia estatal que ofrece programas de préstamos de vivienda asequibles en California." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.nyshcr.org",
+  states: ["NY"],
+  i18n: {
+    en: { title: "New York State Homes and Community Renewal", desc: "State housing agency offering affordable housing programs for New Yorkers." },
+    fr: { title: "New York State Homes and Community Renewal", desc: "Agence de logement d'État offrant des programmes abordables aux New-Yorkais." },
+    es: { title: "New York State Homes and Community Renewal", desc: "Agencia estatal de vivienda que ofrece programas asequibles para neoyorquinos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.ihda.org",
+  states: ["IL"],
+  i18n: {
+    en: { title: "Illinois Housing Development Authority", desc: "State agency offering affordable housing and homeownership programs." },
+    fr: { title: "Illinois Housing Development Authority", desc: "Agence d'État offrant des programmes de logement abordable et d'accession." },
+    es: { title: "Illinois Housing Development Authority", desc: "Agencia estatal que ofrece programas de vivienda asequible y propiedad." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.thda.org",
+  states: ["TN"],
+  i18n: {
+    en: { title: "Tennessee Housing Development Agency", desc: "State agency offering affordable housing and down payment assistance." },
+    fr: { title: "Tennessee Housing Development Agency", desc: "Agence d'État offrant logement abordable et aide à la mise de fonds." },
+    es: { title: "Tennessee Housing Development Agency", desc: "Agencia estatal que ofrece vivienda asequible y ayuda de pago inicial." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.ohiohome.org",
+  states: ["OH"],
+  i18n: {
+    en: { title: "Ohio Housing Finance Agency", desc: "State agency offering affordable home loans and down payment assistance." },
+    fr: { title: "Ohio Housing Finance Agency", desc: "Agence d'État offrant des prêts immobiliers abordables et une aide à la mise de fonds." },
+    es: { title: "Ohio Housing Finance Agency", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles y ayuda de pago inicial." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.mshda.org",
+  states: ["MI"],
+  i18n: {
+    en: { title: "Michigan State Housing Development Authority", desc: "State agency offering affordable housing and homeownership programs." },
+    fr: { title: "Michigan State Housing Development Authority", desc: "Agence d'État offrant des programmes de logement abordable." },
+    es: { title: "Michigan State Housing Development Authority", desc: "Agencia estatal que ofrece programas de vivienda asequible y propiedad." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.phfa.org",
+  states: ["PA"],
+  i18n: {
+    en: { title: "Pennsylvania Housing Finance Agency", desc: "State agency offering affordable home loans for Pennsylvania residents." },
+    fr: { title: "Pennsylvania Housing Finance Agency", desc: "Agence d'État offrant des prêts immobiliers abordables en Pennsylvanie." },
+    es: { title: "Pennsylvania Housing Finance Agency", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Pennsylvania." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.nchfa.com",
+  states: ["NC"],
+  i18n: {
+    en: { title: "North Carolina Housing Finance Agency", desc: "State agency offering affordable home loans and rental assistance." },
+    fr: { title: "North Carolina Housing Finance Agency", desc: "Agence d'État offrant des prêts immobiliers abordables et aide au loyer." },
+    es: { title: "North Carolina Housing Finance Agency", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles y ayuda de alquiler." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.mhdc.com",
+  states: ["MO"],
+  i18n: {
+    en: { title: "Missouri Housing Development Commission", desc: "State agency offering affordable housing and homeownership programs." },
+    fr: { title: "Missouri Housing Development Commission", desc: "Agence d'État offrant des programmes de logement abordable." },
+    es: { title: "Missouri Housing Development Commission", desc: "Agencia estatal que ofrece programas de vivienda asequible y propiedad." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.wheda.com",
+  states: ["WI"],
+  i18n: {
+    en: { title: "Wisconsin Housing and Economic Development Authority", desc: "State agency offering affordable home loans for Wisconsin residents." },
+    fr: { title: "Wisconsin Housing and Economic Development Authority", desc: "Agence d'État offrant des prêts immobiliers abordables au Wisconsin." },
+    es: { title: "Wisconsin Housing and Economic Development Authority", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Wisconsin." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.mmp.maryland.gov",
+  states: ["MD"],
+  i18n: {
+    en: { title: "Maryland Mortgage Program", desc: "State program offering affordable home loans for Maryland residents." },
+    fr: { title: "Maryland Mortgage Program", desc: "Programme d'État offrant des prêts immobiliers abordables au Maryland." },
+    es: { title: "Maryland Mortgage Program", desc: "Programa estatal que ofrece préstamos de vivienda asequibles en Maryland." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.mnhousing.gov",
+  states: ["MN"],
+  i18n: {
+    en: { title: "Minnesota Housing Finance Agency", desc: "State agency offering affordable home loans for Minnesota residents." },
+    fr: { title: "Minnesota Housing Finance Agency", desc: "Agence d'État offrant des prêts immobiliers abordables au Minnesota." },
+    es: { title: "Minnesota Housing Finance Agency", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Minnesota." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.chfainfo.com",
+  states: ["CO"],
+  i18n: {
+    en: { title: "Colorado Housing and Finance Authority", desc: "State agency offering affordable home loans for Colorado residents." },
+    fr: { title: "Colorado Housing and Finance Authority", desc: "Agence d'État offrant des prêts immobiliers abordables au Colorado." },
+    es: { title: "Colorado Housing and Finance Authority", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Colorado." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.ahfa.com",
+  states: ["AL"],
+  i18n: {
+    en: { title: "Alabama Housing Finance Authority", desc: "State agency offering affordable home loans for Alabama residents." },
+    fr: { title: "Alabama Housing Finance Authority", desc: "Agence d'État offrant des prêts immobiliers abordables en Alabama." },
+    es: { title: "Alabama Housing Finance Authority", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Alabama." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.schousing.com",
+  states: ["SC"],
+  i18n: {
+    en: { title: "South Carolina State Housing Finance Authority", desc: "State agency offering affordable home loans for South Carolina residents." },
+    fr: { title: "South Carolina State Housing Finance Authority", desc: "Agence d'État offrant des prêts immobiliers abordables en Caroline du Sud." },
+    es: { title: "South Carolina State Housing Finance Authority", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Carolina del Sur." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.lhc.la.gov",
+  states: ["LA"],
+  i18n: {
+    en: { title: "Louisiana Housing Corporation", desc: "State agency offering affordable home loans for Louisiana residents." },
+    fr: { title: "Louisiana Housing Corporation", desc: "Agence d'État offrant des prêts immobiliers abordables en Louisiane." },
+    es: { title: "Louisiana Housing Corporation", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Luisiana." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.kyhousing.org",
+  states: ["KY"],
+  i18n: {
+    en: { title: "Kentucky Housing Corporation", desc: "State agency offering affordable home loans for Kentucky residents." },
+    fr: { title: "Kentucky Housing Corporation", desc: "Agence d'État offrant des prêts immobiliers abordables au Kentucky." },
+    es: { title: "Kentucky Housing Corporation", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Kentucky." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.oregon.gov/ohcs",
+  states: ["OR"],
+  i18n: {
+    en: { title: "Oregon Housing and Community Services", desc: "State agency offering affordable housing programs for Oregon residents." },
+    fr: { title: "Oregon Housing and Community Services", desc: "Agence d'État offrant des programmes de logement abordable en Oregon." },
+    es: { title: "Oregon Housing and Community Services", desc: "Agencia estatal que ofrece programas de vivienda asequible en Oregon." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.ohfa.org",
+  states: ["OK"],
+  i18n: {
+    en: { title: "Oklahoma Housing Finance Agency", desc: "State agency offering affordable home loans for Oklahoma residents." },
+    fr: { title: "Oklahoma Housing Finance Agency", desc: "Agence d'État offrant des prêts immobiliers abordables en Oklahoma." },
+    es: { title: "Oklahoma Housing Finance Agency", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Oklahoma." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.chfa.org",
+  states: ["CT"],
+  i18n: {
+    en: { title: "Connecticut Housing Finance Authority", desc: "State agency offering affordable home loans for Connecticut residents." },
+    fr: { title: "Connecticut Housing Finance Authority", desc: "Agence d'État offrant des prêts immobiliers abordables au Connecticut." },
+    es: { title: "Connecticut Housing Finance Authority", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Connecticut." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.masshousing.com",
+  states: ["MA"],
+  i18n: {
+    en: { title: "MassHousing", desc: "State agency offering affordable home loans for Massachusetts residents." },
+    fr: { title: "MassHousing", desc: "Agence d'État offrant des prêts immobiliers abordables au Massachusetts." },
+    es: { title: "MassHousing", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles en Massachusetts." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.vhda.com",
+  states: ["VA"],
+  i18n: {
+    en: { title: "Virginia Housing", desc: "State agency offering affordable home loans and rental assistance for Virginians." },
+    fr: { title: "Virginia Housing", desc: "Agence d'État offrant prêts immobiliers abordables et aide au loyer en Virginie." },
+    es: { title: "Virginia Housing", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles y ayuda de alquiler." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.floridahousing.org",
+  states: ["FL"],
+  i18n: {
+    en: { title: "Florida Housing Finance Corporation", desc: "State agency offering affordable home loans and down payment assistance." },
+    fr: { title: "Florida Housing Finance Corporation", desc: "Agence d'État offrant des prêts immobiliers abordables et aide à la mise de fonds." },
+    es: { title: "Florida Housing Finance Corporation", desc: "Agencia estatal que ofrece préstamos de vivienda asequibles y ayuda de pago inicial." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.dca.ga.gov",
+  states: ["GA"],
+  i18n: {
+    en: { title: "Georgia Department of Community Affairs Housing Programs", desc: "State housing programs and rental assistance for Georgia residents." },
+    fr: { title: "Programmes logement Georgia DCA", desc: "Programmes de logement et aide au loyer de l'État pour résidents de Géorgie." },
+    es: { title: "Programas de Vivienda del Departamento de Asuntos Comunitarios de Georgia", desc: "Programas estatales de vivienda y ayuda de alquiler para residentes de Georgia." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.housing.az.gov",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "Arizona Department of Housing", desc: "State housing programs and homeownership assistance for Arizona residents." },
+    fr: { title: "Arizona Department of Housing", desc: "Programmes de logement d'État et aide à l'accession pour résidents de l'Arizona." },
+    es: { title: "Arizona Department of Housing", desc: "Programas estatales de vivienda y ayuda de propiedad para residentes de Arizona." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.housing.nv.gov",
+  states: ["NV"],
+  i18n: {
+    en: { title: "Nevada Housing Division", desc: "State housing programs and homeownership assistance for Nevada residents." },
+    fr: { title: "Nevada Housing Division", desc: "Programmes de logement d'État et aide à l'accession pour résidents du Nevada." },
+    es: { title: "Nevada Housing Division", desc: "Programas estatales de vivienda y ayuda de propiedad para residentes de Nevada." },
+  },
+},
+
+// UTILITIES (32)
+{
+  category: "Utilities",
+  link: "https://www.csd.ca.gov/liheap",
+  states: ["CA"],
+  i18n: {
+    en: { title: "California LIHEAP", desc: "State energy assistance program information for California." },
+    fr: { title: "LIHEAP Californie", desc: "Informations sur le programme d'aide énergétique de la Californie." },
+    es: { title: "LIHEAP de California", desc: "Información del programa de asistencia energética de California." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.otda.ny.gov/programs/heap",
+  states: ["NY"],
+  i18n: {
+    en: { title: "New York HEAP", desc: "State home energy assistance program information for New York." },
+    fr: { title: "HEAP New York", desc: "Informations sur le programme d'aide énergétique domiciliaire de New York." },
+    es: { title: "HEAP de Nueva York", desc: "Información del programa de asistencia de energía en el hogar de Nueva York." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhs.state.il.us/liheap",
+  states: ["IL"],
+  i18n: {
+    en: { title: "Illinois LIHEAP", desc: "State energy assistance program information for Illinois." },
+    fr: { title: "LIHEAP Illinois", desc: "Informations sur le programme d'aide énergétique de l'Illinois." },
+    es: { title: "LIHEAP de Illinois", desc: "Información del programa de asistencia energética de Illinois." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.tn.gov/humanservices/for-families/liheap.html",
+  states: ["TN"],
+  i18n: {
+    en: { title: "Tennessee LIHEAP", desc: "State energy assistance program information for Tennessee." },
+    fr: { title: "LIHEAP Tennessee", desc: "Informations sur le programme d'aide énergétique du Tennessee." },
+    es: { title: "LIHEAP de Tennessee", desc: "Información del programa de asistencia energética de Tennessee." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.development.ohio.gov/liheap",
+  states: ["OH"],
+  i18n: {
+    en: { title: "Ohio LIHEAP", desc: "State energy assistance program information for Ohio." },
+    fr: { title: "LIHEAP Ohio", desc: "Informations sur le programme d'aide énergétique de l'Ohio." },
+    es: { title: "LIHEAP de Ohio", desc: "Información del programa de asistencia energética de Ohio." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.michigan.gov/mdhhs/liheap",
+  states: ["MI"],
+  i18n: {
+    en: { title: "Michigan LIHEAP", desc: "State energy assistance program information for Michigan." },
+    fr: { title: "LIHEAP Michigan", desc: "Informations sur le programme d'aide énergétique du Michigan." },
+    es: { title: "LIHEAP de Michigan", desc: "Información del programa de asistencia energética de Michigan." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhs.pa.gov/liheap",
+  states: ["PA"],
+  i18n: {
+    en: { title: "Pennsylvania LIHEAP", desc: "State energy assistance program information for Pennsylvania." },
+    fr: { title: "LIHEAP Pennsylvanie", desc: "Informations sur le programme d'aide énergétique de la Pennsylvanie." },
+    es: { title: "LIHEAP de Pennsylvania", desc: "Información del programa de asistencia energética de Pennsylvania." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.ncdhhs.gov/liheap",
+  states: ["NC"],
+  i18n: {
+    en: { title: "North Carolina LIHEAP", desc: "State energy assistance program information for North Carolina." },
+    fr: { title: "LIHEAP Caroline du Nord", desc: "Informations sur le programme d'aide énergétique de la Caroline du Nord." },
+    es: { title: "LIHEAP de Carolina del Norte", desc: "Información del programa de asistencia energética de Carolina del Norte." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.mo.gov/liheap",
+  states: ["MO"],
+  i18n: {
+    en: { title: "Missouri LIHEAP", desc: "State energy assistance program information for Missouri." },
+    fr: { title: "LIHEAP Missouri", desc: "Informations sur le programme d'aide énergétique du Missouri." },
+    es: { title: "LIHEAP de Missouri", desc: "Información del programa de asistencia energética de Missouri." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dcf.wisconsin.gov/liheap",
+  states: ["WI"],
+  i18n: {
+    en: { title: "Wisconsin Home Energy Plus", desc: "State energy assistance program information for Wisconsin." },
+    fr: { title: "Wisconsin Home Energy Plus", desc: "Informations sur le programme d'aide énergétique domiciliaire du Wisconsin." },
+    es: { title: "Wisconsin Home Energy Plus", desc: "Información del programa de asistencia de energía en el hogar de Wisconsin." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhs.maryland.gov/office-of-home-energy-programs/",
+  states: ["MD"],
+  i18n: {
+    en: { title: "Maryland Office of Home Energy Programs", desc: "State energy assistance program information for Maryland." },
+    fr: { title: "Bureau programmes énergie domicile Maryland", desc: "Informations sur le programme d'aide énergétique domiciliaire du Maryland." },
+    es: { title: "Oficina de Programas de Energía del Hogar de Maryland", desc: "Información del programa de asistencia de energía en el hogar de Maryland." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.mn.gov/commerce/energyassistance",
+  states: ["MN"],
+  i18n: {
+    en: { title: "Minnesota Energy Assistance Program (again)", desc: "Additional state energy assistance resource for Minnesota residents." },
+    fr: { title: "Programme aide énergie Minnesota (bis)", desc: "Ressource supplémentaire d'aide énergétique pour résidents du Minnesota." },
+    es: { title: "Programa de Asistencia Energética de Minnesota (adicional)", desc: "Recurso adicional de asistencia energética para residentes de Minnesota." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.colorado.gov/pacific/cdhs/liheap",
+  states: ["CO"],
+  i18n: {
+    en: { title: "Colorado LEAP", desc: "State energy assistance program (LEAP) information for Colorado." },
+    fr: { title: "Colorado LEAP", desc: "Informations sur le programme d'aide énergétique (LEAP) du Colorado." },
+    es: { title: "Colorado LEAP", desc: "Información del programa de asistencia energética (LEAP) de Colorado." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhr.alabama.gov/liheap-2",
+  states: ["AL"],
+  i18n: {
+    en: { title: "Alabama LIHEAP Application Info", desc: "Additional application information for the Alabama energy assistance program." },
+    fr: { title: "Info demande LIHEAP Alabama", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Alabama", desc: "Información adicional de solicitud para el programa de asistencia energética." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dss.sc.gov/liheap-2",
+  states: ["SC"],
+  i18n: {
+    en: { title: "South Carolina LIHEAP Application Info", desc: "Additional application information for the South Carolina energy program." },
+    fr: { title: "Info demande LIHEAP Caroline du Sud", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Carolina del Sur", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dcf.louisiana.gov/liheap-2",
+  states: ["LA"],
+  i18n: {
+    en: { title: "Louisiana LIHEAP Application Info", desc: "Additional application information for the Louisiana energy program." },
+    fr: { title: "Info demande LIHEAP Louisiane", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Luisiana", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.chfs.ky.gov/liheap-2",
+  states: ["KY"],
+  i18n: {
+    en: { title: "Kentucky LIHEAP Application Info", desc: "Additional application information for the Kentucky energy program." },
+    fr: { title: "Info demande LIHEAP Kentucky", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Kentucky", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.oregon.gov/energy/liheap",
+  states: ["OR"],
+  i18n: {
+    en: { title: "Oregon LIHEAP", desc: "State energy assistance program information for Oregon." },
+    fr: { title: "LIHEAP Oregon", desc: "Informations sur le programme d'aide énergétique de l'Oregon." },
+    es: { title: "LIHEAP de Oregon", desc: "Información del programa de asistencia energética de Oregon." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.okdhs.org/liheap",
+  states: ["OK"],
+  i18n: {
+    en: { title: "Oklahoma LIHEAP", desc: "State energy assistance program information for Oklahoma." },
+    fr: { title: "LIHEAP Oklahoma", desc: "Informations sur le programme d'aide énergétique de l'Oklahoma." },
+    es: { title: "LIHEAP de Oklahoma", desc: "Información del programa de asistencia energética de Oklahoma." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.ct.gov/dss/liheap",
+  states: ["CT"],
+  i18n: {
+    en: { title: "Connecticut LIHEAP", desc: "State energy assistance program information for Connecticut." },
+    fr: { title: "LIHEAP Connecticut", desc: "Informations sur le programme d'aide énergétique du Connecticut." },
+    es: { title: "LIHEAP de Connecticut", desc: "Información del programa de asistencia energética de Connecticut." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.mass.gov/liheap-2",
+  states: ["MA"],
+  i18n: {
+    en: { title: "Massachusetts LIHEAP Application Info", desc: "Additional application information for the Massachusetts energy program." },
+    fr: { title: "Info demande LIHEAP Massachusetts", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Massachusetts", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dss.virginia.gov/liheap",
+  states: ["VA"],
+  i18n: {
+    en: { title: "Virginia LIHEAP", desc: "State energy assistance program information for Virginia." },
+    fr: { title: "LIHEAP Virginie", desc: "Informations sur le programme d'aide énergétique de la Virginie." },
+    es: { title: "LIHEAP de Virginia", desc: "Información del programa de asistencia energética de Virginia." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.myflfamilies.com/liheap-2",
+  states: ["FL"],
+  i18n: {
+    en: { title: "Florida LIHEAP Application Info", desc: "Additional application information for the Florida energy program." },
+    fr: { title: "Info demande LIHEAP Floride", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Florida", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dcaz.az.gov/liheap-2",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "Arizona LIHEAP Application Info", desc: "Additional application information for the Arizona energy program." },
+    fr: { title: "Info demande LIHEAP Arizona", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Arizona", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dwss.nv.gov/liheap-2",
+  states: ["NV"],
+  i18n: {
+    en: { title: "Nevada LIHEAP Application Info", desc: "Additional application information for the Nevada energy program." },
+    fr: { title: "Info demande LIHEAP Nevada", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Nevada", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.nj.gov/dcf/liheap-2",
+  states: ["NJ"],
+  i18n: {
+    en: { title: "New Jersey LIHEAP Application Info", desc: "Additional application information for the New Jersey energy program." },
+    fr: { title: "Info demande LIHEAP New Jersey", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Nueva Jersey", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.jobs.utah.gov/liheap-2",
+  states: ["UT"],
+  i18n: {
+    en: { title: "Utah LIHEAP Application Info", desc: "Additional application information for the Utah energy program." },
+    fr: { title: "Info demande LIHEAP Utah", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Utah", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.healthandwelfare.idaho.gov/liheap-2",
+  states: ["ID"],
+  i18n: {
+    en: { title: "Idaho LIHEAP Application Info", desc: "Additional application information for the Idaho energy program." },
+    fr: { title: "Info demande LIHEAP Idaho", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Idaho", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.hsd.state.nm.us/liheap-2",
+  states: ["NM"],
+  i18n: {
+    en: { title: "New Mexico LIHEAP Application Info", desc: "Additional application information for the New Mexico energy program." },
+    fr: { title: "Info demande LIHEAP Nouveau-Mexique", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Nuevo México", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dcf.ks.gov/liheap-2",
+  states: ["KS"],
+  i18n: {
+    en: { title: "Kansas LIHEAP Application Info", desc: "Additional application information for the Kansas energy program." },
+    fr: { title: "Info demande LIHEAP Kansas", desc: "Informations supplémentaires de demande pour le programme d'aide énergétique." },
+    es: { title: "Información de Solicitud LIHEAP Kansas", desc: "Información adicional de solicitud para el programa de energía." },
+  },
+},
+
+// EDUCATION (34)
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/understand-aid/types/grants/pell",
+  i18n: {
+    en: { title: "Federal Pell Grant Details", desc: "Official detailed information on Pell Grant eligibility and amounts." },
+    fr: { title: "Détails subvention Pell fédérale", desc: "Informations détaillées officielles sur l'admissibilité et les montants Pell." },
+    es: { title: "Detalles de la Subvención Pell Federal", desc: "Información oficial detallada sobre elegibilidad y montos de la Beca Pell." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/understand-aid/types/grants/fseog",
+  i18n: {
+    en: { title: "Federal Supplemental Educational Opportunity Grant", desc: "Additional federal grant for students with exceptional financial need." },
+    fr: { title: "Subvention fédérale complémentaire d'opportunité éducative", desc: "Subvention fédérale supplémentaire pour étudiants ayant un besoin financier exceptionnel." },
+    es: { title: "Subvención Federal Complementaria de Oportunidad Educativa", desc: "Subvención federal adicional para estudiantes con necesidad financiera excepcional." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/understand-aid/types/grants/teach",
+  i18n: {
+    en: { title: "TEACH Grant Program", desc: "Federal grant for students committing to teach in high-need fields." },
+    fr: { title: "Programme subvention TEACH", desc: "Subvention fédérale pour étudiants s'engageant à enseigner dans des domaines prioritaires." },
+    es: { title: "Programa de Subvención TEACH", desc: "Subvención federal para estudiantes que se comprometen a enseñar en campos de alta necesidad." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/understand-aid/types/work-study",
+  i18n: {
+    en: { title: "Federal Work-Study Program", desc: "Federal program providing part-time jobs for students with financial need." },
+    fr: { title: "Programme travail-études fédéral", desc: "Programme fédéral offrant des emplois à temps partiel pour étudiants dans le besoin." },
+    es: { title: "Programa Federal de Estudio y Trabajo", desc: "Programa federal que ofrece empleos de medio tiempo para estudiantes con necesidad." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/apply-for-aid/fafsa",
+  i18n: {
+    en: { title: "FAFSA Application Portal", desc: "Official portal to complete the Free Application for Federal Student Aid." },
+    fr: { title: "Portail demande FAFSA", desc: "Portail officiel pour compléter la demande d'aide fédérale aux étudiants." },
+    es: { title: "Portal de Solicitud FAFSA", desc: "Portal oficial para completar la Solicitud Gratuita de Ayuda Federal para Estudiantes." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/aid-estimator/",
+  i18n: {
+    en: { title: "Federal Student Aid Estimator", desc: "Official tool to estimate federal financial aid eligibility before applying." },
+    fr: { title: "Estimateur aide fédérale étudiante", desc: "Outil officiel pour estimer l'admissibilité à l'aide financière fédérale." },
+    es: { title: "Estimador de Ayuda Federal para Estudiantes", desc: "Herramienta oficial para estimar elegibilidad de ayuda financiera federal." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nasfaa.org",
+  i18n: {
+    en: { title: "National Association of Student Financial Aid Administrators", desc: "Resources helping families understand financial aid processes." },
+    fr: { title: "Association nationale administrateurs aide financière étudiante", desc: "Ressources aidant les familles à comprendre les processus d'aide financière." },
+    es: { title: "Asociación Nacional de Administradores de Ayuda Financiera Estudiantil", desc: "Recursos que ayudan a familias a entender procesos de ayuda financiera." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.finaid.org/otheraid/",
+  i18n: {
+    en: { title: "FinAid Other Aid Sources", desc: "Independent guide to additional and lesser-known financial aid sources." },
+    fr: { title: "Autres sources aide FinAid", desc: "Guide indépendant des sources d'aide financière supplémentaires et moins connues." },
+    es: { title: "Otras Fuentes de Ayuda FinAid", desc: "Guía independiente de fuentes adicionales y menos conocidas de ayuda financiera." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.collegeraptor.com/find-colleges/",
+  i18n: {
+    en: { title: "College Raptor Search Tool", desc: "College matching and cost comparison tool for prospective students." },
+    fr: { title: "Outil recherche College Raptor", desc: "Outil de correspondance et de comparaison de coûts universitaires." },
+    es: { title: "Herramienta de Búsqueda College Raptor", desc: "Herramienta de coincidencia y comparación de costos universitarios." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.collegescorecard.ed.gov",
+  i18n: {
+    en: { title: "College Scorecard", desc: "Official federal tool comparing college costs, outcomes, and value." },
+    fr: { title: "College Scorecard", desc: "Outil fédéral officiel comparant coûts, résultats et valeur des collèges." },
+    es: { title: "College Scorecard", desc: "Herramienta federal oficial que compara costos, resultados y valor universitario." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.petersons.com",
+  i18n: {
+    en: { title: "Peterson's College Search", desc: "College and scholarship search platform for prospective students." },
+    fr: { title: "Recherche collège Peterson's", desc: "Plateforme de recherche de collège et de bourses pour futurs étudiants." },
+    es: { title: "Búsqueda Universitaria Peterson's", desc: "Plataforma de búsqueda universitaria y de becas para futuros estudiantes." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.collegedata.com",
+  i18n: {
+    en: { title: "CollegeData", desc: "College search, admissions, and financial aid planning tool." },
+    fr: { title: "CollegeData", desc: "Outil de recherche universitaire, admissions et planification d'aide financière." },
+    es: { title: "CollegeData", desc: "Herramienta de búsqueda universitaria, admisiones y planificación de ayuda financiera." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.communitycollegeconsortium.org",
+  i18n: {
+    en: { title: "Community College Research Center", desc: "Research and resources on community college access and success." },
+    fr: { title: "Centre de recherche collèges communautaires", desc: "Recherche et ressources sur l'accès et la réussite au collège communautaire." },
+    es: { title: "Centro de Investigación de Colegios Comunitarios", desc: "Investigación y recursos sobre acceso y éxito en colegios comunitarios." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.aacc.nche.edu",
+  i18n: {
+    en: { title: "American Association of Community Colleges", desc: "Directory and resources for community colleges nationwide." },
+    fr: { title: "American Association of Community Colleges", desc: "Répertoire et ressources pour collèges communautaires à l'échelle nationale." },
+    es: { title: "American Association of Community Colleges", desc: "Directorio y recursos para colegios comunitarios a nivel nacional." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.completecollege.org",
+  i18n: {
+    en: { title: "Complete College America", desc: "Resources and initiatives supporting college completion for underserved students." },
+    fr: { title: "Complete College America", desc: "Ressources et initiatives soutenant l'achèvement des études pour étudiants défavorisés." },
+    es: { title: "Complete College America", desc: "Recursos e iniciativas que apoyan la finalización universitaria para estudiantes desatendidos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.firstgen.naspa.org",
+  i18n: {
+    en: { title: "NASPA Center for First-generation Student Success", desc: "Resources supporting first-generation college students." },
+    fr: { title: "Centre réussite étudiants première génération NASPA", desc: "Ressources soutenant les étudiants universitaires de première génération." },
+    es: { title: "Centro NASPA para el Éxito de Estudiantes de Primera Generación", desc: "Recursos que apoyan a estudiantes universitarios de primera generación." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.imfirst.org",
+  i18n: {
+    en: { title: "I'm First Generation", desc: "Community and resources for first-generation college students and families." },
+    fr: { title: "I'm First Generation", desc: "Communauté et ressources pour étudiants universitaires de première génération." },
+    es: { title: "I'm First Generation", desc: "Comunidad y recursos para estudiantes universitarios de primera generación." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.risefirst.org",
+  i18n: {
+    en: { title: "Rise First Scholarship", desc: "Scholarships and mentorship for first-generation and underrepresented students." },
+    fr: { title: "Rise First Scholarship", desc: "Bourses et mentorat pour étudiants de première génération et sous-représentés." },
+    es: { title: "Rise First Scholarship", desc: "Becas y mentoría para estudiantes de primera generación y subrepresentados." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.thurgoodmarshallfund.net",
+  i18n: {
+    en: { title: "Thurgood Marshall College Fund", desc: "Scholarships and support for students at historically Black public colleges." },
+    fr: { title: "Thurgood Marshall College Fund", desc: "Bourses et soutien pour étudiants dans les collèges publics historiquement noirs." },
+    es: { title: "Thurgood Marshall College Fund", desc: "Becas y apoyo para estudiantes en universidades públicas históricamente afroamericanas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.apiascholars.org",
+  i18n: {
+    en: { title: "APIA Scholars", desc: "Scholarships for Asian and Pacific Islander American students." },
+    fr: { title: "APIA Scholars", desc: "Bourses pour étudiants américains d'origine asiatique et des îles du Pacifique." },
+    es: { title: "APIA Scholars", desc: "Becas para estudiantes estadounidenses de origen asiático y de las islas del Pacífico." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.naacpldf.org/scholarships/",
+  i18n: {
+    en: { title: "NAACP Legal Defense Fund Scholarships", desc: "Scholarship resources supporting Black students pursuing higher education." },
+    fr: { title: "Bourses NAACP Legal Defense Fund", desc: "Ressources de bourses soutenant les étudiants noirs poursuivant des études supérieures." },
+    es: { title: "Becas NAACP Legal Defense Fund", desc: "Recursos de becas que apoyan a estudiantes negros que buscan educación superior." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.gatesmillennium.org",
+  i18n: {
+    en: { title: "Gates Millennium Scholars Archive", desc: "Legacy resource for information on the Gates Millennium Scholars program." },
+    fr: { title: "Archive Gates Millennium Scholars", desc: "Ressource historique d'information sur le programme Gates Millennium Scholars." },
+    es: { title: "Archivo Gates Millennium Scholars", desc: "Recurso histórico de información sobre el programa Gates Millennium Scholars." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.coca-colascholarsfoundation.org",
+  i18n: {
+    en: { title: "Coca-Cola Scholars Foundation", desc: "Merit-based scholarships for high school seniors nationwide." },
+    fr: { title: "Coca-Cola Scholars Foundation", desc: "Bourses au mérite pour élèves de terminale à l'échelle nationale." },
+    es: { title: "Coca-Cola Scholars Foundation", desc: "Becas por mérito para estudiantes del último año de secundaria a nivel nacional." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.burgerking.com/scholars",
+  i18n: {
+    en: { title: "Burger King Scholars Program", desc: "Scholarship program for students demonstrating community involvement." },
+    fr: { title: "Programme Burger King Scholars", desc: "Programme de bourses pour étudiants démontrant un engagement communautaire." },
+    es: { title: "Programa Burger King Scholars", desc: "Programa de becas para estudiantes que demuestran participación comunitaria." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.elksfoundation.org",
+  i18n: {
+    en: { title: "Elks National Foundation Scholarships", desc: "Scholarships for high school seniors pursuing higher education." },
+    fr: { title: "Bourses Elks National Foundation", desc: "Bourses pour élèves de terminale poursuivant des études supérieures." },
+    es: { title: "Becas Elks National Foundation", desc: "Becas para estudiantes del último año de secundaria que buscan educación superior." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.rotary.org/en/our-programs/scholarships",
+  i18n: {
+    en: { title: "Rotary Foundation Scholarships", desc: "Scholarships and grants supporting education and cultural exchange." },
+    fr: { title: "Bourses Rotary Foundation", desc: "Bourses et subventions soutenant l'éducation et l'échange culturel." },
+    es: { title: "Becas Rotary Foundation", desc: "Becas y subvenciones que apoyan la educación y el intercambio cultural." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.soroptimist.org/our-work/live-your-dream-award/",
+  i18n: {
+    en: { title: "Soroptimist Live Your Dream Award", desc: "Financial assistance for women who are primary income earners pursuing education." },
+    fr: { title: "Soroptimist Live Your Dream Award", desc: "Aide financière pour femmes soutiens de famille poursuivant des études." },
+    es: { title: "Soroptimist Live Your Dream Award", desc: "Ayuda financiera para mujeres sostén de familia que buscan educación." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.zonta.org/Web/AboutUs/awards",
+  i18n: {
+    en: { title: "Zonta International Scholarships", desc: "Scholarships supporting women pursuing education in various fields." },
+    fr: { title: "Bourses Zonta International", desc: "Bourses soutenant les femmes poursuivant des études dans divers domaines." },
+    es: { title: "Becas Zonta International", desc: "Becas que apoyan a mujeres que buscan educación en varios campos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.awis.org/programs/scholarships",
+  i18n: {
+    en: { title: "Association for Women in Science Scholarships", desc: "Scholarships supporting women pursuing STEM education and careers." },
+    fr: { title: "Bourses Association for Women in Science", desc: "Bourses soutenant les femmes poursuivant des études et carrières STEM." },
+    es: { title: "Becas Association for Women in Science", desc: "Becas que apoyan a mujeres que buscan educación y carreras STEM." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.swe.org/scholarships/",
+  i18n: {
+    en: { title: "Society of Women Engineers Scholarships", desc: "Scholarships for women pursuing engineering and technology degrees." },
+    fr: { title: "Bourses Society of Women Engineers", desc: "Bourses pour femmes poursuivant des diplômes en ingénierie et technologie." },
+    es: { title: "Becas Society of Women Engineers", desc: "Becas para mujeres que buscan títulos en ingeniería y tecnología." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nsbe.org/scholarships",
+  i18n: {
+    en: { title: "National Society of Black Engineers Scholarships", desc: "Scholarships supporting Black students pursuing engineering degrees." },
+    fr: { title: "Bourses National Society of Black Engineers", desc: "Bourses soutenant les étudiants noirs poursuivant des diplômes en ingénierie." },
+    es: { title: "Becas National Society of Black Engineers", desc: "Becas que apoyan a estudiantes negros que buscan títulos en ingeniería." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.shpe.org/scholarships",
+  i18n: {
+    en: { title: "Society of Hispanic Professional Engineers Scholarships", desc: "Scholarships supporting Hispanic students pursuing STEM degrees." },
+    fr: { title: "Bourses Society of Hispanic Professional Engineers", desc: "Bourses soutenant les étudiants hispaniques poursuivant des diplômes STEM." },
+    es: { title: "Becas Society of Hispanic Professional Engineers", desc: "Becas que apoyan a estudiantes hispanos que buscan títulos STEM." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.aises.org/scholarships",
+  i18n: {
+    en: { title: "American Indian Science and Engineering Society Scholarships", desc: "Scholarships supporting Native American students in STEM fields." },
+    fr: { title: "Bourses American Indian Science and Engineering Society", desc: "Bourses soutenant les étudiants amérindiens dans les domaines STEM." },
+    es: { title: "Becas American Indian Science and Engineering Society", desc: "Becas que apoyan a estudiantes nativos americanos en campos STEM." },
+  },
+},
+
+// INCOME (34)
+{
+  category: "Income",
+  link: "https://www.acf.hhs.gov/ocs/programs/tanf",
+  i18n: {
+    en: { title: "Temporary Assistance for Needy Families Overview", desc: "Official federal overview of the TANF cash assistance program." },
+    fr: { title: "Aperçu assistance temporaire familles nécessiteuses", desc: "Aperçu fédéral officiel du programme d'aide en espèces TANF." },
+    es: { title: "Resumen de Asistencia Temporal para Familias Necesitadas", desc: "Resumen federal oficial del programa de asistencia en efectivo TANF." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.acf.hhs.gov/ofa/programs/tanf/state-territory-plans",
+  i18n: {
+    en: { title: "TANF State Plans Directory", desc: "Official directory of state-specific TANF program plans and rules." },
+    fr: { title: "Répertoire plans TANF par État", desc: "Répertoire officiel des plans et règles TANF spécifiques à chaque État." },
+    es: { title: "Directorio de Planes TANF por Estado", desc: "Directorio oficial de planes y reglas TANF específicos de cada estado." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.benefits.gov/benefit/613",
+  i18n: {
+    en: { title: "Benefits.gov TANF Benefit Details", desc: "Official federal benefit finder details page for TANF." },
+    fr: { title: "Détails prestation TANF Benefits.gov", desc: "Page officielle de détails de prestation TANF du chercheur fédéral." },
+    es: { title: "Detalles del Beneficio TANF Benefits.gov", desc: "Página oficial de detalles del beneficio TANF del buscador federal." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.acf.hhs.gov/css",
+  i18n: {
+    en: { title: "Office of Child Support Services", desc: "Federal office overseeing child support enforcement and services." },
+    fr: { title: "Office of Child Support Services", desc: "Bureau fédéral supervisant l'application et les services de pension alimentaire." },
+    es: { title: "Oficina de Servicios de Manutención Infantil", desc: "Oficina federal que supervisa la aplicación y servicios de manutención infantil." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.acf.hhs.gov/css/child-support-agencies-map",
+  i18n: {
+    en: { title: "Child Support Agency Map", desc: "Official map to find your state child support enforcement agency." },
+    fr: { title: "Carte agences pension alimentaire", desc: "Carte officielle pour trouver l'agence d'application de pension alimentaire de votre État." },
+    es: { title: "Mapa de Agencias de Manutención Infantil", desc: "Mapa oficial para encontrar la agencia de manutención infantil de su estado." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.irs.gov/individuals/child-tax-credit",
+  i18n: {
+    en: { title: "IRS Child Tax Credit Info", desc: "Official IRS information on claiming the Child Tax Credit." },
+    fr: { title: "Info crédit d'impôt enfant IRS", desc: "Informations officielles de l'IRS sur la demande du crédit d'impôt pour enfant." },
+    es: { title: "Información del Crédito Tributario por Hijos IRS", desc: "Información oficial del IRS sobre cómo reclamar el crédito tributario por hijos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.irs.gov/credits-deductions/individuals/earned-income-tax-credit",
+  i18n: {
+    en: { title: "IRS Earned Income Tax Credit Info", desc: "Official IRS information on eligibility for the EITC." },
+    fr: { title: "Info crédit d'impôt revenu gagné IRS", desc: "Informations officielles de l'IRS sur l'admissibilité au crédit d'impôt EITC." },
+    es: { title: "Información del Crédito Tributario por Ingreso del Trabajo IRS", desc: "Información oficial del IRS sobre elegibilidad para el EITC." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.irs.gov/individuals/free-tax-return-preparation-for-you-by-volunteers",
+  i18n: {
+    en: { title: "IRS Free Tax Preparation (VITA)", desc: "Official directory of free volunteer tax preparation sites nationwide." },
+    fr: { title: "Préparation fiscale gratuite IRS (VITA)", desc: "Répertoire officiel des sites de préparation fiscale bénévole gratuits." },
+    es: { title: "Preparación de Impuestos Gratuita IRS (VITA)", desc: "Directorio oficial de sitios de preparación fiscal voluntaria gratuita." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.irs.gov/help/tax-counseling-for-the-elderly",
+  i18n: {
+    en: { title: "Tax Counseling for the Elderly (TCE)", desc: "Free tax preparation assistance specifically for taxpayers age 60 and older." },
+    fr: { title: "Conseil fiscal pour aînés (TCE)", desc: "Aide gratuite à la préparation fiscale spécifiquement pour contribuables de 60 ans et plus." },
+    es: { title: "Consejería Fiscal para Personas Mayores (TCE)", desc: "Ayuda gratuita de preparación de impuestos específicamente para mayores de 60 años." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.aarp.org/money/taxes/aarp_taxaide/",
+  i18n: {
+    en: { title: "AARP Foundation Tax-Aide", desc: "Free tax preparation help for low-to-moderate income taxpayers, especially seniors." },
+    fr: { title: "AARP Foundation Tax-Aide", desc: "Aide gratuite à la préparation fiscale pour contribuables à revenu faible à modéré." },
+    es: { title: "AARP Foundation Tax-Aide", desc: "Ayuda gratuita de preparación de impuestos para contribuyentes de ingresos bajos a moderados." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.unitedway.org/our-impact/featured-programs/free-tax-prep",
+  i18n: {
+    en: { title: "United Way Free Tax Prep", desc: "Free tax preparation services offered through local United Way chapters." },
+    fr: { title: "Préparation fiscale gratuite United Way", desc: "Services de préparation fiscale gratuits offerts par les chapitres locaux United Way." },
+    es: { title: "Preparación de Impuestos Gratuita United Way", desc: "Servicios gratuitos de preparación de impuestos ofrecidos por capítulos locales." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.taxoutreach.org",
+  i18n: {
+    en: { title: "Tax Outreach", desc: "Resources helping low-income filers access free tax preparation and credits." },
+    fr: { title: "Tax Outreach", desc: "Ressources aidant les déclarants à faible revenu à accéder à la préparation fiscale gratuite." },
+    es: { title: "Tax Outreach", desc: "Recursos que ayudan a declarantes de bajos ingresos a acceder a preparación fiscal gratuita." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/consumer-tools/save-your-refund/",
+  i18n: {
+    en: { title: "CFPB Save Your Refund", desc: "Program encouraging tax filers to save part of their refund with prize incentives." },
+    fr: { title: "CFPB Save Your Refund", desc: "Programme encourageant les déclarants à épargner une partie de leur remboursement." },
+    es: { title: "CFPB Save Your Refund", desc: "Programa que anima a los declarantes a ahorrar parte de su reembolso." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.mymoneyplan.gov",
+  i18n: {
+    en: { title: "MyMoneyPlan.gov", desc: "Federal financial planning tool for setting and tracking money goals." },
+    fr: { title: "MyMoneyPlan.gov", desc: "Outil fédéral de planification financière pour fixer et suivre des objectifs." },
+    es: { title: "MyMoneyPlan.gov", desc: "Herramienta federal de planificación financiera para establecer y rastrear metas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/",
+  i18n: {
+    en: { title: "CFPB Money as You Grow", desc: "Federal resources teaching age-appropriate financial skills to children." },
+    fr: { title: "CFPB Money as You Grow", desc: "Ressources fédérales enseignant des compétences financières adaptées à l'âge des enfants." },
+    es: { title: "CFPB Money as You Grow", desc: "Recursos federales que enseñan habilidades financieras apropiadas para la edad de los niños." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.jumpstart.org",
+  i18n: {
+    en: { title: "Jump$tart Coalition", desc: "Financial literacy resources and educational tools for students and families." },
+    fr: { title: "Jump$tart Coalition", desc: "Ressources d'éducation financière et outils pédagogiques pour étudiants et familles." },
+    es: { title: "Jump$tart Coalition", desc: "Recursos de educación financiera y herramientas educativas para estudiantes y familias." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.practicalmoneyskills.com",
+  i18n: {
+    en: { title: "Practical Money Skills", desc: "Free financial education resources covering budgeting, credit, and saving." },
+    fr: { title: "Practical Money Skills", desc: "Ressources gratuites d'éducation financière couvrant budget, crédit et épargne." },
+    es: { title: "Practical Money Skills", desc: "Recursos gratuitos de educación financiera que cubren presupuesto, crédito y ahorro." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.smartaboutmoney.org",
+  i18n: {
+    en: { title: "Smart About Money", desc: "Free financial education courses and resources for all life stages." },
+    fr: { title: "Smart About Money", desc: "Cours et ressources d'éducation financière gratuits pour toutes les étapes de la vie." },
+    es: { title: "Smart About Money", desc: "Cursos y recursos de educación financiera gratuitos para todas las etapas de la vida." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.hellowallet.com",
+  i18n: {
+    en: { title: "HelloWallet Financial Wellness Tools", desc: "Digital tools supporting financial wellness and budgeting for employees." },
+    fr: { title: "Outils bien-être financier HelloWallet", desc: "Outils numériques soutenant le bien-être financier et le budget pour employés." },
+    es: { title: "Herramientas de Bienestar Financiero HelloWallet", desc: "Herramientas digitales que apoyan el bienestar financiero y presupuesto para empleados." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.everfi.com/financial-education",
+  i18n: {
+    en: { title: "EVERFI Financial Education", desc: "Free digital financial literacy courses for students and adults." },
+    fr: { title: "EVERFI éducation financière", desc: "Cours numériques gratuits d'éducation financière pour étudiants et adultes." },
+    es: { title: "EVERFI Educación Financiera", desc: "Cursos digitales gratuitos de educación financiera para estudiantes y adultos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.moneymanagement.org",
+  i18n: {
+    en: { title: "MMI Money Management International", desc: "Nonprofit credit counseling and debt management services." },
+    fr: { title: "MMI Money Management International", desc: "Services de conseil en crédit et gestion de dette à but non lucratif." },
+    es: { title: "MMI Money Management International", desc: "Servicios sin fines de lucro de consejería crediticia y manejo de deudas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.cccsatl.org",
+  i18n: {
+    en: { title: "Consumer Credit Counseling Service", desc: "Nonprofit credit counseling helping consumers manage debt and budgets." },
+    fr: { title: "Consumer Credit Counseling Service", desc: "Conseil en crédit à but non lucratif aidant à gérer dette et budget." },
+    es: { title: "Consumer Credit Counseling Service", desc: "Consejería crediticia sin fines de lucro que ayuda a manejar deudas y presupuestos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.greenpath.com",
+  i18n: {
+    en: { title: "GreenPath Financial Wellness", desc: "Nonprofit credit counseling, debt management, and housing counseling services." },
+    fr: { title: "GreenPath Financial Wellness", desc: "Services à but non lucratif de conseil en crédit, gestion de dette et logement." },
+    es: { title: "GreenPath Financial Wellness", desc: "Servicios sin fines de lucro de consejería crediticia, manejo de deudas y vivienda." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.clearpoint.org",
+  i18n: {
+    en: { title: "ClearPoint Credit Counseling Solutions", desc: "Nonprofit financial counseling for debt, housing, and bankruptcy support." },
+    fr: { title: "ClearPoint Credit Counseling Solutions", desc: "Conseil financier à but non lucratif pour dette, logement et soutien à la faillite." },
+    es: { title: "ClearPoint Credit Counseling Solutions", desc: "Consejería financiera sin fines de lucro para deudas, vivienda y apoyo de bancarrota." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.credability.org",
+  i18n: {
+    en: { title: "CreDability Financial Counseling", desc: "Nonprofit financial counseling and education services for consumers." },
+    fr: { title: "CreDability Financial Counseling", desc: "Services de conseil financier et d'éducation à but non lucratif pour consommateurs." },
+    es: { title: "CreDability Financial Counseling", desc: "Servicios sin fines de lucro de consejería y educación financiera para consumidores." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.trinitydebtmanagement.org",
+  i18n: {
+    en: { title: "Trinity Debt Management", desc: "Nonprofit credit counseling helping consumers create debt repayment plans." },
+    fr: { title: "Trinity Debt Management", desc: "Conseil en crédit à but non lucratif aidant à créer des plans de remboursement." },
+    es: { title: "Trinity Debt Management", desc: "Consejería crediticia sin fines de lucro que ayuda a crear planes de pago de deudas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.cambridge-credit.org",
+  i18n: {
+    en: { title: "Cambridge Credit Counseling", desc: "Nonprofit credit counseling and debt management program services." },
+    fr: { title: "Cambridge Credit Counseling", desc: "Services de conseil en crédit et de programme de gestion de dette à but non lucratif." },
+    es: { title: "Cambridge Credit Counseling", desc: "Servicios sin fines de lucro de consejería crediticia y programa de manejo de deudas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.familycredit.org",
+  i18n: {
+    en: { title: "Family Credit Management", desc: "Nonprofit credit counseling agency offering debt management plans." },
+    fr: { title: "Family Credit Management", desc: "Agence de conseil en crédit à but non lucratif offrant des plans de gestion de dette." },
+    es: { title: "Family Credit Management", desc: "Agencia de consejería crediticia sin fines de lucro que ofrece planes de manejo de deudas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.springboardnonprofit.org",
+  i18n: {
+    en: { title: "Springboard Nonprofit Consumer Credit Management", desc: "Nonprofit credit counseling and financial education services." },
+    fr: { title: "Springboard Nonprofit Consumer Credit Management", desc: "Services de conseil en crédit et d'éducation financière à but non lucratif." },
+    es: { title: "Springboard Nonprofit Consumer Credit Management", desc: "Servicios sin fines de lucro de consejería crediticia y educación financiera." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.debtreduction.org",
+  i18n: {
+    en: { title: "Debt Reduction Services", desc: "Nonprofit credit counseling agency providing debt management plans." },
+    fr: { title: "Debt Reduction Services", desc: "Agence de conseil en crédit à but non lucratif offrant des plans de gestion de dette." },
+    es: { title: "Debt Reduction Services", desc: "Agencia de consejería crediticia sin fines de lucro que ofrece planes de manejo de deudas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.consolidatedcredit.org",
+  i18n: {
+    en: { title: "Consolidated Credit Counseling Services", desc: "Nonprofit credit counseling helping consumers reduce and manage debt." },
+    fr: { title: "Consolidated Credit Counseling Services", desc: "Conseil en crédit à but non lucratif aidant les consommateurs à réduire leur dette." },
+    es: { title: "Consolidated Credit Counseling Services", desc: "Consejería crediticia sin fines de lucro que ayuda a consumidores a reducir deudas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.americanconsumercredit.com",
+  i18n: {
+    en: { title: "American Consumer Credit Counseling", desc: "Nonprofit credit counseling and debt management education services." },
+    fr: { title: "American Consumer Credit Counseling", desc: "Services de conseil en crédit et d'éducation à la gestion de dette à but non lucratif." },
+    es: { title: "American Consumer Credit Counseling", desc: "Servicios sin fines de lucro de consejería crediticia y educación de manejo de deudas." },
+  },
+},
+
 
 
 ];

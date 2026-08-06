@@ -14178,6 +14178,2210 @@ const ALL = [
     es: { title: "Operation Code", desc: "Educación de programación gratuita y mentoría para veteranos y cónyuges militares." },
   },
 },
+  // ===== PROGRAMS 1701-2000 =====
+
+// FOOD (50)
+{
+  category: "Food",
+  link: "https://www.acf.hhs.gov/ocs/programs/csbg/csbg-eligibility",
+  i18n: {
+    en: { title: "CSBG Eligibility Guidelines", desc: "Federal eligibility rules for Community Services Block Grant assistance." },
+    fr: { title: "Directives admissibilité CSBG", desc: "Règles fédérales d'admissibilité pour l'aide de la subvention en bloc des services communautaires." },
+    es: { title: "Directrices de Elegibilidad CSBG", desc: "Reglas federales de elegibilidad para asistencia de la subvención en bloque de servicios comunitarios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.communityaction.org",
+  i18n: {
+    en: { title: "Community Action Partnership National Site", desc: "National network connecting people to local community action agency services." },
+    fr: { title: "Site national Community Action Partnership", desc: "Réseau national reliant les personnes aux services des agences d'action communautaire." },
+    es: { title: "Sitio Nacional Community Action Partnership", desc: "Red nacional que conecta a personas con servicios de agencias de acción comunitaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.capdc.org",
+  i18n: {
+    en: { title: "Community Action Partnership of Douglas County Example", desc: "Example local community action agency offering food and family services." },
+    fr: { title: "Exemple Community Action Partnership Douglas County", desc: "Exemple d'agence d'action communautaire locale offrant services alimentaires et familiaux." },
+    es: { title: "Ejemplo Community Action Partnership Douglas County", desc: "Ejemplo de agencia de acción comunitaria local que ofrece servicios de alimentos y familia." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/il",
+  states: ["IL"],
+  i18n: {
+    en: { title: "Illinois Food Pantries Directory", desc: "County-level directory of food pantries across Illinois." },
+    fr: { title: "Répertoire garde-manger Illinois", desc: "Répertoire par comté des garde-manger à travers l'Illinois." },
+    es: { title: "Directorio de Despensas de Illinois", desc: "Directorio por condado de despensas de alimentos en Illinois." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/oh",
+  states: ["OH"],
+  i18n: {
+    en: { title: "Ohio Food Pantries Directory", desc: "County-level directory of food pantries across Ohio." },
+    fr: { title: "Répertoire garde-manger Ohio", desc: "Répertoire par comté des garde-manger à travers l'Ohio." },
+    es: { title: "Directorio de Despensas de Ohio", desc: "Directorio por condado de despensas de alimentos en Ohio." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/mi",
+  states: ["MI"],
+  i18n: {
+    en: { title: "Michigan Food Pantries Directory", desc: "County-level directory of food pantries across Michigan." },
+    fr: { title: "Répertoire garde-manger Michigan", desc: "Répertoire par comté des garde-manger à travers le Michigan." },
+    es: { title: "Directorio de Despensas de Michigan", desc: "Directorio por condado de despensas de alimentos en Michigan." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/nc",
+  states: ["NC"],
+  i18n: {
+    en: { title: "North Carolina Food Pantries Directory", desc: "County-level directory of food pantries across North Carolina." },
+    fr: { title: "Répertoire garde-manger Caroline du Nord", desc: "Répertoire par comté des garde-manger à travers la Caroline du Nord." },
+    es: { title: "Directorio de Despensas de Carolina del Norte", desc: "Directorio por condado de despensas de alimentos en Carolina del Norte." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/va",
+  states: ["VA"],
+  i18n: {
+    en: { title: "Virginia Food Pantries Directory", desc: "County-level directory of food pantries across Virginia." },
+    fr: { title: "Répertoire garde-manger Virginie", desc: "Répertoire par comté des garde-manger à travers la Virginie." },
+    es: { title: "Directorio de Despensas de Virginia", desc: "Directorio por condado de despensas de alimentos en Virginia." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/wa",
+  states: ["WA"],
+  i18n: {
+    en: { title: "Washington Food Pantries Directory", desc: "County-level directory of food pantries across Washington state." },
+    fr: { title: "Répertoire garde-manger Washington", desc: "Répertoire par comté des garde-manger à travers l'État de Washington." },
+    es: { title: "Directorio de Despensas de Washington", desc: "Directorio por condado de despensas de alimentos en el estado de Washington." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/az",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "Arizona Food Pantries Directory", desc: "County-level directory of food pantries across Arizona." },
+    fr: { title: "Répertoire garde-manger Arizona", desc: "Répertoire par comté des garde-manger à travers l'Arizona." },
+    es: { title: "Directorio de Despensas de Arizona", desc: "Directorio por condado de despensas de alimentos en Arizona." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ma",
+  states: ["MA"],
+  i18n: {
+    en: { title: "Massachusetts Food Pantries Directory", desc: "County-level directory of food pantries across Massachusetts." },
+    fr: { title: "Répertoire garde-manger Massachusetts", desc: "Répertoire par comté des garde-manger à travers le Massachusetts." },
+    es: { title: "Directorio de Despensas de Massachusetts", desc: "Directorio por condado de despensas de alimentos en Massachusetts." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/in",
+  states: ["IN"],
+  i18n: {
+    en: { title: "Indiana Food Pantries Directory", desc: "County-level directory of food pantries across Indiana." },
+    fr: { title: "Répertoire garde-manger Indiana", desc: "Répertoire par comté des garde-manger à travers l'Indiana." },
+    es: { title: "Directorio de Despensas de Indiana", desc: "Directorio por condado de despensas de alimentos en Indiana." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/mo",
+  states: ["MO"],
+  i18n: {
+    en: { title: "Missouri Food Pantries Directory", desc: "County-level directory of food pantries across Missouri." },
+    fr: { title: "Répertoire garde-manger Missouri", desc: "Répertoire par comté des garde-manger à travers le Missouri." },
+    es: { title: "Directorio de Despensas de Missouri", desc: "Directorio por condado de despensas de alimentos en Missouri." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/wi",
+  states: ["WI"],
+  i18n: {
+    en: { title: "Wisconsin Food Pantries Directory", desc: "County-level directory of food pantries across Wisconsin." },
+    fr: { title: "Répertoire garde-manger Wisconsin", desc: "Répertoire par comté des garde-manger à travers le Wisconsin." },
+    es: { title: "Directorio de Despensas de Wisconsin", desc: "Directorio por condado de despensas de alimentos en Wisconsin." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/md",
+  states: ["MD"],
+  i18n: {
+    en: { title: "Maryland Food Pantries Directory", desc: "County-level directory of food pantries across Maryland." },
+    fr: { title: "Répertoire garde-manger Maryland", desc: "Répertoire par comté des garde-manger à travers le Maryland." },
+    es: { title: "Directorio de Despensas de Maryland", desc: "Directorio por condado de despensas de alimentos en Maryland." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/mn",
+  states: ["MN"],
+  i18n: {
+    en: { title: "Minnesota Food Pantries Directory", desc: "County-level directory of food pantries across Minnesota." },
+    fr: { title: "Répertoire garde-manger Minnesota", desc: "Répertoire par comté des garde-manger à travers le Minnesota." },
+    es: { title: "Directorio de Despensas de Minnesota", desc: "Directorio por condado de despensas de alimentos en Minnesota." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/co",
+  states: ["CO"],
+  i18n: {
+    en: { title: "Colorado Food Pantries Directory", desc: "County-level directory of food pantries across Colorado." },
+    fr: { title: "Répertoire garde-manger Colorado", desc: "Répertoire par comté des garde-manger à travers le Colorado." },
+    es: { title: "Directorio de Despensas de Colorado", desc: "Directorio por condado de despensas de alimentos en Colorado." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/al",
+  states: ["AL"],
+  i18n: {
+    en: { title: "Alabama Food Pantries Directory", desc: "County-level directory of food pantries across Alabama." },
+    fr: { title: "Répertoire garde-manger Alabama", desc: "Répertoire par comté des garde-manger à travers l'Alabama." },
+    es: { title: "Directorio de Despensas de Alabama", desc: "Directorio por condado de despensas de alimentos en Alabama." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/sc",
+  states: ["SC"],
+  i18n: {
+    en: { title: "South Carolina Food Pantries Directory", desc: "County-level directory of food pantries across South Carolina." },
+    fr: { title: "Répertoire garde-manger Caroline du Sud", desc: "Répertoire par comté des garde-manger à travers la Caroline du Sud." },
+    es: { title: "Directorio de Despensas de Carolina del Sur", desc: "Directorio por condado de despensas de alimentos en Carolina del Sur." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/la",
+  states: ["LA"],
+  i18n: {
+    en: { title: "Louisiana Food Pantries Directory", desc: "County-level directory of food pantries across Louisiana." },
+    fr: { title: "Répertoire garde-manger Louisiane", desc: "Répertoire par comté des garde-manger à travers la Louisiane." },
+    es: { title: "Directorio de Despensas de Luisiana", desc: "Directorio por condado de despensas de alimentos en Luisiana." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ky",
+  states: ["KY"],
+  i18n: {
+    en: { title: "Kentucky Food Pantries Directory", desc: "County-level directory of food pantries across Kentucky." },
+    fr: { title: "Répertoire garde-manger Kentucky", desc: "Répertoire par comté des garde-manger à travers le Kentucky." },
+    es: { title: "Directorio de Despensas de Kentucky", desc: "Directorio por condado de despensas de alimentos en Kentucky." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/or",
+  states: ["OR"],
+  i18n: {
+    en: { title: "Oregon Food Pantries Directory", desc: "County-level directory of food pantries across Oregon." },
+    fr: { title: "Répertoire garde-manger Oregon", desc: "Répertoire par comté des garde-manger à travers l'Oregon." },
+    es: { title: "Directorio de Despensas de Oregon", desc: "Directorio por condado de despensas de alimentos en Oregon." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ok",
+  states: ["OK"],
+  i18n: {
+    en: { title: "Oklahoma Food Pantries Directory", desc: "County-level directory of food pantries across Oklahoma." },
+    fr: { title: "Répertoire garde-manger Oklahoma", desc: "Répertoire par comté des garde-manger à travers l'Oklahoma." },
+    es: { title: "Directorio de Despensas de Oklahoma", desc: "Directorio por condado de despensas de alimentos en Oklahoma." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/counties/ct",
+  states: ["CT"],
+  i18n: {
+    en: { title: "Connecticut Food Pantries Directory", desc: "County-level directory of food pantries across Connecticut." },
+    fr: { title: "Répertoire garde-manger Connecticut", desc: "Répertoire par comté des garde-manger à travers le Connecticut." },
+    es: { title: "Directorio de Despensas de Connecticut", desc: "Directorio por condado de despensas de alimentos en Connecticut." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.feedingamerica.org/our-work/hunger-relief-programs",
+  i18n: {
+    en: { title: "Feeding America Hunger Relief Programs", desc: "Overview of Feeding America's national hunger relief program offerings." },
+    fr: { title: "Programmes lutte contre la faim Feeding America", desc: "Aperçu des programmes nationaux de lutte contre la faim de Feeding America." },
+    es: { title: "Programas de Ayuda contra el Hambre Feeding America", desc: "Resumen de los programas nacionales de ayuda contra el hambre de Feeding America." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.feedingamerica.org/our-work/food-security-research",
+  i18n: {
+    en: { title: "Feeding America Food Security Research", desc: "Research and data resources on hunger and food insecurity in the US." },
+    fr: { title: "Recherche sécurité alimentaire Feeding America", desc: "Ressources de recherche et données sur la faim et l'insécurité alimentaire." },
+    es: { title: "Investigación de Seguridad Alimentaria Feeding America", desc: "Recursos de investigación y datos sobre el hambre e inseguridad alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.feedingamerica.org/take-action/advocate",
+  i18n: {
+    en: { title: "Feeding America Advocacy Resources", desc: "Advocacy toolkit and resources for supporting anti-hunger policy." },
+    fr: { title: "Ressources plaidoyer Feeding America", desc: "Boîte à outils de plaidoyer et ressources pour soutenir la politique anti-faim." },
+    es: { title: "Recursos de Defensa Feeding America", desc: "Kit de herramientas de defensa y recursos para apoyar políticas contra el hambre." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.frac.org/programs",
+  i18n: {
+    en: { title: "FRAC Anti-Hunger Programs Overview", desc: "Comprehensive overview of federal nutrition programs tracked by FRAC." },
+    fr: { title: "Aperçu programmes anti-faim FRAC", desc: "Aperçu complet des programmes nutritionnels fédéraux suivis par FRAC." },
+    es: { title: "Resumen de Programas contra el Hambre FRAC", desc: "Resumen completo de programas nutricionales federales rastreados por FRAC." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.frac.org/maps",
+  i18n: {
+    en: { title: "FRAC Program Participation Maps", desc: "Interactive maps showing federal nutrition program participation by state." },
+    fr: { title: "Cartes participation programme FRAC", desc: "Cartes interactives montrant la participation aux programmes nutritionnels fédéraux par État." },
+    es: { title: "Mapas de Participación de Programas FRAC", desc: "Mapas interactivos que muestran participación en programas nutricionales federales por estado." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.hungerfreeamerica.org",
+  i18n: {
+    en: { title: "Hunger Free America", desc: "Advocacy organization providing hunger hotline and policy resources." },
+    fr: { title: "Hunger Free America", desc: "Organisation de plaidoyer offrant une ligne d'assistance contre la faim et des ressources politiques." },
+    es: { title: "Hunger Free America", desc: "Organización de defensa que ofrece línea de ayuda contra el hambre y recursos de políticas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.hungerfreeamerica.org/national-hunger-hotline",
+  i18n: {
+    en: { title: "National Hunger Hotline", desc: "Free hotline connecting callers to local food resources nationwide." },
+    fr: { title: "Ligne nationale contre la faim", desc: "Ligne d'assistance gratuite reliant les appelants aux ressources alimentaires locales." },
+    es: { title: "Línea Nacional contra el Hambre", desc: "Línea de ayuda gratuita que conecta a las personas con recursos alimentarios locales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.share ourstrength.org",
+  i18n: {
+    en: { title: "Share Our Strength", desc: "National organization working to end childhood hunger through community programs." },
+    fr: { title: "Share Our Strength", desc: "Organisation nationale travaillant à mettre fin à la faim infantile par des programmes communautaires." },
+    es: { title: "Share Our Strength", desc: "Organización nacional que trabaja para acabar con el hambre infantil mediante programas comunitarios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.nokidhungry.org/cooking-matters",
+  i18n: {
+    en: { title: "Cooking Matters", desc: "Free nutrition education classes teaching families to cook healthy meals affordably." },
+    fr: { title: "Cooking Matters", desc: "Cours gratuits d'éducation nutritionnelle enseignant aux familles à cuisiner sainement." },
+    es: { title: "Cooking Matters", desc: "Clases gratuitas de educación nutricional que enseñan a familias a cocinar de forma saludable." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.hungerandhealth.feedingamerica.org/resource/screen-intervene-nutrition-education",
+  i18n: {
+    en: { title: "Screen and Intervene Nutrition Toolkit", desc: "Healthcare-focused toolkit for screening and addressing food insecurity." },
+    fr: { title: "Boîte à outils Screen and Intervene", desc: "Boîte à outils axée sur la santé pour dépister et traiter l'insécurité alimentaire." },
+    es: { title: "Kit de Herramientas Screen and Intervene", desc: "Kit de herramientas enfocado en salud para detectar y abordar la inseguridad alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.hungerandhealth.feedingamerica.org/resource/food-insecurity-screening-tool",
+  i18n: {
+    en: { title: "Food Insecurity Screening Tool", desc: "Clinical tool helping healthcare providers screen for food insecurity." },
+    fr: { title: "Outil dépistage insécurité alimentaire", desc: "Outil clinique aidant les fournisseurs de soins à dépister l'insécurité alimentaire." },
+    es: { title: "Herramienta de Detección de Inseguridad Alimentaria", desc: "Herramienta clínica que ayuda a proveedores de salud a detectar inseguridad alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.aap.org/foodinsecurity",
+  i18n: {
+    en: { title: "AAP Food Insecurity Resources", desc: "Pediatric-focused resources on addressing childhood food insecurity." },
+    fr: { title: "Ressources insécurité alimentaire AAP", desc: "Ressources pédiatriques pour traiter l'insécurité alimentaire infantile." },
+    es: { title: "Recursos de Inseguridad Alimentaria AAP", desc: "Recursos pediátricos para abordar la inseguridad alimentaria infantil." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.zerotothree.org/resource/food-insecurity",
+  i18n: {
+    en: { title: "Zero to Three Food Insecurity Resources", desc: "Resources on addressing food insecurity for families with infants and toddlers." },
+    fr: { title: "Ressources insécurité alimentaire Zero to Three", desc: "Ressources pour traiter l'insécurité alimentaire des familles avec bébés." },
+    es: { title: "Recursos de Inseguridad Alimentaria Zero to Three", desc: "Recursos para abordar la inseguridad alimentaria en familias con bebés y niños pequeños." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.firstfocus.org/food-security",
+  i18n: {
+    en: { title: "First Focus on Children Food Security", desc: "Policy advocacy resources focused on children's food security." },
+    fr: { title: "First Focus on Children sécurité alimentaire", desc: "Ressources de plaidoyer politique axées sur la sécurité alimentaire des enfants." },
+    es: { title: "First Focus on Children Seguridad Alimentaria", desc: "Recursos de defensa de políticas enfocados en la seguridad alimentaria infantil." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.childrensdefense.org/programs/food",
+  i18n: {
+    en: { title: "Children's Defense Fund Food Programs", desc: "Advocacy and resources supporting children's access to nutritious food." },
+    fr: { title: "Programmes alimentaires Children's Defense Fund", desc: "Plaidoyer et ressources soutenant l'accès des enfants à une alimentation nutritive." },
+    es: { title: "Programas Alimentarios Children's Defense Fund", desc: "Defensa y recursos que apoyan el acceso de niños a alimentos nutritivos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.savethechildren.org/us/what-we-do/us-programs/childrens-food-and-nutrition",
+  i18n: {
+    en: { title: "Save the Children US Food and Nutrition Programs", desc: "US-based nutrition programs supporting children in underserved communities." },
+    fr: { title: "Programmes alimentaires Save the Children US", desc: "Programmes nutritionnels basés aux États-Unis soutenant les enfants défavorisés." },
+    es: { title: "Programas de Alimentos Save the Children US", desc: "Programas nutricionales con base en EE.UU. que apoyan a niños en comunidades desatendidas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.unicefusa.org/what-unicef-does/emergency-response/hunger",
+  i18n: {
+    en: { title: "UNICEF USA Hunger Response", desc: "Information on UNICEF's efforts addressing child hunger and malnutrition." },
+    fr: { title: "Réponse à la faim UNICEF USA", desc: "Informations sur les efforts d'UNICEF pour traiter la faim et la malnutrition infantiles." },
+    es: { title: "Respuesta al Hambre UNICEF USA", desc: "Información sobre los esfuerzos de UNICEF para abordar el hambre y desnutrición infantil." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.rescue.org/topic/food-security",
+  i18n: {
+    en: { title: "International Rescue Committee Food Security", desc: "Food security programs supporting refugee and immigrant communities." },
+    fr: { title: "Sécurité alimentaire International Rescue Committee", desc: "Programmes de sécurité alimentaire soutenant les communautés réfugiées et immigrantes." },
+    es: { title: "Seguridad Alimentaria International Rescue Committee", desc: "Programas de seguridad alimentaria que apoyan a comunidades refugiadas e inmigrantes." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.refugeesinternational.org/food-security",
+  i18n: {
+    en: { title: "Refugees International Food Security Resources", desc: "Research and advocacy on food security for displaced populations." },
+    fr: { title: "Ressources sécurité alimentaire Refugees International", desc: "Recherche et plaidoyer sur la sécurité alimentaire des populations déplacées." },
+    es: { title: "Recursos de Seguridad Alimentaria Refugees International", desc: "Investigación y defensa sobre seguridad alimentaria para poblaciones desplazadas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.cwsglobal.org/what-we-do/immigration-refugee-services/food/",
+  i18n: {
+    en: { title: "Church World Service Refugee Food Assistance", desc: "Food assistance resources specifically for newly arrived refugee families." },
+    fr: { title: "Aide alimentaire réfugiés Church World Service", desc: "Ressources d'aide alimentaire spécifiquement pour familles réfugiées nouvellement arrivées." },
+    es: { title: "Asistencia Alimentaria para Refugiados Church World Service", desc: "Recursos de asistencia alimentaria específicamente para familias refugiadas recién llegadas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.lirs.org/food-security",
+  i18n: {
+    en: { title: "Lutheran Immigration and Refugee Service Food Resources", desc: "Food security support programs for refugees and asylum seekers." },
+    fr: { title: "Ressources alimentaires Lutheran Immigration and Refugee Service", desc: "Programmes de soutien à la sécurité alimentaire pour réfugiés et demandeurs d'asile." },
+    es: { title: "Recursos Alimentarios Lutheran Immigration and Refugee Service", desc: "Programas de apoyo de seguridad alimentaria para refugiados y solicitantes de asilo." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.hias.org/what/economic-inclusion",
+  i18n: {
+    en: { title: "HIAS Economic Inclusion Programs", desc: "Programs supporting economic stability including food access for refugees." },
+    fr: { title: "Programmes inclusion économique HIAS", desc: "Programmes soutenant la stabilité économique incluant l'accès alimentaire pour réfugiés." },
+    es: { title: "Programas de Inclusión Económica HIAS", desc: "Programas que apoyan la estabilidad económica incluyendo acceso alimentario para refugiados." },
+  },
+},
+
+// HEALTH (60)
+{
+  category: "Health",
+  link: "https://www.cms.gov/medicare/coverage/national-coverage-determinations",
+  i18n: {
+    en: { title: "Medicare National Coverage Determinations", desc: "Official database of what services are covered under Medicare." },
+    fr: { title: "Déterminations couverture nationale Medicare", desc: "Base de données officielle des services couverts par Medicare." },
+    es: { title: "Determinaciones de Cobertura Nacional de Medicare", desc: "Base de datos oficial de qué servicios están cubiertos por Medicare." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicare.gov/coverage",
+  i18n: {
+    en: { title: "Medicare Coverage Search Tool", desc: "Official tool to check whether Medicare covers a specific service or item." },
+    fr: { title: "Outil recherche couverture Medicare", desc: "Outil officiel pour vérifier si Medicare couvre un service ou article spécifique." },
+    es: { title: "Herramienta de Búsqueda de Cobertura Medicare", desc: "Herramienta oficial para verificar si Medicare cubre un servicio o artículo específico." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicare.gov/basics/costs/medicare-costs",
+  i18n: {
+    en: { title: "Medicare Costs Overview", desc: "Official breakdown of premiums, deductibles, and out-of-pocket Medicare costs." },
+    fr: { title: "Aperçu coûts Medicare", desc: "Répartition officielle des primes, franchises et coûts personnels Medicare." },
+    es: { title: "Resumen de Costos de Medicare", desc: "Desglose oficial de primas, deducibles y costos de bolsillo de Medicare." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicaid.gov/medicaid/eligibility/index.html",
+  i18n: {
+    en: { title: "Medicaid Eligibility Overview", desc: "Official federal overview of Medicaid eligibility categories and rules." },
+    fr: { title: "Aperçu admissibilité Medicaid", desc: "Aperçu fédéral officiel des catégories et règles d'admissibilité Medicaid." },
+    es: { title: "Resumen de Elegibilidad de Medicaid", desc: "Resumen federal oficial de categorías y reglas de elegibilidad de Medicaid." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.medicaid.gov/chip/index.html",
+  i18n: {
+    en: { title: "CHIP Program Overview", desc: "Official federal overview of the Children's Health Insurance Program." },
+    fr: { title: "Aperçu programme CHIP", desc: "Aperçu fédéral officiel du programme d'assurance santé pour enfants." },
+    es: { title: "Resumen del Programa CHIP", desc: "Resumen federal oficial del Programa de Seguro de Salud Infantil." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.insurekidsnow.gov",
+  i18n: {
+    en: { title: "InsureKidsNow.gov", desc: "Official federal site to find CHIP and Medicaid coverage for children." },
+    fr: { title: "InsureKidsNow.gov", desc: "Site fédéral officiel pour trouver une couverture CHIP et Medicaid pour enfants." },
+    es: { title: "InsureKidsNow.gov", desc: "Sitio federal oficial para encontrar cobertura CHIP y Medicaid para niños." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.healthcare.gov/apply-and-enroll/marketplace-application-checklist/",
+  i18n: {
+    en: { title: "Marketplace Application Checklist", desc: "Official checklist of documents needed for a health insurance marketplace application." },
+    fr: { title: "Liste de vérification demande marché", desc: "Liste officielle des documents nécessaires pour une demande d'assurance sur le marché." },
+    es: { title: "Lista de Verificación de Solicitud del Mercado", desc: "Lista oficial de documentos necesarios para una solicitud de seguro del mercado." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.healthcare.gov/glossary/",
+  i18n: {
+    en: { title: "HealthCare.gov Glossary", desc: "Official glossary explaining common health insurance terms." },
+    fr: { title: "Glossaire HealthCare.gov", desc: "Glossaire officiel expliquant les termes courants d'assurance santé." },
+    es: { title: "Glosario HealthCare.gov", desc: "Glosario oficial que explica términos comunes de seguro de salud." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.healthcare.gov/quick-guide/",
+  i18n: {
+    en: { title: "HealthCare.gov Quick Guide", desc: "Simplified official guide to signing up for marketplace health coverage." },
+    fr: { title: "Guide rapide HealthCare.gov", desc: "Guide officiel simplifié pour s'inscrire à une couverture santé du marché." },
+    es: { title: "Guía Rápida HealthCare.gov", desc: "Guía oficial simplificada para inscribirse en cobertura de salud del mercado." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.healthcare.gov/immigrants/immigration-status/",
+  i18n: {
+    en: { title: "HealthCare.gov Immigration Status Info", desc: "Official information on health coverage eligibility by immigration status." },
+    fr: { title: "Info statut immigration HealthCare.gov", desc: "Informations officielles sur l'admissibilité à la couverture selon le statut d'immigration." },
+    es: { title: "Información de Estatus Migratorio HealthCare.gov", desc: "Información oficial sobre elegibilidad de cobertura según el estatus migratorio." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.protectingimmigrantfamilies.org/health-care",
+  i18n: {
+    en: { title: "Protecting Immigrant Families Health Care Resources", desc: "Resources helping immigrant families understand health coverage options." },
+    fr: { title: "Ressources santé Protecting Immigrant Families", desc: "Ressources aidant les familles immigrantes à comprendre les options de couverture santé." },
+    es: { title: "Recursos de Salud Protecting Immigrant Families", desc: "Recursos que ayudan a familias inmigrantes a entender opciones de cobertura de salud." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nilc.org/issues/health-care",
+  i18n: {
+    en: { title: "National Immigration Law Center Health Care Resources", desc: "Legal resources on immigrant access to health care programs." },
+    fr: { title: "Ressources santé National Immigration Law Center", desc: "Ressources juridiques sur l'accès des immigrants aux programmes de santé." },
+    es: { title: "Recursos de Salud National Immigration Law Center", desc: "Recursos legales sobre el acceso de inmigrantes a programas de salud." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.doctorswithoutborders.org/what-we-do/countries/us",
+  i18n: {
+    en: { title: "Doctors Without Borders USA Programs", desc: "Information on Doctors Without Borders health equity work in the US." },
+    fr: { title: "Programmes Doctors Without Borders USA", desc: "Informations sur le travail d'équité en santé de Doctors Without Borders aux États-Unis." },
+    es: { title: "Programas Doctors Without Borders USA", desc: "Información sobre el trabajo de equidad en salud de Médicos Sin Fronteras en EE.UU." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.commonwealthfund.org/health-coverage",
+  i18n: {
+    en: { title: "Commonwealth Fund Health Coverage Research", desc: "Independent research and policy analysis on US health coverage trends." },
+    fr: { title: "Recherche couverture santé Commonwealth Fund", desc: "Recherche indépendante et analyse politique sur les tendances de couverture santé." },
+    es: { title: "Investigación de Cobertura de Salud Commonwealth Fund", desc: "Investigación independiente y análisis de políticas sobre tendencias de cobertura de salud." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.rwjf.org/en/topics/health-coverage.html",
+  i18n: {
+    en: { title: "Robert Wood Johnson Foundation Health Coverage", desc: "Research and grant resources supporting health coverage equity." },
+    fr: { title: "Couverture santé Robert Wood Johnson Foundation", desc: "Ressources de recherche et subventions soutenant l'équité de couverture santé." },
+    es: { title: "Cobertura de Salud Robert Wood Johnson Foundation", desc: "Recursos de investigación y subvenciones que apoyan la equidad de cobertura de salud." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.chcs.org",
+  i18n: {
+    en: { title: "Center for Health Care Strategies", desc: "Policy resources on improving health care access for underserved populations." },
+    fr: { title: "Center for Health Care Strategies", desc: "Ressources politiques pour améliorer l'accès aux soins pour populations défavorisées." },
+    es: { title: "Center for Health Care Strategies", desc: "Recursos de políticas para mejorar el acceso a la salud de poblaciones desatendidas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nachc.org/find-a-health-center",
+  i18n: {
+    en: { title: "NACHC Find a Health Center", desc: "Directory of federally qualified community health centers by location." },
+    fr: { title: "Trouver un centre de santé NACHC", desc: "Répertoire des centres de santé communautaires fédéralement qualifiés par emplacement." },
+    es: { title: "Encuentre un Centro de Salud NACHC", desc: "Directorio de centros de salud comunitarios federalmente calificados por ubicación." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.findahealthcenter.hrsa.gov",
+  i18n: {
+    en: { title: "HRSA Find a Health Center", desc: "Official federal tool to find community health centers near you." },
+    fr: { title: "Trouver un centre de santé HRSA", desc: "Outil fédéral officiel pour trouver des centres de santé communautaires près de chez vous." },
+    es: { title: "Encuentre un Centro de Salud HRSA", desc: "Herramienta federal oficial para encontrar centros de salud comunitarios cerca de usted." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.chcadvocacy.org",
+  i18n: {
+    en: { title: "Community Health Center Advocacy Resources", desc: "Advocacy resources supporting community health center funding and access." },
+    fr: { title: "Ressources plaidoyer centre de santé communautaire", desc: "Ressources de plaidoyer soutenant le financement et l'accès aux centres de santé communautaires." },
+    es: { title: "Recursos de Defensa de Centros de Salud Comunitarios", desc: "Recursos de defensa que apoyan el financiamiento y acceso a centros de salud comunitarios." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ruralhealthclinic.org",
+  i18n: {
+    en: { title: "Rural Health Clinic Association", desc: "Directory and resources for rural health clinics serving underserved areas." },
+    fr: { title: "Association clinique santé rurale", desc: "Répertoire et ressources pour cliniques de santé rurales desservant zones défavorisées." },
+    es: { title: "Asociación de Clínicas de Salud Rural", desc: "Directorio y recursos para clínicas de salud rurales que sirven áreas desatendidas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nachc.org/research-and-data/",
+  i18n: {
+    en: { title: "NACHC Research and Data", desc: "Data resources on community health center reach and impact." },
+    fr: { title: "Recherche et données NACHC", desc: "Ressources de données sur la portée et l'impact des centres de santé communautaires." },
+    es: { title: "Investigación y Datos NACHC", desc: "Recursos de datos sobre el alcance e impacto de centros de salud comunitarios." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.communityhealthfunders.org",
+  i18n: {
+    en: { title: "Community Health Funders Network", desc: "Directory of foundations funding community health initiatives." },
+    fr: { title: "Réseau bailleurs de fonds santé communautaire", desc: "Répertoire de fondations finançant des initiatives de santé communautaire." },
+    es: { title: "Red de Financiadores de Salud Comunitaria", desc: "Directorio de fundaciones que financian iniciativas de salud comunitaria." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.uwaysite.org/health",
+  i18n: {
+    en: { title: "United Way Health Resource Directory", desc: "Local United Way chapters connecting people to health resources." },
+    fr: { title: "Répertoire ressources santé United Way", desc: "Chapitres locaux United Way reliant les personnes aux ressources de santé." },
+    es: { title: "Directorio de Recursos de Salud United Way", desc: "Capítulos locales de United Way que conectan a personas con recursos de salud." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.redcross.org/take-a-class/health-classes",
+  i18n: {
+    en: { title: "Red Cross Health Classes", desc: "Affordable CPR, first aid, and health training classes nationwide." },
+    fr: { title: "Cours de santé Croix-Rouge", desc: "Cours abordables de RCR, premiers secours et formation en santé à l'échelle nationale." },
+    es: { title: "Clases de Salud Cruz Roja", desc: "Clases asequibles de RCP, primeros auxilios y capacitación en salud a nivel nacional." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.heart.org/en/cpr",
+  i18n: {
+    en: { title: "American Heart Association CPR Training", desc: "CPR and emergency cardiovascular care training courses." },
+    fr: { title: "Formation RCR American Heart Association", desc: "Cours de formation en RCR et soins cardiovasculaires d'urgence." },
+    es: { title: "Capacitación en RCP American Heart Association", desc: "Cursos de capacitación en RCP y atención cardiovascular de emergencia." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.stopthebleed.org",
+  i18n: {
+    en: { title: "Stop the Bleed", desc: "Free training program teaching bystanders to control severe bleeding in emergencies." },
+    fr: { title: "Stop the Bleed", desc: "Programme de formation gratuit enseignant aux témoins à contrôler les saignements graves." },
+    es: { title: "Stop the Bleed", desc: "Programa de capacitación gratuito que enseña a testigos a controlar sangrado severo." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.narcan.com/find-narcan",
+  i18n: {
+    en: { title: "Find Narcan Locations", desc: "Tool to find where to obtain free or low-cost naloxone (Narcan) nasal spray." },
+    fr: { title: "Trouver emplacements Narcan", desc: "Outil pour trouver où obtenir du naloxone (Narcan) gratuit ou abordable." },
+    es: { title: "Encuentre Ubicaciones de Narcan", desc: "Herramienta para encontrar dónde obtener naloxona (Narcan) gratuita o de bajo costo." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.samhsa.gov/medications-substance-use-disorders/naloxone",
+  i18n: {
+    en: { title: "SAMHSA Naloxone Info", desc: "Federal information on naloxone access for opioid overdose reversal." },
+    fr: { title: "Info naloxone SAMHSA", desc: "Informations fédérales sur l'accès au naloxone pour inverser les surdoses d'opioïdes." },
+    es: { title: "Información de Naloxona SAMHSA", desc: "Información federal sobre el acceso a naloxona para revertir sobredosis de opioides." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nextdistro.org",
+  i18n: {
+    en: { title: "NEXT Distro", desc: "Mail-based naloxone and harm reduction supply distribution program." },
+    fr: { title: "NEXT Distro", desc: "Programme de distribution de naloxone et de fournitures de réduction des méfaits par courrier." },
+    es: { title: "NEXT Distro", desc: "Programa de distribución de naloxona y suministros de reducción de daños por correo." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.harmreduction.org",
+  i18n: {
+    en: { title: "National Harm Reduction Coalition", desc: "Resources and advocacy supporting harm reduction approaches to substance use." },
+    fr: { title: "National Harm Reduction Coalition", desc: "Ressources et plaidoyer soutenant les approches de réduction des méfaits." },
+    es: { title: "National Harm Reduction Coalition", desc: "Recursos y defensa que apoyan enfoques de reducción de daños." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.syringeexchange.org",
+  i18n: {
+    en: { title: "Syringe Exchange Directory", desc: "Directory of syringe service programs supporting harm reduction efforts." },
+    fr: { title: "Répertoire échange seringues", desc: "Répertoire de programmes d'échange de seringues soutenant les efforts de réduction des méfaits." },
+    es: { title: "Directorio de Intercambio de Jeringas", desc: "Directorio de programas de intercambio de jeringas que apoyan esfuerzos de reducción de daños." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.samhsa.gov/find-help/disaster-distress-helpline",
+  i18n: {
+    en: { title: "SAMHSA Disaster Distress Helpline", desc: "Free 24/7 crisis counseling for people affected by disasters." },
+    fr: { title: "Ligne détresse catastrophe SAMHSA", desc: "Conseil de crise gratuit 24/7 pour personnes touchées par des catastrophes." },
+    es: { title: "Línea de Angustia por Desastres SAMHSA", desc: "Consejería de crisis gratuita 24/7 para personas afectadas por desastres." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.redcross.org/get-help/disaster-relief-and-recovery-services/emotional-health.html",
+  i18n: {
+    en: { title: "Red Cross Emotional Health After Disaster", desc: "Emotional support resources for people affected by disasters." },
+    fr: { title: "Santé émotionnelle après catastrophe Croix-Rouge", desc: "Ressources de soutien émotionnel pour personnes touchées par des catastrophes." },
+    es: { title: "Salud Emocional Después de un Desastre Cruz Roja", desc: "Recursos de apoyo emocional para personas afectadas por desastres." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ready.gov/mental-health",
+  i18n: {
+    en: { title: "Ready.gov Mental Health Resources", desc: "Federal guidance on protecting mental health during and after emergencies." },
+    fr: { title: "Ressources santé mentale Ready.gov", desc: "Conseils fédéraux pour protéger la santé mentale pendant et après les urgences." },
+    es: { title: "Recursos de Salud Mental Ready.gov", desc: "Orientación federal para proteger la salud mental durante y después de emergencias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.disasterdistress.samhsa.gov",
+  i18n: {
+    en: { title: "Disaster Distress Helpline Resources", desc: "Additional federal crisis resources specifically for disaster-related distress." },
+    fr: { title: "Ressources ligne détresse catastrophe", desc: "Ressources fédérales de crise supplémentaires spécifiquement pour la détresse liée aux catastrophes." },
+    es: { title: "Recursos de Línea de Angustia por Desastres", desc: "Recursos federales de crisis adicionales específicamente para angustia relacionada con desastres." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ready.gov/individuals-access-functional-needs",
+  i18n: {
+    en: { title: "Ready.gov Access and Functional Needs Resources", desc: "Federal disaster preparedness resources for people with disabilities and access needs." },
+    fr: { title: "Ressources besoins fonctionnels Ready.gov", desc: "Ressources fédérales de préparation aux catastrophes pour personnes handicapées." },
+    es: { title: "Recursos de Necesidades de Acceso y Funcionales Ready.gov", desc: "Recursos federales de preparación para desastres para personas con discapacidades." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.disabilityinfo.org/emergency-preparedness",
+  i18n: {
+    en: { title: "Disability Info Emergency Preparedness Resources", desc: "Emergency preparedness planning resources for people with disabilities." },
+    fr: { title: "Ressources préparation urgence Disability Info", desc: "Ressources de planification de préparation aux urgences pour personnes handicapées." },
+    es: { title: "Recursos de Preparación para Emergencias Disability Info", desc: "Recursos de planificación de preparación para emergencias para personas con discapacidades." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.portlightstrategies.org",
+  i18n: {
+    en: { title: "Portlight Strategies", desc: "Disaster relief specifically supporting people with disabilities during emergencies." },
+    fr: { title: "Portlight Strategies", desc: "Secours en cas de catastrophe soutenant spécifiquement les personnes handicapées." },
+    es: { title: "Portlight Strategies", desc: "Ayuda en desastres que apoya específicamente a personas con discapacidades." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.mdrc-cbrn.org",
+  i18n: {
+    en: { title: "Medical Reserve Corps Directory", desc: "Volunteer medical response network supporting community health emergencies." },
+    fr: { title: "Répertoire Medical Reserve Corps", desc: "Réseau de bénévoles médicaux soutenant les urgences de santé communautaire." },
+    es: { title: "Directorio Medical Reserve Corps", desc: "Red de voluntarios médicos que apoya emergencias de salud comunitaria." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.mrc.hhs.gov",
+  i18n: {
+    en: { title: "Medical Reserve Corps National Site", desc: "Federal program coordinating volunteer health professionals for emergencies." },
+    fr: { title: "Site national Medical Reserve Corps", desc: "Programme fédéral coordonnant des professionnels de santé bénévoles pour les urgences." },
+    es: { title: "Sitio Nacional Medical Reserve Corps", desc: "Programa federal que coordina profesionales de salud voluntarios para emergencias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.dav.org/veterans/resources/health-care/",
+  i18n: {
+    en: { title: "DAV Health Care Resources", desc: "Health care navigation resources specifically for disabled veterans." },
+    fr: { title: "Ressources soins de santé DAV", desc: "Ressources de navigation en soins de santé spécifiquement pour vétérans handicapés." },
+    es: { title: "Recursos de Atención Médica DAV", desc: "Recursos de navegación de atención médica específicamente para veteranos discapacitados." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.va.gov/COMMUNITYCARE/",
+  i18n: {
+    en: { title: "VA Community Care Program", desc: "Federal program allowing veterans to receive care from non-VA providers." },
+    fr: { title: "Programme soins communautaires VA", desc: "Programme fédéral permettant aux vétérans de recevoir des soins de fournisseurs non-VA." },
+    es: { title: "Programa de Atención Comunitaria VA", desc: "Programa federal que permite a veteranos recibir atención de proveedores no VA." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.va.gov/health-care/about-va-health-benefits/womens-health-care/",
+  i18n: {
+    en: { title: "VA Women's Health Care Benefits", desc: "Federal health care information specifically for women veterans." },
+    fr: { title: "Prestations santé femmes VA", desc: "Informations de soins de santé fédéraux spécifiquement pour vétérans femmes." },
+    es: { title: "Beneficios de Atención Médica para Mujeres VA", desc: "Información de atención médica federal específicamente para veteranas mujeres." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.womenveterans.va.gov",
+  i18n: {
+    en: { title: "VA Women Veterans Health Care", desc: "Federal resources and services specifically designed for women veterans." },
+    fr: { title: "Soins santé femmes vétérans VA", desc: "Ressources et services fédéraux spécifiquement conçus pour vétérans femmes." },
+    es: { title: "Atención Médica para Mujeres Veteranas VA", desc: "Recursos y servicios federales específicamente diseñados para mujeres veteranas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.serviceleader.org/womenveterans",
+  i18n: {
+    en: { title: "Women Veterans Network", desc: "Peer support and resource network specifically for women veterans." },
+    fr: { title: "Women Veterans Network", desc: "Réseau de soutien par les pairs et de ressources spécifiquement pour vétérans femmes." },
+    es: { title: "Women Veterans Network", desc: "Red de apoyo entre pares y recursos específicamente para mujeres veteranas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.serviceswomen.org",
+  i18n: {
+    en: { title: "Service Women's Action Network", desc: "Advocacy and support resources for current and former servicewomen." },
+    fr: { title: "Service Women's Action Network", desc: "Ressources de plaidoyer et de soutien pour militaires femmes actuelles et anciennes." },
+    es: { title: "Service Women's Action Network", desc: "Recursos de defensa y apoyo para militares mujeres actuales y anteriores." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.va.gov/health-care/about-va-health-benefits/pregnancy-maternity-care/",
+  i18n: {
+    en: { title: "VA Pregnancy and Maternity Care Benefits", desc: "Federal maternity care benefits available for eligible women veterans." },
+    fr: { title: "Prestations soins maternité VA", desc: "Prestations fédérales de soins de maternité disponibles pour vétérans femmes admissibles." },
+    es: { title: "Beneficios de Atención de Embarazo y Maternidad VA", desc: "Beneficios federales de atención de maternidad disponibles para veteranas elegibles." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.momsonthefrontlines.org",
+  i18n: {
+    en: { title: "Moms on the Frontlines", desc: "Support network and resources for military and veteran mothers." },
+    fr: { title: "Moms on the Frontlines", desc: "Réseau de soutien et ressources pour mères militaires et vétérans." },
+    es: { title: "Moms on the Frontlines", desc: "Red de apoyo y recursos para madres militares y veteranas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.zerotothree.org/military-families",
+  i18n: {
+    en: { title: "Zero to Three Military Family Resources", desc: "Early childhood health resources tailored for military families." },
+    fr: { title: "Ressources familles militaires Zero to Three", desc: "Ressources de santé pour la petite enfance conçues pour familles militaires." },
+    es: { title: "Recursos para Familias Militares Zero to Three", desc: "Recursos de salud de primera infancia diseñados para familias militares." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.militarychild.org/health",
+  i18n: {
+    en: { title: "Military Child Education Coalition Health Resources", desc: "Health resources supporting the wellbeing of military-connected children." },
+    fr: { title: "Ressources santé Military Child Education Coalition", desc: "Ressources de santé soutenant le bien-être des enfants liés à l'armée." },
+    es: { title: "Recursos de Salud Military Child Education Coalition", desc: "Recursos de salud que apoyan el bienestar de niños relacionados con lo militar." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.zerotothree.org/resource/early-childhood-mental-health",
+  i18n: {
+    en: { title: "Early Childhood Mental Health Resources", desc: "Resources supporting the mental health of infants and young children." },
+    fr: { title: "Ressources santé mentale petite enfance", desc: "Ressources soutenant la santé mentale des bébés et jeunes enfants." },
+    es: { title: "Recursos de Salud Mental de Primera Infancia", desc: "Recursos que apoyan la salud mental de bebés y niños pequeños." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.zerotofive.org",
+  i18n: {
+    en: { title: "Zero to Five Health Resources", desc: "Early childhood development and health resources for young families." },
+    fr: { title: "Ressources santé Zero to Five", desc: "Ressources de développement de la petite enfance et de santé pour jeunes familles." },
+    es: { title: "Recursos de Salud Zero to Five", desc: "Recursos de desarrollo de primera infancia y salud para familias jóvenes." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.healthychildren.org",
+  i18n: {
+    en: { title: "HealthyChildren.org", desc: "American Academy of Pediatrics resource for parenting and child health information." },
+    fr: { title: "HealthyChildren.org", desc: "Ressource de l'American Academy of Pediatrics pour informations sur la santé infantile." },
+    es: { title: "HealthyChildren.org", desc: "Recurso de la Academia Americana de Pediatría para información de salud infantil." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.zerotothree.org/resource/parenting-resources",
+  i18n: {
+    en: { title: "Zero to Three Parenting Resources", desc: "Free resources supporting healthy child development from birth to age three." },
+    fr: { title: "Ressources parentales Zero to Three", desc: "Ressources gratuites soutenant le développement sain de l'enfant de la naissance à trois ans." },
+    es: { title: "Recursos de Crianza Zero to Three", desc: "Recursos gratuitos que apoyan el desarrollo saludable del niño desde el nacimiento hasta los tres años." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cdc.gov/ncbddd/actearly/index.html",
+  i18n: {
+    en: { title: "CDC Learn the Signs Act Early", desc: "Federal resources on developmental milestones and early intervention services." },
+    fr: { title: "CDC Learn the Signs Act Early", desc: "Ressources fédérales sur les jalons du développement et les services d'intervention précoce." },
+    es: { title: "CDC Learn the Signs Act Early", desc: "Recursos federales sobre hitos del desarrollo y servicios de intervención temprana." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ectacenter.org",
+  i18n: {
+    en: { title: "Early Childhood Technical Assistance Center", desc: "Resources supporting early intervention services for children with disabilities." },
+    fr: { title: "Early Childhood Technical Assistance Center", desc: "Ressources soutenant les services d'intervention précoce pour enfants handicapés." },
+    es: { title: "Early Childhood Technical Assistance Center", desc: "Recursos que apoyan servicios de intervención temprana para niños con discapacidades." },
+  },
+},
+
+// HOUSING (50)
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/rental_assistance/phprog",
+  i18n: {
+    en: { title: "HUD Public Housing Program Overview", desc: "Federal overview of public housing operated by local housing authorities." },
+    fr: { title: "Aperçu programme logement public HUD", desc: "Aperçu fédéral du logement public géré par les autorités de logement locales." },
+    es: { title: "Resumen del Programa de Vivienda Pública HUD", desc: "Resumen federal de vivienda pública operada por autoridades de vivienda locales." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/housing_choice_voucher_program_section_8",
+  i18n: {
+    en: { title: "Housing Choice Voucher Program (Section 8)", desc: "Federal rental assistance program letting eligible families choose private housing." },
+    fr: { title: "Programme bons de logement (Section 8)", desc: "Programme fédéral d'aide au loyer permettant aux familles admissibles de choisir un logement privé." },
+    es: { title: "Programa de Vales de Vivienda (Sección 8)", desc: "Programa federal de asistencia de alquiler que permite a familias elegibles elegir vivienda privada." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/public_indian_housing/programs/hcv/about",
+  i18n: {
+    en: { title: "About the Section 8 Voucher Program", desc: "Detailed federal explanation of how the Section 8 voucher program works." },
+    fr: { title: "À propos du programme bons Section 8", desc: "Explication fédérale détaillée du fonctionnement du programme de bons Section 8." },
+    es: { title: "Acerca del Programa de Vales Sección 8", desc: "Explicación federal detallada de cómo funciona el programa de vales Sección 8." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/public_indian_housing/programs/hcv/tenant",
+  i18n: {
+    en: { title: "Section 8 Tenant Information", desc: "Federal information for tenants using Housing Choice Vouchers." },
+    fr: { title: "Info locataires Section 8", desc: "Informations fédérales pour locataires utilisant les bons de logement." },
+    es: { title: "Información de Inquilinos Sección 8", desc: "Información federal para inquilinos que usan vales de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/public_indian_housing/programs/hcv/landlord",
+  i18n: {
+    en: { title: "Section 8 Landlord Information", desc: "Federal information for landlords wanting to accept Housing Choice Vouchers." },
+    fr: { title: "Info propriétaires Section 8", desc: "Informations fédérales pour propriétaires souhaitant accepter les bons de logement." },
+    es: { title: "Información de Propietarios Sección 8", desc: "Información federal para propietarios que desean aceptar vales de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/rental_assistance/phas",
+  i18n: {
+    en: { title: "Public Housing Agency Performance Info", desc: "Federal information on how public housing agency performance is assessed." },
+    fr: { title: "Info performance agence logement public", desc: "Informations fédérales sur l'évaluation de la performance des agences de logement public." },
+    es: { title: "Información de Desempeño de Agencia de Vivienda Pública", desc: "Información federal sobre cómo se evalúa el desempeño de agencias de vivienda pública." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/rental_assistance/tenantrights/section8",
+  i18n: {
+    en: { title: "Section 8 Tenant Rights", desc: "Federal information on tenant rights within the Section 8 voucher program." },
+    fr: { title: "Droits locataires Section 8", desc: "Informations fédérales sur les droits des locataires dans le programme de bons Section 8." },
+    es: { title: "Derechos de Inquilinos Sección 8", desc: "Información federal sobre derechos de inquilinos dentro del programa de vales Sección 8." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/fair_housing_equal_opp",
+  i18n: {
+    en: { title: "HUD Fair Housing and Equal Opportunity", desc: "Federal office enforcing fair housing laws against discrimination." },
+    fr: { title: "HUD logement équitable et égalité des chances", desc: "Bureau fédéral appliquant les lois sur le logement équitable contre la discrimination." },
+    es: { title: "HUD Vivienda Justa e Igualdad de Oportunidades", desc: "Oficina federal que hace cumplir leyes de vivienda justa contra la discriminación." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/fair_housing_equal_opp/online-complaint",
+  i18n: {
+    en: { title: "File a Fair Housing Complaint", desc: "Official portal to file a housing discrimination complaint with HUD." },
+    fr: { title: "Déposer plainte logement équitable", desc: "Portail officiel pour déposer une plainte de discrimination au logement auprès de HUD." },
+    es: { title: "Presente una Queja de Vivienda Justa", desc: "Portal oficial para presentar una queja de discriminación de vivienda ante HUD." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.nationalfairhousing.org",
+  i18n: {
+    en: { title: "National Fair Housing Alliance", desc: "Advocacy organization working to eliminate housing discrimination nationwide." },
+    fr: { title: "National Fair Housing Alliance", desc: "Organisation de plaidoyer travaillant à éliminer la discrimination au logement." },
+    es: { title: "National Fair Housing Alliance", desc: "Organización de defensa que trabaja para eliminar la discriminación de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.fairhousingjustice.org",
+  i18n: {
+    en: { title: "Fair Housing Justice Center", desc: "Legal advocacy and enforcement resources against housing discrimination." },
+    fr: { title: "Fair Housing Justice Center", desc: "Ressources de plaidoyer juridique et d'application contre la discrimination au logement." },
+    es: { title: "Fair Housing Justice Center", desc: "Recursos de defensa legal y aplicación contra la discriminación de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.lawyers.com/legal-info/real-estate/landlord-tenant-law/",
+  i18n: {
+    en: { title: "Landlord-Tenant Law Guide", desc: "Independent legal guide explaining tenant and landlord rights and responsibilities." },
+    fr: { title: "Guide droit locataire-propriétaire", desc: "Guide juridique indépendant expliquant les droits et responsabilités des locataires et propriétaires." },
+    es: { title: "Guía de Ley de Inquilino-Propietario", desc: "Guía legal independiente que explica derechos y responsabilidades de inquilinos y propietarios." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.nlihc.org/explore-issues/tenant-protections",
+  i18n: {
+    en: { title: "NLIHC Tenant Protections Resources", desc: "Advocacy resources tracking tenant protection laws across states." },
+    fr: { title: "Ressources protections locataires NLIHC", desc: "Ressources de plaidoyer suivant les lois de protection des locataires par État." },
+    es: { title: "Recursos de Protecciones de Inquilinos NLIHC", desc: "Recursos de defensa que rastrean leyes de protección de inquilinos por estado." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.evictionlab.org",
+  i18n: {
+    en: { title: "Eviction Lab", desc: "Research database tracking eviction rates and trends across the US." },
+    fr: { title: "Eviction Lab", desc: "Base de données de recherche suivant les taux et tendances d'expulsion aux États-Unis." },
+    es: { title: "Eviction Lab", desc: "Base de datos de investigación que rastrea tasas y tendencias de desalojo en Estados Unidos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.evictionlab.org/covid-eviction-tracker",
+  i18n: {
+    en: { title: "Eviction Lab Emergency Tracker", desc: "Tracker showing state and local eviction protection status during crises." },
+    fr: { title: "Suivi urgence Eviction Lab", desc: "Suivi montrant l'état des protections contre l'expulsion locales et d'État lors de crises." },
+    es: { title: "Rastreador de Emergencia Eviction Lab", desc: "Rastreador que muestra el estado de protecciones de desalojo estatales y locales durante crisis." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.lsc.gov/what-legal-aid/find-legal-aid",
+  i18n: {
+    en: { title: "Legal Services Corporation Find Legal Aid", desc: "Official federal directory to find free legal aid for housing issues." },
+    fr: { title: "Trouver aide juridique Legal Services Corporation", desc: "Répertoire fédéral officiel pour trouver une aide juridique gratuite pour problèmes de logement." },
+    es: { title: "Encuentre Ayuda Legal Legal Services Corporation", desc: "Directorio federal oficial para encontrar ayuda legal gratuita para problemas de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.lawhelp.org",
+  i18n: {
+    en: { title: "LawHelp.org", desc: "State-by-state directory of free legal aid resources including housing help." },
+    fr: { title: "LawHelp.org", desc: "Répertoire État par État de ressources d'aide juridique gratuites incluant l'aide au logement." },
+    es: { title: "LawHelp.org", desc: "Directorio estado por estado de recursos legales gratuitos incluyendo ayuda de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.probono.net",
+  i18n: {
+    en: { title: "Pro Bono Net", desc: "Directory connecting people with free legal aid organizations nationwide." },
+    fr: { title: "Pro Bono Net", desc: "Répertoire reliant les personnes à des organismes d'aide juridique gratuite." },
+    es: { title: "Pro Bono Net", desc: "Directorio que conecta a personas con organizaciones de ayuda legal gratuita." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.legalaid.org",
+  i18n: {
+    en: { title: "Legal Aid Society", desc: "Free legal representation and advice for low-income tenants facing housing issues." },
+    fr: { title: "Legal Aid Society", desc: "Représentation et conseils juridiques gratuits pour locataires à faible revenu." },
+    es: { title: "Legal Aid Society", desc: "Representación y asesoría legal gratuita para inquilinos de bajos ingresos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.evictionhelp.org",
+  i18n: {
+    en: { title: "Eviction Help Directory", desc: "Directory connecting tenants facing eviction to local legal resources." },
+    fr: { title: "Répertoire aide expulsion", desc: "Répertoire reliant les locataires menacés d'expulsion à des ressources juridiques locales." },
+    es: { title: "Directorio de Ayuda de Desalojo", desc: "Directorio que conecta a inquilinos que enfrentan desalojo con recursos legales locales." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.consumerfinance.gov/consumer-tools/eviction-relief/",
+  i18n: {
+    en: { title: "CFPB Eviction Relief Resources", desc: "Federal consumer resources for tenants seeking eviction assistance." },
+    fr: { title: "Ressources aide expulsion CFPB", desc: "Ressources consommateur fédérales pour locataires cherchant une aide contre l'expulsion." },
+    es: { title: "Recursos de Alivio de Desalojo CFPB", desc: "Recursos del consumidor federal para inquilinos que buscan asistencia de desalojo." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.usich.gov/goals/prevent-and-end-homelessness",
+  i18n: {
+    en: { title: "USICH Preventing and Ending Homelessness", desc: "Federal strategic resources on preventing and ending homelessness." },
+    fr: { title: "USICH prévenir et mettre fin au sans-abrisme", desc: "Ressources stratégiques fédérales pour prévenir et mettre fin au sans-abrisme." },
+    es: { title: "USICH Prevención y Fin de la Falta de Vivienda", desc: "Recursos estratégicos federales para prevenir y acabar con la falta de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.endhomelessness.org",
+  i18n: {
+    en: { title: "National Alliance to End Homelessness", desc: "Research, advocacy, and resource hub on ending homelessness." },
+    fr: { title: "National Alliance to End Homelessness", desc: "Centre de recherche, plaidoyer et ressources pour mettre fin au sans-abrisme." },
+    es: { title: "National Alliance to End Homelessness", desc: "Centro de investigación, defensa y recursos para acabar con la falta de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.endhomelessness.org/homelessness-in-america/homelessness-statistics/",
+  i18n: {
+    en: { title: "Homelessness Statistics", desc: "National and state-level data on homelessness trends and demographics." },
+    fr: { title: "Statistiques sans-abrisme", desc: "Données nationales et par État sur les tendances et démographies du sans-abrisme." },
+    es: { title: "Estadísticas de Falta de Vivienda", desc: "Datos nacionales y estatales sobre tendencias y demografía de la falta de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.coalitionforthehomeless.org",
+  i18n: {
+    en: { title: "Coalition for the Homeless", desc: "Advocacy and direct services supporting homeless individuals and families." },
+    fr: { title: "Coalition for the Homeless", desc: "Plaidoyer et services directs soutenant les personnes et familles sans-abri." },
+    es: { title: "Coalition for the Homeless", desc: "Defensa y servicios directos que apoyan a personas y familias sin hogar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.nationalhomeless.org",
+  i18n: {
+    en: { title: "National Coalition for the Homeless", desc: "Advocacy organization working on policy solutions to end homelessness." },
+    fr: { title: "National Coalition for the Homeless", desc: "Organisation de plaidoyer travaillant sur des solutions politiques pour mettre fin au sans-abrisme." },
+    es: { title: "National Coalition for the Homeless", desc: "Organización de defensa que trabaja en soluciones de políticas para acabar con la falta de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.streetsense.org",
+  i18n: {
+    en: { title: "Street Sense Media", desc: "Newspaper and advocacy organization giving voice to people experiencing homelessness." },
+    fr: { title: "Street Sense Media", desc: "Journal et organisation de plaidoyer donnant une voix aux personnes sans-abri." },
+    es: { title: "Street Sense Media", desc: "Periódico y organización de defensa que da voz a personas sin hogar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.miriamshouse.org",
+  i18n: {
+    en: { title: "Miriam's House", desc: "Supportive housing programs for women and families experiencing homelessness." },
+    fr: { title: "Miriam's House", desc: "Programmes de logement soutenu pour femmes et familles sans-abri." },
+    es: { title: "Miriam's House", desc: "Programas de vivienda de apoyo para mujeres y familias sin hogar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.doorwaysva.org",
+  states: ["VA"],
+  i18n: {
+    en: { title: "Doorways for Women and Families", desc: "Housing and support services for women and families fleeing domestic violence." },
+    fr: { title: "Doorways for Women and Families", desc: "Services de logement et de soutien pour femmes et familles fuyant la violence domestique." },
+    es: { title: "Doorways for Women and Families", desc: "Servicios de vivienda y apoyo para mujeres y familias que huyen de la violencia doméstica." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.transitionalhousing.org",
+  i18n: {
+    en: { title: "Transitional Housing Directory", desc: "Directory of transitional housing programs helping people rebuild stability." },
+    fr: { title: "Répertoire logement transitoire", desc: "Répertoire de programmes de logement transitoire aidant les personnes à retrouver la stabilité." },
+    es: { title: "Directorio de Vivienda Transitoria", desc: "Directorio de programas de vivienda transitoria que ayudan a las personas a recuperar estabilidad." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.recoveryhousingassociation.org",
+  i18n: {
+    en: { title: "Recovery Housing Association Directory", desc: "Directory of sober and recovery-focused transitional housing options." },
+    fr: { title: "Répertoire Recovery Housing Association", desc: "Répertoire d'options de logement transitoire axées sur la sobriété et le rétablissement." },
+    es: { title: "Directorio Recovery Housing Association", desc: "Directorio de opciones de vivienda transitoria enfocadas en sobriedad y recuperación." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.oxfordhouse.org",
+  i18n: {
+    en: { title: "Oxford House", desc: "Self-run, self-supported recovery housing network for people in addiction recovery." },
+    fr: { title: "Oxford House", desc: "Réseau de logement de rétablissement autogéré pour personnes en rétablissement de dépendance." },
+    es: { title: "Oxford House", desc: "Red de vivienda de recuperación autogestionada para personas en recuperación de adicciones." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.narronline.org",
+  i18n: {
+    en: { title: "National Alliance for Recovery Residences", desc: "Directory and standards for quality recovery housing across the country." },
+    fr: { title: "National Alliance for Recovery Residences", desc: "Répertoire et normes pour logements de rétablissement de qualité à travers le pays." },
+    es: { title: "National Alliance for Recovery Residences", desc: "Directorio y estándares para vivienda de recuperación de calidad en todo el país." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.reentrycentral.org/housing",
+  i18n: {
+    en: { title: "Reentry Central Housing Resources", desc: "Housing resources for people reentering society after incarceration." },
+    fr: { title: "Ressources logement Reentry Central", desc: "Ressources de logement pour personnes se réinsérant après incarcération." },
+    es: { title: "Recursos de Vivienda Reentry Central", desc: "Recursos de vivienda para personas que se reintegran tras encarcelamiento." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.prisonfellowship.org/resources/support-friends-family/staying-connected/reentry-housing/",
+  i18n: {
+    en: { title: "Prison Fellowship Reentry Housing", desc: "Housing resources and guidance for people reentering society after prison." },
+    fr: { title: "Logement réinsertion Prison Fellowship", desc: "Ressources de logement pour personnes se réinsérant après la prison." },
+    es: { title: "Vivienda de Reingreso Prison Fellowship", desc: "Recursos de vivienda para personas que se reintegran después de la prisión." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.friendsoutside.org",
+  i18n: {
+    en: { title: "Friends Outside", desc: "Support services including housing help for formerly incarcerated individuals." },
+    fr: { title: "Friends Outside", desc: "Services de soutien incluant aide au logement pour personnes anciennement incarcérées." },
+    es: { title: "Friends Outside", desc: "Servicios de apoyo incluyendo ayuda de vivienda para personas anteriormente encarceladas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/rental_assistance/reentry",
+  i18n: {
+    en: { title: "HUD Reentry Housing Resources", desc: "Federal housing resources specifically for people reentering society after incarceration." },
+    fr: { title: "Ressources logement réinsertion HUD", desc: "Ressources de logement fédérales spécifiquement pour personnes se réinsérant après incarcération." },
+    es: { title: "Recursos de Vivienda de Reingreso HUD", desc: "Recursos federales de vivienda específicamente para personas que se reintegran tras encarcelamiento." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.csh.org",
+  i18n: {
+    en: { title: "Corporation for Supportive Housing", desc: "National organization advancing supportive housing solutions for vulnerable populations." },
+    fr: { title: "Corporation for Supportive Housing", desc: "Organisation nationale faisant progresser les solutions de logement soutenu." },
+    es: { title: "Corporation for Supportive Housing", desc: "Organización nacional que promueve soluciones de vivienda de apoyo para poblaciones vulnerables." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.tacinc.org",
+  i18n: {
+    en: { title: "Technical Assistance Collaborative", desc: "Technical support helping communities develop supportive housing programs." },
+    fr: { title: "Technical Assistance Collaborative", desc: "Soutien technique aidant les communautés à développer des programmes de logement soutenu." },
+    es: { title: "Technical Assistance Collaborative", desc: "Apoyo técnico que ayuda a comunidades a desarrollar programas de vivienda de apoyo." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.housingfirst.org",
+  i18n: {
+    en: { title: "Housing First Initiative", desc: "Resources and research supporting the Housing First model for ending homelessness." },
+    fr: { title: "Housing First Initiative", desc: "Ressources et recherche soutenant le modèle Housing First pour mettre fin au sans-abrisme." },
+    es: { title: "Housing First Initiative", desc: "Recursos e investigación que apoyan el modelo Housing First para acabar con la falta de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.usich.gov/solutions/housing/housing-first",
+  i18n: {
+    en: { title: "USICH Housing First Overview", desc: "Federal overview of the evidence-based Housing First approach." },
+    fr: { title: "Aperçu Housing First USICH", desc: "Aperçu fédéral de l'approche Housing First basée sur des preuves." },
+    es: { title: "Resumen de Housing First USICH", desc: "Resumen federal del enfoque Housing First basado en evidencia." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.communitysolutions.org",
+  i18n: {
+    en: { title: "Community Solutions Built for Zero", desc: "National initiative working with communities to end homelessness through data-driven strategies." },
+    fr: { title: "Community Solutions Built for Zero", desc: "Initiative nationale travaillant avec les communautés pour mettre fin au sans-abrisme." },
+    es: { title: "Community Solutions Built for Zero", desc: "Iniciativa nacional que trabaja con comunidades para acabar con la falta de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.va.gov/homeless/reachout.asp",
+  i18n: {
+    en: { title: "VA Homeless Veteran Outreach", desc: "Federal outreach program connecting homeless veterans to services and housing." },
+    fr: { title: "Sensibilisation vétérans sans-abri VA", desc: "Programme de sensibilisation fédéral reliant les vétérans sans-abri aux services et au logement." },
+    es: { title: "Alcance para Veteranos sin Hogar VA", desc: "Programa de alcance federal que conecta a veteranos sin hogar con servicios y vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/press/press_releases_media_advisories/HUD_No_23_045",
+  i18n: {
+    en: { title: "HUD Homelessness Funding Announcements", desc: "Official HUD press releases on new funding for homelessness programs." },
+    fr: { title: "Annonces financement sans-abrisme HUD", desc: "Communiqués de presse officiels HUD sur les nouveaux financements pour programmes sans-abrisme." },
+    es: { title: "Anuncios de Financiamiento de Falta de Vivienda HUD", desc: "Comunicados de prensa oficiales de HUD sobre nuevo financiamiento para programas de falta de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/youth_homelessness",
+  i18n: {
+    en: { title: "HUD Youth Homelessness Programs", desc: "Federal housing programs specifically addressing youth homelessness." },
+    fr: { title: "Programmes sans-abrisme jeunesse HUD", desc: "Programmes de logement fédéraux traitant spécifiquement le sans-abrisme des jeunes." },
+    es: { title: "Programas de Falta de Vivienda Juvenil HUD", desc: "Programas federales de vivienda que abordan específicamente la falta de vivienda juvenil." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.truecolorsunited.org",
+  i18n: {
+    en: { title: "True Colors United", desc: "Advocacy organization addressing LGBTQ youth homelessness with housing solutions." },
+    fr: { title: "True Colors United", desc: "Organisation de plaidoyer traitant le sans-abrisme des jeunes LGBTQ avec des solutions de logement." },
+    es: { title: "True Colors United", desc: "Organización de defensa que aborda la falta de vivienda de jóvenes LGBTQ con soluciones de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.nn4youth.org",
+  i18n: {
+    en: { title: "National Network for Youth", desc: "Advocacy and resource network addressing youth homelessness nationwide." },
+    fr: { title: "National Network for Youth", desc: "Réseau de plaidoyer et de ressources traitant le sans-abrisme des jeunes." },
+    es: { title: "National Network for Youth", desc: "Red de defensa y recursos que aborda la falta de vivienda juvenil a nivel nacional." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.stmaryshome.org",
+  i18n: {
+    en: { title: "St. Mary's Home for Young Women", desc: "Housing and support services for young women transitioning out of foster care." },
+    fr: { title: "St. Mary's Home for Young Women", desc: "Services de logement et de soutien pour jeunes femmes quittant le système de placement familial." },
+    es: { title: "St. Mary's Home for Young Women", desc: "Servicios de vivienda y apoyo para jóvenes que salen del sistema de cuidado de crianza." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.fostercareoutcomes.org/housing",
+  i18n: {
+    en: { title: "Foster Care Transition Housing Resources", desc: "Housing resources for young people aging out of the foster care system." },
+    fr: { title: "Ressources logement transition placement familial", desc: "Ressources de logement pour jeunes quittant le système de placement familial." },
+    es: { title: "Recursos de Vivienda de Transición de Cuidado de Crianza", desc: "Recursos de vivienda para jóvenes que salen del sistema de cuidado de crianza." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.fostercareunited.org",
+  i18n: {
+    en: { title: "Foster Care United", desc: "Support network connecting former foster youth to housing and other resources." },
+    fr: { title: "Foster Care United", desc: "Réseau de soutien reliant les anciens jeunes du placement familial au logement." },
+    es: { title: "Foster Care United", desc: "Red de apoyo que conecta a exjóvenes de cuidado de crianza con vivienda y otros recursos." },
+  },
+},
+
+// UTILITIES (40)
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/scep/slsc/energy-efficiency-and-conservation-block-grant-program",
+  i18n: {
+    en: { title: "Energy Efficiency and Conservation Block Grant", desc: "Federal funding supporting local energy efficiency and conservation projects." },
+    fr: { title: "Subvention efficacité et conservation énergie", desc: "Financement fédéral soutenant les projets locaux d'efficacité et de conservation énergétique." },
+    es: { title: "Subvención en Bloque de Eficiencia y Conservación de Energía", desc: "Financiamiento federal que apoya proyectos locales de eficiencia y conservación de energía." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/scep/slsc/state-energy-program",
+  i18n: {
+    en: { title: "State Energy Program", desc: "Federal funding supporting state-level energy efficiency and renewable initiatives." },
+    fr: { title: "Programme énergétique d'État", desc: "Financement fédéral soutenant les initiatives d'efficacité énergétique et renouvelable au niveau des États." },
+    es: { title: "Programa Energético Estatal", desc: "Financiamiento federal que apoya iniciativas de eficiencia energética y renovable a nivel estatal." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/statelocalenergy",
+  i18n: {
+    en: { title: "EPA State and Local Energy Resources", desc: "Federal resources supporting state and local clean energy policy development." },
+    fr: { title: "Ressources énergie État et local EPA", desc: "Ressources fédérales soutenant le développement de politiques énergétiques propres." },
+    es: { title: "Recursos Energéticos Estatales y Locales EPA", desc: "Recursos federales que apoyan el desarrollo de políticas de energía limpia estatal y local." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.aceee.org",
+  i18n: {
+    en: { title: "American Council for an Energy-Efficient Economy", desc: "Research and policy resources on energy efficiency programs and savings." },
+    fr: { title: "American Council for an Energy-Efficient Economy", desc: "Ressources de recherche et politiques sur les programmes d'efficacité énergétique." },
+    es: { title: "American Council for an Energy-Efficient Economy", desc: "Recursos de investigación y políticas sobre programas de eficiencia energética." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.aceee.org/policy-brief/utility-programs",
+  i18n: {
+    en: { title: "ACEEE Utility Efficiency Programs Database", desc: "Database of utility company energy efficiency programs by state." },
+    fr: { title: "Base de données programmes efficacité ACEEE", desc: "Base de données des programmes d'efficacité énergétique des compagnies de services par État." },
+    es: { title: "Base de Datos de Programas de Eficiencia de Servicios ACEEE", desc: "Base de datos de programas de eficiencia energética de compañías de servicios por estado." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.nrdc.org/resources/energy-affordability",
+  i18n: {
+    en: { title: "NRDC Energy Affordability Resources", desc: "Research and advocacy on making energy costs more affordable for households." },
+    fr: { title: "Ressources abordabilité énergie NRDC", desc: "Recherche et plaidoyer pour rendre les coûts énergétiques plus abordables." },
+    es: { title: "Recursos de Asequibilidad Energética NRDC", desc: "Investigación y defensa para hacer los costos de energía más asequibles." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.nclc.org/resources/utility-shutoffs/",
+  i18n: {
+    en: { title: "NCLC Utility Shutoff Protections", desc: "Legal resource tracking state protections against utility service shutoffs." },
+    fr: { title: "Protections coupures services NCLC", desc: "Ressource juridique suivant les protections d'État contre les coupures de services." },
+    es: { title: "Protecciones contra Cortes de Servicios NCLC", desc: "Recurso legal que rastrea protecciones estatales contra cortes de servicios públicos." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.naruc.org/about-naruc/",
+  i18n: {
+    en: { title: "National Association of Regulatory Utility Commissioners", desc: "Directory of state utility regulatory commissions overseeing rates and rules." },
+    fr: { title: "Association nationale commissaires réglementaires", desc: "Répertoire des commissions de réglementation des services publics par État." },
+    es: { title: "Asociación Nacional de Comisionados Regulatorios de Servicios", desc: "Directorio de comisiones reguladoras de servicios públicos estatales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.psc.state.pa.us",
+  states: ["PA"],
+  i18n: {
+    en: { title: "Pennsylvania Public Utility Commission", desc: "State agency regulating utility rates and consumer protections for Pennsylvania." },
+    fr: { title: "Commission des services publics de Pennsylvanie", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicios Públicos de Pennsylvania", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Pennsylvania." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dps.ny.gov",
+  states: ["NY"],
+  i18n: {
+    en: { title: "New York Department of Public Service", desc: "State agency regulating utility rates and consumer protections for New York." },
+    fr: { title: "Department of Public Service de New York", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Departamento de Servicio Público de Nueva York", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Nueva York." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.cpuc.ca.gov",
+  states: ["CA"],
+  i18n: {
+    en: { title: "California Public Utilities Commission", desc: "State agency regulating utility rates and consumer protections for California." },
+    fr: { title: "California Public Utilities Commission", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicios Públicos de California", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en California." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.puc.texas.gov",
+  states: ["TX"],
+  i18n: {
+    en: { title: "Public Utility Commission of Texas", desc: "State agency regulating utility rates and consumer protections for Texas." },
+    fr: { title: "Public Utility Commission of Texas", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicios Públicos de Texas", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Texas." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.psc.state.fl.us",
+  states: ["FL"],
+  i18n: {
+    en: { title: "Florida Public Service Commission", desc: "State agency regulating utility rates and consumer protections for Florida." },
+    fr: { title: "Florida Public Service Commission", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicio Público de Florida", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Florida." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.psc.state.il.us",
+  states: ["IL"],
+  i18n: {
+    en: { title: "Illinois Commerce Commission", desc: "State agency regulating utility rates and consumer protections for Illinois." },
+    fr: { title: "Illinois Commerce Commission", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Comercio de Illinois", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Illinois." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.puco.ohio.gov",
+  states: ["OH"],
+  i18n: {
+    en: { title: "Public Utilities Commission of Ohio", desc: "State agency regulating utility rates and consumer protections for Ohio." },
+    fr: { title: "Public Utilities Commission of Ohio", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicios Públicos de Ohio", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Ohio." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.michigan.gov/mpsc",
+  states: ["MI"],
+  i18n: {
+    en: { title: "Michigan Public Service Commission", desc: "State agency regulating utility rates and consumer protections for Michigan." },
+    fr: { title: "Michigan Public Service Commission", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicio Público de Michigan", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Michigan." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.psc.state.ga.us",
+  states: ["GA"],
+  i18n: {
+    en: { title: "Georgia Public Service Commission", desc: "State agency regulating utility rates and consumer protections for Georgia." },
+    fr: { title: "Georgia Public Service Commission", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicio Público de Georgia", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Georgia." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.azcc.gov",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "Arizona Corporation Commission", desc: "State agency regulating utility rates and consumer protections for Arizona." },
+    fr: { title: "Arizona Corporation Commission", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Corporaciones de Arizona", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Arizona." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.puc.nv.gov",
+  states: ["NV"],
+  i18n: {
+    en: { title: "Public Utilities Commission of Nevada", desc: "State agency regulating utility rates and consumer protections for Nevada." },
+    fr: { title: "Public Utilities Commission of Nevada", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicios Públicos de Nevada", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Nevada." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.utc.wa.gov",
+  states: ["WA"],
+  i18n: {
+    en: { title: "Washington Utilities and Transportation Commission", desc: "State agency regulating utility rates and consumer protections for Washington." },
+    fr: { title: "Washington Utilities and Transportation Commission", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicios y Transporte de Washington", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Washington." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.psc.state.nc.us",
+  states: ["NC"],
+  i18n: {
+    en: { title: "North Carolina Utilities Commission", desc: "State agency regulating utility rates and consumer protections for North Carolina." },
+    fr: { title: "North Carolina Utilities Commission", desc: "Agence d'État réglementant les tarifs et protections des consommateurs de services." },
+    es: { title: "Comisión de Servicios Públicos de Carolina del Norte", desc: "Agencia estatal que regula tarifas y protecciones al consumidor de servicios en Carolina del Norte." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.psc.state.pa.us/consumer-info",
+  states: ["PA"],
+  i18n: {
+    en: { title: "Pennsylvania PUC Consumer Info", desc: "Consumer resources on utility rights and complaint filing for Pennsylvania." },
+    fr: { title: "Info consommateurs PUC Pennsylvanie", desc: "Ressources consommateurs sur les droits et plaintes de services pour la Pennsylvanie." },
+    es: { title: "Información al Consumidor PUC Pennsylvania", desc: "Recursos del consumidor sobre derechos y quejas de servicios para Pennsylvania." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.puc.pa.gov/filing-complaint",
+  states: ["PA"],
+  i18n: {
+    en: { title: "Pennsylvania PUC Complaint Filing", desc: "Official process to file a complaint against a utility company in Pennsylvania." },
+    fr: { title: "Dépôt plainte PUC Pennsylvanie", desc: "Processus officiel pour déposer une plainte contre une compagnie de services en Pennsylvanie." },
+    es: { title: "Presentación de Quejas PUC Pennsylvania", desc: "Proceso oficial para presentar una queja contra una compañía de servicios en Pennsylvania." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dps.ny.gov/ConsumerComplaint",
+  states: ["NY"],
+  i18n: {
+    en: { title: "New York DPS Consumer Complaint", desc: "Official process to file a complaint against a utility company in New York." },
+    fr: { title: "Plainte consommateur DPS New York", desc: "Processus officiel pour déposer une plainte contre une compagnie de services à New York." },
+    es: { title: "Queja del Consumidor DPS Nueva York", desc: "Proceso oficial para presentar una queja contra una compañía de servicios en Nueva York." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.puc.texas.gov/consumer",
+  states: ["TX"],
+  i18n: {
+    en: { title: "Texas PUC Consumer Resources", desc: "Consumer resources on utility rights and complaint filing for Texas." },
+    fr: { title: "Ressources consommateurs PUC Texas", desc: "Ressources consommateurs sur les droits et plaintes de services pour le Texas." },
+    es: { title: "Recursos al Consumidor PUC Texas", desc: "Recursos del consumidor sobre derechos y quejas de servicios para Texas." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.powertochoose.org",
+  states: ["TX"],
+  i18n: {
+    en: { title: "Power to Choose Texas", desc: "Official state tool to compare electricity plans and providers in deregulated Texas markets." },
+    fr: { title: "Power to Choose Texas", desc: "Outil d'État officiel pour comparer les plans et fournisseurs d'électricité au Texas." },
+    es: { title: "Power to Choose Texas", desc: "Herramienta estatal oficial para comparar planes y proveedores de electricidad en Texas." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.papowerswitch.com",
+  states: ["PA"],
+  i18n: {
+    en: { title: "PA Power Switch", desc: "Official state tool to compare electricity suppliers in Pennsylvania's deregulated market." },
+    fr: { title: "PA Power Switch", desc: "Outil d'État officiel pour comparer les fournisseurs d'électricité en Pennsylvanie." },
+    es: { title: "PA Power Switch", desc: "Herramienta estatal oficial para comparar proveedores de electricidad en Pennsylvania." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.powertochoose.org/en-us/",
+  i18n: {
+    en: { title: "Power to Choose National Resources", desc: "Resources helping consumers understand deregulated energy markets nationally." },
+    fr: { title: "Ressources nationales Power to Choose", desc: "Ressources aidant les consommateurs à comprendre les marchés énergétiques déréglementés." },
+    es: { title: "Recursos Nacionales Power to Choose", desc: "Recursos que ayudan a consumidores a entender mercados energéticos desregulados." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energyswitch.ohio.gov",
+  states: ["OH"],
+  i18n: {
+    en: { title: "Ohio Energy Switch", desc: "Official state tool to compare electricity and gas suppliers in Ohio." },
+    fr: { title: "Ohio Energy Switch", desc: "Outil d'État officiel pour comparer les fournisseurs d'électricité et de gaz en Ohio." },
+    es: { title: "Ohio Energy Switch", desc: "Herramienta estatal oficial para comparar proveedores de electricidad y gas en Ohio." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.pseg.com/help/financial-assistance",
+  states: ["NJ", "NY"],
+  i18n: {
+    en: { title: "PSE&G Financial Assistance", desc: "Utility bill assistance programs for qualifying PSE&G customers." },
+    fr: { title: "Aide financière PSE&G", desc: "Programmes d'aide aux factures pour clients PSE&G admissibles." },
+    es: { title: "Asistencia Financiera PSE&G", desc: "Programas de asistencia de facturas para clientes elegibles de PSE&G." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.exeloncorp.com/community/customer-assistance",
+  i18n: {
+    en: { title: "Exelon Customer Assistance Programs", desc: "Utility bill assistance programs across Exelon utility service areas." },
+    fr: { title: "Programmes aide clients Exelon", desc: "Programmes d'aide aux factures dans les zones de service Exelon." },
+    es: { title: "Programas de Asistencia al Cliente Exelon", desc: "Programas de asistencia de facturas en áreas de servicio de Exelon." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.centerpointenergy.com/en-us/residential/billing-and-payment/payment-assistance",
+  states: ["TX", "IN", "OH", "MN"],
+  i18n: {
+    en: { title: "CenterPoint Energy Payment Assistance", desc: "Utility bill assistance programs across CenterPoint Energy service territories." },
+    fr: { title: "Aide paiement CenterPoint Energy", desc: "Programmes d'aide aux factures dans les territoires de service CenterPoint Energy." },
+    es: { title: "Asistencia de Pago CenterPoint Energy", desc: "Programas de asistencia de facturas en territorios de servicio de CenterPoint Energy." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.ameren.com/account/assistance-programs",
+  states: ["IL", "MO"],
+  i18n: {
+    en: { title: "Ameren Assistance Programs", desc: "Utility bill assistance programs for qualifying Ameren customers." },
+    fr: { title: "Programmes aide Ameren", desc: "Programmes d'aide aux factures pour clients Ameren admissibles." },
+    es: { title: "Programas de Asistencia Ameren", desc: "Programas de asistencia de facturas para clientes elegibles de Ameren." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.wepco.com/customer-service/financial-assistance",
+  states: ["WI"],
+  i18n: {
+    en: { title: "We Energies Financial Assistance", desc: "Utility bill assistance programs for qualifying Wisconsin households." },
+    fr: { title: "Aide financière We Energies", desc: "Programmes d'aide aux factures pour ménages admissibles au Wisconsin." },
+    es: { title: "Asistencia Financiera We Energies", desc: "Programas de asistencia de facturas para hogares elegibles en Wisconsin." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.peco.com/waystosave/assistanceprograms",
+  states: ["PA"],
+  i18n: {
+    en: { title: "PECO Assistance Programs", desc: "Utility bill assistance programs for qualifying PECO customers in Pennsylvania." },
+    fr: { title: "Programmes aide PECO", desc: "Programmes d'aide aux factures pour clients PECO admissibles en Pennsylvanie." },
+    es: { title: "Programas de Asistencia PECO", desc: "Programas de asistencia de facturas para clientes elegibles de PECO en Pennsylvania." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.firstenergycorp.com/help/financial_assistance.html",
+  states: ["OH", "PA", "NJ", "WV"],
+  i18n: {
+    en: { title: "FirstEnergy Financial Assistance", desc: "Utility bill assistance programs across FirstEnergy service territories." },
+    fr: { title: "Aide financière FirstEnergy", desc: "Programmes d'aide aux factures dans les territoires de service FirstEnergy." },
+    es: { title: "Asistencia Financiera FirstEnergy", desc: "Programas de asistencia de facturas en territorios de servicio de FirstEnergy." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.appalachianpower.com/save/programs/",
+  states: ["VA", "WV", "TN", "NC"],
+  i18n: {
+    en: { title: "Appalachian Power Assistance Programs", desc: "Utility bill assistance programs across Appalachian Power service territories." },
+    fr: { title: "Programmes aide Appalachian Power", desc: "Programmes d'aide aux factures dans les territoires de service Appalachian Power." },
+    es: { title: "Programas de Asistencia Appalachian Power", desc: "Programas de asistencia de facturas en territorios de servicio de Appalachian Power." },
+  },
+},
+
+// EDUCATION (30)
+{
+  category: "Education",
+  link: "https://www.ed.gov/about/offices/list/ocr/index.html",
+  i18n: {
+    en: { title: "Office for Civil Rights Education Resources", desc: "Federal office enforcing civil rights protections in education settings." },
+    fr: { title: "Ressources éducation Office for Civil Rights", desc: "Bureau fédéral appliquant les protections des droits civils dans l'éducation." },
+    es: { title: "Recursos Educativos Office for Civil Rights", desc: "Oficina federal que hace cumplir protecciones de derechos civiles en la educación." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/idea",
+  i18n: {
+    en: { title: "Individuals with Disabilities Education Act (IDEA)", desc: "Federal law guaranteeing free appropriate public education for children with disabilities." },
+    fr: { title: "Individuals with Disabilities Education Act (IDEA)", desc: "Loi fédérale garantissant une éducation publique gratuite et appropriée pour enfants handicapés." },
+    es: { title: "Ley de Educación para Individuos con Discapacidades (IDEA)", desc: "Ley federal que garantiza educación pública gratuita y apropiada para niños con discapacidades." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/504",
+  i18n: {
+    en: { title: "Section 504 of the Rehabilitation Act", desc: "Federal law prohibiting discrimination against students with disabilities in schools." },
+    fr: { title: "Section 504 de la Loi sur la réadaptation", desc: "Loi fédérale interdisant la discrimination contre les élèves handicapés dans les écoles." },
+    es: { title: "Sección 504 de la Ley de Rehabilitación", desc: "Ley federal que prohíbe la discriminación contra estudiantes con discapacidades en las escuelas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.understood.org/en/articles/504-plan-what-it-is-and-how-it-works",
+  i18n: {
+    en: { title: "504 Plan Guide", desc: "Guide explaining how 504 plans work to support students with disabilities." },
+    fr: { title: "Guide plan 504", desc: "Guide expliquant le fonctionnement des plans 504 pour soutenir les élèves handicapés." },
+    es: { title: "Guía del Plan 504", desc: "Guía que explica cómo funcionan los planes 504 para apoyar a estudiantes con discapacidades." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.understood.org/en/articles/iep-individualized-education-program-what-it-is-and-how-it-works",
+  i18n: {
+    en: { title: "IEP Guide", desc: "Guide explaining how Individualized Education Programs work for students." },
+    fr: { title: "Guide PEI", desc: "Guide expliquant le fonctionnement des programmes d'éducation individualisés." },
+    es: { title: "Guía de IEP", desc: "Guía que explica cómo funcionan los Programas de Educación Individualizada." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.parentcenterhub.org/iep-overview/",
+  i18n: {
+    en: { title: "IEP Overview for Parents", desc: "Parent-focused guide to understanding and advocating for an IEP." },
+    fr: { title: "Aperçu PEI pour parents", desc: "Guide axé sur les parents pour comprendre et défendre un PEI." },
+    es: { title: "Resumen de IEP para Padres", desc: "Guía enfocada en padres para entender y defender un IEP." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.smartkidswithld.org",
+  i18n: {
+    en: { title: "Smart Kids with Learning Disabilities", desc: "Resources supporting parents of children with learning disabilities." },
+    fr: { title: "Smart Kids with Learning Disabilities", desc: "Ressources soutenant les parents d'enfants ayant des troubles d'apprentissage." },
+    es: { title: "Smart Kids with Learning Disabilities", desc: "Recursos que apoyan a padres de niños con discapacidades de aprendizaje." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ldaamerica.org",
+  i18n: {
+    en: { title: "Learning Disabilities Association of America", desc: "Resources, advocacy, and support for people with learning disabilities." },
+    fr: { title: "Learning Disabilities Association of America", desc: "Ressources, plaidoyer et soutien pour personnes ayant des troubles d'apprentissage." },
+    es: { title: "Learning Disabilities Association of America", desc: "Recursos, defensa y apoyo para personas con discapacidades de aprendizaje." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.chadd.org",
+  i18n: {
+    en: { title: "CHADD (ADHD Support)", desc: "Support and resources for children and adults with ADHD and their families." },
+    fr: { title: "CHADD (soutien TDAH)", desc: "Soutien et ressources pour enfants et adultes atteints de TDAH et leurs familles." },
+    es: { title: "CHADD (Apoyo TDAH)", desc: "Apoyo y recursos para niños y adultos con TDAH y sus familias." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.autismspeaks.org/tool-kit/school-resources",
+  i18n: {
+    en: { title: "Autism Speaks School Resources", desc: "Resources helping families navigate school services for autistic children." },
+    fr: { title: "Ressources scolaires Autism Speaks", desc: "Ressources aidant les familles à naviguer les services scolaires pour enfants autistes." },
+    es: { title: "Recursos Escolares Autism Speaks", desc: "Recursos que ayudan a familias a navegar servicios escolares para niños autistas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.autismsociety.org",
+  i18n: {
+    en: { title: "Autism Society", desc: "Support, education, and advocacy resources for autistic individuals and families." },
+    fr: { title: "Autism Society", desc: "Ressources de soutien, d'éducation et de plaidoyer pour personnes autistes et familles." },
+    es: { title: "Autism Society", desc: "Recursos de apoyo, educación y defensa para personas autistas y familias." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.asha.org",
+  i18n: {
+    en: { title: "American Speech-Language-Hearing Association", desc: "Resources on speech, language, and hearing services for children." },
+    fr: { title: "American Speech-Language-Hearing Association", desc: "Ressources sur les services d'orthophonie et d'audiologie pour enfants." },
+    es: { title: "American Speech-Language-Hearing Association", desc: "Recursos sobre servicios de habla, lenguaje y audición para niños." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.aota.org",
+  i18n: {
+    en: { title: "American Occupational Therapy Association", desc: "Resources on occupational therapy services supporting student success." },
+    fr: { title: "American Occupational Therapy Association", desc: "Ressources sur les services d'ergothérapie soutenant la réussite des élèves." },
+    es: { title: "American Occupational Therapy Association", desc: "Recursos sobre servicios de terapia ocupacional que apoyan el éxito estudiantil." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.apta.org",
+  i18n: {
+    en: { title: "American Physical Therapy Association", desc: "Resources on physical therapy services supporting students with disabilities." },
+    fr: { title: "American Physical Therapy Association", desc: "Ressources sur les services de physiothérapie soutenant les élèves handicapés." },
+    es: { title: "American Physical Therapy Association", desc: "Recursos sobre servicios de fisioterapia que apoyan a estudiantes con discapacidades." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.council-for-learning-disabilities.org",
+  i18n: {
+    en: { title: "Council for Learning Disabilities", desc: "Professional resources and research on effective learning disability instruction." },
+    fr: { title: "Council for Learning Disabilities", desc: "Ressources professionnelles et recherche sur l'enseignement efficace des troubles d'apprentissage." },
+    es: { title: "Council for Learning Disabilities", desc: "Recursos profesionales e investigación sobre enseñanza efectiva de discapacidades de aprendizaje." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.dyslexiaida.org",
+  i18n: {
+    en: { title: "International Dyslexia Association", desc: "Resources and support for individuals with dyslexia and their families." },
+    fr: { title: "International Dyslexia Association", desc: "Ressources et soutien pour personnes atteintes de dyslexie et leurs familles." },
+    es: { title: "International Dyslexia Association", desc: "Recursos y apoyo para personas con dislexia y sus familias." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.readingrockets.org/topics/dyslexia",
+  i18n: {
+    en: { title: "Reading Rockets Dyslexia Resources", desc: "Free educational resources helping parents support children with dyslexia." },
+    fr: { title: "Ressources dyslexie Reading Rockets", desc: "Ressources éducatives gratuites aidant les parents à soutenir les enfants dyslexiques." },
+    es: { title: "Recursos de Dislexia Reading Rockets", desc: "Recursos educativos gratuitos que ayudan a padres a apoyar a niños con dislexia." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.understood.org/en/articles/dyscalculia-what-you-need-to-know",
+  i18n: {
+    en: { title: "Understood Dyscalculia Guide", desc: "Resources helping parents understand and support children with dyscalculia." },
+    fr: { title: "Guide dyscalculie Understood", desc: "Ressources aidant les parents à comprendre et soutenir les enfants dyscalculiques." },
+    es: { title: "Guía de Discalculia Understood", desc: "Recursos que ayudan a padres a entender y apoyar a niños con discalculia." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.giftedhomeschoolers.org",
+  i18n: {
+    en: { title: "Gifted Homeschoolers Forum", desc: "Resources and community for families homeschooling gifted children." },
+    fr: { title: "Gifted Homeschoolers Forum", desc: "Ressources et communauté pour familles pratiquant l'école à domicile pour enfants doués." },
+    es: { title: "Gifted Homeschoolers Forum", desc: "Recursos y comunidad para familias que educan en casa a niños superdotados." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.sengifted.org",
+  i18n: {
+    en: { title: "Supporting Emotional Needs of the Gifted", desc: "Resources addressing the social and emotional needs of gifted children." },
+    fr: { title: "Supporting Emotional Needs of the Gifted", desc: "Ressources traitant les besoins socio-émotionnels des enfants doués." },
+    es: { title: "Supporting Emotional Needs of the Gifted", desc: "Recursos que abordan las necesidades socioemocionales de niños superdotados." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.hoagiesgifted.org",
+  i18n: {
+    en: { title: "Hoagies' Gifted Education Page", desc: "Comprehensive resource directory for parents of gifted children." },
+    fr: { title: "Hoagies' Gifted Education Page", desc: "Répertoire complet de ressources pour parents d'enfants doués." },
+    es: { title: "Hoagies' Gifted Education Page", desc: "Directorio completo de recursos para padres de niños superdotados." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nationaldeafcenter.org",
+  i18n: {
+    en: { title: "National Deaf Center on Postsecondary Outcomes", desc: "Resources supporting deaf and hard of hearing students in higher education." },
+    fr: { title: "National Deaf Center on Postsecondary Outcomes", desc: "Ressources soutenant les élèves sourds et malentendants dans l'enseignement supérieur." },
+    es: { title: "National Deaf Center on Postsecondary Outcomes", desc: "Recursos que apoyan a estudiantes sordos y con problemas de audición en educación superior." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.gallaudet.edu",
+  i18n: {
+    en: { title: "Gallaudet University", desc: "Federally chartered university specifically serving deaf and hard of hearing students." },
+    fr: { title: "Gallaudet University", desc: "Université à charte fédérale desservant spécifiquement les étudiants sourds et malentendants." },
+    es: { title: "Gallaudet University", desc: "Universidad con carta federal que sirve específicamente a estudiantes sordos y con problemas de audición." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.rit.edu/ntid",
+  i18n: {
+    en: { title: "National Technical Institute for the Deaf", desc: "College program specifically supporting deaf and hard of hearing students in technical fields." },
+    fr: { title: "National Technical Institute for the Deaf", desc: "Programme collégial soutenant spécifiquement les étudiants sourds dans les domaines techniques." },
+    es: { title: "National Technical Institute for the Deaf", desc: "Programa universitario que apoya específicamente a estudiantes sordos en campos técnicos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.perkins.org",
+  i18n: {
+    en: { title: "Perkins School for the Blind", desc: "Education and resources for students who are blind or visually impaired." },
+    fr: { title: "Perkins School for the Blind", desc: "Éducation et ressources pour élèves aveugles ou malvoyants." },
+    es: { title: "Perkins School for the Blind", desc: "Educación y recursos para estudiantes ciegos o con discapacidad visual." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.aph.org",
+  i18n: {
+    en: { title: "American Printing House for the Blind", desc: "Educational materials and resources for blind and visually impaired students." },
+    fr: { title: "American Printing House for the Blind", desc: "Matériel éducatif et ressources pour élèves aveugles et malvoyants." },
+    es: { title: "American Printing House for the Blind", desc: "Materiales educativos y recursos para estudiantes ciegos y con discapacidad visual." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.brailleinstitute.org",
+  i18n: {
+    en: { title: "Braille Institute", desc: "Free education and rehabilitation programs for people who are blind or visually impaired." },
+    fr: { title: "Braille Institute", desc: "Programmes gratuits d'éducation et de réadaptation pour personnes aveugles ou malvoyantes." },
+    es: { title: "Braille Institute", desc: "Programas gratuitos de educación y rehabilitación para personas ciegas o con discapacidad visual." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.wonderbaby.org",
+  i18n: {
+    en: { title: "WonderBaby", desc: "Resources for parents of babies and young children with visual impairments." },
+    fr: { title: "WonderBaby", desc: "Ressources pour parents de bébés et jeunes enfants ayant des déficiences visuelles." },
+    es: { title: "WonderBaby", desc: "Recursos para padres de bebés y niños pequeños con discapacidades visuales." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.familyconnect.org",
+  i18n: {
+    en: { title: "FamilyConnect", desc: "Support network for families of children who are blind or visually impaired." },
+    fr: { title: "FamilyConnect", desc: "Réseau de soutien pour familles d'enfants aveugles ou malvoyants." },
+    es: { title: "FamilyConnect", desc: "Red de apoyo para familias de niños ciegos o con discapacidad visual." },
+  },
+},
+
+// INCOME (20)
+{
+  category: "Income",
+  link: "https://www.va.gov/careers-employment/",
+  i18n: {
+    en: { title: "VA Careers and Employment Overview", desc: "Federal overview of career and employment resources for veterans." },
+    fr: { title: "Aperçu carrières et emploi VA", desc: "Aperçu fédéral des ressources de carrière et d'emploi pour vétérans." },
+    es: { title: "Resumen de Carreras y Empleo VA", desc: "Resumen federal de recursos de carrera y empleo para veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/careers-employment/vocational-rehabilitation/",
+  i18n: {
+    en: { title: "VA Vocational Rehabilitation Program", desc: "Federal program helping disabled veterans prepare for, find, and keep suitable jobs." },
+    fr: { title: "Programme réadaptation professionnelle VA", desc: "Programme fédéral aidant les vétérans handicapés à trouver et conserver un emploi." },
+    es: { title: "Programa de Rehabilitación Vocacional VA", desc: "Programa federal que ayuda a veteranos discapacitados a encontrar y mantener empleo adecuado." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/careers-employment/veteran-entrepreneur-portal/",
+  i18n: {
+    en: { title: "VA Veteran Entrepreneur Portal", desc: "Federal resources supporting veteran-owned small business development." },
+    fr: { title: "Portail entrepreneur vétéran VA", desc: "Ressources fédérales soutenant le développement de petites entreprises appartenant à des vétérans." },
+    es: { title: "Portal de Emprendedores Veteranos VA", desc: "Recursos federales que apoyan el desarrollo de pequeñas empresas propiedad de veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sba.gov/business-guide/grow-your-business/veteran-owned-businesses",
+  i18n: {
+    en: { title: "SBA Veteran-Owned Business Resources", desc: "Federal small business resources specifically for veteran entrepreneurs." },
+    fr: { title: "Ressources entreprises vétérans SBA", desc: "Ressources fédérales de petites entreprises spécifiquement pour entrepreneurs vétérans." },
+    es: { title: "Recursos de Negocios de Veteranos SBA", desc: "Recursos federales de pequeñas empresas específicamente para emprendedores veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sba.gov/local-assistance/find/?type=Veterans%20Business%20Outreach%20Center",
+  i18n: {
+    en: { title: "SBA Veterans Business Outreach Centers", desc: "Federal directory of centers offering free business counseling to veterans." },
+    fr: { title: "Centres sensibilisation entreprises vétérans SBA", desc: "Répertoire fédéral de centres offrant du conseil d'affaires gratuit aux vétérans." },
+    es: { title: "Centros de Alcance de Negocios para Veteranos SBA", desc: "Directorio federal de centros que ofrecen consejería de negocios gratuita a veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.streetshares.com",
+  i18n: {
+    en: { title: "StreetShares", desc: "Small business lending platform focused on serving veteran entrepreneurs." },
+    fr: { title: "StreetShares", desc: "Plateforme de prêt aux petites entreprises axée sur les entrepreneurs vétérans." },
+    es: { title: "StreetShares", desc: "Plataforma de préstamos para pequeñas empresas enfocada en emprendedores veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.veteransbusinessfund.org",
+  i18n: {
+    en: { title: "Veterans Business Fund", desc: "Micro-lending program specifically supporting veteran-owned small businesses." },
+    fr: { title: "Veterans Business Fund", desc: "Programme de micro-prêt soutenant spécifiquement les petites entreprises de vétérans." },
+    es: { title: "Veterans Business Fund", desc: "Programa de micropréstamos que apoya específicamente pequeñas empresas de veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.vetbiz.va.gov",
+  i18n: {
+    en: { title: "VA Vetbiz Verification Program", desc: "Federal verification program for veteran-owned businesses seeking government contracts." },
+    fr: { title: "Programme vérification Vetbiz VA", desc: "Programme fédéral de vérification pour entreprises de vétérans cherchant des contrats gouvernementaux." },
+    es: { title: "Programa de Verificación Vetbiz VA", desc: "Programa federal de verificación para empresas de veteranos que buscan contratos gubernamentales." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sba.gov/funding-programs/loans/covid-19-relief-options",
+  i18n: {
+    en: { title: "SBA Business Relief Loan Options", desc: "Federal small business loan and relief program information." },
+    fr: { title: "Options prêts secours entreprises SBA", desc: "Informations sur les programmes fédéraux de prêts et secours aux petites entreprises." },
+    es: { title: "Opciones de Préstamos de Alivio Empresarial SBA", desc: "Información de programas federales de préstamos y alivio para pequeñas empresas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sba.gov/funding-programs/loans/microloans",
+  i18n: {
+    en: { title: "SBA Microloan Program", desc: "Federal small-dollar loan program supporting new and growing small businesses." },
+    fr: { title: "Programme microprêts SBA", desc: "Programme fédéral de prêts de petits montants soutenant les nouvelles petites entreprises." },
+    es: { title: "Programa de Microcréditos SBA", desc: "Programa federal de préstamos de pequeñas cantidades que apoya negocios nuevos y en crecimiento." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sba.gov/local-assistance/find/?type=Women%27s%20Business%20Center",
+  i18n: {
+    en: { title: "SBA Women's Business Centers", desc: "Federal directory of centers offering free business counseling to women entrepreneurs." },
+    fr: { title: "Centres d'affaires femmes SBA", desc: "Répertoire fédéral de centres offrant du conseil d'affaires gratuit aux femmes entrepreneures." },
+    es: { title: "Centros de Negocios para Mujeres SBA", desc: "Directorio federal de centros que ofrecen consejería de negocios gratuita a mujeres emprendedoras." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sba.gov/local-assistance/find/?type=SCORE%20Chapter",
+  i18n: {
+    en: { title: "SCORE Free Business Mentoring", desc: "Federal-supported free mentoring program for small business owners." },
+    fr: { title: "Mentorat gratuit entreprises SCORE", desc: "Programme de mentorat gratuit soutenu par le gouvernement fédéral pour propriétaires de petites entreprises." },
+    es: { title: "Mentoría Empresarial Gratuita SCORE", desc: "Programa de mentoría gratuita apoyado federalmente para propietarios de pequeñas empresas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.minorityBusiness.gov",
+  i18n: {
+    en: { title: "Minority Business Development Agency", desc: "Federal agency supporting minority-owned business growth and access to capital." },
+    fr: { title: "Minority Business Development Agency", desc: "Agence fédérale soutenant la croissance des entreprises minoritaires et l'accès au capital." },
+    es: { title: "Agencia de Desarrollo de Negocios Minoritarios", desc: "Agencia federal que apoya el crecimiento de negocios minoritarios y acceso a capital." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.nmsdc.org",
+  i18n: {
+    en: { title: "National Minority Supplier Development Council", desc: "Resources connecting minority-owned businesses with corporate opportunities." },
+    fr: { title: "National Minority Supplier Development Council", desc: "Ressources reliant les entreprises minoritaires aux opportunités d'entreprise." },
+    es: { title: "National Minority Supplier Development Council", desc: "Recursos que conectan a negocios minoritarios con oportunidades corporativas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.uschamber.com/co/start/strategy/minority-business-grants",
+  i18n: {
+    en: { title: "US Chamber Minority Business Grants Guide", desc: "Independent guide to finding grants specifically for minority-owned businesses." },
+    fr: { title: "Guide subventions entreprises minoritaires US Chamber", desc: "Guide indépendant pour trouver des subventions spécifiquement pour entreprises minoritaires." },
+    es: { title: "Guía de Subvenciones para Negocios Minoritarios US Chamber", desc: "Guía independiente para encontrar subvenciones específicamente para negocios minoritarios." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ifundwomen.com",
+  i18n: {
+    en: { title: "IFundWomen", desc: "Crowdfunding and grant platform specifically supporting women-owned businesses." },
+    fr: { title: "IFundWomen", desc: "Plateforme de sociofinancement et subventions soutenant spécifiquement les entreprises de femmes." },
+    es: { title: "IFundWomen", desc: "Plataforma de financiamiento colectivo y subvenciones que apoya específicamente negocios de mujeres." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.hellosigma.co",
+  i18n: {
+    en: { title: "Hello Alice Small Business Grants", desc: "Grant matching platform connecting small business owners to funding opportunities." },
+    fr: { title: "Subventions petites entreprises Hello Alice", desc: "Plateforme de correspondance de subventions reliant propriétaires de petites entreprises." },
+    es: { title: "Subvenciones de Pequeñas Empresas Hello Alice", desc: "Plataforma de coincidencia de subvenciones que conecta a propietarios de pequeñas empresas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.grants.gov",
+  i18n: {
+    en: { title: "Grants.gov", desc: "Official federal portal to search and apply for government grants." },
+    fr: { title: "Grants.gov", desc: "Portail fédéral officiel pour rechercher et demander des subventions gouvernementales." },
+    es: { title: "Grants.gov", desc: "Portal federal oficial para buscar y solicitar subvenciones gubernamentales." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.usa.gov/small-business-grants",
+  i18n: {
+    en: { title: "USA.gov Small Business Grants Guide", desc: "Government guide to finding small business grants and funding opportunities." },
+    fr: { title: "Guide subventions petites entreprises USA.gov", desc: "Guide gouvernemental pour trouver des subventions et financements pour petites entreprises." },
+    es: { title: "Guía de Subvenciones para Pequeñas Empresas USA.gov", desc: "Guía del gobierno para encontrar subvenciones y financiamiento para pequeñas empresas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.sba.gov/local-assistance",
+  i18n: {
+    en: { title: "SBA Local Assistance Directory", desc: "Federal directory to find local SBA resource partners near you." },
+    fr: { title: "Répertoire assistance locale SBA", desc: "Répertoire fédéral pour trouver des partenaires de ressources SBA locaux." },
+    es: { title: "Directorio de Asistencia Local SBA", desc: "Directorio federal para encontrar socios de recursos SBA locales." },
+  },
+},
 
 ];
 

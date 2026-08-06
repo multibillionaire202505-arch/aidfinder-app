@@ -9627,6 +9627,960 @@ const ALL = [
       },
     },
   },
+    // ===== PROGRAMS 1001-1100 =====
+
+// FOOD (16)
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/snap/recipient/eligibility",
+  i18n: {
+    en: { title: "SNAP Recipient Eligibility Details", desc: "Detailed federal breakdown of SNAP income and asset limits by household size." },
+    fr: { title: "Détails admissibilité bénéficiaire SNAP", desc: "Répartition fédérale détaillée des limites de revenu SNAP selon la taille du ménage." },
+    es: { title: "Detalles de Elegibilidad de Beneficiario SNAP", desc: "Desglose federal detallado de límites de ingresos SNAP según tamaño del hogar." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/wic/wic-food-packages",
+  i18n: {
+    en: { title: "WIC Food Package Guide", desc: "Official guide to foods covered under different WIC package categories." },
+    fr: { title: "Guide colis alimentaire WIC", desc: "Guide officiel des aliments couverts par les différentes catégories WIC." },
+    es: { title: "Guía de Paquetes de Alimentos WIC", desc: "Guía oficial de alimentos cubiertos por las diferentes categorías de WIC." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.communityplatesus.org",
+  i18n: {
+    en: { title: "Community Plates", desc: "Volunteer-driven food rescue delivering surplus meals to people in need." },
+    fr: { title: "Community Plates", desc: "Récupération alimentaire bénévole livrant des surplus aux personnes dans le besoin." },
+    es: { title: "Community Plates", desc: "Rescate de alimentos voluntario que entrega excedentes a personas necesitadas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.extrafood.org",
+  i18n: {
+    en: { title: "Extra Food", desc: "Connects surplus prepared food from events and cafeterias to shelters." },
+    fr: { title: "Extra Food", desc: "Relie les surplus alimentaires préparés d'événements aux refuges." },
+    es: { title: "Extra Food", desc: "Conecta excedentes de comida preparada de eventos con refugios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.food4kids.org",
+  i18n: {
+    en: { title: "Food 4 Kids Backpack Program", desc: "Sends home weekend food backpacks for food-insecure schoolchildren." },
+    fr: { title: "Programme sac à dos Food 4 Kids", desc: "Envoie des sacs à dos alimentaires le weekend pour élèves en insécurité alimentaire." },
+    es: { title: "Programa de Mochilas Food 4 Kids", desc: "Envía mochilas de comida los fines de semana para niños en inseguridad alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.blessingsinabackpack.org",
+  i18n: {
+    en: { title: "Blessings in a Backpack", desc: "Weekend backpack food program for elementary school children in need." },
+    fr: { title: "Blessings in a Backpack", desc: "Programme de sac à dos alimentaire le weekend pour élèves du primaire." },
+    es: { title: "Blessings in a Backpack", desc: "Programa de mochilas de fin de semana para niños de primaria necesitados." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodfinder.us",
+  i18n: {
+    en: { title: "FoodFinder", desc: "App and website connecting families to nearby free food resources." },
+    fr: { title: "FoodFinder", desc: "Application et site reliant les familles aux ressources alimentaires gratuites locales." },
+    es: { title: "FoodFinder", desc: "Aplicación y sitio web que conecta familias con recursos de comida gratuita cercanos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.mealconnect.org",
+  i18n: {
+    en: { title: "MealConnect", desc: "Feeding America platform matching food donors with local hunger relief agencies." },
+    fr: { title: "MealConnect", desc: "Plateforme Feeding America reliant donateurs alimentaires et agences locales." },
+    es: { title: "MealConnect", desc: "Plataforma Feeding America que conecta donantes de alimentos con agencias locales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodfinder.nyc",
+  states: ["NY"],
+  i18n: {
+    en: { title: "NYC Food Finder", desc: "Map-based tool to find free food resources across New York City." },
+    fr: { title: "NYC Food Finder", desc: "Outil cartographique pour trouver des ressources alimentaires gratuites à New York." },
+    es: { title: "NYC Food Finder", desc: "Herramienta de mapa para encontrar recursos de comida gratuita en Nueva York." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.lafoodbank.org/find-food/",
+  states: ["CA"],
+  i18n: {
+    en: { title: "LA Regional Food Bank Find Food Tool", desc: "Search tool to find food pantries across Los Angeles County." },
+    fr: { title: "Outil recherche alimentaire LA Food Bank", desc: "Outil de recherche pour trouver des garde-manger dans le comté de Los Angeles." },
+    es: { title: "Herramienta de Búsqueda de Alimentos LA Food Bank", desc: "Herramienta de búsqueda de despensas en el condado de Los Ángeles." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodbank.org",
+  states: ["NY"],
+  i18n: {
+    en: { title: "Food Bank for New York City Programs", desc: "Range of hunger relief programs and pantry locations across NYC." },
+    fr: { title: "Programmes Food Bank for New York City", desc: "Gamme de programmes de lutte contre la faim à New York." },
+    es: { title: "Programas Food Bank for New York City", desc: "Gama de programas contra el hambre en la ciudad de Nueva York." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.centralpafoodbank.org",
+  states: ["PA"],
+  i18n: {
+    en: { title: "Central Pennsylvania Food Bank", desc: "Regional food bank network serving central Pennsylvania counties." },
+    fr: { title: "Central Pennsylvania Food Bank", desc: "Réseau régional de banque alimentaire desservant le centre de la Pennsylvanie." },
+    es: { title: "Central Pennsylvania Food Bank", desc: "Red regional de banco de alimentos que sirve al centro de Pennsylvania." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodbankofnwpa.org",
+  states: ["PA"],
+  i18n: {
+    en: { title: "Food Bank of Northwestern Pennsylvania", desc: "Regional food distribution network serving northwest Pennsylvania." },
+    fr: { title: "Food Bank of Northwestern Pennsylvania", desc: "Réseau régional de distribution alimentaire desservant le nord-ouest de la Pennsylvanie." },
+    es: { title: "Food Bank of Northwestern Pennsylvania", desc: "Red regional de distribución de alimentos que sirve al noroeste de Pennsylvania." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodbankdetroit.org",
+  states: ["MI"],
+  i18n: {
+    en: { title: "Gleaners Community Food Bank", desc: "Regional food bank network serving the Detroit metropolitan area." },
+    fr: { title: "Gleaners Community Food Bank", desc: "Réseau régional de banque alimentaire desservant la région de Detroit." },
+    es: { title: "Gleaners Community Food Bank", desc: "Red regional de banco de alimentos que sirve al área metropolitana de Detroit." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.midwestfoodbank.org",
+  states: ["IL"],
+  i18n: {
+    en: { title: "Midwest Food Bank", desc: "Regional food distribution network serving Illinois and surrounding states." },
+    fr: { title: "Midwest Food Bank", desc: "Réseau régional de distribution alimentaire desservant l'Illinois et les environs." },
+    es: { title: "Midwest Food Bank", desc: "Red regional de distribución de alimentos que sirve a Illinois y estados vecinos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.communityfoodbank.com",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "Community Food Bank of Southern Arizona", desc: "Regional food bank network serving southern Arizona communities." },
+    fr: { title: "Community Food Bank of Southern Arizona", desc: "Réseau régional de banque alimentaire desservant le sud de l'Arizona." },
+    es: { title: "Community Food Bank of Southern Arizona", desc: "Red regional de banco de alimentos que sirve al sur de Arizona." },
+  },
+},
+
+// HEALTH (16)
+{
+  category: "Health",
+  link: "https://www.freeclinics.com/results",
+  i18n: {
+    en: { title: "Free Clinic State Search Results", desc: "Search results directory of free clinics filterable by state." },
+    fr: { title: "Résultats recherche clinique gratuite par État", desc: "Répertoire de résultats de cliniques gratuites filtrable par État." },
+    es: { title: "Resultados de Búsqueda de Clínicas Gratuitas por Estado", desc: "Directorio de resultados de clínicas gratuitas filtrable por estado." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hrsa.gov/get-health-care/affordable/sliding-fee-scales",
+  i18n: {
+    en: { title: "HRSA Sliding Fee Scale Info", desc: "Federal information on sliding-scale fee clinics based on income." },
+    fr: { title: "Info échelle tarifs ajustés HRSA", desc: "Informations fédérales sur les cliniques à tarifs ajustés selon revenu." },
+    es: { title: "Información de Escala de Tarifas Deslizante HRSA", desc: "Información federal sobre clínicas de tarifa ajustada según ingresos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nafcclinics.org",
+  i18n: {
+    en: { title: "National Association of Free & Charitable Clinics", desc: "Directory of free and charitable health clinics nationwide." },
+    fr: { title: "Association nationale cliniques gratuites", desc: "Répertoire de cliniques de santé gratuites et caritatives à l'échelle nationale." },
+    es: { title: "Asociación Nacional de Clínicas Gratuitas y Caritativas", desc: "Directorio de clínicas de salud gratuitas y caritativas a nivel nacional." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.211.org/services/dental",
+  i18n: {
+    en: { title: "211 Dental Care Directory", desc: "Local low-cost and free dental care referrals through the 211 network." },
+    fr: { title: "Répertoire soins dentaires 211", desc: "Orientation vers soins dentaires gratuits ou abordables via le réseau 211." },
+    es: { title: "Directorio de Atención Dental 211", desc: "Referencias de atención dental gratuita o de bajo costo a través de la red 211." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ada.org/resources/community-initiatives/find-a-dentist",
+  i18n: {
+    en: { title: "ADA Find-a-Dentist Directory", desc: "Directory to find dentists including community health programs." },
+    fr: { title: "Répertoire trouver un dentiste ADA", desc: "Répertoire pour trouver des dentistes, y compris programmes communautaires." },
+    es: { title: "Directorio Encuentre un Dentista ADA", desc: "Directorio para encontrar dentistas, incluidos programas comunitarios." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.dentalifeline.org",
+  i18n: {
+    en: { title: "Dental Lifeline Network", desc: "Free dental care coordination for people with disabilities, elderly, or medically fragile." },
+    fr: { title: "Dental Lifeline Network", desc: "Coordination de soins dentaires gratuits pour personnes handicapées et fragiles." },
+    es: { title: "Dental Lifeline Network", desc: "Coordinación de atención dental gratuita para personas discapacitadas y frágiles." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hrsa.gov/rural-health",
+  i18n: {
+    en: { title: "HRSA Rural Health Resources", desc: "Federal health resources and programs specifically for rural communities." },
+    fr: { title: "Ressources santé rurale HRSA", desc: "Ressources et programmes de santé fédéraux pour les communautés rurales." },
+    es: { title: "Recursos de Salud Rural HRSA", desc: "Recursos y programas de salud federal específicamente para comunidades rurales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ruralhealthinfo.org",
+  i18n: {
+    en: { title: "Rural Health Information Hub", desc: "Comprehensive resource hub for rural health programs and funding." },
+    fr: { title: "Rural Health Information Hub", desc: "Centre de ressources complet pour les programmes de santé ruraux." },
+    es: { title: "Rural Health Information Hub", desc: "Centro de recursos integral para programas de salud rural." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.indianhealthservice.gov",
+  i18n: {
+    en: { title: "Indian Health Service", desc: "Federal health care system providing services to American Indians and Alaska Natives." },
+    fr: { title: "Indian Health Service", desc: "Système de santé fédéral offrant des services aux Amérindiens et autochtones d'Alaska." },
+    es: { title: "Indian Health Service", desc: "Sistema de salud federal que brinda servicios a nativos americanos y de Alaska." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.ihs.gov/findhealthcare/",
+  i18n: {
+    en: { title: "IHS Find Health Care Facility", desc: "Directory to locate Indian Health Service facilities by location." },
+    fr: { title: "Trouver installation santé IHS", desc: "Répertoire pour localiser les installations de l'Indian Health Service." },
+    es: { title: "Encuentre una Instalación de Salud IHS", desc: "Directorio para localizar instalaciones del Servicio de Salud Indígena." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.migrantclinician.org",
+  i18n: {
+    en: { title: "Migrant Clinicians Network", desc: "Health resources and clinic directory for migrant and seasonal farmworkers." },
+    fr: { title: "Migrant Clinicians Network", desc: "Ressources de santé pour travailleurs agricoles migrants et saisonniers." },
+    es: { title: "Migrant Clinicians Network", desc: "Recursos de salud para trabajadores agrícolas migrantes y estacionales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hrsa.gov/telehealth",
+  i18n: {
+    en: { title: "HRSA Telehealth Resources", desc: "Federal resources on accessing telehealth services, especially in rural areas." },
+    fr: { title: "Ressources télésanté HRSA", desc: "Ressources fédérales sur l'accès aux services de télésanté, surtout en zones rurales." },
+    es: { title: "Recursos de Telesalud HRSA", desc: "Recursos federales sobre acceso a servicios de telesalud, especialmente en zonas rurales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.teladoc.com",
+  i18n: {
+    en: { title: "Teladoc", desc: "Telehealth platform offering virtual doctor visits, often covered by insurance." },
+    fr: { title: "Teladoc", desc: "Plateforme de télésanté offrant des consultations médicales virtuelles." },
+    es: { title: "Teladoc", desc: "Plataforma de telesalud que ofrece consultas médicas virtuales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.mdlive.com",
+  i18n: {
+    en: { title: "MDLIVE", desc: "Virtual health care platform for medical, therapy, and psychiatry visits." },
+    fr: { title: "MDLIVE", desc: "Plateforme de soins de santé virtuels pour consultations médicales et psychiatriques." },
+    es: { title: "MDLIVE", desc: "Plataforma de atención médica virtual para consultas médicas y psiquiátricas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.amwell.com",
+  i18n: {
+    en: { title: "Amwell", desc: "Telehealth service connecting patients with doctors for virtual visits." },
+    fr: { title: "Amwell", desc: "Service de télésanté reliant patients et médecins pour consultations virtuelles." },
+    es: { title: "Amwell", desc: "Servicio de telesalud que conecta pacientes con médicos para consultas virtuales." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.doctorondemand.com",
+  i18n: {
+    en: { title: "Doctor On Demand", desc: "Virtual health visits for medical, mental health, and preventive care." },
+    fr: { title: "Doctor On Demand", desc: "Consultations de santé virtuelles pour soins médicaux, mentaux et préventifs." },
+    es: { title: "Doctor On Demand", desc: "Consultas de salud virtuales para atención médica, mental y preventiva." },
+  },
+},
+
+// HOUSING (16)
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/texas",
+  states: ["TX"],
+  i18n: {
+    en: { title: "HUD Texas Resources", desc: "Federal housing resources specific to Texas." },
+    fr: { title: "Ressources HUD Texas", desc: "Ressources fédérales de logement pour le Texas." },
+    es: { title: "Recursos HUD de Texas", desc: "Recursos federales de vivienda para Texas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/florida",
+  states: ["FL"],
+  i18n: {
+    en: { title: "HUD Florida Resources", desc: "Federal housing resources specific to Florida." },
+    fr: { title: "Ressources HUD Floride", desc: "Ressources fédérales de logement pour la Floride." },
+    es: { title: "Recursos HUD de Florida", desc: "Recursos federales de vivienda para Florida." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/georgia",
+  states: ["GA"],
+  i18n: {
+    en: { title: "HUD Georgia Resources", desc: "Federal housing resources specific to Georgia." },
+    fr: { title: "Ressources HUD Géorgie", desc: "Ressources fédérales de logement pour la Géorgie." },
+    es: { title: "Recursos HUD de Georgia", desc: "Recursos federales de vivienda para Georgia." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/arizona",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "HUD Arizona Resources", desc: "Federal housing resources specific to Arizona." },
+    fr: { title: "Ressources HUD Arizona", desc: "Ressources fédérales de logement pour l'Arizona." },
+    es: { title: "Recursos HUD de Arizona", desc: "Recursos federales de vivienda para Arizona." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/nevada",
+  states: ["NV"],
+  i18n: {
+    en: { title: "HUD Nevada Resources", desc: "Federal housing resources specific to Nevada." },
+    fr: { title: "Ressources HUD Nevada", desc: "Ressources fédérales de logement pour le Nevada." },
+    es: { title: "Recursos HUD de Nevada", desc: "Recursos federales de vivienda para Nevada." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/new_jersey",
+  states: ["NJ"],
+  i18n: {
+    en: { title: "HUD New Jersey Resources", desc: "Federal housing resources specific to New Jersey." },
+    fr: { title: "Ressources HUD New Jersey", desc: "Ressources fédérales de logement pour le New Jersey." },
+    es: { title: "Recursos HUD de Nueva Jersey", desc: "Recursos federales de vivienda para Nueva Jersey." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/utah",
+  states: ["UT"],
+  i18n: {
+    en: { title: "HUD Utah Resources", desc: "Federal housing resources specific to Utah." },
+    fr: { title: "Ressources HUD Utah", desc: "Ressources fédérales de logement pour l'Utah." },
+    es: { title: "Recursos HUD de Utah", desc: "Recursos federales de vivienda para Utah." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/idaho",
+  states: ["ID"],
+  i18n: {
+    en: { title: "HUD Idaho Resources", desc: "Federal housing resources specific to Idaho." },
+    fr: { title: "Ressources HUD Idaho", desc: "Ressources fédérales de logement pour l'Idaho." },
+    es: { title: "Recursos HUD de Idaho", desc: "Recursos federales de vivienda para Idaho." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/new_mexico",
+  states: ["NM"],
+  i18n: {
+    en: { title: "HUD New Mexico Resources", desc: "Federal housing resources specific to New Mexico." },
+    fr: { title: "Ressources HUD Nouveau-Mexique", desc: "Ressources fédérales de logement pour le Nouveau-Mexique." },
+    es: { title: "Recursos HUD de Nuevo México", desc: "Recursos federales de vivienda para Nuevo México." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/kansas",
+  states: ["KS"],
+  i18n: {
+    en: { title: "HUD Kansas Resources", desc: "Federal housing resources specific to Kansas." },
+    fr: { title: "Ressources HUD Kansas", desc: "Ressources fédérales de logement pour le Kansas." },
+    es: { title: "Recursos HUD de Kansas", desc: "Recursos federales de vivienda para Kansas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/arkansas",
+  states: ["AR"],
+  i18n: {
+    en: { title: "HUD Arkansas Resources", desc: "Federal housing resources specific to Arkansas." },
+    fr: { title: "Ressources HUD Arkansas", desc: "Ressources fédérales de logement pour l'Arkansas." },
+    es: { title: "Recursos HUD de Arkansas", desc: "Recursos federales de vivienda para Arkansas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/mississippi",
+  states: ["MS"],
+  i18n: {
+    en: { title: "HUD Mississippi Resources", desc: "Federal housing resources specific to Mississippi." },
+    fr: { title: "Ressources HUD Mississippi", desc: "Ressources fédérales de logement pour le Mississippi." },
+    es: { title: "Recursos HUD de Mississippi", desc: "Recursos federales de vivienda para Mississippi." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/nebraska",
+  states: ["NE"],
+  i18n: {
+    en: { title: "HUD Nebraska Resources", desc: "Federal housing resources specific to Nebraska." },
+    fr: { title: "Ressources HUD Nebraska", desc: "Ressources fédérales de logement pour le Nebraska." },
+    es: { title: "Recursos HUD de Nebraska", desc: "Recursos federales de vivienda para Nebraska." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/west_virginia",
+  states: ["WV"],
+  i18n: {
+    en: { title: "HUD West Virginia Resources", desc: "Federal housing resources specific to West Virginia." },
+    fr: { title: "Ressources HUD Virginie-Occidentale", desc: "Ressources fédérales de logement pour la Virginie-Occidentale." },
+    es: { title: "Recursos HUD de Virginia Occidental", desc: "Recursos federales de vivienda para Virginia Occidental." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/maine",
+  states: ["ME"],
+  i18n: {
+    en: { title: "HUD Maine Resources", desc: "Federal housing resources specific to Maine." },
+    fr: { title: "Ressources HUD Maine", desc: "Ressources fédérales de logement pour le Maine." },
+    es: { title: "Recursos HUD de Maine", desc: "Recursos federales de vivienda para Maine." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/states/new_hampshire",
+  states: ["NH"],
+  i18n: {
+    en: { title: "HUD New Hampshire Resources", desc: "Federal housing resources specific to New Hampshire." },
+    fr: { title: "Ressources HUD New Hampshire", desc: "Ressources fédérales de logement pour le New Hampshire." },
+    es: { title: "Recursos HUD de New Hampshire", desc: "Recursos federales de vivienda para New Hampshire." },
+  },
+},
+
+// UTILITIES (16)
+{
+  category: "Utilities",
+  link: "https://www.tea.texas.gov/liheap",
+  states: ["TX"],
+  i18n: {
+    en: { title: "Texas LIHEAP", desc: "State energy assistance program information for Texas." },
+    fr: { title: "LIHEAP Texas", desc: "Informations sur le programme d'aide énergétique du Texas." },
+    es: { title: "LIHEAP de Texas", desc: "Información del programa de asistencia energética de Texas." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.myflfamilies.com/liheap",
+  states: ["FL"],
+  i18n: {
+    en: { title: "Florida LIHEAP", desc: "State energy assistance program information for Florida." },
+    fr: { title: "LIHEAP Floride", desc: "Informations sur le programme d'aide énergétique de la Floride." },
+    es: { title: "LIHEAP de Florida", desc: "Información del programa de asistencia energética de Florida." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhs.georgia.gov/liheap",
+  states: ["GA"],
+  i18n: {
+    en: { title: "Georgia LIHEAP", desc: "State energy assistance program information for Georgia." },
+    fr: { title: "LIHEAP Géorgie", desc: "Informations sur le programme d'aide énergétique de la Géorgie." },
+    es: { title: "LIHEAP de Georgia", desc: "Información del programa de asistencia energética de Georgia." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.des.az.gov/liheap",
+  states: ["AZ"],
+  i18n: {
+    en: { title: "Arizona LIHEAP", desc: "State energy assistance program information for Arizona." },
+    fr: { title: "LIHEAP Arizona", desc: "Informations sur le programme d'aide énergétique de l'Arizona." },
+    es: { title: "LIHEAP de Arizona", desc: "Información del programa de asistencia energética de Arizona." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dwss.nv.gov/liheap",
+  states: ["NV"],
+  i18n: {
+    en: { title: "Nevada LIHEAP", desc: "State energy assistance program information for Nevada." },
+    fr: { title: "LIHEAP Nevada", desc: "Informations sur le programme d'aide énergétique du Nevada." },
+    es: { title: "LIHEAP de Nevada", desc: "Información del programa de asistencia energética de Nevada." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.nj.gov/dcf/liheap",
+  states: ["NJ"],
+  i18n: {
+    en: { title: "New Jersey LIHEAP", desc: "State energy assistance program information for New Jersey." },
+    fr: { title: "LIHEAP New Jersey", desc: "Informations sur le programme d'aide énergétique du New Jersey." },
+    es: { title: "LIHEAP de Nueva Jersey", desc: "Información del programa de asistencia energética de Nueva Jersey." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.jobs.utah.gov/liheap",
+  states: ["UT"],
+  i18n: {
+    en: { title: "Utah LIHEAP", desc: "State energy assistance program information for Utah." },
+    fr: { title: "LIHEAP Utah", desc: "Informations sur le programme d'aide énergétique de l'Utah." },
+    es: { title: "LIHEAP de Utah", desc: "Información del programa de asistencia energética de Utah." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.healthandwelfare.idaho.gov/liheap",
+  states: ["ID"],
+  i18n: {
+    en: { title: "Idaho LIHEAP", desc: "State energy assistance program information for Idaho." },
+    fr: { title: "LIHEAP Idaho", desc: "Informations sur le programme d'aide énergétique de l'Idaho." },
+    es: { title: "LIHEAP de Idaho", desc: "Información del programa de asistencia energética de Idaho." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.hsd.state.nm.us/liheap",
+  states: ["NM"],
+  i18n: {
+    en: { title: "New Mexico LIHEAP", desc: "State energy assistance program information for New Mexico." },
+    fr: { title: "LIHEAP Nouveau-Mexique", desc: "Informations sur le programme d'aide énergétique du Nouveau-Mexique." },
+    es: { title: "LIHEAP de Nuevo México", desc: "Información del programa de asistencia energética de Nuevo México." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dcf.ks.gov/liheap",
+  states: ["KS"],
+  i18n: {
+    en: { title: "Kansas LIHEAP", desc: "State energy assistance program information for Kansas." },
+    fr: { title: "LIHEAP Kansas", desc: "Informations sur le programme d'aide énergétique du Kansas." },
+    es: { title: "LIHEAP de Kansas", desc: "Información del programa de asistencia energética de Kansas." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhs.arkansas.gov/liheap",
+  states: ["AR"],
+  i18n: {
+    en: { title: "Arkansas LIHEAP", desc: "State energy assistance program information for Arkansas." },
+    fr: { title: "LIHEAP Arkansas", desc: "Informations sur le programme d'aide énergétique de l'Arkansas." },
+    es: { title: "LIHEAP de Arkansas", desc: "Información del programa de asistencia energética de Arkansas." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.mdhs.ms.gov/liheap",
+  states: ["MS"],
+  i18n: {
+    en: { title: "Mississippi LIHEAP", desc: "State energy assistance program information for Mississippi." },
+    fr: { title: "LIHEAP Mississippi", desc: "Informations sur le programme d'aide énergétique du Mississippi." },
+    es: { title: "LIHEAP de Mississippi", desc: "Información del programa de asistencia energética de Mississippi." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhhs.ne.gov/liheap",
+  states: ["NE"],
+  i18n: {
+    en: { title: "Nebraska LIHEAP", desc: "State energy assistance program information for Nebraska." },
+    fr: { title: "LIHEAP Nebraska", desc: "Informations sur le programme d'aide énergétique du Nebraska." },
+    es: { title: "LIHEAP de Nebraska", desc: "Información del programa de asistencia energética de Nebraska." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dhhr.wv.gov/liheap",
+  states: ["WV"],
+  i18n: {
+    en: { title: "West Virginia LIHEAP", desc: "State energy assistance program information for West Virginia." },
+    fr: { title: "LIHEAP Virginie-Occidentale", desc: "Informations sur le programme d'aide énergétique de la Virginie-Occidentale." },
+    es: { title: "LIHEAP de Virginia Occidental", desc: "Información del programa de asistencia energética de Virginia Occidental." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.maine.gov/liheap",
+  states: ["ME"],
+  i18n: {
+    en: { title: "Maine LIHEAP", desc: "State energy assistance program information for Maine." },
+    fr: { title: "LIHEAP Maine", desc: "Informations sur le programme d'aide énergétique du Maine." },
+    es: { title: "LIHEAP de Maine", desc: "Información del programa de asistencia energética de Maine." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.nh.gov/liheap",
+  states: ["NH"],
+  i18n: {
+    en: { title: "New Hampshire LIHEAP", desc: "State energy assistance program information for New Hampshire." },
+    fr: { title: "LIHEAP New Hampshire", desc: "Informations sur le programme d'aide énergétique du New Hampshire." },
+    es: { title: "LIHEAP de New Hampshire", desc: "Información del programa de asistencia energética de New Hampshire." },
+  },
+},
+
+// EDUCATION (18)
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/understand-aid/types/grants",
+  i18n: {
+    en: { title: "Federal Student Aid Grants Overview", desc: "Official overview of federal grant types available to students." },
+    fr: { title: "Aperçu subventions fédérales aide étudiante", desc: "Aperçu officiel des types de subventions fédérales pour étudiants." },
+    es: { title: "Resumen de Subvenciones Federales de Ayuda Estudiantil", desc: "Resumen oficial de tipos de subvenciones federales para estudiantes." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/understand-aid/types/loans",
+  i18n: {
+    en: { title: "Federal Student Loans Overview", desc: "Official overview of federal student loan types and terms." },
+    fr: { title: "Aperçu prêts étudiants fédéraux", desc: "Aperçu officiel des types de prêts étudiants fédéraux et conditions." },
+    es: { title: "Resumen de Préstamos Estudiantiles Federales", desc: "Resumen oficial de tipos de préstamos estudiantiles federales y términos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/manage-loans/repayment/plans",
+  i18n: {
+    en: { title: "Federal Student Loan Repayment Plans", desc: "Official guide to income-driven and standard student loan repayment options." },
+    fr: { title: "Plans remboursement prêts étudiants fédéraux", desc: "Guide officiel des options de remboursement de prêts étudiants." },
+    es: { title: "Planes de Reembolso de Préstamos Estudiantiles Federales", desc: "Guía oficial de opciones de reembolso de préstamos estudiantiles." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/manage-loans/forgiveness-cancellation",
+  i18n: {
+    en: { title: "Student Loan Forgiveness Programs", desc: "Official information on federal student loan forgiveness eligibility." },
+    fr: { title: "Programmes annulation prêts étudiants", desc: "Informations officielles sur l'admissibilité à l'annulation de prêts étudiants." },
+    es: { title: "Programas de Condonación de Préstamos Estudiantiles", desc: "Información oficial sobre elegibilidad de condonación de préstamos estudiantiles." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/pslf/",
+  i18n: {
+    en: { title: "Public Service Loan Forgiveness", desc: "Federal program forgiving student loans for eligible public service workers." },
+    fr: { title: "Public Service Loan Forgiveness", desc: "Programme fédéral d'annulation de prêts pour travailleurs du service public." },
+    es: { title: "Condonación de Préstamos por Servicio Público", desc: "Programa federal que condona préstamos para trabajadores de servicio público elegibles." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.studentaid.gov/help-center/answers/article/what-is-fafsa",
+  i18n: {
+    en: { title: "What is FAFSA Guide", desc: "Official beginner's guide to understanding and completing the FAFSA." },
+    fr: { title: "Guide qu'est-ce que FAFSA", desc: "Guide officiel pour débutants sur la compréhension et le remplissage du FAFSA." },
+    es: { title: "Guía de Qué es FAFSA", desc: "Guía oficial para principiantes sobre cómo entender y completar la FAFSA." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.ed.gov/grants",
+  i18n: {
+    en: { title: "US Department of Education Grants", desc: "Official directory of federal education grants and funding opportunities." },
+    fr: { title: "Subventions US Department of Education", desc: "Répertoire officiel des subventions fédérales à l'éducation." },
+    es: { title: "Subvenciones del Departamento de Educación de EE.UU.", desc: "Directorio oficial de subvenciones federales de educación." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nea.org/professional-excellence/student-engagement/tools-tips",
+  i18n: {
+    en: { title: "NEA Student Engagement Tools", desc: "Educational tools and tips from the National Education Association." },
+    fr: { title: "Outils engagement étudiant NEA", desc: "Outils et conseils éducatifs de la National Education Association." },
+    es: { title: "Herramientas de Participación Estudiantil NEA", desc: "Herramientas y consejos educativos de la Asociación Nacional de Educación." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.parentcenterhub.org",
+  i18n: {
+    en: { title: "Center for Parent Information and Resources", desc: "Resources for parents of children with disabilities navigating education." },
+    fr: { title: "Centre information et ressources parents", desc: "Ressources pour parents d'enfants handicapés naviguant le système éducatif." },
+    es: { title: "Centro de Información y Recursos para Padres", desc: "Recursos para padres de niños con discapacidades que navegan la educación." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.copaa.org",
+  i18n: {
+    en: { title: "Council of Parent Attorneys and Advocates", desc: "Advocacy resources for families navigating special education rights." },
+    fr: { title: "Conseil des avocats et défenseurs parentaux", desc: "Ressources de plaidoyer pour familles naviguant les droits d'éducation spécialisée." },
+    es: { title: "Consejo de Abogados y Defensores de Padres", desc: "Recursos de defensa para familias que navegan derechos de educación especial." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.pacer.org",
+  i18n: {
+    en: { title: "PACER Center", desc: "Resources and training for parents of children with disabilities." },
+    fr: { title: "PACER Center", desc: "Ressources et formation pour parents d'enfants handicapés." },
+    es: { title: "PACER Center", desc: "Recursos y capacitación para padres de niños con discapacidades." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.parentcamp.org",
+  i18n: {
+    en: { title: "ParentCamp", desc: "Community-driven education resources and family engagement events." },
+    fr: { title: "ParentCamp", desc: "Ressources éducatives communautaires et événements d'engagement familial." },
+    es: { title: "ParentCamp", desc: "Recursos educativos comunitarios y eventos de participación familiar." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.usa.gov/gifted-education",
+  i18n: {
+    en: { title: "USA.gov Gifted Education Guide", desc: "Government guide to gifted and talented education programs by state." },
+    fr: { title: "Guide éducation douée USA.gov", desc: "Guide gouvernemental des programmes d'éducation pour surdoués par État." },
+    es: { title: "Guía de Educación para Superdotados USA.gov", desc: "Guía del gobierno de programas de educación para superdotados por estado." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nagc.org",
+  i18n: {
+    en: { title: "National Association for Gifted Children", desc: "Resources supporting gifted and talented students and their families." },
+    fr: { title: "Association nationale pour enfants doués", desc: "Ressources soutenant les élèves doués et talentueux et leurs familles." },
+    es: { title: "Asociación Nacional para Niños Superdotados", desc: "Recursos que apoyan a estudiantes superdotados y talentosos y sus familias." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.summerlearning.org",
+  i18n: {
+    en: { title: "National Summer Learning Association", desc: "Directory and resources for summer learning and enrichment programs." },
+    fr: { title: "Association nationale apprentissage estival", desc: "Répertoire et ressources pour programmes d'apprentissage estival." },
+    es: { title: "Asociación Nacional de Aprendizaje de Verano", desc: "Directorio y recursos para programas de aprendizaje y enriquecimiento de verano." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.afterschoolalliance.org",
+  i18n: {
+    en: { title: "Afterschool Alliance", desc: "Directory and advocacy resources for afterschool program access." },
+    fr: { title: "Afterschool Alliance", desc: "Répertoire et ressources de plaidoyer pour l'accès aux programmes après l'école." },
+    es: { title: "Afterschool Alliance", desc: "Directorio y recursos de defensa para el acceso a programas después de la escuela." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.4-h.org",
+  i18n: {
+    en: { title: "4-H Youth Development", desc: "Free and low-cost youth development programs in agriculture, STEM, and life skills." },
+    fr: { title: "4-H développement jeunesse", desc: "Programmes gratuits de développement jeunesse en agriculture, STEM et compétences de vie." },
+    es: { title: "Desarrollo Juvenil 4-H", desc: "Programas gratuitos de desarrollo juvenil en agricultura, STEM y habilidades de vida." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.scouting.org",
+  i18n: {
+    en: { title: "Scouting America", desc: "Youth development programs with financial assistance available for families in need." },
+    fr: { title: "Scouting America", desc: "Programmes de développement jeunesse avec aide financière pour familles dans le besoin." },
+    es: { title: "Scouting America", desc: "Programas de desarrollo juvenil con ayuda financiera para familias necesitadas." },
+  },
+},
+
+// INCOME (18)
+{
+  category: "Income",
+  link: "https://www.ssa.gov/disability/",
+  i18n: {
+    en: { title: "Social Security Disability Insurance", desc: "Federal disability benefits for workers who paid into Social Security." },
+    fr: { title: "Assurance invalidité Sécurité sociale", desc: "Prestations d'invalidité fédérales pour travailleurs ayant cotisé à la Sécurité sociale." },
+    es: { title: "Seguro de Discapacidad del Seguro Social", desc: "Beneficios federales de discapacidad para trabajadores que contribuyeron al Seguro Social." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ssa.gov/ssi/",
+  i18n: {
+    en: { title: "Supplemental Security Income Overview", desc: "Federal income support for people with limited income and resources." },
+    fr: { title: "Aperçu revenu de sécurité supplémentaire", desc: "Soutien de revenu fédéral pour personnes à ressources limitées." },
+    es: { title: "Resumen de Ingreso de Seguridad Suplementario", desc: "Apoyo de ingreso federal para personas con recursos limitados." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ssa.gov/benefits/disability/qualify.html",
+  i18n: {
+    en: { title: "SSDI Qualification Requirements", desc: "Official requirements to qualify for Social Security Disability Insurance." },
+    fr: { title: "Exigences qualification SSDI", desc: "Exigences officielles pour se qualifier pour l'assurance invalidité." },
+    es: { title: "Requisitos de Calificación SSDI", desc: "Requisitos oficiales para calificar para el Seguro de Discapacidad." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.disability-benefits-help.org",
+  i18n: {
+    en: { title: "Disability Benefits Help", desc: "Independent guide to navigating Social Security disability applications." },
+    fr: { title: "Disability Benefits Help", desc: "Guide indépendant pour naviguer les demandes d'invalidité de la Sécurité sociale." },
+    es: { title: "Disability Benefits Help", desc: "Guía independiente para navegar solicitudes de discapacidad del Seguro Social." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ssa.gov/appeals/",
+  i18n: {
+    en: { title: "Social Security Appeals Process", desc: "Official guide to appealing a denied Social Security benefits claim." },
+    fr: { title: "Processus d'appel Sécurité sociale", desc: "Guide officiel pour faire appel d'une réclamation de prestations refusée." },
+    es: { title: "Proceso de Apelación del Seguro Social", desc: "Guía oficial para apelar una reclamación de beneficios denegada." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.nosscr.org",
+  i18n: {
+    en: { title: "National Organization of Social Security Claimants' Representatives", desc: "Directory of representatives helping with disability claims." },
+    fr: { title: "Organisation nationale représentants réclamants", desc: "Répertoire de représentants aidant avec les réclamations d'invalidité." },
+    es: { title: "Organización Nacional de Representantes de Reclamantes", desc: "Directorio de representantes que ayudan con reclamaciones de discapacidad." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.benefits.gov/benefit/1540",
+  i18n: {
+    en: { title: "Benefits.gov SSI Benefit Details", desc: "Official federal benefit finder details page for SSI." },
+    fr: { title: "Détails prestation SSI Benefits.gov", desc: "Page officielle de détails de prestation SSI du chercheur fédéral." },
+    es: { title: "Detalles del Beneficio SSI Benefits.gov", desc: "Página oficial de detalles del beneficio SSI del buscador federal." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.benefits.gov",
+  i18n: {
+    en: { title: "Benefits.gov Benefit Finder", desc: "Official federal tool to screen and find government benefits you qualify for." },
+    fr: { title: "Chercheur de prestations Benefits.gov", desc: "Outil fédéral officiel pour trouver les prestations gouvernementales admissibles." },
+    es: { title: "Buscador de Beneficios Benefits.gov", desc: "Herramienta federal oficial para encontrar beneficios gubernamentales elegibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.usa.gov/benefits",
+  i18n: {
+    en: { title: "USA.gov Benefits Overview", desc: "Government overview of available federal benefit programs." },
+    fr: { title: "Aperçu prestations USA.gov", desc: "Aperçu gouvernemental des programmes de prestations fédérales disponibles." },
+    es: { title: "Resumen de Beneficios USA.gov", desc: "Resumen del gobierno de programas de beneficios federales disponibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ssa.gov/pubs/EN-05-10035.pdf",
+  i18n: {
+    en: { title: "SSA Working While Disabled Guide", desc: "Official guide on how working affects Social Security disability benefits." },
+    fr: { title: "Guide travail avec invalidité SSA", desc: "Guide officiel sur l'impact du travail sur les prestations d'invalidité." },
+    es: { title: "Guía SSA de Trabajar con Discapacidad", desc: "Guía oficial sobre cómo el trabajo afecta los beneficios por discapacidad." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ssa.gov/redbook/",
+  i18n: {
+    en: { title: "SSA Red Book Work Incentives Guide", desc: "Official guide to work incentives for Social Security disability beneficiaries." },
+    fr: { title: "Guide incitations travail Red Book SSA", desc: "Guide officiel des incitations au travail pour bénéficiaires d'invalidité." },
+    es: { title: "Guía de Incentivos de Trabajo Red Book SSA", desc: "Guía oficial de incentivos de trabajo para beneficiarios de discapacidad." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dol.gov/agencies/odep",
+  i18n: {
+    en: { title: "Office of Disability Employment Policy", desc: "Federal resources supporting employment for people with disabilities." },
+    fr: { title: "Bureau politique emploi handicap", desc: "Ressources fédérales soutenant l'emploi des personnes handicapées." },
+    es: { title: "Oficina de Política de Empleo para Discapacitados", desc: "Recursos federales que apoyan el empleo de personas con discapacidades." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.askjan.org",
+  i18n: {
+    en: { title: "Job Accommodation Network", desc: "Free guidance on workplace accommodations for employees with disabilities." },
+    fr: { title: "Job Accommodation Network", desc: "Conseils gratuits sur les aménagements de travail pour employés handicapés." },
+    es: { title: "Job Accommodation Network", desc: "Orientación gratuita sobre adaptaciones laborales para empleados con discapacidades." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.abilitiesinmotion.org",
+  i18n: {
+    en: { title: "Abilities in Motion", desc: "Employment support and independent living services for people with disabilities." },
+    fr: { title: "Abilities in Motion", desc: "Soutien à l'emploi et services de vie autonome pour personnes handicapées." },
+    es: { title: "Abilities in Motion", desc: "Apoyo de empleo y servicios de vida independiente para personas con discapacidades." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ncil.org",
+  i18n: {
+    en: { title: "National Council on Independent Living", desc: "Directory of centers supporting independent living for people with disabilities." },
+    fr: { title: "Conseil national vie autonome", desc: "Répertoire de centres soutenant la vie autonome pour personnes handicapées." },
+    es: { title: "Consejo Nacional de Vida Independiente", desc: "Directorio de centros que apoyan la vida independiente para personas con discapacidades." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ilru.org/projects/cil-net/cil-center-and-association-directory",
+  i18n: {
+    en: { title: "Center for Independent Living Directory", desc: "Directory of local centers offering independent living support services." },
+    fr: { title: "Répertoire centres vie autonome", desc: "Répertoire de centres locaux offrant des services de soutien à la vie autonome." },
+    es: { title: "Directorio de Centros de Vida Independiente", desc: "Directorio de centros locales que ofrecen servicios de apoyo de vida independiente." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.easterseals.com",
+  i18n: {
+    en: { title: "Easterseals", desc: "Services supporting people with disabilities including employment and financial resources." },
+    fr: { title: "Easterseals", desc: "Services soutenant les personnes handicapées, incluant emploi et ressources financières." },
+    es: { title: "Easterseals", desc: "Servicios que apoyan a personas con discapacidades, incluyendo empleo y recursos financieros." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.thearc.org",
+  i18n: {
+    en: { title: "The Arc", desc: "Advocacy and support services for people with intellectual and developmental disabilities." },
+    fr: { title: "The Arc", desc: "Services de plaidoyer et de soutien pour personnes ayant un handicap intellectuel." },
+    es: { title: "The Arc", desc: "Servicios de defensa y apoyo para personas con discapacidades intelectuales y del desarrollo." },
+  },
+},
+
 
 ];
 

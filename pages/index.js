@@ -14178,6 +14178,1497 @@ const ALL = [
     es: { title: "Operation Code", desc: "Educación de programación gratuita y mentoría para veteranos y cónyuges militares." },
   },
 },
+  // ===== PROGRAMS 1501-1700 =====
+
+// FOOD (32)
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/fdpir",
+  i18n: {
+    en: { title: "Food Distribution Program on Indian Reservations", desc: "Federal food package program serving eligible Tribal communities." },
+    fr: { title: "Programme distribution alimentaire réserves indiennes", desc: "Programme fédéral de colis alimentaires desservant les communautés tribales admissibles." },
+    es: { title: "Programa de Distribución de Alimentos en Reservas Indígenas", desc: "Programa federal de paquetes de alimentos que sirve a comunidades tribales elegibles." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fns.usda.gov/fdpir/fdpir-food-package",
+  i18n: {
+    en: { title: "FDPIR Food Package Contents", desc: "Official details on the monthly food items provided through FDPIR." },
+    fr: { title: "Contenu colis alimentaire FDPIR", desc: "Détails officiels sur les articles alimentaires mensuels fournis via FDPIR." },
+    es: { title: "Contenido del Paquete de Alimentos FDPIR", desc: "Detalles oficiales sobre los artículos de alimentos mensuales proporcionados por FDPIR." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.itcaonline.com/programs/health-human-services",
+  i18n: {
+    en: { title: "Inter Tribal Council Health & Human Services", desc: "Tribal-led health and food assistance programs for Native communities." },
+    fr: { title: "Services santé et humains Inter Tribal Council", desc: "Programmes d'aide alimentaire et de santé dirigés par des tribus." },
+    es: { title: "Servicios de Salud y Humanos Inter Tribal Council", desc: "Programas de asistencia alimentaria y de salud dirigidos por tribus." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.firstnations.org/projects/food-sovereignty/",
+  i18n: {
+    en: { title: "First Nations Development Institute Food Sovereignty", desc: "Programs supporting Native food sovereignty and traditional food access." },
+    fr: { title: "Souveraineté alimentaire First Nations Development Institute", desc: "Programmes soutenant la souveraineté alimentaire autochtone." },
+    es: { title: "Soberanía Alimentaria First Nations Development Institute", desc: "Programas que apoyan la soberanía alimentaria indígena." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.nativeamericanfoodsovereigntyalliance.org",
+  i18n: {
+    en: { title: "Native American Food Sovereignty Alliance", desc: "Advocacy and resources supporting Indigenous food systems and access." },
+    fr: { title: "Native American Food Sovereignty Alliance", desc: "Plaidoyer et ressources soutenant les systèmes alimentaires autochtones." },
+    es: { title: "Native American Food Sovereignty Alliance", desc: "Defensa y recursos que apoyan sistemas alimentarios indígenas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.migrantworker.com/food-resources",
+  i18n: {
+    en: { title: "Migrant Worker Food Resources Directory", desc: "Directory-style resources connecting migrant and seasonal workers to food access." },
+    fr: { title: "Répertoire ressources alimentaires travailleurs migrants", desc: "Ressources reliant les travailleurs migrants et saisonniers à l'accès alimentaire." },
+    es: { title: "Directorio de Recursos Alimentarios para Trabajadores Migrantes", desc: "Recursos que conectan a trabajadores migrantes y estacionales con acceso alimentario." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.farmworkerjustice.org",
+  i18n: {
+    en: { title: "Farmworker Justice", desc: "Advocacy and resources supporting the wellbeing of farmworker families." },
+    fr: { title: "Farmworker Justice", desc: "Plaidoyer et ressources soutenant le bien-être des familles de travailleurs agricoles." },
+    es: { title: "Farmworker Justice", desc: "Defensa y recursos que apoyan el bienestar de familias de trabajadores agrícolas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.ncfh.org",
+  i18n: {
+    en: { title: "National Center for Farmworker Health", desc: "Health and food assistance resources for migrant and seasonal farmworkers." },
+    fr: { title: "National Center for Farmworker Health", desc: "Ressources de santé et d'aide alimentaire pour travailleurs agricoles migrants." },
+    es: { title: "National Center for Farmworker Health", desc: "Recursos de salud y asistencia alimentaria para trabajadores agrícolas migrantes." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.telamon.org",
+  i18n: {
+    en: { title: "Telamon Corporation", desc: "Support services including food and housing assistance for migrant farmworker families." },
+    fr: { title: "Telamon Corporation", desc: "Services de soutien incluant aide alimentaire et logement pour familles de travailleurs migrants." },
+    es: { title: "Telamon Corporation", desc: "Servicios de apoyo incluyendo asistencia alimentaria y vivienda para familias de trabajadores migrantes." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodpantries.org/li/military-food-assistance",
+  i18n: {
+    en: { title: "Military Family Food Assistance Directory", desc: "Directory of food assistance resources specific to military families." },
+    fr: { title: "Répertoire aide alimentaire familles militaires", desc: "Répertoire de ressources d'aide alimentaire spécifiques aux familles militaires." },
+    es: { title: "Directorio de Asistencia Alimentaria para Familias Militares", desc: "Directorio de recursos de asistencia alimentaria específicos para familias militares." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.militaryfamiliesfoundation.org/pages/military-family-food",
+  i18n: {
+    en: { title: "Feed the Military Family Foundation", desc: "Food assistance and grocery grants for military families facing food insecurity." },
+    fr: { title: "Feed the Military Family Foundation", desc: "Aide alimentaire et subventions d'épicerie pour familles militaires en insécurité alimentaire." },
+    es: { title: "Feed the Military Family Foundation", desc: "Asistencia alimentaria y subvenciones de comestibles para familias militares en inseguridad alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.mfan.org",
+  i18n: {
+    en: { title: "Military Family Advisory Network", desc: "Research and resource connections including food security support for military families." },
+    fr: { title: "Military Family Advisory Network", desc: "Connexions de recherche et de ressources incluant soutien à la sécurité alimentaire." },
+    es: { title: "Military Family Advisory Network", desc: "Conexiones de investigación y recursos incluyendo apoyo de seguridad alimentaria." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.defensecommissary.com",
+  i18n: {
+    en: { title: "Defense Commissary Agency", desc: "Discounted grocery shopping benefit for active duty, retired military, and families." },
+    fr: { title: "Defense Commissary Agency", desc: "Avantage d'épicerie à prix réduit pour militaires actifs, retraités et familles." },
+    es: { title: "Defense Commissary Agency", desc: "Beneficio de comestibles con descuento para militares activos, retirados y familias." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.va.gov/health-care/about-va-health-benefits/nutrition/",
+  i18n: {
+    en: { title: "VA Nutrition and Food Services", desc: "Federal nutrition support and counseling services for eligible veterans." },
+    fr: { title: "Services nutrition et alimentation VA", desc: "Services fédéraux de soutien nutritionnel et de conseil pour vétérans admissibles." },
+    es: { title: "Servicios de Nutrición y Alimentos VA", desc: "Servicios federales de apoyo nutricional y consejería para veteranos elegibles." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.operationgratitude.com",
+  i18n: {
+    en: { title: "Operation Gratitude", desc: "Care package and food support program for military members and veterans." },
+    fr: { title: "Operation Gratitude", desc: "Programme de colis de soins et de soutien alimentaire pour militaires et vétérans." },
+    es: { title: "Operation Gratitude", desc: "Programa de paquetes de cuidado y apoyo alimentario para militares y veteranos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.soldiersangels.org",
+  i18n: {
+    en: { title: "Soldiers' Angels", desc: "Support services including grocery assistance for military families and veterans." },
+    fr: { title: "Soldiers' Angels", desc: "Services de soutien incluant aide à l'épicerie pour familles militaires et vétérans." },
+    es: { title: "Soldiers' Angels", desc: "Servicios de apoyo incluyendo asistencia de comestibles para familias militares y veteranos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.bluestarfam.org/programs/food-security",
+  i18n: {
+    en: { title: "Blue Star Families Food Security Program", desc: "Support addressing food insecurity among military families." },
+    fr: { title: "Programme sécurité alimentaire Blue Star Families", desc: "Soutien pour lutter contre l'insécurité alimentaire chez les familles militaires." },
+    es: { title: "Programa de Seguridad Alimentaria Blue Star Families", desc: "Apoyo para abordar la inseguridad alimentaria entre familias militares." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.fisherhouse.org",
+  i18n: {
+    en: { title: "Fisher House Foundation Meal Support", desc: "Free lodging and meal support for military and veteran families near hospitals." },
+    fr: { title: "Soutien repas Fisher House Foundation", desc: "Hébergement et soutien aux repas gratuits pour familles militaires près des hôpitaux." },
+    es: { title: "Apoyo de Comidas Fisher House Foundation", desc: "Alojamiento y apoyo de comidas gratuitos para familias militares cerca de hospitales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.usda.gov/media/blog/food-access-research",
+  i18n: {
+    en: { title: "USDA Food Access Research Atlas", desc: "Federal mapping tool showing food access and food desert areas nationwide." },
+    fr: { title: "Atlas recherche accès alimentaire USDA", desc: "Outil de cartographie fédéral montrant l'accès alimentaire et les déserts alimentaires." },
+    es: { title: "Atlas de Investigación de Acceso a Alimentos USDA", desc: "Herramienta de mapeo federal que muestra acceso a alimentos y desiertos alimentarios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.reinvestment.com/food-access",
+  i18n: {
+    en: { title: "Reinvestment Fund Food Access Initiatives", desc: "Financing programs supporting grocery store development in food deserts." },
+    fr: { title: "Initiatives accès alimentaire Reinvestment Fund", desc: "Programmes de financement soutenant le développement d'épiceries dans les déserts alimentaires." },
+    es: { title: "Iniciativas de Acceso a Alimentos Reinvestment Fund", desc: "Programas de financiamiento que apoyan el desarrollo de supermercados en desiertos alimentarios." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.policylink.org/our-work/community/food-access",
+  i18n: {
+    en: { title: "PolicyLink Food Access Resources", desc: "Policy research and advocacy resources on equitable food access." },
+    fr: { title: "Ressources accès alimentaire PolicyLink", desc: "Ressources de recherche politique et plaidoyer sur l'accès alimentaire équitable." },
+    es: { title: "Recursos de Acceso a Alimentos PolicyLink", desc: "Recursos de investigación de políticas y defensa sobre acceso alimentario equitativo." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodtrust.org",
+  i18n: {
+    en: { title: "The Food Trust", desc: "Programs increasing healthy food access in underserved neighborhoods." },
+    fr: { title: "The Food Trust", desc: "Programmes augmentant l'accès aux aliments sains dans les quartiers défavorisés." },
+    es: { title: "The Food Trust", desc: "Programas que aumentan el acceso a alimentos saludables en vecindarios desatendidos." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.freshworks.org",
+  i18n: {
+    en: { title: "California FreshWorks", desc: "Financing fund supporting healthy food retail in underserved California communities." },
+    fr: { title: "California FreshWorks", desc: "Fonds de financement soutenant le commerce alimentaire sain en Californie." },
+    es: { title: "California FreshWorks", desc: "Fondo de financiamiento que apoya el comercio de alimentos saludables en California." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.healthyfoodaccess.org",
+  i18n: {
+    en: { title: "Healthy Food Access Portal", desc: "Resource hub with financing and policy tools for healthy food retail projects." },
+    fr: { title: "Portail accès alimentation saine", desc: "Centre de ressources avec outils de financement pour projets de commerce alimentaire sain." },
+    es: { title: "Portal de Acceso a Alimentos Saludables", desc: "Centro de recursos con herramientas de financiamiento para proyectos de alimentos saludables." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.usda.gov/media/blog/healthy-food-financing",
+  i18n: {
+    en: { title: "USDA Healthy Food Financing Initiative", desc: "Federal initiative funding grocery access projects in underserved areas." },
+    fr: { title: "Initiative financement alimentation saine USDA", desc: "Initiative fédérale finançant des projets d'accès à l'épicerie dans les zones défavorisées." },
+    es: { title: "Iniciativa de Financiamiento de Alimentos Saludables USDA", desc: "Iniciativa federal que financia proyectos de acceso a supermercados en áreas desatendidas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.investinginfood.org",
+  i18n: {
+    en: { title: "Investing in Food and Farms", desc: "Directory of financing programs supporting local food systems and access." },
+    fr: { title: "Investing in Food and Farms", desc: "Répertoire de programmes de financement soutenant les systèmes alimentaires locaux." },
+    es: { title: "Investing in Food and Farms", desc: "Directorio de programas de financiamiento que apoyan sistemas alimentarios locales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.localfoodhubs.org",
+  i18n: {
+    en: { title: "Local Food Hubs Directory", desc: "Directory of regional food hubs connecting local farms to community access." },
+    fr: { title: "Répertoire centres alimentaires locaux", desc: "Répertoire de centres alimentaires régionaux reliant fermes locales et communautés." },
+    es: { title: "Directorio de Centros de Alimentos Locales", desc: "Directorio de centros de alimentos regionales que conectan granjas locales con comunidades." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.foodhubs.org",
+  i18n: {
+    en: { title: "National Food Hub Collaboration", desc: "Network supporting regional food hub development and food access." },
+    fr: { title: "National Food Hub Collaboration", desc: "Réseau soutenant le développement de centres alimentaires régionaux." },
+    es: { title: "National Food Hub Collaboration", desc: "Red que apoya el desarrollo de centros de alimentos regionales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.growingpower.org/programs",
+  i18n: {
+    en: { title: "Growing Power Urban Farming Programs", desc: "Urban agriculture training and food access programs in underserved cities." },
+    fr: { title: "Programmes agriculture urbaine Growing Power", desc: "Formation en agriculture urbaine et programmes d'accès alimentaire dans les villes défavorisées." },
+    es: { title: "Programas de Agricultura Urbana Growing Power", desc: "Capacitación en agricultura urbana y programas de acceso alimentario en ciudades desatendidas." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.urbanfarming.org",
+  i18n: {
+    en: { title: "Urban Farming Organization", desc: "Supports community gardens producing free food for local neighborhoods." },
+    fr: { title: "Urban Farming Organization", desc: "Soutient les jardins communautaires produisant de la nourriture gratuite pour quartiers locaux." },
+    es: { title: "Urban Farming Organization", desc: "Apoya jardines comunitarios que producen alimentos gratuitos para vecindarios locales." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.detroitblackfoodsecurity.org",
+  states: ["MI"],
+  i18n: {
+    en: { title: "Detroit Black Community Food Security Network", desc: "Urban agriculture and food justice programs serving Detroit communities." },
+    fr: { title: "Detroit Black Community Food Security Network", desc: "Programmes d'agriculture urbaine et de justice alimentaire desservant Detroit." },
+    es: { title: "Detroit Black Community Food Security Network", desc: "Programas de agricultura urbana y justicia alimentaria que sirven a Detroit." },
+  },
+},
+{
+  category: "Food",
+  link: "https://www.eastnewyorkfarms.org",
+  states: ["NY"],
+  i18n: {
+    en: { title: "East New York Farms", desc: "Community garden and farmers market programs improving local food access." },
+    fr: { title: "East New York Farms", desc: "Programmes de jardins communautaires et marchés fermiers améliorant l'accès alimentaire local." },
+    es: { title: "East New York Farms", desc: "Programas de jardines comunitarios y mercados agrícolas que mejoran el acceso alimentario local." },
+  },
+},
+
+// HEALTH (34)
+{
+  category: "Health",
+  link: "https://www.va.gov/health-care/how-to-apply/",
+  i18n: {
+    en: { title: "VA Health Care Application Guide", desc: "Official step-by-step guide to applying for VA health care benefits." },
+    fr: { title: "Guide demande soins de santé VA", desc: "Guide officiel étape par étape pour demander les prestations de soins de santé VA." },
+    es: { title: "Guía de Solicitud de Atención Médica VA", desc: "Guía oficial paso a paso para solicitar beneficios de atención médica VA." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.va.gov/health-care/eligibility/",
+  i18n: {
+    en: { title: "VA Health Care Eligibility Info", desc: "Official information on eligibility requirements for VA health care." },
+    fr: { title: "Info admissibilité soins de santé VA", desc: "Informations officielles sur les exigences d'admissibilité aux soins de santé VA." },
+    es: { title: "Información de Elegibilidad de Atención Médica VA", desc: "Información oficial sobre requisitos de elegibilidad para atención médica VA." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.va.gov/find-locations/",
+  i18n: {
+    en: { title: "VA Facility Locator", desc: "Official tool to find VA health care facilities and services near you." },
+    fr: { title: "Localisateur installations VA", desc: "Outil officiel pour trouver des installations et services de santé VA près de chez vous." },
+    es: { title: "Localizador de Instalaciones VA", desc: "Herramienta oficial para encontrar instalaciones y servicios de atención médica VA cerca." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.va.gov/health-care/family-caregiver-benefits/",
+  i18n: {
+    en: { title: "VA Family Caregiver Benefits", desc: "Federal support and stipend benefits for caregivers of eligible veterans." },
+    fr: { title: "Prestations aidants familiaux VA", desc: "Prestations fédérales de soutien et d'allocation pour aidants de vétérans admissibles." },
+    es: { title: "Beneficios de Cuidadores Familiares VA", desc: "Beneficios federales de apoyo y estipendio para cuidadores de veteranos elegibles." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.va.gov/health-care/about-va-health-benefits/dental-care/",
+  i18n: {
+    en: { title: "VA Dental Care Benefits", desc: "Federal information on dental care eligibility for veterans." },
+    fr: { title: "Prestations soins dentaires VA", desc: "Informations fédérales sur l'admissibilité aux soins dentaires pour vétérans." },
+    es: { title: "Beneficios de Atención Dental VA", desc: "Información federal sobre elegibilidad de atención dental para veteranos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.va.gov/health-care/about-va-health-benefits/mental-health-care/",
+  i18n: {
+    en: { title: "VA Mental Health Care Benefits", desc: "Federal information on mental health services available to veterans." },
+    fr: { title: "Prestations santé mentale VA", desc: "Informations fédérales sur les services de santé mentale disponibles pour vétérans." },
+    es: { title: "Beneficios de Atención de Salud Mental VA", desc: "Información federal sobre servicios de salud mental disponibles para veteranos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.veteranscrisisline.net",
+  i18n: {
+    en: { title: "Veterans Crisis Line", desc: "24/7 confidential crisis support specifically for veterans and their families." },
+    fr: { title: "Ligne de crise vétérans", desc: "Soutien de crise confidentiel 24/7 spécifiquement pour vétérans et leurs familles." },
+    es: { title: "Línea de Crisis para Veteranos", desc: "Apoyo de crisis confidencial 24/7 específicamente para veteranos y sus familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.maketheconnection.net",
+  i18n: {
+    en: { title: "Make the Connection", desc: "VA resource connecting veterans with mental health information and peer stories." },
+    fr: { title: "Make the Connection", desc: "Ressource VA reliant les vétérans à des informations de santé mentale et témoignages." },
+    es: { title: "Make the Connection", desc: "Recurso de VA que conecta a veteranos con información de salud mental e historias de pares." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.pdhealth.mil",
+  i18n: {
+    en: { title: "Deployment Health Clinical Center", desc: "Health resources addressing deployment-related conditions for service members." },
+    fr: { title: "Deployment Health Clinical Center", desc: "Ressources de santé traitant les conditions liées au déploiement pour militaires." },
+    es: { title: "Deployment Health Clinical Center", desc: "Recursos de salud que abordan condiciones relacionadas con el despliegue militar." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.woundedwarriorproject.org/programs/mental-wellness",
+  i18n: {
+    en: { title: "Wounded Warrior Project Mental Wellness", desc: "Mental health programs specifically designed for post-9/11 injured veterans." },
+    fr: { title: "Bien-être mental Wounded Warrior Project", desc: "Programmes de santé mentale conçus spécifiquement pour vétérans blessés post-11 septembre." },
+    es: { title: "Bienestar Mental Wounded Warrior Project", desc: "Programas de salud mental diseñados específicamente para veteranos heridos post-11 de septiembre." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.giveanhour.org",
+  i18n: {
+    en: { title: "Give an Hour", desc: "Free mental health services for military members, veterans, and their families." },
+    fr: { title: "Give an Hour", desc: "Services de santé mentale gratuits pour militaires, vétérans et leurs familles." },
+    es: { title: "Give an Hour", desc: "Servicios de salud mental gratuitos para militares, veteranos y sus familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cohenveteransnetwork.org",
+  i18n: {
+    en: { title: "Cohen Veterans Network", desc: "Free and low-cost mental health clinics for veterans and military families." },
+    fr: { title: "Cohen Veterans Network", desc: "Cliniques de santé mentale gratuites ou abordables pour vétérans et familles militaires." },
+    es: { title: "Cohen Veterans Network", desc: "Clínicas de salud mental gratuitas o de bajo costo para veteranos y familias militares." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.headstrong.org",
+  i18n: {
+    en: { title: "Headstrong Project", desc: "Free confidential mental health treatment for veterans and family members." },
+    fr: { title: "Headstrong Project", desc: "Traitement de santé mentale confidentiel gratuit pour vétérans et membres de la famille." },
+    es: { title: "Headstrong Project", desc: "Tratamiento de salud mental confidencial gratuito para veteranos y familiares." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.k9sforwarriors.org",
+  i18n: {
+    en: { title: "K9s For Warriors", desc: "Service dog placement program for veterans with PTSD and related conditions." },
+    fr: { title: "K9s For Warriors", desc: "Programme de placement de chiens d'assistance pour vétérans atteints de SSPT." },
+    es: { title: "K9s For Warriors", desc: "Programa de colocación de perros de servicio para veteranos con TEPT." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.pawsforveterans.com",
+  i18n: {
+    en: { title: "Paws for Veterans", desc: "Service dog training and placement program for veterans with disabilities." },
+    fr: { title: "Paws for Veterans", desc: "Programme de formation et placement de chiens d'assistance pour vétérans handicapés." },
+    es: { title: "Paws for Veterans", desc: "Programa de entrenamiento y colocación de perros de servicio para veteranos con discapacidades." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.americashealthrankings.org",
+  i18n: {
+    en: { title: "America's Health Rankings", desc: "State-by-state health data and resource links for public health improvement." },
+    fr: { title: "America's Health Rankings", desc: "Données de santé par État et liens de ressources pour l'amélioration de la santé publique." },
+    es: { title: "America's Health Rankings", desc: "Datos de salud por estado y enlaces de recursos para mejorar la salud pública." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.countyhealthrankings.org",
+  i18n: {
+    en: { title: "County Health Rankings & Roadmaps", desc: "County-level health data and resources for local health improvement efforts." },
+    fr: { title: "County Health Rankings & Roadmaps", desc: "Données de santé au niveau du comté pour les efforts d'amélioration de la santé locale." },
+    es: { title: "County Health Rankings & Roadmaps", desc: "Datos de salud a nivel de condado para esfuerzos de mejora de salud local." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.healthypeople.gov",
+  i18n: {
+    en: { title: "Healthy People 2030", desc: "Federal national health objectives and resources for improving population health." },
+    fr: { title: "Healthy People 2030", desc: "Objectifs de santé nationaux fédéraux et ressources pour améliorer la santé de la population." },
+    es: { title: "Healthy People 2030", desc: "Objetivos nacionales de salud federal y recursos para mejorar la salud de la población." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cdc.gov/nchhstp/index.html",
+  i18n: {
+    en: { title: "CDC HIV, STD, Hepatitis, TB Prevention", desc: "Federal resources on prevention and testing for HIV, STDs, hepatitis, and TB." },
+    fr: { title: "Prévention VIH, IST, hépatite, TB CDC", desc: "Ressources fédérales sur la prévention et le dépistage du VIH, IST, hépatite et TB." },
+    es: { title: "Prevención de VIH, ITS, Hepatitis, TB CDC", desc: "Recursos federales sobre prevención y pruebas de VIH, ITS, hepatitis y tuberculosis." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cdc.gov/tb/topic/testing/default.htm",
+  i18n: {
+    en: { title: "CDC Tuberculosis Testing Info", desc: "Federal information on tuberculosis testing and treatment access." },
+    fr: { title: "Info dépistage tuberculose CDC", desc: "Informations fédérales sur le dépistage et le traitement de la tuberculose." },
+    es: { title: "Información de Pruebas de Tuberculosis CDC", desc: "Información federal sobre pruebas y acceso a tratamiento de tuberculosis." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hepb.org",
+  i18n: {
+    en: { title: "Hepatitis B Foundation", desc: "Education, testing resources, and support for people with hepatitis B." },
+    fr: { title: "Hepatitis B Foundation", desc: "Éducation, ressources de dépistage et soutien pour personnes atteintes d'hépatite B." },
+    es: { title: "Hepatitis B Foundation", desc: "Educación, recursos de pruebas y apoyo para personas con hepatitis B." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hepatitisc.uw.edu",
+  i18n: {
+    en: { title: "Hepatitis C Online", desc: "Free educational resource on hepatitis C testing, treatment, and management." },
+    fr: { title: "Hepatitis C Online", desc: "Ressource éducative gratuite sur le dépistage, traitement et gestion de l'hépatite C." },
+    es: { title: "Hepatitis C Online", desc: "Recurso educativo gratuito sobre pruebas, tratamiento y manejo de la hepatitis C." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.hepfree.org",
+  i18n: {
+    en: { title: "Hep Free Hawaii", desc: "Hepatitis testing and education resources for underserved communities." },
+    fr: { title: "Hep Free Hawaii", desc: "Ressources de dépistage et d'éducation sur l'hépatite pour communautés défavorisées." },
+    es: { title: "Hep Free Hawaii", desc: "Recursos de pruebas y educación sobre hepatitis para comunidades desatendidas." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cdc.gov/malaria/travelers/index.html",
+  i18n: {
+    en: { title: "CDC Travel Health Resources", desc: "Federal health guidance for international travel including vaccines and prevention." },
+    fr: { title: "Ressources santé voyage CDC", desc: "Conseils de santé fédéraux pour les voyages internationaux incluant vaccins et prévention." },
+    es: { title: "Recursos de Salud para Viajes CDC", desc: "Orientación de salud federal para viajes internacionales incluyendo vacunas y prevención." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.passporthealthusa.com",
+  i18n: {
+    en: { title: "Passport Health Travel Clinics", desc: "Travel health clinics offering vaccines and health consultations before travel." },
+    fr: { title: "Cliniques voyage Passport Health", desc: "Cliniques de santé voyage offrant vaccins et consultations avant le départ." },
+    es: { title: "Clínicas de Viaje Passport Health", desc: "Clínicas de salud de viaje que ofrecen vacunas y consultas antes del viaje." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cdc.gov/nceh/lead/default.htm",
+  i18n: {
+    en: { title: "CDC Lead Poisoning Prevention", desc: "Federal resources on preventing and testing for lead poisoning, especially in children." },
+    fr: { title: "Prévention empoisonnement au plomb CDC", desc: "Ressources fédérales pour prévenir et dépister l'empoisonnement au plomb chez les enfants." },
+    es: { title: "Prevención de Envenenamiento por Plomo CDC", desc: "Recursos federales para prevenir y detectar envenenamiento por plomo, especialmente en niños." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.epa.gov/lead/protect-your-family-exposures-lead",
+  i18n: {
+    en: { title: "EPA Protect Your Family from Lead", desc: "Federal guidance on reducing lead exposure risks in the home." },
+    fr: { title: "Protéger sa famille du plomb EPA", desc: "Conseils fédéraux pour réduire les risques d'exposition au plomb à domicile." },
+    es: { title: "Proteja a su Familia del Plomo EPA", desc: "Orientación federal para reducir riesgos de exposición al plomo en el hogar." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.leadsafeamerica.org",
+  i18n: {
+    en: { title: "Lead Safe America", desc: "Advocacy and resources for families dealing with lead exposure risks." },
+    fr: { title: "Lead Safe America", desc: "Plaidoyer et ressources pour familles confrontées aux risques d'exposition au plomb." },
+    es: { title: "Lead Safe America", desc: "Defensa y recursos para familias que enfrentan riesgos de exposición al plomo." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.poison.org",
+  i18n: {
+    en: { title: "National Poison Control Hotline", desc: "Free 24/7 emergency poison exposure hotline and guidance." },
+    fr: { title: "Ligne nationale contrôle poison", desc: "Ligne d'urgence gratuite 24/7 pour exposition aux poisons et conseils." },
+    es: { title: "Línea Nacional de Control de Envenenamiento", desc: "Línea de emergencia gratuita 24/7 para exposición a venenos y orientación." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.cpsc.gov",
+  i18n: {
+    en: { title: "Consumer Product Safety Commission", desc: "Federal agency providing recall alerts and safety information for household products." },
+    fr: { title: "Consumer Product Safety Commission", desc: "Agence fédérale offrant alertes de rappel et informations de sécurité pour produits domestiques." },
+    es: { title: "Consumer Product Safety Commission", desc: "Agencia federal que proporciona alertas de retiro e información de seguridad de productos." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.safekids.org",
+  i18n: {
+    en: { title: "Safe Kids Worldwide", desc: "Child safety resources and injury prevention programs for families." },
+    fr: { title: "Safe Kids Worldwide", desc: "Ressources de sécurité enfantine et programmes de prévention des blessures pour familles." },
+    es: { title: "Safe Kids Worldwide", desc: "Recursos de seguridad infantil y programas de prevención de lesiones para familias." },
+  },
+},
+{
+  category: "Health",
+  link: "https://www.nsc.org",
+  i18n: {
+    en: { title: "National Safety Council", desc: "Safety education and injury prevention resources for families and workplaces." },
+    fr: { title: "National Safety Council", desc: "Ressources d'éducation à la sécurité et de prévention des blessures pour familles et lieux de travail." },
+    es: { title: "National Safety Council", desc: "Recursos de educación de seguridad y prevención de lesiones para familias y lugares de trabajo." },
+  },
+},
+
+// HOUSING (28)
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/manufactured_housing_standards",
+  i18n: {
+    en: { title: "HUD Manufactured Housing Standards", desc: "Federal safety standards governing manufactured home construction." },
+    fr: { title: "Normes logement préfabriqué HUD", desc: "Normes de sécurité fédérales régissant la construction de logements préfabriqués." },
+    es: { title: "Normas de Vivienda Prefabricada HUD", desc: "Normas de seguridad federal que rigen la construcción de viviendas prefabricadas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.manufacturedhomeliving.org",
+  i18n: {
+    en: { title: "Manufactured Home Living Resource Center", desc: "Consumer resources for manufactured and mobile home residents." },
+    fr: { title: "Centre ressources vie maison préfabriquée", desc: "Ressources consommateur pour résidents de maisons préfabriquées." },
+    es: { title: "Centro de Recursos de Vida en Casa Prefabricada", desc: "Recursos del consumidor para residentes de casas prefabricadas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.prosperitynow.org/resources/manufactured-housing",
+  i18n: {
+    en: { title: "Prosperity Now Manufactured Housing Resources", desc: "Policy and consumer resources supporting manufactured home affordability." },
+    fr: { title: "Ressources logement préfabriqué Prosperity Now", desc: "Ressources politiques et consommateur soutenant l'abordabilité des maisons préfabriquées." },
+    es: { title: "Recursos de Vivienda Prefabricada Prosperity Now", desc: "Recursos de política y consumidor que apoyan la asequibilidad de casas prefabricadas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rd.usda.gov/programs-services/single-family-housing-programs",
+  i18n: {
+    en: { title: "USDA Single Family Housing Programs Overview", desc: "Full list of USDA rural single family housing loan and grant programs." },
+    fr: { title: "Aperçu programmes logement unifamilial USDA", desc: "Liste complète des programmes de prêts et subventions USDA pour logement unifamilial rural." },
+    es: { title: "Resumen de Programas de Vivienda Unifamiliar USDA", desc: "Lista completa de programas de préstamos y subvenciones USDA para vivienda unifamiliar rural." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rd.usda.gov/programs-services/single-family-housing-programs/single-family-housing-direct-home-loans",
+  i18n: {
+    en: { title: "USDA Direct Home Loans Program", desc: "Federal direct loan program helping low-income rural residents buy homes." },
+    fr: { title: "Programme prêts directs domicile USDA", desc: "Programme fédéral de prêts directs aidant les résidents ruraux à faible revenu à acheter." },
+    es: { title: "Programa de Préstamos Directos de Vivienda USDA", desc: "Programa federal de préstamos directos que ayuda a residentes rurales de bajos ingresos a comprar." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rd.usda.gov/programs-services/single-family-housing-programs/single-family-housing-repair-loans-grants",
+  i18n: {
+    en: { title: "USDA Section 504 Home Repair Loans and Grants", desc: "Federal loans and grants helping rural homeowners repair or improve homes." },
+    fr: { title: "Prêts et subventions réparation Section 504 USDA", desc: "Prêts et subventions fédéraux aidant les propriétaires ruraux à réparer leur logement." },
+    es: { title: "Préstamos y Subvenciones de Reparación Sección 504 USDA", desc: "Préstamos y subvenciones federales que ayudan a propietarios rurales a reparar sus casas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rd.usda.gov/programs-services/multifamily-housing-programs",
+  i18n: {
+    en: { title: "USDA Multifamily Housing Programs", desc: "Federal programs funding affordable multifamily housing in rural areas." },
+    fr: { title: "Programmes logement multifamilial USDA", desc: "Programmes fédéraux finançant du logement multifamilial abordable en zones rurales." },
+    es: { title: "Programas de Vivienda Multifamiliar USDA", desc: "Programas federales que financian vivienda multifamiliar asequible en áreas rurales." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rd.usda.gov/programs-services/multifamily-housing-programs/rental-assistance-program",
+  i18n: {
+    en: { title: "USDA Rural Rental Assistance Program", desc: "Federal rental assistance for eligible tenants in USDA-financed rural housing." },
+    fr: { title: "Programme aide loyer rural USDA", desc: "Aide fédérale au loyer pour locataires admissibles dans le logement rural financé par USDA." },
+    es: { title: "Programa de Asistencia de Alquiler Rural USDA", desc: "Asistencia federal de alquiler para inquilinos elegibles en vivienda rural financiada por USDA." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.rurdev.usda.gov",
+  i18n: {
+    en: { title: "USDA Rural Development Home Page", desc: "Federal agency overseeing rural housing, utility, and business development programs." },
+    fr: { title: "Page d'accueil USDA Rural Development", desc: "Agence fédérale supervisant les programmes de développement rural en logement et services." },
+    es: { title: "Página Principal USDA Rural Development", desc: "Agencia federal que supervisa programas de desarrollo rural en vivienda y servicios." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/public_indian_housing/ih/regs/nahasda",
+  i18n: {
+    en: { title: "Native American Housing Assistance and Self-Determination Act", desc: "Federal law providing housing block grants to Native American Tribes." },
+    fr: { title: "Loi aide logement et autodétermination amérindienne", desc: "Loi fédérale accordant des subventions de logement aux tribus amérindiennes." },
+    es: { title: "Ley de Asistencia de Vivienda y Autodeterminación Nativa Americana", desc: "Ley federal que otorga subvenciones de vivienda a tribus nativas americanas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/program_offices/public_indian_housing/ih",
+  i18n: {
+    en: { title: "HUD Office of Native American Programs", desc: "Federal office overseeing housing programs for Native American communities." },
+    fr: { title: "Bureau HUD des programmes amérindiens", desc: "Bureau fédéral supervisant les programmes de logement pour communautés amérindiennes." },
+    es: { title: "Oficina HUD de Programas Nativos Americanos", desc: "Oficina federal que supervisa programas de vivienda para comunidades nativas americanas." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/homeless_veterans",
+  i18n: {
+    en: { title: "HUD Homeless Veterans Programs", desc: "Federal housing programs specifically addressing veteran homelessness." },
+    fr: { title: "Programmes vétérans sans-abri HUD", desc: "Programmes fédéraux de logement traitant spécifiquement le sans-abrisme des vétérans." },
+    es: { title: "Programas para Veteranos sin Hogar HUD", desc: "Programas federales de vivienda que abordan específicamente la falta de vivienda de veteranos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.va.gov/homeless/ssvf.asp",
+  i18n: {
+    en: { title: "VA Supportive Services for Veteran Families", desc: "Federal program providing housing stability support for veteran families." },
+    fr: { title: "Services de soutien pour familles vétérans VA", desc: "Programme fédéral offrant un soutien à la stabilité résidentielle pour familles vétérans." },
+    es: { title: "Servicios de Apoyo para Familias de Veteranos VA", desc: "Programa federal que brinda apoyo de estabilidad de vivienda para familias de veteranos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.va.gov/homeless/hud-vash.asp",
+  i18n: {
+    en: { title: "HUD-VASH Voucher Program", desc: "Joint HUD-VA program combining housing vouchers with case management for veterans." },
+    fr: { title: "Programme bons HUD-VASH", desc: "Programme conjoint HUD-VA combinant bons de logement et gestion de cas pour vétérans." },
+    es: { title: "Programa de Vales HUD-VASH", desc: "Programa conjunto HUD-VA que combina vales de vivienda con gestión de casos para veteranos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.va.gov/homeless/grant_per_diem.asp",
+  i18n: {
+    en: { title: "VA Grant and Per Diem Program", desc: "Federal funding for community organizations providing transitional housing to veterans." },
+    fr: { title: "Programme subvention et per diem VA", desc: "Financement fédéral pour organismes communautaires offrant logement transitoire aux vétérans." },
+    es: { title: "Programa de Subvención y Viáticos VA", desc: "Financiamiento federal para organizaciones comunitarias que brindan vivienda transitoria a veteranos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.usich.gov/tools-for-action/veteran-homelessness",
+  i18n: {
+    en: { title: "USICH Veteran Homelessness Resources", desc: "Federal coordination resources for ending veteran homelessness." },
+    fr: { title: "Ressources sans-abrisme vétérans USICH", desc: "Ressources fédérales de coordination pour mettre fin au sans-abrisme des vétérans." },
+    es: { title: "Recursos de Falta de Vivienda para Veteranos USICH", desc: "Recursos federales de coordinación para acabar con la falta de vivienda de veteranos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.swords-to-plowshares.org",
+  i18n: {
+    en: { title: "Swords to Plowshares", desc: "Housing, employment, and health services specifically for veterans." },
+    fr: { title: "Swords to Plowshares", desc: "Services de logement, d'emploi et de santé spécifiquement pour vétérans." },
+    es: { title: "Swords to Plowshares", desc: "Servicios de vivienda, empleo y salud específicamente para veteranos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.veteranshousing.org",
+  i18n: {
+    en: { title: "Veterans Housing Coalition Directory", desc: "Directory of housing organizations specifically serving veterans." },
+    fr: { title: "Répertoire coalition logement vétérans", desc: "Répertoire d'organisations de logement desservant spécifiquement les vétérans." },
+    es: { title: "Directorio de Coalición de Vivienda para Veteranos", desc: "Directorio de organizaciones de vivienda que sirven específicamente a veteranos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.volunteersofamerica.org/veterans",
+  i18n: {
+    en: { title: "Volunteers of America Veteran Services", desc: "Housing and support services specifically for veterans in need." },
+    fr: { title: "Services vétérans Volunteers of America", desc: "Services de logement et de soutien spécifiquement pour vétérans dans le besoin." },
+    es: { title: "Servicios para Veteranos Volunteers of America", desc: "Servicios de vivienda y apoyo específicamente para veteranos necesitados." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.usvetsinc.org",
+  i18n: {
+    en: { title: "U.S.VETS", desc: "Housing, career, and clinical services for homeless and at-risk veterans." },
+    fr: { title: "U.S.VETS", desc: "Services de logement, de carrière et cliniques pour vétérans sans-abri et à risque." },
+    es: { title: "U.S.VETS", desc: "Servicios de vivienda, carrera y clínicos para veteranos sin hogar y en riesgo." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.easterseals.com/programs-and-services/veterans/",
+  i18n: {
+    en: { title: "Easterseals Veteran Housing Programs", desc: "Housing and support services for veterans with disabilities." },
+    fr: { title: "Programmes logement vétérans Easterseals", desc: "Services de logement et de soutien pour vétérans handicapés." },
+    es: { title: "Programas de Vivienda para Veteranos Easterseals", desc: "Servicios de vivienda y apoyo para veteranos con discapacidades." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.veteranvillage.org",
+  i18n: {
+    en: { title: "Veteran Village Programs", desc: "Example of tiny home village housing models designed for veterans." },
+    fr: { title: "Programmes Veteran Village", desc: "Exemple de modèles de villages de micro-maisons conçus pour vétérans." },
+    es: { title: "Programas Veteran Village", desc: "Ejemplo de modelos de aldeas de casas pequeñas diseñadas para veteranos." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/community_development_block_grant_program",
+  i18n: {
+    en: { title: "Community Development Block Grant Program", desc: "Federal funding supporting local housing and community development projects." },
+    fr: { title: "Programme subvention développement communautaire", desc: "Financement fédéral soutenant les projets de logement et développement communautaire." },
+    es: { title: "Programa de Subvención en Bloque para Desarrollo Comunitario", desc: "Financiamiento federal que apoya proyectos de vivienda y desarrollo comunitario." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/home_investment_partnerships_program",
+  i18n: {
+    en: { title: "HOME Investment Partnerships Program", desc: "Federal funding for affordable housing construction, rehabilitation, and rental assistance." },
+    fr: { title: "Programme partenariats investissement HOME", desc: "Financement fédéral pour construction, réhabilitation et aide au loyer de logements abordables." },
+    es: { title: "Programa de Asociaciones de Inversión HOME", desc: "Financiamiento federal para construcción, rehabilitación y asistencia de alquiler de vivienda asequible." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/emergency_solutions_grants_program",
+  i18n: {
+    en: { title: "Emergency Solutions Grants Program", desc: "Federal funding for emergency shelter and homelessness prevention services." },
+    fr: { title: "Programme subventions solutions urgence", desc: "Financement fédéral pour refuge d'urgence et services de prévention du sans-abrisme." },
+    es: { title: "Programa de Subvenciones de Soluciones de Emergencia", desc: "Financiamiento federal para refugio de emergencia y servicios de prevención de falta de vivienda." },
+  },
+},
+{
+  category: "Housing",
+  link: "https://www.hud.gov/topics/continuum_of_care_program",
+  i18n: {
+    en: { title: "Continuum of Care Program", desc: "Federal funding coordinating local homelessness services and housing programs." },
+    fr: { title: "Programme continuum de soins", desc: "Financement fédéral coordonnant les services locaux de sans-abrisme et de logement." },
+    es: { title: "Programa de Continuidad de Atención", desc: "Financiamiento federal que coordina servicios locales de falta de vivienda y programas de vivienda." },
+  },
+},
+
+// UTILITIES (26)
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/energysaver/home-energy-audits",
+  i18n: {
+    en: { title: "Home Energy Audit Guide", desc: "Federal guide to getting a home energy audit to identify savings opportunities." },
+    fr: { title: "Guide audit énergétique domicile", desc: "Guide fédéral pour obtenir un audit énergétique afin d'identifier les économies possibles." },
+    es: { title: "Guía de Auditoría de Energía del Hogar", desc: "Guía federal para obtener una auditoría energética e identificar oportunidades de ahorro." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energystar.gov/products/appliance_calculator",
+  i18n: {
+    en: { title: "Energy Star Appliance Savings Calculator", desc: "Federal tool to estimate savings from energy-efficient appliance upgrades." },
+    fr: { title: "Calculateur économies appareils Energy Star", desc: "Outil fédéral pour estimer les économies des mises à niveau d'appareils écoénergétiques." },
+    es: { title: "Calculadora de Ahorro de Electrodomésticos Energy Star", desc: "Herramienta federal para estimar ahorros de actualizaciones de electrodomésticos eficientes." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energystar.gov/rebate-finder",
+  i18n: {
+    en: { title: "Energy Star Rebate Finder", desc: "Federal tool to find local rebates for energy-efficient home upgrades." },
+    fr: { title: "Recherche rabais Energy Star", desc: "Outil fédéral pour trouver des rabais locaux pour améliorations écoénergétiques." },
+    es: { title: "Buscador de Reembolsos Energy Star", desc: "Herramienta federal para encontrar reembolsos locales para mejoras de eficiencia energética." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
+  i18n: {
+    en: { title: "IRS Energy Efficient Home Improvement Credit", desc: "Official IRS information on tax credits for energy-efficient home upgrades." },
+    fr: { title: "Crédit amélioration domiciliaire écoénergétique IRS", desc: "Informations officielles de l'IRS sur les crédits d'impôt pour améliorations écoénergétiques." },
+    es: { title: "Crédito de Mejoras del Hogar Eficientes en Energía IRS", desc: "Información oficial del IRS sobre créditos fiscales para mejoras de eficiencia energética." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.irs.gov/credits-deductions/residential-clean-energy-credit",
+  i18n: {
+    en: { title: "IRS Residential Clean Energy Credit", desc: "Official IRS information on tax credits for residential solar and clean energy." },
+    fr: { title: "Crédit énergie propre résidentielle IRS", desc: "Informations officielles de l'IRS sur les crédits d'impôt pour énergie solaire résidentielle." },
+    es: { title: "Crédito de Energía Limpia Residencial IRS", desc: "Información oficial del IRS sobre créditos fiscales para energía solar residencial." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.rewiringamerica.org",
+  i18n: {
+    en: { title: "Rewiring America", desc: "Tools and calculators to find rebates and savings for home electrification." },
+    fr: { title: "Rewiring America", desc: "Outils et calculateurs pour trouver rabais et économies pour l'électrification domiciliaire." },
+    es: { title: "Rewiring America", desc: "Herramientas y calculadoras para encontrar reembolsos y ahorros para electrificación del hogar." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.dsireusa.org",
+  i18n: {
+    en: { title: "DSIRE Database of State Incentives", desc: "Comprehensive database of state renewable energy and efficiency incentives." },
+    fr: { title: "Base de données DSIRE incitations d'État", desc: "Base de données complète des incitations d'État pour énergie renouvelable et efficacité." },
+    es: { title: "Base de Datos DSIRE de Incentivos Estatales", desc: "Base de datos completa de incentivos estatales de energía renovable y eficiencia." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.energy.gov/eere/femp/water-efficiency",
+  i18n: {
+    en: { title: "Federal Water Efficiency Resources", desc: "Federal information on reducing home water use and costs." },
+    fr: { title: "Ressources efficacité eau fédérale", desc: "Informations fédérales sur la réduction de la consommation d'eau domiciliaire." },
+    es: { title: "Recursos Federales de Eficiencia de Agua", desc: "Información federal sobre reducción del uso y costo de agua en el hogar." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/watersense/product-search",
+  i18n: {
+    en: { title: "EPA WaterSense Product Search", desc: "Federal directory of water-efficient products that can lower water bills." },
+    fr: { title: "Recherche produits EPA WaterSense", desc: "Répertoire fédéral de produits économes en eau réduisant les factures d'eau." },
+    es: { title: "Búsqueda de Productos EPA WaterSense", desc: "Directorio federal de productos eficientes en agua que pueden reducir facturas de agua." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.rd.usda.gov/programs-services/water-environmental-programs/water-waste-disposal-loan-grant-program",
+  i18n: {
+    en: { title: "USDA Water and Waste Disposal Loan and Grant Program", desc: "Federal funding for rural community water and wastewater infrastructure." },
+    fr: { title: "Programme prêt eau et déchets USDA", desc: "Financement fédéral pour l'infrastructure d'eau et d'eaux usées des communautés rurales." },
+    es: { title: "Programa de Préstamos de Agua y Desechos USDA", desc: "Financiamiento federal para infraestructura de agua y aguas residuales de comunidades rurales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/wqm/water-infrastructure-finance-and-innovation-act-wifia",
+  i18n: {
+    en: { title: "EPA WIFIA Water Infrastructure Financing", desc: "Federal financing program supporting large water infrastructure projects." },
+    fr: { title: "Financement infrastructure eau WIFIA EPA", desc: "Programme de financement fédéral soutenant les grands projets d'infrastructure d'eau." },
+    es: { title: "Financiamiento de Infraestructura de Agua WIFIA EPA", desc: "Programa de financiamiento federal que apoya grandes proyectos de infraestructura de agua." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.211.org/services/trash-recycling",
+  i18n: {
+    en: { title: "211 Trash and Recycling Assistance", desc: "Local waste service assistance referrals through the 211 network." },
+    fr: { title: "Aide déchets et recyclage 211", desc: "Orientation vers l'aide aux services de déchets via le réseau 211." },
+    es: { title: "Asistencia de Basura y Reciclaje 211", desc: "Referencias de asistencia de servicios de residuos a través de la red 211." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.epa.gov/recycle/reducing-and-reusing-basics",
+  i18n: {
+    en: { title: "EPA Reduce and Reuse Basics", desc: "Federal tips for reducing household waste and lowering disposal costs." },
+    fr: { title: "Bases réduction et réutilisation EPA", desc: "Conseils fédéraux pour réduire les déchets domestiques et les coûts d'élimination." },
+    es: { title: "Conceptos Básicos de Reducción y Reutilización EPA", desc: "Consejos federales para reducir residuos domésticos y costos de eliminación." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.earth911.com",
+  i18n: {
+    en: { title: "Earth911 Recycling Locator", desc: "Directory to find local recycling drop-off locations for various materials." },
+    fr: { title: "Localisateur recyclage Earth911", desc: "Répertoire pour trouver des points de dépôt de recyclage locaux pour divers matériaux." },
+    es: { title: "Localizador de Reciclaje Earth911", desc: "Directorio para encontrar puntos de entrega de reciclaje locales para varios materiales." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.usa.gov/internet-access",
+  i18n: {
+    en: { title: "USA.gov Internet Access Guide", desc: "Government guide to finding affordable internet access programs." },
+    fr: { title: "Guide accès Internet USA.gov", desc: "Guide gouvernemental pour trouver des programmes d'accès Internet abordables." },
+    es: { title: "Guía de Acceso a Internet USA.gov", desc: "Guía del gobierno para encontrar programas de acceso a internet asequible." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fcc.gov/affordable-connectivity-program-consumer-faq",
+  i18n: {
+    en: { title: "FCC Affordable Connectivity Program FAQ", desc: "Official FCC information on internet affordability program eligibility." },
+    fr: { title: "FAQ programme connectivité abordable FCC", desc: "Informations officielles de la FCC sur l'admissibilité au programme de connectivité abordable." },
+    es: { title: "Preguntas Frecuentes del Programa de Conectividad Asequible FCC", desc: "Información oficial de la FCC sobre elegibilidad del programa de conectividad asequible." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.everyoneon.org",
+  i18n: {
+    en: { title: "EveryoneOn", desc: "Search tool to find low-cost internet and computer programs by location." },
+    fr: { title: "EveryoneOn", desc: "Outil de recherche pour trouver des programmes Internet et ordinateurs à faible coût." },
+    es: { title: "EveryoneOn", desc: "Herramienta de búsqueda para encontrar programas de internet y computadoras de bajo costo." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.digitalequityact.org",
+  i18n: {
+    en: { title: "Digital Equity Act Resources", desc: "Federal law resources supporting digital access equity across communities." },
+    fr: { title: "Ressources Digital Equity Act", desc: "Ressources de loi fédérale soutenant l'équité d'accès numérique dans les communautés." },
+    es: { title: "Recursos de la Ley de Equidad Digital", desc: "Recursos de ley federal que apoyan la equidad de acceso digital en comunidades." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.digitalinclusion.org",
+  i18n: {
+    en: { title: "National Digital Inclusion Alliance", desc: "Advocacy and resource network promoting digital equity and internet access." },
+    fr: { title: "National Digital Inclusion Alliance", desc: "Réseau de plaidoyer et de ressources promouvant l'équité numérique et l'accès Internet." },
+    es: { title: "National Digital Inclusion Alliance", desc: "Red de defensa y recursos que promueve equidad digital y acceso a internet." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.libraries.org/computer-access",
+  i18n: {
+    en: { title: "Public Library Computer Access", desc: "Public libraries offering free computer and internet access to visitors." },
+    fr: { title: "Accès ordinateur bibliothèque publique", desc: "Bibliothèques publiques offrant un accès gratuit aux ordinateurs et à Internet." },
+    es: { title: "Acceso a Computadoras en Bibliotecas Públicas", desc: "Bibliotecas públicas que ofrecen acceso gratuito a computadoras e internet." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.nlc.gov/computer-labs",
+  i18n: {
+    en: { title: "Community Computer Lab Directory", desc: "Directory of free public computer labs offering internet access." },
+    fr: { title: "Répertoire laboratoires informatiques communautaires", desc: "Répertoire de laboratoires informatiques publics gratuits offrant un accès Internet." },
+    es: { title: "Directorio de Laboratorios de Computación Comunitarios", desc: "Directorio de laboratorios de computación públicos gratuitos que ofrecen acceso a internet." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.humanikind.org/programs/technology-access",
+  i18n: {
+    en: { title: "Technology Access Programs Directory", desc: "Directory-style resource connecting people to free technology access programs." },
+    fr: { title: "Répertoire programmes accès technologie", desc: "Ressource de type répertoire reliant les personnes aux programmes d'accès technologique gratuits." },
+    es: { title: "Directorio de Programas de Acceso Tecnológico", desc: "Recurso tipo directorio que conecta a personas con programas de acceso tecnológico gratuitos." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.911.gov",
+  i18n: {
+    en: { title: "National 911 Program", desc: "Federal information on emergency 911 services and next-generation upgrades." },
+    fr: { title: "Programme national 911", desc: "Informations fédérales sur les services d'urgence 911 et les mises à niveau." },
+    es: { title: "Programa Nacional 911", desc: "Información federal sobre servicios de emergencia 911 y actualizaciones de próxima generación." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.fema.gov/emergency-managers/practitioners/integrated-public-alert-warning-system",
+  i18n: {
+    en: { title: "FEMA Integrated Public Alert and Warning System", desc: "Federal emergency alert system information for staying informed during disasters." },
+    fr: { title: "Système intégré d'alerte publique FEMA", desc: "Informations sur le système d'alerte d'urgence fédéral pour rester informé lors de catastrophes." },
+    es: { title: "Sistema Integrado de Alerta Pública FEMA", desc: "Información del sistema de alerta de emergencia federal para mantenerse informado durante desastres." },
+  },
+},
+{
+  category: "Utilities",
+  link: "https://www.ready.gov/alerts",
+  i18n: {
+    en: { title: "Ready.gov Emergency Alerts Guide", desc: "Federal guide to signing up for local emergency alert systems." },
+    fr: { title: "Guide alertes d'urgence Ready.gov", desc: "Guide fédéral pour s'inscrire aux systèmes d'alerte d'urgence locaux." },
+    es: { title: "Guía de Alertas de Emergencia Ready.gov", desc: "Guía federal para inscribirse en sistemas de alerta de emergencia locales." },
+  },
+},
+
+// EDUCATION (26)
+{
+  category: "Education",
+  link: "https://www.va.gov/education/other-va-education-benefits/",
+  i18n: {
+    en: { title: "VA Other Education Benefits Overview", desc: "Federal overview of lesser-known VA education benefit programs." },
+    fr: { title: "Aperçu autres prestations éducation VA", desc: "Aperçu fédéral des programmes de prestations éducatives VA moins connus." },
+    es: { title: "Resumen de Otros Beneficios Educativos VA", desc: "Resumen federal de programas de beneficios educativos VA menos conocidos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.va.gov/education/about-gi-bill-benefits/how-to-apply/",
+  i18n: {
+    en: { title: "How to Apply for GI Bill Benefits", desc: "Official step-by-step guide to applying for GI Bill education benefits." },
+    fr: { title: "Comment demander prestations GI Bill", desc: "Guide officiel étape par étape pour demander les prestations éducatives GI Bill." },
+    es: { title: "Cómo Solicitar Beneficios GI Bill", desc: "Guía oficial paso a paso para solicitar beneficios educativos GI Bill." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.va.gov/education/eligibility/",
+  i18n: {
+    en: { title: "VA Education Benefit Eligibility", desc: "Official eligibility rules for various VA education benefit programs." },
+    fr: { title: "Admissibilité prestations éducation VA", desc: "Règles officielles d'admissibilité pour divers programmes de prestations éducatives VA." },
+    es: { title: "Elegibilidad de Beneficios Educativos VA", desc: "Reglas oficiales de elegibilidad para varios programas de beneficios educativos VA." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.acenet.edu/Programs-Services/Pages/Credit-Transcripts/Military-Guide-Online.aspx",
+  i18n: {
+    en: { title: "ACE Military Guide for Education Credit", desc: "Official guide translating military training into college credit recommendations." },
+    fr: { title: "Guide militaire ACE crédit éducatif", desc: "Guide officiel traduisant la formation militaire en recommandations de crédits collégiaux." },
+    es: { title: "Guía Militar ACE para Crédito Educativo", desc: "Guía oficial que traduce el entrenamiento militar en recomendaciones de crédito universitario." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.jst.doded.mil",
+  i18n: {
+    en: { title: "Joint Services Transcript", desc: "Official military transcript documenting training that may count as college credit." },
+    fr: { title: "Joint Services Transcript", desc: "Relevé militaire officiel documentant la formation pouvant compter comme crédit collégial." },
+    es: { title: "Joint Services Transcript", desc: "Transcripción militar oficial que documenta capacitación que puede contar como crédito universitario." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.dantes.doded.mil",
+  i18n: {
+    en: { title: "DANTES Military Education Support", desc: "Federal program supporting education and testing opportunities for service members." },
+    fr: { title: "Soutien éducation militaire DANTES", desc: "Programme fédéral soutenant les opportunités éducatives et de test pour militaires." },
+    es: { title: "Apoyo Educativo Militar DANTES", desc: "Programa federal que apoya oportunidades educativas y de examen para militares." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.cool.osd.mil",
+  i18n: {
+    en: { title: "Credentialing Opportunities On-Line (COOL)", desc: "Federal tool matching military skills to civilian certifications and credentials." },
+    fr: { title: "Credentialing Opportunities On-Line (COOL)", desc: "Outil fédéral associant compétences militaires aux certifications civiles." },
+    es: { title: "Credentialing Opportunities On-Line (COOL)", desc: "Herramienta federal que relaciona habilidades militares con certificaciones civiles." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.myarmybenefits.us.army.mil",
+  i18n: {
+    en: { title: "My Army Benefits", desc: "Official benefit calculator for Army service members including education benefits." },
+    fr: { title: "My Army Benefits", desc: "Calculateur officiel de prestations pour militaires de l'Armée incluant les prestations éducatives." },
+    es: { title: "My Army Benefits", desc: "Calculadora oficial de beneficios para militares del Ejército incluyendo beneficios educativos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.airforce.com/education",
+  i18n: {
+    en: { title: "Air Force Education Benefits", desc: "Official Air Force information on education benefits and tuition assistance." },
+    fr: { title: "Prestations éducation Air Force", desc: "Informations officielles de l'Air Force sur les prestations éducatives et l'aide aux frais de scolarité." },
+    es: { title: "Beneficios Educativos de la Fuerza Aérea", desc: "Información oficial de la Fuerza Aérea sobre beneficios educativos y ayuda de matrícula." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.navy.com/careers-benefits/benefits/education",
+  i18n: {
+    en: { title: "Navy Education Benefits", desc: "Official Navy information on education benefits and tuition assistance." },
+    fr: { title: "Prestations éducation Navy", desc: "Informations officielles de la Navy sur les prestations éducatives et l'aide aux frais de scolarité." },
+    es: { title: "Beneficios Educativos de la Marina", desc: "Información oficial de la Marina sobre beneficios educativos y ayuda de matrícula." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.marines.com/being-a-marine/benefits/education.html",
+  i18n: {
+    en: { title: "Marine Corps Education Benefits", desc: "Official Marine Corps information on education benefits and tuition assistance." },
+    fr: { title: "Prestations éducation Marine Corps", desc: "Informations officielles du Marine Corps sur les prestations éducatives." },
+    es: { title: "Beneficios Educativos del Cuerpo de Marines", desc: "Información oficial del Cuerpo de Marines sobre beneficios educativos y ayuda de matrícula." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.goarmy.com/benefits/education-benefits.html",
+  i18n: {
+    en: { title: "Go Army Education Benefits", desc: "Official Army recruiting site information on education benefit programs." },
+    fr: { title: "Prestations éducation Go Army", desc: "Informations du site de recrutement officiel de l'Armée sur les programmes éducatifs." },
+    es: { title: "Beneficios Educativos Go Army", desc: "Información del sitio de reclutamiento oficial del Ejército sobre programas de beneficios educativos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.coastguard.com/education",
+  i18n: {
+    en: { title: "Coast Guard Education Benefits", desc: "Official Coast Guard information on education benefits and tuition assistance." },
+    fr: { title: "Prestations éducation Coast Guard", desc: "Informations officielles de la Coast Guard sur les prestations éducatives." },
+    es: { title: "Beneficios Educativos de la Guardia Costera", desc: "Información oficial de la Guardia Costera sobre beneficios educativos y ayuda de matrícula." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.nationalguard.com/education-benefits",
+  i18n: {
+    en: { title: "National Guard Education Benefits", desc: "Official National Guard information on state and federal education benefits." },
+    fr: { title: "Prestations éducation National Guard", desc: "Informations officielles de la Garde nationale sur les prestations éducatives d'État et fédérales." },
+    es: { title: "Beneficios Educativos de la Guardia Nacional", desc: "Información oficial de la Guardia Nacional sobre beneficios educativos estatales y federales." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.dodmou.com",
+  i18n: {
+    en: { title: "DOD Voluntary Education Partnership Memorandum", desc: "Federal database of colleges partnered with the military tuition assistance program." },
+    fr: { title: "Mémorandum partenariat éducation volontaire DOD", desc: "Base de données fédérale des collèges partenaires du programme d'aide aux frais de scolarité militaire." },
+    es: { title: "Memorando de Asociación de Educación Voluntaria DOD", desc: "Base de datos federal de universidades asociadas con el programa de ayuda de matrícula militar." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.militaryonesource.mil/education-employment/for-college/",
+  i18n: {
+    en: { title: "Military OneSource College Resources", desc: "Federal resources helping military family members navigate college planning." },
+    fr: { title: "Ressources collège Military OneSource", desc: "Ressources fédérales aidant les membres de familles militaires à planifier le collège." },
+    es: { title: "Recursos Universitarios Military OneSource", desc: "Recursos federales que ayudan a miembros de familias militares a planificar la universidad." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.mccscp.com",
+  i18n: {
+    en: { title: "Marine Corps Community Services College Programs", desc: "Education support programs for Marine Corps families." },
+    fr: { title: "Programmes collégiaux Marine Corps Community Services", desc: "Programmes de soutien éducatif pour familles du Marine Corps." },
+    es: { title: "Programas Universitarios Marine Corps Community Services", desc: "Programas de apoyo educativo para familias del Cuerpo de Marines." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.militarychild.org",
+  i18n: {
+    en: { title: "Military Child Education Coalition", desc: "Resources supporting the educational success of military-connected children." },
+    fr: { title: "Military Child Education Coalition", desc: "Ressources soutenant la réussite éducative des enfants liés à l'armée." },
+    es: { title: "Military Child Education Coalition", desc: "Recursos que apoyan el éxito educativo de niños relacionados con lo militar." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.militarystudent.dodea.edu",
+  i18n: {
+    en: { title: "Military Student Transition Resources", desc: "Federal resources supporting military children transitioning between schools." },
+    fr: { title: "Ressources transition étudiant militaire", desc: "Ressources fédérales soutenant les enfants militaires en transition entre écoles." },
+    es: { title: "Recursos de Transición para Estudiantes Militares", desc: "Recursos federales que apoyan a niños militares en transición entre escuelas." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.interstatecompact.org",
+  i18n: {
+    en: { title: "Military Interstate Children's Compact", desc: "Federal compact easing school transitions for military children moving between states." },
+    fr: { title: "Pacte interétatique enfants militaires", desc: "Pacte fédéral facilitant les transitions scolaires pour enfants militaires changeant d'État." },
+    es: { title: "Pacto Interestatal de Niños Militares", desc: "Pacto federal que facilita transiciones escolares para niños militares que cambian de estado." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.operationmilitarykids.org",
+  i18n: {
+    en: { title: "Operation: Military Kids", desc: "Support programs and resources for children of deployed service members." },
+    fr: { title: "Operation: Military Kids", desc: "Programmes de soutien et ressources pour enfants de militaires déployés." },
+    es: { title: "Operation: Military Kids", desc: "Programas de apoyo y recursos para hijos de militares desplegados." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.tragedyassistanceprogram.org",
+  i18n: {
+    en: { title: "Tragedy Assistance Program for Survivors (TAPS)", desc: "Support and educational resources for families of fallen military members." },
+    fr: { title: "Tragedy Assistance Program for Survivors (TAPS)", desc: "Soutien et ressources éducatives pour familles de militaires décédés." },
+    es: { title: "Tragedy Assistance Program for Survivors (TAPS)", desc: "Apoyo y recursos educativos para familias de militares fallecidos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.goldstarfamiliesfund.org",
+  i18n: {
+    en: { title: "Gold Star Families Memorial Fund", desc: "Scholarships and support resources for Gold Star families of fallen service members." },
+    fr: { title: "Gold Star Families Memorial Fund", desc: "Bourses et ressources de soutien pour familles Gold Star de militaires tombés." },
+    es: { title: "Gold Star Families Memorial Fund", desc: "Becas y recursos de apoyo para familias Gold Star de militares caídos." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.fallenpatriotfund.org",
+  i18n: {
+    en: { title: "Fallen Patriot Fund", desc: "Financial support for children of military members killed in service." },
+    fr: { title: "Fallen Patriot Fund", desc: "Soutien financier pour enfants de militaires tués en service." },
+    es: { title: "Fallen Patriot Fund", desc: "Apoyo financiero para hijos de militares fallecidos en servicio." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.semperfifund.org",
+  i18n: {
+    en: { title: "Semper Fi & America's Fund", desc: "Financial and education assistance for wounded, ill, and injured service members." },
+    fr: { title: "Semper Fi & America's Fund", desc: "Aide financière et éducative pour militaires blessés, malades et lésés." },
+    es: { title: "Semper Fi & America's Fund", desc: "Asistencia financiera y educativa para militares heridos, enfermos y lesionados." },
+  },
+},
+{
+  category: "Education",
+  link: "https://www.hopeforthewarriors.org",
+  i18n: {
+    en: { title: "Hope For The Warriors", desc: "Support services including education assistance for post-9/11 veterans and families." },
+    fr: { title: "Hope For The Warriors", desc: "Services de soutien incluant aide éducative pour vétérans post-11 septembre et familles." },
+    es: { title: "Hope For The Warriors", desc: "Servicios de apoyo incluyendo asistencia educativa para veteranos post-11 de septiembre y familias." },
+  },
+},
+
+// INCOME (24)
+{
+  category: "Income",
+  link: "https://www.va.gov/pension/",
+  i18n: {
+    en: { title: "VA Pension Benefits Overview", desc: "Federal needs-based pension benefits for eligible wartime veterans." },
+    fr: { title: "Aperçu prestations pension VA", desc: "Prestations de pension fédérales basées sur les besoins pour vétérans de guerre admissibles." },
+    es: { title: "Resumen de Beneficios de Pensión VA", desc: "Beneficios de pensión federal basados en necesidad para veteranos de guerra elegibles." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/pension/aid-attendance-housebound/",
+  i18n: {
+    en: { title: "VA Aid and Attendance Benefit", desc: "Additional federal pension benefit for veterans needing daily assistance." },
+    fr: { title: "Prestation aide et assistance VA", desc: "Prestation de pension fédérale supplémentaire pour vétérans nécessitant une aide quotidienne." },
+    es: { title: "Beneficio de Ayuda y Asistencia VA", desc: "Beneficio de pensión federal adicional para veteranos que necesitan asistencia diaria." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/disability/",
+  i18n: {
+    en: { title: "VA Disability Compensation Overview", desc: "Federal monthly compensation for veterans with service-connected disabilities." },
+    fr: { title: "Aperçu indemnisation invalidité VA", desc: "Indemnisation mensuelle fédérale pour vétérans ayant des invalidités liées au service." },
+    es: { title: "Resumen de Compensación por Discapacidad VA", desc: "Compensación mensual federal para veteranos con discapacidades relacionadas al servicio." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/disability/how-to-file-claim/",
+  i18n: {
+    en: { title: "How to File a VA Disability Claim", desc: "Official step-by-step guide to filing a VA disability compensation claim." },
+    fr: { title: "Comment déposer réclamation invalidité VA", desc: "Guide officiel étape par étape pour déposer une réclamation d'indemnisation d'invalidité." },
+    es: { title: "Cómo Presentar una Reclamación de Discapacidad VA", desc: "Guía oficial paso a paso para presentar una reclamación de compensación por discapacidad." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/disability/eligibility/",
+  i18n: {
+    en: { title: "VA Disability Eligibility Requirements", desc: "Official eligibility criteria for VA disability compensation benefits." },
+    fr: { title: "Exigences admissibilité invalidité VA", desc: "Critères officiels d'admissibilité pour les prestations d'indemnisation d'invalidité VA." },
+    es: { title: "Requisitos de Elegibilidad de Discapacidad VA", desc: "Criterios oficiales de elegibilidad para beneficios de compensación por discapacidad VA." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/disability/eligibility/special-claims/",
+  i18n: {
+    en: { title: "VA Special Claims Info", desc: "Federal information on special disability claim categories for unique conditions." },
+    fr: { title: "Info réclamations spéciales VA", desc: "Informations fédérales sur les catégories de réclamations spéciales pour conditions uniques." },
+    es: { title: "Información de Reclamaciones Especiales VA", desc: "Información federal sobre categorías de reclamaciones especiales para condiciones únicas." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/disability/eligibility/hazardous-materials-exposure/",
+  i18n: {
+    en: { title: "VA Toxic Exposure Benefits (PACT Act)", desc: "Federal benefits for veterans exposed to burn pits, Agent Orange, and other hazards." },
+    fr: { title: "Prestations exposition toxique VA (PACT Act)", desc: "Prestations fédérales pour vétérans exposés aux fosses de combustion et autres dangers." },
+    es: { title: "Beneficios de Exposición Tóxica VA (Ley PACT)", desc: "Beneficios federales para veteranos expuestos a fosas de quema, Agente Naranja y otros peligros." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.va.gov/resources/the-pact-act-and-your-va-benefits/",
+  i18n: {
+    en: { title: "PACT Act and VA Benefits Guide", desc: "Official guide explaining new benefits available under the PACT Act." },
+    fr: { title: "Guide PACT Act et prestations VA", desc: "Guide officiel expliquant les nouvelles prestations disponibles sous le PACT Act." },
+    es: { title: "Guía de la Ley PACT y Beneficios VA", desc: "Guía oficial que explica nuevos beneficios disponibles bajo la Ley PACT." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.disabledveterans.org/claim-help",
+  i18n: {
+    en: { title: "Disabled Veterans Claim Help", desc: "Free assistance navigating the VA disability claims process." },
+    fr: { title: "Aide réclamation Disabled Veterans", desc: "Aide gratuite pour naviguer le processus de réclamation d'invalidité VA." },
+    es: { title: "Ayuda de Reclamación Disabled Veterans", desc: "Ayuda gratuita para navegar el proceso de reclamación de discapacidad VA." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.vfw.org/assistance/va-claims-assistance",
+  i18n: {
+    en: { title: "VFW Claims Assistance", desc: "Free accredited representatives helping veterans file VA disability claims." },
+    fr: { title: "Aide réclamations VFW", desc: "Représentants accrédités gratuits aidant les vétérans à déposer des réclamations VA." },
+    es: { title: "Asistencia de Reclamaciones VFW", desc: "Representantes acreditados gratuitos que ayudan a veteranos a presentar reclamaciones VA." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.legion.org/veteransbenefits",
+  i18n: {
+    en: { title: "American Legion Veterans Benefits Help", desc: "Free accredited claims assistance for veterans navigating VA benefits." },
+    fr: { title: "Aide prestations vétérans American Legion", desc: "Aide gratuite accréditée pour vétérans naviguant les prestations VA." },
+    es: { title: "Ayuda de Beneficios de Veteranos American Legion", desc: "Asistencia de reclamaciones acreditada gratuita para veteranos que navegan beneficios VA." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.dav.org/veterans/get-help-with-claims/",
+  i18n: {
+    en: { title: "DAV Claims Assistance", desc: "Free claims filing assistance for disabled veterans seeking VA benefits." },
+    fr: { title: "Aide réclamations DAV", desc: "Aide gratuite au dépôt de réclamations pour vétérans handicapés cherchant des prestations VA." },
+    es: { title: "Asistencia de Reclamaciones DAV", desc: "Asistencia gratuita de presentación de reclamaciones para veteranos discapacitados." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.woundedwarriorproject.org/programs/benefits-service",
+  i18n: {
+    en: { title: "Wounded Warrior Project Benefits Service", desc: "Free assistance navigating VA benefits and disability claims." },
+    fr: { title: "Service prestations Wounded Warrior Project", desc: "Aide gratuite pour naviguer les prestations et réclamations d'invalidité VA." },
+    es: { title: "Servicio de Beneficios Wounded Warrior Project", desc: "Asistencia gratuita para navegar beneficios y reclamaciones de discapacidad VA." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.iava.org/programs/rapid-response-referral-program",
+  i18n: {
+    en: { title: "IAVA Rapid Response Referral Program", desc: "Free case management connecting veterans to benefits and support services." },
+    fr: { title: "Programme référence rapide IAVA", desc: "Gestion de cas gratuite reliant les vétérans aux prestations et services de soutien." },
+    es: { title: "Programa de Referencia Rápida IAVA", desc: "Gestión de casos gratuita que conecta a veteranos con beneficios y servicios de apoyo." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.nvlsp.org",
+  i18n: {
+    en: { title: "National Veterans Legal Services Program", desc: "Free legal assistance helping veterans access VA benefits." },
+    fr: { title: "National Veterans Legal Services Program", desc: "Aide juridique gratuite aidant les vétérans à accéder aux prestations VA." },
+    es: { title: "National Veterans Legal Services Program", desc: "Asistencia legal gratuita que ayuda a veteranos a acceder a beneficios VA." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.veteranslegalinstitute.org",
+  i18n: {
+    en: { title: "Veterans Legal Institute", desc: "Free legal services for low-income and homeless veterans." },
+    fr: { title: "Veterans Legal Institute", desc: "Services juridiques gratuits pour vétérans à faible revenu et sans-abri." },
+    es: { title: "Veterans Legal Institute", desc: "Servicios legales gratuitos para veteranos de bajos ingresos y sin hogar." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.statesidelegal.org",
+  i18n: {
+    en: { title: "Stateside Legal", desc: "Free legal resources and referrals for service members and veterans." },
+    fr: { title: "Stateside Legal", desc: "Ressources juridiques gratuites et orientations pour militaires et vétérans." },
+    es: { title: "Stateside Legal", desc: "Recursos legales gratuitos y referencias para militares y veteranos." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.militarylegalassistance.org",
+  i18n: {
+    en: { title: "Military Legal Assistance", desc: "Free legal aid services for active duty members, veterans, and families." },
+    fr: { title: "Military Legal Assistance", desc: "Services d'aide juridique gratuits pour militaires actifs, vétérans et familles." },
+    es: { title: "Military Legal Assistance", desc: "Servicios de asistencia legal gratuitos para militares activos, veteranos y familias." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ptsdmedicalresearch.org/resources",
+  i18n: {
+    en: { title: "PTSD Resource Directory", desc: "Financial and treatment resources for veterans dealing with PTSD." },
+    fr: { title: "Répertoire ressources SSPT", desc: "Ressources financières et de traitement pour vétérans atteints de SSPT." },
+    es: { title: "Directorio de Recursos de TEPT", desc: "Recursos financieros y de tratamiento para veteranos que enfrentan TEPT." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.ptsd.va.gov",
+  i18n: {
+    en: { title: "VA National Center for PTSD", desc: "Federal resources and treatment information for veterans with PTSD." },
+    fr: { title: "Centre national SSPT VA", desc: "Ressources fédérales et informations de traitement pour vétérans atteints de SSPT." },
+    es: { title: "Centro Nacional de TEPT VA", desc: "Recursos federales e información de tratamiento para veteranos con TEPT." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.brainlinemilitary.org",
+  i18n: {
+    en: { title: "BrainLine Military", desc: "Resources for veterans and families dealing with traumatic brain injury." },
+    fr: { title: "BrainLine Military", desc: "Ressources pour vétérans et familles confrontés à des lésions cérébrales traumatiques." },
+    es: { title: "BrainLine Military", desc: "Recursos para veteranos y familias que enfrentan lesión cerebral traumática." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.woundedwarriorproject.org/programs/independence-program",
+  i18n: {
+    en: { title: "Wounded Warrior Project Independence Program", desc: "Long-term rehabilitative support for veterans with severe brain injuries." },
+    fr: { title: "Programme indépendance Wounded Warrior Project", desc: "Soutien de réadaptation à long terme pour vétérans avec lésions cérébrales graves." },
+    es: { title: "Programa de Independencia Wounded Warrior Project", desc: "Apoyo de rehabilitación a largo plazo para veteranos con lesiones cerebrales graves." },
+  },
+},
+{
+  category: "Income",
+  link: "https://www.amvets.org/programs",
+  i18n: {
+    en: { title: "AMVETS Support Programs", desc: "Financial assistance and support programs for veterans in crisis." },
+    fr: { title: "Programmes soutien AMVETS", desc: "Programmes d'aide financière et de soutien pour vétérans en crise." },
+    es: { title: "Programas de Apoyo AMVETS", desc: "Programas de asistencia financiera y apoyo para veteranos en crisis." },
+  },
+},
   // ===== PROGRAMS 1701-2000 =====
 
 // FOOD (50)
